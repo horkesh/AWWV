@@ -1,0 +1,43 @@
+SVG Join Report
+================================================================================
+
+Totals:
+  SVG files: 142
+  Settlements total: 6140
+  Settlements matched: 0
+    - Matched by SID: 0
+    - Matched by midname: 0
+  Unmatched settlements: 6140
+  SVGs with arc commands: 0
+
+Top 30 municipalities by unmatched settlement count:
+  Konjic: 168
+  Višegrad: 163
+  Goražde: 144
+  Trebinje: 141
+  Rogatica: 118
+  Kakanj: 106
+  Foča (RS): 101
+  Sokolac: 96
+  Travnik: 90
+  Rudo: 89
+  Visoko: 88
+  Vareš: 85
+  Doboj: 83
+  Zenica: 83
+  Kiseljak: 82
+  Srebrenica: 81
+  Bugojno: 78
+  Ilijaš: 74
+  Prijedor: 71
+  Kalinovik: 71
+  Gacko: 71
+  Gradiška: 68
+  Donji Vakuf: 68
+  Zvornik: 68
+  Bijeljina: 67
+  Tuzla: 66
+  Sanski Most: 66
+  Prnjavor: 63
+  Pale (RS): 62
+  Hadžići: 62

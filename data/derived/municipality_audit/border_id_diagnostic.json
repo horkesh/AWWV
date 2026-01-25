@@ -1,0 +1,3176 @@
+[
+  {
+    "feature_index": 0,
+    "extracted_raw_id": 10014,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10014
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10014",
+      "trimmed": "10014",
+      "digits_only": "10014",
+      "padded_5_if_digits": "10014"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10014",
+      "matched_mid_7": "1012045"
+    }
+  },
+  {
+    "feature_index": 1,
+    "extracted_raw_id": 10049,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10049
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10049",
+      "trimmed": "10049",
+      "digits_only": "10049",
+      "padded_5_if_digits": "10049"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10049",
+      "matched_mid_7": "1015698"
+    }
+  },
+  {
+    "feature_index": 2,
+    "extracted_raw_id": 10146,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10146
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10146",
+      "trimmed": "10146",
+      "digits_only": "10146",
+      "padded_5_if_digits": "10146"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10146",
+      "matched_mid_7": "1017148"
+    }
+  },
+  {
+    "feature_index": 3,
+    "extracted_raw_id": 10189,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10189
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10189",
+      "trimmed": "10189",
+      "digits_only": "10189",
+      "padded_5_if_digits": "10189"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10189",
+      "matched_mid_7": "1026177"
+    }
+  },
+  {
+    "feature_index": 4,
+    "extracted_raw_id": 10197,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10197
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10197",
+      "trimmed": "10197",
+      "digits_only": "10197",
+      "padded_5_if_digits": "10197"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10197",
+      "matched_mid_7": "1028426"
+    }
+  },
+  {
+    "feature_index": 5,
+    "extracted_raw_id": 10219,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10219
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10219",
+      "trimmed": "10219",
+      "digits_only": "10219",
+      "padded_5_if_digits": "10219"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10219",
+      "matched_mid_7": "1031837"
+    }
+  },
+  {
+    "feature_index": 6,
+    "extracted_raw_id": 10227,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10227
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10227",
+      "trimmed": "10227",
+      "digits_only": "10227",
+      "padded_5_if_digits": "10227"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10227",
+      "matched_mid_7": "1037615"
+    }
+  },
+  {
+    "feature_index": 7,
+    "extracted_raw_id": 10260,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10260
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10260",
+      "trimmed": "10260",
+      "digits_only": "10260",
+      "padded_5_if_digits": "10260"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10260",
+      "matched_mid_7": "1039821"
+    }
+  },
+  {
+    "feature_index": 8,
+    "extracted_raw_id": 10294,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10294
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10294",
+      "trimmed": "10294",
+      "digits_only": "10294",
+      "padded_5_if_digits": "10294"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10294",
+      "matched_mid_7": "1041595"
+    }
+  },
+  {
+    "feature_index": 9,
+    "extracted_raw_id": 10308,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10308
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10308",
+      "trimmed": "10308",
+      "digits_only": "10308",
+      "padded_5_if_digits": "10308"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10308",
+      "matched_mid_7": "1045979"
+    }
+  },
+  {
+    "feature_index": 10,
+    "extracted_raw_id": 10324,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10324
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10324",
+      "trimmed": "10324",
+      "digits_only": "10324",
+      "padded_5_if_digits": "10324"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10324",
+      "matched_mid_7": "1049987"
+    }
+  },
+  {
+    "feature_index": 11,
+    "extracted_raw_id": 10359,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10359
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10359",
+      "trimmed": "10359",
+      "digits_only": "10359",
+      "padded_5_if_digits": "10359"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 12,
+    "extracted_raw_id": 10375,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10375
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10375",
+      "trimmed": "10375",
+      "digits_only": "10375",
+      "padded_5_if_digits": "10375"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 13,
+    "extracted_raw_id": 10391,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10391
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10391",
+      "trimmed": "10391",
+      "digits_only": "10391",
+      "padded_5_if_digits": "10391"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 14,
+    "extracted_raw_id": 10405,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10405
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10405",
+      "trimmed": "10405",
+      "digits_only": "10405",
+      "padded_5_if_digits": "10405"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 15,
+    "extracted_raw_id": 10421,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10421
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10421",
+      "trimmed": "10421",
+      "digits_only": "10421",
+      "padded_5_if_digits": "10421"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 16,
+    "extracted_raw_id": 10448,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10448
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10448",
+      "trimmed": "10448",
+      "digits_only": "10448",
+      "padded_5_if_digits": "10448"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 17,
+    "extracted_raw_id": 10472,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10472
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10472",
+      "trimmed": "10472",
+      "digits_only": "10472",
+      "padded_5_if_digits": "10472"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 18,
+    "extracted_raw_id": 10499,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10499
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10499",
+      "trimmed": "10499",
+      "digits_only": "10499",
+      "padded_5_if_digits": "10499"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 19,
+    "extracted_raw_id": 10529,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10529
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10529",
+      "trimmed": "10529",
+      "digits_only": "10529",
+      "padded_5_if_digits": "10529"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 20,
+    "extracted_raw_id": 10545,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10545
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10545",
+      "trimmed": "10545",
+      "digits_only": "10545",
+      "padded_5_if_digits": "10545"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 21,
+    "extracted_raw_id": 10570,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10570
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10570",
+      "trimmed": "10570",
+      "digits_only": "10570",
+      "padded_5_if_digits": "10570"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 22,
+    "extracted_raw_id": 10588,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10588
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10588",
+      "trimmed": "10588",
+      "digits_only": "10588",
+      "padded_5_if_digits": "10588"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "10588",
+      "matched_mid_7": "1116119"
+    }
+  },
+  {
+    "feature_index": 23,
+    "extracted_raw_id": 10600,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10600
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10600",
+      "trimmed": "10600",
+      "digits_only": "10600",
+      "padded_5_if_digits": "10600"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 24,
+    "extracted_raw_id": 10626,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10626
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10626",
+      "trimmed": "10626",
+      "digits_only": "10626",
+      "padded_5_if_digits": "10626"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 25,
+    "extracted_raw_id": 10634,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10634
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10634",
+      "trimmed": "10634",
+      "digits_only": "10634",
+      "padded_5_if_digits": "10634"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 26,
+    "extracted_raw_id": 10685,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10685
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10685",
+      "trimmed": "10685",
+      "digits_only": "10685",
+      "padded_5_if_digits": "10685"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 27,
+    "extracted_raw_id": 10715,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10715
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10715",
+      "trimmed": "10715",
+      "digits_only": "10715",
+      "padded_5_if_digits": "10715"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 28,
+    "extracted_raw_id": 10731,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10731
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10731",
+      "trimmed": "10731",
+      "digits_only": "10731",
+      "padded_5_if_digits": "10731"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 29,
+    "extracted_raw_id": 10766,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10766
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10766",
+      "trimmed": "10766",
+      "digits_only": "10766",
+      "padded_5_if_digits": "10766"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 30,
+    "extracted_raw_id": 10774,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10774
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10774",
+      "trimmed": "10774",
+      "digits_only": "10774",
+      "padded_5_if_digits": "10774"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 31,
+    "extracted_raw_id": 10839,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10839
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10839",
+      "trimmed": "10839",
+      "digits_only": "10839",
+      "padded_5_if_digits": "10839"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 32,
+    "extracted_raw_id": 10847,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10847
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10847",
+      "trimmed": "10847",
+      "digits_only": "10847",
+      "padded_5_if_digits": "10847"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 33,
+    "extracted_raw_id": 10863,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10863
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10863",
+      "trimmed": "10863",
+      "digits_only": "10863",
+      "padded_5_if_digits": "10863"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 34,
+    "extracted_raw_id": 10871,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10871
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10871",
+      "trimmed": "10871",
+      "digits_only": "10871",
+      "padded_5_if_digits": "10871"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 35,
+    "extracted_raw_id": 10928,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10928
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10928",
+      "trimmed": "10928",
+      "digits_only": "10928",
+      "padded_5_if_digits": "10928"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 36,
+    "extracted_raw_id": 10987,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 10987
+    },
+    "normalized_id_attempt": {
+      "raw_string": "10987",
+      "trimmed": "10987",
+      "digits_only": "10987",
+      "padded_5_if_digits": "10987"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 37,
+    "extracted_raw_id": 11045,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11045
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11045",
+      "trimmed": "11045",
+      "digits_only": "11045",
+      "padded_5_if_digits": "11045"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 38,
+    "extracted_raw_id": 11061,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11061
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11061",
+      "trimmed": "11061",
+      "digits_only": "11061",
+      "padded_5_if_digits": "11061"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 39,
+    "extracted_raw_id": 11088,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11088
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11088",
+      "trimmed": "11088",
+      "digits_only": "11088",
+      "padded_5_if_digits": "11088"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 40,
+    "extracted_raw_id": 11100,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11100
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11100",
+      "trimmed": "11100",
+      "digits_only": "11100",
+      "padded_5_if_digits": "11100"
+    },
+    "crosswalk_match_status": {
+      "direct_match": true,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": "11100",
+      "matched_mid_7": "1244359"
+    }
+  },
+  {
+    "feature_index": 41,
+    "extracted_raw_id": 11118,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11118
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11118",
+      "trimmed": "11118",
+      "digits_only": "11118",
+      "padded_5_if_digits": "11118"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 42,
+    "extracted_raw_id": 11126,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11126
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11126",
+      "trimmed": "11126",
+      "digits_only": "11126",
+      "padded_5_if_digits": "11126"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 43,
+    "extracted_raw_id": 11142,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11142
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11142",
+      "trimmed": "11142",
+      "digits_only": "11142",
+      "padded_5_if_digits": "11142"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 44,
+    "extracted_raw_id": 11177,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11177
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11177",
+      "trimmed": "11177",
+      "digits_only": "11177",
+      "padded_5_if_digits": "11177"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 45,
+    "extracted_raw_id": 11207,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11207
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11207",
+      "trimmed": "11207",
+      "digits_only": "11207",
+      "padded_5_if_digits": "11207"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 46,
+    "extracted_raw_id": 11231,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11231
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11231",
+      "trimmed": "11231",
+      "digits_only": "11231",
+      "padded_5_if_digits": "11231"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 47,
+    "extracted_raw_id": 11240,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11240
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11240",
+      "trimmed": "11240",
+      "digits_only": "11240",
+      "padded_5_if_digits": "11240"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 48,
+    "extracted_raw_id": 11258,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11258
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11258",
+      "trimmed": "11258",
+      "digits_only": "11258",
+      "padded_5_if_digits": "11258"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 49,
+    "extracted_raw_id": 11266,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11266
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11266",
+      "trimmed": "11266",
+      "digits_only": "11266",
+      "padded_5_if_digits": "11266"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 50,
+    "extracted_raw_id": 11274,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11274
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11274",
+      "trimmed": "11274",
+      "digits_only": "11274",
+      "padded_5_if_digits": "11274"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 51,
+    "extracted_raw_id": 11282,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11282
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11282",
+      "trimmed": "11282",
+      "digits_only": "11282",
+      "padded_5_if_digits": "11282"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 52,
+    "extracted_raw_id": 11304,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11304
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11304",
+      "trimmed": "11304",
+      "digits_only": "11304",
+      "padded_5_if_digits": "11304"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 53,
+    "extracted_raw_id": 11312,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11312
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11312",
+      "trimmed": "11312",
+      "digits_only": "11312",
+      "padded_5_if_digits": "11312"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 54,
+    "extracted_raw_id": 11339,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11339
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11339",
+      "trimmed": "11339",
+      "digits_only": "11339",
+      "padded_5_if_digits": "11339"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 55,
+    "extracted_raw_id": 11428,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11428
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11428",
+      "trimmed": "11428",
+      "digits_only": "11428",
+      "padded_5_if_digits": "11428"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 56,
+    "extracted_raw_id": 11452,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11452
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11452",
+      "trimmed": "11452",
+      "digits_only": "11452",
+      "padded_5_if_digits": "11452"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 57,
+    "extracted_raw_id": 11479,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11479
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11479",
+      "trimmed": "11479",
+      "digits_only": "11479",
+      "padded_5_if_digits": "11479"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 58,
+    "extracted_raw_id": 11487,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11487
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11487",
+      "trimmed": "11487",
+      "digits_only": "11487",
+      "padded_5_if_digits": "11487"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 59,
+    "extracted_raw_id": 11495,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11495
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11495",
+      "trimmed": "11495",
+      "digits_only": "11495",
+      "padded_5_if_digits": "11495"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 60,
+    "extracted_raw_id": 11509,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11509
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11509",
+      "trimmed": "11509",
+      "digits_only": "11509",
+      "padded_5_if_digits": "11509"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 61,
+    "extracted_raw_id": 11517,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11517
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11517",
+      "trimmed": "11517",
+      "digits_only": "11517",
+      "padded_5_if_digits": "11517"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 62,
+    "extracted_raw_id": 11525,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11525
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11525",
+      "trimmed": "11525",
+      "digits_only": "11525",
+      "padded_5_if_digits": "11525"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 63,
+    "extracted_raw_id": 11533,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11533
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11533",
+      "trimmed": "11533",
+      "digits_only": "11533",
+      "padded_5_if_digits": "11533"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 64,
+    "extracted_raw_id": 11541,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11541
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11541",
+      "trimmed": "11541",
+      "digits_only": "11541",
+      "padded_5_if_digits": "11541"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 65,
+    "extracted_raw_id": 11550,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11550
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11550",
+      "trimmed": "11550",
+      "digits_only": "11550",
+      "padded_5_if_digits": "11550"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 66,
+    "extracted_raw_id": 11568,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11568
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11568",
+      "trimmed": "11568",
+      "digits_only": "11568",
+      "padded_5_if_digits": "11568"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 67,
+    "extracted_raw_id": 11576,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11576
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11576",
+      "trimmed": "11576",
+      "digits_only": "11576",
+      "padded_5_if_digits": "11576"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 68,
+    "extracted_raw_id": 11584,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11584
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11584",
+      "trimmed": "11584",
+      "digits_only": "11584",
+      "padded_5_if_digits": "11584"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 69,
+    "extracted_raw_id": 11606,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11606
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11606",
+      "trimmed": "11606",
+      "digits_only": "11606",
+      "padded_5_if_digits": "11606"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 70,
+    "extracted_raw_id": 11614,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11614
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11614",
+      "trimmed": "11614",
+      "digits_only": "11614",
+      "padded_5_if_digits": "11614"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 71,
+    "extracted_raw_id": 11622,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 11622
+    },
+    "normalized_id_attempt": {
+      "raw_string": "11622",
+      "trimmed": "11622",
+      "digits_only": "11622",
+      "padded_5_if_digits": "11622"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 72,
+    "extracted_raw_id": 18800,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 18800
+    },
+    "normalized_id_attempt": {
+      "raw_string": "18800",
+      "trimmed": "18800",
+      "digits_only": "18800",
+      "padded_5_if_digits": "18800"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 73,
+    "extracted_raw_id": 18900,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 18900
+    },
+    "normalized_id_attempt": {
+      "raw_string": "18900",
+      "trimmed": "18900",
+      "digits_only": "18900",
+      "padded_5_if_digits": "18900"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 74,
+    "extracted_raw_id": 19000,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 19000
+    },
+    "normalized_id_attempt": {
+      "raw_string": "19000",
+      "trimmed": "19000",
+      "digits_only": "19000",
+      "padded_5_if_digits": "19000"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 75,
+    "extracted_raw_id": 19100,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 19100
+    },
+    "normalized_id_attempt": {
+      "raw_string": "19100",
+      "trimmed": "19100",
+      "digits_only": "19100",
+      "padded_5_if_digits": "19100"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 76,
+    "extracted_raw_id": 19400,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 19400
+    },
+    "normalized_id_attempt": {
+      "raw_string": "19400",
+      "trimmed": "19400",
+      "digits_only": "19400",
+      "padded_5_if_digits": "19400"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 77,
+    "extracted_raw_id": 19500,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 19500
+    },
+    "normalized_id_attempt": {
+      "raw_string": "19500",
+      "trimmed": "19500",
+      "digits_only": "19500",
+      "padded_5_if_digits": "19500"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 78,
+    "extracted_raw_id": 20010,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20010
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20010",
+      "trimmed": "20010",
+      "digits_only": "20010",
+      "padded_5_if_digits": "20010"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 79,
+    "extracted_raw_id": 20028,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20028
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20028",
+      "trimmed": "20028",
+      "digits_only": "20028",
+      "padded_5_if_digits": "20028"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 80,
+    "extracted_raw_id": 20036,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20036
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20036",
+      "trimmed": "20036",
+      "digits_only": "20036",
+      "padded_5_if_digits": "20036"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 81,
+    "extracted_raw_id": 20044,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20044
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20044",
+      "trimmed": "20044",
+      "digits_only": "20044",
+      "padded_5_if_digits": "20044"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 82,
+    "extracted_raw_id": 20052,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20052
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20052",
+      "trimmed": "20052",
+      "digits_only": "20052",
+      "padded_5_if_digits": "20052"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 83,
+    "extracted_raw_id": 20079,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20079
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20079",
+      "trimmed": "20079",
+      "digits_only": "20079",
+      "padded_5_if_digits": "20079"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 84,
+    "extracted_raw_id": 20087,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20087
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20087",
+      "trimmed": "20087",
+      "digits_only": "20087",
+      "padded_5_if_digits": "20087"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 85,
+    "extracted_raw_id": 20095,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20095
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20095",
+      "trimmed": "20095",
+      "digits_only": "20095",
+      "padded_5_if_digits": "20095"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 86,
+    "extracted_raw_id": 20109,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20109
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20109",
+      "trimmed": "20109",
+      "digits_only": "20109",
+      "padded_5_if_digits": "20109"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 87,
+    "extracted_raw_id": 20117,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20117
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20117",
+      "trimmed": "20117",
+      "digits_only": "20117",
+      "padded_5_if_digits": "20117"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 88,
+    "extracted_raw_id": 20125,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20125
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20125",
+      "trimmed": "20125",
+      "digits_only": "20125",
+      "padded_5_if_digits": "20125"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 89,
+    "extracted_raw_id": 20133,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20133
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20133",
+      "trimmed": "20133",
+      "digits_only": "20133",
+      "padded_5_if_digits": "20133"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 90,
+    "extracted_raw_id": 20141,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20141
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20141",
+      "trimmed": "20141",
+      "digits_only": "20141",
+      "padded_5_if_digits": "20141"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 91,
+    "extracted_raw_id": 20150,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20150
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20150",
+      "trimmed": "20150",
+      "digits_only": "20150",
+      "padded_5_if_digits": "20150"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 92,
+    "extracted_raw_id": 20168,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20168
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20168",
+      "trimmed": "20168",
+      "digits_only": "20168",
+      "padded_5_if_digits": "20168"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 93,
+    "extracted_raw_id": 20206,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20206
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20206",
+      "trimmed": "20206",
+      "digits_only": "20206",
+      "padded_5_if_digits": "20206"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 94,
+    "extracted_raw_id": 20214,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20214
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20214",
+      "trimmed": "20214",
+      "digits_only": "20214",
+      "padded_5_if_digits": "20214"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 95,
+    "extracted_raw_id": 20222,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20222
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20222",
+      "trimmed": "20222",
+      "digits_only": "20222",
+      "padded_5_if_digits": "20222"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 96,
+    "extracted_raw_id": 20249,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20249
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20249",
+      "trimmed": "20249",
+      "digits_only": "20249",
+      "padded_5_if_digits": "20249"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 97,
+    "extracted_raw_id": 20257,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20257
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20257",
+      "trimmed": "20257",
+      "digits_only": "20257",
+      "padded_5_if_digits": "20257"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 98,
+    "extracted_raw_id": 20265,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20265
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20265",
+      "trimmed": "20265",
+      "digits_only": "20265",
+      "padded_5_if_digits": "20265"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 99,
+    "extracted_raw_id": 20273,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20273
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20273",
+      "trimmed": "20273",
+      "digits_only": "20273",
+      "padded_5_if_digits": "20273"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 100,
+    "extracted_raw_id": 20281,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20281
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20281",
+      "trimmed": "20281",
+      "digits_only": "20281",
+      "padded_5_if_digits": "20281"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 101,
+    "extracted_raw_id": 20290,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20290
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20290",
+      "trimmed": "20290",
+      "digits_only": "20290",
+      "padded_5_if_digits": "20290"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 102,
+    "extracted_raw_id": 20303,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20303
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20303",
+      "trimmed": "20303",
+      "digits_only": "20303",
+      "padded_5_if_digits": "20303"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 103,
+    "extracted_raw_id": 20311,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20311
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20311",
+      "trimmed": "20311",
+      "digits_only": "20311",
+      "padded_5_if_digits": "20311"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 104,
+    "extracted_raw_id": 20320,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20320
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20320",
+      "trimmed": "20320",
+      "digits_only": "20320",
+      "padded_5_if_digits": "20320"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 105,
+    "extracted_raw_id": 20346,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20346
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20346",
+      "trimmed": "20346",
+      "digits_only": "20346",
+      "padded_5_if_digits": "20346"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 106,
+    "extracted_raw_id": 20354,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20354
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20354",
+      "trimmed": "20354",
+      "digits_only": "20354",
+      "padded_5_if_digits": "20354"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 107,
+    "extracted_raw_id": 20362,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20362
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20362",
+      "trimmed": "20362",
+      "digits_only": "20362",
+      "padded_5_if_digits": "20362"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 108,
+    "extracted_raw_id": 20389,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20389
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20389",
+      "trimmed": "20389",
+      "digits_only": "20389",
+      "padded_5_if_digits": "20389"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 109,
+    "extracted_raw_id": 20397,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20397
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20397",
+      "trimmed": "20397",
+      "digits_only": "20397",
+      "padded_5_if_digits": "20397"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 110,
+    "extracted_raw_id": 20427,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20427
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20427",
+      "trimmed": "20427",
+      "digits_only": "20427",
+      "padded_5_if_digits": "20427"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 111,
+    "extracted_raw_id": 20435,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20435
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20435",
+      "trimmed": "20435",
+      "digits_only": "20435",
+      "padded_5_if_digits": "20435"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 112,
+    "extracted_raw_id": 20451,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20451
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20451",
+      "trimmed": "20451",
+      "digits_only": "20451",
+      "padded_5_if_digits": "20451"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 113,
+    "extracted_raw_id": 20460,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20460
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20460",
+      "trimmed": "20460",
+      "digits_only": "20460",
+      "padded_5_if_digits": "20460"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 114,
+    "extracted_raw_id": 20478,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20478
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20478",
+      "trimmed": "20478",
+      "digits_only": "20478",
+      "padded_5_if_digits": "20478"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 115,
+    "extracted_raw_id": 20486,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20486
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20486",
+      "trimmed": "20486",
+      "digits_only": "20486",
+      "padded_5_if_digits": "20486"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 116,
+    "extracted_raw_id": 20494,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20494
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20494",
+      "trimmed": "20494",
+      "digits_only": "20494",
+      "padded_5_if_digits": "20494"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 117,
+    "extracted_raw_id": 20508,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20508
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20508",
+      "trimmed": "20508",
+      "digits_only": "20508",
+      "padded_5_if_digits": "20508"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 118,
+    "extracted_raw_id": 20524,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20524
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20524",
+      "trimmed": "20524",
+      "digits_only": "20524",
+      "padded_5_if_digits": "20524"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 119,
+    "extracted_raw_id": 20532,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20532
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20532",
+      "trimmed": "20532",
+      "digits_only": "20532",
+      "padded_5_if_digits": "20532"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 120,
+    "extracted_raw_id": 20559,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20559
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20559",
+      "trimmed": "20559",
+      "digits_only": "20559",
+      "padded_5_if_digits": "20559"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 121,
+    "extracted_raw_id": 20567,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20567
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20567",
+      "trimmed": "20567",
+      "digits_only": "20567",
+      "padded_5_if_digits": "20567"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 122,
+    "extracted_raw_id": 20575,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20575
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20575",
+      "trimmed": "20575",
+      "digits_only": "20575",
+      "padded_5_if_digits": "20575"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 123,
+    "extracted_raw_id": 20583,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20583
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20583",
+      "trimmed": "20583",
+      "digits_only": "20583",
+      "padded_5_if_digits": "20583"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 124,
+    "extracted_raw_id": 20591,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20591
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20591",
+      "trimmed": "20591",
+      "digits_only": "20591",
+      "padded_5_if_digits": "20591"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 125,
+    "extracted_raw_id": 20605,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20605
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20605",
+      "trimmed": "20605",
+      "digits_only": "20605",
+      "padded_5_if_digits": "20605"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 126,
+    "extracted_raw_id": 20613,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20613
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20613",
+      "trimmed": "20613",
+      "digits_only": "20613",
+      "padded_5_if_digits": "20613"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 127,
+    "extracted_raw_id": 20630,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20630
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20630",
+      "trimmed": "20630",
+      "digits_only": "20630",
+      "padded_5_if_digits": "20630"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 128,
+    "extracted_raw_id": 20648,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20648
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20648",
+      "trimmed": "20648",
+      "digits_only": "20648",
+      "padded_5_if_digits": "20648"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 129,
+    "extracted_raw_id": 20656,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 20656
+    },
+    "normalized_id_attempt": {
+      "raw_string": "20656",
+      "trimmed": "20656",
+      "digits_only": "20656",
+      "padded_5_if_digits": "20656"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 130,
+    "extracted_raw_id": 29200,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29200
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29200",
+      "trimmed": "29200",
+      "digits_only": "29200",
+      "padded_5_if_digits": "29200"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 131,
+    "extracted_raw_id": 29400,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29400
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29400",
+      "trimmed": "29400",
+      "digits_only": "29400",
+      "padded_5_if_digits": "29400"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 132,
+    "extracted_raw_id": 29500,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29500
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29500",
+      "trimmed": "29500",
+      "digits_only": "29500",
+      "padded_5_if_digits": "29500"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 133,
+    "extracted_raw_id": 29600,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29600
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29600",
+      "trimmed": "29600",
+      "digits_only": "29600",
+      "padded_5_if_digits": "29600"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 134,
+    "extracted_raw_id": 29700,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29700
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29700",
+      "trimmed": "29700",
+      "digits_only": "29700",
+      "padded_5_if_digits": "29700"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 135,
+    "extracted_raw_id": 29800,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 29800
+    },
+    "normalized_id_attempt": {
+      "raw_string": "29800",
+      "trimmed": "29800",
+      "digits_only": "29800",
+      "padded_5_if_digits": "29800"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 136,
+    "extracted_raw_id": 30163,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 30163
+    },
+    "normalized_id_attempt": {
+      "raw_string": "30163",
+      "trimmed": "30163",
+      "digits_only": "30163",
+      "padded_5_if_digits": "30163"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  },
+  {
+    "feature_index": 137,
+    "extracted_raw_id": 49800,
+    "extracted_raw_id_type": "number",
+    "extracted_from_key": "mid",
+    "all_candidate_keys_present": {
+      "mid": 49800
+    },
+    "normalized_id_attempt": {
+      "raw_string": "49800",
+      "trimmed": "49800",
+      "digits_only": "49800",
+      "padded_5_if_digits": "49800"
+    },
+    "crosswalk_match_status": {
+      "direct_match": false,
+      "trimmed_match": false,
+      "digits_only_match": false,
+      "padded_5_match": false,
+      "matched_munid_5": null,
+      "matched_mid_7": null
+    }
+  }
+]

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosnia & Herzegovina Settlements - 1991 Census</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            background: #2a2a2a;
+            border-right: 1px solid #444;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .map-container {
+            position: relative;
+            background: #1a1a1a;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 20px;
+            color: #4a9eff;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: #888;
+            font-size: 13px;
+        }
+        
+        .stat-value {
+            color: #4a9eff;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .controls {
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-label {
+            display: block;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+        select, input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 13px;
+        }
+        
+        input[type="range"] {
+            padding: 0;
+        }
+        
+        .legend {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .legend-title {
+            color: #4a9eff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 10px;
+            border: 1px solid #555;
+        }
+        
+        #map-svg {
+            cursor: move;
+        }
+        
+        .settlement {
+            stroke: #333;
+            stroke-width: 0.5;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .settlement:hover {
+            stroke: #fff;
+            stroke-width: 2;
+            filter: brightness(1.3);
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #4a9eff;
+            border-radius: 8px;
+            padding: 12px;
+            pointer-events: none;
+            display: none;
+            z-index: 1000;
+            min-width: 250px;
+        }
+        
+        .tooltip-title {
+            color: #4a9eff;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 13px;
+        }
+        
+        .tooltip-label {
+            color: #888;
+        }
+        
+        .tooltip-value {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .color-bosniak { background-color: #4a9eff; }
+        .color-serb { background-color: #ff4a4a; }
+        .color-croat { background-color: #ffa500; }
+        .color-mixed { background-color: #888888; }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: #4a9eff;
+        }
+        
+        .zoom-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(42, 42, 42, 0.9);
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+        .zoom-button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        
+        .zoom-button:hover {
+            background: #333;
+            border-color: #4a9eff;
+        }
+        
+        .zoom-button:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>🗺️ Bosnia & Herzegovina<br>1991 Census</h1>
+            
+            <div class="stats">
+                <div class="stat-row">
+                    <span class="stat-label">Settlements</span>
+                    <span class="stat-value" id="stat-settlements">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Total Population</span>
+                    <span class="stat-value" id="stat-population">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">With Geometry</span>
+                    <span class="stat-value" id="stat-geometry">-</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label class="control-label">Color By:</label>
+                    <select id="color-mode">
+                        <option value="majority">Ethnic Majority</option>
+                        <option value="population">Population Size</option>
+                        <option value="diversity">Ethnic Diversity</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Filter Municipality:</label>
+                    <select id="municipality-filter">
+                        <option value="">All Municipalities</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Min Population: <span id="pop-value">0</span></label>
+                    <input type="range" id="min-population" min="0" max="10000" value="0" step="100">
+                </div>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-title">Legend</div>
+                <div class="legend-item">
+                    <div class="legend-color color-bosniak"></div>
+                    <span>Bosniak Majority</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-serb"></div>
+                    <span>Serb Majority</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-croat"></div>
+                    <span>Croat Majority</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-mixed"></div>
+                    <span>No Clear Majority</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="map-container">
+            <div class="loading" id="loading">Loading census data...</div>
+            <svg id="map-svg" width="100%" height="100%"></svg>
+            <div class="tooltip" id="tooltip"></div>
+            
+            <div class="zoom-controls">
+                <button class="zoom-button" onclick="zoomIn()">+</button>
+                <button class="zoom-button" onclick="zoomReset()">⊙</button>
+                <button class="zoom-button" onclick="zoomOut()">−</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let geojsonData = null;
+        let currentZoom = 1;
+        let currentPan = { x: 0, y: 0 };
+        let isDragging = false;
+        let dragStart = { x: 0, y: 0 };
+        
+        // Load GeoJSON data
+        async function loadData() {
+            try {
+                const response = await fetch('./bosnia_settlements_1991.geojson');
+                geojsonData = await response.json();
+                
+                // Update stats
+                document.getElementById('stat-settlements').textContent = 
+                    geojsonData.features.length.toLocaleString();
+                document.getElementById('stat-population').textContent = 
+                    geojsonData.metadata.total_population.toLocaleString();
+                document.getElementById('stat-geometry').textContent = 
+                    geojsonData.metadata.settlements_with_geometry.toLocaleString();
+                
+                // Populate municipality filter
+                const municipalities = [...new Set(
+                    geojsonData.features.map(f => f.properties.municipality_name)
+                )].sort();
+                
+                const select = document.getElementById('municipality-filter');
+                municipalities.forEach(mun => {
+                    const option = document.createElement('option');
+                    option.value = mun;
+                    option.textContent = mun;
+                    select.appendChild(option);
+                });
+                
+                // Hide loading, render map
+                document.getElementById('loading').style.display = 'none';
+                renderMap();
+                
+            } catch (error) {
+                document.getElementById('loading').textContent = 
+                    'Error loading data. Make sure bosnia_settlements_1991.geojson is in the same folder.';
+                console.error('Error loading GeoJSON:', error);
+            }
+        }
+        
+        function getMajorityColor(feature) {
+            const props = feature.properties;
+            const max = Math.max(
+                props.percent_bosniaks,
+                props.percent_serbs,
+                props.percent_croats
+            );
+            
+            // No clear majority if < 40%
+            if (max < 40) return '#888888';
+            
+            if (props.percent_bosniaks === max) return '#4a9eff';
+            if (props.percent_serbs === max) return '#ff4a4a';
+            if (props.percent_croats === max) return '#ffa500';
+            return '#888888';
+        }
+        
+        function getPopulationColor(feature) {
+            const pop = feature.properties.population_total;
+            if (pop > 10000) return '#ff4a4a';
+            if (pop > 5000) return '#ffa500';
+            if (pop > 1000) return '#ffff00';
+            if (pop > 500) return '#4a9eff';
+            return '#888888';
+        }
+        
+        function getDiversityColor(feature) {
+            const props = feature.properties;
+            const values = [
+                props.percent_bosniaks,
+                props.percent_serbs,
+                props.percent_croats
+            ].sort((a, b) => b - a);
+            
+            // Calculate diversity: higher when percentages are closer
+            const diversity = 100 - (values[0] - values[1]);
+            
+            if (diversity > 60) return '#4a9eff'; // High diversity
+            if (diversity > 40) return '#ffa500';
+            if (diversity > 20) return '#ffff00';
+            return '#888888'; // Homogeneous
+        }
+        
+        function getColor(feature) {
+            const mode = document.getElementById('color-mode').value;
+            if (mode === 'population') return getPopulationColor(feature);
+            if (mode === 'diversity') return getDiversityColor(feature);
+            return getMajorityColor(feature);
+        }
+        
+        function renderMap() {
+            const svg = document.getElementById('map-svg');
+            const svgNS = "http://www.w3.org/2000/svg";
+            
+            // Clear existing
+            svg.innerHTML = '';
+            
+            // Create group for settlements
+            const g = document.createElementNS(svgNS, 'g');
+            g.setAttribute('id', 'settlements-group');
+            svg.appendChild(g);
+            
+            // Get filters
+            const munFilter = document.getElementById('municipality-filter').value;
+            const minPop = parseInt(document.getElementById('min-population').value);
+            
+            // Filter and render settlements
+            let rendered = 0;
+            geojsonData.features.forEach(feature => {
+                if (!feature.geometry) return;
+                
+                const props = feature.properties;
+                
+                // Apply filters
+                if (munFilter && props.municipality_name !== munFilter) return;
+                if (props.population_total < minPop) return;
+                
+                const coords = feature.geometry.coordinates[0];
+                const color = getColor(feature);
+                
+                // Create SVG path
+                const pathData = coords.map((coord, i) => 
+                    `${i === 0 ? 'M' : 'L'} ${coord[0]} ${coord[1]}`
+                ).join(' ') + ' Z';
+                
+                const path = document.createElementNS(svgNS, 'path');
+                path.setAttribute('d', pathData);
+                path.setAttribute('fill', color);
+                path.setAttribute('class', 'settlement');
+                path.setAttribute('data-id', props.settlement_id);
+                
+                // Add event listeners
+                path.addEventListener('mouseenter', (e) => showTooltip(e, feature));
+                path.addEventListener('mousemove', (e) => moveTooltip(e));
+                path.addEventListener('mouseleave', hideTooltip);
+                
+                g.appendChild(path);
+                rendered++;
+            });
+            
+            // Set viewBox to fit all settlements
+            const bbox = g.getBBox();
+            svg.setAttribute('viewBox', `${bbox.x - 10} ${bbox.y - 10} ${bbox.width + 20} ${bbox.height + 20}`);
+            
+            console.log(`Rendered ${rendered} settlements`);
+        }
+        
+        function showTooltip(event, feature) {
+            const tooltip = document.getElementById('tooltip');
+            const props = feature.properties;
+            
+            // Determine majority
+            let majority = 'Mixed';
+            const max = Math.max(
+                props.percent_bosniaks,
+                props.percent_serbs,
+                props.percent_croats
+            );
+            if (max >= 40) {
+                if (props.percent_bosniaks === max) majority = 'Bosniak';
+                else if (props.percent_serbs === max) majority = 'Serb';
+                else if (props.percent_croats === max) majority = 'Croat';
+            }
+            
+            tooltip.innerHTML = `
+                <div class="tooltip-title">${props.settlement_name}</div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Municipality:</span>
+                    <span class="tooltip-value">${props.municipality_name}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Population:</span>
+                    <span class="tooltip-value">${props.population_total.toLocaleString()}</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Majority:</span>
+                    <span class="tooltip-value">${majority} (${max.toFixed(1)}%)</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Bosniaks:</span>
+                    <span class="tooltip-value">${props.population_bosniaks.toLocaleString()} (${props.percent_bosniaks.toFixed(1)}%)</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Serbs:</span>
+                    <span class="tooltip-value">${props.population_serbs.toLocaleString()} (${props.percent_serbs.toFixed(1)}%)</span>
+                </div>
+                <div class="tooltip-row">
+                    <span class="tooltip-label">Croats:</span>
+                    <span class="tooltip-value">${props.population_croats.toLocaleString()} (${props.percent_croats.toFixed(1)}%)</span>
+                </div>
+            `;
+            
+            tooltip.style.display = 'block';
+            moveTooltip(event);
+        }
+        
+        function moveTooltip(event) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.left = (event.clientX + 15) + 'px';
+            tooltip.style.top = (event.clientY + 15) + 'px';
+        }
+        
+        function hideTooltip() {
+            document.getElementById('tooltip').style.display = 'none';
+        }
+        
+        function zoomIn() {
+            currentZoom *= 1.3;
+            applyTransform();
+        }
+        
+        function zoomOut() {
+            currentZoom /= 1.3;
+            applyTransform();
+        }
+        
+        function zoomReset() {
+            currentZoom = 1;
+            currentPan = { x: 0, y: 0 };
+            applyTransform();
+        }
+        
+        function applyTransform() {
+            const g = document.getElementById('settlements-group');
+            if (g) {
+                g.setAttribute('transform', 
+                    `translate(${currentPan.x}, ${currentPan.y}) scale(${currentZoom})`
+                );
+            }
+        }
+        
+        // Event listeners
+        document.getElementById('color-mode').addEventListener('change', renderMap);
+        document.getElementById('municipality-filter').addEventListener('change', renderMap);
+        document.getElementById('min-population').addEventListener('input', (e) => {
+            document.getElementById('pop-value').textContent = e.target.value;
+            renderMap();
+        });
+        
+        // Mouse wheel zoom
+        document.getElementById('map-svg').addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (e.deltaY < 0) zoomIn();
+            else zoomOut();
+        });
+        
+        // Panning
+        const svg = document.getElementById('map-svg');
+        svg.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            dragStart = { x: e.clientX - currentPan.x, y: e.clientY - currentPan.y };
+            svg.style.cursor = 'grabbing';
+        });
+        
+        svg.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                currentPan = {
+                    x: e.clientX - dragStart.x,
+                    y: e.clientY - dragStart.y
+                };
+                applyTransform();
+            }
+        });
+        
+        svg.addEventListener('mouseup', () => {
+            isDragging = false;
+            svg.style.cursor = 'move';
+        });
+        
+        svg.addEventListener('mouseleave', () => {
+            isDragging = false;
+            svg.style.cursor = 'move';
+        });
+        
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>

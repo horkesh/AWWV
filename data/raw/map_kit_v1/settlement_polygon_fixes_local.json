@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "notes": "Local polygon fixes for A War Without Victory. Applied after fixes_pack_v1.",
+  "fixes": {
+    "20036:201049": {
+      "fix": {
+        "type": "replacement_d",
+        "replacement_d": "M 819.87092,195.07955 L 819.87092,197.07955 L 821.87092,197.07955 L 821.87092,195.07955 Z",
+        "notes": "Replaced invalid complex path with simplified valid closed polygon"
+      }
+    },
+    "20036:200972": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry"
+      }
+    },
+    "20036:230251": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20036:230324": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20265:210994": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20052:202525": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20133:206954": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20613:227765": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20613:226971": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20613:227412": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20117:206075": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20621:228265": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "11525:165689": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20494:219096": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20672:229725": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20532:221945": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20532:222844": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20532:221953": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20532:222135": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20567:224138": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20575:224324": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20591:226459": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    },
+    "20591:226394": {
+      "fix": {
+        "type": "convex_hull_from_path",
+        "notes": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+      }
+    }
+  }
+}

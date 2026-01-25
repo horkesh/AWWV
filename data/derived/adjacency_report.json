@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "script_version": "adjacency.py v2",
+  "total_edges": 20612,
+  "avg_degree": 6.72,
+  "orphan_count": 1,
+  "max_degree": 26,
+  "top_degree_sids": [
+    {
+      "sid": "11185:162973",
+      "degree": 26
+    },
+    {
+      "sid": "11088:155551",
+      "degree": 26
+    },
+    {
+      "sid": "20249:210145",
+      "degree": 23
+    },
+    {
+      "sid": "10308:113727",
+      "degree": 22
+    },
+    {
+      "sid": "10359:117030",
+      "degree": 20
+    },
+    {
+      "sid": "11142:160261",
+      "degree": 20
+    },
+    {
+      "sid": "11312:171298",
+      "degree": 19
+    },
+    {
+      "sid": "20087:203009",
+      "degree": 18
+    },
+    {
+      "sid": "10049:100838",
+      "degree": 18
+    },
+    {
+      "sid": "10197:108120",
+      "degree": 18
+    }
+  ],
+  "invalid_geometry_count": 0,
+  "edge_breakdown": {
+    "line": 120,
+    "touch": 61,
+    "distance": 20431
+  },
+  "settlement_edges_sha256": "9bfc13fc2d665da705ba33ecf58c878296c5fdd03af8a6d5ab8faa6f22583adc"
+}

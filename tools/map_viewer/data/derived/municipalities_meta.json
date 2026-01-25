@@ -1,0 +1,1990 @@
+[
+  {
+    "mid": "10014",
+    "name": "Banovići",
+    "name_ascii": "Banovici",
+    "total_population": 53180,
+    "total_settlements": 21,
+    "urban_center_sid": "10014",
+    "totals_by_group": {
+      "bosniaks": 38324,
+      "croats": 1100,
+      "serbs": 9028,
+      "others": 4728
+    }
+  },
+  {
+    "mid": "10049",
+    "name": "Bihać",
+    "name_ascii": "Bihac",
+    "total_population": 144908,
+    "total_settlements": 60,
+    "urban_center_sid": "10049",
+    "totals_by_group": {
+      "bosniaks": 93480,
+      "croats": 11164,
+      "serbs": 28782,
+      "others": 11482
+    }
+  },
+  {
+    "mid": "10146",
+    "name": "Bosansko Grahovo",
+    "name_ascii": "Bosansko Grahovo",
+    "total_population": 16622,
+    "total_settlements": 36,
+    "urban_center_sid": "10146",
+    "totals_by_group": {
+      "bosniaks": 24,
+      "croats": 452,
+      "serbs": 15776,
+      "others": 370
+    }
+  },
+  {
+    "mid": "10189",
+    "name": "Breza",
+    "name_ascii": "Breza",
+    "total_population": 34634,
+    "total_settlements": 29,
+    "urban_center_sid": "10189",
+    "totals_by_group": {
+      "bosniaks": 26158,
+      "croats": 1702,
+      "serbs": 4244,
+      "others": 2530
+    }
+  },
+  {
+    "mid": "10197",
+    "name": "Bugojno",
+    "name_ascii": "Bugojno",
+    "total_population": 93778,
+    "total_settlements": 79,
+    "urban_center_sid": "10197",
+    "totals_by_group": {
+      "bosniaks": 39394,
+      "croats": 32062,
+      "serbs": 17346,
+      "others": 4976
+    }
+  },
+  {
+    "mid": "10219",
+    "name": "Busovača",
+    "name_ascii": "Busovaca",
+    "total_population": 37758,
+    "total_settlements": 48,
+    "urban_center_sid": "10219",
+    "totals_by_group": {
+      "bosniaks": 16902,
+      "croats": 18186,
+      "serbs": 1246,
+      "others": 1424
+    }
+  },
+  {
+    "mid": "10227",
+    "name": "Cazin",
+    "name_ascii": "Cazin",
+    "total_population": 126818,
+    "total_settlements": 55,
+    "urban_center_sid": "10227",
+    "totals_by_group": {
+      "bosniaks": 123386,
+      "croats": 278,
+      "serbs": 1556,
+      "others": 1598
+    }
+  },
+  {
+    "mid": "10243",
+    "name": "Čapljina",
+    "name_ascii": "Capljina",
+    "total_population": 55764,
+    "total_settlements": 33,
+    "urban_center_sid": "10243",
+    "totals_by_group": {
+      "bosniaks": 15344,
+      "croats": 29938,
+      "serbs": 7506,
+      "others": 2976
+    }
+  },
+  {
+    "mid": "10260",
+    "name": "Čitluk",
+    "name_ascii": "Citluk",
+    "total_population": 30166,
+    "total_settlements": 22,
+    "urban_center_sid": "10260",
+    "totals_by_group": {
+      "bosniaks": 222,
+      "croats": 29646,
+      "serbs": 38,
+      "others": 260
+    }
+  },
+  {
+    "mid": "10294",
+    "name": "Donji Vakuf",
+    "name_ascii": "Donji Vakuf",
+    "total_population": 48744,
+    "total_settlements": 69,
+    "urban_center_sid": "10294",
+    "totals_by_group": {
+      "bosniaks": 27018,
+      "croats": 1364,
+      "serbs": 18728,
+      "others": 1634
+    }
+  },
+  {
+    "mid": "10308",
+    "name": "Tomislavgrad",
+    "name_ascii": "Tomislavgrad",
+    "total_population": 60018,
+    "total_settlements": 61,
+    "urban_center_sid": "10308",
+    "totals_by_group": {
+      "bosniaks": 6296,
+      "croats": 51952,
+      "serbs": 1152,
+      "others": 618
+    }
+  },
+  {
+    "mid": "10324",
+    "name": "Fojnica",
+    "name_ascii": "Fojnica",
+    "total_population": 32592,
+    "total_settlements": 56,
+    "urban_center_sid": "10324",
+    "totals_by_group": {
+      "bosniaks": 16048,
+      "croats": 13246,
+      "serbs": 314,
+      "others": 2984
+    }
+  },
+  {
+    "mid": "10359",
+    "name": "Glamoč",
+    "name_ascii": "Glamoc",
+    "total_population": 25186,
+    "total_settlements": 56,
+    "urban_center_sid": "10359",
+    "totals_by_group": {
+      "bosniaks": 4514,
+      "croats": 368,
+      "serbs": 19902,
+      "others": 402
+    }
+  },
+  {
+    "mid": "10375",
+    "name": "Gornji Vakuf-Uskoplje",
+    "name_ascii": "Gornji Vakuf-Uskoplje",
+    "total_population": 50362,
+    "total_settlements": 53,
+    "urban_center_sid": "10375",
+    "totals_by_group": {
+      "bosniaks": 28126,
+      "croats": 21412,
+      "serbs": 220,
+      "others": 604
+    }
+  },
+  {
+    "mid": "10391",
+    "name": "Gradačac",
+    "name_ascii": "Gradacac",
+    "total_population": 84746,
+    "total_settlements": 35,
+    "urban_center_sid": "10391",
+    "totals_by_group": {
+      "bosniaks": 67408,
+      "croats": 5668,
+      "serbs": 7516,
+      "others": 4154
+    }
+  },
+  {
+    "mid": "10405",
+    "name": "Grude",
+    "name_ascii": "Grude",
+    "total_population": 32716,
+    "total_settlements": 14,
+    "urban_center_sid": "10405",
+    "totals_by_group": {
+      "bosniaks": 8,
+      "croats": 32420,
+      "serbs": 18,
+      "others": 270
+    }
+  },
+  {
+    "mid": "10421",
+    "name": "Jablanica",
+    "name_ascii": "Jablanica",
+    "total_population": 25382,
+    "total_settlements": 34,
+    "urban_center_sid": "10421",
+    "totals_by_group": {
+      "bosniaks": 18198,
+      "croats": 4582,
+      "serbs": 1008,
+      "others": 1594
+    }
+  },
+  {
+    "mid": "10448",
+    "name": "Kakanj",
+    "name_ascii": "Kakanj",
+    "total_population": 111900,
+    "total_settlements": 107,
+    "urban_center_sid": "10448",
+    "totals_by_group": {
+      "bosniaks": 61056,
+      "croats": 33112,
+      "serbs": 9858,
+      "others": 7874
+    }
+  },
+  {
+    "mid": "10472",
+    "name": "Kiseljak",
+    "name_ascii": "Kiseljak",
+    "total_population": 48328,
+    "total_settlements": 83,
+    "urban_center_sid": "10472",
+    "totals_by_group": {
+      "bosniaks": 19556,
+      "croats": 25100,
+      "serbs": 1480,
+      "others": 2192
+    }
+  },
+  {
+    "mid": "10499",
+    "name": "Kladanj",
+    "name_ascii": "Kladanj",
+    "total_population": 31530,
+    "total_settlements": 49,
+    "urban_center_sid": "10499",
+    "totals_by_group": {
+      "bosniaks": 23952,
+      "croats": 70,
+      "serbs": 6598,
+      "others": 910
+    }
+  },
+  {
+    "mid": "10529",
+    "name": "Konjic",
+    "name_ascii": "Konjic",
+    "total_population": 88528,
+    "total_settlements": 169,
+    "urban_center_sid": "10529",
+    "totals_by_group": {
+      "bosniaks": 48384,
+      "croats": 23026,
+      "serbs": 13250,
+      "others": 3868
+    }
+  },
+  {
+    "mid": "10545",
+    "name": "Kreševo",
+    "name_ascii": "Kresevo",
+    "total_population": 13462,
+    "total_settlements": 28,
+    "urban_center_sid": "10545",
+    "totals_by_group": {
+      "bosniaks": 3062,
+      "croats": 9428,
+      "serbs": 68,
+      "others": 904
+    }
+  },
+  {
+    "mid": "10570",
+    "name": "Široki Brijeg",
+    "name_ascii": "Siroki Brijeg",
+    "total_population": 54320,
+    "total_settlements": 35,
+    "urban_center_sid": "10570",
+    "totals_by_group": {
+      "bosniaks": 18,
+      "croats": 53728,
+      "serbs": 296,
+      "others": 278
+    }
+  },
+  {
+    "mid": "10588",
+    "name": "Livno",
+    "name_ascii": "Livno",
+    "total_population": 81200,
+    "total_settlements": 60,
+    "urban_center_sid": "10588",
+    "totals_by_group": {
+      "bosniaks": 11586,
+      "croats": 58648,
+      "serbs": 7826,
+      "others": 3140
+    }
+  },
+  {
+    "mid": "10600",
+    "name": "Lukavac",
+    "name_ascii": "Lukavac",
+    "total_population": 112710,
+    "total_settlements": 45,
+    "urban_center_sid": "10600",
+    "totals_by_group": {
+      "bosniaks": 76156,
+      "croats": 4318,
+      "serbs": 22926,
+      "others": 9310
+    }
+  },
+  {
+    "mid": "10626",
+    "name": "Ljubuški",
+    "name_ascii": "Ljubuski",
+    "total_population": 56680,
+    "total_settlements": 36,
+    "urban_center_sid": "10626",
+    "totals_by_group": {
+      "bosniaks": 3184,
+      "croats": 52254,
+      "serbs": 130,
+      "others": 1112
+    }
+  },
+  {
+    "mid": "10634",
+    "name": "Maglaj",
+    "name_ascii": "Maglaj",
+    "total_population": 68230,
+    "total_settlements": 41,
+    "urban_center_sid": "10634",
+    "totals_by_group": {
+      "bosniaks": 37976,
+      "croats": 7192,
+      "serbs": 19044,
+      "others": 4018
+    }
+  },
+  {
+    "mid": "10685",
+    "name": "Neum",
+    "name_ascii": "Neum",
+    "total_population": 8650,
+    "total_settlements": 28,
+    "urban_center_sid": "10685",
+    "totals_by_group": {
+      "bosniaks": 380,
+      "croats": 7584,
+      "serbs": 414,
+      "others": 272
+    }
+  },
+  {
+    "mid": "10715",
+    "name": "Olovo",
+    "name_ascii": "Olovo",
+    "total_population": 32652,
+    "total_settlements": 46,
+    "urban_center_sid": "10715",
+    "totals_by_group": {
+      "bosniaks": 24350,
+      "croats": 1284,
+      "serbs": 6174,
+      "others": 844
+    }
+  },
+  {
+    "mid": "10731",
+    "name": "Posušje",
+    "name_ascii": "Posusje",
+    "total_population": 34268,
+    "total_settlements": 21,
+    "urban_center_sid": "10731",
+    "totals_by_group": {
+      "bosniaks": 12,
+      "croats": 33926,
+      "serbs": 18,
+      "others": 312
+    }
+  },
+  {
+    "mid": "10766",
+    "name": "Prozor",
+    "name_ascii": "Prozor",
+    "total_population": 39520,
+    "total_settlements": 57,
+    "urban_center_sid": "10766",
+    "totals_by_group": {
+      "bosniaks": 14450,
+      "croats": 24518,
+      "serbs": 90,
+      "others": 462
+    }
+  },
+  {
+    "mid": "10774",
+    "name": "Novi Travnik",
+    "name_ascii": "Novi Travnik",
+    "total_population": 61426,
+    "total_settlements": 53,
+    "urban_center_sid": "10774",
+    "totals_by_group": {
+      "bosniaks": 23250,
+      "croats": 24324,
+      "serbs": 8194,
+      "others": 5658
+    }
+  },
+  {
+    "mid": "10839",
+    "name": "Centar Sarajevo",
+    "name_ascii": "Centar Sarajevo",
+    "total_population": 158572,
+    "total_settlements": 7,
+    "urban_center_sid": "10839",
+    "totals_by_group": {
+      "bosniaks": 79522,
+      "croats": 10856,
+      "serbs": 33262,
+      "others": 34932
+    }
+  },
+  {
+    "mid": "10847",
+    "name": "Hadžići",
+    "name_ascii": "Hadzici",
+    "total_population": 48400,
+    "total_settlements": 63,
+    "urban_center_sid": "10847",
+    "totals_by_group": {
+      "bosniaks": 30784,
+      "croats": 1492,
+      "serbs": 12724,
+      "others": 3400
+    }
+  },
+  {
+    "mid": "10863",
+    "name": "Ilijaš",
+    "name_ascii": "Ilijas",
+    "total_population": 50032,
+    "total_settlements": 75,
+    "urban_center_sid": "10863",
+    "totals_by_group": {
+      "bosniaks": 20880,
+      "croats": 3472,
+      "serbs": 22606,
+      "others": 3074
+    }
+  },
+  {
+    "mid": "10871",
+    "name": "Novi Grad Sarajevo",
+    "name_ascii": "Novi Grad Sarajevo",
+    "total_population": 267594,
+    "total_settlements": 4,
+    "urban_center_sid": "10871",
+    "totals_by_group": {
+      "bosniaks": 136810,
+      "croats": 17580,
+      "serbs": 72000,
+      "others": 41204
+    }
+  },
+  {
+    "mid": "10928",
+    "name": "Vogošća",
+    "name_ascii": "Vogosca",
+    "total_population": 49294,
+    "total_settlements": 22,
+    "urban_center_sid": "10928",
+    "totals_by_group": {
+      "bosniaks": 24998,
+      "croats": 2142,
+      "serbs": 17626,
+      "others": 4528
+    }
+  },
+  {
+    "mid": "10987",
+    "name": "Srebrenik",
+    "name_ascii": "Srebrenik",
+    "total_population": 81792,
+    "total_settlements": 50,
+    "urban_center_sid": "10987",
+    "totals_by_group": {
+      "bosniaks": 61056,
+      "croats": 5504,
+      "serbs": 10616,
+      "others": 4616
+    }
+  },
+  {
+    "mid": "11045",
+    "name": "Tešanj",
+    "name_ascii": "Tesanj",
+    "total_population": 82292,
+    "total_settlements": 42,
+    "urban_center_sid": "11045",
+    "totals_by_group": {
+      "bosniaks": 69000,
+      "croats": 7298,
+      "serbs": 3326,
+      "others": 2668
+    }
+  },
+  {
+    "mid": "11061",
+    "name": "Travnik",
+    "name_ascii": "Travnik",
+    "total_population": 139942,
+    "total_settlements": 91,
+    "urban_center_sid": "11061",
+    "totals_by_group": {
+      "bosniaks": 63626,
+      "croats": 51500,
+      "serbs": 14750,
+      "others": 10066
+    }
+  },
+  {
+    "mid": "11088",
+    "name": "Tuzla",
+    "name_ascii": "Tuzla",
+    "total_population": 262804,
+    "total_settlements": 67,
+    "urban_center_sid": "11088",
+    "totals_by_group": {
+      "bosniaks": 125338,
+      "croats": 40794,
+      "serbs": 40180,
+      "others": 56492
+    }
+  },
+  {
+    "mid": "11100",
+    "name": "Vareš",
+    "name_ascii": "Vares",
+    "total_population": 44406,
+    "total_settlements": 86,
+    "urban_center_sid": "11100",
+    "totals_by_group": {
+      "bosniaks": 13428,
+      "croats": 18032,
+      "serbs": 7288,
+      "others": 5658
+    }
+  },
+  {
+    "mid": "11118",
+    "name": "Velika Kladuša",
+    "name_ascii": "Velika Kladusa",
+    "total_population": 105816,
+    "total_settlements": 50,
+    "urban_center_sid": "11118",
+    "totals_by_group": {
+      "bosniaks": 96610,
+      "croats": 1480,
+      "serbs": 4532,
+      "others": 3194
+    }
+  },
+  {
+    "mid": "11126",
+    "name": "Visoko",
+    "name_ascii": "Visoko",
+    "total_population": 92320,
+    "total_settlements": 89,
+    "urban_center_sid": "11126",
+    "totals_by_group": {
+      "bosniaks": 68746,
+      "croats": 3744,
+      "serbs": 14942,
+      "others": 4888
+    }
+  },
+  {
+    "mid": "11142",
+    "name": "Vitez",
+    "name_ascii": "Vitez",
+    "total_population": 55718,
+    "total_settlements": 35,
+    "urban_center_sid": "11142",
+    "totals_by_group": {
+      "bosniaks": 23028,
+      "croats": 25350,
+      "serbs": 3002,
+      "others": 4338
+    }
+  },
+  {
+    "mid": "11177",
+    "name": "Zavidovići",
+    "name_ascii": "Zavidovici",
+    "total_population": 104758,
+    "total_settlements": 48,
+    "urban_center_sid": "11177",
+    "totals_by_group": {
+      "bosniaks": 67246,
+      "croats": 6858,
+      "serbs": 23252,
+      "others": 7402
+    }
+  },
+  {
+    "mid": "11185",
+    "name": "Zenica",
+    "name_ascii": "Zenica",
+    "total_population": 293206,
+    "total_settlements": 84,
+    "urban_center_sid": "11185",
+    "totals_by_group": {
+      "bosniaks": 160718,
+      "croats": 45022,
+      "serbs": 47024,
+      "others": 40442
+    }
+  },
+  {
+    "mid": "11207",
+    "name": "Žepče",
+    "name_ascii": "Zepce",
+    "total_population": 65712,
+    "total_settlements": 42,
+    "urban_center_sid": "11207",
+    "totals_by_group": {
+      "bosniaks": 23352,
+      "croats": 35832,
+      "serbs": 4796,
+      "others": 1732
+    }
+  },
+  {
+    "mid": "11215",
+    "name": "Živinice",
+    "name_ascii": "Zivinice",
+    "total_population": 109566,
+    "total_settlements": 30,
+    "urban_center_sid": "11215",
+    "totals_by_group": {
+      "bosniaks": 88034,
+      "croats": 7952,
+      "serbs": 7050,
+      "others": 6530
+    }
+  },
+  {
+    "mid": "11231",
+    "name": "Čelić",
+    "name_ascii": "Celic",
+    "total_population": 24890,
+    "total_settlements": 21,
+    "urban_center_sid": "11231",
+    "totals_by_group": {
+      "bosniaks": 18798,
+      "croats": 2412,
+      "serbs": 3144,
+      "others": 536
+    }
+  },
+  {
+    "mid": "11240",
+    "name": "Bužim",
+    "name_ascii": "Buzim",
+    "total_population": 33880,
+    "total_settlements": 8,
+    "urban_center_sid": "11240",
+    "totals_by_group": {
+      "bosniaks": 33360,
+      "croats": 10,
+      "serbs": 182,
+      "others": 328
+    }
+  },
+  {
+    "mid": "11258",
+    "name": "Doboj-Istok",
+    "name_ascii": "Doboj Istok",
+    "total_population": 18076,
+    "total_settlements": 7,
+    "urban_center_sid": "11258",
+    "totals_by_group": {
+      "bosniaks": 17656,
+      "croats": 14,
+      "serbs": 180,
+      "others": 226
+    }
+  },
+  {
+    "mid": "11266",
+    "name": "Doboj-Jug",
+    "name_ascii": "Doboj Jug",
+    "total_population": 6518,
+    "total_settlements": 3,
+    "urban_center_sid": "11266",
+    "totals_by_group": {
+      "bosniaks": 6090,
+      "croats": 194,
+      "serbs": 38,
+      "others": 196
+    }
+  },
+  {
+    "mid": "11274",
+    "name": "Dobretići",
+    "name_ascii": "Dobretici",
+    "total_population": 9580,
+    "total_settlements": 19,
+    "urban_center_sid": "11274",
+    "totals_by_group": {
+      "bosniaks": 6,
+      "croats": 9440,
+      "serbs": 12,
+      "others": 122
+    }
+  },
+  {
+    "mid": "11282",
+    "name": "Domaljevac-Šamac",
+    "name_ascii": "Domaljevac-Samac",
+    "total_population": 12686,
+    "total_settlements": 7,
+    "urban_center_sid": "11282",
+    "totals_by_group": {
+      "bosniaks": 16,
+      "croats": 11836,
+      "serbs": 614,
+      "others": 220
+    }
+  },
+  {
+    "mid": "11304",
+    "name": "Ravno",
+    "name_ascii": "Ravno",
+    "total_population": 3590,
+    "total_settlements": 55,
+    "urban_center_sid": "11304",
+    "totals_by_group": {
+      "bosniaks": 42,
+      "croats": 1608,
+      "serbs": 1874,
+      "others": 66
+    }
+  },
+  {
+    "mid": "11312",
+    "name": "Sapna",
+    "name_ascii": "Sapna",
+    "total_population": 28156,
+    "total_settlements": 14,
+    "urban_center_sid": "11312",
+    "totals_by_group": {
+      "bosniaks": 20634,
+      "croats": 30,
+      "serbs": 7218,
+      "others": 274
+    }
+  },
+  {
+    "mid": "11339",
+    "name": "Teočak",
+    "name_ascii": "Teocak",
+    "total_population": 15554,
+    "total_settlements": 11,
+    "urban_center_sid": "11339",
+    "totals_by_group": {
+      "bosniaks": 14628,
+      "croats": 8,
+      "serbs": 84,
+      "others": 834
+    }
+  },
+  {
+    "mid": "11410",
+    "name": "Grad Mostar",
+    "name_ascii": "Mostar",
+    "total_population": 253224,
+    "total_settlements": 61,
+    "urban_center_sid": "11410",
+    "totals_by_group": {
+      "bosniaks": 88074,
+      "croats": 85814,
+      "serbs": 47558,
+      "others": 31778
+    }
+  },
+  {
+    "mid": "11428",
+    "name": "Bosanska Krupa",
+    "name_ascii": "Bosanska Krupa",
+    "total_population": 76952,
+    "total_settlements": 38,
+    "urban_center_sid": "11428",
+    "totals_by_group": {
+      "bosniaks": 52686,
+      "croats": 258,
+      "serbs": 21888,
+      "others": 2120
+    }
+  },
+  {
+    "mid": "11436",
+    "name": "Bosanski Petrovac",
+    "name_ascii": "Bosanski Petrovac",
+    "total_population": 30464,
+    "total_settlements": 36,
+    "urban_center_sid": "11436",
+    "totals_by_group": {
+      "bosniaks": 6576,
+      "croats": 96,
+      "serbs": 22612,
+      "others": 1180
+    }
+  },
+  {
+    "mid": "11444",
+    "name": "Foča (FBiH)",
+    "name_ascii": "Foca (FBiH)",
+    "total_population": 10316,
+    "total_settlements": 33,
+    "urban_center_sid": "11444",
+    "totals_by_group": {
+      "bosniaks": 7264,
+      "croats": 2,
+      "serbs": 2914,
+      "others": 136
+    }
+  },
+  {
+    "mid": "11452",
+    "name": "Goražde",
+    "name_ascii": "Gorazde",
+    "total_population": 65716,
+    "total_settlements": 145,
+    "urban_center_sid": "11452",
+    "totals_by_group": {
+      "bosniaks": 45364,
+      "croats": 152,
+      "serbs": 17646,
+      "others": 2554
+    }
+  },
+  {
+    "mid": "11479",
+    "name": "Gračanica",
+    "name_ascii": "Gracanica",
+    "total_population": 94970,
+    "total_settlements": 24,
+    "urban_center_sid": "11479",
+    "totals_by_group": {
+      "bosniaks": 85036,
+      "croats": 154,
+      "serbs": 5184,
+      "others": 4596
+    }
+  },
+  {
+    "mid": "11487",
+    "name": "Jajce",
+    "name_ascii": "Jajce",
+    "total_population": 87950,
+    "total_settlements": 59,
+    "urban_center_sid": "11487",
+    "totals_by_group": {
+      "bosniaks": 35174,
+      "croats": 31580,
+      "serbs": 15006,
+      "others": 6190
+    }
+  },
+  {
+    "mid": "11495",
+    "name": "Kalesija",
+    "name_ascii": "Kalesija",
+    "total_population": 68928,
+    "total_settlements": 29,
+    "urban_center_sid": "11495",
+    "totals_by_group": {
+      "bosniaks": 58834,
+      "croats": 60,
+      "serbs": 8162,
+      "others": 1872
+    }
+  },
+  {
+    "mid": "11509",
+    "name": "Ključ",
+    "name_ascii": "Kljuc",
+    "total_population": 56568,
+    "total_settlements": 42,
+    "urban_center_sid": "11509",
+    "totals_by_group": {
+      "bosniaks": 35314,
+      "croats": 646,
+      "serbs": 19034,
+      "others": 1574
+    }
+  },
+  {
+    "mid": "11517",
+    "name": "Kupres (FBiH)",
+    "name_ascii": "Kupres",
+    "total_population": 17672,
+    "total_settlements": 37,
+    "urban_center_sid": "11517",
+    "totals_by_group": {
+      "bosniaks": 1604,
+      "croats": 7624,
+      "serbs": 8182,
+      "others": 262
+    }
+  },
+  {
+    "mid": "11525",
+    "name": "Odžak",
+    "name_ascii": "Odzak",
+    "total_population": 57136,
+    "total_settlements": 15,
+    "urban_center_sid": "11525",
+    "totals_by_group": {
+      "bosniaks": 11906,
+      "croats": 32124,
+      "serbs": 9536,
+      "others": 3570
+    }
+  },
+  {
+    "mid": "11533",
+    "name": "Orašje",
+    "name_ascii": "Orasje",
+    "total_population": 48458,
+    "total_settlements": 15,
+    "urban_center_sid": "11533",
+    "totals_by_group": {
+      "bosniaks": 3758,
+      "croats": 39942,
+      "serbs": 3038,
+      "others": 1720
+    }
+  },
+  {
+    "mid": "11541",
+    "name": "Sanski Most",
+    "name_ascii": "Sanski Most",
+    "total_population": 109524,
+    "total_settlements": 68,
+    "urban_center_sid": "11541",
+    "totals_by_group": {
+      "bosniaks": 55716,
+      "croats": 6454,
+      "serbs": 42710,
+      "others": 4644
+    }
+  },
+  {
+    "mid": "11550",
+    "name": "Ilidža",
+    "name_ascii": "Ilidza",
+    "total_population": 124288,
+    "total_settlements": 13,
+    "urban_center_sid": "11550",
+    "totals_by_group": {
+      "bosniaks": 56842,
+      "croats": 13666,
+      "serbs": 41536,
+      "others": 12244
+    }
+  },
+  {
+    "mid": "11568",
+    "name": "Novo Sarajevo",
+    "name_ascii": "Novo Sarajevo",
+    "total_population": 181934,
+    "total_settlements": 4,
+    "urban_center_sid": "11568",
+    "totals_by_group": {
+      "bosniaks": 66958,
+      "croats": 17510,
+      "serbs": 58806,
+      "others": 38660
+    }
+  },
+  {
+    "mid": "11576",
+    "name": "Pale (FBiH)",
+    "name_ascii": "Pale (FBiH)",
+    "total_population": 3944,
+    "total_settlements": 16,
+    "urban_center_sid": "11576",
+    "totals_by_group": {
+      "bosniaks": 2748,
+      "croats": 8,
+      "serbs": 1158,
+      "others": 30
+    }
+  },
+  {
+    "mid": "11584",
+    "name": "Stari Grad Sarajevo",
+    "name_ascii": "Stari Grad Sarajevo",
+    "total_population": 99100,
+    "total_settlements": 9,
+    "urban_center_sid": "11584",
+    "totals_by_group": {
+      "bosniaks": 78650,
+      "croats": 2240,
+      "serbs": 8130,
+      "others": 10080
+    }
+  },
+  {
+    "mid": "11592",
+    "name": "Trnovo (FBiH)",
+    "name_ascii": "Trnovo (FBiH)",
+    "total_population": 6180,
+    "total_settlements": 56,
+    "urban_center_sid": "11592",
+    "totals_by_group": {
+      "bosniaks": 5026,
+      "croats": 2,
+      "serbs": 1058,
+      "others": 94
+    }
+  },
+  {
+    "mid": "11606",
+    "name": "Stolac",
+    "name_ascii": "Stolac",
+    "total_population": 30374,
+    "total_settlements": 27,
+    "urban_center_sid": "11606",
+    "totals_by_group": {
+      "bosniaks": 14794,
+      "croats": 11102,
+      "serbs": 3604,
+      "others": 874
+    }
+  },
+  {
+    "mid": "11614",
+    "name": "Drvar",
+    "name_ascii": "Drvar",
+    "total_population": 30686,
+    "total_settlements": 26,
+    "urban_center_sid": "11614",
+    "totals_by_group": {
+      "bosniaks": 58,
+      "croats": 62,
+      "serbs": 29692,
+      "others": 874
+    }
+  },
+  {
+    "mid": "11622",
+    "name": "Usora",
+    "name_ascii": "Usora",
+    "total_population": 17266,
+    "total_settlements": 14,
+    "urban_center_sid": "11622",
+    "totals_by_group": {
+      "bosniaks": 1514,
+      "croats": 14934,
+      "serbs": 210,
+      "others": 608
+    }
+  },
+  {
+    "mid": "20010",
+    "name": "Banja Luka",
+    "name_ascii": "Banja Luka",
+    "total_population": 391384,
+    "total_settlements": 55,
+    "urban_center_sid": "20010",
+    "totals_by_group": {
+      "bosniaks": 57116,
+      "croats": 58052,
+      "serbs": 213652,
+      "others": 62564
+    }
+  },
+  {
+    "mid": "20028",
+    "name": "Berkovići",
+    "name_ascii": "Berkovici",
+    "total_population": 6988,
+    "total_settlements": 21,
+    "urban_center_sid": "20028",
+    "totals_by_group": {
+      "bosniaks": 1408,
+      "croats": 1274,
+      "serbs": 4230,
+      "others": 76
+    }
+  },
+  {
+    "mid": "20036",
+    "name": "Bijeljina",
+    "name_ascii": "Bijeljina",
+    "total_population": 193976,
+    "total_settlements": 68,
+    "urban_center_sid": "20036",
+    "totals_by_group": {
+      "bosniaks": 60458,
+      "croats": 984,
+      "serbs": 114778,
+      "others": 17756
+    }
+  },
+  {
+    "mid": "20044",
+    "name": "Bileća",
+    "name_ascii": "Bileca",
+    "total_population": 26568,
+    "total_settlements": 62,
+    "urban_center_sid": "20044",
+    "totals_by_group": {
+      "bosniaks": 3894,
+      "croats": 78,
+      "serbs": 21256,
+      "others": 1340
+    }
+  },
+  {
+    "mid": "20052",
+    "name": "Bratunac",
+    "name_ascii": "Bratunac",
+    "total_population": 67238,
+    "total_settlements": 51,
+    "urban_center_sid": "20052",
+    "totals_by_group": {
+      "bosniaks": 43070,
+      "croats": 80,
+      "serbs": 22950,
+      "others": 1138
+    }
+  },
+  {
+    "mid": "20079",
+    "name": "Brod",
+    "name_ascii": "Brod",
+    "total_population": 67488,
+    "total_settlements": 24,
+    "urban_center_sid": "20079",
+    "totals_by_group": {
+      "bosniaks": 8174,
+      "croats": 27898,
+      "serbs": 22248,
+      "others": 9168
+    }
+  },
+  {
+    "mid": "20087",
+    "name": "Višegrad",
+    "name_ascii": "Visegrad",
+    "total_population": 42398,
+    "total_settlements": 164,
+    "urban_center_sid": "20087",
+    "totals_by_group": {
+      "bosniaks": 26942,
+      "croats": 64,
+      "serbs": 13486,
+      "others": 1906
+    }
+  },
+  {
+    "mid": "20095",
+    "name": "Vlasenica",
+    "name_ascii": "Vlasenica",
+    "total_population": 35620,
+    "total_settlements": 39,
+    "urban_center_sid": "20095",
+    "totals_by_group": {
+      "bosniaks": 21878,
+      "croats": 64,
+      "serbs": 12636,
+      "others": 1042
+    }
+  },
+  {
+    "mid": "20109",
+    "name": "Vukosavlje",
+    "name_ascii": "Vukosavlje",
+    "total_population": 16482,
+    "total_settlements": 13,
+    "urban_center_sid": "20109",
+    "totals_by_group": {
+      "bosniaks": 6248,
+      "croats": 6782,
+      "serbs": 2682,
+      "others": 770
+    }
+  },
+  {
+    "mid": "20117",
+    "name": "Gacko",
+    "name_ascii": "Gacko",
+    "total_population": 21576,
+    "total_settlements": 72,
+    "urban_center_sid": "20117",
+    "totals_by_group": {
+      "bosniaks": 7716,
+      "croats": 58,
+      "serbs": 13322,
+      "others": 480
+    }
+  },
+  {
+    "mid": "20125",
+    "name": "Gradiška",
+    "name_ascii": "Bosanska Gradiska",
+    "total_population": 119948,
+    "total_settlements": 69,
+    "urban_center_sid": "20125",
+    "totals_by_group": {
+      "bosniaks": 31702,
+      "croats": 6834,
+      "serbs": 71506,
+      "others": 9906
+    }
+  },
+  {
+    "mid": "20133",
+    "name": "Derventa",
+    "name_ascii": "Derventa",
+    "total_population": 112978,
+    "total_settlements": 58,
+    "urban_center_sid": "20133",
+    "totals_by_group": {
+      "bosniaks": 14172,
+      "croats": 43904,
+      "serbs": 45876,
+      "others": 9026
+    }
+  },
+  {
+    "mid": "20141",
+    "name": "Doboj",
+    "name_ascii": "Doboj",
+    "total_population": 190426,
+    "total_settlements": 84,
+    "urban_center_sid": "20141",
+    "totals_by_group": {
+      "bosniaks": 58406,
+      "croats": 21352,
+      "serbs": 94266,
+      "others": 16402
+    }
+  },
+  {
+    "mid": "20150",
+    "name": "Donji Žabar",
+    "name_ascii": "Donji Zabar",
+    "total_population": 8276,
+    "total_settlements": 7,
+    "urban_center_sid": "20150",
+    "totals_by_group": {
+      "bosniaks": 28,
+      "croats": 2674,
+      "serbs": 5432,
+      "others": 142
+    }
+  },
+  {
+    "mid": "20168",
+    "name": "Zvornik",
+    "name_ascii": "Zvornik",
+    "total_population": 134434,
+    "total_settlements": 69,
+    "urban_center_sid": "20168",
+    "totals_by_group": {
+      "bosniaks": 75570,
+      "croats": 214,
+      "serbs": 54508,
+      "others": 4142
+    }
+  },
+  {
+    "mid": "20176",
+    "name": "Istočna Ilidža",
+    "name_ascii": "Istocna Ilidza",
+    "total_population": 17224,
+    "total_settlements": 6,
+    "urban_center_sid": "20176",
+    "totals_by_group": {
+      "bosniaks": 3882,
+      "croats": 400,
+      "serbs": 11704,
+      "others": 1238
+    }
+  },
+  {
+    "mid": "20184",
+    "name": "Istočni Drvar",
+    "name_ascii": "Istocni Drvar",
+    "total_population": 122,
+    "total_settlements": 4,
+    "urban_center_sid": "20184",
+    "totals_by_group": {
+      "bosniaks": 2,
+      "croats": 0,
+      "serbs": 120,
+      "others": 0
+    }
+  },
+  {
+    "mid": "20192",
+    "name": "Istočni Mostar",
+    "name_ascii": "Istocni Mostar",
+    "total_population": 1036,
+    "total_settlements": 4,
+    "urban_center_sid": "20192",
+    "totals_by_group": {
+      "bosniaks": 596,
+      "croats": 260,
+      "serbs": 174,
+      "others": 6
+    }
+  },
+  {
+    "mid": "20206",
+    "name": "Istočni Stari Grad",
+    "name_ascii": "Istocni Stari Grad",
+    "total_population": 2724,
+    "total_settlements": 20,
+    "urban_center_sid": "20206",
+    "totals_by_group": {
+      "bosniaks": 460,
+      "croats": 12,
+      "serbs": 2214,
+      "others": 38
+    }
+  },
+  {
+    "mid": "20214",
+    "name": "Istočno Novo Sarajevo",
+    "name_ascii": "Istocno Novo Sarajevo",
+    "total_population": 8244,
+    "total_settlements": 9,
+    "urban_center_sid": "20214",
+    "totals_by_group": {
+      "bosniaks": 846,
+      "croats": 86,
+      "serbs": 6992,
+      "others": 320
+    }
+  },
+  {
+    "mid": "20222",
+    "name": "Jezero",
+    "name_ascii": "Jezero",
+    "total_population": 4298,
+    "total_settlements": 12,
+    "urban_center_sid": "20222",
+    "totals_by_group": {
+      "bosniaks": 1508,
+      "croats": 336,
+      "serbs": 2322,
+      "others": 132
+    }
+  },
+  {
+    "mid": "20249",
+    "name": "Kalinovik",
+    "name_ascii": "Kalinovik",
+    "total_population": 8498,
+    "total_settlements": 72,
+    "urban_center_sid": "20249",
+    "totals_by_group": {
+      "bosniaks": 2628,
+      "croats": 34,
+      "serbs": 5628,
+      "others": 208
+    }
+  },
+  {
+    "mid": "20257",
+    "name": "Kneževo",
+    "name_ascii": "Knezevo",
+    "total_population": 30808,
+    "total_settlements": 21,
+    "urban_center_sid": "20257",
+    "totals_by_group": {
+      "bosniaks": 2136,
+      "croats": 836,
+      "serbs": 27318,
+      "others": 518
+    }
+  },
+  {
+    "mid": "20265",
+    "name": "Kozarska Dubica",
+    "name_ascii": "Bosanska Dubica",
+    "total_population": 63212,
+    "total_settlements": 62,
+    "urban_center_sid": "20265",
+    "totals_by_group": {
+      "bosniaks": 12880,
+      "croats": 976,
+      "serbs": 43456,
+      "others": 5900
+    }
+  },
+  {
+    "mid": "20273",
+    "name": "Kostajnica",
+    "name_ascii": "Kostajnica",
+    "total_population": 12462,
+    "total_settlements": 13,
+    "urban_center_sid": "20273",
+    "totals_by_group": {
+      "bosniaks": 3414,
+      "croats": 332,
+      "serbs": 8082,
+      "others": 634
+    }
+  },
+  {
+    "mid": "20281",
+    "name": "Kotor Varoš",
+    "name_ascii": "Kotor Varos",
+    "total_population": 73706,
+    "total_settlements": 44,
+    "urban_center_sid": "20281",
+    "totals_by_group": {
+      "bosniaks": 22180,
+      "croats": 21390,
+      "serbs": 28112,
+      "others": 2024
+    }
+  },
+  {
+    "mid": "20290",
+    "name": "Krupa na Uni",
+    "name_ascii": "Krupa na Uni",
+    "total_population": 5808,
+    "total_settlements": 13,
+    "urban_center_sid": "20290",
+    "totals_by_group": {
+      "bosniaks": 162,
+      "croats": 10,
+      "serbs": 5612,
+      "others": 24
+    }
+  },
+  {
+    "mid": "20303",
+    "name": "Kupres (RS)",
+    "name_ascii": "Kupres (RS)",
+    "total_population": 1564,
+    "total_settlements": 5,
+    "urban_center_sid": "20303",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2,
+      "serbs": 1546,
+      "others": 16
+    }
+  },
+  {
+    "mid": "20311",
+    "name": "Laktaši",
+    "name_ascii": "Laktasi",
+    "total_population": 59664,
+    "total_settlements": 38,
+    "urban_center_sid": "20311",
+    "totals_by_group": {
+      "bosniaks": 816,
+      "croats": 5130,
+      "serbs": 48352,
+      "others": 5366
+    }
+  },
+  {
+    "mid": "20320",
+    "name": "Lopare",
+    "name_ascii": "Lopare",
+    "total_population": 40576,
+    "total_settlements": 36,
+    "urban_center_sid": "20320",
+    "totals_by_group": {
+      "bosniaks": 5182,
+      "croats": 116,
+      "serbs": 33664,
+      "others": 1614
+    }
+  },
+  {
+    "mid": "20338",
+    "name": "Ljubinje",
+    "name_ascii": "Ljubinje",
+    "total_population": 8344,
+    "total_settlements": 22,
+    "urban_center_sid": "20338",
+    "totals_by_group": {
+      "bosniaks": 664,
+      "croats": 78,
+      "serbs": 7496,
+      "others": 106
+    }
+  },
+  {
+    "mid": "20346",
+    "name": "Milići",
+    "name_ascii": "Milici",
+    "total_population": 31438,
+    "total_settlements": 55,
+    "urban_center_sid": "20346",
+    "totals_by_group": {
+      "bosniaks": 14866,
+      "croats": 14,
+      "serbs": 15966,
+      "others": 592
+    }
+  },
+  {
+    "mid": "20354",
+    "name": "Modriča",
+    "name_ascii": "Modrica",
+    "total_population": 67134,
+    "total_settlements": 25,
+    "urban_center_sid": "20354",
+    "totals_by_group": {
+      "bosniaks": 15264,
+      "croats": 16264,
+      "serbs": 29776,
+      "others": 5830
+    }
+  },
+  {
+    "mid": "20362",
+    "name": "Mrkonjić Grad",
+    "name_ascii": "Mrkonjic Grad",
+    "total_population": 52556,
+    "total_settlements": 39,
+    "urban_center_sid": "20362",
+    "totals_by_group": {
+      "bosniaks": 4622,
+      "croats": 3984,
+      "serbs": 42112,
+      "others": 1838
+    }
+  },
+  {
+    "mid": "20389",
+    "name": "Nevesinje",
+    "name_ascii": "Nevesinje",
+    "total_population": 27888,
+    "total_settlements": 57,
+    "urban_center_sid": "20389",
+    "totals_by_group": {
+      "bosniaks": 5668,
+      "croats": 420,
+      "serbs": 21378,
+      "others": 422
+    }
+  },
+  {
+    "mid": "20397",
+    "name": "Novi Grad",
+    "name_ascii": "Bosanski Novi",
+    "total_population": 70868,
+    "total_settlements": 49,
+    "urban_center_sid": "20397",
+    "totals_by_group": {
+      "bosniaks": 24666,
+      "croats": 474,
+      "serbs": 42120,
+      "others": 3608
+    }
+  },
+  {
+    "mid": "20419",
+    "name": "Novo Goražde",
+    "name_ascii": "Novo Gorazde",
+    "total_population": 9430,
+    "total_settlements": 62,
+    "urban_center_sid": "20419",
+    "totals_by_group": {
+      "bosniaks": 7228,
+      "croats": 8,
+      "serbs": 2040,
+      "others": 154
+    }
+  },
+  {
+    "mid": "20427",
+    "name": "Osmaci",
+    "name_ascii": "Osmaci",
+    "total_population": 14690,
+    "total_settlements": 17,
+    "urban_center_sid": "20427",
+    "totals_by_group": {
+      "bosniaks": 7440,
+      "croats": 10,
+      "serbs": 7156,
+      "others": 84
+    }
+  },
+  {
+    "mid": "20435",
+    "name": "Oštra Luka",
+    "name_ascii": "Ostra Luka",
+    "total_population": 11090,
+    "total_settlements": 25,
+    "urban_center_sid": "20435",
+    "totals_by_group": {
+      "bosniaks": 556,
+      "croats": 2190,
+      "serbs": 8016,
+      "others": 328
+    }
+  },
+  {
+    "mid": "20443",
+    "name": "Pale (RS)",
+    "name_ascii": "Pale",
+    "total_population": 28960,
+    "total_settlements": 63,
+    "urban_center_sid": "20443",
+    "totals_by_group": {
+      "bosniaks": 6024,
+      "croats": 250,
+      "serbs": 21560,
+      "others": 1126
+    }
+  },
+  {
+    "mid": "20451",
+    "name": "Pelagićevo",
+    "name_ascii": "Pelagicevo",
+    "total_population": 20790,
+    "total_settlements": 12,
+    "urban_center_sid": "20451",
+    "totals_by_group": {
+      "bosniaks": 86,
+      "croats": 11046,
+      "serbs": 8354,
+      "others": 1304
+    }
+  },
+  {
+    "mid": "20460",
+    "name": "Petrovac",
+    "name_ascii": "Petrovac",
+    "total_population": 778,
+    "total_settlements": 7,
+    "urban_center_sid": "20460",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 0,
+      "serbs": 776,
+      "others": 2
+    }
+  },
+  {
+    "mid": "20478",
+    "name": "Petrovo",
+    "name_ascii": "Petrovo",
+    "total_population": 18300,
+    "total_settlements": 8,
+    "urban_center_sid": "20478",
+    "totals_by_group": {
+      "bosniaks": 164,
+      "croats": 96,
+      "serbs": 17226,
+      "others": 814
+    }
+  },
+  {
+    "mid": "20486",
+    "name": "Prijedor",
+    "name_ascii": "Prijedor",
+    "total_population": 225086,
+    "total_settlements": 72,
+    "urban_center_sid": "20486",
+    "totals_by_group": {
+      "bosniaks": 98702,
+      "croats": 12632,
+      "serbs": 95162,
+      "others": 18590
+    }
+  },
+  {
+    "mid": "20494",
+    "name": "Prnjavor",
+    "name_ascii": "Prnjavor",
+    "total_population": 94110,
+    "total_settlements": 64,
+    "urban_center_sid": "20494",
+    "totals_by_group": {
+      "bosniaks": 14286,
+      "croats": 3442,
+      "serbs": 67016,
+      "others": 9366
+    }
+  },
+  {
+    "mid": "20508",
+    "name": "Ribnik",
+    "name_ascii": "Ribnik",
+    "total_population": 18214,
+    "total_settlements": 30,
+    "urban_center_sid": "20508",
+    "totals_by_group": {
+      "bosniaks": 78,
+      "croats": 14,
+      "serbs": 17978,
+      "others": 144
+    }
+  },
+  {
+    "mid": "20516",
+    "name": "Rogatica",
+    "name_ascii": "Rogatica",
+    "total_population": 43762,
+    "total_settlements": 119,
+    "urban_center_sid": "20516",
+    "totals_by_group": {
+      "bosniaks": 26374,
+      "croats": 38,
+      "serbs": 16632,
+      "others": 718
+    }
+  },
+  {
+    "mid": "20524",
+    "name": "Rudo",
+    "name_ascii": "Rudo",
+    "total_population": 23142,
+    "total_settlements": 90,
+    "urban_center_sid": "20524",
+    "totals_by_group": {
+      "bosniaks": 6260,
+      "croats": 10,
+      "serbs": 16300,
+      "others": 572
+    }
+  },
+  {
+    "mid": "20532",
+    "name": "Sokolac",
+    "name_ascii": "Sokolac",
+    "total_population": 31026,
+    "total_settlements": 97,
+    "urban_center_sid": "20532",
+    "totals_by_group": {
+      "bosniaks": 10034,
+      "croats": 38,
+      "serbs": 20602,
+      "others": 352
+    }
+  },
+  {
+    "mid": "20559",
+    "name": "Srbac",
+    "name_ascii": "Srbac",
+    "total_population": 43680,
+    "total_settlements": 40,
+    "urban_center_sid": "20559",
+    "totals_by_group": {
+      "bosniaks": 1880,
+      "croats": 280,
+      "serbs": 38764,
+      "others": 2756
+    }
+  },
+  {
+    "mid": "20567",
+    "name": "Srebrenica",
+    "name_ascii": "Srebrenica",
+    "total_population": 73332,
+    "total_settlements": 82,
+    "urban_center_sid": "20567",
+    "totals_by_group": {
+      "bosniaks": 55144,
+      "croats": 76,
+      "serbs": 16630,
+      "others": 1482
+    }
+  },
+  {
+    "mid": "20575",
+    "name": "Teslić",
+    "name_ascii": "Teslic",
+    "total_population": 121416,
+    "total_settlements": 58,
+    "urban_center_sid": "20575",
+    "totals_by_group": {
+      "bosniaks": 25750,
+      "croats": 19860,
+      "serbs": 66632,
+      "others": 9174
+    }
+  },
+  {
+    "mid": "20583",
+    "name": "Trebinje",
+    "name_ascii": "Trebinje",
+    "total_population": 58402,
+    "total_settlements": 142,
+    "urban_center_sid": "20583",
+    "totals_by_group": {
+      "bosniaks": 11100,
+      "croats": 884,
+      "serbs": 40824,
+      "others": 5594
+    }
+  },
+  {
+    "mid": "20591",
+    "name": "Trnovo (RS)",
+    "name_ascii": "Trnovo (RS)",
+    "total_population": 7802,
+    "total_settlements": 26,
+    "urban_center_sid": "20591",
+    "totals_by_group": {
+      "bosniaks": 4554,
+      "croats": 30,
+      "serbs": 3060,
+      "others": 158
+    }
+  },
+  {
+    "mid": "20605",
+    "name": "Ugljevik",
+    "name_ascii": "Ugljevik",
+    "total_population": 35660,
+    "total_settlements": 26,
+    "urban_center_sid": "20605",
+    "totals_by_group": {
+      "bosniaks": 5854,
+      "croats": 104,
+      "serbs": 28892,
+      "others": 810
+    }
+  },
+  {
+    "mid": "20613",
+    "name": "Foča (RS)",
+    "name_ascii": "Foca",
+    "total_population": 70778,
+    "total_settlements": 102,
+    "urban_center_sid": "20613",
+    "totals_by_group": {
+      "bosniaks": 34366,
+      "croats": 186,
+      "serbs": 33734,
+      "others": 2492
+    }
+  },
+  {
+    "mid": "20621",
+    "name": "Han Pijesak",
+    "name_ascii": "Han Pijesak",
+    "total_population": 12696,
+    "total_settlements": 27,
+    "urban_center_sid": "20621",
+    "totals_by_group": {
+      "bosniaks": 5086,
+      "croats": 14,
+      "serbs": 7348,
+      "others": 248
+    }
+  },
+  {
+    "mid": "20630",
+    "name": "Čajniče",
+    "name_ascii": "Cajnice",
+    "total_population": 17912,
+    "total_settlements": 37,
+    "urban_center_sid": "20630",
+    "totals_by_group": {
+      "bosniaks": 8048,
+      "croats": 10,
+      "serbs": 9418,
+      "others": 436
+    }
+  },
+  {
+    "mid": "20648",
+    "name": "Čelinac",
+    "name_ascii": "Celinac",
+    "total_population": 37426,
+    "total_settlements": 31,
+    "urban_center_sid": "20648",
+    "totals_by_group": {
+      "bosniaks": 2892,
+      "croats": 152,
+      "serbs": 33108,
+      "others": 1274
+    }
+  },
+  {
+    "mid": "20656",
+    "name": "Šamac",
+    "name_ascii": "Samac",
+    "total_population": 50598,
+    "total_settlements": 22,
+    "urban_center_sid": "20656",
+    "totals_by_group": {
+      "bosniaks": 4442,
+      "croats": 15338,
+      "serbs": 26534,
+      "others": 4284
+    }
+  },
+  {
+    "mid": "20664",
+    "name": "Šekovići",
+    "name_ascii": "Sekovici",
+    "total_population": 20694,
+    "total_settlements": 39,
+    "urban_center_sid": "20664",
+    "totals_by_group": {
+      "bosniaks": 652,
+      "croats": 22,
+      "serbs": 19482,
+      "others": 538
+    }
+  },
+  {
+    "mid": "20672",
+    "name": "Šipovo",
+    "name_ascii": "Sipovo",
+    "total_population": 31502,
+    "total_settlements": 47,
+    "urban_center_sid": "20672",
+    "totals_by_group": {
+      "bosniaks": 5930,
+      "croats": 62,
+      "serbs": 25004,
+      "others": 506
+    }
+  },
+  {
+    "mid": "30163",
+    "name": "Brčko",
+    "name_ascii": "Brcko",
+    "total_population": 175254,
+    "total_settlements": 60,
+    "urban_center_sid": "30163",
+    "totals_by_group": {
+      "bosniaks": 77234,
+      "croats": 44504,
+      "serbs": 36256,
+      "others": 17260
+    }
+  }
+]

@@ -1,0 +1,221 @@
+{
+  "version": "1.0.0",
+  "audit_timestamp": "2026-01-20T23:51:34.590Z",
+  "total_records": 6103,
+  "unique_sids": 6093,
+  "unique_source_ids": 6092,
+  "exact_duplicates": [],
+  "conflicting_duplicates": [
+    {
+      "sid": "20044:201634",
+      "records": [
+        {
+          "sid": "20044:201634",
+          "source_id": "201634",
+          "mun": "Bileca",
+          "mun_code": "20044",
+          "d_hash": "d1c81e476f3c73db1fcde83b295154ed10b58b241428d608ac50e3a0f152bf77"
+        },
+        {
+          "sid": "20044:201634",
+          "source_id": "201634",
+          "mun": "Bileca",
+          "mun_code": "20044",
+          "d_hash": "bfd2e0a7c0f320866c0e94490349387f9674f8cc8c5f9f7c5ac083b3125052a8"
+        }
+      ]
+    },
+    {
+      "sid": "10588:130478",
+      "records": [
+        {
+          "sid": "10588:130478",
+          "source_id": "130478",
+          "mun": "Livno",
+          "mun_code": "10588",
+          "d_hash": "50b07679db4f808c5834b2cc9068245c1d81ff194aded9c8766968ea5d00f662"
+        },
+        {
+          "sid": "10588:130478",
+          "source_id": "130478",
+          "mun": "Livno",
+          "mun_code": "10588",
+          "d_hash": "9ebbee7dbe1b57274de2152cac914b61b22e1ac5a6816140ec1aa4bdf964990b"
+        }
+      ]
+    },
+    {
+      "sid": "10774:138487",
+      "records": [
+        {
+          "sid": "10774:138487",
+          "source_id": "138487",
+          "mun": "Novi Travnik",
+          "mun_code": "10774",
+          "d_hash": "604ab86f74ebbe045a19594d095e75a53afeddb4a2e65e49a05282ba581e87c1"
+        },
+        {
+          "sid": "10774:138487",
+          "source_id": "138487",
+          "mun": "Novi Travnik",
+          "mun_code": "10774",
+          "d_hash": "78697db10c8e88c28a44ac11e3b788ac8e1362167ad562a9e65109af12856ccd"
+        }
+      ]
+    },
+    {
+      "sid": "11533:135950",
+      "records": [
+        {
+          "sid": "11533:135950",
+          "source_id": "135950",
+          "mun": "Orasje",
+          "mun_code": "11533",
+          "d_hash": "db5e0b9a26b7bf427687c641be6cdc6ff53189778fe13362996c60c0c777213c"
+        },
+        {
+          "sid": "11533:135950",
+          "source_id": "135950",
+          "mun": "Orasje",
+          "mun_code": "11533",
+          "d_hash": "da82e468a60dc150744be8ab609407063506a140e9c1d4c50ceecd2851e6bede"
+        }
+      ]
+    },
+    {
+      "sid": "20583:225665",
+      "records": [
+        {
+          "sid": "20583:225665",
+          "source_id": "225665",
+          "mun": "Trebinje",
+          "mun_code": "20583",
+          "d_hash": "384865f0d9167c23ec52985dd8e97dd7e86706421c9b6be055510eaea9f2efc3"
+        },
+        {
+          "sid": "20583:225665",
+          "source_id": "225665",
+          "mun": "Trebinje",
+          "mun_code": "20583",
+          "d_hash": "5bb56112f7a776eb39c1d790cd40164fb6706a84308f765d37c4302df0a76b26"
+        }
+      ]
+    },
+    {
+      "sid": "10499:164984",
+      "records": [
+        {
+          "sid": "10499:164984",
+          "source_id": "164984",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "043417dd944e19d59e14432128b362b6310c8e39244d0064bd0b976f42cbd0a0"
+        },
+        {
+          "sid": "10499:164984",
+          "source_id": "164984",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "b123a32cda0548d28d9b982eb36fe8d17981d698fd00059044822d84be892d73"
+        }
+      ]
+    },
+    {
+      "sid": "10499:170046",
+      "records": [
+        {
+          "sid": "10499:170046",
+          "source_id": "170046",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "b9059bac9ff61bab2be586754676967c9ecedcccd243cfb38df77f82b502aa03"
+        },
+        {
+          "sid": "10499:170046",
+          "source_id": "170046",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "05b540ae74022f68143a022ec94a7e8a53e8ddb3bddd6e3677021ac0182e61a8"
+        }
+      ]
+    },
+    {
+      "sid": "10499:166138",
+      "records": [
+        {
+          "sid": "10499:166138",
+          "source_id": "166138",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "ba74544f6ab82465042940952c8a323e534980574215029c3a3a914a104f44e9"
+        },
+        {
+          "sid": "10499:166138",
+          "source_id": "166138",
+          "mun": "Kladanj",
+          "mun_code": "10499",
+          "d_hash": "f5dfb453c50bcaf3e9b8fbf67ad39b4d2c1063e2b05a32196547c03d006fe839"
+        }
+      ]
+    },
+    {
+      "sid": "20508:219371",
+      "records": [
+        {
+          "sid": "20508:219371",
+          "source_id": "219371",
+          "mun": "Ribnik",
+          "mun_code": "20508",
+          "d_hash": "f751f9990bbc7f79a0caee655bc3c21bd60e306a2c7a99ec27bf2e62cf352738"
+        },
+        {
+          "sid": "20508:219371",
+          "source_id": "219371",
+          "mun": "Ribnik",
+          "mun_code": "20508",
+          "d_hash": "b3b12eee86b6811bcef660682e1767b0348e48925cc7761afad8d625ad75701f"
+        }
+      ]
+    },
+    {
+      "sid": "20508:219223",
+      "records": [
+        {
+          "sid": "20508:219223",
+          "source_id": "219223",
+          "mun": "Ribnik",
+          "mun_code": "20508",
+          "d_hash": "ea6b54a8e980c56d5d20618551e1369e68474f8065f2f25d5fb8ee5dc1ddea99"
+        },
+        {
+          "sid": "20508:219223",
+          "source_id": "219223",
+          "mun": "Ribnik",
+          "mun_code": "20508",
+          "d_hash": "e212f0a3555d0a28e5d90a4d6279af69ef7017ee7ed33d5f2b43f6c07015e1e0"
+        }
+      ]
+    }
+  ],
+  "cross_municipality_source_ids": [
+    {
+      "source_id": "165689",
+      "records": [
+        {
+          "sid": "11282:165689",
+          "source_id": "165689",
+          "mun": "Domaljevac-Samac",
+          "mun_code": "11282",
+          "d_hash": "5635af8c371311b85685266c2db32a76c65410e56ce380f6519d742890cc7556"
+        },
+        {
+          "sid": "11525:165689",
+          "source_id": "165689",
+          "mun": "Odzak",
+          "mun_code": "11525",
+          "d_hash": "5072ce8d2cdf983fab3d70a0328eae72587406f352a8f91de6913d6bf9c028db"
+        }
+      ]
+    }
+  ]
+}

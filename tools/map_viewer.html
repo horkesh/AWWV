@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Viewer - Settlement Polygons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #controls {
+      padding: 8px;
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    #controls label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    #controls input[type="checkbox"] {
+      cursor: pointer;
+    }
+    #filterInput {
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #stats {
+      padding: 4px 8px;
+      font-size: 12px;
+      color: #666;
+    }
+    #canvasContainer {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    #canvas {
+      display: block;
+      cursor: grab;
+    }
+    #canvas.dragging {
+      cursor: grabbing;
+    }
+    #canvas.boxZoom {
+      cursor: crosshair;
+    }
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label>
+      <input type="checkbox" id="showMunicipalityOutlines" checked> Show municipality outlines
+    </label>
+    <label>
+      <input type="checkbox" id="highlightOrphans"> Highlight Orphans
+    </label>
+    <label>
+      <input type="checkbox" id="highlightFallback"> Highlight Fallback
+    </label>
+    <input type="text" id="filterInput" placeholder="Filter by source file...">
+    <button id="fitButton">Fit</button>
+    <div id="stats">Loading...</div>
+  </div>
+  <div id="canvasContainer">
+    <canvas id="canvas"></canvas>
+    <div id="loading">Loading data...</div>
+  </div>
+
+  <script type="module">
+    // Configuration - modify these paths as needed
+    const GEOJSON_PATH = '../data/derived/settlements_polygons.normalized.v1.geojson';
+    const ORPHANS_PATH = '../data/derived/settlement_orphans.json';
+
+    // State
+    let features = [];
+    let orphanSids = new Set();
+    let viewX = 0;
+    let viewY = 0;
+    let viewScale = 1;
+    let bounds = null;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragStartViewX = 0;
+    let dragStartViewY = 0;
+    let isBoxZooming = false;
+    let boxZoomStartX = 0;
+    let boxZoomStartY = 0;
+    let showMunicipalityOutlines = true;
+    let highlightOrphans = false;
+    let highlightFallback = false;
+    let filterText = '';
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const loadingDiv = document.getElementById('loading');
+    const statsDiv = document.getElementById('stats');
+    const showMunicipalityOutlinesCheck = document.getElementById('showMunicipalityOutlines');
+    const highlightOrphansCheck = document.getElementById('highlightOrphans');
+    const highlightFallbackCheck = document.getElementById('highlightFallback');
+    const filterInput = document.getElementById('filterInput');
+    const fitButton = document.getElementById('fitButton');
+
+    // Resize canvas
+    function resizeCanvas() {
+      const container = canvas.parentElement;
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+      render();
+    }
+
+    // Hash string to color
+    function hashToColor(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash = hash & hash;
+      }
+      const r = (hash & 0xFF0000) >> 16;
+      const g = (hash & 0xFF00) >> 8;
+      const b = hash & 0xFF;
+      return `rgba(${r}, ${g}, ${b}, 0.35)`;
+    }
+
+    // Check if feature is fallback geometry
+    function isFallbackGeometry(feature) {
+      const props = feature.properties || {};
+      return !!(props.uses_fallback_geometry || props.usesFallbackGeometry || 
+                props.fallback_geometry || props.is_fallback_geometry);
+    }
+
+    // Extract municipality key from source_js_file
+    function extractMunicipalityKey(feature) {
+      const props = feature.properties || {};
+      const sourceFile = String(props.source_js_file || '');
+      if (sourceFile && sourceFile !== '(missing)') {
+        const match = sourceFile.match(/^([^_]+)_/);
+        if (match) return match[1];
+      }
+      const munCode = props.mun_code;
+      if (munCode != null) return String(munCode);
+      return null;
+    }
+
+    // Check if feature matches filter
+    function matchesFilter(feature) {
+      if (!filterText) return true;
+      const sourceFile = String(feature.properties?.source_js_file || '');
+      return sourceFile.toLowerCase().includes(filterText.toLowerCase());
+    }
+
+    // Get municipality key for filter isolation
+    function getFilterMunicipalityKey() {
+      if (!filterText) return null;
+      // Find first matching feature to determine municipality
+      for (const feature of features) {
+        if (matchesFilter(feature)) {
+          return extractMunicipalityKey(feature);
+        }
+      }
+      return null;
+    }
+
+    // Compute bounds from features
+    function computeBounds() {
+      if (features.length === 0) return null;
+      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      for (const feature of features) {
+        if (!matchesFilter(feature)) continue;
+        const geom = feature.geometry;
+        if (geom.type === 'Polygon') {
+          const outer = Array.isArray(geom.coordinates) ? geom.coordinates[0] : null;
+          if (Array.isArray(outer)) {
+            for (const pt of outer) {
+              if (Array.isArray(pt) && pt.length >= 2) {
+                const x = Number(pt[0]);
+                const y = Number(pt[1]);
+                if (Number.isFinite(x) && Number.isFinite(y)) {
+                  minX = Math.min(minX, x);
+                  minY = Math.min(minY, y);
+                  maxX = Math.max(maxX, x);
+                  maxY = Math.max(maxY, y);
+                }
+              }
+            }
+          }
+        } else if (geom.type === 'MultiPolygon') {
+          const polys = geom.coordinates;
+          if (Array.isArray(polys)) {
+            for (const poly of polys) {
+              const outer = Array.isArray(poly) ? poly[0] : null;
+              if (Array.isArray(outer)) {
+                for (const pt of outer) {
+                  if (Array.isArray(pt) && pt.length >= 2) {
+                    const x = Number(pt[0]);
+                    const y = Number(pt[1]);
+                    if (Number.isFinite(x) && Number.isFinite(y)) {
+                      minX = Math.min(minX, x);
+                      minY = Math.min(minY, y);
+                      maxX = Math.max(maxX, x);
+                      maxY = Math.max(maxY, y);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      if (!Number.isFinite(minX)) return null;
+      return { minX, minY, maxX, maxY };
+    }
+
+    // Transform world coordinates to screen
+    function worldToScreen(x, y) {
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const screenX = centerX + (x - viewX) * viewScale;
+      const screenY = centerY - (y - viewY) * viewScale; // Flip Y
+      return { x: screenX, y: screenY };
+    }
+
+    // Transform screen coordinates to world
+    function screenToWorld(screenX, screenY) {
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const worldX = viewX + (screenX - centerX) / viewScale;
+      const worldY = viewY - (screenY - centerY) / viewScale; // Flip Y
+      return { x: worldX, y: worldY };
+    }
+
+    // Draw polygon
+    function drawPolygon(feature) {
+      const geom = feature.geometry;
+      const props = feature.properties || {};
+      const sid = String(props.sid || '');
+      const sourceFile = String(props.source_js_file || '(missing)');
+      const isOrphan = orphanSids.has(sid);
+      const isFallback = isFallbackGeometry(feature);
+
+      if (!matchesFilter(feature)) return;
+
+      ctx.beginPath();
+      let hasPoints = false;
+
+      if (geom.type === 'Polygon') {
+        const outer = Array.isArray(geom.coordinates) ? geom.coordinates[0] : null;
+        if (Array.isArray(outer)) {
+          for (let i = 0; i < outer.length; i++) {
+            const pt = outer[i];
+            if (Array.isArray(pt) && pt.length >= 2) {
+              const x = Number(pt[0]);
+              const y = Number(pt[1]);
+              if (Number.isFinite(x) && Number.isFinite(y)) {
+                const screen = worldToScreen(x, y);
+                if (i === 0) {
+                  ctx.moveTo(screen.x, screen.y);
+                } else {
+                  ctx.lineTo(screen.x, screen.y);
+                }
+                hasPoints = true;
+              }
+            }
+          }
+          if (hasPoints) ctx.closePath();
+        }
+      } else if (geom.type === 'MultiPolygon') {
+        const polys = geom.coordinates;
+        if (Array.isArray(polys)) {
+          for (const poly of polys) {
+            const outer = Array.isArray(poly) ? poly[0] : null;
+            if (Array.isArray(outer)) {
+              for (let i = 0; i < outer.length; i++) {
+                const pt = outer[i];
+                if (Array.isArray(pt) && pt.length >= 2) {
+                  const x = Number(pt[0]);
+                  const y = Number(pt[1]);
+                  if (Number.isFinite(x) && Number.isFinite(y)) {
+                    const screen = worldToScreen(x, y);
+                    if (i === 0) {
+                      ctx.moveTo(screen.x, screen.y);
+                    } else {
+                      ctx.lineTo(screen.x, screen.y);
+                    }
+                    hasPoints = true;
+                  }
+                }
+              }
+              if (hasPoints) ctx.closePath();
+            }
+          }
+        }
+      }
+
+      if (!hasPoints) return;
+
+      // Fill
+      const fillColor = hashToColor(sourceFile);
+      ctx.fillStyle = fillColor;
+      ctx.fill();
+
+      // Outline
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Overlays
+      if (highlightOrphans && isOrphan) {
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+      if (highlightFallback && isFallback) {
+        ctx.strokeStyle = 'yellow';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    }
+
+    // Draw municipality outline (draw all settlement outlines for that municipality)
+    function drawMunicipalityOutline(municipalityKey) {
+      if (!showMunicipalityOutlines) return;
+      
+      const filterMuniKey = getFilterMunicipalityKey();
+      if (filterMuniKey && filterMuniKey !== municipalityKey) return;
+      
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.lineWidth = 2;
+      
+      // Draw each settlement's outline for this municipality
+      for (const feature of features) {
+        const muniKey = extractMunicipalityKey(feature);
+        if (muniKey !== municipalityKey) continue;
+        
+        const geom = feature.geometry;
+        ctx.beginPath();
+        let hasPoints = false;
+        
+        if (geom.type === 'Polygon') {
+          const outer = Array.isArray(geom.coordinates) ? geom.coordinates[0] : null;
+          if (Array.isArray(outer)) {
+            for (let i = 0; i < outer.length; i++) {
+              const pt = outer[i];
+              if (Array.isArray(pt) && pt.length >= 2) {
+                const x = Number(pt[0]);
+                const y = Number(pt[1]);
+                if (Number.isFinite(x) && Number.isFinite(y)) {
+                  const screen = worldToScreen(x, y);
+                  if (i === 0) {
+                    ctx.moveTo(screen.x, screen.y);
+                  } else {
+                    ctx.lineTo(screen.x, screen.y);
+                  }
+                  hasPoints = true;
+                }
+              }
+            }
+            if (hasPoints) ctx.closePath();
+          }
+        } else if (geom.type === 'MultiPolygon') {
+          const polys = geom.coordinates;
+          if (Array.isArray(polys)) {
+            for (const poly of polys) {
+              const outer = Array.isArray(poly) ? poly[0] : null;
+              if (Array.isArray(outer)) {
+                for (let i = 0; i < outer.length; i++) {
+                  const pt = outer[i];
+                  if (Array.isArray(pt) && pt.length >= 2) {
+                    const x = Number(pt[0]);
+                    const y = Number(pt[1]);
+                    if (Number.isFinite(x) && Number.isFinite(y)) {
+                      const screen = worldToScreen(x, y);
+                      if (i === 0) {
+                        ctx.moveTo(screen.x, screen.y);
+                      } else {
+                        ctx.lineTo(screen.x, screen.y);
+                      }
+                      hasPoints = true;
+                    }
+                  }
+                }
+                if (hasPoints) ctx.closePath();
+              }
+            }
+          }
+        }
+        
+        if (hasPoints) {
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Render
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw municipality outlines first (behind settlements)
+      if (showMunicipalityOutlines) {
+        const municipalityKeys = new Set();
+        for (const feature of features) {
+          const muniKey = extractMunicipalityKey(feature);
+          if (muniKey) municipalityKeys.add(muniKey);
+        }
+        for (const muniKey of municipalityKeys) {
+          drawMunicipalityOutline(muniKey);
+        }
+      }
+
+      // Draw settlement polygons
+      let drawnCount = 0;
+      for (const feature of features) {
+        if (matchesFilter(feature)) {
+          drawPolygon(feature);
+          drawnCount++;
+        }
+      }
+
+      // Draw box zoom rectangle
+      if (isBoxZooming) {
+        const start = worldToScreen(boxZoomStartX, boxZoomStartY);
+        const end = worldToScreen(
+          screenToWorld(dragStartX, dragStartY).x,
+          screenToWorld(dragStartX, dragStartY).y
+        );
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([5, 5]);
+        ctx.strokeRect(
+          Math.min(start.x, end.x),
+          Math.min(start.y, end.y),
+          Math.abs(end.x - start.x),
+          Math.abs(end.y - start.y)
+        );
+        ctx.setLineDash([]);
+      }
+
+      // Update stats
+      statsDiv.textContent = `Features drawn: ${drawnCount} / ${features.length}`;
+    }
+
+    // Fit view to bounds
+    function fitView() {
+      const filteredBounds = computeBounds();
+      if (!filteredBounds) {
+        bounds = computeBounds();
+        if (!bounds) return;
+        filteredBounds = bounds;
+      }
+      const padding = 50;
+      const width = filteredBounds.maxX - filteredBounds.minX;
+      const height = filteredBounds.maxY - filteredBounds.minY;
+      if (width <= 0 || height <= 0) return;
+      const scaleX = (canvas.width - padding * 2) / width;
+      const scaleY = (canvas.height - padding * 2) / height;
+      viewScale = Math.min(scaleX, scaleY);
+      viewX = (filteredBounds.minX + filteredBounds.maxX) / 2;
+      viewY = (filteredBounds.minY + filteredBounds.maxY) / 2;
+      render();
+    }
+
+    // Mouse wheel zoom
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const world = screenToWorld(e.offsetX, e.offsetY);
+      const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
+      viewScale *= zoomFactor;
+      viewScale = Math.max(0.01, Math.min(1000, viewScale));
+      const newWorld = screenToWorld(e.offsetX, e.offsetY);
+      viewX += world.x - newWorld.x;
+      viewY += world.y - newWorld.y;
+      render();
+    });
+
+    // Mouse down
+    canvas.addEventListener('mousedown', (e) => {
+      if (e.shiftKey) {
+        isBoxZooming = true;
+        boxZoomStartX = screenToWorld(e.offsetX, e.offsetY).x;
+        boxZoomStartY = screenToWorld(e.offsetX, e.offsetY).y;
+        dragStartX = e.offsetX;
+        dragStartY = e.offsetY;
+        canvas.classList.add('boxZoom');
+      } else {
+        isDragging = true;
+        dragStartX = e.offsetX;
+        dragStartY = e.offsetY;
+        dragStartViewX = viewX;
+        dragStartViewY = viewY;
+        canvas.classList.add('dragging');
+      }
+    });
+
+    // Mouse move
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const dx = (e.offsetX - dragStartX) / viewScale;
+        const dy = -(e.offsetY - dragStartY) / viewScale; // Flip Y
+        viewX = dragStartViewX - dx;
+        viewY = dragStartViewY - dy;
+        render();
+      } else if (isBoxZooming) {
+        render();
+      }
+    });
+
+    // Mouse up
+    canvas.addEventListener('mouseup', (e) => {
+      if (isBoxZooming) {
+        const endWorld = screenToWorld(e.offsetX, e.offsetY);
+        const width = Math.abs(endWorld.x - boxZoomStartX);
+        const height = Math.abs(endWorld.y - boxZoomStartY);
+        if (width > 0 && height > 0) {
+          const centerX = (boxZoomStartX + endWorld.x) / 2;
+          const centerY = (boxZoomStartY + endWorld.y) / 2;
+          const scaleX = canvas.width / width;
+          const scaleY = canvas.height / height;
+          viewScale = Math.min(scaleX, scaleY) * 0.9;
+          viewX = centerX;
+          viewY = centerY;
+        }
+        isBoxZooming = false;
+        canvas.classList.remove('boxZoom');
+        render();
+      } else if (isDragging) {
+        isDragging = false;
+        canvas.classList.remove('dragging');
+      }
+    });
+
+    // Mouse leave
+    canvas.addEventListener('mouseleave', () => {
+      isDragging = false;
+      isBoxZooming = false;
+      canvas.classList.remove('dragging', 'boxZoom');
+      render();
+    });
+
+    // Controls
+    showMunicipalityOutlinesCheck.addEventListener('change', (e) => {
+      showMunicipalityOutlines = e.target.checked;
+      render();
+    });
+
+    highlightOrphansCheck.addEventListener('change', (e) => {
+      highlightOrphans = e.target.checked;
+      render();
+    });
+
+    highlightFallbackCheck.addEventListener('change', (e) => {
+      highlightFallback = e.target.checked;
+      render();
+    });
+
+    filterInput.addEventListener('input', (e) => {
+      filterText = e.target.value;
+      render();
+    });
+
+    fitButton.addEventListener('click', () => {
+      fitView();
+    });
+
+    // Load data
+    async function loadData() {
+      try {
+        // Load GeoJSON
+        const geojsonResponse = await fetch(GEOJSON_PATH);
+        if (!geojsonResponse.ok) {
+          throw new Error(`Failed to load GeoJSON: ${geojsonResponse.statusText}`);
+        }
+        const geojson = await geojsonResponse.json();
+        if (geojson.type === 'FeatureCollection' && Array.isArray(geojson.features)) {
+          features = geojson.features;
+        } else {
+          throw new Error('Invalid GeoJSON FeatureCollection');
+        }
+
+        // Load orphans (optional)
+        try {
+          const orphansResponse = await fetch(ORPHANS_PATH);
+          if (orphansResponse.ok) {
+            const orphansData = await orphansResponse.json();
+            // Handle three formats
+            let orphanArray = [];
+            if (Array.isArray(orphansData)) {
+              orphanArray = orphansData;
+            } else if (orphansData && Array.isArray(orphansData.orphans)) {
+              orphanArray = orphansData.orphans;
+            }
+            // Extract SIDs
+            for (const item of orphanArray) {
+              if (typeof item === 'string') {
+                orphanSids.add(item);
+              } else if (item && typeof item.sid === 'string') {
+                orphanSids.add(item.sid);
+              }
+            }
+          }
+        } catch (err) {
+          console.warn('Orphans file not found or invalid, continuing without it:', err);
+        }
+
+        // Compute initial bounds
+        bounds = computeBounds();
+        if (bounds) {
+          fitView();
+        } else {
+          viewX = 0;
+          viewY = 0;
+          viewScale = 1;
+          render();
+        }
+
+        loadingDiv.style.display = 'none';
+      } catch (err) {
+        loadingDiv.textContent = `Error: ${err.message}`;
+        console.error(err);
+      }
+    }
+
+    // Initialize
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    loadData();
+  </script>
+</body>
+</html>

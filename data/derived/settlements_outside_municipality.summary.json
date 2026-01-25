@@ -1,0 +1,854 @@
+{
+  "totalSettlements": 5994,
+  "missingMunicipalityMatches": 10,
+  "outsideCount": 5849,
+  "outsidePercent": 97.58091424758092,
+  "perMunicipality": [
+    {
+      "municipalityKey": "Banovici",
+      "featureCount": 19,
+      "outsideCount": 18,
+      "outsideRate": 94.73684210526315
+    },
+    {
+      "municipalityKey": "Banja Luka",
+      "featureCount": 53,
+      "outsideCount": 52,
+      "outsideRate": 98.11320754716981
+    },
+    {
+      "municipalityKey": "Berkovici",
+      "featureCount": 18,
+      "outsideCount": 17,
+      "outsideRate": 94.44444444444444
+    },
+    {
+      "municipalityKey": "Bihac",
+      "featureCount": 58,
+      "outsideCount": 57,
+      "outsideRate": 98.27586206896551
+    },
+    {
+      "municipalityKey": "Bijeljina",
+      "featureCount": 66,
+      "outsideCount": 65,
+      "outsideRate": 98.48484848484848
+    },
+    {
+      "municipalityKey": "Bileca",
+      "featureCount": 59,
+      "outsideCount": 58,
+      "outsideRate": 98.30508474576271
+    },
+    {
+      "municipalityKey": "Bosanska Dubica",
+      "featureCount": 60,
+      "outsideCount": 59,
+      "outsideRate": 98.33333333333333
+    },
+    {
+      "municipalityKey": "Bosanska Gradiska",
+      "featureCount": 67,
+      "outsideCount": 66,
+      "outsideRate": 98.50746268656717
+    },
+    {
+      "municipalityKey": "Bosanska Krupa",
+      "featureCount": 36,
+      "outsideCount": 35,
+      "outsideRate": 97.22222222222221
+    },
+    {
+      "municipalityKey": "Bosanski Novi",
+      "featureCount": 47,
+      "outsideCount": 46,
+      "outsideRate": 97.87234042553192
+    },
+    {
+      "municipalityKey": "Bosanski Petrovac",
+      "featureCount": 34,
+      "outsideCount": 33,
+      "outsideRate": 97.05882352941177
+    },
+    {
+      "municipalityKey": "Bosansko Grahovo",
+      "featureCount": 34,
+      "outsideCount": 34,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Bratunac",
+      "featureCount": 49,
+      "outsideCount": 48,
+      "outsideRate": 97.95918367346938
+    },
+    {
+      "municipalityKey": "Brcko",
+      "featureCount": 58,
+      "outsideCount": 57,
+      "outsideRate": 98.27586206896551
+    },
+    {
+      "municipalityKey": "Breza",
+      "featureCount": 27,
+      "outsideCount": 26,
+      "outsideRate": 96.29629629629629
+    },
+    {
+      "municipalityKey": "Brod",
+      "featureCount": 22,
+      "outsideCount": 21,
+      "outsideRate": 95.45454545454545
+    },
+    {
+      "municipalityKey": "Bugojno",
+      "featureCount": 77,
+      "outsideCount": 76,
+      "outsideRate": 98.7012987012987
+    },
+    {
+      "municipalityKey": "Busovaca",
+      "featureCount": 46,
+      "outsideCount": 45,
+      "outsideRate": 97.82608695652173
+    },
+    {
+      "municipalityKey": "Buzim",
+      "featureCount": 6,
+      "outsideCount": 5,
+      "outsideRate": 83.33333333333334
+    },
+    {
+      "municipalityKey": "Cajnice",
+      "featureCount": 35,
+      "outsideCount": 34,
+      "outsideRate": 97.14285714285714
+    },
+    {
+      "municipalityKey": "Capljina",
+      "featureCount": 31,
+      "outsideCount": 30,
+      "outsideRate": 96.7741935483871
+    },
+    {
+      "municipalityKey": "Cazin",
+      "featureCount": 53,
+      "outsideCount": 52,
+      "outsideRate": 98.11320754716981
+    },
+    {
+      "municipalityKey": "Celic",
+      "featureCount": 19,
+      "outsideCount": 18,
+      "outsideRate": 94.73684210526315
+    },
+    {
+      "municipalityKey": "Celinac",
+      "featureCount": 29,
+      "outsideCount": 28,
+      "outsideRate": 96.55172413793103
+    },
+    {
+      "municipalityKey": "Centar Sarajevo",
+      "featureCount": 5,
+      "outsideCount": 4,
+      "outsideRate": 80
+    },
+    {
+      "municipalityKey": "Citluk",
+      "featureCount": 20,
+      "outsideCount": 19,
+      "outsideRate": 95
+    },
+    {
+      "municipalityKey": "Derventa",
+      "featureCount": 56,
+      "outsideCount": 55,
+      "outsideRate": 98.21428571428571
+    },
+    {
+      "municipalityKey": "Doboj",
+      "featureCount": 82,
+      "outsideCount": 81,
+      "outsideRate": 98.78048780487805
+    },
+    {
+      "municipalityKey": "Doboj Istok",
+      "featureCount": 5,
+      "outsideCount": 4,
+      "outsideRate": 80
+    },
+    {
+      "municipalityKey": "Doboj Jug",
+      "featureCount": 1,
+      "outsideCount": 0,
+      "outsideRate": 0
+    },
+    {
+      "municipalityKey": "Dobretici",
+      "featureCount": 17,
+      "outsideCount": 16,
+      "outsideRate": 94.11764705882352
+    },
+    {
+      "municipalityKey": "Domaljevac-Samac",
+      "featureCount": 5,
+      "outsideCount": 4,
+      "outsideRate": 80
+    },
+    {
+      "municipalityKey": "Donji Vakuf",
+      "featureCount": 67,
+      "outsideCount": 66,
+      "outsideRate": 98.50746268656717
+    },
+    {
+      "municipalityKey": "Donji Zabar",
+      "featureCount": 5,
+      "outsideCount": 4,
+      "outsideRate": 80
+    },
+    {
+      "municipalityKey": "Drvar",
+      "featureCount": 24,
+      "outsideCount": 23,
+      "outsideRate": 95.83333333333334
+    },
+    {
+      "municipalityKey": "Foca",
+      "featureCount": 100,
+      "outsideCount": 99,
+      "outsideRate": 99
+    },
+    {
+      "municipalityKey": "Foca (FBiH)",
+      "featureCount": 31,
+      "outsideCount": 30,
+      "outsideRate": 96.7741935483871
+    },
+    {
+      "municipalityKey": "Fojnica",
+      "featureCount": 54,
+      "outsideCount": 53,
+      "outsideRate": 98.14814814814815
+    },
+    {
+      "municipalityKey": "Gacko",
+      "featureCount": 70,
+      "outsideCount": 69,
+      "outsideRate": 98.57142857142858
+    },
+    {
+      "municipalityKey": "Glamoc",
+      "featureCount": 54,
+      "outsideCount": 53,
+      "outsideRate": 98.14814814814815
+    },
+    {
+      "municipalityKey": "Gorazde",
+      "featureCount": 143,
+      "outsideCount": 142,
+      "outsideRate": 99.3006993006993
+    },
+    {
+      "municipalityKey": "Gornji Vakuf-Uskoplje",
+      "featureCount": 51,
+      "outsideCount": 50,
+      "outsideRate": 98.0392156862745
+    },
+    {
+      "municipalityKey": "Gracanica",
+      "featureCount": 22,
+      "outsideCount": 21,
+      "outsideRate": 95.45454545454545
+    },
+    {
+      "municipalityKey": "Gradacac",
+      "featureCount": 33,
+      "outsideCount": 32,
+      "outsideRate": 96.96969696969697
+    },
+    {
+      "municipalityKey": "Grude",
+      "featureCount": 12,
+      "outsideCount": 11,
+      "outsideRate": 91.66666666666666
+    },
+    {
+      "municipalityKey": "Hadzici",
+      "featureCount": 61,
+      "outsideCount": 60,
+      "outsideRate": 98.36065573770492
+    },
+    {
+      "municipalityKey": "Han Pijesak",
+      "featureCount": 25,
+      "outsideCount": 24,
+      "outsideRate": 96
+    },
+    {
+      "municipalityKey": "Ilidza",
+      "featureCount": 11,
+      "outsideCount": 10,
+      "outsideRate": 90.9090909090909
+    },
+    {
+      "municipalityKey": "Ilijas",
+      "featureCount": 73,
+      "outsideCount": 72,
+      "outsideRate": 98.63013698630137
+    },
+    {
+      "municipalityKey": "Istocna Ilidza",
+      "featureCount": 4,
+      "outsideCount": 4,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Istocni Drvar",
+      "featureCount": 1,
+      "outsideCount": 0,
+      "outsideRate": 0
+    },
+    {
+      "municipalityKey": "Istocni Mostar",
+      "featureCount": 2,
+      "outsideCount": 1,
+      "outsideRate": 50
+    },
+    {
+      "municipalityKey": "Istocni Stari Grad",
+      "featureCount": 18,
+      "outsideCount": 17,
+      "outsideRate": 94.44444444444444
+    },
+    {
+      "municipalityKey": "Istocno Novo Sarajevo",
+      "featureCount": 7,
+      "outsideCount": 6,
+      "outsideRate": 85.71428571428571
+    },
+    {
+      "municipalityKey": "Jablanica",
+      "featureCount": 32,
+      "outsideCount": 31,
+      "outsideRate": 96.875
+    },
+    {
+      "municipalityKey": "Jajce",
+      "featureCount": 57,
+      "outsideCount": 56,
+      "outsideRate": 98.24561403508771
+    },
+    {
+      "municipalityKey": "Jezero",
+      "featureCount": 10,
+      "outsideCount": 9,
+      "outsideRate": 90
+    },
+    {
+      "municipalityKey": "Kakanj",
+      "featureCount": 105,
+      "outsideCount": 104,
+      "outsideRate": 99.04761904761905
+    },
+    {
+      "municipalityKey": "Kalesija",
+      "featureCount": 27,
+      "outsideCount": 26,
+      "outsideRate": 96.29629629629629
+    },
+    {
+      "municipalityKey": "Kalinovik",
+      "featureCount": 70,
+      "outsideCount": 69,
+      "outsideRate": 98.57142857142858
+    },
+    {
+      "municipalityKey": "Kiseljak",
+      "featureCount": 81,
+      "outsideCount": 80,
+      "outsideRate": 98.76543209876543
+    },
+    {
+      "municipalityKey": "Kladanj",
+      "featureCount": 47,
+      "outsideCount": 46,
+      "outsideRate": 97.87234042553192
+    },
+    {
+      "municipalityKey": "Kljuc",
+      "featureCount": 40,
+      "outsideCount": 39,
+      "outsideRate": 97.5
+    },
+    {
+      "municipalityKey": "Knezevo",
+      "featureCount": 19,
+      "outsideCount": 18,
+      "outsideRate": 94.73684210526315
+    },
+    {
+      "municipalityKey": "Konjic",
+      "featureCount": 167,
+      "outsideCount": 166,
+      "outsideRate": 99.40119760479041
+    },
+    {
+      "municipalityKey": "Kostajnica",
+      "featureCount": 11,
+      "outsideCount": 10,
+      "outsideRate": 90.9090909090909
+    },
+    {
+      "municipalityKey": "Kotor Varos",
+      "featureCount": 42,
+      "outsideCount": 41,
+      "outsideRate": 97.61904761904762
+    },
+    {
+      "municipalityKey": "Kresevo",
+      "featureCount": 26,
+      "outsideCount": 25,
+      "outsideRate": 96.15384615384616
+    },
+    {
+      "municipalityKey": "Krupa na Uni",
+      "featureCount": 11,
+      "outsideCount": 9,
+      "outsideRate": 81.81818181818183
+    },
+    {
+      "municipalityKey": "Kupres",
+      "featureCount": 35,
+      "outsideCount": 34,
+      "outsideRate": 97.14285714285714
+    },
+    {
+      "municipalityKey": "Kupres (RS)",
+      "featureCount": 3,
+      "outsideCount": 2,
+      "outsideRate": 66.66666666666666
+    },
+    {
+      "municipalityKey": "Laktasi",
+      "featureCount": 36,
+      "outsideCount": 35,
+      "outsideRate": 97.22222222222221
+    },
+    {
+      "municipalityKey": "Livno",
+      "featureCount": 57,
+      "outsideCount": 57,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Lopare",
+      "featureCount": 34,
+      "outsideCount": 33,
+      "outsideRate": 97.05882352941177
+    },
+    {
+      "municipalityKey": "Lukavac",
+      "featureCount": 43,
+      "outsideCount": 42,
+      "outsideRate": 97.67441860465115
+    },
+    {
+      "municipalityKey": "Ljubinje",
+      "featureCount": 20,
+      "outsideCount": 19,
+      "outsideRate": 95
+    },
+    {
+      "municipalityKey": "Ljubuski",
+      "featureCount": 34,
+      "outsideCount": 33,
+      "outsideRate": 97.05882352941177
+    },
+    {
+      "municipalityKey": "Maglaj",
+      "featureCount": 39,
+      "outsideCount": 39,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Milici",
+      "featureCount": 53,
+      "outsideCount": 52,
+      "outsideRate": 98.11320754716981
+    },
+    {
+      "municipalityKey": "Modrica",
+      "featureCount": 23,
+      "outsideCount": 23,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Mostar",
+      "featureCount": 59,
+      "outsideCount": 58,
+      "outsideRate": 98.30508474576271
+    },
+    {
+      "municipalityKey": "Mrkonjic Grad",
+      "featureCount": 37,
+      "outsideCount": 36,
+      "outsideRate": 97.2972972972973
+    },
+    {
+      "municipalityKey": "Neum",
+      "featureCount": 26,
+      "outsideCount": 25,
+      "outsideRate": 96.15384615384616
+    },
+    {
+      "municipalityKey": "Nevesinje",
+      "featureCount": 55,
+      "outsideCount": 55,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Novi Grad Sarajevo",
+      "featureCount": 2,
+      "outsideCount": 1,
+      "outsideRate": 50
+    },
+    {
+      "municipalityKey": "Novi Travnik",
+      "featureCount": 50,
+      "outsideCount": 49,
+      "outsideRate": 98
+    },
+    {
+      "municipalityKey": "Novo Gorazde",
+      "featureCount": 60,
+      "outsideCount": 59,
+      "outsideRate": 98.33333333333333
+    },
+    {
+      "municipalityKey": "Novo Sarajevo",
+      "featureCount": 2,
+      "outsideCount": 1,
+      "outsideRate": 50
+    },
+    {
+      "municipalityKey": "Odzak",
+      "featureCount": 13,
+      "outsideCount": 12,
+      "outsideRate": 92.3076923076923
+    },
+    {
+      "municipalityKey": "Olovo",
+      "featureCount": 44,
+      "outsideCount": 43,
+      "outsideRate": 97.72727272727273
+    },
+    {
+      "municipalityKey": "Orasje",
+      "featureCount": 13,
+      "outsideCount": 12,
+      "outsideRate": 92.3076923076923
+    },
+    {
+      "municipalityKey": "Osmaci",
+      "featureCount": 15,
+      "outsideCount": 14,
+      "outsideRate": 93.33333333333333
+    },
+    {
+      "municipalityKey": "Ostra Luka",
+      "featureCount": 23,
+      "outsideCount": 21,
+      "outsideRate": 91.30434782608695
+    },
+    {
+      "municipalityKey": "Pale",
+      "featureCount": 61,
+      "outsideCount": 60,
+      "outsideRate": 98.36065573770492
+    },
+    {
+      "municipalityKey": "Pale (FBiH)",
+      "featureCount": 14,
+      "outsideCount": 13,
+      "outsideRate": 92.85714285714286
+    },
+    {
+      "municipalityKey": "Pelagicevo",
+      "featureCount": 10,
+      "outsideCount": 0,
+      "outsideRate": 0
+    },
+    {
+      "municipalityKey": "Petrovac",
+      "featureCount": 5,
+      "outsideCount": 3,
+      "outsideRate": 60
+    },
+    {
+      "municipalityKey": "Petrovo",
+      "featureCount": 6,
+      "outsideCount": 5,
+      "outsideRate": 83.33333333333334
+    },
+    {
+      "municipalityKey": "Posusje",
+      "featureCount": 19,
+      "outsideCount": 18,
+      "outsideRate": 94.73684210526315
+    },
+    {
+      "municipalityKey": "Prijedor",
+      "featureCount": 70,
+      "outsideCount": 68,
+      "outsideRate": 97.14285714285714
+    },
+    {
+      "municipalityKey": "Prnjavor",
+      "featureCount": 62,
+      "outsideCount": 61,
+      "outsideRate": 98.38709677419355
+    },
+    {
+      "municipalityKey": "Prozor",
+      "featureCount": 55,
+      "outsideCount": 54,
+      "outsideRate": 98.18181818181819
+    },
+    {
+      "municipalityKey": "Ravno",
+      "featureCount": 53,
+      "outsideCount": 53,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Ribnik",
+      "featureCount": 28,
+      "outsideCount": 27,
+      "outsideRate": 96.42857142857143
+    },
+    {
+      "municipalityKey": "Rogatica",
+      "featureCount": 117,
+      "outsideCount": 116,
+      "outsideRate": 99.14529914529915
+    },
+    {
+      "municipalityKey": "Rudo",
+      "featureCount": 88,
+      "outsideCount": 87,
+      "outsideRate": 98.86363636363636
+    },
+    {
+      "municipalityKey": "Samac",
+      "featureCount": 20,
+      "outsideCount": 19,
+      "outsideRate": 95
+    },
+    {
+      "municipalityKey": "Sanski Most",
+      "featureCount": 66,
+      "outsideCount": 65,
+      "outsideRate": 98.48484848484848
+    },
+    {
+      "municipalityKey": "Sapna",
+      "featureCount": 12,
+      "outsideCount": 11,
+      "outsideRate": 91.66666666666666
+    },
+    {
+      "municipalityKey": "Sekovici",
+      "featureCount": 37,
+      "outsideCount": 36,
+      "outsideRate": 97.2972972972973
+    },
+    {
+      "municipalityKey": "Sipovo",
+      "featureCount": 45,
+      "outsideCount": 44,
+      "outsideRate": 97.77777777777777
+    },
+    {
+      "municipalityKey": "Siroki Brijeg",
+      "featureCount": 33,
+      "outsideCount": 32,
+      "outsideRate": 96.96969696969697
+    },
+    {
+      "municipalityKey": "Sokolac",
+      "featureCount": 95,
+      "outsideCount": 94,
+      "outsideRate": 98.94736842105263
+    },
+    {
+      "municipalityKey": "Srbac",
+      "featureCount": 38,
+      "outsideCount": 37,
+      "outsideRate": 97.36842105263158
+    },
+    {
+      "municipalityKey": "Srebrenica",
+      "featureCount": 80,
+      "outsideCount": 79,
+      "outsideRate": 98.75
+    },
+    {
+      "municipalityKey": "Srebrenik",
+      "featureCount": 48,
+      "outsideCount": 47,
+      "outsideRate": 97.91666666666666
+    },
+    {
+      "municipalityKey": "Stari Grad Sarajevo",
+      "featureCount": 7,
+      "outsideCount": 6,
+      "outsideRate": 85.71428571428571
+    },
+    {
+      "municipalityKey": "Stolac",
+      "featureCount": 25,
+      "outsideCount": 24,
+      "outsideRate": 96
+    },
+    {
+      "municipalityKey": "Teocak",
+      "featureCount": 9,
+      "outsideCount": 8,
+      "outsideRate": 88.88888888888889
+    },
+    {
+      "municipalityKey": "Tesanj",
+      "featureCount": 40,
+      "outsideCount": 39,
+      "outsideRate": 97.5
+    },
+    {
+      "municipalityKey": "Teslic",
+      "featureCount": 56,
+      "outsideCount": 55,
+      "outsideRate": 98.21428571428571
+    },
+    {
+      "municipalityKey": "Tomislavgrad",
+      "featureCount": 59,
+      "outsideCount": 58,
+      "outsideRate": 98.30508474576271
+    },
+    {
+      "municipalityKey": "Travnik",
+      "featureCount": 89,
+      "outsideCount": 88,
+      "outsideRate": 98.87640449438202
+    },
+    {
+      "municipalityKey": "Trebinje",
+      "featureCount": 140,
+      "outsideCount": 139,
+      "outsideRate": 99.28571428571429
+    },
+    {
+      "municipalityKey": "Trnovo (FBiH)",
+      "featureCount": 54,
+      "outsideCount": 53,
+      "outsideRate": 98.14814814814815
+    },
+    {
+      "municipalityKey": "Trnovo (RS)",
+      "featureCount": 24,
+      "outsideCount": 24,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Tuzla",
+      "featureCount": 65,
+      "outsideCount": 64,
+      "outsideRate": 98.46153846153847
+    },
+    {
+      "municipalityKey": "Ugljevik",
+      "featureCount": 24,
+      "outsideCount": 23,
+      "outsideRate": 95.83333333333334
+    },
+    {
+      "municipalityKey": "Usora",
+      "featureCount": 12,
+      "outsideCount": 11,
+      "outsideRate": 91.66666666666666
+    },
+    {
+      "municipalityKey": "Vares",
+      "featureCount": 84,
+      "outsideCount": 83,
+      "outsideRate": 98.80952380952381
+    },
+    {
+      "municipalityKey": "Velika Kladusa",
+      "featureCount": 68,
+      "outsideCount": 67,
+      "outsideRate": 98.52941176470588
+    },
+    {
+      "municipalityKey": "Visegrad",
+      "featureCount": 162,
+      "outsideCount": 161,
+      "outsideRate": 99.38271604938271
+    },
+    {
+      "municipalityKey": "Visoko",
+      "featureCount": 87,
+      "outsideCount": 86,
+      "outsideRate": 98.85057471264368
+    },
+    {
+      "municipalityKey": "Vitez",
+      "featureCount": 33,
+      "outsideCount": 32,
+      "outsideRate": 96.96969696969697
+    },
+    {
+      "municipalityKey": "Vlasenica",
+      "featureCount": 37,
+      "outsideCount": 36,
+      "outsideRate": 97.2972972972973
+    },
+    {
+      "municipalityKey": "Vukosavlje",
+      "featureCount": 11,
+      "outsideCount": 10,
+      "outsideRate": 90.9090909090909
+    },
+    {
+      "municipalityKey": "Zavidovici",
+      "featureCount": 46,
+      "outsideCount": 46,
+      "outsideRate": 100
+    },
+    {
+      "municipalityKey": "Zenica",
+      "featureCount": 82,
+      "outsideCount": 81,
+      "outsideRate": 98.78048780487805
+    },
+    {
+      "municipalityKey": "Zepce",
+      "featureCount": 40,
+      "outsideCount": 39,
+      "outsideRate": 97.5
+    },
+    {
+      "municipalityKey": "Zivinice",
+      "featureCount": 28,
+      "outsideCount": 27,
+      "outsideRate": 96.42857142857143
+    },
+    {
+      "municipalityKey": "Zvornik",
+      "featureCount": 67,
+      "outsideCount": 66,
+      "outsideRate": 98.50746268656717
+    }
+  ]
+}

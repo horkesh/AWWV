@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AWWV Map Render Check</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; }
+    .bar { padding: 10px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #ddd; }
+    canvas { display: block; }
+    .small { color: #555; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <button id="fit">Fit</button>
+    <button id="export">Export PNG</button>
+    <label>Stroke <input id="stroke" type="range" min="0" max="3" step="0.1" value="0.5"></label>
+    <label><input type="checkbox" id="showSalvage" checked> Show salvage overlay</label>
+    <span class="small" id="stats"></span>
+    <span class="small" id="info"></span>
+  </div>
+  <canvas id="c" width="1600" height="1000"></canvas>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+const stats = document.getElementById("stats");
+
+let geojson = null;
+let settlementsMeta = null;
+let view = { scale: 1, tx: 0, ty: 0 };
+let bounds = null;
+let hoveredFeature = null;
+
+function featureBounds(f) {
+  // supports Polygon + MultiPolygon
+  const coords = f.geometry.coordinates;
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  const visit = (pt) => {
+    const x = pt[0], y = pt[1];
+    if (x < minX) minX = x;
+    if (y < minY) minY = y;
+    if (x > maxX) maxX = x;
+    if (y > maxY) maxY = y;
+  };
+  if (f.geometry.type === "Polygon") {
+    coords.forEach(ring => ring.forEach(visit));
+  } else if (f.geometry.type === "MultiPolygon") {
+    coords.forEach(poly => poly.forEach(ring => ring.forEach(visit)));
+  }
+  return {minX, minY, maxX, maxY};
+}
+
+function computeBounds(gj) {
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  for (const f of gj.features) {
+    const b = featureBounds(f);
+    if (b.minX < minX) minX = b.minX;
+    if (b.minY < minY) minY = b.minY;
+    if (b.maxX > maxX) maxX = b.maxX;
+    if (b.maxY > maxY) maxY = b.maxY;
+  }
+  return {minX, minY, maxX, maxY};
+}
+
+function fitToCanvas() {
+  if (!bounds) return;
+  const pad = 20;
+  const w = canvas.width - pad*2;
+  const h = canvas.height - pad*2;
+  const bw = bounds.maxX - bounds.minX;
+  const bh = bounds.maxY - bounds.minY;
+  const s = Math.min(w / bw, h / bh);
+  view.scale = s;
+  // translate so min corner goes to pad, pad
+  view.tx = pad - bounds.minX * s;
+  view.ty = pad - bounds.minY * s;
+  draw();
+}
+
+function worldToScreen(x, y) {
+  return [x * view.scale + view.tx, y * view.scale + view.ty];
+}
+
+function getFeatureMeta(f) {
+  if (!settlementsMeta || !f.properties) return null;
+  const sid = f.properties.sid;
+  return settlementsMeta.find(m => m.sid === sid) || null;
+}
+
+function drawFeature(f) {
+  const strokeW = parseFloat(document.getElementById("stroke").value);
+  const showSalvage = document.getElementById("showSalvage").checked;
+  const meta = getFeatureMeta(f);
+  
+  // Determine style based on salvage method
+  let fillStyle = "rgba(120,160,200,0.35)";
+  let strokeStyle = "rgba(0,0,0,0.35)";
+  let lineWidth = strokeW;
+  let lineDash = [];
+  
+  if (showSalvage && meta) {
+    const method = meta.geometry_method;
+    if (method === "convex_hull_salvage") {
+      fillStyle = "rgba(120,160,200,0.2)";
+      strokeStyle = "rgba(100,100,200,0.6)";
+      lineDash = [5, 5];
+    } else if (method === "convex_hull_salvage_high_inflation") {
+      fillStyle = "rgba(200,100,100,0.2)";
+      strokeStyle = "rgba(200,50,50,0.8)";
+      lineWidth = strokeW * 2;
+      lineDash = [8, 4];
+    } else if (method === "ring_simplified_salvage") {
+      fillStyle = "rgba(160,200,120,0.3)";
+      strokeStyle = "rgba(100,150,100,0.5)";
+      lineDash = [3, 3];
+    }
+  }
+  
+  ctx.lineWidth = lineWidth;
+  ctx.strokeStyle = strokeStyle;
+  ctx.fillStyle = fillStyle;
+  if (lineDash.length > 0) {
+    ctx.setLineDash(lineDash);
+  } else {
+    ctx.setLineDash([]);
+  }
+
+  const drawRing = (ring) => {
+    ring.forEach((pt, i) => {
+      const [sx, sy] = worldToScreen(pt[0], pt[1]);
+      if (i === 0) ctx.moveTo(sx, sy);
+      else ctx.lineTo(sx, sy);
+    });
+    ctx.closePath();
+  };
+
+  ctx.beginPath();
+  if (f.geometry.type === "Polygon") {
+    f.geometry.coordinates.forEach(drawRing);
+  } else if (f.geometry.type === "MultiPolygon") {
+    f.geometry.coordinates.forEach(poly => poly.forEach(drawRing));
+  }
+  ctx.fill("evenodd");
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  if (!geojson) return;
+
+  // background
+  ctx.fillStyle = "white";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  for (const f of geojson.features) drawFeature(f);
+  
+  // Draw hover info
+  if (hoveredFeature) {
+    const meta = getFeatureMeta(hoveredFeature);
+    if (meta) {
+      const info = document.getElementById("info");
+      let infoText = `${hoveredFeature.properties?.name || hoveredFeature.properties?.sid || 'Unknown'}`;
+      if (meta.geometry_method) {
+        infoText += ` [${meta.geometry_method}]`;
+      }
+      if (meta.hull_inflation_ratio !== null && meta.hull_inflation_ratio !== undefined) {
+        infoText += ` (inflation: ${meta.hull_inflation_ratio.toFixed(2)}x)`;
+      }
+      info.textContent = infoText;
+    }
+  } else {
+    document.getElementById("info").textContent = "";
+  }
+
+  stats.textContent = `features: ${geojson.features.length}, scale: ${view.scale.toFixed(4)}`;
+}
+
+// Basic pan/zoom
+let dragging = false, lastX=0, lastY=0;
+canvas.addEventListener("mousedown", (e) => { dragging = true; lastX=e.clientX; lastY=e.clientY; });
+window.addEventListener("mouseup", () => dragging = false);
+window.addEventListener("mousemove", (e) => {
+  if (!dragging) return;
+  view.tx += (e.clientX - lastX);
+  view.ty += (e.clientY - lastY);
+  lastX = e.clientX; lastY = e.clientY;
+  draw();
+});
+canvas.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  const zoom = Math.exp(-e.deltaY * 0.001);
+  // zoom around mouse
+  const mx = e.offsetX, my = e.offsetY;
+  view.tx = mx - (mx - view.tx) * zoom;
+  view.ty = my - (my - view.ty) * zoom;
+  view.scale *= zoom;
+  draw();
+}, { passive: false });
+
+document.getElementById("fit").onclick = fitToCanvas;
+document.getElementById("export").onclick = () => {
+  const a = document.createElement("a");
+  a.download = "map_render.png";
+  a.href = canvas.toDataURL("image/png");
+  a.click();
+};
+document.getElementById("showSalvage").addEventListener("change", draw);
+document.getElementById("stroke").addEventListener("input", draw);
+
+// Mouse hover detection
+canvas.addEventListener("mousemove", (e) => {
+  if (dragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const [wx, wy] = [(x - view.tx) / view.scale, (y - view.ty) / view.scale];
+  
+  hoveredFeature = null;
+  if (geojson) {
+    for (const f of geojson.features) {
+      if (f.geometry.type === "Polygon") {
+        const ring = f.geometry.coordinates[0];
+        let inside = false;
+        for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+          const xi = ring[i][0], yi = ring[i][1];
+          const xj = ring[j][0], yj = ring[j][1];
+          if (((yi > wy) !== (yj > wy)) && (wx < (xj - xi) * (wy - yi) / (yj - yi) + xi)) {
+            inside = !inside;
+          }
+        }
+        if (inside) {
+          hoveredFeature = f;
+          break;
+        }
+      }
+    }
+  }
+  draw();
+});
+
+(async function init() {
+  // Load GeoJSON and metadata
+  const [geoResp, metaResp] = await Promise.all([
+    fetch("./settlements_polygons.geojson"),
+    fetch("./settlements_meta.json")
+  ]);
+  geojson = await geoResp.json();
+  settlementsMeta = await metaResp.json();
+  bounds = computeBounds(geojson);
+  fitToCanvas();
+})();
+</script>
+</body>
+</html>

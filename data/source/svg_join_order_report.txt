@@ -1,0 +1,46 @@
+Order-based SVG Join Report
+================================================================================
+
+Totals:
+  Municipalities total: 142
+  Municipalities with JS file: 134
+  Municipalities joined: 129
+  Municipalities skipped (count mismatch): 5
+  Municipalities skipped (no file): 8
+  Settlements total: 6140
+  Settlements assigned: 5499
+  Settlements unassigned: 641
+  Total paths extracted: 5805
+  Paths with arc commands: 0
+
+Top 30 municipalities by absolute delta (paths - settlements):
+  Kladanj (1191978): 48 settlements, 51 paths, delta=3
+  Ribnik (1443444): 29 settlements, 31 paths, delta=2
+  Orašje (1290383): 14 settlements, 15 paths, delta=1
+  Trebinje (1591214): 141 settlements, 142 paths, delta=1
+  Sanski Most (1871665): 66 settlements, 67 paths, delta=1
+
+Top 30 municipalities by unassigned settlements:
+  Trebinje (1591214): 141 unassigned / 141 total
+  Gradiška (1045979): 68 unassigned / 68 total
+  Sanski Most (1871665): 66 unassigned / 66 total
+  Pale (RS) (1675873): 62 unassigned / 62 total
+  Kozarska Dubica (1291077): 61 unassigned / 61 total
+  Grad Mostar (1617307): 60 unassigned / 60 total
+  Kladanj (1191978): 48 unassigned / 48 total
+  Novi Grad (1251305): 48 unassigned / 48 total
+  Kupres (FBiH) (1058545): 36 unassigned / 36 total
+  Ribnik (1443444): 29 unassigned / 29 total
+  Orašje (1290383): 14 unassigned / 14 total
+  Doboj-Istok (1777860): 6 unassigned / 6 total
+  Doboj-Jug (1413092): 2 unassigned / 2 total
+
+Municipalities skipped due to no JS file (showing 8):
+  Gradiška (1045979)
+  Kupres (FBiH) (1058545)
+  Novi Grad (1251305)
+  Kozarska Dubica (1291077)
+  Doboj-Jug (1413092)
+  Grad Mostar (1617307)
+  Pale (RS) (1675873)
+  Doboj-Istok (1777860)

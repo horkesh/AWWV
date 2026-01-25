@@ -1,0 +1,1619 @@
+{
+  "totals": {
+    "svg_files": 142,
+    "settlements_total": 6140,
+    "settlements_matched": 0,
+    "matched_by_sid": 0,
+    "matched_by_midname": 0,
+    "unmatched_settlements": 6140
+  },
+  "collisions_resolved": [],
+  "conflicts_rejected": [],
+  "unmatched_settlements_sample": [
+    {
+      "mid": "1012045",
+      "sid": "976526607",
+      "name": "Batkuša",
+      "tried_keys": [
+        "sid:976526607",
+        "midname:1012045:batkusa"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "928751800",
+      "name": "Brvnik",
+      "tried_keys": [
+        "sid:928751800",
+        "midname:1012045:brvnik"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "968482154",
+      "name": "Crkvina",
+      "tried_keys": [
+        "sid:968482154",
+        "midname:1012045:crkvina"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "947448192",
+      "name": "Donja Slatina",
+      "tried_keys": [
+        "sid:947448192",
+        "midname:1012045:donja slatina"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "934258692",
+      "name": "Donji Hasić",
+      "tried_keys": [
+        "sid:934258692",
+        "midname:1012045:donji hasic"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "946441096",
+      "name": "Gajevi",
+      "tried_keys": [
+        "sid:946441096",
+        "midname:1012045:gajevi"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "946794679",
+      "name": "Gornja Slatina",
+      "tried_keys": [
+        "sid:946794679",
+        "midname:1012045:gornja slatina"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "926420103",
+      "name": "Gornji Hasić",
+      "tried_keys": [
+        "sid:926420103",
+        "midname:1012045:gornji hasic"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "903215559",
+      "name": "Grebnice",
+      "tried_keys": [
+        "sid:903215559",
+        "midname:1012045:grebnice"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "946144861",
+      "name": "Kornica",
+      "tried_keys": [
+        "sid:946144861",
+        "midname:1012045:kornica"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "939904054",
+      "name": "Kruškovo Polje",
+      "tried_keys": [
+        "sid:939904054",
+        "midname:1012045:kruskovo polje"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "913625188",
+      "name": "Lugovi",
+      "tried_keys": [
+        "sid:913625188",
+        "midname:1012045:lugovi"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "965052697",
+      "name": "Novo Selo",
+      "tried_keys": [
+        "sid:965052697",
+        "midname:1012045:novo selo"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "973779706",
+      "name": "Njegoševo",
+      "tried_keys": [
+        "sid:973779706",
+        "midname:1012045:njegosevo"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "935051125",
+      "name": "Obudovac",
+      "tried_keys": [
+        "sid:935051125",
+        "midname:1012045:obudovac"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "949462014",
+      "name": "Pisari",
+      "tried_keys": [
+        "sid:949462014",
+        "midname:1012045:pisari"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "939188819",
+      "name": "Srednja Slatina",
+      "tried_keys": [
+        "sid:939188819",
+        "midname:1012045:srednja slatina"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "905456355",
+      "name": "Šamac",
+      "tried_keys": [
+        "sid:905456355",
+        "midname:1012045:samac"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "976393005",
+      "name": "Škarić",
+      "tried_keys": [
+        "sid:976393005",
+        "midname:1012045:skaric"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "937276678",
+      "name": "Tišina",
+      "tried_keys": [
+        "sid:937276678",
+        "midname:1012045:tisina"
+      ]
+    },
+    {
+      "mid": "1012045",
+      "sid": "925933060",
+      "name": "Zasavica",
+      "tried_keys": [
+        "sid:925933060",
+        "midname:1012045:zasavica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "941227439",
+      "name": "Ajdinovići",
+      "tried_keys": [
+        "sid:941227439",
+        "midname:1015698:ajdinovici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "973303412",
+      "name": "Babin Potok",
+      "tried_keys": [
+        "sid:973303412",
+        "midname:1015698:babin potok"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "973586380",
+      "name": "Ban Polje",
+      "tried_keys": [
+        "sid:973586380",
+        "midname:1015698:ban polje"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "945721877",
+      "name": "Barimo",
+      "tried_keys": [
+        "sid:945721877",
+        "midname:1015698:barimo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "953269259",
+      "name": "Batkovica",
+      "tried_keys": [
+        "sid:953269259",
+        "midname:1015698:batkovica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "963790712",
+      "name": "Batkušići",
+      "tried_keys": [
+        "sid:963790712",
+        "midname:1015698:batkusici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "965070226",
+      "name": "Bijela",
+      "tried_keys": [
+        "sid:965070226",
+        "midname:1015698:bijela"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "976322580",
+      "name": "Biljezi",
+      "tried_keys": [
+        "sid:976322580",
+        "midname:1015698:biljezi"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "975326646",
+      "name": "Bistrivode",
+      "tried_keys": [
+        "sid:975326646",
+        "midname:1015698:bistrivode"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "922124503",
+      "name": "Bjegovići",
+      "tried_keys": [
+        "sid:922124503",
+        "midname:1015698:bjegovici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "954913721",
+      "name": "Bjeljajci",
+      "tried_keys": [
+        "sid:954913721",
+        "midname:1015698:bjeljajci"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "961999434",
+      "name": "Blace",
+      "tried_keys": [
+        "sid:961999434",
+        "midname:1015698:blace"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "915255728",
+      "name": "Blaž",
+      "tried_keys": [
+        "sid:915255728",
+        "midname:1015698:blaz"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "942803921",
+      "name": "Bodežnik",
+      "tried_keys": [
+        "sid:942803921",
+        "midname:1015698:bodeznik"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "909163696",
+      "name": "Bogdašići",
+      "tried_keys": [
+        "sid:909163696",
+        "midname:1015698:bogdasici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "985599697",
+      "name": "Bogilice",
+      "tried_keys": [
+        "sid:985599697",
+        "midname:1015698:bogilice"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "978118553",
+      "name": "Borovac",
+      "tried_keys": [
+        "sid:978118553",
+        "midname:1015698:borovac"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "927657463",
+      "name": "Brezje",
+      "tried_keys": [
+        "sid:927657463",
+        "midname:1015698:brezje"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "943599017",
+      "name": "Brodar",
+      "tried_keys": [
+        "sid:943599017",
+        "midname:1015698:brodar"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "989009898",
+      "name": "Bursići",
+      "tried_keys": [
+        "sid:989009898",
+        "midname:1015698:bursici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "911252218",
+      "name": "Crijep",
+      "tried_keys": [
+        "sid:911252218",
+        "midname:1015698:crijep"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "945731934",
+      "name": "Crnčići",
+      "tried_keys": [
+        "sid:945731934",
+        "midname:1015698:crncici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "939745921",
+      "name": "Crni Vrh",
+      "tried_keys": [
+        "sid:939745921",
+        "midname:1015698:crni vrh"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "955306073",
+      "name": "Čengići",
+      "tried_keys": [
+        "sid:955306073",
+        "midname:1015698:cengici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "922759963",
+      "name": "Češalj",
+      "tried_keys": [
+        "sid:922759963",
+        "midname:1015698:cesalj"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "904073849",
+      "name": "Ćaćice",
+      "tried_keys": [
+        "sid:904073849",
+        "midname:1015698:cacice"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "952336996",
+      "name": "Dobrunska Rijeka",
+      "tried_keys": [
+        "sid:952336996",
+        "midname:1015698:dobrunska rijeka"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "960477160",
+      "name": "Donja Brštanica",
+      "tried_keys": [
+        "sid:960477160",
+        "midname:1015698:donja brstanica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "957209026",
+      "name": "Donja Crnča",
+      "tried_keys": [
+        "sid:957209026",
+        "midname:1015698:donja crnca"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "901790776",
+      "name": "Donja Jagodina",
+      "tried_keys": [
+        "sid:901790776",
+        "midname:1015698:donja jagodina"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "940700364",
+      "name": "Donja Lijeska",
+      "tried_keys": [
+        "sid:940700364",
+        "midname:1015698:donja lijeska"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "921374946",
+      "name": "Donje Dubovo",
+      "tried_keys": [
+        "sid:921374946",
+        "midname:1015698:donje dubovo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "983785804",
+      "name": "Donje Štitarevo",
+      "tried_keys": [
+        "sid:983785804",
+        "midname:1015698:donje stitarevo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "985401613",
+      "name": "Donje Vardište",
+      "tried_keys": [
+        "sid:985401613",
+        "midname:1015698:donje vardiste"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "908702767",
+      "name": "Donji Dobrun",
+      "tried_keys": [
+        "sid:908702767",
+        "midname:1015698:donji dobrun"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "964230637",
+      "name": "Donji Dubovik",
+      "tried_keys": [
+        "sid:964230637",
+        "midname:1015698:donji dubovik"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "940865271",
+      "name": "Dragomilje",
+      "tried_keys": [
+        "sid:940865271",
+        "midname:1015698:dragomilje"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "928857287",
+      "name": "Drina",
+      "tried_keys": [
+        "sid:928857287",
+        "midname:1015698:drina"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "951684727",
+      "name": "Drinsko",
+      "tried_keys": [
+        "sid:951684727",
+        "midname:1015698:drinsko"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "911690706",
+      "name": "Drokan",
+      "tried_keys": [
+        "sid:911690706",
+        "midname:1015698:drokan"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "946819585",
+      "name": "Dubočica",
+      "tried_keys": [
+        "sid:946819585",
+        "midname:1015698:dubocica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "937306619",
+      "name": "Dušče",
+      "tried_keys": [
+        "sid:937306619",
+        "midname:1015698:dusce"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "929138484",
+      "name": "Džankići",
+      "tried_keys": [
+        "sid:929138484",
+        "midname:1015698:dzankici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "916847080",
+      "name": "Đipi",
+      "tried_keys": [
+        "sid:916847080",
+        "midname:1015698:đipi"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "920545251",
+      "name": "Đurevići",
+      "tried_keys": [
+        "sid:920545251",
+        "midname:1015698:đurevici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "921180739",
+      "name": "Faljenovići",
+      "tried_keys": [
+        "sid:921180739",
+        "midname:1015698:faljenovici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "903574256",
+      "name": "Gazibare",
+      "tried_keys": [
+        "sid:903574256",
+        "midname:1015698:gazibare"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "985541320",
+      "name": "Glogova",
+      "tried_keys": [
+        "sid:985541320",
+        "midname:1015698:glogova"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "900625445",
+      "name": "Gornja Brštanica",
+      "tried_keys": [
+        "sid:900625445",
+        "midname:1015698:gornja brstanica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "979408479",
+      "name": "Gornja Crnča",
+      "tried_keys": [
+        "sid:979408479",
+        "midname:1015698:gornja crnca"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "952493031",
+      "name": "Gornja Jagodina",
+      "tried_keys": [
+        "sid:952493031",
+        "midname:1015698:gornja jagodina"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "950207705",
+      "name": "Gornja Lijeska",
+      "tried_keys": [
+        "sid:950207705",
+        "midname:1015698:gornja lijeska"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "971169817",
+      "name": "Gornje Dubovo",
+      "tried_keys": [
+        "sid:971169817",
+        "midname:1015698:gornje dubovo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "917627317",
+      "name": "Gornje Štitarevo",
+      "tried_keys": [
+        "sid:917627317",
+        "midname:1015698:gornje stitarevo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "980155704",
+      "name": "Gornji Dobrun",
+      "tried_keys": [
+        "sid:980155704",
+        "midname:1015698:gornji dobrun"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "900834392",
+      "name": "Gornji Dubovik",
+      "tried_keys": [
+        "sid:900834392",
+        "midname:1015698:gornji dubovik"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "901778262",
+      "name": "Granje",
+      "tried_keys": [
+        "sid:901778262",
+        "midname:1015698:granje"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "906590616",
+      "name": "Greben",
+      "tried_keys": [
+        "sid:906590616",
+        "midname:1015698:greben"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "924597620",
+      "name": "Hadrovići",
+      "tried_keys": [
+        "sid:924597620",
+        "midname:1015698:hadrovici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "927392557",
+      "name": "Haluge",
+      "tried_keys": [
+        "sid:927392557",
+        "midname:1015698:haluge"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "951966608",
+      "name": "Hamzići",
+      "tried_keys": [
+        "sid:951966608",
+        "midname:1015698:hamzici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "981738581",
+      "name": "Han Brdo",
+      "tried_keys": [
+        "sid:981738581",
+        "midname:1015698:han brdo"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "961976722",
+      "name": "Holijaci",
+      "tried_keys": [
+        "sid:961976722",
+        "midname:1015698:holijaci"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "907874550",
+      "name": "Holijačka Luka",
+      "tried_keys": [
+        "sid:907874550",
+        "midname:1015698:holijacka luka"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "956026925",
+      "name": "Hranjevac",
+      "tried_keys": [
+        "sid:956026925",
+        "midname:1015698:hranjevac"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "923895240",
+      "name": "Jablanica",
+      "tried_keys": [
+        "sid:923895240",
+        "midname:1015698:jablanica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "957407714",
+      "name": "Jarci",
+      "tried_keys": [
+        "sid:957407714",
+        "midname:1015698:jarci"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "900870467",
+      "name": "Jelačići",
+      "tried_keys": [
+        "sid:900870467",
+        "midname:1015698:jelacici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "924035392",
+      "name": "Jelašci",
+      "tried_keys": [
+        "sid:924035392",
+        "midname:1015698:jelasci"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "959886707",
+      "name": "Jelići",
+      "tried_keys": [
+        "sid:959886707",
+        "midname:1015698:jelici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "943886940",
+      "name": "Jezernice",
+      "tried_keys": [
+        "sid:943886940",
+        "midname:1015698:jezernice"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "939862400",
+      "name": "Kabernik",
+      "tried_keys": [
+        "sid:939862400",
+        "midname:1015698:kabernik"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "979918962",
+      "name": "Kamenica",
+      "tried_keys": [
+        "sid:979918962",
+        "midname:1015698:kamenica"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "950902943",
+      "name": "Kapetanovići",
+      "tried_keys": [
+        "sid:950902943",
+        "midname:1015698:kapetanovici"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "958831780",
+      "name": "Klašnik",
+      "tried_keys": [
+        "sid:958831780",
+        "midname:1015698:klasnik"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "965116052",
+      "name": "Klisura",
+      "tried_keys": [
+        "sid:965116052",
+        "midname:1015698:klisura"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "935564217",
+      "name": "Kočarim",
+      "tried_keys": [
+        "sid:935564217",
+        "midname:1015698:kocarim"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "960538665",
+      "name": "Kopito",
+      "tried_keys": [
+        "sid:960538665",
+        "midname:1015698:kopito"
+      ]
+    },
+    {
+      "mid": "1015698",
+      "sid": "943232592",
+      "name": "Koritnik",
+      "tried_keys": [
+        "sid:943232592",
+        "midname:1015698:koritnik"
+      ]
+    }
+  ],
+  "unused_svg_sample": [
+    {
+      "svg_source": "Banja Luka_20010.js",
+      "derived_keys": [
+        "mid:20010",
+        "midname:20010:banja luka"
+      ]
+    },
+    {
+      "svg_source": "Banovici_10014.js",
+      "derived_keys": [
+        "mid:10014",
+        "midname:10014:banovici"
+      ]
+    },
+    {
+      "svg_source": "Berkovici_20028.js",
+      "derived_keys": [
+        "mid:20028",
+        "midname:20028:berkovici"
+      ]
+    },
+    {
+      "svg_source": "Bihac_10049.js",
+      "derived_keys": [
+        "mid:10049",
+        "midname:10049:bihac"
+      ]
+    },
+    {
+      "svg_source": "Bijeljina_20036.js",
+      "derived_keys": [
+        "mid:20036",
+        "midname:20036:bijeljina"
+      ]
+    },
+    {
+      "svg_source": "Bileca_20044.js",
+      "derived_keys": [
+        "mid:20044",
+        "midname:20044:bileca"
+      ]
+    },
+    {
+      "svg_source": "Bosanska Dubica_20265.js",
+      "derived_keys": [
+        "mid:20265",
+        "midname:20265:bosanska dubica"
+      ]
+    },
+    {
+      "svg_source": "Bosanska Gradiska_20125.js",
+      "derived_keys": [
+        "mid:20125",
+        "midname:20125:bosanska gradiska"
+      ]
+    },
+    {
+      "svg_source": "Bosanska Krupa_11428.js",
+      "derived_keys": [
+        "mid:11428",
+        "midname:11428:bosanska krupa"
+      ]
+    },
+    {
+      "svg_source": "Bosanski Novi_20397.js",
+      "derived_keys": [
+        "mid:20397",
+        "midname:20397:bosanski novi"
+      ]
+    },
+    {
+      "svg_source": "Bosanski Petrovac_11436.js",
+      "derived_keys": [
+        "mid:11436",
+        "midname:11436:bosanski petrovac"
+      ]
+    },
+    {
+      "svg_source": "Bosansko Grahovo_10146.js",
+      "derived_keys": [
+        "mid:10146",
+        "midname:10146:bosansko grahovo"
+      ]
+    },
+    {
+      "svg_source": "Bratunac_20052.js",
+      "derived_keys": [
+        "mid:20052",
+        "midname:20052:bratunac"
+      ]
+    },
+    {
+      "svg_source": "Brcko_30163.js",
+      "derived_keys": [
+        "mid:30163",
+        "midname:30163:brcko"
+      ]
+    },
+    {
+      "svg_source": "Breza_10189.js",
+      "derived_keys": [
+        "mid:10189",
+        "midname:10189:breza"
+      ]
+    },
+    {
+      "svg_source": "Brod_20079.js",
+      "derived_keys": [
+        "mid:20079",
+        "midname:20079:brod"
+      ]
+    },
+    {
+      "svg_source": "Bugojno_10197.js",
+      "derived_keys": [
+        "mid:10197",
+        "midname:10197:bugojno"
+      ]
+    },
+    {
+      "svg_source": "Busovaca_10219.js",
+      "derived_keys": [
+        "mid:10219",
+        "midname:10219:busovaca"
+      ]
+    },
+    {
+      "svg_source": "Buzim_11240.js",
+      "derived_keys": [
+        "mid:11240",
+        "midname:11240:buzim"
+      ]
+    },
+    {
+      "svg_source": "Cajnice_20630.js",
+      "derived_keys": [
+        "mid:20630",
+        "midname:20630:cajnice"
+      ]
+    },
+    {
+      "svg_source": "Capljina_10243.js",
+      "derived_keys": [
+        "mid:10243",
+        "midname:10243:capljina"
+      ]
+    },
+    {
+      "svg_source": "Cazin_10227.js",
+      "derived_keys": [
+        "mid:10227",
+        "midname:10227:cazin"
+      ]
+    },
+    {
+      "svg_source": "Celic_11231.js",
+      "derived_keys": [
+        "mid:11231",
+        "midname:11231:celic"
+      ]
+    },
+    {
+      "svg_source": "Celinac_20648.js",
+      "derived_keys": [
+        "mid:20648",
+        "midname:20648:celinac"
+      ]
+    },
+    {
+      "svg_source": "Centar Sarajevo_10839.js",
+      "derived_keys": [
+        "mid:10839",
+        "midname:10839:centar sarajevo"
+      ]
+    },
+    {
+      "svg_source": "Citluk_10260.js",
+      "derived_keys": [
+        "mid:10260",
+        "midname:10260:citluk"
+      ]
+    },
+    {
+      "svg_source": "Derventa_20133.js",
+      "derived_keys": [
+        "mid:20133",
+        "midname:20133:derventa"
+      ]
+    },
+    {
+      "svg_source": "Doboj Istok_11258.js",
+      "derived_keys": [
+        "mid:11258",
+        "midname:11258:doboj istok"
+      ]
+    },
+    {
+      "svg_source": "Doboj Jug_11266.js",
+      "derived_keys": [
+        "mid:11266",
+        "midname:11266:doboj jug"
+      ]
+    },
+    {
+      "svg_source": "Doboj_20141.js",
+      "derived_keys": [
+        "mid:20141",
+        "midname:20141:doboj"
+      ]
+    },
+    {
+      "svg_source": "Dobretici_11274.js",
+      "derived_keys": [
+        "mid:11274",
+        "midname:11274:dobretici"
+      ]
+    },
+    {
+      "svg_source": "Domaljevac-Samac_11282.js",
+      "derived_keys": [
+        "mid:11282",
+        "midname:11282:domaljevac-samac"
+      ]
+    },
+    {
+      "svg_source": "Donji Vakuf_10294.js",
+      "derived_keys": [
+        "mid:10294",
+        "midname:10294:donji vakuf"
+      ]
+    },
+    {
+      "svg_source": "Donji Zabar_20150.js",
+      "derived_keys": [
+        "mid:20150",
+        "midname:20150:donji zabar"
+      ]
+    },
+    {
+      "svg_source": "Drvar_11614.js",
+      "derived_keys": [
+        "mid:11614",
+        "midname:11614:drvar"
+      ]
+    },
+    {
+      "svg_source": "Foca (FBiH)_11444.js",
+      "derived_keys": [
+        "mid:11444",
+        "midname:11444:foca (fbih)"
+      ]
+    },
+    {
+      "svg_source": "Foca (RS)_20613.js",
+      "derived_keys": [
+        "mid:20613",
+        "midname:20613:foca (rs)"
+      ]
+    },
+    {
+      "svg_source": "Fojnica_10324.js",
+      "derived_keys": [
+        "mid:10324",
+        "midname:10324:fojnica"
+      ]
+    },
+    {
+      "svg_source": "Gacko_20117.js",
+      "derived_keys": [
+        "mid:20117",
+        "midname:20117:gacko"
+      ]
+    },
+    {
+      "svg_source": "Glamoc_10359.js",
+      "derived_keys": [
+        "mid:10359",
+        "midname:10359:glamoc"
+      ]
+    },
+    {
+      "svg_source": "Gorazde_11452.js",
+      "derived_keys": [
+        "mid:11452",
+        "midname:11452:gorazde"
+      ]
+    },
+    {
+      "svg_source": "Gornji Vakuf-Uskoplje_10375.js",
+      "derived_keys": [
+        "mid:10375",
+        "midname:10375:gornji vakuf-uskoplje"
+      ]
+    },
+    {
+      "svg_source": "Gracanica_11479.js",
+      "derived_keys": [
+        "mid:11479",
+        "midname:11479:gracanica"
+      ]
+    },
+    {
+      "svg_source": "Gradacac_10391.js",
+      "derived_keys": [
+        "mid:10391",
+        "midname:10391:gradacac"
+      ]
+    },
+    {
+      "svg_source": "Grude_10405.js",
+      "derived_keys": [
+        "mid:10405",
+        "midname:10405:grude"
+      ]
+    },
+    {
+      "svg_source": "Hadzici_10847.js",
+      "derived_keys": [
+        "mid:10847",
+        "midname:10847:hadzici"
+      ]
+    },
+    {
+      "svg_source": "Han Pijesak_20621.js",
+      "derived_keys": [
+        "mid:20621",
+        "midname:20621:han pijesak"
+      ]
+    },
+    {
+      "svg_source": "Ilidza_11550.js",
+      "derived_keys": [
+        "mid:11550",
+        "midname:11550:ilidza"
+      ]
+    },
+    {
+      "svg_source": "Ilijas_10863.js",
+      "derived_keys": [
+        "mid:10863",
+        "midname:10863:ilijas"
+      ]
+    },
+    {
+      "svg_source": "Istocna Ilidza_20176.js",
+      "derived_keys": [
+        "mid:20176",
+        "midname:20176:istocna ilidza"
+      ]
+    },
+    {
+      "svg_source": "Istocni Drvar_20184.js",
+      "derived_keys": [
+        "mid:20184",
+        "midname:20184:istocni drvar"
+      ]
+    },
+    {
+      "svg_source": "Istocni Mostar_20192.js",
+      "derived_keys": [
+        "mid:20192",
+        "midname:20192:istocni mostar"
+      ]
+    },
+    {
+      "svg_source": "Istocni Stari Grad_20206.js",
+      "derived_keys": [
+        "mid:20206",
+        "midname:20206:istocni stari grad"
+      ]
+    },
+    {
+      "svg_source": "Istocno Novo Sarajevo_20214.js",
+      "derived_keys": [
+        "mid:20214",
+        "midname:20214:istocno novo sarajevo"
+      ]
+    },
+    {
+      "svg_source": "Jablanica_10421.js",
+      "derived_keys": [
+        "mid:10421",
+        "midname:10421:jablanica"
+      ]
+    },
+    {
+      "svg_source": "Jajce_11487.js",
+      "derived_keys": [
+        "mid:11487",
+        "midname:11487:jajce"
+      ]
+    },
+    {
+      "svg_source": "Jezero_20222.js",
+      "derived_keys": [
+        "mid:20222",
+        "midname:20222:jezero"
+      ]
+    },
+    {
+      "svg_source": "Kakanj_10448.js",
+      "derived_keys": [
+        "mid:10448",
+        "midname:10448:kakanj"
+      ]
+    },
+    {
+      "svg_source": "Kalesija_11495.js",
+      "derived_keys": [
+        "mid:11495",
+        "midname:11495:kalesija"
+      ]
+    },
+    {
+      "svg_source": "Kalinovik_20249.js",
+      "derived_keys": [
+        "mid:20249",
+        "midname:20249:kalinovik"
+      ]
+    },
+    {
+      "svg_source": "Kiseljak_10472.js",
+      "derived_keys": [
+        "mid:10472",
+        "midname:10472:kiseljak"
+      ]
+    },
+    {
+      "svg_source": "Kladanj_10499.js",
+      "derived_keys": [
+        "mid:10499",
+        "midname:10499:kladanj"
+      ]
+    },
+    {
+      "svg_source": "Kljuc_11509.js",
+      "derived_keys": [
+        "mid:11509",
+        "midname:11509:kljuc"
+      ]
+    },
+    {
+      "svg_source": "Knezevo_20257.js",
+      "derived_keys": [
+        "mid:20257",
+        "midname:20257:knezevo"
+      ]
+    },
+    {
+      "svg_source": "Konjic_10529.js",
+      "derived_keys": [
+        "mid:10529",
+        "midname:10529:konjic"
+      ]
+    },
+    {
+      "svg_source": "Kostajnica_20273.js",
+      "derived_keys": [
+        "mid:20273",
+        "midname:20273:kostajnica"
+      ]
+    },
+    {
+      "svg_source": "Kotor Varos_20281.js",
+      "derived_keys": [
+        "mid:20281",
+        "midname:20281:kotor varos"
+      ]
+    },
+    {
+      "svg_source": "Kresevo_10545.js",
+      "derived_keys": [
+        "mid:10545",
+        "midname:10545:kresevo"
+      ]
+    },
+    {
+      "svg_source": "Krupa na Uni_20290.js",
+      "derived_keys": [
+        "mid:20290",
+        "midname:20290:krupa na uni"
+      ]
+    },
+    {
+      "svg_source": "Kupres (RS)_20303.js",
+      "derived_keys": [
+        "mid:20303",
+        "midname:20303:kupres (rs)"
+      ]
+    },
+    {
+      "svg_source": "Kupres_11517.js",
+      "derived_keys": [
+        "mid:11517",
+        "midname:11517:kupres"
+      ]
+    },
+    {
+      "svg_source": "Laktasi_20311.js",
+      "derived_keys": [
+        "mid:20311",
+        "midname:20311:laktasi"
+      ]
+    },
+    {
+      "svg_source": "Livno_10588.js",
+      "derived_keys": [
+        "mid:10588",
+        "midname:10588:livno"
+      ]
+    },
+    {
+      "svg_source": "Ljubinje_20338.js",
+      "derived_keys": [
+        "mid:20338",
+        "midname:20338:ljubinje"
+      ]
+    },
+    {
+      "svg_source": "Ljubuski_10626.js",
+      "derived_keys": [
+        "mid:10626",
+        "midname:10626:ljubuski"
+      ]
+    },
+    {
+      "svg_source": "Lopare_20320.js",
+      "derived_keys": [
+        "mid:20320",
+        "midname:20320:lopare"
+      ]
+    },
+    {
+      "svg_source": "Lukavac_10600.js",
+      "derived_keys": [
+        "mid:10600",
+        "midname:10600:lukavac"
+      ]
+    },
+    {
+      "svg_source": "Maglaj_10634.js",
+      "derived_keys": [
+        "mid:10634",
+        "midname:10634:maglaj"
+      ]
+    },
+    {
+      "svg_source": "Milici_20346.js",
+      "derived_keys": [
+        "mid:20346",
+        "midname:20346:milici"
+      ]
+    },
+    {
+      "svg_source": "Modrica_20354.js",
+      "derived_keys": [
+        "mid:20354",
+        "midname:20354:modrica"
+      ]
+    },
+    {
+      "svg_source": "Mostar_11410.js",
+      "derived_keys": [
+        "mid:11410",
+        "midname:11410:mostar"
+      ]
+    },
+    {
+      "svg_source": "Mrkonjic Grad_20362.js",
+      "derived_keys": [
+        "mid:20362",
+        "midname:20362:mrkonjic grad"
+      ]
+    },
+    {
+      "svg_source": "Neum_10685.js",
+      "derived_keys": [
+        "mid:10685",
+        "midname:10685:neum"
+      ]
+    },
+    {
+      "svg_source": "Nevesinje_20389.js",
+      "derived_keys": [
+        "mid:20389",
+        "midname:20389:nevesinje"
+      ]
+    },
+    {
+      "svg_source": "Novi Grad Sarajevo_10871.js",
+      "derived_keys": [
+        "mid:10871",
+        "midname:10871:novi grad sarajevo"
+      ]
+    },
+    {
+      "svg_source": "Novi Travnik_10774.js",
+      "derived_keys": [
+        "mid:10774",
+        "midname:10774:novi travnik"
+      ]
+    },
+    {
+      "svg_source": "Novo Gorazde_20419.js",
+      "derived_keys": [
+        "mid:20419",
+        "midname:20419:novo gorazde"
+      ]
+    },
+    {
+      "svg_source": "Novo Sarajevo_11568.js",
+      "derived_keys": [
+        "mid:11568",
+        "midname:11568:novo sarajevo"
+      ]
+    },
+    {
+      "svg_source": "Odzak_11525.js",
+      "derived_keys": [
+        "mid:11525",
+        "midname:11525:odzak"
+      ]
+    },
+    {
+      "svg_source": "Olovo_10715.js",
+      "derived_keys": [
+        "mid:10715",
+        "midname:10715:olovo"
+      ]
+    },
+    {
+      "svg_source": "Orasje_11533.js",
+      "derived_keys": [
+        "mid:11533",
+        "midname:11533:orasje"
+      ]
+    },
+    {
+      "svg_source": "Osmaci_20427.js",
+      "derived_keys": [
+        "mid:20427",
+        "midname:20427:osmaci"
+      ]
+    },
+    {
+      "svg_source": "Ostra Luka_20435.js",
+      "derived_keys": [
+        "mid:20435",
+        "midname:20435:ostra luka"
+      ]
+    },
+    {
+      "svg_source": "Pale (FBiH)_11576.js",
+      "derived_keys": [
+        "mid:11576",
+        "midname:11576:pale (fbih)"
+      ]
+    },
+    {
+      "svg_source": "Pale_20443.js",
+      "derived_keys": [
+        "mid:20443",
+        "midname:20443:pale"
+      ]
+    },
+    {
+      "svg_source": "Pelagicevo_20451.js",
+      "derived_keys": [
+        "mid:20451",
+        "midname:20451:pelagicevo"
+      ]
+    },
+    {
+      "svg_source": "Petrovac_20460.js",
+      "derived_keys": [
+        "mid:20460",
+        "midname:20460:petrovac"
+      ]
+    },
+    {
+      "svg_source": "Petrovo_20478.js",
+      "derived_keys": [
+        "mid:20478",
+        "midname:20478:petrovo"
+      ]
+    },
+    {
+      "svg_source": "Posusje_10731.js",
+      "derived_keys": [
+        "mid:10731",
+        "midname:10731:posusje"
+      ]
+    },
+    {
+      "svg_source": "Prijedor_20486.js",
+      "derived_keys": [
+        "mid:20486",
+        "midname:20486:prijedor"
+      ]
+    }
+  ],
+  "arc_command_stats": {
+    "count_with_arc": 0
+  }
+}

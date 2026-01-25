@@ -1,0 +1,15 @@
+SVG Geometry Failure Diagnostics
+================================================================================
+
+Overall Totals by Reason:
+  unsupported_arc: 0
+  parse_error: 0
+  too_few_points: 0
+  non_finite: 0
+  zero_area: 0
+  self_evident_degenerate: 1
+  no_closed_subpaths: 0
+
+Top 1 municipalities with highest drop rate:
+  Višegrad (1015698): 0.6% dropped (1/163)
+    self_evident_degenerate: 1

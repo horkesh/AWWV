@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWWV - Negotiation Map Mode</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #map-container {
+      flex: 1;
+      position: relative;
+      background: #f0f0f0;
+    }
+    #map-canvas {
+      display: block;
+      cursor: crosshair;
+    }
+    #sidebar {
+      width: 400px;
+      background: white;
+      border-left: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .section {
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .section h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    .section h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #666;
+    }
+    select, input, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .list-item {
+      padding: 6px;
+      margin: 2px 0;
+      background: #f8f9fa;
+      border-radius: 3px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .list-item button {
+      width: auto;
+      padding: 4px 8px;
+      margin: 0;
+      background: #dc3545;
+      font-size: 11px;
+    }
+    .info-box {
+      padding: 8px;
+      background: #e7f3ff;
+      border-left: 3px solid #007bff;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    .warning-box {
+      padding: 8px;
+      background: #fff3cd;
+      border-left: 3px solid #ffc107;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    .error-box {
+      padding: 8px;
+      background: #f8d7da;
+      border-left: 3px solid #dc3545;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    .deprecated-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: #ffc107;
+      color: #856404;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    .invalid-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: #dc3545;
+      color: white;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+    }
+    #file-input {
+      display: none;
+    }
+    .file-label {
+      display: block;
+      padding: 8px;
+      background: #f8f9fa;
+      border: 1px dashed #ddd;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .file-label:hover {
+      background: #e9ecef;
+    }
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 11px;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <div id="map-container">
+    <canvas id="map-canvas"></canvas>
+  </div>
+  <div id="sidebar">
+    <div class="section">
+      <h2>Load Data</h2>
+      <label for="file-input" class="file-label">Load Save JSON</label>
+      <input type="file" id="file-input" accept=".json">
+      <div id="save-status">No save loaded</div>
+    </div>
+    <div class="section">
+      <h2>Offer Presets</h2>
+      <label>Preset Target Holder:</label>
+      <select id="preset-holder">
+        <option value="RBiH">RBiH</option>
+        <option value="RS">RS</option>
+        <option value="HRHB">HRHB</option>
+      </select>
+      <button id="preset-blank">Blank (reset)</button>
+      <button id="preset-minimal-peace">Minimal peace (territory + Brčko)</button>
+      <button id="preset-competences-only">Competences-only (no peace)</button>
+      <button id="preset-balanced">Balanced offer (peace + competences)</button>
+      <button id="preset-status-quo">Status quo / recognize control (peace)</button>
+    </div>
+    <div class="section">
+      <h2>Negotiation Builder</h2>
+      <label>Proposer Side:</label>
+      <select id="proposer-side">
+        <option value="RBiH">RBiH</option>
+        <option value="RS">RS</option>
+        <option value="HRHB">HRHB</option>
+      </select>
+      <label>Counterparty Side:</label>
+      <select id="counterparty-side">
+        <option value="RBiH">RBiH</option>
+        <option value="RS">RS</option>
+        <option value="HRHB">HRHB</option>
+      </select>
+      <label>Mode:</label>
+      <select id="mode">
+        <option value="demand">Demand (click adds to demand list)</option>
+        <option value="concede">Concede (click adds to concede list)</option>
+      </select>
+    </div>
+    <div class="section">
+      <h3>Demands</h3>
+      <div id="demand-list"></div>
+    </div>
+    <div class="section">
+      <h3>Concessions</h3>
+      <div id="concede-list"></div>
+    </div>
+    <div class="section">
+      <h3>Special Clauses</h3>
+      <div id="special-clauses">
+        <label style="display: flex; align-items: center; gap: 8px;">
+          <input type="checkbox" id="brcko-toggle">
+          <span>Brčko Special Status (60 settlements)</span>
+        </label>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Competence Allocations</h2>
+      <div id="competence-allocations-list"></div>
+      <button id="add-competence" style="margin-top: 8px;">Add Competence</button>
+    </div>
+    <div class="section">
+      <h2>Imported Clauses</h2>
+      <label for="draft-input" class="file-label">Load Treaty Draft JSON</label>
+      <input type="file" id="draft-input" accept=".json">
+      <div id="imported-clauses-list"></div>
+    </div>
+    <div class="section">
+      <h2>Peace Status</h2>
+      <div id="peace-status"></div>
+    </div>
+    <div class="section">
+      <h2>Competence Utility</h2>
+      <div id="competence-utility"></div>
+    </div>
+    <div class="section">
+      <h2>Treaty Validation</h2>
+      <div id="treaty-validation"></div>
+    </div>
+    <div class="section">
+      <h2>Acceptance Breakdown</h2>
+      <div id="acceptance-breakdown"></div>
+    </div>
+    <div class="section">
+      <h2>Treaty Lint</h2>
+      <div id="treaty-lint"></div>
+    </div>
+    <div class="section">
+      <h2>Treaty Preview</h2>
+      <div id="treaty-preview"></div>
+    </div>
+    <div class="section">
+      <h2>Export</h2>
+      <button id="copy-clauses">Copy Clause Specs</button>
+      <button id="save-draft">Save treaty_draft.json</button>
+    </div>
+  </div>
+  <script type="module" src="/dev_ui/main.ts"></script>
+</body>
+</html>

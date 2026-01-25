@@ -1,0 +1,34 @@
+{
+  "counts": {
+    "total_features": 6148,
+    "polygons_kept": 6148,
+    "polygons_dropped": 0,
+    "points_created": 6148,
+    "excel_aggregate_rows_filtered": 142,
+    "polygons_without_meta": 6137,
+    "meta_without_polygons": 6283,
+    "municipalities_derived": 0
+  },
+  "polygon_drop_reasons": {},
+  "join_stats": {
+    "polygons_without_meta": 6137,
+    "meta_without_polygons": 6283,
+    "crosswalk_matched": 0,
+    "crosswalk_unresolved": 6422,
+    "polygons_total": 6148,
+    "polygons_matched": 0,
+    "polygons_unmatched": 6148,
+    "meta_total": 6283,
+    "meta_matched": 0
+  },
+  "excel_stats": {
+    "aggregate_rows_filtered": 142
+  },
+  "bounds": {
+    "min_x": 1,
+    "min_y": -9.521,
+    "max_x": 940.964,
+    "max_y": 910.09
+  },
+  "crs": "LOCAL_PIXELS_V2"
+}

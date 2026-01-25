@@ -1,0 +1,1422 @@
+[
+  {
+    "mid": "1045979",
+    "name": "Gradiška",
+    "total_settlements": 68,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1058545",
+    "name": "Kupres (FBiH)",
+    "total_settlements": 36,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1191978",
+    "name": "Kladanj",
+    "total_settlements": 48,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "count_mismatch: settlements=48, paths=51"
+  },
+  {
+    "mid": "1251305",
+    "name": "Novi Grad",
+    "total_settlements": 48,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1290383",
+    "name": "Orašje",
+    "total_settlements": 14,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "count_mismatch: settlements=14, paths=15"
+  },
+  {
+    "mid": "1291077",
+    "name": "Kozarska Dubica",
+    "total_settlements": 61,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1413092",
+    "name": "Doboj-Jug",
+    "total_settlements": 2,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1443444",
+    "name": "Ribnik",
+    "total_settlements": 29,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "count_mismatch: settlements=29, paths=31"
+  },
+  {
+    "mid": "1591214",
+    "name": "Trebinje",
+    "total_settlements": 141,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "count_mismatch: settlements=141, paths=142"
+  },
+  {
+    "mid": "1617307",
+    "name": "Grad Mostar",
+    "total_settlements": 60,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1675873",
+    "name": "Pale (RS)",
+    "total_settlements": 62,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1777860",
+    "name": "Doboj-Istok",
+    "total_settlements": 6,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "no_js_file"
+  },
+  {
+    "mid": "1871665",
+    "name": "Sanski Most",
+    "total_settlements": 66,
+    "settlements_with_svg": 0,
+    "settlements_with_geometry": 0,
+    "coverage_svg": 0,
+    "coverage_geometry": 0,
+    "reason_if_skipped": "count_mismatch: settlements=66, paths=67"
+  },
+  {
+    "mid": "1012045",
+    "name": "Šamac",
+    "total_settlements": 21,
+    "settlements_with_svg": 21,
+    "settlements_with_geometry": 21,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1015698",
+    "name": "Višegrad",
+    "total_settlements": 163,
+    "settlements_with_svg": 163,
+    "settlements_with_geometry": 163,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1017148",
+    "name": "Bužim",
+    "total_settlements": 7,
+    "settlements_with_svg": 7,
+    "settlements_with_geometry": 7,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1026177",
+    "name": "Šekovići",
+    "total_settlements": 38,
+    "settlements_with_svg": 38,
+    "settlements_with_geometry": 38,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1028426",
+    "name": "Tomislavgrad",
+    "total_settlements": 60,
+    "settlements_with_svg": 60,
+    "settlements_with_geometry": 60,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1031837",
+    "name": "Prnjavor",
+    "total_settlements": 63,
+    "settlements_with_svg": 63,
+    "settlements_with_geometry": 63,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1037615",
+    "name": "Livno",
+    "total_settlements": 59,
+    "settlements_with_svg": 59,
+    "settlements_with_geometry": 59,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1039821",
+    "name": "Ravno",
+    "total_settlements": 54,
+    "settlements_with_svg": 54,
+    "settlements_with_geometry": 54,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1041595",
+    "name": "Kiseljak",
+    "total_settlements": 82,
+    "settlements_with_svg": 82,
+    "settlements_with_geometry": 82,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1054124",
+    "name": "Dobretići",
+    "total_settlements": 18,
+    "settlements_with_svg": 18,
+    "settlements_with_geometry": 18,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1059774",
+    "name": "Petrovo",
+    "total_settlements": 7,
+    "settlements_with_svg": 7,
+    "settlements_with_geometry": 7,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1073063",
+    "name": "Doboj",
+    "total_settlements": 83,
+    "settlements_with_svg": 83,
+    "settlements_with_geometry": 83,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1080479",
+    "name": "Konjic",
+    "total_settlements": 168,
+    "settlements_with_svg": 168,
+    "settlements_with_geometry": 168,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1099739",
+    "name": "Gradačac",
+    "total_settlements": 34,
+    "settlements_with_svg": 34,
+    "settlements_with_geometry": 34,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1105369",
+    "name": "Rudo",
+    "total_settlements": 89,
+    "settlements_with_svg": 89,
+    "settlements_with_geometry": 89,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1106951",
+    "name": "Vogošća",
+    "total_settlements": 21,
+    "settlements_with_svg": 21,
+    "settlements_with_geometry": 21,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1114279",
+    "name": "Kupres (RS)",
+    "total_settlements": 4,
+    "settlements_with_svg": 4,
+    "settlements_with_geometry": 4,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1117932",
+    "name": "Foča (FBiH)",
+    "total_settlements": 32,
+    "settlements_with_svg": 32,
+    "settlements_with_geometry": 32,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1123551",
+    "name": "Čajniče",
+    "total_settlements": 36,
+    "settlements_with_svg": 36,
+    "settlements_with_geometry": 36,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1136380",
+    "name": "Visoko",
+    "total_settlements": 88,
+    "settlements_with_svg": 88,
+    "settlements_with_geometry": 88,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1144085",
+    "name": "Fojnica",
+    "total_settlements": 55,
+    "settlements_with_svg": 55,
+    "settlements_with_geometry": 55,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1144909",
+    "name": "Ilijaš",
+    "total_settlements": 74,
+    "settlements_with_svg": 74,
+    "settlements_with_geometry": 74,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1160876",
+    "name": "Donji Žabar",
+    "total_settlements": 6,
+    "settlements_with_svg": 6,
+    "settlements_with_geometry": 6,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1162720",
+    "name": "Ilidža",
+    "total_settlements": 12,
+    "settlements_with_svg": 12,
+    "settlements_with_geometry": 12,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1167475",
+    "name": "Istočno Novo Sarajevo",
+    "total_settlements": 8,
+    "settlements_with_svg": 8,
+    "settlements_with_geometry": 8,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1173054",
+    "name": "Ključ",
+    "total_settlements": 41,
+    "settlements_with_svg": 41,
+    "settlements_with_geometry": 41,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1180367",
+    "name": "Vlasenica",
+    "total_settlements": 38,
+    "settlements_with_svg": 38,
+    "settlements_with_geometry": 38,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1183673",
+    "name": "Stolac",
+    "total_settlements": 26,
+    "settlements_with_svg": 26,
+    "settlements_with_geometry": 26,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1184526",
+    "name": "Laktaši",
+    "total_settlements": 37,
+    "settlements_with_svg": 37,
+    "settlements_with_geometry": 37,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1190744",
+    "name": "Tešanj",
+    "total_settlements": 41,
+    "settlements_with_svg": 41,
+    "settlements_with_geometry": 41,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1198423",
+    "name": "Tuzla",
+    "total_settlements": 66,
+    "settlements_with_svg": 66,
+    "settlements_with_geometry": 66,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1198777",
+    "name": "Trnovo (FBiH)",
+    "total_settlements": 55,
+    "settlements_with_svg": 55,
+    "settlements_with_geometry": 55,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1222440",
+    "name": "Domaljevac-Šamac",
+    "total_settlements": 6,
+    "settlements_with_svg": 6,
+    "settlements_with_geometry": 6,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1229931",
+    "name": "Bugojno",
+    "total_settlements": 78,
+    "settlements_with_svg": 78,
+    "settlements_with_geometry": 78,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1232307",
+    "name": "Maglaj",
+    "total_settlements": 40,
+    "settlements_with_svg": 40,
+    "settlements_with_geometry": 40,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1251631",
+    "name": "Centar Sarajevo",
+    "total_settlements": 6,
+    "settlements_with_svg": 6,
+    "settlements_with_geometry": 6,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1252174",
+    "name": "Ljubinje",
+    "total_settlements": 21,
+    "settlements_with_svg": 21,
+    "settlements_with_geometry": 21,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1252399",
+    "name": "Trnovo (RS)",
+    "total_settlements": 25,
+    "settlements_with_svg": 25,
+    "settlements_with_geometry": 25,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1255549",
+    "name": "Novo Goražde",
+    "total_settlements": 61,
+    "settlements_with_svg": 61,
+    "settlements_with_geometry": 61,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1259038",
+    "name": "Donji Vakuf",
+    "total_settlements": 68,
+    "settlements_with_svg": 68,
+    "settlements_with_geometry": 68,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1263638",
+    "name": "Novi Travnik",
+    "total_settlements": 52,
+    "settlements_with_svg": 52,
+    "settlements_with_geometry": 52,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1268233",
+    "name": "Kotor Varoš",
+    "total_settlements": 43,
+    "settlements_with_svg": 43,
+    "settlements_with_geometry": 43,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1277872",
+    "name": "Glamoč",
+    "total_settlements": 55,
+    "settlements_with_svg": 55,
+    "settlements_with_geometry": 55,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1286568",
+    "name": "Prijedor",
+    "total_settlements": 71,
+    "settlements_with_svg": 71,
+    "settlements_with_geometry": 71,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1286881",
+    "name": "Oštra Luka",
+    "total_settlements": 24,
+    "settlements_with_svg": 24,
+    "settlements_with_geometry": 24,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1288657",
+    "name": "Teslić",
+    "total_settlements": 57,
+    "settlements_with_svg": 57,
+    "settlements_with_geometry": 57,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1318354",
+    "name": "Neum",
+    "total_settlements": 27,
+    "settlements_with_svg": 27,
+    "settlements_with_geometry": 27,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1319486",
+    "name": "Zvornik",
+    "total_settlements": 68,
+    "settlements_with_svg": 68,
+    "settlements_with_geometry": 68,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1320269",
+    "name": "Breza",
+    "total_settlements": 28,
+    "settlements_with_svg": 28,
+    "settlements_with_geometry": 28,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1323835",
+    "name": "Pale (FBiH)",
+    "total_settlements": 15,
+    "settlements_with_svg": 15,
+    "settlements_with_geometry": 15,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1355433",
+    "name": "Berkovići",
+    "total_settlements": 20,
+    "settlements_with_svg": 20,
+    "settlements_with_geometry": 20,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1367544",
+    "name": "Milići",
+    "total_settlements": 54,
+    "settlements_with_svg": 54,
+    "settlements_with_geometry": 54,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1383573",
+    "name": "Bosansko Grahovo",
+    "total_settlements": 35,
+    "settlements_with_svg": 35,
+    "settlements_with_geometry": 35,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1389088",
+    "name": "Srebrenik",
+    "total_settlements": 49,
+    "settlements_with_svg": 49,
+    "settlements_with_geometry": 49,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1392554",
+    "name": "Derventa",
+    "total_settlements": 57,
+    "settlements_with_svg": 57,
+    "settlements_with_geometry": 57,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1416221",
+    "name": "Petrovac",
+    "total_settlements": 6,
+    "settlements_with_svg": 6,
+    "settlements_with_geometry": 6,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1425877",
+    "name": "Kalinovik",
+    "total_settlements": 71,
+    "settlements_with_svg": 71,
+    "settlements_with_geometry": 71,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1428426",
+    "name": "Jezero",
+    "total_settlements": 11,
+    "settlements_with_svg": 11,
+    "settlements_with_geometry": 11,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1431190",
+    "name": "Kostajnica",
+    "total_settlements": 12,
+    "settlements_with_svg": 12,
+    "settlements_with_geometry": 12,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1445016",
+    "name": "Modriča",
+    "total_settlements": 24,
+    "settlements_with_svg": 24,
+    "settlements_with_geometry": 24,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1445976",
+    "name": "Novi Grad Sarajevo",
+    "total_settlements": 3,
+    "settlements_with_svg": 3,
+    "settlements_with_geometry": 3,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1467835",
+    "name": "Prozor",
+    "total_settlements": 56,
+    "settlements_with_svg": 56,
+    "settlements_with_geometry": 56,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1470472",
+    "name": "Olovo",
+    "total_settlements": 45,
+    "settlements_with_svg": 45,
+    "settlements_with_geometry": 45,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1472746",
+    "name": "Cazin",
+    "total_settlements": 54,
+    "settlements_with_svg": 54,
+    "settlements_with_geometry": 54,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1472867",
+    "name": "Istočni Stari Grad",
+    "total_settlements": 19,
+    "settlements_with_svg": 19,
+    "settlements_with_geometry": 19,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1475355",
+    "name": "Goražde",
+    "total_settlements": 144,
+    "settlements_with_svg": 144,
+    "settlements_with_geometry": 144,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1487460",
+    "name": "Nevesinje",
+    "total_settlements": 56,
+    "settlements_with_svg": 56,
+    "settlements_with_geometry": 56,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1487779",
+    "name": "Usora",
+    "total_settlements": 13,
+    "settlements_with_svg": 13,
+    "settlements_with_geometry": 13,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1490866",
+    "name": "Čapljina",
+    "total_settlements": 32,
+    "settlements_with_svg": 32,
+    "settlements_with_geometry": 32,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1494459",
+    "name": "Bosanski Petrovac",
+    "total_settlements": 35,
+    "settlements_with_svg": 35,
+    "settlements_with_geometry": 35,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1494695",
+    "name": "Žepče",
+    "total_settlements": 41,
+    "settlements_with_svg": 41,
+    "settlements_with_geometry": 41,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1512315",
+    "name": "Srebrenica",
+    "total_settlements": 81,
+    "settlements_with_svg": 81,
+    "settlements_with_geometry": 81,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1516637",
+    "name": "Zavidovići",
+    "total_settlements": 47,
+    "settlements_with_svg": 47,
+    "settlements_with_geometry": 47,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1520211",
+    "name": "Vitez",
+    "total_settlements": 34,
+    "settlements_with_svg": 34,
+    "settlements_with_geometry": 34,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1521214",
+    "name": "Brod",
+    "total_settlements": 23,
+    "settlements_with_svg": 23,
+    "settlements_with_geometry": 23,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1532434",
+    "name": "Čelić",
+    "total_settlements": 20,
+    "settlements_with_svg": 20,
+    "settlements_with_geometry": 20,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1535620",
+    "name": "Mrkonjić Grad",
+    "total_settlements": 38,
+    "settlements_with_svg": 38,
+    "settlements_with_geometry": 38,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1539057",
+    "name": "Gornji Vakuf-Uskoplje",
+    "total_settlements": 52,
+    "settlements_with_svg": 52,
+    "settlements_with_geometry": 52,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1542170",
+    "name": "Banovići",
+    "total_settlements": 20,
+    "settlements_with_svg": 20,
+    "settlements_with_geometry": 20,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1553762",
+    "name": "Brčko",
+    "total_settlements": 59,
+    "settlements_with_svg": 59,
+    "settlements_with_geometry": 59,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1558420",
+    "name": "Široki Brijeg",
+    "total_settlements": 34,
+    "settlements_with_svg": 34,
+    "settlements_with_geometry": 34,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1564405",
+    "name": "Zenica",
+    "total_settlements": 83,
+    "settlements_with_svg": 83,
+    "settlements_with_geometry": 83,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1572156",
+    "name": "Ugljevik",
+    "total_settlements": 25,
+    "settlements_with_svg": 25,
+    "settlements_with_geometry": 25,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1597958",
+    "name": "Lopare",
+    "total_settlements": 35,
+    "settlements_with_svg": 35,
+    "settlements_with_geometry": 35,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1598920",
+    "name": "Velika Kladuša",
+    "total_settlements": 49,
+    "settlements_with_svg": 49,
+    "settlements_with_geometry": 49,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1603938",
+    "name": "Srbac",
+    "total_settlements": 39,
+    "settlements_with_svg": 39,
+    "settlements_with_geometry": 39,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1615642",
+    "name": "Jajce",
+    "total_settlements": 58,
+    "settlements_with_svg": 58,
+    "settlements_with_geometry": 58,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1624574",
+    "name": "Ljubuški",
+    "total_settlements": 35,
+    "settlements_with_svg": 35,
+    "settlements_with_geometry": 35,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1625429",
+    "name": "Čelinac",
+    "total_settlements": 30,
+    "settlements_with_svg": 30,
+    "settlements_with_geometry": 30,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1634032",
+    "name": "Novo Sarajevo",
+    "total_settlements": 3,
+    "settlements_with_svg": 3,
+    "settlements_with_geometry": 3,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1640845",
+    "name": "Busovača",
+    "total_settlements": 47,
+    "settlements_with_svg": 47,
+    "settlements_with_geometry": 47,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1644092",
+    "name": "Gacko",
+    "total_settlements": 71,
+    "settlements_with_svg": 71,
+    "settlements_with_geometry": 71,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1653737",
+    "name": "Osmaci",
+    "total_settlements": 16,
+    "settlements_with_svg": 16,
+    "settlements_with_geometry": 16,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1655654",
+    "name": "Bosanska Krupa",
+    "total_settlements": 37,
+    "settlements_with_svg": 37,
+    "settlements_with_geometry": 37,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1663346",
+    "name": "Kreševo",
+    "total_settlements": 27,
+    "settlements_with_svg": 27,
+    "settlements_with_geometry": 27,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1670035",
+    "name": "Krupa na Uni",
+    "total_settlements": 12,
+    "settlements_with_svg": 12,
+    "settlements_with_geometry": 12,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1677723",
+    "name": "Živinice",
+    "total_settlements": 29,
+    "settlements_with_svg": 29,
+    "settlements_with_geometry": 29,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1680904",
+    "name": "Šipovo",
+    "total_settlements": 46,
+    "settlements_with_svg": 46,
+    "settlements_with_geometry": 46,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1684504",
+    "name": "Odžak",
+    "total_settlements": 14,
+    "settlements_with_svg": 14,
+    "settlements_with_geometry": 14,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1695193",
+    "name": "Kakanj",
+    "total_settlements": 106,
+    "settlements_with_svg": 106,
+    "settlements_with_geometry": 106,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1697675",
+    "name": "Kalesija",
+    "total_settlements": 28,
+    "settlements_with_svg": 28,
+    "settlements_with_geometry": 28,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1709112",
+    "name": "Gračanica",
+    "total_settlements": 23,
+    "settlements_with_svg": 23,
+    "settlements_with_geometry": 23,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1735348",
+    "name": "Jablanica",
+    "total_settlements": 33,
+    "settlements_with_svg": 33,
+    "settlements_with_geometry": 33,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1736474",
+    "name": "Sapna",
+    "total_settlements": 13,
+    "settlements_with_svg": 13,
+    "settlements_with_geometry": 13,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1738233",
+    "name": "Rogatica",
+    "total_settlements": 118,
+    "settlements_with_svg": 118,
+    "settlements_with_geometry": 118,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1738871",
+    "name": "Bratunac",
+    "total_settlements": 50,
+    "settlements_with_svg": 50,
+    "settlements_with_geometry": 50,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1740750",
+    "name": "Posušje",
+    "total_settlements": 20,
+    "settlements_with_svg": 20,
+    "settlements_with_geometry": 20,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1747368",
+    "name": "Grude",
+    "total_settlements": 13,
+    "settlements_with_svg": 13,
+    "settlements_with_geometry": 13,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1747899",
+    "name": "Istočna Ilidža",
+    "total_settlements": 5,
+    "settlements_with_svg": 5,
+    "settlements_with_geometry": 5,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1753458",
+    "name": "Teočak",
+    "total_settlements": 10,
+    "settlements_with_svg": 10,
+    "settlements_with_geometry": 10,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1761751",
+    "name": "Stari Grad Sarajevo",
+    "total_settlements": 8,
+    "settlements_with_svg": 8,
+    "settlements_with_geometry": 8,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1762269",
+    "name": "Istočni Drvar",
+    "total_settlements": 3,
+    "settlements_with_svg": 3,
+    "settlements_with_geometry": 3,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1762558",
+    "name": "Čitluk",
+    "total_settlements": 21,
+    "settlements_with_svg": 21,
+    "settlements_with_geometry": 21,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1764163",
+    "name": "Han Pijesak",
+    "total_settlements": 26,
+    "settlements_with_svg": 26,
+    "settlements_with_geometry": 26,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1766651",
+    "name": "Hadžići",
+    "total_settlements": 62,
+    "settlements_with_svg": 62,
+    "settlements_with_geometry": 62,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1768475",
+    "name": "Bijeljina",
+    "total_settlements": 67,
+    "settlements_with_svg": 67,
+    "settlements_with_geometry": 67,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1771936",
+    "name": "Vareš",
+    "total_settlements": 85,
+    "settlements_with_svg": 85,
+    "settlements_with_geometry": 85,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1788051",
+    "name": "Sokolac",
+    "total_settlements": 96,
+    "settlements_with_svg": 96,
+    "settlements_with_geometry": 96,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1794197",
+    "name": "Kneževo",
+    "total_settlements": 20,
+    "settlements_with_svg": 20,
+    "settlements_with_geometry": 20,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1795673",
+    "name": "Vukosavlje",
+    "total_settlements": 12,
+    "settlements_with_svg": 12,
+    "settlements_with_geometry": 12,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1798098",
+    "name": "Istočni Mostar",
+    "total_settlements": 3,
+    "settlements_with_svg": 3,
+    "settlements_with_geometry": 3,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1799334",
+    "name": "Travnik",
+    "total_settlements": 90,
+    "settlements_with_svg": 90,
+    "settlements_with_geometry": 90,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1814920",
+    "name": "Bihać",
+    "total_settlements": 59,
+    "settlements_with_svg": 59,
+    "settlements_with_geometry": 59,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1840366",
+    "name": "Banja Luka",
+    "total_settlements": 54,
+    "settlements_with_svg": 54,
+    "settlements_with_geometry": 54,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1854656",
+    "name": "Lukavac",
+    "total_settlements": 44,
+    "settlements_with_svg": 44,
+    "settlements_with_geometry": 44,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1875064",
+    "name": "Drvar",
+    "total_settlements": 25,
+    "settlements_with_svg": 25,
+    "settlements_with_geometry": 25,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1880950",
+    "name": "Foča (RS)",
+    "total_settlements": 101,
+    "settlements_with_svg": 101,
+    "settlements_with_geometry": 101,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1892275",
+    "name": "Bileća",
+    "total_settlements": 61,
+    "settlements_with_svg": 61,
+    "settlements_with_geometry": 61,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  },
+  {
+    "mid": "1895342",
+    "name": "Pelagićevo",
+    "total_settlements": 11,
+    "settlements_with_svg": 11,
+    "settlements_with_geometry": 11,
+    "coverage_svg": 1,
+    "coverage_geometry": 1,
+    "reason_if_skipped": null
+  }
+]

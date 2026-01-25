@@ -1,0 +1,1728 @@
+settlement_id,name,municipality,status,validity_reason,subpaths,area
+208779,,Zvornik,has_invalid_subpaths,too_few_points,2,60.30942289789911
+200018,,Banja Luka,needs_fix,fixed_buffer0,1,425.8468771739152
+200026,,Banja Luka,needs_fix,fixed_buffer0,1,945.9294644596588
+200077,,Banja Luka,needs_fix,fixed_buffer0,1,331.13086136011873
+200115,,Banja Luka,needs_fix,fixed_buffer0,1,49.642323737022714
+200166,,Banja Luka,needs_fix,fixed_buffer0,1,254.52436803694837
+200247,,Banja Luka,needs_fix,fixed_buffer0,1,123.568117853398
+200301,,Banja Luka,needs_fix,fixed_buffer0,1,200.1672308099184
+200476,,Banja Luka,needs_fix,fixed_buffer0,1,437.0441409169501
+200492,,Banja Luka,needs_fix,fixed_buffer0,1,292.2029822303505
+200581,,Banja Luka,needs_fix,fixed_buffer0,1,29.91931530713093
+100048,,Banovici,needs_fix,fixed_buffer0,1,56.008063026946694
+100102,,Banovici,needs_fix,fixed_buffer0,1,30.671194758702214
+100129,,Banovici,needs_fix,fixed_buffer0,1,40.3358726839501
+100145,,Banovici,needs_fix,fixed_buffer0,1,61.24450457566223
+100153,,Banovici,needs_fix,fixed_buffer0,1,58.96868583076175
+100161,,Banovici,needs_fix,fixed_buffer0,1,512.7744005144465
+100170,,Banovici,needs_fix,fixed_buffer0,1,106.67209389495711
+100200,,Banovici,needs_fix,fixed_buffer0,1,84.68302265715478
+200620,,Berkovici,needs_fix,fixed_buffer0,1,202.5882544802846
+200697,,Berkovici,needs_fix,fixed_buffer0,1,14.173524748784764
+200727,,Berkovici,needs_fix,fixed_buffer0,1,120.5546213360399
+200751,,Berkovici,needs_fix,fixed_buffer0,1,142.27370710165513
+200760,,Berkovici,needs_fix,fixed_buffer0,1,180.84661244149282
+100811,,Bihac,needs_fix,fixed_buffer0,1,47.623885810486094
+100838,,Bihac,needs_fix,fixed_buffer0,1,778.6516199552044
+100854,,Bihac,needs_fix,fixed_buffer0,1,188.13929396582265
+100862,,Bihac,needs_fix,fixed_buffer0,1,148.55873318632143
+100897,,Bihac,needs_fix,fixed_buffer0,1,60.694912345694625
+100951,,Bihac,needs_fix,fixed_buffer0,1,323.019028929102
+101001,,Bihac,needs_fix,fixed_buffer0,1,62.82343159483077
+101010,,Bihac,needs_fix,fixed_buffer0,1,40.0197432829798
+101036,,Bihac,needs_fix,fixed_buffer0,1,91.19100402323922
+101117,,Bihac,needs_fix,fixed_buffer0,1,30.78382668662063
+101133,,Bihac,needs_fix,fixed_buffer0,1,47.39956601073432
+101150,,Bihac,needs_fix,fixed_buffer0,1,22.77705475281323
+101214,,Bihac,needs_fix,fixed_buffer0,1,81.5002358593393
+101273,,Bihac,needs_fix,fixed_buffer0,1,64.29494903962434
+101303,,Bihac,needs_fix,fixed_buffer0,1,30.866635561066467
+101311,,Bihac,needs_fix,fixed_buffer0,1,229.97320400716677
+151483,,Bihac,needs_fix,fixed_buffer0,1,124.65385844388052
+151564,,Bihac,needs_fix,fixed_buffer0,1,268.49374968837265
+151572,,Bihac,needs_fix,fixed_buffer0,1,250.34612559696362
+200964,,Bijeljina,needs_fix,fixed_buffer0,1,351.70589739729814
+200972,,Bijeljina,needs_fix,fixed_buffer0,1,225.1045014151493
+201049,,Bijeljina,needs_fix,fixed_buffer0,1,148.4277929833594
+201073,,Bijeljina,needs_fix,fixed_buffer0,1,54.631512486552595
+201081,,Bijeljina,needs_fix,fixed_buffer0,1,108.51648220465293
+201138,,Bijeljina,needs_fix,fixed_buffer0,1,55.68781133336467
+201162,,Bijeljina,needs_fix,fixed_buffer0,1,45.497541177856235
+201243,,Bijeljina,needs_fix,fixed_buffer0,1,21.15246268467547
+201251,,Bijeljina,needs_fix,fixed_buffer0,1,131.31486420015796
+201286,,Bijeljina,needs_fix,fixed_buffer0,1,59.04457884499746
+201316,,Bijeljina,needs_fix,fixed_buffer0,1,152.42089005050096
+201359,,Bijeljina,needs_fix,fixed_buffer0,1,26.182550191251167
+201367,,Bijeljina,needs_fix,fixed_buffer0,1,131.0515513800404
+201383,,Bijeljina,needs_fix,fixed_buffer0,1,53.812510960198296
+201405,,Bijeljina,needs_fix,fixed_buffer0,1,95.08785612779786
+201421,,Bijeljina,needs_fix,fixed_buffer0,1,249.8832665401035
+201430,,Bijeljina,needs_fix,fixed_buffer0,1,29.58544006187455
+230251,,Bijeljina,needs_fix,fixed_buffer0,1,57.99190418515106
+230260,,Bijeljina,needs_fix,fixed_buffer0,1,98.7305810221938
+230278,,Bijeljina,needs_fix,fixed_buffer0,1,106.17793947390041
+230286,,Bijeljina,needs_fix,fixed_buffer0,1,137.4395306470508
+230316,,Bijeljina,needs_fix,fixed_buffer0,1,122.8874802010083
+230324,,Bijeljina,needs_fix,fixed_buffer0,1,50.93212049637639
+230332,,Bijeljina,needs_fix,fixed_buffer0,1,102.05907809533755
+201634,,Bileca,needs_fix,fixed_buffer0,1,112.899014904245
+201634,,Bileca,needs_fix,fixed_buffer0,1,108.85821035622885
+201669,,Bileca,needs_fix,fixed_buffer0,1,97.15000361735085
+201707,,Bileca,needs_fix,fixed_buffer0,1,92.85178691265601
+201731,,Bileca,needs_fix,fixed_buffer0,1,21.987797054827514
+201766,,Bileca,needs_fix,fixed_buffer0,1,34.55294155110267
+201804,,Bileca,needs_fix,fixed_buffer0,1,30.78559501414792
+201812,,Bileca,needs_fix,fixed_buffer0,1,49.29944124999265
+201898,,Bileca,needs_fix,fixed_buffer0,1,87.61649598448781
+201910,,Bileca,needs_fix,fixed_buffer0,1,33.527398148848604
+201944,,Bileca,needs_fix,fixed_buffer0,1,85.36804529740336
+201987,,Bileca,needs_fix,fixed_buffer0,1,127.7422566439583
+202002,,Bileca,needs_fix,fixed_buffer0,1,31.54439920020065
+202037,,Bileca,needs_fix,fixed_buffer0,1,44.27885688894812
+202053,,Bileca,needs_fix,fixed_buffer0,1,34.02580798548967
+202118,,Bileca,needs_fix,fixed_buffer0,1,246.6361351171422
+202134,,Bileca,needs_fix,fixed_buffer0,1,80.6195739740743
+202169,,Bileca,needs_fix,fixed_buffer0,1,202.6479844430529
+210838,,Bosanska Dubica,needs_fix,fixed_buffer0,1,41.56232913537702
+210978,,Bosanska Dubica,needs_fix,fixed_buffer0,1,22.950652994750126
+210986,,Bosanska Dubica,needs_fix,fixed_buffer0,1,55.11902970329499
+210994,,Bosanska Dubica,needs_fix,fixed_buffer0,1,81.02172727745953
+211109,,Bosanska Dubica,needs_fix,fixed_buffer0,1,265.6424083753346
+211141,,Bosanska Dubica,needs_fix,fixed_buffer0,1,39.32958445683112
+211168,,Bosanska Dubica,needs_fix,fixed_buffer0,1,43.22448722290039
+206113,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,32.060802616300556
+206172,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,123.88159774601174
+206229,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,75.73306490745121
+206326,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,225.10986708908257
+206377,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,103.80253232265929
+206482,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,29.86516911435021
+206563,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,52.67183873704827
+206636,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,176.35113254129928
+206644,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,23.906262584653128
+206849,,Bosanska Gradiska,needs_fix,fixed_buffer0,1,184.2862308825499
+104124,,Bosanska Krupa,needs_fix,fixed_buffer0,1,90.0415657546744
+104132,,Bosanska Krupa,needs_fix,fixed_buffer0,1,89.81756226029894
+104159,,Bosanska Krupa,needs_fix,fixed_buffer0,1,231.7208830570355
+104213,,Bosanska Krupa,needs_fix,fixed_buffer0,1,54.18622972107543
+104221,,Bosanska Krupa,needs_fix,fixed_buffer0,1,50.54339989435827
+104248,,Bosanska Krupa,needs_fix,fixed_buffer0,1,513.4256570558549
+104361,,Bosanska Krupa,needs_fix,fixed_buffer0,1,137.00677858632707
+104388,,Bosanska Krupa,needs_fix,fixed_buffer0,1,29.294980685522074
+104493,,Bosanska Krupa,needs_fix,fixed_buffer0,1,119.82299623935987
+104540,,Bosanska Krupa,needs_fix,fixed_buffer0,1,107.63790253221462
+164534,,Bosanska Krupa,needs_fix,fixed_buffer0,1,40.62667510984794
+164542,,Bosanska Krupa,needs_fix,fixed_buffer0,1,54.95879742846009
+164569,,Bosanska Krupa,needs_fix,fixed_buffer0,1,13.510411129294644
+164577,,Bosanska Krupa,needs_fix,fixed_buffer0,1,16.049781888001107
+169552,,Bosanska Krupa,needs_fix,fixed_buffer0,1,38.520527469909254
+169579,,Bosanska Krupa,needs_fix,fixed_buffer0,1,196.94839903057743
+169587,,Bosanska Krupa,needs_fix,fixed_buffer0,1,111.87227956921964
+202720,,Bosanski Brod,needs_fix,fixed_buffer0,1,39.254060813671124
+202762,,Bosanski Brod,needs_fix,fixed_buffer0,1,263.49491351371006
+202797,,Bosanski Brod,needs_fix,fixed_buffer0,1,139.7761456830413
+202860,,Bosanski Brod,needs_fix,fixed_buffer0,1,20.25664279481524
+202894,,Bosanski Brod,needs_fix,fixed_buffer0,1,38.9100723956032
+202932,,Bosanski Brod,needs_fix,fixed_buffer0,1,88.97499907349476
+215180,,Bosanski Novi,needs_fix,fixed_buffer0,1,48.75326274700391
+215317,,Bosanski Novi,needs_fix,fixed_buffer0,1,34.138262321701156
+215368,,Bosanski Novi,needs_fix,fixed_buffer0,1,175.62761732879184
+215384,,Bosanski Novi,needs_fix,fixed_buffer0,1,107.09346148137355
+215457,,Bosanski Novi,needs_fix,fixed_buffer0,1,138.73260389456482
+215473,,Bosanski Novi,needs_fix,fixed_buffer0,1,71.57971406370936
+215554,,Bosanski Novi,needs_fix,fixed_buffer0,1,57.364252023280045
+105589,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,74.42151255736505
+105635,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,157.7917408309689
+105759,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,256.87563158001683
+105791,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,266.58771636201186
+105805,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,134.71026659018895
+155830,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,476.5663788986502
+169609,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,173.29687690051605
+169617,,Bosanski Petrovac,needs_fix,fixed_buffer0,2,44.267474125199854
+169625,,Bosanski Petrovac,needs_fix,fixed_buffer0,1,122.62999356134286
+229067,,Bosanski Samac,needs_fix,fixed_buffer0,1,49.969866417500285
+229075,,Bosanski Samac,needs_fix,fixed_buffer0,1,109.3550444624015
+229091,,Bosanski Samac,needs_fix,fixed_buffer0,1,78.60059195430117
+229105,,Bosanski Samac,needs_fix,fixed_buffer0,1,74.81842888625087
+229113,,Bosanski Samac,needs_fix,fixed_buffer0,1,78.34980216890078
+229130,,Bosanski Samac,needs_fix,fixed_buffer0,1,204.37596445057233
+229164,,Bosanski Samac,needs_fix,fixed_buffer0,1,68.1108532930229
+229172,,Bosanski Samac,needs_fix,fixed_buffer0,1,90.69872037389973
+229202,,Bosanski Samac,needs_fix,fixed_buffer0,1,292.72858827089357
+229245,,Bosanski Samac,needs_fix,fixed_buffer0,1,100.08087550740582
+229253,,Bosanski Samac,needs_fix,fixed_buffer0,1,23.730341540999813
+229270,,Bosanski Samac,needs_fix,fixed_buffer0,1,24.25638859438805
+106186,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,221.60474740813356
+106348,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,260.7672534734535
+106445,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,167.6961252861812
+106470,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,154.07658690016814
+106496,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,184.34592831442856
+106500,,Bosansko Grahovo,needs_fix,fixed_buffer0,1,74.06092242514869
+202223,,Bratunac,needs_fix,fixed_buffer0,1,45.10528604409406
+202258,,Bratunac,needs_fix,fixed_buffer0,1,58.60293511397574
+202347,,Bratunac,needs_fix,fixed_buffer0,1,60.584443861864955
+202363,,Bratunac,needs_fix,fixed_buffer0,1,90.7213670407508
+202371,,Bratunac,needs_fix,fixed_buffer0,1,26.694785858976232
+202398,,Bratunac,needs_fix,fixed_buffer0,1,39.37119038490418
+202428,,Bratunac,needs_fix,fixed_buffer0,1,28.49165439548236
+202436,,Bratunac,needs_fix,fixed_buffer0,1,101.21669820689306
+202444,,Bratunac,needs_fix,fixed_buffer0,1,20.097197770769952
+202452,,Bratunac,needs_fix,fixed_buffer0,1,126.94830561898752
+202479,,Bratunac,needs_fix,fixed_buffer0,1,49.827875140145125
+202517,,Bratunac,needs_fix,fixed_buffer0,1,33.42823736634729
+202525,,Bratunac,needs_fix,fixed_buffer0,1,115.24833973615459
+202550,,Bratunac,needs_fix,fixed_buffer0,1,16.38913438000128
+202649,,Bratunac,needs_fix,fixed_buffer0,1,42.05247944750546
+202681,,Bratunac,needs_fix,fixed_buffer0,1,37.23895630935136
+300101,,Brcko,needs_fix,fixed_buffer0,1,183.64642918004978
+300233,,Brcko,needs_fix,fixed_buffer0,1,65.18690732314477
+300241,,Brcko,needs_fix,fixed_buffer0,1,64.00344032784648
+300306,,Brcko,needs_fix,fixed_buffer0,1,130.80108120090318
+300322,,Brcko,needs_fix,fixed_buffer0,1,86.8401521111011
+300373,,Brcko,needs_fix,fixed_buffer0,1,90.80704401040119
+300381,,Brcko,needs_fix,fixed_buffer0,1,58.3375771781596
+300420,,Brcko,needs_fix,fixed_buffer0,1,106.72153512219116
+300438,,Brcko,needs_fix,fixed_buffer0,1,51.40186867390231
+300527,,Brcko,needs_fix,fixed_buffer0,1,42.95179305843347
+300543,,Brcko,needs_fix,fixed_buffer0,1,114.68093297969344
+300551,,Brcko,needs_fix,fixed_buffer0,1,77.86751387269578
+300586,,Brcko,needs_fix,fixed_buffer0,1,174.98304843794534
+300624,,Brcko,needs_fix,fixed_buffer0,1,71.86856717709831
+108049,,Bugojno,needs_fix,fixed_buffer0,1,5.941565115978744
+108057,,Bugojno,needs_fix,fixed_buffer0,1,25.534819729369026
+108081,,Bugojno,needs_fix,fixed_buffer0,1,12.263373980627168
+108120,,Bugojno,needs_fix,fixed_buffer0,1,105.6861892707609
+108189,,Bugojno,needs_fix,fixed_buffer0,1,14.55298033648223
+108235,,Bugojno,needs_fix,fixed_buffer0,1,27.677743533473702
+108278,,Bugojno,needs_fix,fixed_buffer0,1,47.67753065415548
+108316,,Bugojno,needs_fix,fixed_buffer0,1,88.53870893707915
+108359,,Bugojno,needs_fix,fixed_buffer0,1,113.5215191665674
+108464,,Bugojno,needs_fix,fixed_buffer0,1,29.720095910522833
+108499,,Bugojno,needs_fix,fixed_buffer0,1,62.642132821472906
+108553,,Bugojno,needs_fix,fixed_buffer0,1,3.532951305700849
+108596,,Bugojno,needs_fix,fixed_buffer0,1,14.416897652162524
+108618,,Bugojno,needs_fix,fixed_buffer0,1,21.624534852713424
+108626,,Bugojno,needs_fix,fixed_buffer0,1,221.50981056273716
+108677,,Bugojno,needs_fix,fixed_buffer0,1,150.50581454743067
+108685,,Bugojno,needs_fix,fixed_buffer0,1,29.66222052437426
+108723,,Bugojno,needs_fix,fixed_buffer0,1,19.345371968219304
+108758,,Bugojno,needs_fix,fixed_buffer0,1,10.470843595536524
+108804,,Bugojno,needs_fix,fixed_buffer0,1,150.94801974922837
+108839,,Bugojno,needs_fix,fixed_buffer0,1,10.034262615096049
+108847,,Bugojno,needs_fix,fixed_buffer0,1,214.83896213991295
+108855,,Bugojno,needs_fix,fixed_buffer0,1,37.831975775429356
+108936,,Busovaca,needs_fix,fixed_buffer0,1,30.563259493550184
+108979,,Busovaca,needs_fix,fixed_buffer0,1,15.771818526130875
+108995,,Busovaca,needs_fix,fixed_buffer0,1,27.66012816044398
+109061,,Busovaca,needs_fix,fixed_buffer0,1,3.6169684985855044
+109100,,Busovaca,needs_fix,fixed_buffer0,1,11.402027254883775
+109142,,Busovaca,needs_fix,fixed_buffer0,1,7.455199518796794
+109274,,Busovaca,needs_fix,fixed_buffer0,1,14.04934269423935
+109282,,Busovaca,needs_fix,fixed_buffer0,1,26.587924659720944
+109339,,Busovaca,needs_fix,fixed_buffer0,1,31.076543930496733
+109347,,Busovaca,needs_fix,fixed_buffer0,1,10.766434004996462
+104108,,Buzim,needs_fix,fixed_buffer0,1,76.55502878555878
+104175,,Buzim,needs_fix,fixed_buffer0,1,350.3289657525237
+104345,,Buzim,needs_fix,fixed_buffer0,1,118.07616379942097
+104353,,Buzim,needs_fix,fixed_buffer0,1,181.5831162555479
+104523,,Buzim,needs_fix,fixed_buffer0,1,222.41580867731267
+228354,,Cajnice,needs_fix,fixed_buffer0,1,103.20717115913806
+228397,,Cajnice,needs_fix,fixed_buffer0,1,31.152627625551034
+228435,,Cajnice,needs_fix,fixed_buffer0,1,65.23645008259605
+228494,,Cajnice,needs_fix,fixed_buffer0,1,111.21902979586748
+228583,,Cajnice,needs_fix,fixed_buffer0,1,34.707820679814695
+228613,,Cajnice,needs_fix,fixed_buffer0,1,48.891447097753975
+228630,,Cajnice,needs_fix,fixed_buffer0,1,174.73404906104898
+228702,,Cajnice,needs_fix,fixed_buffer0,1,124.75371019480623
+110426,,Capljina,needs_fix,fixed_buffer0,1,93.94862802048405
+110434,,Capljina,needs_fix,fixed_buffer0,1,20.816666750846597
+110493,,Capljina,needs_fix,fixed_buffer0,1,40.94463904974316
+110566,,Capljina,needs_fix,fixed_buffer0,1,42.53124918838844
+110639,,Capljina,needs_fix,fixed_buffer0,1,64.26372652234589
+110647,,Capljina,needs_fix,fixed_buffer0,1,29.523882245900108
+110655,,Capljina,needs_fix,fixed_buffer0,1,118.09043036861345
+110671,,Capljina,needs_fix,fixed_buffer0,1,79.36677182170955
+110701,,Capljina,needs_fix,fixed_buffer0,1,24.64317385469459
+110728,,Capljina,needs_fix,fixed_buffer0,1,74.15603040072475
+109444,,Cazin,needs_fix,fixed_buffer0,1,51.14109688748192
+109452,,Cazin,needs_fix,fixed_buffer0,1,198.7975372967369
+109479,,Cazin,needs_fix,fixed_buffer0,1,71.23002573917081
+109487,,Cazin,needs_fix,fixed_buffer0,1,83.14049203214198
+109495,,Cazin,needs_fix,fixed_buffer0,1,26.760746846170203
+109517,,Cazin,needs_fix,fixed_buffer0,1,78.2017063174849
+109525,,Cazin,needs_fix,fixed_buffer0,1,16.474603720445188
+109592,,Cazin,needs_fix,fixed_buffer0,1,32.45406102962871
+109649,,Cazin,needs_fix,fixed_buffer0,1,39.51431002123469
+109657,,Cazin,needs_fix,fixed_buffer0,1,69.47014955374793
+109665,,Cazin,needs_fix,fixed_buffer0,1,82.66490293499132
+109746,,Cazin,needs_fix,fixed_buffer0,1,62.70329884126008
+109754,,Cazin,needs_fix,fixed_buffer0,1,84.14937750444265
+109762,,Cazin,needs_fix,fixed_buffer0,1,3.05088790858554
+109797,,Cazin,needs_fix,fixed_buffer0,1,49.66586967410591
+109819,,Cazin,needs_fix,fixed_buffer0,1,67.00407618209037
+109860,,Cazin,needs_fix,fixed_buffer0,1,33.61342535165089
+109878,,Cazin,needs_fix,fixed_buffer0,1,94.39971675075732
+109908,,Cazin,needs_fix,fixed_buffer0,1,138.0006424831724
+109959,,Cazin,needs_fix,fixed_buffer0,1,48.88366852561426
+109975,,Cazin,needs_fix,fixed_buffer0,1,68.48610134565946
+130907,,Celic,needs_fix,fixed_buffer0,1,56.88758439870624
+130923,,Celic,needs_fix,fixed_buffer0,1,69.740910876373
+130940,,Celic,needs_fix,fixed_buffer0,1,17.617001929616272
+130966,,Celic,needs_fix,fixed_buffer0,1,188.48573617918683
+131105,,Celic,needs_fix,fixed_buffer0,1,44.54491990305589
+131148,,Celic,needs_fix,fixed_buffer0,1,34.56045004413049
+131318,,Celic,needs_fix,fixed_buffer0,1,114.10861278228737
+165611,,Celic,needs_fix,fixed_buffer0,1,2.932208897729039
+165646,,Celic,needs_fix,fixed_buffer0,1,5.396752497818065
+165662,,Celic,needs_fix,fixed_buffer0,1,16.983491032969766
+171107,,Celic,needs_fix,fixed_buffer0,1,124.09182978957689
+171123,,Celic,needs_fix,fixed_buffer0,1,31.099625828159585
+228737,,Celinac,needs_fix,fixed_buffer0,1,23.02873704858616
+228753,,Celinac,needs_fix,fixed_buffer0,1,95.85044775435018
+228761,,Celinac,needs_fix,fixed_buffer0,1,56.30484002579829
+228770,,Celinac,needs_fix,fixed_buffer0,1,141.03598591724818
+228842,,Celinac,needs_fix,fixed_buffer0,1,220.90562592564888
+228877,,Celinac,needs_fix,fixed_buffer0,1,51.1594494927573
+228923,,Celinac,needs_fix,fixed_buffer0,1,41.53191185265
+228940,,Celinac,needs_fix,fixed_buffer0,1,168.51074389804631
+111082,,Citluk,needs_fix,fixed_buffer0,1,69.35997216771902
+111104,,Citluk,needs_fix,fixed_buffer0,1,44.68910830497001
+111139,,Citluk,needs_fix,fixed_buffer0,1,85.9074904586234
+111147,,Citluk,needs_fix,fixed_buffer0,1,48.78780458171164
+111171,,Citluk,needs_fix,fixed_buffer0,1,92.7793733253599
+111309,,Citluk,needs_fix,fixed_buffer0,1,165.65720588868913
+111317,,Citluk,needs_fix,fixed_buffer0,1,59.61111545637126
+206865,,Derventa,needs_fix,fixed_buffer0,1,44.19323189435007
+206881,,Derventa,needs_fix,fixed_buffer0,1,113.81496136313336
+206890,,Derventa,needs_fix,fixed_buffer0,1,109.57951869603346
+206903,,Derventa,needs_fix,fixed_buffer0,1,79.72119561404844
+206946,,Derventa,needs_fix,fixed_buffer0,1,61.82508856346925
+206954,,Derventa,needs_fix,fixed_buffer0,1,102.01600362746498
+206962,,Derventa,needs_fix,fixed_buffer0,1,115.57614704346533
+206989,,Derventa,needs_fix,fixed_buffer0,1,81.44119950154048
+206997,,Derventa,needs_fix,fixed_buffer0,1,133.83972967949978
+207080,,Derventa,needs_fix,fixed_buffer0,1,72.52971640508305
+207098,,Derventa,needs_fix,fixed_buffer0,1,97.13669352692348
+207101,,Derventa,needs_fix,fixed_buffer0,1,45.30028671625022
+207144,,Derventa,needs_fix,fixed_buffer0,1,26.25366874724933
+207187,,Derventa,needs_fix,fixed_buffer0,1,206.1630270643965
+207217,,Derventa,needs_fix,fixed_buffer0,1,123.11519844068543
+207233,,Derventa,needs_fix,fixed_buffer0,1,35.94911872140046
+207241,,Derventa,needs_fix,fixed_buffer0,1,63.544799987538795
+207284,,Derventa,needs_fix,fixed_buffer0,1,46.31450783614941
+207292,,Derventa,needs_fix,fixed_buffer0,1,95.55562167190627
+207373,,Derventa,needs_fix,fixed_buffer0,1,25.857804612270378
+207390,,Derventa,needs_fix,fixed_buffer0,1,87.38412682485773
+207420,,Derventa,needs_fix,fixed_buffer0,1,143.67258132980047
+207446,,Derventa,needs_fix,fixed_buffer0,1,153.43128775378304
+207519,,Doboj,needs_fix,fixed_buffer0,1,151.75872568140835
+207551,,Doboj,needs_fix,fixed_buffer0,1,65.75942003920088
+207560,,Doboj,needs_fix,fixed_buffer0,1,195.94801112069237
+207594,,Doboj,needs_fix,fixed_buffer0,1,30.214962636100196
+207608,,Doboj,needs_fix,fixed_buffer0,1,63.74494860695102
+207624,,Doboj,needs_fix,fixed_buffer0,1,184.37309428965563
+207632,,Doboj,needs_fix,fixed_buffer0,1,22.415308719784033
+207667,,Doboj,needs_fix,fixed_buffer0,1,21.13142089815719
+207675,,Doboj,needs_fix,fixed_buffer0,1,107.770296049962
+207683,,Doboj,needs_fix,fixed_buffer0,1,91.23061910156812
+207691,,Doboj,needs_fix,fixed_buffer0,1,240.80459677795122
+207802,,Doboj,needs_fix,fixed_buffer0,1,79.96181627954485
+207829,,Doboj,needs_fix,fixed_buffer0,1,113.14941201645189
+207837,,Doboj,needs_fix,fixed_buffer0,1,126.37282243839303
+207845,,Doboj,needs_fix,fixed_buffer0,1,186.8320523780986
+207861,,Doboj,needs_fix,fixed_buffer0,1,45.90161853489858
+207870,,Doboj,needs_fix,fixed_buffer0,1,38.85596784944487
+207888,,Doboj,needs_fix,fixed_buffer0,1,159.88028751539662
+207896,,Doboj,needs_fix,fixed_buffer0,1,51.66238739375514
+207934,,Doboj,needs_fix,fixed_buffer0,1,77.1922933851721
+208019,,Doboj,needs_fix,fixed_buffer0,1,134.4215292369599
+208035,,Doboj,needs_fix,fixed_buffer0,1,51.00986479714808
+208043,,Doboj,needs_fix,fixed_buffer0,1,198.40626838822126
+208051,,Doboj,needs_fix,fixed_buffer0,1,144.9099212151959
+208086,,Doboj,needs_fix,fixed_buffer0,1,120.30785824330029
+208094,,Doboj,needs_fix,fixed_buffer0,1,75.8877592416472
+208108,,Doboj,needs_fix,fixed_buffer0,1,136.75941376654978
+208116,,Doboj,needs_fix,fixed_buffer0,1,41.88436110360141
+208132,,Doboj,needs_fix,fixed_buffer0,1,98.7141606621466
+208159,,Doboj,needs_fix,fixed_buffer0,1,209.14163611341655
+208175,,Doboj,needs_fix,fixed_buffer0,1,105.40832970335128
+208191,,Doboj,needs_fix,fixed_buffer0,1,111.92050372978551
+208337,,Doboj,needs_fix,fixed_buffer0,1,85.98963971719733
+111988,,Doboj Istok,needs_fix,fixed_buffer0,1,83.10564731959262
+111996,,Doboj Istok,needs_fix,fixed_buffer0,1,63.03002448422835
+171140,,Doboj Istok,needs_fix,fixed_buffer0,1,28.553945840085678
+112330,,Doboj Jug,needs_fix,fixed_buffer0,1,36.909795973801295
+146099,,Dobretici,needs_fix,fixed_buffer0,1,13.707773011104456
+146145,,Dobretici,needs_fix,fixed_buffer0,1,16.836071487104626
+146170,,Dobretici,needs_fix,fixed_buffer0,1,25.558742744172413
+146242,,Dobretici,needs_fix,fixed_buffer0,1,16.43303101124607
+146293,,Dobretici,needs_fix,fixed_buffer0,1,21.38164082824277
+146307,,Dobretici,needs_fix,fixed_buffer0,1,23.399613932994328
+146358,,Dobretici,needs_fix,fixed_buffer0,1,60.43386951113469
+146412,,Dobretici,needs_fix,fixed_buffer0,1,38.88087218035013
+165719,,Domaljevac-Samac,needs_fix,fixed_buffer0,1,33.963779861863586
+171158,,Domaljevac-Samac,needs_fix,fixed_buffer0,1,57.606599914846434
+112763,,Donji Vakuf,needs_fix,fixed_buffer0,1,53.50233767880818
+112780,,Donji Vakuf,needs_fix,fixed_buffer0,1,48.05082426357976
+112801,,Donji Vakuf,needs_fix,fixed_buffer0,1,89.58018586298022
+112810,,Donji Vakuf,needs_fix,fixed_buffer0,1,11.720383486362993
+112828,,Donji Vakuf,needs_fix,fixed_buffer0,1,23.32441548169632
+112879,,Donji Vakuf,needs_fix,fixed_buffer0,1,21.080187286900593
+112895,,Donji Vakuf,needs_fix,fixed_buffer0,1,9.437925564460638
+112984,,Donji Vakuf,needs_fix,fixed_buffer0,1,6.9260133601310345
+113000,,Donji Vakuf,needs_fix,fixed_buffer0,1,41.42907657872452
+113085,,Donji Vakuf,needs_fix,fixed_buffer0,1,146.35848933732993
+113115,,Donji Vakuf,needs_fix,fixed_buffer0,1,37.42355128953106
+113174,,Donji Vakuf,needs_fix,fixed_buffer0,1,3.1246057465439514
+113239,,Donji Vakuf,needs_fix,fixed_buffer0,1,9.25793345642686
+113280,,Donji Vakuf,needs_fix,fixed_buffer0,1,59.9554060594959
+113298,,Donji Vakuf,needs_fix,fixed_buffer0,1,40.12257407589048
+113328,,Donji Vakuf,needs_fix,fixed_buffer0,1,34.204559699483816
+113352,,Donji Vakuf,needs_fix,fixed_buffer0,1,75.98562739584784
+113379,,Donji Vakuf,needs_fix,fixed_buffer0,1,49.40584683558482
+113395,,Donji Vakuf,needs_fix,fixed_buffer0,1,22.837045456262974
+113417,,Donji Vakuf,needs_fix,fixed_buffer0,1,45.16311364074129
+113450,,Donji Vakuf,needs_fix,fixed_buffer0,1,34.839777549313226
+208400,,Donji Zabar,needs_fix,fixed_buffer0,1,99.3805404856524
+208418,,Donji Zabar,needs_fix,fixed_buffer0,1,161.93160294492665
+208469,,Donji Zabar,needs_fix,fixed_buffer0,1,54.81514847855633
+151467,,Drvar,needs_fix,fixed_buffer0,1,190.17257958045778
+151700,,Drvar,needs_fix,fixed_buffer0,1,437.886699829149
+151742,,Drvar,needs_fix,fixed_buffer0,1,67.27035636012364
+165557,,Drvar,needs_fix,fixed_buffer0,1,58.13857499944886
+226939,,Foca,needs_fix,fixed_buffer0,1,166.84000168424268
+226971,,Foca,needs_fix,fixed_buffer0,1,160.944243907944
+227072,,Foca,needs_fix,fixed_buffer0,1,146.59281375114858
+227170,,Foca,needs_fix,fixed_buffer0,1,95.37046366804151
+227277,,Foca,needs_fix,fixed_buffer0,1,266.4748640587281
+227340,,Foca,needs_fix,fixed_buffer0,1,120.36182986976323
+227366,,Foca,needs_fix,fixed_buffer0,1,109.37562786699685
+227374,,Foca,needs_fix,fixed_buffer0,1,192.88592761464938
+227412,,Foca,needs_fix,fixed_buffer0,1,42.22061468365383
+227455,,Foca,needs_fix,fixed_buffer0,1,26.920355324064193
+227463,,Foca,needs_fix,fixed_buffer0,1,87.88339578304608
+227471,,Foca,needs_fix,fixed_buffer0,1,31.69307193678486
+227617,,Foca,needs_fix,fixed_buffer0,1,105.62889485394889
+227625,,Foca,needs_fix,fixed_buffer0,1,75.65585658569644
+227692,,Foca,needs_fix,fixed_buffer0,1,57.23529546671317
+227714,,Foca,needs_fix,fixed_buffer0,1,162.5964132147535
+227722,,Foca,needs_fix,fixed_buffer0,1,25.497680600048614
+227749,,Foca,needs_fix,fixed_buffer0,1,69.38936774865677
+227757,,Foca,needs_fix,fixed_buffer0,3,79.39942264655532
+227765,,Foca,needs_fix,fixed_buffer0,1,49.71107713614582
+227773,,Foca,needs_fix,fixed_buffer0,1,59.57842251564872
+227897,,Foca,needs_fix,fixed_buffer0,1,67.55033521279589
+227919,,Foca,needs_fix,fixed_buffer0,1,63.244696402755885
+227994,,Foca,needs_fix,fixed_buffer0,1,22.48993434239937
+228001,,Foca,needs_fix,fixed_buffer0,1,664.0429439734047
+114197,,Foca Ustikolina,needs_fix,fixed_buffer0,1,44.61448244566537
+115053,,Foca Ustikolina,needs_fix,fixed_buffer0,1,82.38758019806221
+115444,,Foca Ustikolina,needs_fix,fixed_buffer0,1,74.49193207804791
+164607,,Foca Ustikolina,needs_fix,fixed_buffer0,1,6.3111275188904665
+166308,,Foca Ustikolina,needs_fix,fixed_buffer0,1,7.6834747403355514
+166324,,Foca Ustikolina,needs_fix,fixed_buffer0,1,3.6958381092519024
+115509,,Fojnica,needs_fix,fixed_buffer0,1,26.026503459790042
+115720,,Fojnica,needs_fix,fixed_buffer0,1,8.386157067691741
+115797,,Fojnica,needs_fix,fixed_buffer0,1,56.73329099970426
+115827,,Fojnica,needs_fix,fixed_buffer0,1,242.2365762804089
+115843,,Fojnica,needs_fix,fixed_buffer0,1,10.566294615506713
+115967,,Fojnica,needs_fix,fixed_buffer0,1,37.70511671933276
+115983,,Fojnica,needs_fix,fixed_buffer0,1,4.347123137049483
+205338,,Gacko,needs_fix,fixed_buffer0,1,37.45528258020091
+205354,,Gacko,needs_fix,fixed_buffer0,1,84.33222572674853
+205435,,Gacko,needs_fix,fixed_buffer0,1,67.23290535291754
+205443,,Gacko,needs_fix,fixed_buffer0,1,86.36574249089944
+205451,,Gacko,needs_fix,fixed_buffer0,1,88.34558883004473
+205486,,Gacko,needs_fix,fixed_buffer0,1,35.90852094519818
+205524,,Gacko,needs_fix,fixed_buffer0,1,503.9516628796063
+205532,,Gacko,needs_fix,fixed_buffer0,1,43.73475771415215
+205567,,Gacko,needs_fix,fixed_buffer0,1,95.94157785576205
+205591,,Gacko,needs_fix,fixed_buffer0,1,135.3935092115533
+205621,,Gacko,needs_fix,fixed_buffer0,1,109.73935034114487
+205656,,Gacko,needs_fix,fixed_buffer0,1,70.05659955024953
+205664,,Gacko,needs_fix,fixed_buffer0,1,91.99524259972598
+205672,,Gacko,needs_fix,fixed_buffer0,1,83.69822112079811
+205699,,Gacko,needs_fix,fixed_buffer0,1,83.2925797726498
+205745,,Gacko,needs_fix,fixed_buffer0,1,66.56535122205612
+205753,,Gacko,needs_fix,fixed_buffer0,1,55.625587848097524
+205796,,Gacko,needs_fix,fixed_buffer0,1,55.462332503599455
+205818,,Gacko,needs_fix,fixed_buffer0,1,93.08268635415001
+205826,,Gacko,needs_fix,fixed_buffer0,1,39.30272315164125
+205907,,Gacko,needs_fix,fixed_buffer0,1,19.483284211963323
+205940,,Gacko,needs_fix,fixed_buffer0,1,90.33337604574926
+205958,,Gacko,needs_fix,fixed_buffer0,1,244.39392057578456
+205982,,Gacko,needs_fix,fixed_buffer0,1,100.5576263248782
+206075,,Gacko,needs_fix,fixed_buffer0,1,87.07505713780027
+206105,,Gacko,needs_fix,fixed_buffer0,1,69.57286734805456
+116866,,Glamoc,needs_fix,fixed_buffer0,1,55.67270049283807
+116904,,Glamoc,needs_fix,fixed_buffer0,1,134.411609696593
+116912,,Glamoc,needs_fix,fixed_buffer0,1,442.68131809134803
+116947,,Glamoc,needs_fix,fixed_buffer0,1,77.41767752064086
+116963,,Glamoc,needs_fix,fixed_buffer0,1,155.68692502848492
+116971,,Glamoc,needs_fix,fixed_buffer0,1,491.5761982790177
+116980,,Glamoc,needs_fix,fixed_buffer0,1,444.48227201450266
+117005,,Glamoc,needs_fix,fixed_buffer0,1,23.761979912925213
+117030,,Glamoc,needs_fix,fixed_buffer0,1,988.5341160268958
+117048,,Glamoc,needs_fix,fixed_buffer0,1,229.23130323473777
+117056,,Glamoc,needs_fix,fixed_buffer0,1,38.868125379402194
+117064,,Glamoc,needs_fix,fixed_buffer0,1,35.218079420210216
+117137,,Glamoc,needs_fix,fixed_buffer0,1,19.568493042597407
+117145,,Glamoc,needs_fix,fixed_buffer0,1,7.97509389463317
+117153,,Glamoc,needs_fix,fixed_buffer0,1,81.82377035367223
+117218,,Glamoc,needs_fix,fixed_buffer0,1,115.04343253901811
+117226,,Glamoc,needs_fix,fixed_buffer0,1,69.00293439898819
+117269,,Glamoc,needs_fix,fixed_buffer0,1,54.01971575469403
+117277,,Glamoc,needs_fix,fixed_buffer0,1,65.70131891091661
+117285,,Glamoc,needs_fix,fixed_buffer0,1,576.7908966328807
+117307,,Glamoc,needs_fix,fixed_buffer0,1,341.2057801839615
+117340,,Glamoc,needs_fix,fixed_buffer0,1,308.9605218401921
+117374,,Glamoc,needs_fix,fixed_buffer0,1,68.93041854924114
+117404,,Glamoc,needs_fix,fixed_buffer0,1,107.46335921164875
+117447,,Glamoc,needs_fix,fixed_buffer0,1,23.70923335289589
+117455,,Glamoc,needs_fix,fixed_buffer0,1,33.78374401408783
+166120,,Glamoc,needs_fix,fixed_buffer0,1,426.47482938610653
+117714,,Gorazde,needs_fix,fixed_buffer0,1,3.026725483509274
+117781,,Gorazde,needs_fix,fixed_buffer0,1,4.469766901149658
+117811,,Gorazde,needs_fix,fixed_buffer0,1,22.878566244707407
+117943,,Gorazde,needs_fix,fixed_buffer0,1,17.258458752166078
+117978,,Gorazde,needs_fix,fixed_buffer0,1,2.874025467377963
+117994,,Gorazde,needs_fix,fixed_buffer0,1,55.99606626810719
+118010,,Gorazde,needs_fix,fixed_buffer0,1,50.775533761844876
+118036,,Gorazde,needs_fix,fixed_buffer0,1,5.133938740552637
+118214,,Gorazde,needs_fix,fixed_buffer0,1,24.386901110824077
+118389,,Gorazde,needs_fix,fixed_buffer0,1,9.516074439983983
+118419,,Gorazde,needs_fix,fixed_buffer0,1,12.370900540555864
+118460,,Gorazde,needs_fix,fixed_buffer0,1,7.7494909345489695
+118478,,Gorazde,needs_fix,fixed_buffer0,1,5.394455235254672
+118575,,Gorazde,needs_fix,fixed_buffer0,1,25.589235795562224
+118656,,Gorazde,needs_fix,fixed_buffer0,1,36.48019077560732
+118699,,Gorazde,needs_fix,fixed_buffer0,1,41.38094097417211
+118729,,Gorazde,needs_fix,fixed_buffer0,1,5.162919873524918
+118761,,Gorazde,needs_fix,fixed_buffer0,1,7.954132423932619
+118842,,Gorazde,needs_fix,fixed_buffer0,1,9.70578500601935
+118931,,Gorazde,needs_fix,fixed_buffer0,1,10.421659545549185
+118940,,Gorazde,needs_fix,fixed_buffer0,1,28.090251467043434
+118982,,Gorazde,needs_fix,fixed_buffer0,1,23.551254851845673
+119148,,Gorazde,needs_fix,fixed_buffer0,1,22.897578171538854
+119342,,Gorazde,needs_fix,fixed_buffer0,1,18.717244784532454
+164755,,Gorazde,needs_fix,fixed_buffer0,1,3.330218201262839
+164801,,Gorazde,needs_fix,fixed_buffer0,1,1.406624683581718
+166332,,Gorazde,needs_fix,fixed_buffer0,1,6.337585960831821
+166391,,Gorazde,needs_fix,fixed_buffer0,1,6.640239954195786
+166561,,Gorazde,needs_fix,fixed_buffer0,1,13.756876876723329
+166588,,Gorazde,needs_fix,fixed_buffer0,1,0.6327065688241554
+169749,,Gorazde,needs_fix,fixed_buffer0,1,7.889656451405662
+119547,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,525.7315264032198
+119563,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,21.063827903982858
+119571,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,10.133091434497366
+119580,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,170.6829560916435
+119644,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,4.248357581496496
+119652,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,3.710762384520869
+119725,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,27.85411844413622
+119784,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,58.378434783335834
+119822,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,73.69396838470108
+119857,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,9.136211809122534
+119881,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,37.99266977225699
+119920,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,28.235943017701178
+119946,,Gornji Vakuf-Uskoplje,needs_fix,fixed_buffer0,1,163.79374728620007
+120081,,Gracanica,needs_fix,fixed_buffer0,1,75.13869715333279
+120138,,Gracanica,needs_fix,fixed_buffer0,1,159.38497049762495
+120146,,Gracanica,needs_fix,fixed_buffer0,1,98.99004206531303
+120235,,Gracanica,needs_fix,fixed_buffer0,1,76.6668284524751
+120286,,Gracanica,needs_fix,fixed_buffer0,1,39.309315853253885
+120308,,Gracanica,needs_fix,fixed_buffer0,1,66.40420097702817
+120367,,Gracanica,needs_fix,fixed_buffer0,1,100.3243278295683
+120391,,Gradacac,needs_fix,fixed_buffer0,1,64.12305953624215
+120545,,Gradacac,needs_fix,fixed_buffer0,1,83.39779844783288
+120553,,Gradacac,needs_fix,fixed_buffer0,1,150.44123169754306
+120596,,Gradacac,needs_fix,fixed_buffer0,1,49.196424852781234
+120618,,Gradacac,needs_fix,fixed_buffer0,1,197.98571090945984
+120626,,Gradacac,needs_fix,fixed_buffer0,1,13.268076500171794
+120715,,Gradacac,needs_fix,fixed_buffer0,1,89.33893620262639
+164844,,Gradacac,needs_fix,fixed_buffer0,1,6.307091626044072
+164917,,Gradacac,needs_fix,fixed_buffer0,1,3.2844867096343116
+164933,,Gradacac,needs_fix,fixed_buffer0,1,10.351330636029388
+169846,,Gradacac,needs_fix,fixed_buffer0,1,107.61821701920809
+169854,,Gradacac,needs_fix,fixed_buffer0,1,42.79275667105546
+169919,,Gradacac,needs_fix,fixed_buffer0,1,67.94790387381568
+120812,,Grude,needs_fix,fixed_buffer0,1,24.22802776825247
+120847,,Grude,needs_fix,fixed_buffer0,1,228.05659532565906
+142166,,Hadzici,needs_fix,fixed_buffer0,1,15.252537013469624
+142255,,Hadzici,needs_fix,fixed_buffer0,1,21.63805134895716
+142263,,Hadzici,needs_fix,fixed_buffer0,1,3.7037612465133223
+142271,,Hadzici,needs_fix,fixed_buffer0,1,12.851487676641955
+142336,,Hadzici,needs_fix,fixed_buffer0,1,2.5796659157579165
+142387,,Hadzici,needs_fix,fixed_buffer0,1,51.4459248996494
+142417,,Hadzici,needs_fix,fixed_buffer0,1,1.2942482351512152
+142441,,Hadzici,needs_fix,fixed_buffer0,1,5.075216842964932
+142450,,Hadzici,needs_fix,fixed_buffer0,1,13.8209277406169
+142506,,Hadzici,needs_fix,fixed_buffer0,1,4.654407676823454
+142557,,Hadzici,needs_fix,fixed_buffer0,1,250.9854581171955
+142581,,Hadzici,needs_fix,fixed_buffer0,1,35.428279511444146
+142590,,Hadzici,needs_fix,fixed_buffer0,1,10.427296022627072
+142638,,Hadzici,needs_fix,fixed_buffer0,1,10.07335293248067
+142697,,Hadzici,needs_fix,fixed_buffer0,1,0.9258253631440985
+142719,,Hadzici,needs_fix,fixed_buffer0,1,18.318189408900334
+142735,,Hadzici,needs_fix,fixed_buffer0,1,77.86637425717763
+228052,,Han Pijesak,needs_fix,fixed_buffer0,1,64.94773767862878
+228141,,Han Pijesak,needs_fix,fixed_buffer0,1,168.40184262619658
+228168,,Han Pijesak,needs_fix,fixed_buffer0,1,164.77353070554378
+228184,,Han Pijesak,needs_fix,fixed_buffer0,1,139.9270021691743
+228192,,Han Pijesak,needs_fix,fixed_buffer0,1,459.454180901107
+228222,,Han Pijesak,needs_fix,fixed_buffer0,1,84.96986671222471
+228257,,Han Pijesak,needs_fix,fixed_buffer0,1,156.8242822068257
+228265,,Han Pijesak,needs_fix,fixed_buffer0,3,22.428956204050696
+228273,,Han Pijesak,needs_fix,fixed_buffer0,1,54.28072204184901
+143057,,Ilidza,needs_fix,fixed_buffer0,1,51.04963207523718
+165301,,Ilidza,needs_fix,fixed_buffer0,1,17.915999948770608
+170607,,Ilidza,needs_fix,fixed_buffer0,1,840.2515145019428
+143090,,Ilijas,needs_fix,fixed_buffer0,1,55.3525878666731
+143219,,Ilijas,needs_fix,fixed_buffer0,1,13.073631083550758
+143227,,Ilijas,needs_fix,fixed_buffer0,1,31.601032813499536
+143260,,Ilijas,needs_fix,fixed_buffer0,1,60.75913689904648
+143294,,Ilijas,needs_fix,fixed_buffer0,1,28.05567665755884
+143308,,Ilijas,needs_fix,fixed_buffer0,1,86.78665851950961
+143375,,Ilijas,needs_fix,fixed_buffer0,1,126.37280477286131
+143391,,Ilijas,needs_fix,fixed_buffer0,1,64.1203925461674
+143405,,Ilijas,needs_fix,fixed_buffer0,1,32.63602449155305
+143456,,Ilijas,needs_fix,fixed_buffer0,1,41.3708169426489
+143502,,Ilijas,needs_fix,fixed_buffer0,1,20.68588412568144
+143553,,Ilijas,needs_fix,fixed_buffer0,1,76.29503826173153
+143561,,Ilijas,needs_fix,fixed_buffer0,1,24.286519550587897
+143588,,Ilijas,needs_fix,fixed_buffer0,1,37.878564043783946
+143618,,Ilijas,needs_fix,fixed_buffer0,1,7.187727441788115
+143634,,Ilijas,needs_fix,fixed_buffer0,1,34.127755544121605
+143740,,Ilijas,needs_fix,fixed_buffer0,1,64.61951158603411
+143812,,Ilijas,needs_fix,fixed_buffer0,1,40.2048344828528
+143871,,Ilijas,needs_fix,fixed_buffer0,1,57.56016441718977
+209228,,Istocni Drvar,needs_fix,fixed_buffer0,1,304.3310165566381
+209252,,Istocni Mostar,needs_fix,fixed_buffer0,1,99.4642469750503
+209309,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,111.23716888074493
+209317,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,60.63241405125166
+209333,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,15.571392618749549
+209350,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,9.206182171750308
+209368,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,59.495193362710765
+209384,,Istocni Stari Grad,needs_fix,fixed_buffer0,1,67.23185264629029
+209422,,Istocni Stari Grad,needs_fix,fixed_buffer0,2,19.25097585759446
+209538,,Istocno Novo Sarajevo,needs_fix,fixed_buffer0,1,27.988124903070293
+209546,,Istocno Novo Sarajevo,needs_fix,fixed_buffer0,1,85.23416727174694
+121240,,Jablanica,needs_fix,fixed_buffer0,1,117.91746965487204
+121282,,Jablanica,needs_fix,fixed_buffer0,1,6.2984593740014105
+121355,,Jablanica,needs_fix,fixed_buffer0,1,9.776083305984084
+121371,,Jablanica,needs_fix,fixed_buffer0,1,301.9293838896876
+121444,,Jablanica,needs_fix,fixed_buffer0,1,46.12436086022841
+121452,,Jablanica,needs_fix,fixed_buffer0,1,50.430394335833185
+121517,,Jablanica,needs_fix,fixed_buffer0,1,274.74933038790033
+121525,,Jablanica,needs_fix,fixed_buffer0,1,31.88243640868864
+121533,,Jablanica,needs_fix,fixed_buffer0,1,139.19105029510064
+121541,,Jablanica,needs_fix,fixed_buffer0,1,25.704555075675273
+121584,,Jajce,needs_fix,fixed_buffer0,1,63.77250853636793
+121673,,Jajce,needs_fix,fixed_buffer0,1,68.32129670995194
+121746,,Jajce,needs_fix,fixed_buffer0,1,156.9275019630689
+121851,,Jajce,needs_fix,fixed_buffer0,1,44.74184322785041
+121932,,Jajce,needs_fix,fixed_buffer0,1,18.64711712539667
+121959,,Jajce,needs_fix,fixed_buffer0,1,166.67435232970098
+121975,,Jajce,needs_fix,fixed_buffer0,1,55.94349033536074
+122025,,Jajce,needs_fix,fixed_buffer0,1,107.589836766905
+122173,,Jajce,needs_fix,fixed_buffer0,1,134.2145295240784
+164941,,Jajce,needs_fix,fixed_buffer0,1,27.066320012142388
+166081,,Jajce,needs_fix,fixed_buffer0,1,8.903319262895927
+169951,,Jajce,needs_fix,fixed_buffer0,1,71.79785793239144
+169986,,Jajce,needs_fix,fixed_buffer0,1,68.01571064741356
+122246,,Kakanj,needs_fix,fixed_buffer0,1,23.51711622557096
+122254,,Kakanj,needs_fix,fixed_buffer0,1,5.431533056368537
+122289,,Kakanj,needs_fix,fixed_buffer0,1,57.39893556249459
+122297,,Kakanj,needs_fix,fixed_buffer0,1,16.9631492067535
+122378,,Kakanj,needs_fix,fixed_buffer0,1,26.408558826165795
+122394,,Kakanj,needs_fix,fixed_buffer0,1,49.906778137708436
+122530,,Kakanj,needs_fix,fixed_buffer0,1,29.947705836816684
+122556,,Kakanj,needs_fix,fixed_buffer0,1,58.81285509563587
+122769,,Kakanj,needs_fix,fixed_buffer0,1,15.595605638552202
+122777,,Kakanj,needs_fix,fixed_buffer0,1,10.065486268844625
+122785,,Kakanj,needs_fix,fixed_buffer0,1,12.392616656262318
+122840,,Kakanj,needs_fix,fixed_buffer0,1,12.394198744857546
+122858,,Kakanj,needs_fix,fixed_buffer0,1,201.24913700783563
+122947,,Kakanj,needs_fix,fixed_buffer0,1,30.963036769033526
+122955,,Kakanj,needs_fix,fixed_buffer0,1,36.622338266675925
+122963,,Kakanj,needs_fix,fixed_buffer0,1,7.599046032453262
+122998,,Kakanj,needs_fix,fixed_buffer0,1,56.547482563451254
+123048,,Kakanj,needs_fix,fixed_buffer0,1,14.500657782137067
+123102,,Kakanj,needs_fix,fixed_buffer0,1,14.928041950670657
+123129,,Kakanj,needs_fix,fixed_buffer0,1,20.067518973599892
+123153,,Kakanj,needs_fix,fixed_buffer0,1,16.959539390553374
+123285,,Kakanj,needs_fix,fixed_buffer0,1,15.385595085400457
+123366,,Kakanj,needs_fix,fixed_buffer0,1,23.56233627682264
+123439,,Kalesija,needs_fix,fixed_buffer0,1,27.262457078688143
+123510,,Kalesija,needs_fix,fixed_buffer0,1,100.13281555620637
+123528,,Kalesija,needs_fix,fixed_buffer0,1,41.61260020248613
+123544,,Kalesija,needs_fix,fixed_buffer0,1,63.100250878894364
+123617,,Kalesija,needs_fix,fixed_buffer0,1,95.86136239094867
+123625,,Kalesija,needs_fix,fixed_buffer0,1,60.30464663552035
+123668,,Kalesija,needs_fix,fixed_buffer0,1,145.15636139301176
+123749,,Kalesija,needs_fix,fixed_buffer0,1,59.814079382064435
+123790,,Kalesija,needs_fix,fixed_buffer0,1,145.23673620329248
+164402,,Kalesija,needs_fix,fixed_buffer0,1,16.960205144709434
+164950,,Kalesija,needs_fix,fixed_buffer0,1,1.7454498505669436
+170011,,Kalesija,needs_fix,fixed_buffer0,1,93.22938777095843
+170038,,Kalesija,needs_fix,fixed_buffer0,1,64.38937190011355
+209830,,Kalinovik,needs_fix,fixed_buffer0,1,59.732864176292246
+209945,,Kalinovik,needs_fix,fixed_buffer0,1,583.1465809355038
+210030,,Kalinovik,needs_fix,fixed_buffer0,1,31.204032315146733
+210277,,Kalinovik,needs_fix,fixed_buffer0,1,257.1402176278189
+124605,,Kiseljak,needs_fix,fixed_buffer0,1,41.58905274102395
+124630,,Kiseljak,needs_fix,fixed_buffer0,1,61.70566994548186
+124672,,Kiseljak,needs_fix,fixed_buffer0,1,4.225694753374595
+124702,,Kiseljak,needs_fix,fixed_buffer0,1,26.397096762326846
+124737,,Kiseljak,needs_fix,fixed_buffer0,1,8.72272164111096
+124800,,Kiseljak,needs_fix,fixed_buffer0,1,22.634058286455804
+124842,,Kiseljak,needs_fix,fixed_buffer0,1,8.369495610996873
+124923,,Kiseljak,needs_fix,fixed_buffer0,1,23.566610698268203
+124931,,Kiseljak,needs_fix,fixed_buffer0,1,22.408068029818946
+124958,,Kiseljak,needs_fix,fixed_buffer0,1,1.9953036293620445
+124966,,Kiseljak,needs_fix,fixed_buffer0,1,13.7558660046919
+125008,,Kiseljak,needs_fix,fixed_buffer0,1,25.779311232415758
+125164,,Kiseljak,needs_fix,fixed_buffer0,1,13.396782287945374
+125245,,Kiseljak,needs_fix,fixed_buffer0,1,8.041479588801781
+125288,,Kiseljak,needs_fix,fixed_buffer0,1,21.225391137186378
+125318,,Kiseljak,needs_fix,fixed_buffer0,1,29.863952952157366
+125393,,Kiseljak,needs_fix,fixed_buffer0,1,8.192233745808974
+125407,,Kiseljak,needs_fix,fixed_buffer0,1,3.8751583055517655
+125415,,Kiseljak,needs_fix,fixed_buffer0,1,10.616805454690342
+125423,,Kiseljak,needs_fix,fixed_buffer0,1,16.12259279965559
+125440,,Kiseljak,needs_fix,fixed_buffer0,1,12.233467906021216
+125466,,Kiseljak,needs_fix,fixed_buffer0,1,47.356623607736374
+125504,,Kiseljak,needs_fix,fixed_buffer0,1,27.495257665237457
+125539,,Kladanj,needs_fix,fixed_buffer0,1,73.28452115879702
+125555,,Kladanj,needs_fix,fixed_buffer0,1,69.98961664313921
+125563,,Kladanj,needs_fix,fixed_buffer0,1,24.727445108546416
+125679,,Kladanj,needs_fix,fixed_buffer0,1,97.07666265074941
+125750,,Kladanj,needs_fix,fixed_buffer0,1,9.825296633828625
+125776,,Kladanj,needs_fix,fixed_buffer0,1,87.51479839286236
+125814,,Kladanj,needs_fix,fixed_buffer0,1,42.567185656863565
+125946,,Kladanj,needs_fix,fixed_buffer0,1,50.217805342020746
+164968,,Kladanj,needs_fix,fixed_buffer0,1,18.483900324320555
+164976,,Kladanj,needs_fix,fixed_buffer0,1,21.921424465813207
+166138,,Kladanj,needs_fix,fixed_buffer0,1,86.4994000145826
+166138,,Kladanj,needs_fix,fixed_buffer0,1,54.586027919971364
+170046,,Kladanj,needs_fix,fixed_buffer0,1,98.48663071610046
+125989,,Kljuc,needs_fix,fixed_buffer0,1,57.676426163024466
+126004,,Kljuc,needs_fix,fixed_buffer0,1,204.452623420483
+126047,,Kljuc,needs_fix,fixed_buffer0,1,48.81722791790229
+126217,,Kljuc,needs_fix,fixed_buffer0,1,44.857451553830266
+126306,,Kljuc,needs_fix,fixed_buffer0,1,57.521233317898364
+126314,,Kljuc,needs_fix,fixed_buffer0,1,99.78896709154557
+126322,,Kljuc,needs_fix,fixed_buffer0,1,99.54008932238034
+126357,,Kljuc,needs_fix,fixed_buffer0,1,169.98374133105722
+126390,,Kljuc,needs_fix,fixed_buffer0,1,29.186422373749824
+126454,,Kljuc,needs_fix,fixed_buffer0,1,62.720723038647634
+126489,,Kljuc,needs_fix,fixed_buffer0,1,41.181262643861686
+126497,,Kljuc,needs_fix,fixed_buffer0,1,88.65629006709821
+126578,,Kljuc,needs_fix,fixed_buffer0,1,25.687727507550147
+165034,,Kljuc,needs_fix,fixed_buffer0,1,32.58955912654084
+170097,,Kljuc,needs_fix,fixed_buffer0,1,103.83269955873767
+170119,,Kljuc,needs_fix,fixed_buffer0,1,115.31631201711839
+210587,,Knezevo,needs_fix,fixed_buffer0,1,291.83186894774985
+210617,,Knezevo,needs_fix,fixed_buffer0,1,103.29062314978054
+210641,,Knezevo,needs_fix,fixed_buffer0,1,59.40635864289928
+210668,,Knezevo,needs_fix,fixed_buffer0,1,413.25030198176256
+124176,,Konjic,needs_fix,fixed_buffer0,1,308.08176005761635
+126683,,Konjic,needs_fix,fixed_buffer0,1,25.881647077305832
+126705,,Konjic,needs_fix,fixed_buffer0,1,19.5734692238777
+126730,,Konjic,needs_fix,fixed_buffer0,1,421.776743197501
+126748,,Konjic,needs_fix,fixed_buffer0,1,41.61758534107181
+126772,,Konjic,needs_fix,fixed_buffer0,1,14.720207386807804
+126853,,Konjic,needs_fix,fixed_buffer0,1,20.397767218297222
+126888,,Konjic,needs_fix,fixed_buffer0,1,43.75095071113638
+126926,,Konjic,needs_fix,fixed_buffer0,1,42.15208962363307
+126934,,Konjic,needs_fix,fixed_buffer0,1,79.99872881164883
+126942,,Konjic,needs_fix,fixed_buffer0,1,44.950729062168435
+127035,,Konjic,needs_fix,fixed_buffer0,1,40.07338775314458
+127043,,Konjic,needs_fix,fixed_buffer0,1,18.140813020647844
+127078,,Konjic,needs_fix,fixed_buffer0,1,37.10366243605887
+127175,,Konjic,needs_fix,fixed_buffer0,1,46.03281783681506
+127302,,Konjic,needs_fix,fixed_buffer0,1,264.7255415768912
+127370,,Konjic,needs_fix,fixed_buffer0,1,451.28016432746847
+127388,,Konjic,needs_fix,fixed_buffer0,1,120.77169677927897
+127400,,Konjic,needs_fix,fixed_buffer0,1,155.05854986105632
+127418,,Konjic,needs_fix,fixed_buffer0,1,23.233512965006067
+127477,,Konjic,needs_fix,fixed_buffer0,1,48.19941608234616
+127485,,Konjic,needs_fix,fixed_buffer0,1,42.399764732545684
+127507,,Konjic,needs_fix,fixed_buffer0,1,2.3262266929149056
+127540,,Konjic,needs_fix,fixed_buffer0,1,109.26343327015631
+127558,,Konjic,needs_fix,fixed_buffer0,1,143.32193160969834
+127574,,Konjic,needs_fix,fixed_buffer0,1,11.151945602861772
+127612,,Konjic,needs_fix,fixed_buffer0,1,240.0138688949308
+127639,,Konjic,needs_fix,fixed_buffer0,1,7.069570512201346
+127744,,Konjic,needs_fix,fixed_buffer0,1,11.395277644710095
+127752,,Konjic,needs_fix,fixed_buffer0,1,25.81794672133088
+127809,,Konjic,needs_fix,fixed_buffer0,1,44.97479390554256
+127817,,Konjic,needs_fix,fixed_buffer0,1,30.637574981828745
+127825,,Konjic,needs_fix,fixed_buffer0,1,18.79704278199733
+127892,,Konjic,needs_fix,fixed_buffer0,1,12.585277941378846
+127922,,Konjic,needs_fix,fixed_buffer0,1,110.44043238771023
+127973,,Konjic,needs_fix,fixed_buffer0,1,23.464998205147953
+127981,,Konjic,needs_fix,fixed_buffer0,1,12.99061558099742
+128040,,Konjic,needs_fix,fixed_buffer0,1,166.39088866697296
+128074,,Konjic,needs_fix,fixed_buffer0,1,18.372806395546014
+128112,,Konjic,needs_fix,fixed_buffer0,1,129.87544328835344
+128171,,Konjic,needs_fix,fixed_buffer0,1,92.68570668505154
+128180,,Konjic,needs_fix,fixed_buffer0,1,67.45309291924963
+128228,,Konjic,needs_fix,fixed_buffer0,1,56.64599414726489
+128279,,Konjic,needs_fix,fixed_buffer0,1,24.11660973323347
+128287,,Konjic,needs_fix,fixed_buffer0,1,55.15640265080139
+128295,,Konjic,needs_fix,fixed_buffer0,1,14.890003307280866
+165123,,Konjic,needs_fix,fixed_buffer0,1,12.98448184104629
+165140,,Konjic,needs_fix,fixed_buffer0,1,2.907114623059421
+170151,,Konjic,needs_fix,fixed_buffer0,1,38.068583345310444
+170178,,Konjic,needs_fix,fixed_buffer0,1,16.654296968503953
+211419,,Kostajnica,needs_fix,fixed_buffer0,1,39.06677242974656
+211516,,Kotor Varos,needs_fix,fixed_buffer0,1,88.2152089320983
+211567,,Kotor Varos,needs_fix,fixed_buffer0,1,158.25967063309497
+211729,,Kotor Varos,needs_fix,fixed_buffer0,1,184.40488634704494
+211737,,Kotor Varos,needs_fix,fixed_buffer0,1,213.5751107128013
+211745,,Kotor Varos,needs_fix,fixed_buffer0,1,71.11210286570014
+211770,,Kotor Varos,needs_fix,fixed_buffer0,1,95.99516604977327
+211796,,Kotor Varos,needs_fix,fixed_buffer0,1,189.24623322669464
+211907,,Kotor Varos,needs_fix,fixed_buffer0,1,171.03422626541095
+211966,,Kotor Varos,needs_fix,fixed_buffer0,1,65.19892475950088
+128775,,Kresevo,needs_fix,fixed_buffer0,1,73.43587822399756
+128783,,Kresevo,needs_fix,fixed_buffer0,1,25.24157514846737
+128791,,Kresevo,needs_fix,fixed_buffer0,1,32.367751314870105
+128813,,Kresevo,needs_fix,fixed_buffer0,1,31.138274788090108
+128821,,Kresevo,needs_fix,fixed_buffer0,1,82.53502026770346
+128830,,Kresevo,needs_fix,fixed_buffer0,1,318.0696923830371
+128848,,Kresevo,needs_fix,fixed_buffer0,1,9.783688071755515
+128937,,Kresevo,needs_fix,fixed_buffer0,1,73.30783982421539
+128945,,Kresevo,needs_fix,fixed_buffer0,1,27.327939338393296
+128996,,Kresevo,needs_fix,fixed_buffer0,1,12.822365210462362
+129003,,Kresevo,needs_fix,fixed_buffer0,1,72.45934925494298
+211974,,Krupa na Uni,needs_fix,fixed_buffer0,2,11.168189029750117
+211982,,Krupa na Uni,needs_fix,fixed_buffer0,1,106.59426939650089
+212008,,Krupa na Uni,needs_fix,fixed_buffer0,1,57.02990646389974
+212016,,Krupa na Uni,needs_fix,fixed_buffer0,1,100.22248499040083
+212067,,Krupa na Uni,needs_fix,fixed_buffer0,4,11.998909857250045
+212083,,Krupa na Uni,needs_fix,fixed_buffer0,1,155.10095485137612
+212091,,Krupa na Uni,needs_fix,fixed_buffer0,1,105.66557208400168
+129054,,Kupres,needs_fix,fixed_buffer0,1,167.73539515367455
+129127,,Kupres,needs_fix,fixed_buffer0,1,144.73006312142232
+129216,,Kupres,needs_fix,fixed_buffer0,1,237.82563288001757
+129232,,Kupres,needs_fix,fixed_buffer0,1,326.487137752745
+129330,,Kupres,needs_fix,fixed_buffer0,1,122.37503657135501
+129348,,Kupres,needs_fix,fixed_buffer0,1,86.34019586831546
+129372,,Kupres,needs_fix,fixed_buffer0,1,127.7938912039867
+129437,,Kupres,needs_fix,fixed_buffer0,1,218.60983739270466
+129445,,Kupres,needs_fix,fixed_buffer0,1,504.92098256814967
+165158,,Kupres,needs_fix,fixed_buffer0,1,13.42286278546819
+212199,,Laktasi,needs_fix,fixed_buffer0,1,66.67582654955115
+212202,,Laktasi,needs_fix,fixed_buffer0,1,84.48945527755356
+212229,,Laktasi,needs_fix,fixed_buffer0,1,68.81376372319234
+212245,,Laktasi,needs_fix,fixed_buffer0,1,124.30729956050124
+212253,,Laktasi,needs_fix,fixed_buffer0,1,33.74843656510112
+212261,,Laktasi,needs_fix,fixed_buffer0,1,178.09280341533432
+212288,,Laktasi,needs_fix,fixed_buffer0,1,132.92731758308503
+212318,,Laktasi,needs_fix,fixed_buffer0,1,115.47190406704803
+212415,,Laktasi,needs_fix,fixed_buffer0,1,76.70697554993217
+212431,,Laktasi,needs_fix,fixed_buffer0,1,112.71265097624911
+212466,,Laktasi,needs_fix,fixed_buffer0,1,53.19514534801851
+212482,,Laktasi,needs_fix,fixed_buffer0,1,88.64584220825486
+130290,,Livno,needs_fix,fixed_buffer0,1,208.9991214177514
+130303,,Livno,needs_fix,fixed_buffer0,1,362.3823875951653
+130311,,Livno,needs_fix,fixed_buffer0,1,76.14524992875215
+130389,,Livno,needs_fix,fixed_buffer0,1,220.32633900695845
+130443,,Livno,needs_fix,fixed_buffer0,1,71.96140302234127
+130460,,Livno,needs_fix,fixed_buffer0,1,152.02797596464976
+130478,,Livno,needs_fix,fixed_buffer0,1,159.46633159419184
+130508,,Livno,needs_fix,fixed_buffer0,1,166.16407969281335
+130559,,Livno,needs_fix,fixed_buffer0,1,83.09050398565957
+130575,,Livno,needs_fix,fixed_buffer0,1,105.86508147323052
+130583,,Livno,needs_fix,fixed_buffer0,1,166.95837201167797
+130591,,Livno,needs_fix,fixed_buffer0,1,71.45047806327221
+130613,,Livno,needs_fix,fixed_buffer0,1,193.58452293793516
+130656,,Livno,needs_fix,fixed_buffer0,1,124.7838392576947
+130745,,Livno,needs_fix,fixed_buffer0,1,235.51259387893447
+130800,,Livno,needs_fix,fixed_buffer0,1,51.729392763419206
+130818,,Livno,needs_fix,fixed_buffer0,1,184.49106996951917
+130826,,Livno,needs_fix,fixed_buffer0,1,130.42931631338456
+212946,,Ljubinje,needs_fix,fixed_buffer0,1,168.06566440665748
+212954,,Ljubinje,needs_fix,fixed_buffer0,1,30.40470358514896
+212962,,Ljubinje,needs_fix,fixed_buffer0,1,119.44249150068376
+213101,,Ljubinje,needs_fix,fixed_buffer0,1,62.51298415304616
+132101,,Ljubuski,needs_fix,fixed_buffer0,1,56.0615830075269
+132136,,Ljubuski,needs_fix,fixed_buffer0,1,66.72221093077505
+132144,,Ljubuski,needs_fix,fixed_buffer0,1,30.874885801173107
+132241,,Ljubuski,needs_fix,fixed_buffer0,1,34.313507302728496
+132306,,Ljubuski,needs_fix,fixed_buffer0,1,65.04609620952091
+132365,,Ljubuski,needs_fix,fixed_buffer0,1,72.79040444365658
+132373,,Ljubuski,needs_fix,fixed_buffer0,1,37.50333079554658
+212571,,Lopare,needs_fix,fixed_buffer0,1,68.3364959410039
+212598,,Lopare,needs_fix,fixed_buffer0,1,76.25742391854988
+212601,,Lopare,needs_fix,fixed_buffer0,2,28.724536521349687
+212610,,Lopare,needs_fix,fixed_buffer0,1,224.54259475199868
+212628,,Lopare,needs_fix,fixed_buffer0,1,193.7543045346386
+212636,,Lopare,needs_fix,fixed_buffer0,1,45.70396335139914
+212644,,Lopare,needs_fix,fixed_buffer0,1,28.508217077592366
+212652,,Lopare,needs_fix,fixed_buffer0,1,70.9149348201474
+212695,,Lopare,needs_fix,fixed_buffer0,1,293.02778355649207
+212709,,Lopare,needs_fix,fixed_buffer0,1,13.80643065939994
+212717,,Lopare,needs_fix,fixed_buffer0,1,28.36538745525111
+212725,,Lopare,needs_fix,fixed_buffer0,1,108.18110186285072
+212733,,Lopare,needs_fix,fixed_buffer0,1,82.5545503221466
+212741,,Lopare,needs_fix,fixed_buffer0,1,114.93290775521703
+212768,,Lopare,needs_fix,fixed_buffer0,1,111.71102964154794
+212776,,Lopare,needs_fix,fixed_buffer0,1,117.07043223759536
+212806,,Lopare,needs_fix,fixed_buffer0,1,37.49990000590051
+212814,,Lopare,needs_fix,fixed_buffer0,1,119.55920687714571
+212849,,Lopare,needs_fix,fixed_buffer0,1,25.875644695642865
+212857,,Lopare,needs_fix,fixed_buffer0,1,262.27081905765056
+212865,,Lopare,needs_fix,fixed_buffer0,1,53.68038197775372
+212881,,Lopare,needs_fix,fixed_buffer0,1,51.742004202202516
+131334,,Lukavac,needs_fix,fixed_buffer0,1,34.576919649083365
+131407,,Lukavac,needs_fix,fixed_buffer0,1,91.2817753448766
+131415,,Lukavac,needs_fix,fixed_buffer0,1,18.188413967245307
+131466,,Lukavac,needs_fix,fixed_buffer0,1,32.7470519604731
+131474,,Lukavac,needs_fix,fixed_buffer0,1,79.4855046765348
+131504,,Lukavac,needs_fix,fixed_buffer0,1,120.17721358602377
+131539,,Lukavac,needs_fix,fixed_buffer0,1,32.4210309793967
+131563,,Lukavac,needs_fix,fixed_buffer0,1,27.059142667965133
+131580,,Lukavac,needs_fix,fixed_buffer0,1,51.83485936220512
+131628,,Lukavac,needs_fix,fixed_buffer0,1,112.66598620169326
+131687,,Lukavac,needs_fix,fixed_buffer0,1,42.537884650587124
+131733,,Lukavac,needs_fix,fixed_buffer0,1,92.30443966565103
+131784,,Lukavac,needs_fix,fixed_buffer0,1,21.750448218672304
+132632,,Maglaj,needs_fix,fixed_buffer0,1,85.24172618489703
+132691,,Maglaj,needs_fix,fixed_buffer0,1,87.81500268473846
+132730,,Maglaj,needs_fix,fixed_buffer0,1,88.61653047598583
+132756,,Maglaj,needs_fix,fixed_buffer0,1,60.58298507509823
+132845,,Maglaj,needs_fix,fixed_buffer0,1,65.37580641585143
+132888,,Maglaj,needs_fix,fixed_buffer0,1,99.29036209046063
+132977,,Maglaj,needs_fix,fixed_buffer0,1,54.03094835263663
+133051,,Maglaj,needs_fix,fixed_buffer0,1,24.337886643058255
+165182,,Maglaj,needs_fix,fixed_buffer0,1,48.70240010492772
+170259,,Maglaj,needs_fix,fixed_buffer0,1,123.33410581822699
+170267,,Maglaj,needs_fix,fixed_buffer0,1,66.87212076482345
+170305,,Maglaj,needs_fix,fixed_buffer0,1,47.768143974549055
+213187,,Milici,needs_fix,fixed_buffer0,1,107.01325824960746
+213217,,Milici,needs_fix,fixed_buffer0,1,24.82013397373041
+213276,,Milici,needs_fix,fixed_buffer0,1,32.67955246799196
+213284,,Milici,needs_fix,fixed_buffer0,1,23.811048613095146
+213349,,Milici,needs_fix,fixed_buffer0,1,139.18330055490677
+213373,,Milici,needs_fix,fixed_buffer0,1,48.03045720760157
+213390,,Milici,needs_fix,fixed_buffer0,1,292.94613014805026
+213403,,Milici,needs_fix,fixed_buffer0,1,17.860230850950813
+213489,,Milici,needs_fix,fixed_buffer0,1,38.90507136486697
+213497,,Milici,needs_fix,fixed_buffer0,1,27.867987090055003
+213535,,Milici,needs_fix,fixed_buffer0,1,25.331695586499375
+213713,,Milici,needs_fix,fixed_buffer0,1,40.41879178932938
+213764,,Modrica,needs_fix,fixed_buffer0,1,165.9454804755504
+213802,,Modrica,needs_fix,fixed_buffer0,1,122.71154468090367
+213845,,Modrica,needs_fix,fixed_buffer0,1,217.7341261348324
+213853,,Modrica,needs_fix,fixed_buffer0,1,89.24534566376649
+213861,,Modrica,needs_fix,fixed_buffer0,1,64.09506194825035
+213870,,Modrica,needs_fix,fixed_buffer0,1,77.35661530480034
+213888,,Modrica,needs_fix,fixed_buffer0,1,270.85298361887203
+213896,,Modrica,needs_fix,fixed_buffer0,1,163.93027067775495
+213900,,Modrica,needs_fix,fixed_buffer0,1,74.99241343254035
+213918,,Modrica,needs_fix,fixed_buffer0,1,42.537993015397745
+213926,,Modrica,needs_fix,fixed_buffer0,1,360.7523692835528
+213942,,Modrica,needs_fix,fixed_buffer0,1,160.87896931784917
+213969,,Modrica,needs_fix,fixed_buffer0,1,102.10074150973527
+213977,,Modrica,needs_fix,fixed_buffer0,1,83.93792459689752
+213985,,Modrica,needs_fix,fixed_buffer0,1,125.510807902879
+213993,,Modrica,needs_fix,fixed_buffer0,1,197.93718966794796
+214019,,Modrica,needs_fix,fixed_buffer0,1,119.17571740242154
+214027,,Modrica,needs_fix,fixed_buffer0,1,309.54649861562206
+133370,,Mostar,needs_fix,fixed_buffer0,1,68.00510857022367
+133400,,Mostar,needs_fix,fixed_buffer0,1,106.35588449074842
+133485,,Mostar,needs_fix,fixed_buffer0,1,117.15753331584246
+133493,,Mostar,needs_fix,fixed_buffer0,1,438.62579035782534
+133515,,Mostar,needs_fix,fixed_buffer0,1,74.37326439453544
+133639,,Mostar,needs_fix,fixed_buffer0,1,99.83764218308849
+133701,,Mostar,needs_fix,fixed_buffer0,1,260.3088006078321
+133787,,Mostar,needs_fix,fixed_buffer0,1,27.32403055008849
+133876,,Mostar,needs_fix,fixed_buffer0,1,208.0703510567391
+165930,,Mostar,needs_fix,fixed_buffer0,1,31.4748567313427
+165948,,Mostar,needs_fix,fixed_buffer0,1,14.417940900158756
+165956,,Mostar,needs_fix,fixed_buffer0,1,443.3720096856846
+171433,,Mostar,needs_fix,fixed_buffer0,1,271.6160879736933
+214043,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,100.69001707314703
+214108,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,74.4913960256977
+214116,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,183.85486108210293
+214329,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,105.17320163166981
+214337,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,191.9401144175474
+214353,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,328.8648184706522
+214361,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,176.9346356025953
+214426,,Mrkonjic Grad,needs_fix,fixed_buffer0,1,80.33627806546076
+134368,,Neum,needs_fix,fixed_buffer0,1,49.98443719258778
+134414,,Neum,needs_fix,fixed_buffer0,1,53.03652547398222
+134457,,Neum,needs_fix,fixed_buffer0,1,60.16779767970657
+134465,,Neum,needs_fix,fixed_buffer0,1,35.83715704446094
+134473,,Neum,needs_fix,fixed_buffer0,1,30.75030778402221
+134481,,Neum,needs_fix,fixed_buffer0,1,76.48517184266264
+134490,,Neum,needs_fix,fixed_buffer0,1,308.7741595197293
+134562,,Neum,needs_fix,fixed_buffer0,1,70.25911183661213
+134619,,Neum,needs_fix,fixed_buffer0,1,56.02817364189659
+214442,,Nevesinje,needs_fix,fixed_buffer0,2,38.94371303639051
+214493,,Nevesinje,needs_fix,fixed_buffer0,1,208.2308711838024
+214574,,Nevesinje,needs_fix,fixed_buffer0,1,158.77495273483572
+214647,,Nevesinje,needs_fix,fixed_buffer0,1,238.97228552320308
+214701,,Nevesinje,needs_fix,fixed_buffer0,1,117.64096600059717
+214710,,Nevesinje,needs_fix,fixed_buffer0,1,25.59310045749769
+214779,,Nevesinje,needs_fix,fixed_buffer0,1,39.50341738911096
+214787,,Nevesinje,needs_fix,fixed_buffer0,1,47.3753446239843
+214884,,Nevesinje,needs_fix,fixed_buffer0,1,189.05819610736987
+214914,,Nevesinje,needs_fix,fixed_buffer0,1,197.62925731344876
+170658,,Novi Grad Sarajevo,needs_fix,fixed_buffer0,1,352.9713460994117
+138380,,Novi Travnik,needs_fix,fixed_buffer0,1,91.1913651291073
+138410,,Novi Travnik,needs_fix,fixed_buffer0,1,14.342155488198626
+138487,,Novi Travnik,needs_fix,fixed_buffer0,1,36.496696300864436
+138657,,Novi Travnik,needs_fix,fixed_buffer0,1,95.38878094748412
+138703,,Novi Travnik,needs_fix,fixed_buffer0,1,44.72644526295623
+138711,,Novi Travnik,needs_fix,fixed_buffer0,1,93.80242281885852
+138720,,Novi Travnik,needs_fix,fixed_buffer0,1,18.704885589618353
+138819,,Novi Travnik,needs_fix,fixed_buffer0,1,60.23193466506983
+138827,,Novi Travnik,needs_fix,fixed_buffer0,1,13.720771704318484
+138860,,Novi Travnik,needs_fix,fixed_buffer0,1,4.935026800818654
+138886,,Novi Travnik,needs_fix,fixed_buffer0,1,27.072587596220327
+138908,,Novi Travnik,needs_fix,fixed_buffer0,1,1.945589631969625
+138924,,Novi Travnik,needs_fix,fixed_buffer0,1,8.636706718240765
+215635,,Novo Gorazde,needs_fix,fixed_buffer0,1,10.424089910801264
+215660,,Novo Gorazde,needs_fix,fixed_buffer0,1,16.5772146341512
+215864,,Novo Gorazde,needs_fix,fixed_buffer0,1,14.42780441029964
+215902,,Novo Gorazde,needs_fix,fixed_buffer0,1,13.839749658750568
+216011,,Novo Gorazde,needs_fix,fixed_buffer0,1,17.722840940614752
+216135,,Novo Gorazde,needs_fix,fixed_buffer0,1,23.452913114299694
+216208,,Novo Gorazde,needs_fix,fixed_buffer0,1,33.40896030018284
+216321,,Novo Gorazde,needs_fix,fixed_buffer0,1,3.0259693131500276
+216330,,Novo Gorazde,needs_fix,fixed_buffer0,1,17.629893808650863
+135267,,Odzak,needs_fix,fixed_buffer0,1,281.32434875900896
+135291,,Odzak,needs_fix,fixed_buffer0,2,101.25949304725673
+165689,,Odzak,needs_fix,fixed_buffer0,3,2.3500815884099633
+170364,,Odzak,needs_fix,fixed_buffer0,1,87.86733160903002
+170372,,Odzak,needs_fix,fixed_buffer0,1,127.56320934313393
+135402,,Olovo,needs_fix,fixed_buffer0,1,65.52724902911933
+135488,,Olovo,needs_fix,fixed_buffer0,1,35.438969618824665
+135518,,Olovo,needs_fix,fixed_buffer0,1,175.40966602694405
+135585,,Olovo,needs_fix,fixed_buffer0,1,73.31409718718444
+135640,,Olovo,needs_fix,fixed_buffer0,1,31.456125566758207
+135801,,Olovo,needs_fix,fixed_buffer0,1,18.650233259041297
+135844,,Olovo,needs_fix,fixed_buffer0,1,100.91352442450636
+165212,,Olovo,needs_fix,fixed_buffer0,1,1.6007158665669177
+170429,,Olovo,needs_fix,fixed_buffer0,1,39.022169300638836
+170445,,Olovo,needs_fix,fixed_buffer0,1,46.918046321678986
+135950,,Orasje,needs_fix,fixed_buffer0,2,209.78667821119535
+135950,,Orasje,needs_fix,fixed_buffer0,1,128.79595111204623
+135968,,Orasje,needs_fix,fixed_buffer0,1,82.00044201602498
+136000,,Orasje,needs_fix,fixed_buffer0,1,106.65549745867206
+136026,,Orasje,needs_fix,fixed_buffer0,1,166.24266544364497
+165239,,Orasje,needs_fix,fixed_buffer0,3,2.0020488604800417
+170453,,Orasje,needs_fix,fixed_buffer0,1,78.83178827210412
+170470,,Orasje,needs_fix,fixed_buffer0,1,75.26167737527504
+216488,,Osmaci,needs_fix,fixed_buffer0,1,58.99658147243325
+216518,,Osmaci,needs_fix,fixed_buffer0,1,39.19179280660218
+216526,,Ostra Luka,needs_fix,fixed_buffer0,1,30.22767113854953
+216542,,Ostra Luka,needs_fix,fixed_buffer0,1,122.78304040089765
+216577,,Ostra Luka,needs_fix,fixed_buffer0,1,21.156389517747503
+216585,,Ostra Luka,needs_fix,fixed_buffer0,1,52.185218519535674
+216615,,Ostra Luka,needs_fix,fixed_buffer0,1,13.832300947432866
+216801,,Pale,needs_fix,fixed_buffer0,1,110.0300704949995
+216828,,Pale,needs_fix,fixed_buffer0,1,38.19331400130012
+216925,,Pale,needs_fix,fixed_buffer0,1,85.7107348112505
+216976,,Pale,needs_fix,fixed_buffer0,1,134.09189520423382
+216984,,Pale,needs_fix,fixed_buffer0,1,115.98954077385268
+216992,,Pale,needs_fix,fixed_buffer0,1,64.21424022282469
+217069,,Pale,needs_fix,fixed_buffer0,1,13.599447660514443
+217085,,Pale,needs_fix,fixed_buffer0,1,48.8095098679942
+217115,,Pale,needs_fix,fixed_buffer0,1,133.81574709809587
+217166,,Pale,needs_fix,fixed_buffer0,1,64.78163775221002
+217182,,Pale,needs_fix,fixed_buffer0,1,228.86155713185155
+217204,,Pale,needs_fix,fixed_buffer0,1,40.42899001420074
+217212,,Pale,needs_fix,fixed_buffer0,1,106.33171924779822
+217239,,Pale,needs_fix,fixed_buffer0,1,50.933424058902716
+217255,,Pale,needs_fix,fixed_buffer0,1,71.91054696297934
+217280,,Pale,needs_fix,fixed_buffer0,1,22.242283131499462
+217301,,Pale,needs_fix,fixed_buffer0,1,90.49037128833575
+217310,,Pale,needs_fix,fixed_buffer0,1,34.29333208831759
+217328,,Pale,needs_fix,fixed_buffer0,1,63.67497563800072
+217336,,Pale,needs_fix,fixed_buffer0,1,73.55764614460006
+217352,,Pale,needs_fix,fixed_buffer0,1,25.999902420433642
+217387,,Pale,needs_fix,fixed_buffer0,1,49.32149426750156
+217417,,Pale,needs_fix,fixed_buffer0,1,37.72579794270323
+217441,,Pale,needs_fix,fixed_buffer0,1,131.49348858569772
+217468,,Pale,needs_fix,fixed_buffer0,1,52.155276652878264
+144231,,Pale (FBiH),needs_fix,fixed_buffer0,1,77.86312579277049
+144258,,Pale (FBiH),needs_fix,fixed_buffer0,1,59.60312780496108
+165387,,Pale (FBiH),needs_fix,fixed_buffer0,1,27.067224048454367
+170704,,Pale (FBiH),needs_fix,fixed_buffer0,1,37.21476898555289
+170747,,Pale (FBiH),needs_fix,fixed_buffer0,1,122.96491168327319
+217476,,Pelagicevo,needs_fix,fixed_buffer0,1,149.14801569380523
+217484,,Pelagicevo,needs_fix,fixed_buffer0,1,112.82600062179417
+217506,,Pelagicevo,needs_fix,fixed_buffer0,1,76.63407672257924
+217514,,Pelagicevo,needs_fix,fixed_buffer0,2,6.8122995022499895
+217522,,Pelagicevo,needs_fix,fixed_buffer0,1,18.28467536641593
+217549,,Pelagicevo,needs_fix,fixed_buffer0,1,49.4062383048684
+217557,,Pelagicevo,needs_fix,fixed_buffer0,1,386.5835018911988
+217565,,Pelagicevo,needs_fix,fixed_buffer0,1,89.5473280610057
+217573,,Pelagicevo,needs_fix,fixed_buffer0,1,32.67553795120077
+217581,,Pelagicevo,needs_fix,fixed_buffer0,1,119.78005369625082
+230529,,Pelagicevo,needs_fix,fixed_buffer0,1,20.17936886570058
+217689,,Petrovo,needs_fix,fixed_buffer0,1,261.79199617984625
+217697,,Petrovo,needs_fix,fixed_buffer0,1,144.18495222575143
+136107,,Posusje,needs_fix,fixed_buffer0,1,126.91983562045918
+136115,,Posusje,needs_fix,fixed_buffer0,1,101.93766397895045
+136158,,Posusje,needs_fix,fixed_buffer0,1,118.00036887447331
+136204,,Posusje,needs_fix,fixed_buffer0,1,162.7090445128973
+136239,,Posusje,needs_fix,fixed_buffer0,1,264.01846656476516
+217760,,Prijedor,needs_fix,fixed_buffer0,1,328.89977144949347
+217786,,Prijedor,needs_fix,fixed_buffer0,1,109.52622207588003
+217824,,Prijedor,needs_fix,fixed_buffer0,1,208.3791556220528
+217891,,Prijedor,needs_fix,fixed_buffer0,1,76.35268907088877
+217921,,Prijedor,needs_fix,fixed_buffer0,1,93.51371967743044
+217964,,Prijedor,needs_fix,fixed_buffer0,1,56.148826098557606
+218049,,Prijedor,needs_fix,fixed_buffer0,1,110.34950742650302
+218073,,Prijedor,needs_fix,fixed_buffer0,1,51.773894606460836
+218081,,Prijedor,needs_fix,fixed_buffer0,1,111.25002920489989
+218090,,Prijedor,needs_fix,fixed_buffer0,1,76.26325824264998
+218111,,Prijedor,needs_fix,fixed_buffer0,1,98.54029086045098
+218120,,Prijedor,needs_fix,fixed_buffer0,1,126.2830498554863
+218308,,Prijedor,needs_fix,fixed_buffer0,1,108.97207546629991
+218316,,Prijedor,needs_fix,fixed_buffer0,1,47.93952530660017
+218391,,Prijedor,needs_fix,fixed_buffer0,1,36.820043491149555
+218421,,Prijedor,needs_fix,fixed_buffer0,1,43.529476952803
+218430,,Prijedor,needs_fix,fixed_buffer0,1,101.19703085622173
+218456,,Prijedor,needs_fix,fixed_buffer0,1,63.85627637189996
+218472,,Prijedor,needs_fix,fixed_buffer0,1,202.74742136335743
+218553,,Prnjavor,needs_fix,fixed_buffer0,1,105.84955639255024
+218626,,Prnjavor,needs_fix,fixed_buffer0,1,73.56940884012009
+218642,,Prnjavor,needs_fix,fixed_buffer0,1,278.3139824633777
+218669,,Prnjavor,needs_fix,fixed_buffer0,1,266.2976205733923
+218707,,Prnjavor,needs_fix,fixed_buffer0,1,197.36428066046886
+218731,,Prnjavor,needs_fix,fixed_buffer0,1,125.90646672612843
+218740,,Prnjavor,needs_fix,fixed_buffer0,1,258.3019043120447
+218758,,Prnjavor,needs_fix,fixed_buffer0,1,236.70946595540437
+218774,,Prnjavor,needs_fix,fixed_buffer0,1,180.56372158520222
+218804,,Prnjavor,needs_fix,fixed_buffer0,1,89.56064584604397
+218847,,Prnjavor,needs_fix,fixed_buffer0,1,80.6028041270477
+218871,,Prnjavor,needs_fix,fixed_buffer0,1,22.996721720019465
+218901,,Prnjavor,needs_fix,fixed_buffer0,1,83.57241062983742
+218910,,Prnjavor,needs_fix,fixed_buffer0,1,30.052779821549617
+218987,,Prnjavor,needs_fix,fixed_buffer0,1,30.278149865500477
+219029,,Prnjavor,needs_fix,fixed_buffer0,1,43.8790308460986
+219061,,Prnjavor,needs_fix,fixed_buffer0,1,150.42683096364772
+219096,,Prnjavor,needs_fix,fixed_buffer0,1,57.26222799309481
+219100,,Prnjavor,needs_fix,fixed_buffer0,1,129.80606816676467
+219185,,Prnjavor,needs_fix,fixed_buffer0,1,43.49250473548817
+219207,,Prnjavor,needs_fix,fixed_buffer0,1,140.57328094329114
+137855,,Prozor,needs_fix,fixed_buffer0,1,64.00955342099022
+137910,,Prozor,needs_fix,fixed_buffer0,1,36.79439321167218
+137952,,Prozor,needs_fix,fixed_buffer0,1,107.29603049232243
+137987,,Prozor,needs_fix,fixed_buffer0,1,60.658246562280326
+137995,,Prozor,needs_fix,fixed_buffer0,1,241.35853546424633
+138029,,Prozor,needs_fix,fixed_buffer0,1,80.36650019961814
+138037,,Prozor,needs_fix,fixed_buffer0,1,54.43054430696817
+138070,,Prozor,needs_fix,fixed_buffer0,1,70.15943019695892
+138088,,Prozor,needs_fix,fixed_buffer0,1,33.49493270684394
+138207,,Prozor,needs_fix,fixed_buffer0,1,175.26310480099767
+138215,,Prozor,needs_fix,fixed_buffer0,1,24.578220351177016
+138258,,Prozor,needs_fix,fixed_buffer0,1,178.1003371690969
+138347,,Prozor,needs_fix,fixed_buffer0,1,80.37512970142618
+138355,,Prozor,needs_fix,fixed_buffer0,1,264.2543416748405
+153079,,Ravno,needs_fix,fixed_buffer0,1,101.85688955252121
+153346,,Ravno,needs_fix,fixed_buffer0,1,82.06011200101943
+153508,,Ravno,needs_fix,fixed_buffer0,1,57.61353175026094
+154288,,Ravno,needs_fix,fixed_buffer0,1,119.30854247820903
+154423,,Ravno,needs_fix,fixed_buffer0,1,166.88392460357252
+165743,,Ravno,needs_fix,fixed_buffer0,1,5.260580712982309
+165785,,Ravno,needs_fix,fixed_buffer0,1,4.906190625050076
+165808,,Ravno,needs_fix,fixed_buffer0,1,18.601511660639044
+165832,,Ravno,needs_fix,fixed_buffer0,1,9.215059433145228
+165972,,Ravno,needs_fix,fixed_buffer0,1,13.82177047904521
+166669,,Ravno,needs_fix,fixed_buffer0,1,14.640776444705603
+171212,,Ravno,needs_fix,fixed_buffer0,1,12.03902624851589
+219223,,Ribnik,needs_fix,fixed_buffer0,1,612.5028551004434
+219240,,Ribnik,needs_fix,fixed_buffer0,1,142.03935542740274
+219509,,Ribnik,needs_fix,fixed_buffer0,3,10.07746554328888
+219533,,Ribnik,needs_fix,fixed_buffer0,1,63.60265902060092
+219541,,Rogatica,needs_fix,fixed_buffer0,1,95.87543286160226
+219550,,Rogatica,needs_fix,fixed_buffer0,1,115.46182669732026
+219592,,Rogatica,needs_fix,fixed_buffer0,1,72.8908737340484
+219819,,Rogatica,needs_fix,fixed_buffer0,1,49.78412589270107
+220060,,Rogatica,needs_fix,fixed_buffer0,1,76.59403280301663
+220124,,Rogatica,needs_fix,fixed_buffer0,1,20.81647379645312
+220167,,Rogatica,needs_fix,fixed_buffer0,1,94.05862943511589
+220175,,Rogatica,needs_fix,fixed_buffer0,1,95.95176929889985
+220345,,Rogatica,needs_fix,fixed_buffer0,1,42.456175748001996
+220370,,Rogatica,needs_fix,fixed_buffer0,1,23.284969234668445
+220434,,Rogatica,needs_fix,fixed_buffer0,1,61.43283592099962
+220469,,Rogatica,needs_fix,fixed_buffer0,1,126.7563768421979
+220531,,Rogatica,needs_fix,fixed_buffer0,1,99.35716072929095
+220582,,Rogatica,needs_fix,fixed_buffer0,1,40.59284926020488
+220736,,Rogatica,needs_fix,fixed_buffer0,1,0.7548992181354242
+220825,,Rogatica,needs_fix,fixed_buffer0,1,22.736190964426562
+220914,,Rudo,needs_fix,fixed_buffer0,1,11.631808077701377
+220949,,Rudo,needs_fix,fixed_buffer0,1,49.72419966640028
+221007,,Rudo,needs_fix,fixed_buffer0,1,51.82414864100116
+221015,,Rudo,needs_fix,fixed_buffer0,1,60.224520501931075
+221031,,Rudo,needs_fix,fixed_buffer0,1,45.67342911524853
+221040,,Rudo,needs_fix,fixed_buffer0,1,44.12124662376538
+221074,,Rudo,needs_fix,fixed_buffer0,1,61.43781616325332
+221104,,Rudo,needs_fix,fixed_buffer0,1,5.39142956295128
+221112,,Rudo,needs_fix,fixed_buffer0,1,30.82373018889815
+221139,,Rudo,needs_fix,fixed_buffer0,1,16.54039011434932
+221155,,Rudo,needs_fix,fixed_buffer0,1,53.58891663024586
+221163,,Rudo,needs_fix,fixed_buffer0,1,30.343027428545827
+221171,,Rudo,needs_fix,fixed_buffer0,1,20.35864196735098
+221228,,Rudo,needs_fix,fixed_buffer0,1,16.373830088201363
+221295,,Rudo,needs_fix,fixed_buffer0,1,51.51365868185457
+221309,,Rudo,needs_fix,fixed_buffer0,1,70.48133562214869
+221376,,Rudo,needs_fix,fixed_buffer0,1,53.04861479615142
+221384,,Rudo,needs_fix,fixed_buffer0,1,22.809450603100196
+221546,,Rudo,needs_fix,fixed_buffer0,1,42.625186952401535
+221597,,Rudo,needs_fix,fixed_buffer0,1,114.6105781873728
+221635,,Rudo,needs_fix,fixed_buffer0,1,17.332816567752957
+221716,,Rudo,needs_fix,fixed_buffer0,1,53.437146892901225
+221759,,Rudo,needs_fix,fixed_buffer0,1,39.56941802534978
+141305,,Sanski Most,needs_fix,fixed_buffer0,1,67.66570220887463
+141399,,Sanski Most,needs_fix,fixed_buffer0,1,61.36986896557119
+141437,,Sanski Most,needs_fix,fixed_buffer0,1,35.094801003780724
+141500,,Sanski Most,needs_fix,fixed_buffer0,1,63.824291605928195
+141526,,Sanski Most,needs_fix,fixed_buffer0,1,102.04019942238861
+141666,,Sanski Most,needs_fix,fixed_buffer0,1,157.83200017134703
+141739,,Sanski Most,needs_fix,fixed_buffer0,1,421.02704986982627
+141810,,Sanski Most,needs_fix,fixed_buffer0,1,132.99113186067456
+141852,,Sanski Most,needs_fix,fixed_buffer0,1,118.96511070048203
+141895,,Sanski Most,needs_fix,fixed_buffer0,1,46.810078857233606
+141909,,Sanski Most,needs_fix,fixed_buffer0,1,187.36414781433734
+141968,,Sanski Most,needs_fix,fixed_buffer0,1,66.96798747591276
+165271,,Sanski Most,needs_fix,fixed_buffer0,1,53.69449043244499
+165999,,Sanski Most,needs_fix,fixed_buffer0,1,1.9602415185301763
+165883,,Sapna,needs_fix,fixed_buffer0,1,61.237169629400626
+166693,,Sapna,needs_fix,fixed_buffer0,1,2.9193907908528978
+171263,,Sapna,needs_fix,fixed_buffer0,1,76.06630875209264
+171328,,Sapna,needs_fix,fixed_buffer0,1,88.07795935618488
+229300,,Sekovici,needs_fix,fixed_buffer0,1,48.02569736659843
+229318,,Sekovici,needs_fix,fixed_buffer0,2,12.134123483900664
+229326,,Sekovici,needs_fix,fixed_buffer0,1,59.682321695898615
+229415,,Sekovici,needs_fix,fixed_buffer0,1,33.14323013532663
+229423,,Sekovici,needs_fix,fixed_buffer0,1,116.53356486030182
+229466,,Sekovici,needs_fix,fixed_buffer0,1,91.81777264976627
+229571,,Sekovici,needs_fix,fixed_buffer0,1,148.1985600248991
+229580,,Sekovici,needs_fix,fixed_buffer0,1,70.98157993165641
+229598,,Sekovici,needs_fix,fixed_buffer0,1,54.38537980578514
+229628,,Sekovici,needs_fix,fixed_buffer0,1,103.95837706006238
+229741,,Sipovo,needs_fix,fixed_buffer0,2,30.057091129049443
+229784,,Sipovo,needs_fix,fixed_buffer0,1,53.58042436044996
+229792,,Sipovo,needs_fix,fixed_buffer0,1,82.60222670679761
+229822,,Sipovo,needs_fix,fixed_buffer0,1,82.2457603650382
+229857,,Sipovo,needs_fix,fixed_buffer0,1,47.72398267932459
+229911,,Sipovo,needs_fix,fixed_buffer0,1,91.74990532981326
+229920,,Sipovo,needs_fix,fixed_buffer0,1,31.926562622158574
+229954,,Sipovo,needs_fix,fixed_buffer0,1,206.64614837565736
+229989,,Sipovo,needs_fix,fixed_buffer0,1,447.59936835305234
+230006,,Sipovo,needs_fix,fixed_buffer0,1,15.11150086049969
+230014,,Sipovo,needs_fix,fixed_buffer0,1,166.04656241105215
+230120,,Sipovo,needs_fix,fixed_buffer0,1,89.16947646328985
+230146,,Sipovo,needs_fix,fixed_buffer0,1,80.88442205479917
+129895,,Siroki Brijeg,needs_fix,fixed_buffer0,1,193.20766674742654
+129909,,Siroki Brijeg,needs_fix,fixed_buffer0,1,50.02700186082246
+129968,,Siroki Brijeg,needs_fix,fixed_buffer0,1,95.19103113342977
+129984,,Siroki Brijeg,needs_fix,fixed_buffer0,1,104.4130201359008
+130044,,Siroki Brijeg,needs_fix,fixed_buffer0,1,94.58802033401017
+130109,,Siroki Brijeg,needs_fix,fixed_buffer0,1,21.537639258676833
+130117,,Siroki Brijeg,needs_fix,fixed_buffer0,1,168.5573867765971
+130125,,Siroki Brijeg,needs_fix,fixed_buffer0,1,161.87034650412593
+130176,,Siroki Brijeg,needs_fix,fixed_buffer0,1,70.56644031598454
+130192,,Siroki Brijeg,needs_fix,fixed_buffer0,1,57.71729914148757
+130206,,Siroki Brijeg,needs_fix,fixed_buffer0,1,45.2387685479281
+166103,,Siroki Brijeg,needs_fix,fixed_buffer0,1,97.27720397262138
+221813,,Sokolac,needs_fix,fixed_buffer0,1,101.74943989890075
+221902,,Sokolac,needs_fix,fixed_buffer0,1,94.76015068100169
+221929,,Sokolac,needs_fix,fixed_buffer0,1,29.199878190545675
+221945,,Sokolac,needs_fix,fixed_buffer0,1,44.905253814348335
+221953,,Sokolac,needs_fix,fixed_buffer0,2,78.25226875099914
+221988,,Sokolac,needs_fix,fixed_buffer0,1,78.12939927809981
+221996,,Sokolac,needs_fix,fixed_buffer0,1,79.2276798823526
+222011,,Sokolac,needs_fix,fixed_buffer0,1,190.588590317047
+222038,,Sokolac,needs_fix,fixed_buffer0,1,84.72568311115113
+222046,,Sokolac,needs_fix,fixed_buffer0,1,83.77656236104899
+222135,,Sokolac,needs_fix,fixed_buffer0,1,201.47482688509683
+222143,,Sokolac,needs_fix,fixed_buffer0,1,52.53194579905372
+222194,,Sokolac,needs_fix,fixed_buffer0,1,35.446156168800215
+222208,,Sokolac,needs_fix,fixed_buffer0,1,45.123647091803164
+222224,,Sokolac,needs_fix,fixed_buffer0,1,98.89664943149444
+222232,,Sokolac,needs_fix,fixed_buffer0,1,39.548313896097994
+222291,,Sokolac,needs_fix,fixed_buffer0,1,38.348256239848084
+222429,,Sokolac,needs_fix,fixed_buffer0,1,90.43648341044722
+222569,,Sokolac,needs_fix,fixed_buffer0,1,69.41361317902904
+222577,,Sokolac,needs_fix,fixed_buffer0,1,33.04752602084599
+222623,,Sokolac,needs_fix,fixed_buffer0,1,62.012402183500036
+222780,,Sokolac,needs_fix,fixed_buffer0,1,75.27020732709927
+222801,,Sokolac,needs_fix,fixed_buffer0,1,132.67532507610773
+222828,,Sokolac,needs_fix,fixed_buffer0,1,59.44868346249986
+222844,,Sokolac,needs_fix,fixed_buffer0,1,164.60064300235044
+222917,,Srbac,needs_fix,fixed_buffer0,1,84.76229105089989
+222941,,Srbac,needs_fix,fixed_buffer0,1,138.16404390444944
+222976,,Srbac,needs_fix,fixed_buffer0,1,109.37575992540128
+223018,,Srbac,needs_fix,fixed_buffer0,1,342.39586390548635
+223034,,Srbac,needs_fix,fixed_buffer0,1,176.91609911477445
+223069,,Srbac,needs_fix,fixed_buffer0,1,37.97914061115049
+223140,,Srbac,needs_fix,fixed_buffer0,1,116.46675341191596
+223166,,Srbac,needs_fix,fixed_buffer0,1,267.9123879784933
+223182,,Srbac,needs_fix,fixed_buffer0,1,109.7810881610998
+223204,,Srbac,needs_fix,fixed_buffer0,1,131.42363429519747
+223247,,Srbac,needs_fix,fixed_buffer0,1,279.2796670205473
+223255,,Srbac,needs_fix,fixed_buffer0,1,11.963766014405847
+223263,,Srbac,needs_fix,fixed_buffer0,1,29.359814257622066
+223336,,Srebrenica,needs_fix,fixed_buffer0,1,71.40709429533383
+223344,,Srebrenica,needs_fix,fixed_buffer0,1,53.65564808185458
+223425,,Srebrenica,needs_fix,fixed_buffer0,1,20.846144038581958
+223484,,Srebrenica,needs_fix,fixed_buffer0,1,36.57862402525327
+223549,,Srebrenica,needs_fix,fixed_buffer0,1,37.6374153856979
+223557,,Srebrenica,needs_fix,fixed_buffer0,1,41.083920661003084
+223565,,Srebrenica,needs_fix,fixed_buffer0,1,56.22924333054886
+223590,,Srebrenica,needs_fix,fixed_buffer0,1,27.760664376792263
+223654,,Srebrenica,needs_fix,fixed_buffer0,1,278.3145517855476
+223697,,Srebrenica,needs_fix,fixed_buffer0,1,75.97631652490207
+223751,,Srebrenica,needs_fix,fixed_buffer0,1,183.8120027992925
+223760,,Srebrenica,needs_fix,fixed_buffer0,1,24.088280033944987
+223875,,Srebrenica,needs_fix,fixed_buffer0,1,36.15171496619989
+223891,,Srebrenica,needs_fix,fixed_buffer0,1,271.55035950514815
+223913,,Srebrenica,needs_fix,fixed_buffer0,1,56.76426964471409
+223930,,Srebrenica,needs_fix,fixed_buffer0,1,25.550036425958126
+223964,,Srebrenica,needs_fix,fixed_buffer0,1,131.15499156418778
+223999,,Srebrenica,needs_fix,fixed_buffer0,1,44.44087554695274
+224014,,Srebrenica,needs_fix,fixed_buffer0,1,103.28620244261454
+224022,,Srebrenica,needs_fix,fixed_buffer0,1,31.003229555001834
+224057,,Srebrenica,needs_fix,fixed_buffer0,1,41.321603405193734
+224081,,Srebrenica,needs_fix,fixed_buffer0,1,40.73794296658022
+224138,,Srebrenica,needs_fix,fixed_buffer0,1,28.636976729998594
+224162,,Srebrenica,needs_fix,fixed_buffer0,1,66.13439647524066
+224189,,Srebrenica,needs_fix,fixed_buffer0,1,46.76248983884165
+148725,,Srebrenik,needs_fix,fixed_buffer0,1,44.26400642544256
+148741,,Srebrenik,needs_fix,fixed_buffer0,1,8.914485925424746
+148768,,Srebrenik,needs_fix,fixed_buffer0,1,26.181872055381152
+148822,,Srebrenik,needs_fix,fixed_buffer0,1,29.479874354219685
+148911,,Srebrenik,needs_fix,fixed_buffer0,1,49.395522606163425
+148946,,Srebrenik,needs_fix,fixed_buffer0,1,37.25602554244174
+148954,,Srebrenik,needs_fix,fixed_buffer0,1,201.3624424587449
+149004,,Srebrenik,needs_fix,fixed_buffer0,1,18.093215866017363
+149012,,Srebrenik,needs_fix,fixed_buffer0,1,15.968530170596777
+149047,,Srebrenik,needs_fix,fixed_buffer0,1,4.102181269736073
+149055,,Srebrenik,needs_fix,fixed_buffer0,1,47.07063144550064
+149098,,Srebrenik,needs_fix,fixed_buffer0,1,76.36829960759057
+149179,,Srebrenik,needs_fix,fixed_buffer0,1,147.41716610079783
+149187,,Srebrenik,needs_fix,fixed_buffer0,1,94.5234245386605
+149209,,Srebrenik,needs_fix,fixed_buffer0,1,55.36046099885754
+149217,,Srebrenik,needs_fix,fixed_buffer0,1,21.562202935278272
+149233,,Srebrenik,needs_fix,fixed_buffer0,1,35.96635552993266
+144959,,Stari Grad Sarajevo,needs_fix,fixed_buffer0,1,11.022141918436155
+145068,,Stari Grad Sarajevo,needs_fix,fixed_buffer0,1,137.65350684691612
+166073,,Stari Grad Sarajevo,needs_fix,fixed_buffer0,1,19.784371947941676
+170763,,Stari Grad Sarajevo,needs_fix,fixed_buffer0,1,68.34947394333714
+149241,,Stolac,needs_fix,fixed_buffer0,1,67.40607258466929
+149462,,Stolac,needs_fix,fixed_buffer0,1,74.20594569575708
+149543,,Stolac,needs_fix,fixed_buffer0,1,105.1945492775206
+149608,,Stolac,needs_fix,fixed_buffer0,1,124.63952462136876
+165476,,Stolac,needs_fix,fixed_buffer0,1,18.06211168579366
+165484,,Stolac,needs_fix,fixed_buffer0,1,60.88056495668364
+165506,,Stolac,needs_fix,fixed_buffer0,1,1.2639434364112747
+170917,,Stolac,needs_fix,fixed_buffer0,2,11.53270544914995
+170968,,Stolac,needs_fix,fixed_buffer0,1,152.24169363568495
+155756,,Teocak,needs_fix,fixed_buffer0,1,35.129630060387285
+171397,,Teocak,needs_fix,fixed_buffer0,1,36.24415405572361
+171417,,Teocak,needs_fix,fixed_buffer0,1,30.754019790124623
+150975,,Tesanj,needs_fix,fixed_buffer0,1,14.262837924776711
+150983,,Tesanj,needs_fix,fixed_buffer0,1,29.564146162680792
+151009,,Tesanj,needs_fix,fixed_buffer0,1,19.69890873542441
+151025,,Tesanj,needs_fix,fixed_buffer0,1,14.33595225851661
+151050,,Tesanj,needs_fix,fixed_buffer0,1,31.513584638480083
+151068,,Tesanj,needs_fix,fixed_buffer0,1,20.356988758569962
+151122,,Tesanj,needs_fix,fixed_buffer0,1,43.10868588730683
+151149,,Tesanj,needs_fix,fixed_buffer0,1,21.781258214146508
+151211,,Tesanj,needs_fix,fixed_buffer0,1,57.09414076958032
+151327,,Tesanj,needs_fix,fixed_buffer0,1,34.008135331551216
+151351,,Tesanj,needs_fix,fixed_buffer0,1,85.91808598070354
+151386,,Tesanj,needs_fix,fixed_buffer0,1,82.71085619953213
+151424,,Tesanj,needs_fix,fixed_buffer0,1,22.226914016977627
+166189,,Tesanj,needs_fix,fixed_buffer0,1,56.431066825424665
+166197,,Tesanj,needs_fix,fixed_buffer0,1,12.55887370024989
+166219,,Tesanj,needs_fix,fixed_buffer0,1,41.29320682584285
+166227,,Tesanj,needs_fix,fixed_buffer0,1,43.7802972438947
+171018,,Tesanj,needs_fix,fixed_buffer0,1,19.627487178035103
+224219,,Teslic,needs_fix,fixed_buffer0,1,8.998005105000486
+224243,,Teslic,needs_fix,fixed_buffer0,1,181.04398297553223
+224251,,Teslic,needs_fix,fixed_buffer0,1,25.91623652436905
+224286,,Teslic,needs_fix,fixed_buffer0,1,361.3546382626032
+224294,,Teslic,needs_fix,fixed_buffer0,1,127.05244661631063
+224324,,Teslic,needs_fix,fixed_buffer0,1,151.52519072560148
+224367,,Teslic,needs_fix,fixed_buffer0,1,85.81715759703505
+224375,,Teslic,needs_fix,fixed_buffer0,1,61.95975577476412
+224383,,Teslic,needs_fix,fixed_buffer0,1,17.254892078998132
+224405,,Teslic,needs_fix,fixed_buffer0,1,184.88295181404897
+224456,,Teslic,needs_fix,fixed_buffer0,1,67.56169588124244
+224464,,Teslic,needs_fix,fixed_buffer0,1,57.29348709080003
+224472,,Teslic,needs_fix,fixed_buffer0,1,149.71384216695205
+224537,,Teslic,needs_fix,fixed_buffer0,1,137.8161308748994
+224545,,Teslic,needs_fix,fixed_buffer0,1,278.5399447750053
+224596,,Teslic,needs_fix,fixed_buffer0,1,83.58450122186998
+224600,,Teslic,needs_fix,fixed_buffer0,1,179.44128002070042
+224693,,Teslic,needs_fix,fixed_buffer0,1,94.53941430634907
+224723,,Teslic,needs_fix,fixed_buffer0,1,1.309225678763566
+224812,,Teslic,needs_fix,fixed_buffer0,1,43.31477584618254
+113565,,Tomislavgrad,needs_fix,fixed_buffer0,1,61.37459561268649
+113638,,Tomislavgrad,needs_fix,fixed_buffer0,1,232.82068925447265
+113646,,Tomislavgrad,needs_fix,fixed_buffer0,1,27.595546887927274
+113654,,Tomislavgrad,needs_fix,fixed_buffer0,1,168.47685287725648
+113719,,Tomislavgrad,needs_fix,fixed_buffer0,2,89.94231870954998
+113735,,Tomislavgrad,needs_fix,fixed_buffer0,1,76.60189462540525
+113786,,Tomislavgrad,needs_fix,fixed_buffer0,1,229.8918157297699
+113808,,Tomislavgrad,needs_fix,fixed_buffer0,1,103.02518364737325
+113913,,Tomislavgrad,needs_fix,fixed_buffer0,1,67.72946179718637
+113948,,Tomislavgrad,needs_fix,fixed_buffer0,1,91.1499386040612
+113956,,Tomislavgrad,needs_fix,fixed_buffer0,1,158.03658248673412
+113964,,Tomislavgrad,needs_fix,fixed_buffer0,1,190.08247148555776
+113999,,Tomislavgrad,needs_fix,fixed_buffer0,1,56.13909785862156
+114049,,Tomislavgrad,needs_fix,fixed_buffer0,1,251.22472616105244
+114073,,Tomislavgrad,needs_fix,fixed_buffer0,1,162.11106771888308
+151874,,Travnik,needs_fix,fixed_buffer0,1,7.911446007632844
+151882,,Travnik,needs_fix,fixed_buffer0,1,94.39094160527993
+151947,,Travnik,needs_fix,fixed_buffer0,1,10.062891629854644
+151963,,Travnik,needs_fix,fixed_buffer0,1,77.21070908619346
+151971,,Travnik,needs_fix,fixed_buffer0,1,126.50960788568125
+151998,,Travnik,needs_fix,fixed_buffer0,1,4.865105174940276
+152048,,Travnik,needs_fix,fixed_buffer0,1,98.74377948586587
+152099,,Travnik,needs_fix,fixed_buffer0,1,136.93878976784197
+152129,,Travnik,needs_fix,fixed_buffer0,1,103.0469831231515
+152153,,Travnik,needs_fix,fixed_buffer0,1,36.682902895032534
+152170,,Travnik,needs_fix,fixed_buffer0,1,34.21845409104944
+152242,,Travnik,needs_fix,fixed_buffer0,1,4.839663731772472
+152269,,Travnik,needs_fix,fixed_buffer0,1,7.867414887085533
+152277,,Travnik,needs_fix,fixed_buffer0,1,15.667669492156842
+152293,,Travnik,needs_fix,fixed_buffer0,1,2.779399824233864
+152382,,Travnik,needs_fix,fixed_buffer0,1,6.726875404741233
+152480,,Travnik,needs_fix,fixed_buffer0,1,10.992112356867663
+152501,,Travnik,needs_fix,fixed_buffer0,1,24.723953246427417
+152587,,Travnik,needs_fix,fixed_buffer0,1,17.086604515126226
+152617,,Travnik,needs_fix,fixed_buffer0,1,101.54351807412945
+152633,,Travnik,needs_fix,fixed_buffer0,1,85.38410890630095
+152641,,Travnik,needs_fix,fixed_buffer0,1,21.34867943203186
+152668,,Travnik,needs_fix,fixed_buffer0,1,17.83094245777631
+152706,,Travnik,needs_fix,fixed_buffer0,1,22.435236840548214
+152757,,Travnik,needs_fix,fixed_buffer0,1,31.850873059109635
+152765,,Travnik,needs_fix,fixed_buffer0,1,28.57419082848991
+152790,,Travnik,needs_fix,fixed_buffer0,1,19.46502972351536
+152820,,Travnik,needs_fix,fixed_buffer0,1,140.67257733170538
+165565,,Travnik,needs_fix,fixed_buffer0,1,23.902834559761352
+171034,,Travnik,needs_fix,fixed_buffer0,1,349.4781795687659
+171042,,Travnik,needs_fix,fixed_buffer0,1,68.82814972747545
+224855,,Trebinje,needs_fix,fixed_buffer0,1,108.45152176641851
+224898,,Trebinje,needs_fix,fixed_buffer0,1,22.107743387023614
+224928,,Trebinje,needs_fix,fixed_buffer0,1,59.20046251737904
+225002,,Trebinje,needs_fix,fixed_buffer0,1,26.45418921505027
+225029,,Trebinje,needs_fix,fixed_buffer0,1,24.082261811723875
+225100,,Trebinje,needs_fix,fixed_buffer0,1,247.28686240903997
+225169,,Trebinje,needs_fix,fixed_buffer0,1,127.07953636977821
+225177,,Trebinje,needs_fix,fixed_buffer0,1,119.31805470639429
+225231,,Trebinje,needs_fix,fixed_buffer0,1,28.987929704710197
+225371,,Trebinje,needs_fix,fixed_buffer0,1,29.155215738648664
+225401,,Trebinje,needs_fix,fixed_buffer0,1,72.59546604886808
+225428,,Trebinje,needs_fix,fixed_buffer0,1,56.10388357254672
+225436,,Trebinje,needs_fix,fixed_buffer0,1,34.54069219897282
+225584,,Trebinje,needs_fix,fixed_buffer0,1,90.01269966644715
+225673,,Trebinje,needs_fix,fixed_buffer0,1,31.539933618702037
+225762,,Trebinje,needs_fix,fixed_buffer0,1,13.790606133999946
+225789,,Trebinje,needs_fix,fixed_buffer0,1,47.551766019499375
+225819,,Trebinje,needs_fix,fixed_buffer0,1,41.17391795240523
+225835,,Trebinje,needs_fix,fixed_buffer0,1,39.14916549065038
+225991,,Trebinje,needs_fix,fixed_buffer0,1,74.43452359247678
+226017,,Trebinje,needs_fix,fixed_buffer0,1,38.90450427138441
+226033,,Trebinje,needs_fix,fixed_buffer0,1,28.311465175688017
+226114,,Trebinje,needs_fix,fixed_buffer0,1,73.26190969085285
+226165,,Trebinje,needs_fix,fixed_buffer0,1,242.7048619143145
+226190,,Trebinje,needs_fix,fixed_buffer0,1,50.90542921103699
+226238,,Trebinje,needs_fix,fixed_buffer0,1,47.02299423967929
+226262,,Trebinje,needs_fix,fixed_buffer0,1,169.3417248743499
+145173,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,73.30668982146362
+145289,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,8.318406348940446
+145459,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,21.924704109895472
+145505,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,40.085801776622205
+145564,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,6.223763823253335
+145572,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,19.893435420191917
+145602,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,171.573890673442
+145629,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,5.805384600954734
+145637,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,56.11661771106017
+145742,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,63.60415844051233
+145793,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,137.12140347204738
+165417,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,19.223835186679466
+165433,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,15.282466823689752
+170780,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,33.61552129114493
+170801,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,64.4878112346134
+170828,,Trnovo (FBiH),needs_fix,fixed_buffer0,1,50.60937041934688
+226378,,Trnovo (RS),needs_fix,fixed_buffer0,1,65.81980843564737
+226386,,Trnovo (RS),needs_fix,fixed_buffer0,1,51.49421348844284
+226424,,Trnovo (RS),needs_fix,fixed_buffer0,1,64.92886370758781
+226432,,Trnovo (RS),needs_fix,fixed_buffer0,1,85.13209208677301
+226459,,Trnovo (RS),needs_fix,fixed_buffer0,1,126.86488072134388
+226505,,Trnovo (RS),needs_fix,fixed_buffer0,1,13.09251458705005
+226564,,Trnovo (RS),needs_fix,fixed_buffer0,1,38.629315982366094
+226629,,Trnovo (RS),needs_fix,fixed_buffer0,1,43.42977284907565
+226645,,Trnovo (RS),needs_fix,fixed_buffer0,1,54.617338145648745
+154792,,Tuzla,needs_fix,fixed_buffer0,1,11.626711822430446
+154806,,Tuzla,needs_fix,fixed_buffer0,1,91.19710817691075
+154822,,Tuzla,needs_fix,fixed_buffer0,1,19.175000032175127
+154890,,Tuzla,needs_fix,fixed_buffer0,1,59.38816283058709
+154989,,Tuzla,needs_fix,fixed_buffer0,1,31.993274065584274
+154997,,Tuzla,needs_fix,fixed_buffer0,1,41.558658427839404
+155080,,Tuzla,needs_fix,fixed_buffer0,1,59.12442147442051
+155110,,Tuzla,needs_fix,fixed_buffer0,1,12.921484230607362
+155128,,Tuzla,needs_fix,fixed_buffer0,1,22.429894840114137
+155195,,Tuzla,needs_fix,fixed_buffer0,1,46.935533989579
+155217,,Tuzla,needs_fix,fixed_buffer0,1,23.969176679672405
+155276,,Tuzla,needs_fix,fixed_buffer0,1,47.13606413722972
+155314,,Tuzla,needs_fix,fixed_buffer0,1,34.162828910176806
+155349,,Tuzla,needs_fix,fixed_buffer0,1,31.47493451798096
+155357,,Tuzla,needs_fix,fixed_buffer0,1,16.54008667806634
+155381,,Tuzla,needs_fix,fixed_buffer0,1,31.336047994953798
+155390,,Tuzla,needs_fix,fixed_buffer0,1,31.024842861795502
+155411,,Tuzla,needs_fix,fixed_buffer0,1,87.2641374687254
+155438,,Tuzla,needs_fix,fixed_buffer0,1,34.469088607839694
+155497,,Tuzla,needs_fix,fixed_buffer0,1,23.625242755612724
+155551,,Tuzla,needs_fix,fixed_buffer0,1,445.90933023917114
+165581,,Tuzla,needs_fix,fixed_buffer0,1,16.72284819808011
+166243,,Tuzla,needs_fix,fixed_buffer0,1,39.03939042803153
+171085,,Tuzla,needs_fix,fixed_buffer0,1,47.308676422564396
+226670,,Ugljevik,needs_fix,fixed_buffer0,1,145.9367959655042
+226688,,Ugljevik,needs_fix,fixed_buffer0,1,35.86166461935065
+226718,,Ugljevik,needs_fix,fixed_buffer0,1,41.56810738964818
+226734,,Ugljevik,needs_fix,fixed_buffer0,1,36.990878859540004
+226769,,Ugljevik,needs_fix,fixed_buffer0,2,29.46422056634982
+226777,,Ugljevik,needs_fix,fixed_buffer0,1,113.88270585836518
+226793,,Ugljevik,needs_fix,fixed_buffer0,1,74.51459419179913
+226807,,Ugljevik,needs_fix,fixed_buffer0,1,43.514610361797985
+226823,,Ugljevik,needs_fix,fixed_buffer0,1,10.686271704457058
+226840,,Ugljevik,needs_fix,fixed_buffer0,1,115.04311259356267
+226858,,Ugljevik,needs_fix,fixed_buffer0,1,25.54984152524011
+226866,,Ugljevik,needs_fix,fixed_buffer0,1,153.39810726749718
+226874,,Ugljevik,needs_fix,fixed_buffer0,1,61.50366132399119
+226882,,Ugljevik,needs_fix,fixed_buffer0,2,35.841299801546874
+226912,,Ugljevik,needs_fix,fixed_buffer0,1,151.19836999164588
+111953,,Usora,needs_fix,fixed_buffer0,1,51.217382059526464
+151343,,Usora,needs_fix,fixed_buffer0,1,54.25657532602485
+166529,,Usora,needs_fix,fixed_buffer0,1,69.08682391228544
+155888,,Vares,needs_fix,fixed_buffer0,1,21.856096663929293
+155896,,Vares,needs_fix,fixed_buffer0,1,31.78678593151063
+155900,,Vares,needs_fix,fixed_buffer0,1,39.94829931920221
+155926,,Vares,needs_fix,fixed_buffer0,1,153.71418904003005
+155977,,Vares,needs_fix,fixed_buffer0,1,134.1473388525449
+155993,,Vares,needs_fix,fixed_buffer0,1,16.168103758592185
+156019,,Vares,needs_fix,fixed_buffer0,1,10.377434211526984
+156027,,Vares,needs_fix,fixed_buffer0,1,31.021999153771375
+156205,,Vares,needs_fix,fixed_buffer0,1,29.086468579196953
+156221,,Vares,needs_fix,fixed_buffer0,1,8.26902178958771
+156299,,Vares,needs_fix,fixed_buffer0,1,7.890723849278683
+156370,,Vares,needs_fix,fixed_buffer0,1,49.55445706530927
+156388,,Vares,needs_fix,fixed_buffer0,1,37.18319926469507
+156400,,Vares,needs_fix,fixed_buffer0,1,10.601592677638235
+156434,,Vares,needs_fix,fixed_buffer0,1,7.211903195228008
+156469,,Vares,needs_fix,fixed_buffer0,1,22.490398152524516
+156477,,Vares,needs_fix,fixed_buffer0,1,7.144169611959427
+156523,,Vares,needs_fix,fixed_buffer0,1,91.79666864088517
+156558,,Vares,needs_fix,fixed_buffer0,1,8.206314203210253
+156566,,Vares,needs_fix,fixed_buffer0,1,66.38005576640732
+156639,,Vares,needs_fix,fixed_buffer0,1,12.689519445528536
+156655,,Vares,needs_fix,fixed_buffer0,1,29.20766001723243
+156663,,Vares,needs_fix,fixed_buffer0,1,26.677663135206434
+156698,,Vares,needs_fix,fixed_buffer0,1,114.58886390504917
+156779,,Vares,needs_fix,fixed_buffer0,1,14.165870347517988
+156817,,Vares,needs_fix,fixed_buffer0,1,40.69937968604616
+145840,,Velika Kladusa,needs_fix,fixed_buffer0,1,55.240489308282115
+145874,,Velika Kladusa,needs_fix,fixed_buffer0,1,69.47456950740495
+146021,,Velika Kladusa,needs_fix,fixed_buffer0,1,20.481065740562865
+156833,,Velika Kladusa,needs_fix,fixed_buffer0,1,30.758929329977054
+156868,,Velika Kladusa,needs_fix,fixed_buffer0,1,55.60886593487581
+156906,,Velika Kladusa,needs_fix,fixed_buffer0,1,47.634100083466855
+156922,,Velika Kladusa,needs_fix,fixed_buffer0,1,61.33808224123295
+156965,,Velika Kladusa,needs_fix,fixed_buffer0,1,62.76084865023967
+157015,,Velika Kladusa,needs_fix,fixed_buffer0,1,67.78586405906637
+157058,,Velika Kladusa,needs_fix,fixed_buffer0,1,47.05483253528885
+157112,,Velika Kladusa,needs_fix,fixed_buffer0,1,40.82153806548985
+157147,,Velika Kladusa,needs_fix,fixed_buffer0,1,125.36357388630549
+157163,,Velika Kladusa,needs_fix,fixed_buffer0,1,74.5348311397228
+157180,,Velika Kladusa,needs_fix,fixed_buffer0,1,208.79701050844776
+157236,,Velika Kladusa,needs_fix,fixed_buffer0,1,87.94418112096973
+157244,,Velika Kladusa,needs_fix,fixed_buffer0,1,66.00525237344098
+157252,,Velika Kladusa,needs_fix,fixed_buffer0,1,94.85874261777117
+157341,,Velika Kladusa,needs_fix,fixed_buffer0,1,135.38437802880955
+203009,,Visegrad,needs_fix,fixed_buffer0,1,16.110571456199413
+203017,,Visegrad,needs_fix,fixed_buffer0,1,13.236762851899988
+203041,,Visegrad,needs_fix,fixed_buffer0,1,17.60325782209699
+203050,,Visegrad,needs_fix,fixed_buffer0,1,22.510681713750813
+203068,,Visegrad,needs_fix,fixed_buffer0,1,3.3551277654001836
+203122,,Visegrad,needs_fix,fixed_buffer0,1,16.161435733750032
+203149,,Visegrad,needs_fix,fixed_buffer0,1,7.834668123950707
+203181,,Visegrad,needs_fix,fixed_buffer0,1,58.94403539845317
+203190,,Visegrad,needs_fix,fixed_buffer0,1,26.753593853998616
+203203,,Visegrad,needs_fix,fixed_buffer0,1,45.43653707369969
+203211,,Visegrad,needs_fix,fixed_buffer0,1,42.924657117353036
+203319,,Visegrad,needs_fix,fixed_buffer0,1,46.760346674047604
+203378,,Visegrad,needs_fix,fixed_buffer0,1,30.58700649699696
+203483,,Visegrad,needs_fix,fixed_buffer0,1,6.939598962299707
+203530,,Visegrad,needs_fix,fixed_buffer0,1,43.57414057274856
+203602,,Visegrad,needs_fix,fixed_buffer0,1,13.462712104061758
+203629,,Visegrad,needs_fix,fixed_buffer0,1,57.08331760889998
+203670,,Visegrad,needs_fix,fixed_buffer0,1,4.762945724899706
+203696,,Visegrad,needs_fix,fixed_buffer0,1,29.123489920298624
+203700,,Visegrad,needs_fix,fixed_buffer0,1,26.262773656001094
+203742,,Visegrad,needs_fix,fixed_buffer0,1,11.847709933684005
+203777,,Visegrad,needs_fix,fixed_buffer0,1,9.459441650824315
+203785,,Visegrad,needs_fix,fixed_buffer0,1,61.008424403696004
+203807,,Visegrad,needs_fix,fixed_buffer0,1,38.95159932789246
+203815,,Visegrad,needs_fix,fixed_buffer0,1,35.41591196099967
+203858,,Visegrad,needs_fix,fixed_buffer0,1,43.05142803194788
+203866,,Visegrad,needs_fix,fixed_buffer0,1,59.21539189514985
+203874,,Visegrad,needs_fix,fixed_buffer0,1,14.591838492414478
+203955,,Visegrad,needs_fix,fixed_buffer0,1,50.38966964689927
+204005,,Visegrad,needs_fix,fixed_buffer0,1,33.256711055001446
+204013,,Visegrad,needs_fix,fixed_buffer0,1,26.08866646479884
+204030,,Visegrad,needs_fix,fixed_buffer0,1,14.877198634191569
+204072,,Visegrad,needs_fix,fixed_buffer0,1,78.8172238245328
+204102,,Visegrad,needs_fix,fixed_buffer0,1,14.162179498500517
+204137,,Visegrad,needs_fix,fixed_buffer0,1,20.06383731736899
+204145,,Visegrad,needs_fix,fixed_buffer0,1,103.24631980969262
+204161,,Visegrad,needs_fix,fixed_buffer0,1,44.68014359009192
+204170,,Visegrad,needs_fix,fixed_buffer0,1,6.612381370898943
+204188,,Visegrad,needs_fix,fixed_buffer0,1,53.74689076305316
+204242,,Visegrad,needs_fix,fixed_buffer0,1,5.57443358995113
+204277,,Visegrad,needs_fix,fixed_buffer0,1,5.36792019369434
+204285,,Visegrad,needs_fix,fixed_buffer0,1,19.435651523249817
+204323,,Visegrad,needs_fix,fixed_buffer0,1,19.925555006452118
+204382,,Visegrad,needs_fix,fixed_buffer0,1,65.76255443205169
+204404,,Visegrad,needs_fix,fixed_buffer0,1,25.2710349731499
+204439,,Visegrad,needs_fix,fixed_buffer0,1,15.453633478649458
+204480,,Visegrad,needs_fix,fixed_buffer0,1,12.367264769899691
+204498,,Visegrad,needs_fix,fixed_buffer0,1,15.062032382000375
+204501,,Visegrad,needs_fix,fixed_buffer0,1,40.9922013616004
+204510,,Visegrad,needs_fix,fixed_buffer0,1,136.88049505159728
+204552,,Visegrad,needs_fix,fixed_buffer0,1,63.45042785235481
+204587,,Visegrad,needs_fix,fixed_buffer0,1,14.980503828600135
+204676,,Visegrad,needs_fix,fixed_buffer0,1,46.32699559062893
+204692,,Visegrad,needs_fix,fixed_buffer0,1,61.43616285924782
+204706,,Visegrad,needs_fix,fixed_buffer0,1,1.2604939596791296
+157449,,Visoko,needs_fix,fixed_buffer0,1,41.409427140679284
+157503,,Visoko,needs_fix,fixed_buffer0,1,5.966794343657852
+157686,,Visoko,needs_fix,fixed_buffer0,1,49.904501418259976
+157694,,Visoko,needs_fix,fixed_buffer0,1,14.219824578713444
+157732,,Visoko,needs_fix,fixed_buffer0,1,20.820965753660225
+157805,,Visoko,needs_fix,fixed_buffer0,1,66.33647338970675
+157856,,Visoko,needs_fix,fixed_buffer0,1,19.092547823843727
+157899,,Visoko,needs_fix,fixed_buffer0,1,41.978083571932366
+157996,,Visoko,needs_fix,fixed_buffer0,1,74.75953391089057
+158143,,Visoko,needs_fix,fixed_buffer0,1,34.21192083222006
+158178,,Visoko,needs_fix,fixed_buffer0,1,11.920516050378676
+158194,,Visoko,needs_fix,fixed_buffer0,1,56.03730690389456
+158224,,Visoko,needs_fix,fixed_buffer0,1,10.620918328681187
+158283,,Visoko,needs_fix,fixed_buffer0,1,13.88567347344002
+158305,,Visoko,needs_fix,fixed_buffer0,1,6.033752225474706
+160237,,Vitez,needs_fix,fixed_buffer0,1,18.555410603949618
+160245,,Vitez,needs_fix,fixed_buffer0,1,32.131850075573226
+160261,,Vitez,needs_fix,fixed_buffer0,1,676.9518472762177
+160270,,Vitez,needs_fix,fixed_buffer0,1,14.172028496156845
+160296,,Vitez,needs_fix,fixed_buffer0,1,28.978051770116632
+160342,,Vitez,needs_fix,fixed_buffer0,1,11.596295660766604
+160407,,Vitez,needs_fix,fixed_buffer0,1,17.342328841265715
+160423,,Vitez,needs_fix,fixed_buffer0,1,28.474749710480406
+204927,,Vlasenica,needs_fix,fixed_buffer0,1,30.656557228739715
+204943,,Vlasenica,needs_fix,fixed_buffer0,1,88.38608675679701
+204951,,Vlasenica,needs_fix,fixed_buffer0,1,26.491482778811935
+205010,,Vlasenica,needs_fix,fixed_buffer0,1,87.10295821779705
+205044,,Vlasenica,needs_fix,fixed_buffer0,1,47.98243770769678
+205125,,Vlasenica,needs_fix,fixed_buffer0,1,16.079806229320916
+205141,,Vlasenica,needs_fix,fixed_buffer0,1,49.56315203984802
+205206,,Vukosavlje,needs_fix,fixed_buffer0,2,28.010453136009495
+205214,,Vukosavlje,needs_fix,fixed_buffer0,1,23.84413609617929
+205222,,Vukosavlje,needs_fix,fixed_buffer0,1,42.6486181007001
+205249,,Vukosavlje,needs_fix,fixed_buffer0,1,121.62420614904414
+205265,,Vukosavlje,needs_fix,fixed_buffer0,1,112.1281733311521
+205273,,Vukosavlje,needs_fix,fixed_buffer0,1,100.26672659976157
+205281,,Vukosavlje,needs_fix,fixed_buffer0,2,19.404582030850325
+205290,,Vukosavlje,needs_fix,fixed_buffer0,1,111.85610992269717
+205303,,Vukosavlje,needs_fix,fixed_buffer0,1,48.99592757100158
+161527,,Zavidovici,needs_fix,fixed_buffer0,1,16.77315898567571
+161578,,Zavidovici,needs_fix,fixed_buffer0,1,99.52328406845673
+161608,,Zavidovici,needs_fix,fixed_buffer0,1,40.19488058582341
+161667,,Zavidovici,needs_fix,fixed_buffer0,1,2.173865702291521
+161713,,Zavidovici,needs_fix,fixed_buffer0,1,3.619561894152113
+161918,,Zavidovici,needs_fix,fixed_buffer0,1,121.98282095465503
+162019,,Zavidovici,needs_fix,fixed_buffer0,1,22.132251465906975
+162027,,Zavidovici,needs_fix,fixed_buffer0,1,935.7275202094088
+162086,,Zavidovici,needs_fix,fixed_buffer0,1,25.514367385914486
+162094,,Zavidovici,needs_fix,fixed_buffer0,1,43.7031560597221
+162108,,Zenica,needs_fix,fixed_buffer0,1,43.81405428447609
+162124,,Zenica,needs_fix,fixed_buffer0,1,42.677725431974686
+162159,,Zenica,needs_fix,fixed_buffer0,1,104.93382049477962
+162175,,Zenica,needs_fix,fixed_buffer0,1,47.212963521688884
+162183,,Zenica,needs_fix,fixed_buffer0,1,38.17193921427477
+162230,,Zenica,needs_fix,fixed_buffer0,1,91.25513445855557
+162248,,Zenica,needs_fix,fixed_buffer0,1,40.797054426537116
+162256,,Zenica,needs_fix,fixed_buffer0,1,183.16683676774855
+162302,,Zenica,needs_fix,fixed_buffer0,1,48.637785622357846
+162345,,Zenica,needs_fix,fixed_buffer0,1,22.54247650818353
+162396,,Zenica,needs_fix,fixed_buffer0,1,17.499161637435012
+162477,,Zenica,needs_fix,fixed_buffer0,1,46.185508359699725
+162540,,Zenica,needs_fix,fixed_buffer0,1,24.353207859264188
+162566,,Zenica,needs_fix,fixed_buffer0,1,74.96348648209303
+162582,,Zenica,needs_fix,fixed_buffer0,1,167.39534619177806
+162671,,Zenica,needs_fix,fixed_buffer0,1,171.264877241464
+162779,,Zenica,needs_fix,fixed_buffer0,1,2.6484486445427335
+162850,,Zenica,needs_fix,fixed_buffer0,1,327.0169811464707
+162868,,Zenica,needs_fix,fixed_buffer0,1,22.574070674987922
+162884,,Zenica,needs_fix,fixed_buffer0,1,92.85256974267456
+162892,,Zenica,needs_fix,fixed_buffer0,1,91.45233722185762
+162922,,Zenica,needs_fix,fixed_buffer0,1,15.961596510146885
+162949,,Zenica,needs_fix,fixed_buffer0,1,7.231721952720986
+162957,,Zenica,needs_fix,fixed_buffer0,1,49.516989944961175
+162981,,Zenica,needs_fix,fixed_buffer0,1,99.23674994770145
+171093,,Zenica,needs_fix,fixed_buffer0,1,239.5407986843847
+132900,,Zepce,needs_fix,fixed_buffer0,1,32.879867236322625
+161586,,Zepce,needs_fix,fixed_buffer0,1,17.428636012855307
+163783,,Zepce,needs_fix,fixed_buffer0,1,72.16847197991231
+163791,,Zepce,needs_fix,fixed_buffer0,1,47.65807802110655
+163864,,Zepce,needs_fix,fixed_buffer0,1,12.20025377719873
+163902,,Zepce,needs_fix,fixed_buffer0,1,29.051114714930534
+163945,,Zepce,needs_fix,fixed_buffer0,1,46.480762377487636
+163988,,Zivinice,needs_fix,fixed_buffer0,1,75.68102019295722
+164003,,Zivinice,needs_fix,fixed_buffer0,1,110.2326947325296
+164011,,Zivinice,needs_fix,fixed_buffer0,1,240.41132737354593
+164038,,Zivinice,needs_fix,fixed_buffer0,1,121.89276632853407
+164054,,Zivinice,needs_fix,fixed_buffer0,1,119.59231469632576
+164062,,Zivinice,needs_fix,fixed_buffer0,1,62.3912076955289
+164089,,Zivinice,needs_fix,fixed_buffer0,1,48.59532758091748
+164119,,Zivinice,needs_fix,fixed_buffer0,1,85.63088901312251
+164186,,Zivinice,needs_fix,fixed_buffer0,1,128.76877882708007
+164208,,Zivinice,needs_fix,fixed_buffer0,1,80.13868003239673
+164224,,Zivinice,needs_fix,fixed_buffer0,1,271.4999194912437
+164232,,Zivinice,needs_fix,fixed_buffer0,1,19.24431531383352
+164259,,Zivinice,needs_fix,fixed_buffer0,1,40.15448050841825
+208523,,Zvornik,needs_fix,fixed_buffer0,1,57.21092897108541
+208566,,Zvornik,needs_fix,fixed_buffer0,2,81.90046158654229
+208582,,Zvornik,needs_fix,fixed_buffer0,1,67.6709342004063
+208604,,Zvornik,needs_fix,fixed_buffer0,1,119.64634225995545
+208639,,Zvornik,needs_fix,fixed_buffer0,1,136.16510475705218
+208710,,Zvornik,needs_fix,fixed_buffer0,1,4.644865946570386
+208728,,Zvornik,needs_fix,fixed_buffer0,1,18.010078587949906
+208736,,Zvornik,needs_fix,fixed_buffer0,1,5.708627009183816
+208817,,Zvornik,needs_fix,fixed_buffer0,1,82.77019990895339
+208825,,Zvornik,needs_fix,fixed_buffer0,1,64.47138921014877
+208876,,Zvornik,needs_fix,fixed_buffer0,1,80.44876048370301
+208884,,Zvornik,needs_fix,fixed_buffer0,1,66.55472095464674
+208965,,Zvornik,needs_fix,fixed_buffer0,1,109.798622450148
+209066,,Zvornik,needs_fix,fixed_buffer0,1,27.32988148518201
+209112,,Zvornik,needs_fix,fixed_buffer0,1,47.64686580235942
+209147,,Zvornik,needs_fix,fixed_buffer0,1,27.13767858156271
+230405,,Zvornik,needs_fix,fixed_buffer0,1,82.08028540329651
+230413,,Zvornik,needs_fix,fixed_buffer0,1,40.16634228385198
+230430,,Zvornik,needs_fix,fixed_buffer0,1,36.47303612944913
+230502,,Zvornik,needs_fix,fixed_buffer0,1,22.57541759056125
+230537,,Zvornik,needs_fix,fixed_buffer0,1,23.16525526640247
+230570,,Zvornik,needs_fix,fixed_buffer0,1,75.82875875709458
+230588,,Zvornik,needs_fix,fixed_buffer0,1,46.244984210708594
+230618,,Zvornik,needs_fix,fixed_buffer0,1,119.91834330540077

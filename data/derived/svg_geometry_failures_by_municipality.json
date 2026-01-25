@@ -1,0 +1,2842 @@
+[
+  {
+    "mid": "1045979",
+    "name": "Gradiška",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1058545",
+    "name": "Kupres (FBiH)",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1191978",
+    "name": "Kladanj",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1251305",
+    "name": "Novi Grad",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1290383",
+    "name": "Orašje",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1291077",
+    "name": "Kozarska Dubica",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1413092",
+    "name": "Doboj-Jug",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1443444",
+    "name": "Ribnik",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1591214",
+    "name": "Trebinje",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1617307",
+    "name": "Grad Mostar",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1675873",
+    "name": "Pale (RS)",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1777860",
+    "name": "Doboj-Istok",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1871665",
+    "name": "Sanski Most",
+    "total_with_svg": 0,
+    "written": 0,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 0,
+    "avg_points_written": 0,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0
+  },
+  {
+    "mid": "1015698",
+    "name": "Višegrad",
+    "total_with_svg": 163,
+    "written": 162,
+    "dropped": 1,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 1,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 905.4099731445312,
+    "avg_points_written": 6.851851851851852,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 0.9938650306748467
+  },
+  {
+    "mid": "1012045",
+    "name": "Šamac",
+    "total_with_svg": 21,
+    "written": 21,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 687.0900268554688,
+    "avg_points_written": 7.095238095238095,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1017148",
+    "name": "Bužim",
+    "total_with_svg": 7,
+    "written": 7,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 87.18000030517578,
+    "avg_points_written": 10.428571428571429,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1026177",
+    "name": "Šekovići",
+    "total_with_svg": 38,
+    "written": 38,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 787.8099975585938,
+    "avg_points_written": 6.973684210526316,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1028426",
+    "name": "Tomislavgrad",
+    "total_with_svg": 60,
+    "written": 60,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 571.3400268554688,
+    "avg_points_written": 12.016666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1031837",
+    "name": "Prnjavor",
+    "total_with_svg": 63,
+    "written": 63,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 497.05999755859375,
+    "avg_points_written": 7.190476190476191,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1037615",
+    "name": "Livno",
+    "total_with_svg": 59,
+    "written": 59,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 521.3900146484375,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1039821",
+    "name": "Ravno",
+    "total_with_svg": 54,
+    "written": 54,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 894.0999755859375,
+    "avg_points_written": 12.333333333333334,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1041595",
+    "name": "Kiseljak",
+    "total_with_svg": 82,
+    "written": 82,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 588.47998046875,
+    "avg_points_written": 11.402439024390244,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1054124",
+    "name": "Dobretići",
+    "total_with_svg": 18,
+    "written": 18,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 414.70001220703125,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1059774",
+    "name": "Petrovo",
+    "total_with_svg": 7,
+    "written": 7,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 634.5599975585938,
+    "avg_points_written": 7,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1073063",
+    "name": "Doboj",
+    "total_with_svg": 83,
+    "written": 83,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 622.5,
+    "avg_points_written": 6.807228915662651,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1080479",
+    "name": "Konjic",
+    "total_with_svg": 168,
+    "written": 168,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 635.8300170898438,
+    "avg_points_written": 11.666666666666666,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1099739",
+    "name": "Gradačac",
+    "total_with_svg": 34,
+    "written": 34,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 692.0499877929688,
+    "avg_points_written": 11.147058823529411,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1105369",
+    "name": "Rudo",
+    "total_with_svg": 89,
+    "written": 89,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 920.22998046875,
+    "avg_points_written": 7.157303370786517,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1106951",
+    "name": "Vogošća",
+    "total_with_svg": 21,
+    "written": 21,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 647.7000122070312,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1114279",
+    "name": "Kupres (RS)",
+    "total_with_svg": 4,
+    "written": 4,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 398.6000061035156,
+    "avg_points_written": 6.5,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1117932",
+    "name": "Foča (FBiH)",
+    "total_with_svg": 32,
+    "written": 32,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 758.4299926757812,
+    "avg_points_written": 11.9375,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1123551",
+    "name": "Čajniče",
+    "total_with_svg": 36,
+    "written": 36,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 852.4000244140625,
+    "avg_points_written": 7.111111111111111,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1136380",
+    "name": "Visoko",
+    "total_with_svg": 88,
+    "written": 88,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 607.780029296875,
+    "avg_points_written": 11.681818181818182,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1144085",
+    "name": "Fojnica",
+    "total_with_svg": 55,
+    "written": 55,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 549,
+    "avg_points_written": 11.89090909090909,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1144909",
+    "name": "Ilijaš",
+    "total_with_svg": 74,
+    "written": 74,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 692.6699829101562,
+    "avg_points_written": 11.58108108108108,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1160876",
+    "name": "Donji Žabar",
+    "total_with_svg": 6,
+    "written": 6,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 713.969970703125,
+    "avg_points_written": 6.5,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1162720",
+    "name": "Ilidža",
+    "total_with_svg": 12,
+    "written": 12,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 632.27001953125,
+    "avg_points_written": 11.75,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1167475",
+    "name": "Istočno Novo Sarajevo",
+    "total_with_svg": 8,
+    "written": 8,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 650.0900268554688,
+    "avg_points_written": 6.875,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1173054",
+    "name": "Ključ",
+    "total_with_svg": 41,
+    "written": 41,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 278.9599914550781,
+    "avg_points_written": 11.585365853658537,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1180367",
+    "name": "Vlasenica",
+    "total_with_svg": 38,
+    "written": 38,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 793.9400024414062,
+    "avg_points_written": 7.2631578947368425,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1183673",
+    "name": "Stolac",
+    "total_with_svg": 26,
+    "written": 26,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 763.7999877929688,
+    "avg_points_written": 11.76923076923077,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1184526",
+    "name": "Laktaši",
+    "total_with_svg": 37,
+    "written": 37,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 417.04998779296875,
+    "avg_points_written": 7.513513513513513,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1190744",
+    "name": "Tešanj",
+    "total_with_svg": 41,
+    "written": 41,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 561.6199951171875,
+    "avg_points_written": 11.585365853658537,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1198423",
+    "name": "Tuzla",
+    "total_with_svg": 66,
+    "written": 66,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 752.3300170898438,
+    "avg_points_written": 11.818181818181818,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1198777",
+    "name": "Trnovo (FBiH)",
+    "total_with_svg": 55,
+    "written": 55,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 693.77001953125,
+    "avg_points_written": 11.781818181818181,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1222440",
+    "name": "Domaljevac-Šamac",
+    "total_with_svg": 6,
+    "written": 6,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 686.9600219726562,
+    "avg_points_written": 10.833333333333334,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1229931",
+    "name": "Bugojno",
+    "total_with_svg": 78,
+    "written": 78,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 452.5299987792969,
+    "avg_points_written": 11.833333333333334,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1232307",
+    "name": "Maglaj",
+    "total_with_svg": 40,
+    "written": 40,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 616.02001953125,
+    "avg_points_written": 11.75,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1251631",
+    "name": "Centar Sarajevo",
+    "total_with_svg": 6,
+    "written": 6,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 652.1400146484375,
+    "avg_points_written": 11.333333333333334,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1252174",
+    "name": "Ljubinje",
+    "total_with_svg": 21,
+    "written": 21,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 798.0399780273438,
+    "avg_points_written": 6.619047619047619,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1252399",
+    "name": "Trnovo (RS)",
+    "total_with_svg": 25,
+    "written": 25,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 694.1799926757812,
+    "avg_points_written": 6.52,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1255549",
+    "name": "Novo Goražde",
+    "total_with_svg": 61,
+    "written": 61,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 824.2100219726562,
+    "avg_points_written": 6.672131147540983,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1259038",
+    "name": "Donji Vakuf",
+    "total_with_svg": 68,
+    "written": 68,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 426.82000732421875,
+    "avg_points_written": 11.823529411764707,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1263638",
+    "name": "Novi Travnik",
+    "total_with_svg": 52,
+    "written": 52,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 480.82000732421875,
+    "avg_points_written": 11.75,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1268233",
+    "name": "Kotor Varoš",
+    "total_with_svg": 43,
+    "written": 43,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 473.25,
+    "avg_points_written": 7.255813953488372,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1277872",
+    "name": "Glamoč",
+    "total_with_svg": 55,
+    "written": 55,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 449.5400085449219,
+    "avg_points_written": 11.927272727272728,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1286568",
+    "name": "Prijedor",
+    "total_with_svg": 71,
+    "written": 71,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 312.2300109863281,
+    "avg_points_written": 7.183098591549296,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1286881",
+    "name": "Oštra Luka",
+    "total_with_svg": 24,
+    "written": 24,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 285.4800109863281,
+    "avg_points_written": 6.791666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1288657",
+    "name": "Teslić",
+    "total_with_svg": 57,
+    "written": 57,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 538.4000244140625,
+    "avg_points_written": 6.947368421052632,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1318354",
+    "name": "Neum",
+    "total_with_svg": 27,
+    "written": 27,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 789.5599975585938,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1319486",
+    "name": "Zvornik",
+    "total_with_svg": 68,
+    "written": 68,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 831.6699829101562,
+    "avg_points_written": 6.882352941176471,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1320269",
+    "name": "Breza",
+    "total_with_svg": 28,
+    "written": 28,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 634.6400146484375,
+    "avg_points_written": 11.5,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1323835",
+    "name": "Pale (FBiH)",
+    "total_with_svg": 15,
+    "written": 15,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 766.3200073242188,
+    "avg_points_written": 11.866666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1355433",
+    "name": "Berkovići",
+    "total_with_svg": 20,
+    "written": 20,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 756.5700073242188,
+    "avg_points_written": 6.6,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1367544",
+    "name": "Milići",
+    "total_with_svg": 54,
+    "written": 54,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 836.25,
+    "avg_points_written": 7.166666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1383573",
+    "name": "Bosansko Grahovo",
+    "total_with_svg": 35,
+    "written": 35,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 410.6700134277344,
+    "avg_points_written": 12.057142857142857,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1389088",
+    "name": "Srebrenik",
+    "total_with_svg": 49,
+    "written": 49,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 691.25,
+    "avg_points_written": 11.346938775510203,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1392554",
+    "name": "Derventa",
+    "total_with_svg": 57,
+    "written": 57,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 567.780029296875,
+    "avg_points_written": 6.894736842105263,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1416221",
+    "name": "Petrovac",
+    "total_with_svg": 6,
+    "written": 6,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 247.3800048828125,
+    "avg_points_written": 6.833333333333333,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1425877",
+    "name": "Kalinovik",
+    "total_with_svg": 71,
+    "written": 71,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 686.9400024414062,
+    "avg_points_written": 6.802816901408451,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1428426",
+    "name": "Jezero",
+    "total_with_svg": 11,
+    "written": 11,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 360.1700134277344,
+    "avg_points_written": 7,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1431190",
+    "name": "Kostajnica",
+    "total_with_svg": 12,
+    "written": 12,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 219.2100067138672,
+    "avg_points_written": 6.833333333333333,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1445016",
+    "name": "Modriča",
+    "total_with_svg": 24,
+    "written": 24,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 652.8499755859375,
+    "avg_points_written": 7.125,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1445976",
+    "name": "Novi Grad Sarajevo",
+    "total_with_svg": 3,
+    "written": 3,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 622.0900268554688,
+    "avg_points_written": 11,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1467835",
+    "name": "Prozor",
+    "total_with_svg": 56,
+    "written": 56,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 522.2100219726562,
+    "avg_points_written": 11.821428571428571,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1470472",
+    "name": "Olovo",
+    "total_with_svg": 45,
+    "written": 45,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 741.530029296875,
+    "avg_points_written": 11.8,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1472746",
+    "name": "Cazin",
+    "total_with_svg": 54,
+    "written": 54,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 111.58999633789062,
+    "avg_points_written": 11.74074074074074,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1472867",
+    "name": "Istočni Stari Grad",
+    "total_with_svg": 19,
+    "written": 19,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 693.7100219726562,
+    "avg_points_written": 6.578947368421052,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1475355",
+    "name": "Goražde",
+    "total_with_svg": 144,
+    "written": 144,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 795.0700073242188,
+    "avg_points_written": 11.86111111111111,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1487460",
+    "name": "Nevesinje",
+    "total_with_svg": 56,
+    "written": 56,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 734.9000244140625,
+    "avg_points_written": 7,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1487779",
+    "name": "Usora",
+    "total_with_svg": 13,
+    "written": 13,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 556.72998046875,
+    "avg_points_written": 12.076923076923077,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1490866",
+    "name": "Čapljina",
+    "total_with_svg": 32,
+    "written": 32,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 758.7899780273438,
+    "avg_points_written": 11.9375,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1494459",
+    "name": "Bosanski Petrovac",
+    "total_with_svg": 35,
+    "written": 35,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 258.4200134277344,
+    "avg_points_written": 11.857142857142858,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1494695",
+    "name": "Žepče",
+    "total_with_svg": 41,
+    "written": 41,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 579.739990234375,
+    "avg_points_written": 11.926829268292684,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1512315",
+    "name": "Srebrenica",
+    "total_with_svg": 81,
+    "written": 81,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 932.8800048828125,
+    "avg_points_written": 6.765432098765432,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1516637",
+    "name": "Zavidovići",
+    "total_with_svg": 47,
+    "written": 47,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 657.3499755859375,
+    "avg_points_written": 11.51063829787234,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1520211",
+    "name": "Vitez",
+    "total_with_svg": 34,
+    "written": 34,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 514.0399780273438,
+    "avg_points_written": 11.852941176470589,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1521214",
+    "name": "Brod",
+    "total_with_svg": 23,
+    "written": 23,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 603.8099975585938,
+    "avg_points_written": 6.6521739130434785,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1532434",
+    "name": "Čelić",
+    "total_with_svg": 20,
+    "written": 20,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 746.510009765625,
+    "avg_points_written": 11.95,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1535620",
+    "name": "Mrkonjić Grad",
+    "total_with_svg": 38,
+    "written": 38,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 364.5199890136719,
+    "avg_points_written": 7.447368421052632,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1539057",
+    "name": "Gornji Vakuf-Uskoplje",
+    "total_with_svg": 52,
+    "written": 52,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 505.989990234375,
+    "avg_points_written": 11.884615384615385,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1542170",
+    "name": "Banovići",
+    "total_with_svg": 20,
+    "written": 20,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 683.1099853515625,
+    "avg_points_written": 11.4,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1553762",
+    "name": "Brčko",
+    "total_with_svg": 59,
+    "written": 59,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 773.6400146484375,
+    "avg_points_written": 6.830508474576271,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1558420",
+    "name": "Široki Brijeg",
+    "total_with_svg": 34,
+    "written": 34,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 662.030029296875,
+    "avg_points_written": 11.647058823529411,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1564405",
+    "name": "Zenica",
+    "total_with_svg": 83,
+    "written": 83,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 564.739990234375,
+    "avg_points_written": 11.46987951807229,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1572156",
+    "name": "Ugljevik",
+    "total_with_svg": 25,
+    "written": 25,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 806.8599853515625,
+    "avg_points_written": 6.8,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1597958",
+    "name": "Lopare",
+    "total_with_svg": 35,
+    "written": 35,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 776.1300048828125,
+    "avg_points_written": 7.457142857142857,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1598920",
+    "name": "Velika Kladuša",
+    "total_with_svg": 49,
+    "written": 49,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 83.06999969482422,
+    "avg_points_written": 11.122448979591837,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1603938",
+    "name": "Srbac",
+    "total_with_svg": 39,
+    "written": 39,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 491.989990234375,
+    "avg_points_written": 7.128205128205129,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1615642",
+    "name": "Jajce",
+    "total_with_svg": 58,
+    "written": 58,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 409.0199890136719,
+    "avg_points_written": 11.637931034482758,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1624574",
+    "name": "Ljubuški",
+    "total_with_svg": 35,
+    "written": 35,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 722.3300170898438,
+    "avg_points_written": 11.942857142857143,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1625429",
+    "name": "Čelinac",
+    "total_with_svg": 30,
+    "written": 30,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 447.7699890136719,
+    "avg_points_written": 7.366666666666666,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1634032",
+    "name": "Novo Sarajevo",
+    "total_with_svg": 3,
+    "written": 3,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 645.5,
+    "avg_points_written": 11,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1640845",
+    "name": "Busovača",
+    "total_with_svg": 47,
+    "written": 47,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 544.239990234375,
+    "avg_points_written": 11.74468085106383,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1644092",
+    "name": "Gacko",
+    "total_with_svg": 71,
+    "written": 71,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 749.8300170898438,
+    "avg_points_written": 6.661971830985915,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1653737",
+    "name": "Osmaci",
+    "total_with_svg": 16,
+    "written": 16,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 792.3400268554688,
+    "avg_points_written": 6.875,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1655654",
+    "name": "Bosanska Krupa",
+    "total_with_svg": 37,
+    "written": 37,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 151.88999938964844,
+    "avg_points_written": 10.783783783783784,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1663346",
+    "name": "Kreševo",
+    "total_with_svg": 27,
+    "written": 27,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 572.97998046875,
+    "avg_points_written": 11.814814814814815,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1670035",
+    "name": "Krupa na Uni",
+    "total_with_svg": 12,
+    "written": 12,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 155.36000061035156,
+    "avg_points_written": 6.583333333333333,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1677723",
+    "name": "Živinice",
+    "total_with_svg": 29,
+    "written": 29,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 743.22998046875,
+    "avg_points_written": 11.586206896551724,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1680904",
+    "name": "Šipovo",
+    "total_with_svg": 46,
+    "written": 46,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 392.3299865722656,
+    "avg_points_written": 7.456521739130435,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1684504",
+    "name": "Odžak",
+    "total_with_svg": 14,
+    "written": 14,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 657.4600219726562,
+    "avg_points_written": 11.357142857142858,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1695193",
+    "name": "Kakanj",
+    "total_with_svg": 106,
+    "written": 106,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 602.9400024414062,
+    "avg_points_written": 11.773584905660377,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1697675",
+    "name": "Kalesija",
+    "total_with_svg": 28,
+    "written": 28,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 777.4600219726562,
+    "avg_points_written": 11.357142857142858,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1709112",
+    "name": "Gračanica",
+    "total_with_svg": 23,
+    "written": 23,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 654.1799926757812,
+    "avg_points_written": 10.956521739130435,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1735348",
+    "name": "Jablanica",
+    "total_with_svg": 33,
+    "written": 33,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 566.02001953125,
+    "avg_points_written": 12.030303030303031,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1736474",
+    "name": "Sapna",
+    "total_with_svg": 13,
+    "written": 13,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 798.4000244140625,
+    "avg_points_written": 11.692307692307692,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1738233",
+    "name": "Rogatica",
+    "total_with_svg": 118,
+    "written": 118,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 838.6500244140625,
+    "avg_points_written": 7.059322033898305,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1738871",
+    "name": "Bratunac",
+    "total_with_svg": 50,
+    "written": 50,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 928.5599975585938,
+    "avg_points_written": 6.78,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1740750",
+    "name": "Posušje",
+    "total_with_svg": 20,
+    "written": 20,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 618.3400268554688,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1747368",
+    "name": "Grude",
+    "total_with_svg": 13,
+    "written": 13,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 661.5599975585938,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1747899",
+    "name": "Istočna Ilidža",
+    "total_with_svg": 5,
+    "written": 5,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 640.3499755859375,
+    "avg_points_written": 7.4,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1753458",
+    "name": "Teočak",
+    "total_with_svg": 10,
+    "written": 10,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 798.3800048828125,
+    "avg_points_written": 12,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1761751",
+    "name": "Stari Grad Sarajevo",
+    "total_with_svg": 8,
+    "written": 8,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 666.97998046875,
+    "avg_points_written": 11.5,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1762269",
+    "name": "Istočni Drvar",
+    "total_with_svg": 3,
+    "written": 3,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 297.3699951171875,
+    "avg_points_written": 7.666666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1762558",
+    "name": "Čitluk",
+    "total_with_svg": 21,
+    "written": 21,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 700.4600219726562,
+    "avg_points_written": 11.761904761904763,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1764163",
+    "name": "Han Pijesak",
+    "total_with_svg": 26,
+    "written": 26,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 817.0499877929688,
+    "avg_points_written": 6.923076923076923,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1766651",
+    "name": "Hadžići",
+    "total_with_svg": 62,
+    "written": 62,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 604.4299926757812,
+    "avg_points_written": 11.951612903225806,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1768475",
+    "name": "Bijeljina",
+    "total_with_svg": 67,
+    "written": 67,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 868.0599975585938,
+    "avg_points_written": 7.074626865671642,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1771936",
+    "name": "Vareš",
+    "total_with_svg": 85,
+    "written": 85,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 671.8200073242188,
+    "avg_points_written": 11.670588235294117,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1788051",
+    "name": "Sokolac",
+    "total_with_svg": 96,
+    "written": 96,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 793.1099853515625,
+    "avg_points_written": 7.135416666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1794197",
+    "name": "Kneževo",
+    "total_with_svg": 20,
+    "written": 20,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 447.9100036621094,
+    "avg_points_written": 7.05,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1795673",
+    "name": "Vukosavlje",
+    "total_with_svg": 12,
+    "written": 12,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 635.530029296875,
+    "avg_points_written": 6.833333333333333,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1798098",
+    "name": "Istočni Mostar",
+    "total_with_svg": 3,
+    "written": 3,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 687.2999877929688,
+    "avg_points_written": 7.666666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1799334",
+    "name": "Travnik",
+    "total_with_svg": 90,
+    "written": 90,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 502.69000244140625,
+    "avg_points_written": 11.766666666666667,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1814920",
+    "name": "Bihać",
+    "total_with_svg": 59,
+    "written": 59,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 311.42999267578125,
+    "avg_points_written": 11.677966101694915,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1840366",
+    "name": "Banja Luka",
+    "total_with_svg": 54,
+    "written": 54,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 372.8500061035156,
+    "avg_points_written": 6.981481481481482,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1854656",
+    "name": "Lukavac",
+    "total_with_svg": 44,
+    "written": 44,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 682.6300048828125,
+    "avg_points_written": 11.590909090909092,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1875064",
+    "name": "Drvar",
+    "total_with_svg": 25,
+    "written": 25,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 339.8399963378906,
+    "avg_points_written": 11.96,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1880950",
+    "name": "Foča (RS)",
+    "total_with_svg": 101,
+    "written": 101,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 802.8699951171875,
+    "avg_points_written": 7.0495049504950495,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1892275",
+    "name": "Bileća",
+    "total_with_svg": 61,
+    "written": 61,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 833.9400024414062,
+    "avg_points_written": 7.065573770491803,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  },
+  {
+    "mid": "1895342",
+    "name": "Pelagićevo",
+    "total_with_svg": 11,
+    "written": 11,
+    "dropped": 0,
+    "dropped_by_reason": {
+      "unsupported_arc": 0,
+      "parse_error": 0,
+      "too_few_points": 0,
+      "non_finite": 0,
+      "zero_area": 0,
+      "self_evident_degenerate": 0,
+      "no_closed_subpaths": 0
+    },
+    "max_abs_coord": 702.260009765625,
+    "avg_points_written": 7.363636363636363,
+    "avg_points_dropped": 0,
+    "coverage_geometry": 1
+  }
+]

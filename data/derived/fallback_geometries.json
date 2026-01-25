@@ -1,0 +1,223 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-20T23:51:34.590Z",
+  "total_fallbacks": 24,
+  "fallbacks": [
+    {
+      "sid": "20036:201049",
+      "source_id": "201049",
+      "mun_code": "20036",
+      "mun": "Bijeljina",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "replacement_d",
+      "reason": "Replaced invalid complex path with simplified valid closed polygon"
+    },
+    {
+      "sid": "20036:200972",
+      "source_id": "200972",
+      "mun_code": "20036",
+      "mun": "Bijeljina",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry"
+    },
+    {
+      "sid": "20036:230251",
+      "source_id": "230251",
+      "mun_code": "20036",
+      "mun": "Bijeljina",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20036:230324",
+      "source_id": "230324",
+      "mun_code": "20036",
+      "mun": "Bijeljina",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20265:210994",
+      "source_id": "210994",
+      "mun_code": "20265",
+      "mun": "Bosanska Dubica",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20052:202525",
+      "source_id": "202525",
+      "mun_code": "20052",
+      "mun": "Bratunac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20133:206954",
+      "source_id": "206954",
+      "mun_code": "20133",
+      "mun": "Derventa",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "11282:165689",
+      "source_id": "165689",
+      "mun_code": "11282",
+      "mun": "Domaljevac-Samac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20613:227765",
+      "source_id": "227765",
+      "mun_code": "20613",
+      "mun": "Foca",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20613:226971",
+      "source_id": "226971",
+      "mun_code": "20613",
+      "mun": "Foca",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20613:227412",
+      "source_id": "227412",
+      "mun_code": "20613",
+      "mun": "Foca",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20117:206075",
+      "source_id": "206075",
+      "mun_code": "20117",
+      "mun": "Gacko",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20621:228265",
+      "source_id": "228265",
+      "mun_code": "20621",
+      "mun": "Han Pijesak",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "11525:165689",
+      "source_id": "165689",
+      "mun_code": "11525",
+      "mun": "Odzak",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20494:219096",
+      "source_id": "219096",
+      "mun_code": "20494",
+      "mun": "Prnjavor",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20672:229725",
+      "source_id": "229725",
+      "mun_code": "20672",
+      "mun": "Sipovo",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20532:221945",
+      "source_id": "221945",
+      "mun_code": "20532",
+      "mun": "Sokolac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20532:222844",
+      "source_id": "222844",
+      "mun_code": "20532",
+      "mun": "Sokolac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20532:221953",
+      "source_id": "221953",
+      "mun_code": "20532",
+      "mun": "Sokolac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20532:222135",
+      "source_id": "222135",
+      "mun_code": "20532",
+      "mun": "Sokolac",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20567:224138",
+      "source_id": "224138",
+      "mun_code": "20567",
+      "mun": "Srebrenica",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20575:224324",
+      "source_id": "224324",
+      "mun_code": "20575",
+      "mun": "Teslic",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20591:226459",
+      "source_id": "226459",
+      "mun_code": "20591",
+      "mun": "Trnovo (RS)",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    },
+    {
+      "sid": "20591:226394",
+      "source_id": "226394",
+      "mun_code": "20591",
+      "mun": "Trnovo (RS)",
+      "geometry_fix_source": "local",
+      "geometry_fix_kind": "convex_hull_from_path",
+      "reason": "Use convex hull of SVG path points as fallback geometry (reason: Simplification did not produce valid polygon)"
+    }
+  ]
+}

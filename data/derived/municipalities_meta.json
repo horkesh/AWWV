@@ -1,0 +1,1848 @@
+[
+  {
+    "mid": "1012045",
+    "name": "Šamac",
+    "capital_sid": "905456355",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7669,
+      "serbs": 0,
+      "others": 2142
+    },
+    "total_settlements": 21,
+    "settlements_with_geometry": 21
+  },
+  {
+    "mid": "1015698",
+    "name": "Višegrad",
+    "capital_sid": "951050184",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 32,
+      "serbs": 0,
+      "others": 953
+    },
+    "total_settlements": 163,
+    "settlements_with_geometry": 163
+  },
+  {
+    "mid": "1017148",
+    "name": "Bužim",
+    "capital_sid": "913026478",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5,
+      "serbs": 0,
+      "others": 164
+    },
+    "total_settlements": 7,
+    "settlements_with_geometry": 7
+  },
+  {
+    "mid": "1026177",
+    "name": "Šekovići",
+    "capital_sid": "967656186",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 11,
+      "serbs": 0,
+      "others": 269
+    },
+    "total_settlements": 38,
+    "settlements_with_geometry": 38
+  },
+  {
+    "mid": "1028426",
+    "name": "Tomislavgrad",
+    "capital_sid": "983943263",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 25976,
+      "serbs": 0,
+      "others": 309
+    },
+    "total_settlements": 60,
+    "settlements_with_geometry": 60
+  },
+  {
+    "mid": "1031837",
+    "name": "Prnjavor",
+    "capital_sid": "971502132",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1721,
+      "serbs": 0,
+      "others": 4683
+    },
+    "total_settlements": 63,
+    "settlements_with_geometry": 63
+  },
+  {
+    "mid": "1037615",
+    "name": "Livno",
+    "capital_sid": "951876608",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 29324,
+      "serbs": 0,
+      "others": 1570
+    },
+    "total_settlements": 59,
+    "settlements_with_geometry": 59
+  },
+  {
+    "mid": "1039821",
+    "name": "Ravno",
+    "capital_sid": "922193665",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 804,
+      "serbs": 0,
+      "others": 33
+    },
+    "total_settlements": 54,
+    "settlements_with_geometry": 54
+  },
+  {
+    "mid": "1041595",
+    "name": "Kiseljak",
+    "capital_sid": "903028236",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 12550,
+      "serbs": 0,
+      "others": 1096
+    },
+    "total_settlements": 82,
+    "settlements_with_geometry": 82
+  },
+  {
+    "mid": "1045979",
+    "name": "Gradiška",
+    "capital_sid": "932746248",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3417,
+      "serbs": 0,
+      "others": 4953
+    },
+    "total_settlements": 68,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1054124",
+    "name": "Dobretići",
+    "capital_sid": "914631427",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 4720,
+      "serbs": 0,
+      "others": 61
+    },
+    "total_settlements": 18,
+    "settlements_with_geometry": 18
+  },
+  {
+    "mid": "1058545",
+    "name": "Kupres (FBiH)",
+    "capital_sid": "954022525",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3812,
+      "serbs": 0,
+      "others": 131
+    },
+    "total_settlements": 36,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1059774",
+    "name": "Petrovo",
+    "capital_sid": "956245891",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 48,
+      "serbs": 0,
+      "others": 407
+    },
+    "total_settlements": 7,
+    "settlements_with_geometry": 7
+  },
+  {
+    "mid": "1073063",
+    "name": "Doboj",
+    "capital_sid": "916068255",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 10676,
+      "serbs": 0,
+      "others": 8201
+    },
+    "total_settlements": 83,
+    "settlements_with_geometry": 83
+  },
+  {
+    "mid": "1080479",
+    "name": "Konjic",
+    "capital_sid": "976840332",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 11513,
+      "serbs": 0,
+      "others": 1934
+    },
+    "total_settlements": 168,
+    "settlements_with_geometry": 168
+  },
+  {
+    "mid": "1099739",
+    "name": "Gradačac",
+    "capital_sid": "980201795",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2834,
+      "serbs": 0,
+      "others": 2077
+    },
+    "total_settlements": 34,
+    "settlements_with_geometry": 34
+  },
+  {
+    "mid": "1105369",
+    "name": "Rudo",
+    "capital_sid": "958586762",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5,
+      "serbs": 0,
+      "others": 286
+    },
+    "total_settlements": 89,
+    "settlements_with_geometry": 89
+  },
+  {
+    "mid": "1106951",
+    "name": "Vogošća",
+    "capital_sid": "926266654",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1071,
+      "serbs": 0,
+      "others": 2264
+    },
+    "total_settlements": 21,
+    "settlements_with_geometry": 21
+  },
+  {
+    "mid": "1114279",
+    "name": "Kupres (RS)",
+    "capital_sid": "929007295",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1,
+      "serbs": 0,
+      "others": 8
+    },
+    "total_settlements": 4,
+    "settlements_with_geometry": 4
+  },
+  {
+    "mid": "1117932",
+    "name": "Foča (FBiH)",
+    "capital_sid": "950578472",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1,
+      "serbs": 0,
+      "others": 68
+    },
+    "total_settlements": 32,
+    "settlements_with_geometry": 32
+  },
+  {
+    "mid": "1123551",
+    "name": "Čajniče",
+    "capital_sid": "987600700",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5,
+      "serbs": 0,
+      "others": 218
+    },
+    "total_settlements": 36,
+    "settlements_with_geometry": 36
+  },
+  {
+    "mid": "1136380",
+    "name": "Visoko",
+    "capital_sid": "938120258",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1872,
+      "serbs": 0,
+      "others": 2444
+    },
+    "total_settlements": 88,
+    "settlements_with_geometry": 88
+  },
+  {
+    "mid": "1144085",
+    "name": "Fojnica",
+    "capital_sid": "957355998",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 6623,
+      "serbs": 0,
+      "others": 1492
+    },
+    "total_settlements": 55,
+    "settlements_with_geometry": 55
+  },
+  {
+    "mid": "1144909",
+    "name": "Ilijaš",
+    "capital_sid": "983778927",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1736,
+      "serbs": 0,
+      "others": 1537
+    },
+    "total_settlements": 74,
+    "settlements_with_geometry": 74
+  },
+  {
+    "mid": "1160876",
+    "name": "Donji Žabar",
+    "capital_sid": "918814570",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1337,
+      "serbs": 0,
+      "others": 71
+    },
+    "total_settlements": 6,
+    "settlements_with_geometry": 6
+  },
+  {
+    "mid": "1162720",
+    "name": "Ilidža",
+    "capital_sid": "927968885",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 6833,
+      "serbs": 0,
+      "others": 6122
+    },
+    "total_settlements": 12,
+    "settlements_with_geometry": 12
+  },
+  {
+    "mid": "1167475",
+    "name": "Istočno Novo Sarajevo",
+    "capital_sid": "984769664",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 43,
+      "serbs": 0,
+      "others": 160
+    },
+    "total_settlements": 8,
+    "settlements_with_geometry": 8
+  },
+  {
+    "mid": "1173054",
+    "name": "Ključ",
+    "capital_sid": "955819039",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 323,
+      "serbs": 0,
+      "others": 787
+    },
+    "total_settlements": 41,
+    "settlements_with_geometry": 41
+  },
+  {
+    "mid": "1180367",
+    "name": "Vlasenica",
+    "capital_sid": "965024497",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 32,
+      "serbs": 0,
+      "others": 521
+    },
+    "total_settlements": 38,
+    "settlements_with_geometry": 38
+  },
+  {
+    "mid": "1183673",
+    "name": "Stolac",
+    "capital_sid": "976252032",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5551,
+      "serbs": 0,
+      "others": 437
+    },
+    "total_settlements": 26,
+    "settlements_with_geometry": 26
+  },
+  {
+    "mid": "1184526",
+    "name": "Laktaši",
+    "capital_sid": "901064499",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2565,
+      "serbs": 0,
+      "others": 2683
+    },
+    "total_settlements": 37,
+    "settlements_with_geometry": 37
+  },
+  {
+    "mid": "1190744",
+    "name": "Tešanj",
+    "capital_sid": "919534984",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3649,
+      "serbs": 0,
+      "others": 1334
+    },
+    "total_settlements": 41,
+    "settlements_with_geometry": 41
+  },
+  {
+    "mid": "1191978",
+    "name": "Kladanj",
+    "capital_sid": "959938036",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 35,
+      "serbs": 0,
+      "others": 455
+    },
+    "total_settlements": 48,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1198423",
+    "name": "Tuzla",
+    "capital_sid": "929864375",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 20397,
+      "serbs": 0,
+      "others": 28246
+    },
+    "total_settlements": 66,
+    "settlements_with_geometry": 66
+  },
+  {
+    "mid": "1198777",
+    "name": "Trnovo (FBiH)",
+    "capital_sid": "919571244",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1,
+      "serbs": 0,
+      "others": 47
+    },
+    "total_settlements": 55,
+    "settlements_with_geometry": 55
+  },
+  {
+    "mid": "1222440",
+    "name": "Domaljevac-Šamac",
+    "capital_sid": "986787674",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5918,
+      "serbs": 0,
+      "others": 110
+    },
+    "total_settlements": 6,
+    "settlements_with_geometry": 6
+  },
+  {
+    "mid": "1229931",
+    "name": "Bugojno",
+    "capital_sid": "984827340",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 16031,
+      "serbs": 0,
+      "others": 2488
+    },
+    "total_settlements": 78,
+    "settlements_with_geometry": 78
+  },
+  {
+    "mid": "1232307",
+    "name": "Maglaj",
+    "capital_sid": "971430499",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3596,
+      "serbs": 0,
+      "others": 2009
+    },
+    "total_settlements": 40,
+    "settlements_with_geometry": 40
+  },
+  {
+    "mid": "1251305",
+    "name": "Novi Grad",
+    "capital_sid": "982501342",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 237,
+      "serbs": 0,
+      "others": 1804
+    },
+    "total_settlements": 48,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1251631",
+    "name": "Centar Sarajevo",
+    "capital_sid": "932813064",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5428,
+      "serbs": 0,
+      "others": 17466
+    },
+    "total_settlements": 6,
+    "settlements_with_geometry": 6
+  },
+  {
+    "mid": "1252174",
+    "name": "Ljubinje",
+    "capital_sid": "915360408",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 39,
+      "serbs": 0,
+      "others": 53
+    },
+    "total_settlements": 21,
+    "settlements_with_geometry": 21
+  },
+  {
+    "mid": "1252399",
+    "name": "Trnovo (RS)",
+    "capital_sid": "980161200",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 15,
+      "serbs": 0,
+      "others": 79
+    },
+    "total_settlements": 25,
+    "settlements_with_geometry": 25
+  },
+  {
+    "mid": "1255549",
+    "name": "Novo Goražde",
+    "capital_sid": "979649630",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 4,
+      "serbs": 0,
+      "others": 77
+    },
+    "total_settlements": 61,
+    "settlements_with_geometry": 61
+  },
+  {
+    "mid": "1259038",
+    "name": "Donji Vakuf",
+    "capital_sid": "930852516",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 682,
+      "serbs": 0,
+      "others": 817
+    },
+    "total_settlements": 68,
+    "settlements_with_geometry": 68
+  },
+  {
+    "mid": "1263638",
+    "name": "Novi Travnik",
+    "capital_sid": "939287223",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 12162,
+      "serbs": 0,
+      "others": 2829
+    },
+    "total_settlements": 52,
+    "settlements_with_geometry": 52
+  },
+  {
+    "mid": "1268233",
+    "name": "Kotor Varoš",
+    "capital_sid": "965419378",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 10695,
+      "serbs": 0,
+      "others": 1012
+    },
+    "total_settlements": 43,
+    "settlements_with_geometry": 43
+  },
+  {
+    "mid": "1277872",
+    "name": "Glamoč",
+    "capital_sid": "987482714",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 184,
+      "serbs": 0,
+      "others": 201
+    },
+    "total_settlements": 55,
+    "settlements_with_geometry": 55
+  },
+  {
+    "mid": "1286568",
+    "name": "Prijedor",
+    "capital_sid": "921887172",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 6316,
+      "serbs": 0,
+      "others": 9295
+    },
+    "total_settlements": 71,
+    "settlements_with_geometry": 71
+  },
+  {
+    "mid": "1286881",
+    "name": "Oštra Luka",
+    "capital_sid": "928658913",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1095,
+      "serbs": 0,
+      "others": 164
+    },
+    "total_settlements": 24,
+    "settlements_with_geometry": 24
+  },
+  {
+    "mid": "1288657",
+    "name": "Teslić",
+    "capital_sid": "975791310",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 9930,
+      "serbs": 0,
+      "others": 4587
+    },
+    "total_settlements": 57,
+    "settlements_with_geometry": 57
+  },
+  {
+    "mid": "1290383",
+    "name": "Orašje",
+    "capital_sid": "975184705",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 19971,
+      "serbs": 0,
+      "others": 860
+    },
+    "total_settlements": 14,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1291077",
+    "name": "Kozarska Dubica",
+    "capital_sid": "945944870",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 488,
+      "serbs": 0,
+      "others": 2950
+    },
+    "total_settlements": 61,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1318354",
+    "name": "Neum",
+    "capital_sid": "933301389",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3792,
+      "serbs": 0,
+      "others": 136
+    },
+    "total_settlements": 27,
+    "settlements_with_geometry": 27
+  },
+  {
+    "mid": "1319486",
+    "name": "Zvornik",
+    "capital_sid": "954159164",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 107,
+      "serbs": 0,
+      "others": 2071
+    },
+    "total_settlements": 68,
+    "settlements_with_geometry": 68
+  },
+  {
+    "mid": "1320269",
+    "name": "Breza",
+    "capital_sid": "910416698",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 851,
+      "serbs": 0,
+      "others": 1265
+    },
+    "total_settlements": 28,
+    "settlements_with_geometry": 28
+  },
+  {
+    "mid": "1323835",
+    "name": "Pale (FBiH)",
+    "capital_sid": "967209933",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 4,
+      "serbs": 0,
+      "others": 15
+    },
+    "total_settlements": 15,
+    "settlements_with_geometry": 15
+  },
+  {
+    "mid": "1355433",
+    "name": "Berkovići",
+    "capital_sid": "923023427",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 637,
+      "serbs": 0,
+      "others": 38
+    },
+    "total_settlements": 20,
+    "settlements_with_geometry": 20
+  },
+  {
+    "mid": "1367544",
+    "name": "Milići",
+    "capital_sid": "974977172",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7,
+      "serbs": 0,
+      "others": 296
+    },
+    "total_settlements": 54,
+    "settlements_with_geometry": 54
+  },
+  {
+    "mid": "1383573",
+    "name": "Bosansko Grahovo",
+    "capital_sid": "945392533",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 226,
+      "serbs": 0,
+      "others": 185
+    },
+    "total_settlements": 35,
+    "settlements_with_geometry": 35
+  },
+  {
+    "mid": "1389088",
+    "name": "Srebrenik",
+    "capital_sid": "953897259",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2752,
+      "serbs": 0,
+      "others": 2308
+    },
+    "total_settlements": 49,
+    "settlements_with_geometry": 49
+  },
+  {
+    "mid": "1392554",
+    "name": "Derventa",
+    "capital_sid": "989298165",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 21952,
+      "serbs": 0,
+      "others": 4513
+    },
+    "total_settlements": 57,
+    "settlements_with_geometry": 57
+  },
+  {
+    "mid": "1413092",
+    "name": "Doboj-Jug",
+    "capital_sid": "940144127",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 97,
+      "serbs": 0,
+      "others": 98
+    },
+    "total_settlements": 2,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1416221",
+    "name": "Petrovac",
+    "capital_sid": "914962557",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 0,
+      "serbs": 0,
+      "others": 1
+    },
+    "total_settlements": 6,
+    "settlements_with_geometry": 6
+  },
+  {
+    "mid": "1425877",
+    "name": "Kalinovik",
+    "capital_sid": "950573521",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 17,
+      "serbs": 0,
+      "others": 104
+    },
+    "total_settlements": 71,
+    "settlements_with_geometry": 71
+  },
+  {
+    "mid": "1428426",
+    "name": "Jezero",
+    "capital_sid": "974760839",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 168,
+      "serbs": 0,
+      "others": 66
+    },
+    "total_settlements": 11,
+    "settlements_with_geometry": 11
+  },
+  {
+    "mid": "1431190",
+    "name": "Kostajnica",
+    "capital_sid": "979621775",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 166,
+      "serbs": 0,
+      "others": 317
+    },
+    "total_settlements": 12,
+    "settlements_with_geometry": 12
+  },
+  {
+    "mid": "1443444",
+    "name": "Ribnik",
+    "capital_sid": "960478253",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7,
+      "serbs": 0,
+      "others": 72
+    },
+    "total_settlements": 29,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1445016",
+    "name": "Modriča",
+    "capital_sid": "918232501",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 8132,
+      "serbs": 0,
+      "others": 2915
+    },
+    "total_settlements": 24,
+    "settlements_with_geometry": 24
+  },
+  {
+    "mid": "1445976",
+    "name": "Novi Grad Sarajevo",
+    "capital_sid": "949874500",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 8790,
+      "serbs": 0,
+      "others": 20602
+    },
+    "total_settlements": 3,
+    "settlements_with_geometry": 3
+  },
+  {
+    "mid": "1467835",
+    "name": "Prozor",
+    "capital_sid": "906740891",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 12259,
+      "serbs": 0,
+      "others": 231
+    },
+    "total_settlements": 56,
+    "settlements_with_geometry": 56
+  },
+  {
+    "mid": "1470472",
+    "name": "Olovo",
+    "capital_sid": "964472005",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 642,
+      "serbs": 0,
+      "others": 422
+    },
+    "total_settlements": 45,
+    "settlements_with_geometry": 45
+  },
+  {
+    "mid": "1472746",
+    "name": "Cazin",
+    "capital_sid": "904670079",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 139,
+      "serbs": 0,
+      "others": 799
+    },
+    "total_settlements": 54,
+    "settlements_with_geometry": 54
+  },
+  {
+    "mid": "1472867",
+    "name": "Istočni Stari Grad",
+    "capital_sid": "930730779",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 6,
+      "serbs": 0,
+      "others": 19
+    },
+    "total_settlements": 19,
+    "settlements_with_geometry": 19
+  },
+  {
+    "mid": "1475355",
+    "name": "Goražde",
+    "capital_sid": "909204481",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 76,
+      "serbs": 0,
+      "others": 1277
+    },
+    "total_settlements": 144,
+    "settlements_with_geometry": 144
+  },
+  {
+    "mid": "1487460",
+    "name": "Nevesinje",
+    "capital_sid": "965233988",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 210,
+      "serbs": 0,
+      "others": 211
+    },
+    "total_settlements": 56,
+    "settlements_with_geometry": 56
+  },
+  {
+    "mid": "1487779",
+    "name": "Usora",
+    "capital_sid": "974794242",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7467,
+      "serbs": 0,
+      "others": 304
+    },
+    "total_settlements": 13,
+    "settlements_with_geometry": 13
+  },
+  {
+    "mid": "1490866",
+    "name": "Čapljina",
+    "capital_sid": "923121183",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 14969,
+      "serbs": 0,
+      "others": 1488
+    },
+    "total_settlements": 32,
+    "settlements_with_geometry": 32
+  },
+  {
+    "mid": "1494459",
+    "name": "Bosanski Petrovac",
+    "capital_sid": "966902239",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 48,
+      "serbs": 0,
+      "others": 590
+    },
+    "total_settlements": 35,
+    "settlements_with_geometry": 35
+  },
+  {
+    "mid": "1494695",
+    "name": "Žepče",
+    "capital_sid": "958439418",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 17916,
+      "serbs": 0,
+      "others": 866
+    },
+    "total_settlements": 41,
+    "settlements_with_geometry": 41
+  },
+  {
+    "mid": "1512315",
+    "name": "Srebrenica",
+    "capital_sid": "921389145",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 38,
+      "serbs": 0,
+      "others": 741
+    },
+    "total_settlements": 81,
+    "settlements_with_geometry": 81
+  },
+  {
+    "mid": "1516637",
+    "name": "Zavidovići",
+    "capital_sid": "918557594",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3429,
+      "serbs": 0,
+      "others": 3701
+    },
+    "total_settlements": 47,
+    "settlements_with_geometry": 47
+  },
+  {
+    "mid": "1520211",
+    "name": "Vitez",
+    "capital_sid": "909740125",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 12675,
+      "serbs": 0,
+      "others": 2169
+    },
+    "total_settlements": 34,
+    "settlements_with_geometry": 34
+  },
+  {
+    "mid": "1521214",
+    "name": "Brod",
+    "capital_sid": "946411578",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 13949,
+      "serbs": 0,
+      "others": 4584
+    },
+    "total_settlements": 23,
+    "settlements_with_geometry": 23
+  },
+  {
+    "mid": "1532434",
+    "name": "Čelić",
+    "capital_sid": "972014011",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1206,
+      "serbs": 0,
+      "others": 268
+    },
+    "total_settlements": 20,
+    "settlements_with_geometry": 20
+  },
+  {
+    "mid": "1535620",
+    "name": "Mrkonjić Grad",
+    "capital_sid": "928151140",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1992,
+      "serbs": 0,
+      "others": 919
+    },
+    "total_settlements": 38,
+    "settlements_with_geometry": 38
+  },
+  {
+    "mid": "1539057",
+    "name": "Gornji Vakuf-Uskoplje",
+    "capital_sid": "917529109",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 10706,
+      "serbs": 0,
+      "others": 302
+    },
+    "total_settlements": 52,
+    "settlements_with_geometry": 52
+  },
+  {
+    "mid": "1542170",
+    "name": "Banovići",
+    "capital_sid": "914222576",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 550,
+      "serbs": 0,
+      "others": 2364
+    },
+    "total_settlements": 20,
+    "settlements_with_geometry": 20
+  },
+  {
+    "mid": "1553762",
+    "name": "Brčko",
+    "capital_sid": "974788425",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 22252,
+      "serbs": 0,
+      "others": 8630
+    },
+    "total_settlements": 59,
+    "settlements_with_geometry": 59
+  },
+  {
+    "mid": "1558420",
+    "name": "Široki Brijeg",
+    "capital_sid": "952713288",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 26864,
+      "serbs": 0,
+      "others": 139
+    },
+    "total_settlements": 34,
+    "settlements_with_geometry": 34
+  },
+  {
+    "mid": "1564405",
+    "name": "Zenica",
+    "capital_sid": "966958854",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 22511,
+      "serbs": 0,
+      "others": 20221
+    },
+    "total_settlements": 83,
+    "settlements_with_geometry": 83
+  },
+  {
+    "mid": "1572156",
+    "name": "Ugljevik",
+    "capital_sid": "954118861",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 52,
+      "serbs": 0,
+      "others": 405
+    },
+    "total_settlements": 25,
+    "settlements_with_geometry": 25
+  },
+  {
+    "mid": "1591214",
+    "name": "Trebinje",
+    "capital_sid": "909307577",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 442,
+      "serbs": 0,
+      "others": 2797
+    },
+    "total_settlements": 141,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1597958",
+    "name": "Lopare",
+    "capital_sid": "927594444",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 58,
+      "serbs": 0,
+      "others": 807
+    },
+    "total_settlements": 35,
+    "settlements_with_geometry": 35
+  },
+  {
+    "mid": "1598920",
+    "name": "Velika Kladuša",
+    "capital_sid": "978962044",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 740,
+      "serbs": 0,
+      "others": 1597
+    },
+    "total_settlements": 49,
+    "settlements_with_geometry": 49
+  },
+  {
+    "mid": "1603938",
+    "name": "Srbac",
+    "capital_sid": "976675338",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 140,
+      "serbs": 0,
+      "others": 1378
+    },
+    "total_settlements": 39,
+    "settlements_with_geometry": 39
+  },
+  {
+    "mid": "1615642",
+    "name": "Jajce",
+    "capital_sid": "920764339",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 15790,
+      "serbs": 0,
+      "others": 3095
+    },
+    "total_settlements": 58,
+    "settlements_with_geometry": 58
+  },
+  {
+    "mid": "1617307",
+    "name": "Grad Mostar",
+    "capital_sid": "927271796",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 42907,
+      "serbs": 0,
+      "others": 15889
+    },
+    "total_settlements": 60,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1624574",
+    "name": "Ljubuški",
+    "capital_sid": "958304343",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 26127,
+      "serbs": 0,
+      "others": 556
+    },
+    "total_settlements": 35,
+    "settlements_with_geometry": 35
+  },
+  {
+    "mid": "1625429",
+    "name": "Čelinac",
+    "capital_sid": "944707861",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 76,
+      "serbs": 0,
+      "others": 637
+    },
+    "total_settlements": 30,
+    "settlements_with_geometry": 30
+  },
+  {
+    "mid": "1634032",
+    "name": "Novo Sarajevo",
+    "capital_sid": "905067995",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 8755,
+      "serbs": 0,
+      "others": 19330
+    },
+    "total_settlements": 3,
+    "settlements_with_geometry": 3
+  },
+  {
+    "mid": "1640845",
+    "name": "Busovača",
+    "capital_sid": "947266643",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 9093,
+      "serbs": 0,
+      "others": 712
+    },
+    "total_settlements": 47,
+    "settlements_with_geometry": 47
+  },
+  {
+    "mid": "1644092",
+    "name": "Gacko",
+    "capital_sid": "963276128",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 29,
+      "serbs": 0,
+      "others": 240
+    },
+    "total_settlements": 71,
+    "settlements_with_geometry": 71
+  },
+  {
+    "mid": "1653737",
+    "name": "Osmaci",
+    "capital_sid": "969845409",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5,
+      "serbs": 0,
+      "others": 42
+    },
+    "total_settlements": 16,
+    "settlements_with_geometry": 16
+  },
+  {
+    "mid": "1655654",
+    "name": "Bosanska Krupa",
+    "capital_sid": "911780912",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 129,
+      "serbs": 0,
+      "others": 1060
+    },
+    "total_settlements": 37,
+    "settlements_with_geometry": 37
+  },
+  {
+    "mid": "1663346",
+    "name": "Kreševo",
+    "capital_sid": "973641701",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 4714,
+      "serbs": 0,
+      "others": 452
+    },
+    "total_settlements": 27,
+    "settlements_with_geometry": 27
+  },
+  {
+    "mid": "1670035",
+    "name": "Krupa na Uni",
+    "capital_sid": "907665967",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5,
+      "serbs": 0,
+      "others": 12
+    },
+    "total_settlements": 12,
+    "settlements_with_geometry": 12
+  },
+  {
+    "mid": "1675873",
+    "name": "Pale (RS)",
+    "capital_sid": "910023718",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 125,
+      "serbs": 0,
+      "others": 563
+    },
+    "total_settlements": 62,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1677723",
+    "name": "Živinice",
+    "capital_sid": "983820035",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3976,
+      "serbs": 0,
+      "others": 3265
+    },
+    "total_settlements": 29,
+    "settlements_with_geometry": 29
+  },
+  {
+    "mid": "1680904",
+    "name": "Šipovo",
+    "capital_sid": "917973143",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 31,
+      "serbs": 0,
+      "others": 253
+    },
+    "total_settlements": 46,
+    "settlements_with_geometry": 46
+  },
+  {
+    "mid": "1684504",
+    "name": "Odžak",
+    "capital_sid": "987567000",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 16062,
+      "serbs": 0,
+      "others": 1785
+    },
+    "total_settlements": 14,
+    "settlements_with_geometry": 14
+  },
+  {
+    "mid": "1695193",
+    "name": "Kakanj",
+    "capital_sid": "988104867",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 16556,
+      "serbs": 0,
+      "others": 3937
+    },
+    "total_settlements": 106,
+    "settlements_with_geometry": 106
+  },
+  {
+    "mid": "1697675",
+    "name": "Kalesija",
+    "capital_sid": "950415211",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 30,
+      "serbs": 0,
+      "others": 936
+    },
+    "total_settlements": 28,
+    "settlements_with_geometry": 28
+  },
+  {
+    "mid": "1709112",
+    "name": "Gračanica",
+    "capital_sid": "922255281",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 77,
+      "serbs": 0,
+      "others": 2298
+    },
+    "total_settlements": 23,
+    "settlements_with_geometry": 23
+  },
+  {
+    "mid": "1735348",
+    "name": "Jablanica",
+    "capital_sid": "925480651",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2291,
+      "serbs": 0,
+      "others": 797
+    },
+    "total_settlements": 33,
+    "settlements_with_geometry": 33
+  },
+  {
+    "mid": "1736474",
+    "name": "Sapna",
+    "capital_sid": "971833384",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 15,
+      "serbs": 0,
+      "others": 137
+    },
+    "total_settlements": 13,
+    "settlements_with_geometry": 13
+  },
+  {
+    "mid": "1738233",
+    "name": "Rogatica",
+    "capital_sid": "937116332",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 19,
+      "serbs": 0,
+      "others": 359
+    },
+    "total_settlements": 118,
+    "settlements_with_geometry": 118
+  },
+  {
+    "mid": "1738871",
+    "name": "Bratunac",
+    "capital_sid": "986657766",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 40,
+      "serbs": 0,
+      "others": 569
+    },
+    "total_settlements": 50,
+    "settlements_with_geometry": 50
+  },
+  {
+    "mid": "1740750",
+    "name": "Posušje",
+    "capital_sid": "944766770",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 16963,
+      "serbs": 0,
+      "others": 156
+    },
+    "total_settlements": 20,
+    "settlements_with_geometry": 20
+  },
+  {
+    "mid": "1747368",
+    "name": "Grude",
+    "capital_sid": "940793190",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 16210,
+      "serbs": 0,
+      "others": 135
+    },
+    "total_settlements": 13,
+    "settlements_with_geometry": 13
+  },
+  {
+    "mid": "1747899",
+    "name": "Istočna Ilidža",
+    "capital_sid": "987717565",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 200,
+      "serbs": 0,
+      "others": 619
+    },
+    "total_settlements": 5,
+    "settlements_with_geometry": 5
+  },
+  {
+    "mid": "1753458",
+    "name": "Teočak",
+    "capital_sid": "948889870",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 4,
+      "serbs": 0,
+      "others": 417
+    },
+    "total_settlements": 10,
+    "settlements_with_geometry": 10
+  },
+  {
+    "mid": "1761751",
+    "name": "Stari Grad Sarajevo",
+    "capital_sid": "984661499",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 1120,
+      "serbs": 0,
+      "others": 5040
+    },
+    "total_settlements": 8,
+    "settlements_with_geometry": 8
+  },
+  {
+    "mid": "1762269",
+    "name": "Istočni Drvar",
+    "capital_sid": "968490963",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 0,
+      "serbs": 0,
+      "others": 0
+    },
+    "total_settlements": 3,
+    "settlements_with_geometry": 3
+  },
+  {
+    "mid": "1762558",
+    "name": "Čitluk",
+    "capital_sid": "978246149",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 14823,
+      "serbs": 0,
+      "others": 130
+    },
+    "total_settlements": 21,
+    "settlements_with_geometry": 21
+  },
+  {
+    "mid": "1764163",
+    "name": "Han Pijesak",
+    "capital_sid": "943887519",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7,
+      "serbs": 0,
+      "others": 124
+    },
+    "total_settlements": 26,
+    "settlements_with_geometry": 26
+  },
+  {
+    "mid": "1766651",
+    "name": "Hadžići",
+    "capital_sid": "956528781",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 746,
+      "serbs": 0,
+      "others": 1700
+    },
+    "total_settlements": 62,
+    "settlements_with_geometry": 62
+  },
+  {
+    "mid": "1768475",
+    "name": "Bijeljina",
+    "capital_sid": "931612123",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 492,
+      "serbs": 0,
+      "others": 8878
+    },
+    "total_settlements": 67,
+    "settlements_with_geometry": 67
+  },
+  {
+    "mid": "1771936",
+    "name": "Vareš",
+    "capital_sid": "907783782",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 9016,
+      "serbs": 0,
+      "others": 2829
+    },
+    "total_settlements": 85,
+    "settlements_with_geometry": 85
+  },
+  {
+    "mid": "1777860",
+    "name": "Doboj-Istok",
+    "capital_sid": "920790216",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 7,
+      "serbs": 0,
+      "others": 113
+    },
+    "total_settlements": 6,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1788051",
+    "name": "Sokolac",
+    "capital_sid": "931262127",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 19,
+      "serbs": 0,
+      "others": 176
+    },
+    "total_settlements": 96,
+    "settlements_with_geometry": 96
+  },
+  {
+    "mid": "1794197",
+    "name": "Kneževo",
+    "capital_sid": "966739499",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 418,
+      "serbs": 0,
+      "others": 259
+    },
+    "total_settlements": 20,
+    "settlements_with_geometry": 20
+  },
+  {
+    "mid": "1795673",
+    "name": "Vukosavlje",
+    "capital_sid": "931769033",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3391,
+      "serbs": 0,
+      "others": 385
+    },
+    "total_settlements": 12,
+    "settlements_with_geometry": 12
+  },
+  {
+    "mid": "1798098",
+    "name": "Istočni Mostar",
+    "capital_sid": "971221310",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 130,
+      "serbs": 0,
+      "others": 3
+    },
+    "total_settlements": 3,
+    "settlements_with_geometry": 3
+  },
+  {
+    "mid": "1799334",
+    "name": "Travnik",
+    "capital_sid": "915560372",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 25750,
+      "serbs": 0,
+      "others": 5033
+    },
+    "total_settlements": 90,
+    "settlements_with_geometry": 90
+  },
+  {
+    "mid": "1814920",
+    "name": "Bihać",
+    "capital_sid": "930757667",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5582,
+      "serbs": 0,
+      "others": 5741
+    },
+    "total_settlements": 59,
+    "settlements_with_geometry": 59
+  },
+  {
+    "mid": "1840366",
+    "name": "Banja Luka",
+    "capital_sid": "989526154",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 29026,
+      "serbs": 0,
+      "others": 31282
+    },
+    "total_settlements": 54,
+    "settlements_with_geometry": 54
+  },
+  {
+    "mid": "1854656",
+    "name": "Lukavac",
+    "capital_sid": "922601055",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 2159,
+      "serbs": 0,
+      "others": 4655
+    },
+    "total_settlements": 44,
+    "settlements_with_geometry": 44
+  },
+  {
+    "mid": "1871665",
+    "name": "Sanski Most",
+    "capital_sid": "927141331",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 3227,
+      "serbs": 0,
+      "others": 2320
+    },
+    "total_settlements": 66,
+    "settlements_with_geometry": 0
+  },
+  {
+    "mid": "1875064",
+    "name": "Drvar",
+    "capital_sid": "955735427",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 31,
+      "serbs": 0,
+      "others": 437
+    },
+    "total_settlements": 25,
+    "settlements_with_geometry": 25
+  },
+  {
+    "mid": "1880950",
+    "name": "Foča (RS)",
+    "capital_sid": "966372159",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 93,
+      "serbs": 0,
+      "others": 1246
+    },
+    "total_settlements": 101,
+    "settlements_with_geometry": 101
+  },
+  {
+    "mid": "1892275",
+    "name": "Bileća",
+    "capital_sid": "976258241",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 39,
+      "serbs": 0,
+      "others": 670
+    },
+    "total_settlements": 61,
+    "settlements_with_geometry": 61
+  },
+  {
+    "mid": "1895342",
+    "name": "Pelagićevo",
+    "capital_sid": "969968182",
+    "totals_by_group": {
+      "bosniaks": 0,
+      "croats": 5523,
+      "serbs": 0,
+      "others": 652
+    },
+    "total_settlements": 11,
+    "settlements_with_geometry": 11
+  }
+]

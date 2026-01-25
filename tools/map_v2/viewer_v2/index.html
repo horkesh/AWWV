@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map v2 Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #controls {
+      padding: 10px;
+      background: #f0f0f0;
+      border-bottom: 1px solid #ccc;
+    }
+    #controls label {
+      margin-right: 10px;
+    }
+    #controls select {
+      margin-right: 20px;
+    }
+    #canvas {
+      flex: 1;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label for="municipality">Municipality:</label>
+    <select id="municipality"></select>
+    <label>
+      <input type="checkbox" id="showSalvaged"> Show only salvaged
+    </label>
+    <label>
+      Max rings: <input type="number" id="maxRings" value="500" min="1" max="10000" style="width: 80px;">
+    </label>
+    <label>
+      <input type="checkbox" id="flipY"> Flip Y
+    </label>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>

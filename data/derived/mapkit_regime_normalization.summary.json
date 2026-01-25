@@ -1,0 +1,1812 @@
+{
+  "totalFeatures": 5994,
+  "totalFiles": 142,
+  "mainFiles": 79,
+  "strayFiles": 63,
+  "transformedFiles": 62,
+  "untouchedFiles": 1,
+  "transformedFeatures": 2130,
+  "perFileStats": [
+    {
+      "file": "Banovici_10014.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 19,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Banja Luka_20010.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 53,
+      "conformCount": 53,
+      "conformPercent": 100,
+      "landedCount": 53,
+      "landedPercent": 100,
+      "params": {
+        "dx": 319.26360200015273,
+        "dy": 301.53196352012134,
+        "kx": 0.5744520588666586,
+        "ky": 0.5203007655496923
+      }
+    },
+    {
+      "file": "Berkovici_20028.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 18,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Bihac_10049.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 58,
+      "conformCount": 58,
+      "conformPercent": 100,
+      "landedCount": 58,
+      "landedPercent": 100,
+      "params": {
+        "dx": 587.1188477194669,
+        "dy": 303.0683400551987,
+        "kx": 0.6681550309114569,
+        "ky": 0.6417832308823525
+      }
+    },
+    {
+      "file": "Bijeljina_20036.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 66,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Bileca_20044.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 59,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Bosanska Dubica_20265.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 60,
+      "conformCount": 60,
+      "conformPercent": 100,
+      "landedCount": 60,
+      "landedPercent": 100,
+      "params": {
+        "dx": 392.89305037276296,
+        "dy": 427.40065337191305,
+        "kx": 0.9458598104647189,
+        "ky": 0.8232240230880775
+      }
+    },
+    {
+      "file": "Bosanska Gradiska_20125.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 67,
+      "conformCount": 67,
+      "conformPercent": 100,
+      "landedCount": 67,
+      "landedPercent": 100,
+      "params": {
+        "dx": 278.1992651521925,
+        "dy": 404.6097189703792,
+        "kx": 0.7660022179981198,
+        "ky": 0.8138605945144668
+      }
+    },
+    {
+      "file": "Bosanska Krupa_11428.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 36,
+      "conformCount": 36,
+      "conformPercent": 100,
+      "landedCount": 36,
+      "landedPercent": 100,
+      "params": {
+        "dx": 531.2352243473889,
+        "dy": 341.38245391455484,
+        "kx": 0.6757036351507342,
+        "ky": 0.65246623684418
+      }
+    },
+    {
+      "file": "Bosanski Novi_20397.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 47,
+      "conformCount": 47,
+      "conformPercent": 100,
+      "landedCount": 47,
+      "landedPercent": 100,
+      "params": {
+        "dx": 471.4240983031927,
+        "dy": 382.9278688197979,
+        "kx": 0.8034536482690269,
+        "ky": 0.7597572451919802
+      }
+    },
+    {
+      "file": "Bosanski Petrovac_11436.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 34,
+      "conformCount": 34,
+      "conformPercent": 100,
+      "landedCount": 34,
+      "landedPercent": 100,
+      "params": {
+        "dx": 495.97679728618374,
+        "dy": 239.20082520686088,
+        "kx": 0.4863451596797577,
+        "ky": 0.5157320583805594
+      }
+    },
+    {
+      "file": "Bosansko Grahovo_10146.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 34,
+      "conformCount": 34,
+      "conformPercent": 100,
+      "landedCount": 34,
+      "landedPercent": 100,
+      "params": {
+        "dx": 481.78802033841004,
+        "dy": 107.08195982438627,
+        "kx": 0.4812348922016695,
+        "ky": 0.4584041968021298
+      }
+    },
+    {
+      "file": "Bratunac_20052.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 49,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Brcko_30163.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 58,
+      "conformCount": 58,
+      "conformPercent": 100,
+      "landedCount": 58,
+      "landedPercent": 100,
+      "params": {
+        "dx": -78.01742005898564,
+        "dy": 318.7218646688984,
+        "kx": 0.8473850224550981,
+        "ky": 0.7506021432809382
+      }
+    },
+    {
+      "file": "Breza_10189.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 27,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Brod_20079.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 22,
+      "conformCount": 22,
+      "conformPercent": 100,
+      "landedCount": 22,
+      "landedPercent": 100,
+      "params": {
+        "dx": 90.36772581088633,
+        "dy": 397.8282660515655,
+        "kx": 0.7662956700486332,
+        "ky": 0.8587376314906369
+      }
+    },
+    {
+      "file": "Bugojno_10197.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 77,
+      "conformCount": 77,
+      "conformPercent": 100,
+      "landedCount": 77,
+      "landedPercent": 100,
+      "params": {
+        "dx": 222.37288941498377,
+        "dy": 63.81646175402608,
+        "kx": 1.273096813319451,
+        "ky": 1.4189486232445299
+      }
+    },
+    {
+      "file": "Busovaca_10219.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 46,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Buzim_11240.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 6,
+      "conformCount": 6,
+      "conformPercent": 100,
+      "landedCount": 6,
+      "landedPercent": 100,
+      "params": {
+        "dx": 569.7052300051048,
+        "dy": 403.4965095722286,
+        "kx": 0.6537428445386562,
+        "ky": 0.40754258679550165
+      }
+    },
+    {
+      "file": "Cajnice_20630.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 35,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Capljina_10243.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 31,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Cazin_10227.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 53,
+      "conformCount": 53,
+      "conformPercent": 100,
+      "landedCount": 53,
+      "landedPercent": 100,
+      "params": {
+        "dx": 601.8552035789933,
+        "dy": 384.264945032582,
+        "kx": 1.0005409504799527,
+        "ky": 0.9389696114879806
+      }
+    },
+    {
+      "file": "Celic_11231.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 19,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Celinac_20648.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 29,
+      "conformCount": 29,
+      "conformPercent": 100,
+      "landedCount": 29,
+      "landedPercent": 100,
+      "params": {
+        "dx": 240.76307834495873,
+        "dy": 284.62882933768594,
+        "kx": 0.6871421397277044,
+        "ky": 0.6472530373186023
+      }
+    },
+    {
+      "file": "Centar Sarajevo_10839.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 5,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Citluk_10260.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 20,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Derventa_20133.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 56,
+      "conformCount": 56,
+      "conformPercent": 100,
+      "landedCount": 56,
+      "landedPercent": 100,
+      "params": {
+        "dx": 113.80574232964932,
+        "dy": 362.9452886469329,
+        "kx": 0.7879014828017102,
+        "ky": 0.8489749894545185
+      }
+    },
+    {
+      "file": "Doboj Istok_11258.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 5,
+      "conformCount": 5,
+      "conformPercent": 100,
+      "landedCount": 5,
+      "landedPercent": 100,
+      "params": {
+        "dx": 58.301884078898524,
+        "dy": 288.7126421140596,
+        "kx": 1.0747747297422237,
+        "ky": 0.8497105801894799
+      }
+    },
+    {
+      "file": "Doboj Jug_11266.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 1,
+      "conformCount": 1,
+      "conformPercent": 100,
+      "landedCount": 1,
+      "landedPercent": 100,
+      "params": {
+        "dx": 84.38246070316347,
+        "dy": 267.3613092234518,
+        "kx": 1.3302164750084204,
+        "ky": 0.7218587115523418
+      }
+    },
+    {
+      "file": "Doboj_20141.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 82,
+      "conformCount": 82,
+      "conformPercent": 100,
+      "landedCount": 82,
+      "landedPercent": 100,
+      "params": {
+        "dx": 79.52317575428867,
+        "dy": 300.2452990939909,
+        "kx": 0.7489432709759867,
+        "ky": 0.812560875012579
+      }
+    },
+    {
+      "file": "Dobretici_11274.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 17,
+      "conformCount": 17,
+      "conformPercent": 100,
+      "landedCount": 17,
+      "landedPercent": 100,
+      "params": {
+        "dx": 239.801102115858,
+        "dy": 174.7035379872986,
+        "kx": 1.4365946725393153,
+        "ky": 1.4080528058521158
+      }
+    },
+    {
+      "file": "Domaljevac-Samac_11282.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 5,
+      "conformCount": 5,
+      "conformPercent": 100,
+      "landedCount": 5,
+      "landedPercent": 100,
+      "params": {
+        "dx": -32.679845439058454,
+        "dy": 396.72015738608474,
+        "kx": 1.0698183546355116,
+        "ky": 1.5526406349021862
+      }
+    },
+    {
+      "file": "Donji Vakuf_10294.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 67,
+      "conformCount": 67,
+      "conformPercent": 100,
+      "landedCount": 67,
+      "landedPercent": 100,
+      "params": {
+        "dx": 241.43416126240209,
+        "dy": 95.94199331685326,
+        "kx": 1.3391035376913347,
+        "ky": 1.2204285865719742
+      }
+    },
+    {
+      "file": "Donji Zabar_20150.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 5,
+      "conformCount": 5,
+      "conformPercent": 100,
+      "landedCount": 5,
+      "landedPercent": 100,
+      "params": {
+        "dx": -66.2334671111937,
+        "dy": 364.78987793396993,
+        "kx": 0.9432136502754056,
+        "ky": 0.9183291020514127
+      }
+    },
+    {
+      "file": "Drvar_11614.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 24,
+      "conformCount": 24,
+      "conformPercent": 100,
+      "landedCount": 24,
+      "landedPercent": 100,
+      "params": {
+        "dx": 466.1712485596309,
+        "dy": 155.49244968523766,
+        "kx": 0.6109633121264351,
+        "ky": 0.4511617110284124
+      }
+    },
+    {
+      "file": "Foca (FBiH)_11444.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 31,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Foca_20613.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 100,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Fojnica_10324.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 54,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Gacko_20117.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 70,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Glamoc_10359.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 54,
+      "conformCount": 54,
+      "conformPercent": 100,
+      "landedCount": 54,
+      "landedPercent": 100,
+      "params": {
+        "dx": 373.60349290285257,
+        "dy": 64.31290697606784,
+        "kx": 0.6013106261318779,
+        "ky": 0.6633566629461638
+      }
+    },
+    {
+      "file": "Gorazde_11452.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 143,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Gornji Vakuf-Uskoplje_10375.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 51,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Gracanica_11479.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 22,
+      "conformCount": 22,
+      "conformPercent": 100,
+      "landedCount": 22,
+      "landedPercent": 100,
+      "params": {
+        "dx": 17.499263747650957,
+        "dy": 286.63168624635387,
+        "kx": 0.7369800791589574,
+        "ky": 0.7122985555946633
+      }
+    },
+    {
+      "file": "Gradacac_10391.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 33,
+      "conformCount": 33,
+      "conformPercent": 100,
+      "landedCount": 33,
+      "landedPercent": 100,
+      "params": {
+        "dx": -5.947874283663623,
+        "dy": 328.7850110768462,
+        "kx": 1.0074552637013645,
+        "ky": 1.0291790081827488
+      }
+    },
+    {
+      "file": "Grude_10405.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 12,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Hadzici_10847.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 61,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Han Pijesak_20621.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 25,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ilidza_11550.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 11,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ilijas_10863.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 73,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Istocna Ilidza_20176.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 4,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Istocni Drvar_20184.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 1,
+      "conformCount": 1,
+      "conformPercent": 100,
+      "landedCount": 1,
+      "landedPercent": 100,
+      "params": {
+        "dx": 429.9039111375792,
+        "dy": 190.4712544912312,
+        "kx": 0.3849254594331579,
+        "ky": 0.5364625289156234
+      }
+    },
+    {
+      "file": "Istocni Mostar_20192.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 2,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Istocni Stari Grad_20206.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 18,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Istocno Novo Sarajevo_20214.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 7,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Jablanica_10421.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 32,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Jajce_11487.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 57,
+      "conformCount": 57,
+      "conformPercent": 100,
+      "landedCount": 57,
+      "landedPercent": 100,
+      "params": {
+        "dx": 267.04964944465064,
+        "dy": 158.0725843456321,
+        "kx": 0.9439568879691574,
+        "ky": 1.0311541755744618
+      }
+    },
+    {
+      "file": "Jezero_20222.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 10,
+      "conformCount": 10,
+      "conformPercent": 100,
+      "landedCount": 10,
+      "landedPercent": 100,
+      "params": {
+        "dx": 297.74106053349215,
+        "dy": 159.09528300562863,
+        "kx": 0.9509481869406163,
+        "ky": 0.9795267898254126
+      }
+    },
+    {
+      "file": "Kakanj_10448.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 105,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kalesija_11495.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 27,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kalinovik_20249.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 70,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kiseljak_10472.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 81,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kladanj_10499.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 47,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kljuc_11509.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 40,
+      "conformCount": 40,
+      "conformPercent": 100,
+      "landedCount": 40,
+      "landedPercent": 100,
+      "params": {
+        "dx": 400.68674247294496,
+        "dy": 237.43973927652692,
+        "kx": 0.9846536649019428,
+        "ky": 0.8254773320720065
+      }
+    },
+    {
+      "file": "Knezevo_20257.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 19,
+      "conformCount": 19,
+      "conformPercent": 100,
+      "landedCount": 19,
+      "landedPercent": 100,
+      "params": {
+        "dx": 253.00163416262006,
+        "dy": 202.90076528260806,
+        "kx": 0.6046645899394187,
+        "ky": 0.6271624569560151
+      }
+    },
+    {
+      "file": "Konjic_10529.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 167,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Kostajnica_20273.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 11,
+      "conformCount": 11,
+      "conformPercent": 100,
+      "landedCount": 11,
+      "landedPercent": 100,
+      "params": {
+        "dx": 442.2468836763833,
+        "dy": 438.96414260707786,
+        "kx": 0.8747051708613053,
+        "ky": 0.9506454858229699
+      }
+    },
+    {
+      "file": "Kotor Varos_20281.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 42,
+      "conformCount": 42,
+      "conformPercent": 100,
+      "landedCount": 42,
+      "landedPercent": 100,
+      "params": {
+        "dx": 233.2803932991764,
+        "dy": 236.91880726705858,
+        "kx": 0.6256619511735899,
+        "ky": 0.6955761136791693
+      }
+    },
+    {
+      "file": "Kresevo_10545.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 26,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Krupa na Uni_20290.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 11,
+      "conformCount": 11,
+      "conformPercent": 100,
+      "landedCount": 11,
+      "landedPercent": 100,
+      "params": {
+        "dx": 505.8346140623506,
+        "dy": 345.77715075900187,
+        "kx": 1.073527389126949,
+        "ky": 0.8575637465611263
+      }
+    },
+    {
+      "file": "Kupres (RS)_20303.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 3,
+      "conformCount": 3,
+      "conformPercent": 100,
+      "landedCount": 3,
+      "landedPercent": 100,
+      "params": {
+        "dx": 305.8143040303814,
+        "dy": 71.34672719385179,
+        "kx": 0.9209009517256358,
+        "ky": 0.6469407409984113
+      }
+    },
+    {
+      "file": "Kupres_11517.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 35,
+      "conformCount": 35,
+      "conformPercent": 100,
+      "landedCount": 35,
+      "landedPercent": 100,
+      "params": {
+        "dx": 278.0917662130317,
+        "dy": 29.478968050886976,
+        "kx": 0.5432164223036874,
+        "ky": 0.6473718130906817
+      }
+    },
+    {
+      "file": "Laktasi_20311.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 36,
+      "conformCount": 36,
+      "conformPercent": 100,
+      "landedCount": 36,
+      "landedPercent": 100,
+      "params": {
+        "dx": 254.6489612658852,
+        "dy": 340.89605010733794,
+        "kx": 0.6866470110991332,
+        "ky": 0.7154637806609613
+      }
+    },
+    {
+      "file": "Livno_10588.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 57,
+      "conformCount": 57,
+      "conformPercent": 100,
+      "landedCount": 57,
+      "landedPercent": 100,
+      "params": {
+        "dx": 358.19043271006257,
+        "dy": -18.322530408239174,
+        "kx": 0.4842038349497297,
+        "ky": 0.5322832939868816
+      }
+    },
+    {
+      "file": "Lopare_20320.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 34,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Lukavac_10600.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 43,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ljubinje_20338.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 20,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ljubuski_10626.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 34,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Maglaj_10634.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 39,
+      "conformCount": 39,
+      "conformPercent": 100,
+      "landedCount": 39,
+      "landedPercent": 100,
+      "params": {
+        "dx": 71.40150449155658,
+        "dy": 222.78931020448422,
+        "kx": 0.9989013275495517,
+        "ky": 0.9622463402852915
+      }
+    },
+    {
+      "file": "Milici_20346.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 53,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Modrica_20354.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 23,
+      "conformCount": 23,
+      "conformPercent": 100,
+      "landedCount": 23,
+      "landedPercent": 100,
+      "params": {
+        "dx": 24.60253474793717,
+        "dy": 352.2121339602938,
+        "kx": 0.6816565286761512,
+        "ky": 0.6028446009931987
+      }
+    },
+    {
+      "file": "Mostar_11410.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 59,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Mrkonjic Grad_20362.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 37,
+      "conformCount": 37,
+      "conformPercent": 100,
+      "landedCount": 37,
+      "landedPercent": 100,
+      "params": {
+        "dx": 334.5133000562633,
+        "dy": 179.00511770872458,
+        "kx": 0.6183864918987707,
+        "ky": 0.5336495735290381
+      }
+    },
+    {
+      "file": "Neum_10685.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 26,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Nevesinje_20389.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 55,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Novi Grad Sarajevo_10871.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 2,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Novi Travnik_10774.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 50,
+      "conformCount": 50,
+      "conformPercent": 100,
+      "landedCount": 50,
+      "landedPercent": 100,
+      "params": {
+        "dx": 183.54028442939205,
+        "dy": 90.63954702792086,
+        "kx": 1.2180717838915158,
+        "ky": 1.258448040457978
+      }
+    },
+    {
+      "file": "Novo Gorazde_20419.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 60,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Novo Sarajevo_11568.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 2,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Odzak_11525.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 13,
+      "conformCount": 13,
+      "conformPercent": 100,
+      "landedCount": 13,
+      "landedPercent": 100,
+      "params": {
+        "dx": 20.301248056777013,
+        "dy": 402.6574493939903,
+        "kx": 0.6736440176391066,
+        "ky": 0.6192503208280224
+      }
+    },
+    {
+      "file": "Olovo_10715.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 44,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Orasje_11533.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 13,
+      "conformCount": 13,
+      "conformPercent": 100,
+      "landedCount": 13,
+      "landedPercent": 100,
+      "params": {
+        "dx": -65.46387976318238,
+        "dy": 379.9741321072968,
+        "kx": 0.7549693987229892,
+        "ky": 0.5449033358678342
+      }
+    },
+    {
+      "file": "Osmaci_20427.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 15,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ostra Luka_20435.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 23,
+      "conformCount": 23,
+      "conformPercent": 100,
+      "landedCount": 23,
+      "landedPercent": 100,
+      "params": {
+        "dx": 437.19762702057744,
+        "dy": 333.1811068267575,
+        "kx": 0.6237921505414464,
+        "ky": 0.9407551510741305
+      }
+    },
+    {
+      "file": "Pale (FBiH)_11576.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 14,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Pale_20443.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 61,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Pelagicevo_20451.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 10,
+      "conformCount": 10,
+      "conformPercent": 100,
+      "landedCount": 10,
+      "landedPercent": 100,
+      "params": {
+        "dx": -26.69550991780227,
+        "dy": 352.8994759331889,
+        "kx": 0.9804321893698779,
+        "ky": 0.7290724897242775
+      }
+    },
+    {
+      "file": "Petrovac_20460.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 5,
+      "conformCount": 5,
+      "conformPercent": 100,
+      "landedCount": 5,
+      "landedPercent": 100,
+      "params": {
+        "dx": 444.95684396882183,
+        "dy": 215.05635432955702,
+        "kx": 0.4701013263252813,
+        "ky": 2.312691936576074
+      }
+    },
+    {
+      "file": "Petrovo_20478.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 6,
+      "conformCount": 6,
+      "conformPercent": 100,
+      "landedCount": 6,
+      "landedPercent": 100,
+      "params": {
+        "dx": 16.443709179638518,
+        "dy": 245.8003635807997,
+        "kx": 0.5706302797716376,
+        "ky": 0.6174699710345515
+      }
+    },
+    {
+      "file": "Posusje_10731.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 19,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Prijedor_20486.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 70,
+      "conformCount": 70,
+      "conformPercent": 100,
+      "landedCount": 70,
+      "landedPercent": 100,
+      "params": {
+        "dx": 402.51653883152693,
+        "dy": 365.58429495407574,
+        "kx": 0.7016453606293169,
+        "ky": 0.6988632979840165
+      }
+    },
+    {
+      "file": "Prnjavor_20494.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 62,
+      "conformCount": 62,
+      "conformPercent": 100,
+      "landedCount": 62,
+      "landedPercent": 100,
+      "params": {
+        "dx": 187.36863614417393,
+        "dy": 337.4564779557897,
+        "kx": 0.850366615222826,
+        "ky": 0.7821400951009411
+      }
+    },
+    {
+      "file": "Prozor_10766.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 55,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ravno_11304.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 53,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ribnik_20508.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 28,
+      "conformCount": 28,
+      "conformPercent": 100,
+      "landedCount": 28,
+      "landedPercent": 100,
+      "params": {
+        "dx": 375.95672630486104,
+        "dy": 205.27385262855154,
+        "kx": 0.7213104908605931,
+        "ky": 0.7555642954608595
+      }
+    },
+    {
+      "file": "Rogatica_20516.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 117,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Rudo_20524.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 88,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Samac_20656.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 20,
+      "conformCount": 20,
+      "conformPercent": 100,
+      "landedCount": 20,
+      "landedPercent": 100,
+      "params": {
+        "dx": -12.4212147120611,
+        "dy": 383.2842686212816,
+        "kx": 0.9245182053927485,
+        "ky": 0.8965047489252558
+      }
+    },
+    {
+      "file": "Sanski Most_11541.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 66,
+      "conformCount": 66,
+      "conformPercent": 100,
+      "landedCount": 66,
+      "landedPercent": 100,
+      "params": {
+        "dx": 436.62056827691913,
+        "dy": 306.08351837681766,
+        "kx": 0.8455724659498624,
+        "ky": 0.7636910743159548
+      }
+    },
+    {
+      "file": "Sapna_11312.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 12,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Sekovici_20664.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 37,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Sipovo_20672.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 45,
+      "conformCount": 45,
+      "conformPercent": 100,
+      "landedCount": 45,
+      "landedPercent": 100,
+      "params": {
+        "dx": 313.10929625727204,
+        "dy": 122.65493492297435,
+        "kx": 0.7439440683899887,
+        "ky": 0.759936159014771
+      }
+    },
+    {
+      "file": "Siroki Brijeg_10570.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 33,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Sokolac_20532.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 95,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Srbac_20559.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 38,
+      "conformCount": 38,
+      "conformPercent": 100,
+      "landedCount": 38,
+      "landedPercent": 100,
+      "params": {
+        "dx": 212.76387442196437,
+        "dy": 396.98113372228664,
+        "kx": 0.8076906143330868,
+        "ky": 0.7385539360911847
+      }
+    },
+    {
+      "file": "Srebrenica_20567.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 80,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Srebrenik_10987.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 48,
+      "conformCount": 48,
+      "conformPercent": 100,
+      "landedCount": 48,
+      "landedPercent": 100,
+      "params": {
+        "dx": -22.753874382276535,
+        "dy": 274.6630265030174,
+        "kx": 1.1231695630081742,
+        "ky": 1.182376098631392
+      }
+    },
+    {
+      "file": "Stari Grad Sarajevo_11584.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 7,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Stolac_11606.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 25,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Teocak_11339.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 9,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Tesanj_11045.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 40,
+      "conformCount": 40,
+      "conformPercent": 100,
+      "landedCount": 40,
+      "landedPercent": 100,
+      "params": {
+        "dx": 102.01475766285182,
+        "dy": 257.5067631448618,
+        "kx": 1.4407325336107826,
+        "ky": 1.1748543954587394
+      }
+    },
+    {
+      "file": "Teslic_20575.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 56,
+      "conformCount": 56,
+      "conformPercent": 100,
+      "landedCount": 56,
+      "landedPercent": 100,
+      "params": {
+        "dx": 135.241390856595,
+        "dy": 237.695811194067,
+        "kx": 0.8131917265223765,
+        "ky": 0.6863611292207029
+      }
+    },
+    {
+      "file": "Tomislavgrad_10308.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 59,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Travnik_11061.js",
+      "cluster": "STRAY",
+      "applied": false,
+      "featureCount": 89,
+      "conformCount": 88,
+      "conformPercent": 98.87640449438202,
+      "landedCount": 88,
+      "landedPercent": 98.87640449438202,
+      "params": {
+        "dx": 177.3381897993242,
+        "dy": 122.36588022867255,
+        "kx": 1.5174303162372051,
+        "ky": 1.1806979033788398
+      },
+      "reasons": [
+        "Gate 2 failed: 98.88% landed (required ≥99%)"
+      ]
+    },
+    {
+      "file": "Trebinje_20583.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 140,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Trnovo (FBiH)_11592.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 54,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Trnovo (RS)_20591.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 24,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Tuzla_11088.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 65,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Ugljevik_20605.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 24,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Usora_11622.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 12,
+      "conformCount": 12,
+      "conformPercent": 100,
+      "landedCount": 12,
+      "landedPercent": 100,
+      "params": {
+        "dx": 100.31069166561815,
+        "dy": 277.3303216596505,
+        "kx": 1.4266202428524464,
+        "ky": 1.46827801314737
+      }
+    },
+    {
+      "file": "Vares_11100.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 84,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Velika Kladusa_10928.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 20,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Velika Kladusa_11118.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 48,
+      "conformCount": 48,
+      "conformPercent": 100,
+      "landedCount": 48,
+      "landedPercent": 100,
+      "params": {
+        "dx": 601.34511393732,
+        "dy": 436.21278016219566,
+        "kx": 0.9625944456518081,
+        "ky": 0.905632091442263
+      }
+    },
+    {
+      "file": "Visegrad_20087.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 162,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Visoko_11126.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 87,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Vitez_11142.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 33,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Vlasenica_20095.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 37,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Vukosavlje_20109.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 11,
+      "conformCount": 11,
+      "conformPercent": 100,
+      "landedCount": 11,
+      "landedPercent": 100,
+      "params": {
+        "dx": 33.95736110468454,
+        "dy": 380.0034047831116,
+        "kx": 0.7441737137275037,
+        "ky": 1.0971158135985748
+      }
+    },
+    {
+      "file": "Zavidovici_11177.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 46,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Zenica_11185.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 82,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Zepce_11207.js",
+      "cluster": "STRAY",
+      "applied": true,
+      "featureCount": 40,
+      "conformCount": 40,
+      "conformPercent": 100,
+      "landedCount": 40,
+      "landedPercent": 100,
+      "params": {
+        "dx": 87.1070292457764,
+        "dy": 190.85836624735663,
+        "kx": 0.9800926837009057,
+        "ky": 0.9625911354141643
+      }
+    },
+    {
+      "file": "Zivinice_11215.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 28,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    },
+    {
+      "file": "Zvornik_20168.js",
+      "cluster": "MAIN",
+      "applied": false,
+      "featureCount": 67,
+      "conformCount": 0,
+      "conformPercent": 0,
+      "landedCount": 0,
+      "landedPercent": 0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-20T23:11:42.513648Z",
+  "sample_size": 500,
+  "distances_found": 500,
+  "quantiles": {
+    "min": 0.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 2.8958036028019616
+  },
+  "suggested_gap_tolerance": 0.0,
+  "suggested_gap_tolerance_p90": 0.0,
+  "current_gap_tolerance": 1.0,
+  "calibration_complete": true
+}

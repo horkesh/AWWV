@@ -1,0 +1,674 @@
+{
+  "municipality": {
+    "mid": "1871665",
+    "name": "Sanski Most"
+  },
+  "aggregate_row": {
+    "found": true,
+    "row_index": 73,
+    "values": {
+      "total_population": 54762,
+      "bosniaks": null,
+      "croats": 3227,
+      "serbs": null,
+      "others": 2322
+    },
+    "raw_cells_preview": [
+      "11541",
+      "∑",
+      "54762",
+      "27858",
+      "0.509",
+      "3227",
+      "0.059",
+      "21355",
+      "0.39",
+      "2322",
+      "0.042"
+    ]
+  },
+  "computed_sum": {
+    "values": {
+      "total_population": 54532,
+      "bosniaks": 0,
+      "croats": 3227,
+      "serbs": 0,
+      "others": 2320
+    },
+    "settlement_count": 66
+  },
+  "delta": {
+    "total_population": 230,
+    "bosniaks": 0,
+    "croats": 0,
+    "serbs": 0,
+    "others": 2
+  },
+  "top_suspects": [
+    {
+      "sid": "911111461",
+      "name": "Gornji Lipnik",
+      "reason": "total_population (233) is close to delta (230); others (6) is close to delta (2)",
+      "raw_cells_preview": [
+        "141518",
+        "Gornji Lipnik",
+        "233",
+        "0",
+        "0",
+        "0",
+        "0",
+        "227",
+        "0.974",
+        "6",
+        "0.026"
+      ],
+      "parsed_values": {
+        "total_population": 233,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 6
+      }
+    },
+    {
+      "sid": "974814896",
+      "name": "Majkić Japra Donja",
+      "reason": "total_population (237) is close to delta (230); others (3) is close to delta (2)",
+      "raw_cells_preview": [
+        "141712",
+        "Majkić Japra Donja",
+        "237",
+        "0",
+        "0",
+        "1",
+        "0.004",
+        "233",
+        "0.983",
+        "3",
+        "0.013"
+      ],
+      "parsed_values": {
+        "total_population": 237,
+        "bosniaks": null,
+        "croats": 1,
+        "serbs": null,
+        "others": 3
+      }
+    },
+    {
+      "sid": "954006758",
+      "name": "Batkovci",
+      "reason": "others (3) is close to delta (2)",
+      "raw_cells_preview": [
+        "165255",
+        "Batkovci",
+        "25",
+        "0",
+        "0",
+        "10",
+        "0.4",
+        "12",
+        "0.48",
+        "3",
+        "0.12"
+      ],
+      "parsed_values": {
+        "total_population": 25,
+        "bosniaks": null,
+        "croats": 10,
+        "serbs": null,
+        "others": 3
+      }
+    },
+    {
+      "sid": "931541064",
+      "name": "Bjeline",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141232",
+        "Bjeline",
+        "48",
+        "0",
+        "0",
+        "0",
+        "0",
+        "47",
+        "0.979",
+        "1",
+        "0.021"
+      ],
+      "parsed_values": {
+        "total_population": 48,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "908890177",
+      "name": "Bojište",
+      "reason": "others (5) is close to delta (2)",
+      "raw_cells_preview": [
+        "141259",
+        "Bojište",
+        "313",
+        "0",
+        "0",
+        "0",
+        "0",
+        "308",
+        "0.984",
+        "5",
+        "0.016"
+      ],
+      "parsed_values": {
+        "total_population": 313,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 5
+      }
+    },
+    {
+      "sid": "972897363",
+      "name": "Bosanski Milanovac",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141267",
+        "Bosanski Milanovac",
+        "274",
+        "0",
+        "0",
+        "0",
+        "0",
+        "273",
+        "0.996",
+        "1",
+        "0.004"
+      ],
+      "parsed_values": {
+        "total_population": 274,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "920418820",
+      "name": "Demiševci",
+      "reason": "others (2) is close to delta (2)",
+      "raw_cells_preview": [
+        "141313",
+        "Demiševci",
+        "498",
+        "496",
+        "0.996",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0.004"
+      ],
+      "parsed_values": {
+        "total_population": 498,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 2
+      }
+    },
+    {
+      "sid": "988495968",
+      "name": "Donja Kozica",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "165263",
+        "Donja Kozica",
+        "51",
+        "0",
+        "0",
+        "0",
+        "0",
+        "50",
+        "0.98",
+        "1",
+        "0.02"
+      ],
+      "parsed_values": {
+        "total_population": 51,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "924358316",
+      "name": "Donja Tramošnja",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "170488",
+        "Donja Tramošnja",
+        "160",
+        "0",
+        "0",
+        "0",
+        "0",
+        "159",
+        "0.994",
+        "1",
+        "0.006"
+      ],
+      "parsed_values": {
+        "total_population": 160,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "972794134",
+      "name": "Donji Lipnik",
+      "reason": "others (2) is close to delta (2)",
+      "raw_cells_preview": [
+        "141364",
+        "Donji Lipnik",
+        "293",
+        "0",
+        "0",
+        "0",
+        "0",
+        "291",
+        "0.993",
+        "2",
+        "0.007"
+      ],
+      "parsed_values": {
+        "total_population": 293,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 2
+      }
+    },
+    {
+      "sid": "980816777",
+      "name": "Dževar",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141399",
+        "Dževar",
+        "685",
+        "364",
+        "0.531",
+        "54",
+        "0.079",
+        "266",
+        "0.388",
+        "1",
+        "0.001"
+      ],
+      "parsed_values": {
+        "total_population": 685,
+        "bosniaks": null,
+        "croats": 54,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "983659096",
+      "name": "Đurići",
+      "reason": "others (5) is close to delta (2)",
+      "raw_cells_preview": [
+        "141429",
+        "Đurići",
+        "96",
+        "0",
+        "0",
+        "0",
+        "0",
+        "91",
+        "0.948",
+        "5",
+        "0.052"
+      ],
+      "parsed_values": {
+        "total_population": 96,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 5
+      }
+    },
+    {
+      "sid": "936928484",
+      "name": "Gornji Dabar",
+      "reason": "others (3) is close to delta (2)",
+      "raw_cells_preview": [
+        "141496",
+        "Gornji Dabar",
+        "569",
+        "0",
+        "0",
+        "1",
+        "0.002",
+        "565",
+        "0.993",
+        "3",
+        "0.005"
+      ],
+      "parsed_values": {
+        "total_population": 569,
+        "bosniaks": null,
+        "croats": 1,
+        "serbs": null,
+        "others": 3
+      }
+    },
+    {
+      "sid": "943989420",
+      "name": "Gornji Kamengrad",
+      "reason": "others (6) is close to delta (2)",
+      "raw_cells_preview": [
+        "141500",
+        "Gornji Kamengrad",
+        "1387",
+        "1380",
+        "0.995",
+        "0",
+        "0",
+        "1",
+        "0.001",
+        "6",
+        "0.004"
+      ],
+      "parsed_values": {
+        "total_population": 1387,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 6
+      }
+    },
+    {
+      "sid": "905134976",
+      "name": "Grdanovci",
+      "reason": "others (2) is close to delta (2)",
+      "raw_cells_preview": [
+        "141526",
+        "Grdanovci",
+        "268",
+        "0",
+        "0",
+        "0",
+        "0",
+        "266",
+        "0.993",
+        "2",
+        "0.007"
+      ],
+      "parsed_values": {
+        "total_population": 268,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 2
+      }
+    },
+    {
+      "sid": "906424020",
+      "name": "Jelašinovci",
+      "reason": "others (6) is close to delta (2)",
+      "raw_cells_preview": [
+        "141607",
+        "Jelašinovci",
+        "597",
+        "0",
+        "0",
+        "0",
+        "0",
+        "591",
+        "0.99",
+        "6",
+        "0.01"
+      ],
+      "parsed_values": {
+        "total_population": 597,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 6
+      }
+    },
+    {
+      "sid": "901203046",
+      "name": "Kozin",
+      "reason": "others (3) is close to delta (2)",
+      "raw_cells_preview": [
+        "141640",
+        "Kozin",
+        "92",
+        "0",
+        "0",
+        "0",
+        "0",
+        "89",
+        "0.967",
+        "3",
+        "0.033"
+      ],
+      "parsed_values": {
+        "total_population": 92,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 3
+      }
+    },
+    {
+      "sid": "922244760",
+      "name": "Lužani",
+      "reason": "others (2) is close to delta (2)",
+      "raw_cells_preview": [
+        "141704",
+        "Lužani",
+        "174",
+        "0",
+        "0",
+        "10",
+        "0.057",
+        "162",
+        "0.931",
+        "2",
+        "0.011"
+      ],
+      "parsed_values": {
+        "total_population": 174,
+        "bosniaks": null,
+        "croats": 10,
+        "serbs": null,
+        "others": 2
+      }
+    },
+    {
+      "sid": "919486491",
+      "name": "Majkić Japra Gornja",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141739",
+        "Majkić Japra Gornja",
+        "241",
+        "0",
+        "0",
+        "0",
+        "0",
+        "240",
+        "0.996",
+        "1",
+        "0.004"
+      ],
+      "parsed_values": {
+        "total_population": 241,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "908770305",
+      "name": "Okreč",
+      "reason": "others (6) is close to delta (2)",
+      "raw_cells_preview": [
+        "141798",
+        "Okreč",
+        "1104",
+        "1096",
+        "0.993",
+        "2",
+        "0.002",
+        "0",
+        "0",
+        "6",
+        "0.005"
+      ],
+      "parsed_values": {
+        "total_population": 1104,
+        "bosniaks": null,
+        "croats": 2,
+        "serbs": null,
+        "others": 6
+      }
+    },
+    {
+      "sid": "948469982",
+      "name": "Podovi",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141852",
+        "Podovi",
+        "294",
+        "0",
+        "0",
+        "0",
+        "0",
+        "293",
+        "0.997",
+        "1",
+        "0.003"
+      ],
+      "parsed_values": {
+        "total_population": 294,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "945360264",
+      "name": "Podvidača",
+      "reason": "others (2) is close to delta (2)",
+      "raw_cells_preview": [
+        "170542",
+        "Podvidača",
+        "664",
+        "311",
+        "0.468",
+        "0",
+        "0",
+        "351",
+        "0.529",
+        "2",
+        "0.003"
+      ],
+      "parsed_values": {
+        "total_population": 664,
+        "bosniaks": null,
+        "croats": 0,
+        "serbs": null,
+        "others": 2
+      }
+    },
+    {
+      "sid": "921724985",
+      "name": "Praštali",
+      "reason": "others (1) is close to delta (2)",
+      "raw_cells_preview": [
+        "141895",
+        "Praštali",
+        "401",
+        "0",
+        "0",
+        "2",
+        "0.005",
+        "398",
+        "0.993",
+        "1",
+        "0.002"
+      ],
+      "parsed_values": {
+        "total_population": 401,
+        "bosniaks": null,
+        "croats": 2,
+        "serbs": null,
+        "others": 1
+      }
+    },
+    {
+      "sid": "948343362",
+      "name": "Stara Rijeka",
+      "reason": "others (4) is close to delta (2)",
+      "raw_cells_preview": [
+        "165298",
+        "Stara Rijeka",
+        "121",
+        "0",
+        "0",
+        "115",
+        "0.95",
+        "2",
+        "0.017",
+        "4",
+        "0.033"
+      ],
+      "parsed_values": {
+        "total_population": 121,
+        "bosniaks": null,
+        "croats": 115,
+        "serbs": null,
+        "others": 4
+      }
+    },
+    {
+      "sid": "906875636",
+      "name": "Suhača",
+      "reason": "others (5) is close to delta (2)",
+      "raw_cells_preview": [
+        "141968",
+        "Suhača",
+        "333",
+        "0",
+        "0",
+        "1",
+        "0.003",
+        "327",
+        "0.982",
+        "5",
+        "0.015"
+      ],
+      "parsed_values": {
+        "total_population": 333,
+        "bosniaks": null,
+        "croats": 1,
+        "serbs": null,
+        "others": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "LOCAL_PIXELS_V2"
+    }
+  },
+  "features": []
+}

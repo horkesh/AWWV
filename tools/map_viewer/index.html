@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWWV Map Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="diagnostics"></div>
+  <div id="controls">
+    <label><input type="checkbox" id="showOutlines" checked> Municipality Outlines</label>
+    <label><input type="checkbox" id="showStrokes" checked> Settlement Strokes</label>
+    <label><input type="checkbox" id="filterMunicipality"> Filter to Selected Municipality</label>
+    <button id="fitBtn">Fit to Screen</button>
+    <select id="municipalityFilter">
+      <option value="">All Municipalities</option>
+    </select>
+  </div>
+  <div id="infoPanel">
+    <h3>Settlement Info</h3>
+    <div id="settlementInfo">No selection</div>
+    <h3>Municipality Info</h3>
+    <div id="municipalityInfo">-</div>
+    <h3>Census Data</h3>
+    <div id="censusInfo">-</div>
+    <h3>Debug</h3>
+    <div id="debugInfo">-</div>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script src="viewer.js"></script>
+</body>
+</html>

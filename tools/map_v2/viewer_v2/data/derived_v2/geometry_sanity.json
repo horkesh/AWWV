@@ -1,0 +1,42 @@
+{
+  "total_settlements": 6283,
+  "settlements_joined": 157,
+  "settlements_with_geometry": 157,
+  "dropped_by_reason": {
+    "count_mismatch": 6126
+  },
+  "transform_usage": {
+    "settlements_with_transform": 0,
+    "settlements_without_transform": 157,
+    "unsupported_transform_count": 0
+  },
+  "coordinate_stats": {
+    "global_min_x": 0,
+    "global_min_y": 0,
+    "global_max_x": 732.2600293159485,
+    "global_max_y": 909.7199902534485,
+    "max_abs_coord": 909.7199902534485,
+    "bbox_width_percentiles": [
+      571.0299878120422,
+      597.3699951171875,
+      620.3199707269669,
+      646.1000195741653,
+      687.5600244998932,
+      715.490021944046,
+      725.959992647171
+    ],
+    "bbox_height_percentiles": [
+      780.919978030026,
+      819.5299829244614,
+      841.2700219154358,
+      863.9700000286102,
+      878.1700024604797,
+      884.5499829053879,
+      905.8999902307987
+    ]
+  },
+  "comb_detector": {
+    "suspect_comb_count": 0,
+    "suspect_comb_percent": 0
+  }
+}

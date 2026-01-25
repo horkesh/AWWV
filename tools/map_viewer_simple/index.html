@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settlement Outlines Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="info-panel">
+            <div>Polygons: <span id="polygon-count">-</span></div>
+            <div>Zoom: <span id="zoom-level">-</span></div>
+            <div>Render: <span id="render-time">-</span> ms</div>
+        </div>
+        <button id="fit-btn" class="fit-button">Fit</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="viewer.js"></script>
+</body>
+</html>

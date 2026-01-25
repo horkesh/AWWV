@@ -1,0 +1,270 @@
+{
+  "total_found_munIDs": 163,
+  "total_converted": 125,
+  "dropped_count": 17,
+  "dropped_reasons": {
+    "non_finite": 17
+  },
+  "duplicate_munID_count": 0,
+  "failed_entities": [
+    {
+      "munid_5": 10243,
+      "name": "Čapljina",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11185,
+      "name": "Zenica",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11215,
+      "name": "Živinice",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11410,
+      "name": "Grad Mostar",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11436,
+      "name": "Bosanski Petrovac",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11444,
+      "name": "Foča (FBIH)",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 11592,
+      "name": "Trnovo (FBIH)",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20176,
+      "name": "Istočna Ilidža",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20184,
+      "name": "Istočni Drvar",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20192,
+      "name": "Istočni Mostar",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20338,
+      "name": "Ljubinje",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20419,
+      "name": "Novo Goražde",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20443,
+      "name": "Pale (RS)",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20516,
+      "name": "Rogatica",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20621,
+      "name": "Han Pijesak",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20664,
+      "name": "Šekovići",
+      "reason": "non_finite",
+      "layer": "municipality"
+    },
+    {
+      "munid_5": 20672,
+      "name": "Šipovo",
+      "reason": "non_finite",
+      "layer": "municipality"
+    }
+  ],
+  "admin_layer_breakdown": {
+    "municipality": 142,
+    "canton": 10,
+    "entity": 2,
+    "other": 9
+  },
+  "sample_non_municipality": [
+    {
+      "inferred_layer": "canton",
+      "id": "18800",
+      "name": "Kanton: Tuzlanski",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "18900",
+      "name": "Kanton: Zen.-Dobojski",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19000",
+      "name": "Kanton: Sarajevo",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19100",
+      "name": "Kanton: Srednjobos.",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19200",
+      "name": "Kanton: Unsko-Sanski",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19300",
+      "name": "Kanton: Kanton 10",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19400",
+      "name": "Kanton: Zapadnoherc.",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19500",
+      "name": "Kanton: Bos.-Podrinjski",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19600",
+      "name": "Kanton: Herc.-Neret.",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "canton",
+      "id": "19700",
+      "name": "Kanton: Posavski",
+      "reason": "name_starts_with_Kanton:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29200",
+      "name": "Regija: Bijeljinska",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29300",
+      "name": "Regija: Dobojska",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29400",
+      "name": "Regija: Ist. Sarajevska",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29500",
+      "name": "Regija: Banjalučka",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29600",
+      "name": "Regija: Prijedorska",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "29700",
+      "name": "Regija: Trebinjska",
+      "reason": "name_starts_with_Regija:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "39800",
+      "name": "Distrikt: BD",
+      "reason": "name_starts_with_Distrikt:"
+    },
+    {
+      "inferred_layer": "entity",
+      "id": "19800",
+      "name": "Entitet: FBiH",
+      "reason": "name_starts_with_Entitet:"
+    },
+    {
+      "inferred_layer": "entity",
+      "id": "29800",
+      "name": "Entitet: RS",
+      "reason": "name_starts_with_Entitet:"
+    },
+    {
+      "inferred_layer": "other",
+      "id": "39800",
+      "name": "Distrikt: BD",
+      "reason": "name_starts_with_Distrikt:"
+    }
+  ],
+  "bounds": {
+    "minx": 30.966,
+    "miny": 147.182,
+    "maxx": 787.019,
+    "maxy": 887.36
+  },
+  "municipality_failures": 17,
+  "municipality_failures_by_reason": {
+    "non_finite": 17
+  },
+  "municipality_failed_ids": [
+    "10243",
+    "11185",
+    "11215",
+    "11410",
+    "11436",
+    "11444",
+    "11592",
+    "20176",
+    "20184",
+    "20192",
+    "20338",
+    "20419",
+    "20443",
+    "20516",
+    "20621",
+    "20664",
+    "20672"
+  ]
+}

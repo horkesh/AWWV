@@ -1,0 +1,227 @@
+{
+  "totalOrphans": 13,
+  "orphans": [
+    {
+      "sid": "10499:164984:b123a32c",
+      "baseSid": "10499:164984",
+      "municipality": "Kladanj",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "10499:166138:f5dfb453",
+      "baseSid": "10499:166138",
+      "municipality": "Kladanj",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "10499:170046:b9059bac",
+      "baseSid": "10499:170046",
+      "municipality": "Kladanj",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "10588:130478:9ebbee7d",
+      "baseSid": "10588:130478",
+      "municipality": "Livno",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "10774:138487:78697db1",
+      "baseSid": "10774:138487",
+      "municipality": "Novi Travnik",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "11533:135950:db5e0b9a",
+      "baseSid": "11533:135950",
+      "municipality": "Orasje",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20028:200654",
+      "baseSid": "20028:200654",
+      "municipality": "Berkovici",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20044:201634:d1c81e47",
+      "baseSid": "20044:201634",
+      "municipality": "Bileca",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20184:209244",
+      "baseSid": "20184:209244",
+      "municipality": "Istocni Drvar",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20508:219223:ea6b54a8",
+      "baseSid": "20508:219223",
+      "municipality": "Ribnik",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20508:219371:f751f999",
+      "baseSid": "20508:219371",
+      "municipality": "Ribnik",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    },
+    {
+      "sid": "20524:221279",
+      "baseSid": "20524:221279",
+      "municipality": "Rudo",
+      "source_js_file": "Rudo_20524.js",
+      "geometryType": "Polygon",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 893.2508415178576,
+        "cy": 570.4448167857141
+      },
+      "bounds": {
+        "minX": 888.2975600000001,
+        "minY": 565.47055,
+        "maxX": 896.6107000000001,
+        "maxY": 575.1147499999998
+      }
+    },
+    {
+      "sid": "20583:225665:5bb56112",
+      "baseSid": "20583:225665",
+      "municipality": "Trebinje",
+      "geometryType": "unknown",
+      "usesFallbackGeometry": false,
+      "centroid": {
+        "cx": 0,
+        "cy": 0
+      },
+      "bounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 0,
+        "maxY": 0
+      }
+    }
+  ]
+}

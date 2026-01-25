@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Municipality Borders (drzava.js) – Visual Check</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; display: flex; height: 100vh; overflow: hidden; background: #1a1a1a; }
+    #canvas-wrap { flex: 1; position: relative; cursor: grab; }
+    #canvas-wrap.dragging { cursor: grabbing; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #legend {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(0,0,0,0.8); color: #e0e0e0; padding: 10px 14px; border-radius: 6px;
+      font-size: 12px; z-index: 100;
+    }
+    #legend dt { font-weight: 600; margin-top: 6px; }
+    #legend dt:first-child { margin-top: 0; }
+    #legend dd { margin-left: 12px; color: #aaa; }
+    #tooltip {
+      position: absolute; background: rgba(0,0,0,0.9); color: #fff; padding: 8px 12px;
+      border-radius: 4px; font-size: 12px; pointer-events: none; z-index: 1000; display: none;
+    }
+    #tooltip.visible { display: block; }
+    #sidebar {
+      width: 320px; background: #2d2d2d; color: #e0e0e0; display: flex; flex-direction: column;
+      border-left: 1px solid #444; overflow-y: auto;
+    }
+    #sidebar h2 { font-size: 14px; padding: 12px 16px; border-bottom: 1px solid #444; }
+    #search { width: 100%; padding: 8px 12px; margin: 12px 16px; margin-top: 0; background: #3d3d3d; border: 1px solid #555; border-radius: 4px; color: #e0e0e0; font-size: 13px; }
+    #inspector { padding: 16px; font-size: 12px; }
+    #inspector pre { background: #1e1e1e; padding: 10px; border-radius: 4px; white-space: pre-wrap; word-break: break-all; }
+    #failures-panel { border-top: 1px solid #444; }
+    #failures-toggle { width: 100%; padding: 10px 16px; background: #252525; border: none; color: #e0e0e0; text-align: left; font-size: 13px; cursor: pointer; }
+    #failures-toggle:hover { background: #333; }
+    #failures-list { padding: 12px 16px; max-height: 220px; overflow-y: auto; font-size: 12px; }
+    #failures-list ul { list-style: none; }
+    #failures-list li { padding: 4px 0; border-bottom: 1px solid #333; }
+    #failures-list li:last-child { border-bottom: none; }
+    .fail-munid { font-weight: 600; }
+    .fail-name { color: #aaa; }
+    .fail-reason { color: #888; font-size: 11px; }
+    #fit-btn { position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #3d3d3d; border: 1px solid #555; border-radius: 4px; color: #e0e0e0; cursor: pointer; font-size: 12px; z-index: 100; }
+  </style>
+</head>
+<body>
+  <div id="canvas-wrap">
+    <canvas id="c"></canvas>
+    <div id="tooltip"></div>
+    <div id="legend">
+      <dl>
+        <dt>Features</dt><dd id="legend-features">—</dd>
+        <dt>Failures</dt><dd id="legend-failures">—</dd>
+        <dt>Admin layers</dt><dd id="legend-breakdown">—</dd>
+      </dl>
+    </div>
+    <button id="fit-btn">Fit</button>
+  </div>
+  <div id="sidebar">
+    <h2>Municipality borders (drzava.js)</h2>
+    <input type="text" id="search" placeholder="Search munid_5 or name…" />
+    <div id="inspector"><p>Click a municipality or search to inspect.</p></div>
+    <div id="failures-panel">
+      <button id="failures-toggle">Failed entities (report)</button>
+      <div id="failures-list" style="display:none;"></div>
+    </div>
+  </div>
+  <script>
+(function () {
+  const GEOJSON_PATH = "./municipality_borders_from_drzava.geojson";
+  const REPORT_PATH = "./municipality_borders_extraction_report.json";
+
+  const canvas = document.getElementById("c");
+  const ctx = canvas.getContext("2d");
+  const wrap = document.getElementById("canvas-wrap");
+  const tooltip = document.getElementById("tooltip");
+  const legendFeatures = document.getElementById("legend-features");
+  const legendFailures = document.getElementById("legend-failures");
+  const legendBreakdown = document.getElementById("legend-breakdown");
+  const inspector = document.getElementById("inspector");
+  const searchInput = document.getElementById("search");
+  const failuresToggle = document.getElementById("failures-toggle");
+  const failuresList = document.getElementById("failures-list");
+  const fitBtn = document.getElementById("fit-btn");
+
+  let geojson = null;
+  let report = null;
+  let scale = 1, offX = 0, offY = 0;
+  let bounds = [0, 0, 1, 1];
+  let dragging = false, dragStartX = 0, dragStartY = 0;
+  let selectedIdx = -1;
+  let searchQuery = "";
+
+  function tx(x) { return x * scale + offX; }
+  function ty(y) { return y * scale + offY; }
+  function invX(px) { return (px - offX) / scale; }
+  function invY(py) { return (py - offY) / scale; }
+
+  function computeBounds(fc) {
+    let minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity;
+    for (const f of fc.features) {
+      const g = f.geometry;
+      const rings = g.type === "Polygon" ? g.coordinates : g.coordinates.flat(1);
+      for (const ring of rings) {
+        for (const c of ring) {
+          const x = c[0], y = c[1];
+          if (x < minx) minx = x; if (y < miny) miny = y;
+          if (x > maxx) maxx = x; if (y > maxy) maxy = y;
+        }
+      }
+    }
+    return [minx, miny, maxx, maxy];
+  }
+
+  function fitToView() {
+    const pad = 24;
+    const w = canvas.width, h = canvas.height;
+    const bw = bounds[2] - bounds[0], bh = bounds[3] - bounds[1];
+    const sx = (w - pad * 2) / bw, sy = (h - pad * 2) / bh;
+    scale = Math.min(sx, sy);
+    offX = (w - bw * scale) / 2 - bounds[0] * scale;
+    offY = (h - bh * scale) / 2 - bounds[1] * scale;
+    render();
+  }
+
+  function ringsFor(f) {
+    const g = f.geometry;
+    if (g.type === "Polygon") return g.coordinates;
+    const out = [];
+    for (const poly of g.coordinates) { for (const r of poly) out.push(r); }
+    return out;
+  }
+
+  function matchesSearch(f, q) {
+    if (!q) return false;
+    const qu = q.toLowerCase();
+    const mid = String(f.properties?.munid_5 ?? f.properties?.mid ?? "");
+    const name = String(f.properties?.name ?? "").toLowerCase();
+    return mid.includes(qu) || name.includes(qu);
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!geojson) return;
+    const features = geojson.features;
+    for (let i = 0; i < features.length; i++) {
+      const f = features[i];
+      const highlight = selectedIdx === i || matchesSearch(f, searchQuery);
+      const lw = highlight ? 3 : 1;
+      ctx.strokeStyle = highlight ? "#6af" : "#666";
+      ctx.lineWidth = lw;
+      for (const ring of ringsFor(f)) {
+        if (ring.length < 2) continue;
+        ctx.beginPath();
+        ctx.moveTo(tx(ring[0][0]), ty(ring[0][1]));
+        for (let j = 1; j < ring.length; j++) ctx.lineTo(tx(ring[j][0]), ty(ring[j][1]));
+        ctx.closePath();
+        ctx.stroke();
+      }
+    }
+  }
+
+  function pointInRing(x, y, ring) {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+      if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) inside = !inside;
+    }
+    return inside;
+  }
+
+  function hitTest(wx, wy) {
+    if (!geojson) return -1;
+    for (let i = 0; i < geojson.features.length; i++) {
+      const f = geojson.features[i];
+      const rings = ringsFor(f);
+      if (rings.length && pointInRing(wx, wy, rings[0])) return i;
+    }
+    return -1;
+  }
+
+  function showTooltip(text, clientX, clientY) {
+    tooltip.textContent = text;
+    tooltip.classList.add("visible");
+    tooltip.style.left = clientX + "px";
+    tooltip.style.top = (clientY + 16) + "px";
+  }
+
+  function hideTooltip() { tooltip.classList.remove("visible"); }
+
+  function updateInspector(idx) {
+    if (idx < 0 || !geojson) {
+      inspector.innerHTML = "<p>Click a municipality or search to inspect.</p>";
+      return;
+    }
+    const f = geojson.features[idx];
+    const m = f.properties?.munid_5 ?? f.properties?.mid ?? "(unknown)";
+    const n = f.properties?.name ?? "(unknown)";
+    inspector.innerHTML = "<pre>munid_5: " + m + "\nname: " + n + "</pre>";
+  }
+
+  function resize() {
+    canvas.width = wrap.clientWidth;
+    canvas.height = wrap.clientHeight;
+    fitToView();
+  }
+
+  wrap.addEventListener("mousedown", function (e) {
+    dragging = true;
+    dragStartX = e.clientX - offX;
+    dragStartY = e.clientY - offY;
+    wrap.classList.add("dragging");
+  });
+  wrap.addEventListener("mousemove", function (e) {
+    const rect = canvas.getBoundingClientRect();
+    const wx = invX(e.clientX - rect.left), wy = invY(e.clientY - rect.top);
+    if (dragging) {
+      offX = e.clientX - dragStartX;
+      offY = e.clientY - dragStartY;
+      render();
+    } else {
+      const idx = hitTest(wx, wy);
+      if (idx >= 0) {
+        const f = geojson.features[idx];
+        const m = f.properties?.munid_5 ?? f.properties?.mid ?? "(unknown)";
+        const n = f.properties?.name ?? "(unknown)";
+        showTooltip("munid_5: " + m + " – " + n, e.clientX, e.clientY);
+      } else hideTooltip();
+    }
+  });
+  wrap.addEventListener("mouseup", function () {
+    dragging = false;
+    wrap.classList.remove("dragging");
+  });
+  wrap.addEventListener("mouseleave", function () {
+    dragging = false;
+    wrap.classList.remove("dragging");
+    hideTooltip();
+  });
+  wrap.addEventListener("click", function (e) {
+    if (dragging) return;
+    const rect = canvas.getBoundingClientRect();
+    const wx = invX(e.clientX - rect.left), wy = invY(e.clientY - rect.top);
+    const idx = hitTest(wx, wy);
+    selectedIdx = idx;
+    updateInspector(idx);
+    render();
+  });
+  canvas.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const factor = e.deltaY > 0 ? 0.9 : 1.1;
+    const nscale = scale * factor;
+    if (nscale < 0.01 || nscale > 100) return;
+    const wx = invX(mx), wy = invY(my);
+    scale = nscale;
+    offX = mx - wx * scale;
+    offY = my - wy * scale;
+    render();
+  }, { passive: false });
+
+  searchInput.addEventListener("input", function () {
+    searchQuery = searchInput.value.trim();
+    render();
+  });
+  searchInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      const q = searchQuery;
+      if (!geojson || !q) return;
+      const features = geojson.features;
+      for (let i = 0; i < features.length; i++) {
+        if (matchesSearch(features[i], q)) { selectedIdx = i; updateInspector(i); render(); break; }
+      }
+    }
+  });
+
+  failuresToggle.addEventListener("click", function () {
+    const list = failuresList;
+    const isHidden = list.style.display === "none";
+    list.style.display = isHidden ? "block" : "none";
+  });
+
+  fitBtn.addEventListener("click", fitToView);
+  window.addEventListener("resize", resize);
+  resize();
+
+  Promise.all([
+    fetch(GEOJSON_PATH).then(function (r) { return r.json(); }),
+    fetch(REPORT_PATH).then(function (r) { return r.json(); })
+  ]).then(function (out) {
+    geojson = out[0];
+    report = out[1];
+    bounds = computeBounds(geojson);
+    legendFeatures.textContent = String(geojson.features.length);
+    const failCount = (report && Array.isArray(report.failed_entities)) ? report.failed_entities.length : 0;
+    legendFailures.textContent = String(failCount);
+    var b = report && report.admin_layer_breakdown;
+    if (b) {
+      legendBreakdown.textContent = "muni " + b.municipality + " · canton " + b.canton + " · entity " + b.entity + " · other " + b.other;
+    } else {
+      legendBreakdown.textContent = "—";
+    }
+    if (report && Array.isArray(report.failed_entities)) {
+      function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;"); }
+      const ul = document.createElement("ul");
+      for (const e of report.failed_entities) {
+        const li = document.createElement("li");
+        li.innerHTML = "<span class=\"fail-munid\">" + esc(e.munid_5) + "</span> <span class=\"fail-name\">" + esc(e.name || "(unknown)") + "</span><br><span class=\"fail-reason\">" + esc(e.reason || "") + "</span>";
+        ul.appendChild(li);
+      }
+      failuresList.appendChild(ul);
+    }
+    resize();
+  }).catch(function (err) {
+    legendFeatures.textContent = "load error";
+    legendFailures.textContent = "—";
+    if (legendBreakdown) legendBreakdown.textContent = "—";
+    inspector.innerHTML = "<p>Could not load GeoJSON or report. Open from data/derived/ or use a local server.</p>";
+    console.error(err);
+  });
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWWV Map Viewer</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    #map {
+      flex: 1;
+      height: 100vh;
+    }
+    
+    #sidebar {
+      width: 320px;
+      background: #f5f5f5;
+      border-left: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    
+    #sidebar h2 {
+      padding: 16px;
+      background: #2c3e50;
+      color: white;
+      font-size: 18px;
+      margin: 0;
+    }
+    
+    #controls {
+      padding: 16px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #controls label {
+      display: block;
+      margin-bottom: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    #controls input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+    #info {
+      padding: 16px;
+      flex: 1;
+    }
+    
+    #info h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #2c3e50;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    #info-content {
+      background: white;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    
+    #info-content .empty {
+      color: #999;
+      font-style: italic;
+    }
+    
+    #info-content .field {
+      margin-bottom: 8px;
+    }
+    
+    #info-content .field-label {
+      font-weight: 600;
+      color: #555;
+      display: inline-block;
+      min-width: 120px;
+    }
+    
+    #stats {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .error {
+      color: #c0392b;
+      padding: 16px;
+      background: #ffe6e6;
+      margin: 16px;
+      border-radius: 4px;
+      border: 1px solid #ffcccc;
+    }
+    
+    .loading {
+      padding: 16px;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="sidebar">
+    <h2>AWWV Map Viewer</h2>
+    
+    <div id="controls">
+      <label>
+        <input type="checkbox" id="showPolygons" checked>
+        Settlement Polygons
+      </label>
+      <label>
+        <input type="checkbox" id="showPoints" checked>
+        Settlement Points
+      </label>
+      <label>
+        <input type="checkbox" id="showOutlines" checked>
+        Municipality Outlines
+      </label>
+    </div>
+    
+    <div id="info">
+      <h3>Feature Information</h3>
+      <div id="info-content" class="empty">
+        Click on a feature to see details
+      </div>
+    </div>
+    
+    <div id="stats">
+      <div id="stats-content">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script>
+    // Initialize map
+    const map = L.map('map').setView([44.0, 18.0], 7);
+    
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    
+    // Layer groups
+    const polygonLayer = L.layerGroup().addTo(map);
+    const pointLayer = L.layerGroup().addTo(map);
+    const outlineLayer = L.layerGroup().addTo(map);
+    
+    // Statistics
+    let stats = {
+      polygons: 0,
+      points: 0,
+      outlines: 0,
+      settlements: 0
+    };
+    
+    // Load settlements metadata
+    let settlementsMeta = new Map();
+    
+    async function loadSettlementsMeta() {
+      try {
+        const response = await fetch('/data/derived/settlements_meta.csv');
+        const text = await response.text();
+        const lines = text.split('\n').filter(l => l.trim());
+        
+        if (lines.length < 2) return;
+        
+        const header = lines[0].split(',');
+        const sidIdx = header.indexOf('sid');
+        const nameIdx = header.indexOf('name');
+        const midIdx = header.indexOf('mid');
+        const municipalityNameIdx = header.indexOf('municipality_name');
+        const latIdx = header.indexOf('lat');
+        const lonIdx = header.indexOf('lon');
+        
+        for (let i = 1; i < lines.length; i++) {
+          const fields = parseCSVLine(lines[i]);
+          if (fields.length <= Math.max(sidIdx, nameIdx, midIdx)) continue;
+          
+          const sid = fields[sidIdx]?.trim();
+          if (!sid) continue;
+          
+          const name = fields[nameIdx]?.replace(/^"|"$/g, '').replace(/""/g, '"') || '';
+          const mid = fields[midIdx]?.trim() || '';
+          const municipalityName = fields[municipalityNameIdx]?.replace(/^"|"$/g, '').replace(/""/g, '"') || '';
+          const lat = fields[latIdx]?.trim() ? parseFloat(fields[latIdx]) : null;
+          const lon = fields[lonIdx]?.trim() ? parseFloat(fields[lonIdx]) : null;
+          
+          settlementsMeta.set(sid, {
+            sid,
+            name,
+            mid,
+            municipality_name: municipalityName,
+            lat,
+            lon
+          });
+        }
+        
+        stats.settlements = settlementsMeta.size;
+      } catch (err) {
+        console.error('Error loading settlements meta:', err);
+      }
+    }
+    
+    function parseCSVLine(line) {
+      const fields = [];
+      let current = '';
+      let inQuotes = false;
+      
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          fields.push(current);
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      fields.push(current);
+      return fields;
+    }
+    
+    // Load and display GeoJSON
+    async function loadGeoJSON(url, layer, style, onEachFeature) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          console.warn(`Failed to load ${url}: ${response.statusText}`);
+          return;
+        }
+        const geojson = await response.json();
+        
+        L.geoJSON(geojson, {
+          style: style,
+          onEachFeature: onEachFeature,
+          pointToLayer: (feature, latlng) => {
+            return L.circleMarker(latlng, {
+              radius: 4,
+              fillColor: '#3388ff',
+              color: '#fff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.8
+            });
+          }
+        }).addTo(layer);
+        
+        return geojson.features.length;
+      } catch (err) {
+        console.error(`Error loading ${url}:`, err);
+        return 0;
+      }
+    }
+    
+    // Feature click handler
+    function onFeatureClick(feature, layer) {
+      layer.on({
+        click: (e) => {
+          const props = feature.properties || {};
+          const sid = props.sid || props.id;
+          const mid = props.mid;
+          
+          let info = '<div class="field"><span class="field-label">Type:</span> ';
+          
+          if (feature.geometry.type === 'Polygon' || feature.geometry.type === 'MultiPolygon') {
+            if (mid) {
+              info += 'Municipality Outline</div>';
+              info += `<div class="field"><span class="field-label">Municipality ID:</span> ${mid}</div>`;
+            } else {
+              info += 'Settlement Polygon</div>';
+            }
+          } else if (feature.geometry.type === 'Point') {
+            info += 'Settlement Point</div>';
+          }
+          
+          if (sid) {
+            const meta = settlementsMeta.get(sid);
+            if (meta) {
+              info += `<div class="field"><span class="field-label">Settlement ID:</span> ${sid}</div>`;
+              info += `<div class="field"><span class="field-label">Name:</span> ${meta.name || 'N/A'}</div>`;
+              info += `<div class="field"><span class="field-label">Municipality:</span> ${meta.municipality_name || 'N/A'}</div>`;
+              info += `<div class="field"><span class="field-label">Municipality ID:</span> ${meta.mid || 'N/A'}</div>`;
+              if (meta.lat && meta.lon) {
+                info += `<div class="field"><span class="field-label">Coordinates:</span> ${meta.lat.toFixed(6)}, ${meta.lon.toFixed(6)}</div>`;
+              }
+            } else {
+              info += `<div class="field"><span class="field-label">Settlement ID:</span> ${sid}</div>`;
+            }
+          }
+          
+          document.getElementById('info-content').innerHTML = info || '<div class="empty">No information available</div>';
+          
+          // Highlight feature
+          if (window.currentHighlight) {
+            window.currentHighlight.setStyle({
+              weight: 2,
+              color: '#3388ff',
+              opacity: 1
+            });
+          }
+          layer.setStyle({
+            weight: 3,
+            color: '#ff0000',
+            opacity: 1
+          });
+          window.currentHighlight = layer;
+        },
+        mouseover: (e) => {
+          layer.setStyle({
+            weight: 2,
+            color: '#ff8800',
+            opacity: 1
+          });
+        },
+        mouseout: (e) => {
+          if (layer !== window.currentHighlight) {
+            layer.setStyle({
+              weight: 1,
+              color: '#3388ff',
+              opacity: 0.7
+            });
+          }
+        }
+      });
+    }
+    
+    // Load all data
+    async function loadAll() {
+      document.getElementById('stats-content').textContent = 'Loading...';
+      
+      await loadSettlementsMeta();
+      
+      // Load polygons
+      const polygonCount = await loadGeoJSON(
+        '/data/derived/settlement_polygons.geojson',
+        polygonLayer,
+        {
+          fillColor: '#3388ff',
+          color: '#0066cc',
+          weight: 1,
+          opacity: 0.7,
+          fillOpacity: 0.3
+        },
+        onFeatureClick
+      );
+      stats.polygons = polygonCount;
+      
+      // Load points
+      const pointCount = await loadGeoJSON(
+        '/data/derived/settlement_points.geojson',
+        pointLayer,
+        {},
+        onFeatureClick
+      );
+      stats.points = pointCount;
+      
+      // Load outlines
+      const outlineCount = await loadGeoJSON(
+        '/data/derived/municipality_outline.geojson',
+        outlineLayer,
+        {
+          fillColor: '#ff8800',
+          color: '#cc6600',
+          weight: 2,
+          opacity: 0.8,
+          fillOpacity: 0.1
+        },
+        onFeatureClick
+      );
+      stats.outlines = outlineCount;
+      
+      // Update stats
+      updateStats();
+      
+      // Fit bounds if we have features
+      if (polygonCount > 0 || pointCount > 0) {
+        const bounds = new L.LatLngBounds();
+        polygonLayer.eachLayer(layer => {
+          if (layer.getBounds) {
+            bounds.extend(layer.getBounds());
+          }
+        });
+        pointLayer.eachLayer(layer => {
+          if (layer.getLatLng) {
+            bounds.extend(layer.getLatLng());
+          }
+        });
+        if (!bounds.isValid()) {
+          // Fallback to Bosnia and Herzegovina bounds
+          map.setView([44.0, 18.0], 7);
+        } else {
+          map.fitBounds(bounds, { padding: [50, 50] });
+        }
+      }
+    }
+    
+    function updateStats() {
+      const statsText = `
+        <strong>Statistics:</strong><br>
+        Settlements: ${stats.settlements.toLocaleString()}<br>
+        Polygons: ${stats.polygons.toLocaleString()}<br>
+        Points: ${stats.points.toLocaleString()}<br>
+        Municipality Outlines: ${stats.outlines.toLocaleString()}
+      `;
+      document.getElementById('stats-content').innerHTML = statsText;
+    }
+    
+    // Layer visibility controls
+    document.getElementById('showPolygons').addEventListener('change', (e) => {
+      if (e.target.checked) {
+        map.addLayer(polygonLayer);
+      } else {
+        map.removeLayer(polygonLayer);
+      }
+    });
+    
+    document.getElementById('showPoints').addEventListener('change', (e) => {
+      if (e.target.checked) {
+        map.addLayer(pointLayer);
+      } else {
+        map.removeLayer(pointLayer);
+      }
+    });
+    
+    document.getElementById('showOutlines').addEventListener('change', (e) => {
+      if (e.target.checked) {
+        map.addLayer(outlineLayer);
+      } else {
+        map.removeLayer(outlineLayer);
+      }
+    });
+    
+    // Load data on page load
+    loadAll().catch(err => {
+      console.error('Error loading map data:', err);
+      document.getElementById('info-content').innerHTML = 
+        '<div class="error">Error loading map data. Check console for details.</div>';
+    });
+  </script>
+</body>
+</html>

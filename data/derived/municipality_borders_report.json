@@ -1,0 +1,15 @@
+{
+  "total_found_munIDs": 163,
+  "total_converted": 138,
+  "dropped_count": 24,
+  "dropped_reasons": {
+    "non_finite": 24
+  },
+  "duplicate_munID_count": 1,
+  "bounds": {
+    "minx": 30.08,
+    "miny": 147.182,
+    "maxx": 787.019,
+    "maxy": 887.36
+  }
+}

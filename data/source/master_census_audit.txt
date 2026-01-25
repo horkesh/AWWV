@@ -1,0 +1,191 @@
+=== MASTER CENSUS AUDIT REPORT ===
+
+A) SUMMARY STATISTICS
+──────────────────────────────────────────────────
+Municipalities parsed: 142
+Settlements parsed: 6140
+Aggregate rows skipped: 142
+Settlements with total_population null: 0
+Settlements with svg matched: 0
+Settlements missing svg: 6140
+Settlements marked urban (>=3000): 147
+Capitals assigned: 142
+  - exact-name: 112
+  - largest-fallback: 30
+  - all-null: 0
+
+B) TOP LISTS
+──────────────────────────────────────────────────
+Top 30 Municipalities by Total Population:
+  1840366    Banja Luka                               195.692
+  1564405    Zenica                                   146.603
+  1445976    Novi Grad Sarajevo                       133.797
+  1198423    Tuzla                                    131.402
+  1617307    Grad Mostar                              126.612
+  1286568    Prijedor                                 112.543
+  1768475    Bijeljina                                96.988
+  1073063    Doboj                                    95.213
+  1634032    Novo Sarajevo                            90.967
+  1553762    Brčko                                    87.627
+  1251631    Centar Sarajevo                          79.286
+  1814920    Bihać                                    72.454
+  1799334    Travnik                                  69.971
+  1319486    Zvornik                                  67.217
+  1472746    Cazin                                    63.409
+  1162720    Ilidža                                   62.144
+  1288657    Teslić                                   60.708
+  1045979    Gradiška                                 59.974
+  1392554    Derventa                                 56.489
+  1854656    Lukavac                                  56.355
+  1695193    Kakanj                                   55.950
+  1677723    Živinice                                 54.783
+  1871665    Sanski Most                              54.532
+  1598920    Velika Kladuša                           52.908
+  1516637    Zavidovići                               52.379
+  1761751    Stari Grad Sarajevo                      49.550
+  1709112    Gračanica                                47.485
+  1031837    Prnjavor                                 47.055
+  1229931    Bugojno                                  46.889
+  1136380    Visoko                                   46.160
+
+Top 30 Municipalities by Settlement Count:
+  1080479    Konjic                                   168 settlements
+  1015698    Višegrad                                 163 settlements
+  1475355    Goražde                                  144 settlements
+  1591214    Trebinje                                 141 settlements
+  1738233    Rogatica                                 118 settlements
+  1695193    Kakanj                                   106 settlements
+  1880950    Foča (RS)                                101 settlements
+  1788051    Sokolac                                  96 settlements
+  1799334    Travnik                                  90 settlements
+  1105369    Rudo                                     89 settlements
+  1136380    Visoko                                   88 settlements
+  1771936    Vareš                                    85 settlements
+  1073063    Doboj                                    83 settlements
+  1564405    Zenica                                   83 settlements
+  1041595    Kiseljak                                 82 settlements
+  1512315    Srebrenica                               81 settlements
+  1229931    Bugojno                                  78 settlements
+  1144909    Ilijaš                                   74 settlements
+  1286568    Prijedor                                 71 settlements
+  1425877    Kalinovik                                71 settlements
+  1644092    Gacko                                    71 settlements
+  1045979    Gradiška                                 68 settlements
+  1259038    Donji Vakuf                              68 settlements
+  1319486    Zvornik                                  68 settlements
+  1768475    Bijeljina                                67 settlements
+  1198423    Tuzla                                    66 settlements
+  1871665    Sanski Most                              66 settlements
+  1031837    Prnjavor                                 63 settlements
+  1675873    Pale (RS)                                62 settlements
+  1766651    Hadžići                                  62 settlements
+
+Top 30 Largest Settlements (by total_population):
+  989526154  Banja Luka                               143.079 (mid: 1840366)
+  949874500  Sarajevo Dio - Novi Grad Sarajevo        133.502 (mid: 1445976)
+  966958854  Zenica                                   96.027 (mid: 1564405)
+  905067995  Sarajevo Dio - Novo Sarajevo             90.780 (mid: 1634032)
+  929864375  Tuzla                                    83.770 (mid: 1198423)
+  932813064  Sarajevo Dio - Centar Sajarevo           76.771 (mid: 1251631)
+  927271796  Mostar                                   75.865 (mid: 1617307)
+  927968885  Sarajevo Dio - Ilidža                    59.344 (mid: 1162720)
+  984661499  Sarajevo Dio - Stari Grad Sarajevo       48.744 (mid: 1761751)
+  930757667  Bihać                                    45.553 (mid: 1814920)
+  974788425  Brčko                                    41.406 (mid: 1553762)
+  931612123  Bijeljina                                36.414 (mid: 1768475)
+  921887172  Prijedor                                 34.635 (mid: 1286568)
+  916068255  Doboj                                    27.498 (mid: 1073063)
+  984827340  Bugojno                                  22.641 (mid: 1229931)
+  909307577  Trebinje                                 21.870 (mid: 1591214)
+  915560372  Travnik                                  19.041 (mid: 1799334)
+  989298165  Derventa                                 17.748 (mid: 1392554)
+  927141331  Sanski Most                              17.144 (mid: 1871665)
+  932746248  Gradiška                                 16.841 (mid: 1045979)
+  909204481  Goražde                                  16.273 (mid: 1475355)
+  911780912  Bosanska Krupa                           14.416 (mid: 1655654)
+  966372159  Foča                                     14.335 (mid: 1880950)
+  946411578  Brod                                     14.098 (mid: 1521214)
+  976840332  Konjic                                   13.729 (mid: 1080479)
+  945944870  Kozarska Dubica                          13.680 (mid: 1291077)
+  938120258  Visoko                                   13.663 (mid: 1136380)
+  982501342  Novi Grad                                13.588 (mid: 1251305)
+  920764339  Jajce                                    13.579 (mid: 1615642)
+  918557594  Zavidovići                               12.947 (mid: 1516637)
+
+Top 30 Urban Settlements (by total_population):
+  989526154  Banja Luka                               143.079 (mid: 1840366)
+  949874500  Sarajevo Dio - Novi Grad Sarajevo        133.502 (mid: 1445976)
+  966958854  Zenica                                   96.027 (mid: 1564405)
+  905067995  Sarajevo Dio - Novo Sarajevo             90.780 (mid: 1634032)
+  929864375  Tuzla                                    83.770 (mid: 1198423)
+  932813064  Sarajevo Dio - Centar Sajarevo           76.771 (mid: 1251631)
+  927271796  Mostar                                   75.865 (mid: 1617307)
+  927968885  Sarajevo Dio - Ilidža                    59.344 (mid: 1162720)
+  984661499  Sarajevo Dio - Stari Grad Sarajevo       48.744 (mid: 1761751)
+  930757667  Bihać                                    45.553 (mid: 1814920)
+  974788425  Brčko                                    41.406 (mid: 1553762)
+  931612123  Bijeljina                                36.414 (mid: 1768475)
+  921887172  Prijedor                                 34.635 (mid: 1286568)
+  916068255  Doboj                                    27.498 (mid: 1073063)
+  984827340  Bugojno                                  22.641 (mid: 1229931)
+  909307577  Trebinje                                 21.870 (mid: 1591214)
+  915560372  Travnik                                  19.041 (mid: 1799334)
+  989298165  Derventa                                 17.748 (mid: 1392554)
+  927141331  Sanski Most                              17.144 (mid: 1871665)
+  932746248  Gradiška                                 16.841 (mid: 1045979)
+  909204481  Goražde                                  16.273 (mid: 1475355)
+  911780912  Bosanska Krupa                           14.416 (mid: 1655654)
+  966372159  Foča                                     14.335 (mid: 1880950)
+  946411578  Brod                                     14.098 (mid: 1521214)
+  976840332  Konjic                                   13.729 (mid: 1080479)
+  945944870  Kozarska Dubica                          13.680 (mid: 1291077)
+  938120258  Visoko                                   13.663 (mid: 1136380)
+  982501342  Novi Grad                                13.588 (mid: 1251305)
+  920764339  Jajce                                    13.579 (mid: 1615642)
+  918557594  Zavidovići                               12.947 (mid: 1516637)
+
+Top 30 Municipalities with Fallback Capital Selection:
+  1058545    Kupres (FBiH)                            capital: 954022525 (Kupres, pop: 2.715)
+  1114279    Kupres (RS)                              capital: 929007295 (Novo Selo, pop: 320)
+  1117932    Foča (FBiH)                              capital: 950578472 (Ustikolina, pop: 1.418)
+  1162720    Ilidža                                   capital: 927968885 (Sarajevo Dio - Ilidža, pop: 59.344)
+  1167475    Istočno Novo Sarajevo                    capital: 984769664 (Lukavica, pop: 1.696)
+  1198777    Trnovo (FBiH)                            capital: 919571244 (Dejčići, pop: 217)
+  1222440    Domaljevac-Šamac                         capital: 986787674 (Domaljevac, pop: 4.152)
+  1251631    Centar Sarajevo                          capital: 932813064 (Sarajevo Dio - Centar Sajarevo, pop: 76.771)
+  1252399    Trnovo (RS)                              capital: 980161200 (Trnovo, pop: 1.985)
+  1255549    Novo Goražde                             capital: 979649630 (Ustiprača, pop: 498)
+  1323835    Pale (FBiH)                              capital: 967209933 (Prača, pop: 710)
+  1413092    Doboj-Jug                                capital: 940144127 (Matuzići, pop: 1.783)
+  1416221    Petrovac                                 capital: 914962557 (Drinić, pop: 357)
+  1443444    Ribnik                                   capital: 960478253 (Donji Vrbljani, pop: 896)
+  1445976    Novi Grad Sarajevo                       capital: 949874500 (Sarajevo Dio - Novi Grad Sarajevo, pop: 133.502)
+  1472867    Istočni Stari Grad                       capital: 930730779 (Bulozi, pop: 278)
+  1487779    Usora                                    capital: 974794242 (Sivša, pop: 1.609)
+  1617307    Grad Mostar                              capital: 927271796 (Mostar, pop: 75.865)
+  1634032    Novo Sarajevo                            capital: 905067995 (Sarajevo Dio - Novo Sarajevo, pop: 90.780)
+  1670035    Krupa na Uni                             capital: 907665967 (Srednji Bušević, pop: 457)
+  1675873    Pale (RS)                                capital: 910023718 (Pale, pop: 7.384)
+  1677723    Živinice                                 capital: 983820035 (Živinice Grad, pop: 11.947)
+  1697675    Kalesija                                 capital: 950415211 (Tojšići, pop: 2.922)
+  1747899    Istočna Ilidža                           capital: 987717565 (Sarajevo Dio - Ilidža, pop: 4.375)
+  1753458    Teočak                                   capital: 948889870 (Teočak-Krstac, pop: 2.861)
+  1761751    Stari Grad Sarajevo                      capital: 984661499 (Sarajevo Dio - Stari Grad Sarajevo, pop: 48.744)
+  1762269    Istočni Drvar                            capital: 968490963 (Uvala, pop: 33)
+  1777860    Doboj-Istok                              capital: 920790216 (Klokotnica, pop: 3.989)
+  1798098    Istočni Mostar                           capital: 971221310 (Kamena, pop: 335)
+  1880950    Foča (RS)                                capital: 966372159 (Foča, pop: 14.335)
+
+C) INTEGRITY CHECKS
+──────────────────────────────────────────────────
+PASS: No aggregate "∑" rows ingested as settlements
+PASS: settlement_id unique globally
+PASS: municipality_id unique globally
+PASS: Each municipality has >= 1 settlement
+PASS: Exactly one capital per municipality
+PASS: capital_sid exists and refers to a settlement in that municipality
+PASS: is_urban_center implies total_population >= 3000
+PASS: Computed totals equal sum of settlements
+INFO: 1 municipality(ies) with aggregate row total mismatch (max delta: 230.00)
+
+=== END OF AUDIT REPORT ===

@@ -1,0 +1,20 @@
+{
+    "schema": 1,
+    "notes": "Temporary whitelist for orphan settlements detected during adjacency generation. These must be reviewed before final gameplay validation.",
+    "sids": [
+      "10308:166626",
+      "10391:164844",
+      "10731:166600",
+      "20036:230324",
+      "20109:205184",
+      "20168:208710",
+      "20168:208736",
+      "20168:208752",
+      "20281:211745",
+      "20354:213918",
+      "20524:221279",
+      "20605:226785",
+      "20664:229326"
+    ]
+  }
+  

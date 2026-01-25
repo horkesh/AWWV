@@ -1,0 +1,1141 @@
+{
+  "version": "0.1",
+  "municipalities": [
+    {
+      "id": "20010",
+      "name": "Banja Luka",
+      "parent_id_1991": "20010",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10014",
+      "name": "Banovići",
+      "parent_id_1991": "10014",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20028",
+      "name": "Berkovići",
+      "parent_id_1991": "20028",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10049",
+      "name": "Bihać",
+      "parent_id_1991": "10049",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20036",
+      "name": "Bijeljina",
+      "parent_id_1991": "20036",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20044",
+      "name": "Bileća",
+      "parent_id_1991": "20044",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11428",
+      "name": "Bosanska Krupa",
+      "parent_id_1991": "11428",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11436",
+      "name": "Bosanski Petrovac",
+      "parent_id_1991": "11436",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10146",
+      "name": "Bosansko Grahovo",
+      "parent_id_1991": "10146",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20052",
+      "name": "Bratunac",
+      "parent_id_1991": "20052",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "30163",
+      "name": "Brčko",
+      "parent_id_1991": "30163",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10189",
+      "name": "Breza",
+      "parent_id_1991": "10189",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20079",
+      "name": "Brod",
+      "parent_id_1991": "20079",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10197",
+      "name": "Bugojno",
+      "parent_id_1991": "10197",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10219",
+      "name": "Busovača",
+      "parent_id_1991": "10219",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11240",
+      "name": "Bužim",
+      "parent_id_1991": "11240",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20630",
+      "name": "Čajniče",
+      "parent_id_1991": "20630",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10243",
+      "name": "Čapljina",
+      "parent_id_1991": "10243",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10227",
+      "name": "Cazin",
+      "parent_id_1991": "10227",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11231",
+      "name": "Čelić",
+      "parent_id_1991": "11231",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20648",
+      "name": "Čelinac",
+      "parent_id_1991": "20648",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10839",
+      "name": "Centar Sarajevo",
+      "parent_id_1991": "10839",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10260",
+      "name": "Čitluk",
+      "parent_id_1991": "10260",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20133",
+      "name": "Derventa",
+      "parent_id_1991": "20133",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20141",
+      "name": "Doboj",
+      "parent_id_1991": "20141",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11258",
+      "name": "Doboj-Istok",
+      "parent_id_1991": "11258",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11266",
+      "name": "Doboj-Jug",
+      "parent_id_1991": "11266",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11274",
+      "name": "Dobretići",
+      "parent_id_1991": "11274",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11282",
+      "name": "Domaljevac-Šamac",
+      "parent_id_1991": "11282",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10294",
+      "name": "Donji Vakuf",
+      "parent_id_1991": "10294",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20150",
+      "name": "Donji Žabar",
+      "parent_id_1991": "20150",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11614",
+      "name": "Drvar",
+      "parent_id_1991": "11614",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11444",
+      "name": "Foča (FBiH)",
+      "parent_id_1991": "11444",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20613",
+      "name": "Foča (RS)",
+      "parent_id_1991": "20613",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10324",
+      "name": "Fojnica",
+      "parent_id_1991": "10324",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20117",
+      "name": "Gacko",
+      "parent_id_1991": "20117",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10359",
+      "name": "Glamoč",
+      "parent_id_1991": "10359",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11452",
+      "name": "Goražde",
+      "parent_id_1991": "11452",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10375",
+      "name": "Gornji Vakuf-Uskoplje",
+      "parent_id_1991": "10375",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11479",
+      "name": "Gračanica",
+      "parent_id_1991": "11479",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11410",
+      "name": "Grad Mostar",
+      "parent_id_1991": "11410",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10391",
+      "name": "Gradačac",
+      "parent_id_1991": "10391",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20125",
+      "name": "Gradiška",
+      "parent_id_1991": "20125",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10405",
+      "name": "Grude",
+      "parent_id_1991": "10405",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10847",
+      "name": "Hadžići",
+      "parent_id_1991": "10847",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20621",
+      "name": "Han Pijesak",
+      "parent_id_1991": "20621",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11550",
+      "name": "Ilidža",
+      "parent_id_1991": "11550",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10863",
+      "name": "Ilijaš",
+      "parent_id_1991": "10863",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20176",
+      "name": "Istočna Ilidža",
+      "parent_id_1991": "20176",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20184",
+      "name": "Istočni Drvar",
+      "parent_id_1991": "20184",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20192",
+      "name": "Istočni Mostar",
+      "parent_id_1991": "20192",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20206",
+      "name": "Istočni Stari Grad",
+      "parent_id_1991": "20206",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20214",
+      "name": "Istočno Novo Sarajevo",
+      "parent_id_1991": "20214",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10421",
+      "name": "Jablanica",
+      "parent_id_1991": "10421",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11487",
+      "name": "Jajce",
+      "parent_id_1991": "11487",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20222",
+      "name": "Jezero",
+      "parent_id_1991": "20222",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10448",
+      "name": "Kakanj",
+      "parent_id_1991": "10448",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11495",
+      "name": "Kalesija",
+      "parent_id_1991": "11495",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20249",
+      "name": "Kalinovik",
+      "parent_id_1991": "20249",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10472",
+      "name": "Kiseljak",
+      "parent_id_1991": "10472",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10499",
+      "name": "Kladanj",
+      "parent_id_1991": "10499",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11509",
+      "name": "Ključ",
+      "parent_id_1991": "11509",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20257",
+      "name": "Kneževo",
+      "parent_id_1991": "20257",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10529",
+      "name": "Konjic",
+      "parent_id_1991": "10529",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20273",
+      "name": "Kostajnica",
+      "parent_id_1991": "20273",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20281",
+      "name": "Kotor Varoš",
+      "parent_id_1991": "20281",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20265",
+      "name": "Kozarska Dubica",
+      "parent_id_1991": "20265",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10545",
+      "name": "Kreševo",
+      "parent_id_1991": "10545",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20290",
+      "name": "Krupa na Uni",
+      "parent_id_1991": "20290",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11517",
+      "name": "Kupres (FBiH)",
+      "parent_id_1991": "11517",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20303",
+      "name": "Kupres (RS)",
+      "parent_id_1991": "20303",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20311",
+      "name": "Laktaši",
+      "parent_id_1991": "20311",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10588",
+      "name": "Livno",
+      "parent_id_1991": "10588",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20338",
+      "name": "Ljubinje",
+      "parent_id_1991": "20338",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10626",
+      "name": "Ljubuški",
+      "parent_id_1991": "10626",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20320",
+      "name": "Lopare",
+      "parent_id_1991": "20320",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10600",
+      "name": "Lukavac",
+      "parent_id_1991": "10600",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10634",
+      "name": "Maglaj",
+      "parent_id_1991": "10634",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20346",
+      "name": "Milići",
+      "parent_id_1991": "20346",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20354",
+      "name": "Modriča",
+      "parent_id_1991": "20354",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20362",
+      "name": "Mrkonjić Grad",
+      "parent_id_1991": "20362",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10685",
+      "name": "Neum",
+      "parent_id_1991": "10685",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20389",
+      "name": "Nevesinje",
+      "parent_id_1991": "20389",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20397",
+      "name": "Novi Grad",
+      "parent_id_1991": "20397",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10871",
+      "name": "Novi Grad Sarajevo",
+      "parent_id_1991": "10871",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10774",
+      "name": "Novi Travnik",
+      "parent_id_1991": "10774",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20419",
+      "name": "Novo Goražde",
+      "parent_id_1991": "20419",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11568",
+      "name": "Novo Sarajevo",
+      "parent_id_1991": "11568",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11525",
+      "name": "Odžak",
+      "parent_id_1991": "11525",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10715",
+      "name": "Olovo",
+      "parent_id_1991": "10715",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11533",
+      "name": "Orašje",
+      "parent_id_1991": "11533",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20427",
+      "name": "Osmaci",
+      "parent_id_1991": "20427",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20435",
+      "name": "Oštra Luka",
+      "parent_id_1991": "20435",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11576",
+      "name": "Pale (FBiH)",
+      "parent_id_1991": "11576",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20443",
+      "name": "Pale (RS)",
+      "parent_id_1991": "20443",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20451",
+      "name": "Pelagićevo",
+      "parent_id_1991": "20451",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20460",
+      "name": "Petrovac",
+      "parent_id_1991": "20460",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20478",
+      "name": "Petrovo",
+      "parent_id_1991": "20478",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10731",
+      "name": "Posušje",
+      "parent_id_1991": "10731",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20486",
+      "name": "Prijedor",
+      "parent_id_1991": "20486",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20494",
+      "name": "Prnjavor",
+      "parent_id_1991": "20494",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10766",
+      "name": "Prozor",
+      "parent_id_1991": "10766",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11304",
+      "name": "Ravno",
+      "parent_id_1991": "11304",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20508",
+      "name": "Ribnik",
+      "parent_id_1991": "20508",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20516",
+      "name": "Rogatica",
+      "parent_id_1991": "20516",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20524",
+      "name": "Rudo",
+      "parent_id_1991": "20524",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20656",
+      "name": "Šamac",
+      "parent_id_1991": "20656",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11541",
+      "name": "Sanski Most",
+      "parent_id_1991": "11541",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11312",
+      "name": "Sapna",
+      "parent_id_1991": "11312",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20664",
+      "name": "Šekovići",
+      "parent_id_1991": "20664",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20672",
+      "name": "Šipovo",
+      "parent_id_1991": "20672",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10570",
+      "name": "Široki Brijeg",
+      "parent_id_1991": "10570",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20532",
+      "name": "Sokolac",
+      "parent_id_1991": "20532",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20559",
+      "name": "Srbac",
+      "parent_id_1991": "20559",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20567",
+      "name": "Srebrenica",
+      "parent_id_1991": "20567",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10987",
+      "name": "Srebrenik",
+      "parent_id_1991": "10987",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11584",
+      "name": "Stari Grad Sarajevo",
+      "parent_id_1991": "11584",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11606",
+      "name": "Stolac",
+      "parent_id_1991": "11606",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11339",
+      "name": "Teočak",
+      "parent_id_1991": "11339",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11045",
+      "name": "Tešanj",
+      "parent_id_1991": "11045",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20575",
+      "name": "Teslić",
+      "parent_id_1991": "20575",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10308",
+      "name": "Tomislavgrad",
+      "parent_id_1991": "10308",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11061",
+      "name": "Travnik",
+      "parent_id_1991": "11061",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20583",
+      "name": "Trebinje",
+      "parent_id_1991": "20583",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11592",
+      "name": "Trnovo (FBiH)",
+      "parent_id_1991": "11592",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20591",
+      "name": "Trnovo (RS)",
+      "parent_id_1991": "20591",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11088",
+      "name": "Tuzla",
+      "parent_id_1991": "11088",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20605",
+      "name": "Ugljevik",
+      "parent_id_1991": "20605",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11622",
+      "name": "Usora",
+      "parent_id_1991": "11622",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11100",
+      "name": "Vareš",
+      "parent_id_1991": "11100",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11118",
+      "name": "Velika Kladuša",
+      "parent_id_1991": "11118",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20087",
+      "name": "Višegrad",
+      "parent_id_1991": "20087",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11126",
+      "name": "Visoko",
+      "parent_id_1991": "11126",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11142",
+      "name": "Vitez",
+      "parent_id_1991": "11142",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20095",
+      "name": "Vlasenica",
+      "parent_id_1991": "20095",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "10928",
+      "name": "Vogošća",
+      "parent_id_1991": "10928",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20109",
+      "name": "Vukosavlje",
+      "parent_id_1991": "20109",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11177",
+      "name": "Zavidovići",
+      "parent_id_1991": "11177",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11185",
+      "name": "Zenica",
+      "parent_id_1991": "11185",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11207",
+      "name": "Žepče",
+      "parent_id_1991": "11207",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "11215",
+      "name": "Živinice",
+      "parent_id_1991": "11215",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    },
+    {
+      "id": "20168",
+      "name": "Zvornik",
+      "parent_id_1991": "20168",
+      "tags": [],
+      "neighbors": [],
+      "preparedness": {}
+    }
+  ]
+}

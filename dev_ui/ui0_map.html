@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWWV - Map Substrate Viewer (UI-0.1)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #top-bar {
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    #top-bar button {
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    #top-bar button:hover { background: #e9ecef; }
+
+    #top-bar label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    #top-bar input[type="checkbox"] { width: auto; margin: 0; }
+
+    #zoom-readout {
+      margin-left: auto;
+      font-size: 13px;
+      color: #666;
+      font-family: monospace;
+    }
+
+    #main-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    #map-container {
+      flex: 1;
+      position: relative;
+      background: #f0f0f0;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    /* IMPORTANT: canvas must fill container */
+    #map {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: default;
+    }
+
+    #map.panning { cursor: move; }
+
+    #inspector {
+      width: 400px;
+      background: white;
+      border-left: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .section {
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .section h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #666;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      font-size: 13px;
+      gap: 12px;
+    }
+
+    .info-label { color: #666; }
+    .info-value { color: #333; font-family: monospace; font-weight: 500; }
+
+    .status-item {
+      padding: 4px 0;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .no-selection { color: #999; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <div id="top-bar">
+    <button id="fit-to-view">Fit to View</button>
+    <button id="reset">Reset</button>
+    <label>
+      <input type="checkbox" id="show-fills" />
+      <span>Show fills</span>
+    </label>
+    <div id="zoom-readout">Zoom: x1.00</div>
+  </div>
+
+  <div id="main-container">
+    <div id="map-container">
+      <canvas id="map"></canvas>
+    </div>
+
+    <div id="inspector">
+      <div class="section">
+        <h2>Status</h2>
+        <div id="status-info"></div>
+      </div>
+
+      <div class="section">
+        <h2>Selected Settlement</h2>
+        <div id="selection-info">
+          <div class="no-selection">No settlement selected</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/dev_ui/ui0_map.ts"></script>
+</body>
+</html>

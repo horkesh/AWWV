@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+#canvas {
+  display: block;
+  cursor: crosshair;
+}
+
+#diagnostics {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  z-index: 1000;
+  line-height: 1.6;
+}
+
+#controls {
+  position: fixed;
+  top: 10px;
+  right: 320px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#controls label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#controls input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#controls button {
+  padding: 6px 12px;
+  background: #4a9eff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#controls button:hover {
+  background: #5aaeff;
+}
+
+#controls select {
+  padding: 6px 12px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#infoPanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  border-left: 1px solid #333;
+}
+
+#infoPanel h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #4a9eff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#infoPanel h3:first-child {
+  margin-top: 0;
+}
+
+#infoPanel div {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#infoPanel .label {
+  color: #888;
+  display: inline-block;
+  min-width: 120px;
+}
+
+#infoPanel .value {
+  color: #e0e0e0;
+}
+
+#infoPanel .section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+#infoPanel .section:last-child {
+  border-bottom: none;
+}

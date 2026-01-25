@@ -1,0 +1,98 @@
+Hull Inflation Report
+================================================================================
+
+Generated: 2026-01-24T14:52:18.837Z
+
+Summary:
+  Total salvaged settlements: 1572
+  Median area ratio: 1.02
+  P90 area ratio: 2.13
+  Max area ratio: 21405.64
+
+Note: Area ratios >> 5 indicate serious distortion
+
+Top 50 Settlements by Area Ratio:
+--------------------------------------------------------------------------------
+1. Gođenje (957444596) - Ratio: 21405.64, Area: 13.77 -> 294845.64
+2. Maravići (972595602) - Ratio: 6377.80, Area: 63.02 -> 401900.92
+3. Agarovići (926163841) - Ratio: 2469.07, Area: 143.45 -> 354190.77
+4. Rastovac (953188422) - Ratio: 1518.42, Area: 244.27 -> 370900.63
+5. Simići (954077373) - Ratio: 1123.89, Area: 244.22 -> 274480.89
+6. Donji Čevljanovići (925223740) - Ratio: 660.59, Area: 0.02 -> 13.12
+7. Stari Dulići (908137960) - Ratio: 549.61, Area: 825.10 -> 453481.86
+8. Gornji Drežanj (958856166) - Ratio: 519.58, Area: 421.52 -> 219009.01
+9. Kasindo (975567843) - Ratio: 510.79, Area: 620.98 -> 317192.11
+10. Bravnice (942482114) - Ratio: 482.75, Area: 104.04 -> 50223.09
+11. Nedavić (938685063) - Ratio: 394.49, Area: 954.24 -> 376437.21
+12. Šestanovac (946949006) - Ratio: 342.03, Area: 0.45 -> 153.69
+13. Novo Selo (911650958) - Ratio: 294.59, Area: 1004.76 -> 295987.66
+14. Čelić (937371449) - Ratio: 287.28, Area: 530.06 -> 152277.75
+15. Sultanovići (944093448) - Ratio: 194.04, Area: 1058.09 -> 205313.28
+16. Borovac (959462974) - Ratio: 170.25, Area: 2455.48 -> 418040.59
+17. Bužim (913026478) - Ratio: 168.82, Area: 1.23 -> 207.00
+18. Miljanovci (921931639) - Ratio: 167.57, Area: 594.36 -> 99598.86
+19. Kijevo (936920228) - Ratio: 159.01, Area: 2142.58 -> 340688.88
+20. Piperci (909684813) - Ratio: 154.32, Area: 877.28 -> 135384.39
+21. Gornji Smrtići (983279326) - Ratio: 142.17, Area: 393.60 -> 55959.59
+22. Lipovac (945357922) - Ratio: 139.56, Area: 509.40 -> 71093.03
+23. Mahovljani (927076577) - Ratio: 133.44, Area: 400.78 -> 53480.54
+24. Ubavića Brdo (955840913) - Ratio: 110.81, Area: 786.73 -> 87175.21
+25. Palež (970897299) - Ratio: 107.91, Area: 3207.34 -> 346103.39
+26. Kličići (945944792) - Ratio: 106.50, Area: 1.58 -> 167.87
+27. Berkovići (907237618) - Ratio: 102.98, Area: 1904.64 -> 196146.33
+28. Glavica (936148126) - Ratio: 102.82, Area: 2.45 -> 252.17
+29. Trijebovo (926548791) - Ratio: 83.74, Area: 1041.07 -> 87176.63
+30. Sućeska (962478848) - Ratio: 79.36, Area: 4534.99 -> 359895.25
+31. Orahovljani (976353928) - Ratio: 78.54, Area: 1096.01 -> 86075.79
+32. Donja Paklenica (906110621) - Ratio: 73.62, Area: 898.92 -> 66174.75
+33. Slavogostići (934841334) - Ratio: 71.85, Area: 17.94 -> 1289.27
+34. Čelebići (919101126) - Ratio: 69.47, Area: 6560.09 -> 455756.69
+35. Ugodnovići (974619863) - Ratio: 66.83, Area: 1249.25 -> 83489.56
+36. Mala Kladuša (965241059) - Ratio: 65.82, Area: 2.04 -> 134.32
+37. Memići (905709398) - Ratio: 63.52, Area: 1159.77 -> 73668.00
+38. Ostrožac (925044259) - Ratio: 62.48, Area: 4.95 -> 309.09
+39. Šnjegotina Srednja (919563461) - Ratio: 61.35, Area: 1197.88 -> 73491.71
+40. Gornja Barska (912014969) - Ratio: 54.55, Area: 12.03 -> 656.34
+41. Izbišno (933931812) - Ratio: 50.58, Area: 10244.12 -> 518189.14
+42. Čokori (977170260) - Ratio: 45.44, Area: 1016.25 -> 46177.98
+43. Mrazovac (961172934) - Ratio: 44.11, Area: 0.12 -> 5.44
+44. Brnjic (931170839) - Ratio: 39.06, Area: 0.09 -> 3.62
+45. Smrekovica (922795862) - Ratio: 37.36, Area: 0.12 -> 4.43
+46. Nožičko (926209050) - Ratio: 37.14, Area: 1004.95 -> 37327.10
+47. Sjenina Rijeka (948714037) - Ratio: 33.78, Area: 2612.72 -> 88266.74
+48. Nepeke (973437925) - Ratio: 32.04, Area: 5.56 -> 178.16
+49. Tržačka Raštela (960441272) - Ratio: 30.68, Area: 14.92 -> 457.87
+50. Gornja Vidovska (974561703) - Ratio: 28.74, Area: 4.81 -> 138.29
+
+Top 30 Municipalities by P90 Area Ratio:
+--------------------------------------------------------------------------------
+1. Ilijaš (1144909) - P90: 660.59, Count: 10, Max: 660.59
+2. Istočna Ilidža (1747899) - P90: 510.79, Count: 4, Max: 510.79
+3. Jezero (1428426) - P90: 482.75, Count: 4, Max: 482.75
+4. Bužim (1017148) - P90: 168.82, Count: 3, Max: 168.82
+5. Cazin (1472746) - P90: 106.50, Count: 7, Max: 106.50
+6. Velika Kladuša (1598920) - P90: 102.82, Count: 13, Max: 342.03
+7. Mrkonjić Grad (1535620) - P90: 78.54, Count: 29, Max: 110.81
+8. Čelinac (1625429) - P90: 63.52, Count: 16, Max: 139.56
+9. Kakanj (1695193) - P90: 39.06, Count: 7, Max: 39.06
+10. Breza (1320269) - P90: 37.36, Count: 3, Max: 37.36
+11. Bihać (1814920) - P90: 23.85, Count: 5, Max: 23.85
+12. Pelagićevo (1895342) - P90: 16.38, Count: 5, Max: 16.38
+13. Banovići (1542170) - P90: 14.77, Count: 3, Max: 14.77
+14. Visoko (1136380) - P90: 12.38, Count: 10, Max: 12.38
+15. Ravno (1039821) - P90: 12.34, Count: 11, Max: 71.85
+16. Srebrenik (1389088) - P90: 8.08, Count: 9, Max: 8.08
+17. Vareš (1771936) - P90: 8.06, Count: 7, Max: 8.06
+18. Bosanska Krupa (1655654) - P90: 7.97, Count: 10, Max: 7.97
+19. Kreševo (1663346) - P90: 7.88, Count: 2, Max: 7.88
+20. Čapljina (1490866) - P90: 7.63, Count: 1, Max: 7.63
+21. Donji Vakuf (1259038) - P90: 7.34, Count: 3, Max: 7.34
+22. Tešanj (1190744) - P90: 6.70, Count: 5, Max: 6.70
+23. Travnik (1799334) - P90: 6.41, Count: 7, Max: 6.41
+24. Gradačac (1099739) - P90: 6.36, Count: 9, Max: 6.36
+25. Kalesija (1697675) - P90: 6.29, Count: 4, Max: 6.29
+26. Živinice (1677723) - P90: 6.22, Count: 2, Max: 6.22
+27. Široki Brijeg (1558420) - P90: 6.17, Count: 4, Max: 6.17
+28. Busovača (1640845) - P90: 5.90, Count: 3, Max: 5.90
+29. Zenica (1564405) - P90: 5.42, Count: 10, Max: 5.42
+30. Ključ (1173054) - P90: 5.06, Count: 5, Max: 5.06
