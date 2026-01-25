@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipality Borders Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        #controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #2a2a2a;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .control-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        label {
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        
+        input[type="file"] {
+            font-size: 13px;
+            padding: 6px 12px;
+            background: #3a3a3a;
+            border: 1px solid #4a4a4a;
+            border-radius: 4px;
+            color: #e0e0e0;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        #info {
+            position: fixed;
+            top: 80px;
+            left: 15px;
+            background: rgba(42, 42, 42, 0.95);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            max-width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        #map {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #0d1117;
+        }
+        
+        .stat {
+            margin: 5px 0;
+            color: #b0b0b0;
+        }
+        
+        .stat strong {
+            color: #4a9eff;
+        }
+        
+        #legend {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(42, 42, 42, 0.95);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 3px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <div class="control-group">
+            <label>Settlement Points:</label>
+            <input type="file" id="settlementsFile" accept=".geojson,.json">
+        </div>
+        <div class="control-group">
+            <label>Municipality Borders:</label>
+            <input type="file" id="bordersFile" accept=".geojson,.json">
+        </div>
+        <div class="control-group">
+            <input type="checkbox" id="showSettlements" checked>
+            <label for="showSettlements">Show Settlements</label>
+        </div>
+        <div class="control-group">
+            <input type="checkbox" id="showBorders" checked>
+            <label for="showBorders">Show Borders</label>
+        </div>
+        <div class="control-group">
+            <input type="checkbox" id="fillBorders">
+            <label for="fillBorders">Fill Borders</label>
+        </div>
+    </div>
+    
+    <div id="info">
+        <h3 style="margin-bottom: 10px; color: #4a9eff;">Municipality Border Preview</h3>
+        <div class="stat"><strong>Municipalities:</strong> <span id="muniCount">0</span></div>
+        <div class="stat"><strong>Settlements:</strong> <span id="settlementCount">0</span></div>
+        <div class="stat"><strong>Coverage:</strong> <span id="coverage">-</span></div>
+    </div>
+    
+    <div id="legend">
+        <div style="font-weight: bold; margin-bottom: 8px; color: #4a9eff;">Legend</div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #4a9eff;"></div>
+            <span>Municipality Borders</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="width: 6px; height: 6px; border-radius: 50%; background: #ff6b6b;"></div>
+            <span>Settlement Points</span>
+        </div>
+    </div>
+    
+    <svg id="map"></svg>
+    
+    <script>
+        const svg = document.getElementById('map');
+        let settlementsData = null;
+        let bordersData = null;
+        let viewBox = { minX: 180, minY: 90, maxX: -180, maxY: -90 };
+        
+        // File loaders
+        document.getElementById('settlementsFile').addEventListener('change', (e) => {
+            loadGeoJSON(e.target.files[0], (data) => {
+                settlementsData = data;
+                render();
+            });
+        });
+        
+        document.getElementById('bordersFile').addEventListener('change', (e) => {
+            loadGeoJSON(e.target.files[0], (data) => {
+                bordersData = data;
+                render();
+            });
+        });
+        
+        // Toggle controls
+        ['showSettlements', 'showBorders', 'fillBorders'].forEach(id => {
+            document.getElementById(id).addEventListener('change', render);
+        });
+        
+        function loadGeoJSON(file, callback) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    callback(data);
+                } catch (err) {
+                    alert('Error loading file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        function calculateBounds(data) {
+            const bounds = { minX: 180, minY: 90, maxX: -180, maxY: -90 };
+            
+            data.features.forEach(feature => {
+                const coords = getCoordinates(feature.geometry);
+                coords.forEach(([x, y]) => {
+                    bounds.minX = Math.min(bounds.minX, x);
+                    bounds.minY = Math.min(bounds.minY, y);
+                    bounds.maxX = Math.max(bounds.maxX, x);
+                    bounds.maxY = Math.max(bounds.maxY, y);
+                });
+            });
+            
+            return bounds;
+        }
+        
+        function getCoordinates(geometry) {
+            if (geometry.type === 'Point') {
+                return [geometry.coordinates];
+            } else if (geometry.type === 'Polygon') {
+                return geometry.coordinates[0];
+            } else if (geometry.type === 'MultiPolygon') {
+                return geometry.coordinates.flatMap(poly => poly[0]);
+            }
+            return [];
+        }
+        
+        function projectPoint(lon, lat, bounds, width, height) {
+            const padding = 50;
+            const x = ((lon - bounds.minX) / (bounds.maxX - bounds.minX)) * (width - 2 * padding) + padding;
+            const y = height - (((lat - bounds.minY) / (bounds.maxY - bounds.minY)) * (height - 2 * padding) + padding);
+            return [x, y];
+        }
+        
+        function render() {
+            svg.innerHTML = '';
+            
+            if (!settlementsData && !bordersData) return;
+            
+            // Calculate combined bounds
+            let bounds = { minX: 180, minY: 90, maxX: -180, maxY: -90 };
+            if (settlementsData) {
+                const sBounds = calculateBounds(settlementsData);
+                bounds.minX = Math.min(bounds.minX, sBounds.minX);
+                bounds.minY = Math.min(bounds.minY, sBounds.minY);
+                bounds.maxX = Math.max(bounds.maxX, sBounds.maxX);
+                bounds.maxY = Math.max(bounds.maxY, sBounds.maxY);
+            }
+            if (bordersData) {
+                const bBounds = calculateBounds(bordersData);
+                bounds.minX = Math.min(bounds.minX, bBounds.minX);
+                bounds.minY = Math.min(bounds.minY, bBounds.minY);
+                bounds.maxX = Math.max(bounds.maxX, bBounds.maxX);
+                bounds.maxY = Math.max(bounds.maxY, bBounds.maxY);
+            }
+            
+            const width = window.innerWidth;
+            const height = window.innerHeight - 70;
+            
+            // Render borders
+            if (bordersData && document.getElementById('showBorders').checked) {
+                bordersData.features.forEach(feature => {
+                    renderPolygon(feature.geometry, bounds, width, height);
+                });
+            }
+            
+            // Render settlements
+            if (settlementsData && document.getElementById('showSettlements').checked) {
+                settlementsData.features.forEach(feature => {
+                    if (feature.geometry.type === 'Point') {
+                        const [x, y] = projectPoint(
+                            feature.geometry.coordinates[0],
+                            feature.geometry.coordinates[1],
+                            bounds, width, height
+                        );
+                        
+                        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        circle.setAttribute('cx', x);
+                        circle.setAttribute('cy', y);
+                        circle.setAttribute('r', 2);
+                        circle.setAttribute('fill', '#ff6b6b');
+                        circle.setAttribute('opacity', '0.6');
+                        svg.appendChild(circle);
+                    }
+                });
+            }
+            
+            // Update stats
+            if (bordersData) {
+                document.getElementById('muniCount').textContent = bordersData.features.length;
+            }
+            if (settlementsData) {
+                document.getElementById('settlementCount').textContent = settlementsData.features.length;
+            }
+        }
+        
+        function renderPolygon(geometry, bounds, width, height) {
+            const fillBorders = document.getElementById('fillBorders').checked;
+            
+            if (geometry.type === 'Polygon') {
+                const points = geometry.coordinates[0].map(([lon, lat]) => {
+                    const [x, y] = projectPoint(lon, lat, bounds, width, height);
+                    return `${x},${y}`;
+                }).join(' ');
+                
+                const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                polygon.setAttribute('points', points);
+                polygon.setAttribute('fill', fillBorders ? 'rgba(74, 158, 255, 0.1)' : 'none');
+                polygon.setAttribute('stroke', '#4a9eff');
+                polygon.setAttribute('stroke-width', '1.5');
+                polygon.setAttribute('stroke-opacity', '0.8');
+                svg.appendChild(polygon);
+            } else if (geometry.type === 'MultiPolygon') {
+                geometry.coordinates.forEach(poly => {
+                    renderPolygon({ type: 'Polygon', coordinates: poly }, bounds, width, height);
+                });
+            }
+        }
+        
+        window.addEventListener('resize', render);
+    </script>
+</body>
+</html>
