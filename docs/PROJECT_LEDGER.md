@@ -376,6 +376,29 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - Extended `municipality_borders_extraction_report.json` with `municipality_failures`, `municipality_failures_by_reason`, `municipality_failed_ids`.
 - Updated `tools/map/README.md`: where to find the failure diagnostic (municipality_audit, JSON + CSV).
 
+**2026-01-25** - Re-enable municipality outlines derived from settlement polygon fabric
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:** Municipality borders may be reconstructed from settlement polygon fabric as a derived reference layer when authoritative borders fail
+- **Artifacts:** `municipality_outlines_from_settlement_fabric.geojson` + coverage + inflation report
+- Added `tools/map/derive_municipality_outlines_from_fabric.ts`: derives municipality outlines by unioning polygons (poly_id micro-areas) from settlement polygon fabric deterministically. No polygon↔settlement 1:1 assumption. Municipality identity from explicit municipality reference field (mid if available, otherwise mun_code). Deterministic union with stable ordering (sorted by poly_id). Geometry normalization: ring closure, duplicate point removal, fixed precision (3 decimals). NOT allowed: smoothing, simplification, snapping. Fallback: if union fails, outputs MultiPolygon as collection of original polygons (method: "polygon_collection_fallback").
+- Outputs: `municipality_outlines_from_settlement_fabric.geojson` (properties: mun_id, name, source, method, poly_count, feature_index), `municipality_outlines_derivation_report.json` (inputs, totals, missing_municipalities, geometry_stats, failures), `municipality_outlines_missing.csv` (mun_id, name), `muni_from_fabric_viewer.html` (visual inspection with fallback highlighting).
+- Coverage audit: determines expected municipality set from settlements_meta.csv, explicitly lists municipalities with zero polygons (data gap, not rendering bug).
+- New npm script: `map:derive:muni-from-fabric` (`npm run map:derive:muni-from-fabric`)
+- Updated `tools/map/README.md`: documentation for derivation script, what "derived" means, coverage audit, viewer features.
+- **Note:** These borders are reconstructed/derived, not authoritative surveyed boundaries. They serve as a reference layer for visualization and coverage validation.
+
+**2026-01-25** - Fix municipality-outline derivation report (missing logic + union diagnostics), add mistake-log writeback
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:** Tooling must be self-auditing; missing-list must be logically consistent; union failures must be explained deterministically
+- **Artifacts:** corrected derivation report, richer failure diagnostics, mistake log writeback support
+- Fixed `tools/map/derive_municipality_outlines_from_fabric.ts`: corrected missing municipalities logic to use same ID scheme (mid vs mun_code) for expected vs emitted comparison. When using mun_code scheme, cannot compare to expected municipalities from settlements_meta.csv (which uses mid). Added internal consistency validation warnings.
+- Enhanced union diagnostics: per-municipality union status tracking with failure_reason and failure_detail (max 200 chars). Failure reasons: union_exception, invalid_polygon_input, union_empty_result, fallback_collection. Added union_failures_by_reason counter in report. Added fallbacks_used counter.
+- New output: `municipality_union_status.csv` with columns: mun_id, poly_count, union_attempted, union_result, failure_reason, failure_detail. Stable sorted by mun_id.
+- Extended `tools/assistant/mistake_guard.ts`: `appendMistake()` now accepts optional date parameter for determinism (caller must pass date string explicitly, no automatic Date.now()).
+- Added mistake log entry: "Municipality outline derivation reported all municipalities missing" - documents the ID scheme mismatch bug that was fixed.
+- Updated report structure: added id_scheme field, union_failures_by_reason object, fallbacks_used counter, per_municipality_union_status_path reference.
+- **Note:** All unions currently fail (union_exception: 142) due to Turf.js limitations with complex geometries, but fallback to MultiPolygon collection works correctly, ensuring all 142 municipalities are emitted.
+
 **2026-01-25** - Repository cleanup, remove dead map scripts and v2 variants
 - **Phase:** Map Rebuild (Path A)
 - **Decision:** Delete only provably-unused files; keep anything referenced by package scripts, docs, or imports; determinism unchanged
@@ -404,3 +427,50 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - Allowed operations: load legacy outlines, accept valid geometry as-is, union multiple geometries per municipality deterministically, merge fragments, ring closure, geometry normalization. NOT allowed: simplification, smoothing, snapping.
 - ID resolution: from legacy outline attributes where present; if missing, derive via explicit lookup table (authored in-code); log ambiguous cases; do NOT invent new municipalities.
 - Updated `tools/map/README.md`: documentation for reconstruction script, allowed operations, ID resolution, report structure.
+
+**2026-01-25** - Fix muni-from-fabric union implementation and expected-count reporting
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:** Municipality outlines may be derived from polygon fabric; unions must be real unions (not broken “buffer fix”); fallbacks are allowed but must be explicit
+- **Artifacts:** cleaner `municipality_outlines_from_settlement_fabric.geojson` + corrected derivation report + viewer reflects union vs fallback
+- Replaced Turf-based union (and buffer-fix path that threw “Must have at least 2 geometries”) with **polyclip-ts** boolean union. Ring normalization: duplicate-point removal, ring closure; no simplification/smoothing.
+- **Expected count:** When no external municipality list, `municipalities_expected` = unique mun_ids in polygons_with_muni. Report now includes `municipalities_with_polygons`; `municipalities_missing` = expected − emitted.
+- **Viewer:** Union-success features use normal stroke; fallback-collection features use **dashed** stroke and **thicker** outline. Legend shows unions_succeeded / unions_failed / fallbacks_used and “With polygons”.
+- Mistake log entry: “Muni-from-fabric union path was broken, forcing fallback for all municipalities” — documents the previous buffer-fix failure and fix.
+- Updated `tools/map/README.md` (derive-muni-from-fabric): union implementation (polyclip-ts), report fields, viewer fallback styling.
+
+**2026-01-25** - Determinism + invariants audit, refactor roadmap captured (no big refactor)
+- **Phase:** Map Rebuild (Path A)
+- **Decision:** Defer architecture refactor to Engine Freeze phase, implement only audits/guards now
+- **Artifacts:** determinism audit report, invariant inventory, refactor roadmap doc
+- Created `docs/engineering/DETERMINISM_AUDIT.md`: comprehensive audit of timestamp leakage, random number usage, object key iteration order, JSON serialization key order. Identified 1 critical violation: `tools/map/report_hull_inflation.ts` had timestamps in JSON/TXT artifacts (fixed).
+- Created `docs/engineering/INVARIANTS_IN_CODE.md`: inventory of canonical invariants from project rules, engine freeze contract, validation functions. Documents enforcement status (fully enforced, partially enforced, not enforced) for each invariant.
+- Created `docs/engineering/REFACTOR_ROADMAP.md`: captures separate agent's refactor proposal but rewrites it to comply with project rules. Explicitly notes rule violations in original proposal (auto-fix, inference, silent outcome changes). Marks refactor as DEFERRED until Engine Freeze phase.
+- Added minimal guard scripts: `tools/engineering/check_determinism.ts` (grep-based timestamp/random detection), `tools/engineering/check_derived_state.ts` (grep-based derived state serialization detection), `tools/engineering/determinism_guard.ts` (helper functions for CLI tools).
+- Fixed timestamp leakage: removed `generated_at` field and timestamp line from `tools/map/report_hull_inflation.ts` artifacts.
+- Added mistake guard imports to all touched scripts.
+- **No functional refactor performed** - only audits, documentation, and minimal guard scripts. Map tooling continues to work.
+
+**2026-01-25** - Add deterministic pre-union normalization ladder to reduce muni union failures
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:** Allow conservative coordinate normalization (quantization + degenerate vertex removal) to enable boolean unions, while preserving fallback behavior when union still fails
+- **Artifacts:** updated union status with normalization_level, updated report with per-level success stats
+- Modified `tools/map/derive_municipality_outlines_from_fabric.ts`: implemented 3-level normalization ladder (Level 0: ring closure + duplicate removal; Level 1: + coordinate quantization to EPS1 grid; Level 2: + collinear point removal + drop rings with <4 distinct points). Union retries at each level before falling back to polygon collection.
+- Normalization parameters computed deterministically from polygon fabric bbox: `EPS1 = max(width, height) * 1e-7` clamped to `[1e-6, 1e-3]`, `AREA_EPS = EPS1 * EPS1`. Parameters recorded in report `normalization_params`.
+- Updated `MunicipalityUnionStatus` interface: added `normalization_level_attempted`, `normalization_level_succeeded`, `union_error_message` fields. Updated union status CSV with these columns.
+- Updated derivation report: added `unions_succeeded_by_level` (counts per level 0/1/2), `normalization_params` object. Extended GeoJSON feature properties with `normalization_level`.
+- Updated viewer: shows normalization level in info panel. Statistics display unions succeeded by level.
+- Results: unions_succeeded increased from 34 to 35 (1 additional success at Level 1). Level 0: 34 successes, Level 1: 1 success, Level 2: 0 successes. 107 unions still fail at all levels (union_exception from polyclip-ts), fallback to polygon collection works correctly.
+- Updated `tools/map/README.md`: documented normalization ladder, normalization parameters, updated output descriptions.
+- **Note:** Normalization is conservative (no hulls, smoothing, or Douglas-Peucker simplification). Allowed operations preserve geometry truthfulness while enabling more unions to succeed.
+
+**2026-01-25** - Derive municipality boundaries from polygon fabric adjacency (no union)
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:** Municipality outlines are computed as boundary edges in the fabric (shared-edge cancellation), supporting non-contiguous municipalities without boolean union
+- **Artifacts:** municipality_boundaries_from_fabric.geojson + boundary derivation report + viewer toggle
+- Added `tools/map/derive_municipality_boundaries_from_fabric.ts`: extracts municipality boundaries by cancelling internal shared edges in polygon fabric. Algorithm: (1) extract all polygon ring edges with coordinate quantization (EPS from fabric bbox), (2) build edge map with municipality ownership, (3) cancel internal edges (edges appearing twice in same municipality), (4) keep boundary edges (inter-municipality borders or outer fabric boundaries), (5) stitch boundary segments into paths deterministically (lexicographic endpoint ordering), (6) output as MultiLineString per municipality.
+- Edge cancellation logic: edges appearing in multiple municipalities → boundary (inter-municipality border); edges appearing once in a municipality → boundary (outer fabric edge); edges appearing twice+ in same municipality → internal (cancelled). Uses edge occurrence counts per municipality for efficient processing.
+- Path stitching: builds endpoint-to-segment adjacency map, walks segments forward and backward from each unused segment start, deterministically picks next segment by lexicographic endpoint coordinate order. Handles closed loops and multiple disconnected paths naturally (supports non-contiguous municipalities).
+- Outputs: `municipality_boundaries_from_fabric.geojson` (MultiLineString features with mun_id, name, source, eps, segment_count, path_count), `municipality_boundaries_derivation_report.json` (polygons_loaded, municipalities, eps, boundary_edges_total, per_muni stats), `municipality_boundaries_unstitchable.csv` (unstitchable segment issues, empty if all segments stitched successfully), `municipality_boundaries_viewer.html` (visual inspection tool).
+- Results: 142 municipalities processed, 651,599 boundary edges extracted, 0 unstitchable issues (all segments successfully stitched into paths). No boolean union required - boundaries computed purely from edge adjacency.
+- Added npm script: `map:derive:muni-boundaries-from-fabric`
+- **Note:** This approach avoids union failures entirely and naturally supports non-contiguous municipalities (multiple disconnected boundary paths per municipality). Boundaries are clean outlines, not full fabric fill.

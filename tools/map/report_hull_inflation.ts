@@ -7,7 +7,11 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { loadMistakes, assertNoRepeat, appendMistake } from '../assistant/mistake_guard';
 import { chooseSettlementRing, ringToCoords } from './geometry_pipeline';
+
+loadMistakes();
+assertNoRepeat('Audit determinism risks and invariant enforcement points without restructuring architecture');
 
 /**
  * Calculate polygon area using shoelace formula
@@ -265,7 +269,6 @@ async function main(): Promise<void> {
   // Write JSON report
   const jsonReport = {
     version: '1.0',
-    generated_at: new Date().toISOString(),
     summary: {
       total_salvaged: inflationData.length,
       median_area_ratio: inflationData.length > 0 
@@ -292,8 +295,6 @@ async function main(): Promise<void> {
   const txtLines: string[] = [];
   txtLines.push('Hull Inflation Report');
   txtLines.push('='.repeat(80));
-  txtLines.push('');
-  txtLines.push(`Generated: ${new Date().toISOString()}`);
   txtLines.push('');
   txtLines.push('Summary:');
   txtLines.push(`  Total salvaged settlements: ${jsonReport.summary.total_salvaged}`);

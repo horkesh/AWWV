@@ -111,8 +111,10 @@ export function reloadMistakes(): void {
  * - Across runs: scans existing log for matching title
  * 
  * @param entry The mistake entry to append
+ * @param date Optional date string in YYYY-MM-DD format. If not provided, generates from current date.
+ *             For determinism, callers should pass the date explicitly.
  */
-export function appendMistake(entry: { title: string; mistake: string; correctRule: string }): void {
+export function appendMistake(entry: { title: string; mistake: string; correctRule: string }, date?: string): void {
   const logPath = resolve('docs/ASSISTANT_MISTAKES.log');
   
   // Check if already appended this run
@@ -137,9 +139,14 @@ export function appendMistake(entry: { title: string; mistake: string; correctRu
     }
   }
   
-  // Generate date string (YYYY-MM-DD)
-  const today = new Date();
-  const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  // Use provided date or generate from current date
+  let dateStr: string;
+  if (date) {
+    dateStr = date;
+  } else {
+    const today = new Date();
+    dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  }
   
   // Format entry - ensure blank line before new entry if file doesn't end with newline
   let prefix = '';
@@ -171,7 +178,7 @@ ${entry.correctRule}
     // Invalidate cache so next loadMistakes() call will reload
     cachedMistakes = null;
   } catch (err) {
-    console.error(`Error appending mistake to log: ${err instanceof Error ? err.message : String(err)}`);
+    console.warn(`Warning: Could not append mistake to log: ${err instanceof Error ? err.message : String(err)}`);
     // Don't throw - this is non-critical
   }
 }

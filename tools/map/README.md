@@ -252,6 +252,71 @@ Reconstructs a complete municipality border layer from legacy settlement-derived
 
 **Note:** These borders are reconstructed from settlement outlines and are not surveyed. This layer supersedes drzava-derived municipality geometry.
 
+### Municipality outlines derived from settlement polygon fabric
+
+```bash
+npm run map:derive:muni-from-fabric
+```
+
+Derives municipality outlines by unioning polygons (poly_id micro-areas) from the settlement polygon fabric. This is a **derived/reconstructed layer** intended for reference/visualization and for ensuring complete municipality coverage. These borders are **not authoritative surveyed boundaries**.
+
+**CRITICAL RULES:**
+- Do NOT assume polygon↔settlement 1:1 mapping
+- Do NOT invent municipalities
+- Municipality identity must come from explicit municipality reference field in polygon fabric (mid if available, otherwise mun_code)
+- Determinism is mandatory (stable ordering, no timestamps, no randomness)
+
+**Inputs:**
+- `data/derived/polygon_fabric.geojson` (or `polygon_fabric_with_mid.geojson` if available)
+- `data/derived/settlements_meta.csv` (for expected municipality set)
+
+**Outputs (in `data/derived/`):**
+
+- `municipality_outlines_from_settlement_fabric.geojson` — FeatureCollection of Polygon/MultiPolygon per municipality
+  - Properties: `mun_id`, `name`, `source: "derived_from_settlement_polygon_fabric"`, `method` ("polygon_union" or "polygon_collection_fallback"), `poly_count`, `normalization_level` (0/1/2 or null for fallback), `feature_index`
+- `municipality_outlines_derivation_report.json` — derivation statistics and coverage audit
+  - `inputs`: polygon fabric path and polygon-to-municipality mapping path
+  - `totals`: polygons loaded, polygons with municipality, municipalities expected / with_polygons / emitted / missing
+  - `missing_municipalities`: sorted list of expected municipalities with zero polygons
+  - `geometry_stats`: union attempts, successes, failures, fallbacks_used, `unions_succeeded_by_level` (counts per level 0/1/2)
+  - `normalization_params`: `eps1`, `area_eps`, `clamp` (deterministic normalization parameters)
+  - `failures`: list of municipalities where union failed (with reason and detail)
+- `municipality_union_status.csv` — per-municipality union status
+  - Columns: `mun_id`, `poly_count`, `union_attempted`, `union_result`, `failure_reason`, `failure_detail`, `normalization_level_attempted`, `normalization_level_succeeded`, `union_error_message`
+- `municipality_outlines_missing.csv` — missing municipalities (columns: `mun_id`, `name`)
+- `muni_from_fabric_viewer.html` — visual inspection tool
+
+**Derivation method:**
+- For each municipality, collects all polygons (micro-areas) assigned to that municipality
+- Performs **deterministic boolean union** via `polyclip-ts` in stable order (sorted by `poly_id` before union)
+- Uses a **normalization ladder** to increase union success rate:
+  - **Level 0:** Ring closure + remove duplicate consecutive points
+  - **Level 1:** Level 0 + quantize coordinates to grid step EPS1 (deterministic from polygon fabric bbox)
+  - **Level 2:** Level 1 + remove nearly-collinear points + drop rings with < 4 distinct points
+- Union is attempted at each level (0, 1, 2) until success or all levels exhausted
+- Allowed geometry normalization: ring closure, duplicate removal, quantization to fixed grid, removing degenerate/collinear points, dropping invalid tiny rings
+- NOT allowed: hulls, smoothing, Douglas-Peucker simplification, snapping to borders/rivers
+- If union fails at all levels: fallback to MultiPolygon as collection of original polygons (`method`: `"polygon_collection_fallback"`)
+
+**Normalization parameters:**
+- `EPS1`: Computed deterministically from polygon fabric bbox as `max(width, height) * 1e-7`, clamped to `[1e-6, 1e-3]`
+- `AREA_EPS`: Derived from EPS1 as `EPS1 * EPS1` (for collinear point removal)
+- Parameters are recorded in `normalization_params` in the derivation report
+
+**Coverage audit:**
+- Expected municipalities: from `settlements_meta.csv` when using `mid`; otherwise from unique mun_ids in polygon fabric
+- `municipalities_missing` = expected − emitted; explicitly lists municipalities with zero polygons (data gap, not rendering bug)
+
+**Viewer features:**
+- Renders municipality outlines (default on)
+- **Union success:** normal stroke; **fallback collection:** dashed stroke, thicker outline, red tint
+- Shows on-click inspector: mun_id, name, poly_count, method, normalization_level
+- Pan/zoom support
+- Statistics: expected, missing, with polygons, unions succeeded/failed, fallbacks used, unions succeeded by level
+
+**What "derived" means:**
+These borders are reconstructed from the polygon fabric, not from authoritative surveyed boundaries. They serve as a reference layer for visualization and coverage validation. The derivation report explicitly tracks union failures and missing municipalities to identify data gaps.
+
 ### Validating the Map
 
 ```bash

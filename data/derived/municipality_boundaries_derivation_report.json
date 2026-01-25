@@ -1,0 +1,860 @@
+{
+  "polygons_loaded": 6148,
+  "municipalities": 142,
+  "eps": 0.0000939964,
+  "boundary_edges_total": 651599,
+  "per_muni": [
+    {
+      "mun_id": "10014",
+      "polygon_count": 20,
+      "boundary_segments": 2056,
+      "stitched_paths": 17
+    },
+    {
+      "mun_id": "10049",
+      "polygon_count": 59,
+      "boundary_segments": 3789,
+      "stitched_paths": 44
+    },
+    {
+      "mun_id": "10146",
+      "polygon_count": 35,
+      "boundary_segments": 1404,
+      "stitched_paths": 18
+    },
+    {
+      "mun_id": "10189",
+      "polygon_count": 28,
+      "boundary_segments": 1729,
+      "stitched_paths": 24
+    },
+    {
+      "mun_id": "10197",
+      "polygon_count": 78,
+      "boundary_segments": 4751,
+      "stitched_paths": 64
+    },
+    {
+      "mun_id": "10219",
+      "polygon_count": 47,
+      "boundary_segments": 2493,
+      "stitched_paths": 40
+    },
+    {
+      "mun_id": "10227",
+      "polygon_count": 54,
+      "boundary_segments": 5931,
+      "stitched_paths": 28
+    },
+    {
+      "mun_id": "10243",
+      "polygon_count": 32,
+      "boundary_segments": 1646,
+      "stitched_paths": 27
+    },
+    {
+      "mun_id": "10260",
+      "polygon_count": 21,
+      "boundary_segments": 1175,
+      "stitched_paths": 18
+    },
+    {
+      "mun_id": "10294",
+      "polygon_count": 68,
+      "boundary_segments": 4270,
+      "stitched_paths": 62
+    },
+    {
+      "mun_id": "10308",
+      "polygon_count": 60,
+      "boundary_segments": 3119,
+      "stitched_paths": 54
+    },
+    {
+      "mun_id": "10324",
+      "polygon_count": 55,
+      "boundary_segments": 2158,
+      "stitched_paths": 40
+    },
+    {
+      "mun_id": "10359",
+      "polygon_count": 55,
+      "boundary_segments": 2826,
+      "stitched_paths": 44
+    },
+    {
+      "mun_id": "10375",
+      "polygon_count": 52,
+      "boundary_segments": 2966,
+      "stitched_paths": 40
+    },
+    {
+      "mun_id": "10391",
+      "polygon_count": 34,
+      "boundary_segments": 3412,
+      "stitched_paths": 32
+    },
+    {
+      "mun_id": "10405",
+      "polygon_count": 13,
+      "boundary_segments": 885,
+      "stitched_paths": 13
+    },
+    {
+      "mun_id": "10421",
+      "polygon_count": 33,
+      "boundary_segments": 1521,
+      "stitched_paths": 27
+    },
+    {
+      "mun_id": "10448",
+      "polygon_count": 106,
+      "boundary_segments": 5952,
+      "stitched_paths": 93
+    },
+    {
+      "mun_id": "10472",
+      "polygon_count": 82,
+      "boundary_segments": 4077,
+      "stitched_paths": 67
+    },
+    {
+      "mun_id": "10499",
+      "polygon_count": 51,
+      "boundary_segments": 3471,
+      "stitched_paths": 48
+    },
+    {
+      "mun_id": "10529",
+      "polygon_count": 168,
+      "boundary_segments": 10246,
+      "stitched_paths": 138
+    },
+    {
+      "mun_id": "10545",
+      "polygon_count": 27,
+      "boundary_segments": 1384,
+      "stitched_paths": 21
+    },
+    {
+      "mun_id": "10570",
+      "polygon_count": 34,
+      "boundary_segments": 2461,
+      "stitched_paths": 32
+    },
+    {
+      "mun_id": "10588",
+      "polygon_count": 59,
+      "boundary_segments": 2479,
+      "stitched_paths": 50
+    },
+    {
+      "mun_id": "10600",
+      "polygon_count": 44,
+      "boundary_segments": 3992,
+      "stitched_paths": 38
+    },
+    {
+      "mun_id": "10626",
+      "polygon_count": 35,
+      "boundary_segments": 2065,
+      "stitched_paths": 32
+    },
+    {
+      "mun_id": "10634",
+      "polygon_count": 40,
+      "boundary_segments": 3208,
+      "stitched_paths": 31
+    },
+    {
+      "mun_id": "10685",
+      "polygon_count": 27,
+      "boundary_segments": 1151,
+      "stitched_paths": 19
+    },
+    {
+      "mun_id": "10715",
+      "polygon_count": 45,
+      "boundary_segments": 2522,
+      "stitched_paths": 37
+    },
+    {
+      "mun_id": "10731",
+      "polygon_count": 20,
+      "boundary_segments": 1233,
+      "stitched_paths": 18
+    },
+    {
+      "mun_id": "10766",
+      "polygon_count": 56,
+      "boundary_segments": 3298,
+      "stitched_paths": 48
+    },
+    {
+      "mun_id": "10774",
+      "polygon_count": 52,
+      "boundary_segments": 3389,
+      "stitched_paths": 47
+    },
+    {
+      "mun_id": "10839",
+      "polygon_count": 6,
+      "boundary_segments": 606,
+      "stitched_paths": 5
+    },
+    {
+      "mun_id": "10847",
+      "polygon_count": 62,
+      "boundary_segments": 2888,
+      "stitched_paths": 48
+    },
+    {
+      "mun_id": "10863",
+      "polygon_count": 74,
+      "boundary_segments": 4649,
+      "stitched_paths": 64
+    },
+    {
+      "mun_id": "10871",
+      "polygon_count": 3,
+      "boundary_segments": 338,
+      "stitched_paths": 3
+    },
+    {
+      "mun_id": "10928",
+      "polygon_count": 21,
+      "boundary_segments": 1522,
+      "stitched_paths": 21
+    },
+    {
+      "mun_id": "10987",
+      "polygon_count": 49,
+      "boundary_segments": 4422,
+      "stitched_paths": 45
+    },
+    {
+      "mun_id": "11045",
+      "polygon_count": 41,
+      "boundary_segments": 3376,
+      "stitched_paths": 36
+    },
+    {
+      "mun_id": "11061",
+      "polygon_count": 90,
+      "boundary_segments": 6250,
+      "stitched_paths": 82
+    },
+    {
+      "mun_id": "11088",
+      "polygon_count": 66,
+      "boundary_segments": 5460,
+      "stitched_paths": 59
+    },
+    {
+      "mun_id": "11100",
+      "polygon_count": 85,
+      "boundary_segments": 5038,
+      "stitched_paths": 68
+    },
+    {
+      "mun_id": "11118",
+      "polygon_count": 49,
+      "boundary_segments": 5031,
+      "stitched_paths": 12
+    },
+    {
+      "mun_id": "11126",
+      "polygon_count": 88,
+      "boundary_segments": 5136,
+      "stitched_paths": 79
+    },
+    {
+      "mun_id": "11142",
+      "polygon_count": 34,
+      "boundary_segments": 2015,
+      "stitched_paths": 29
+    },
+    {
+      "mun_id": "11177",
+      "polygon_count": 47,
+      "boundary_segments": 4121,
+      "stitched_paths": 41
+    },
+    {
+      "mun_id": "11185",
+      "polygon_count": 83,
+      "boundary_segments": 5443,
+      "stitched_paths": 73
+    },
+    {
+      "mun_id": "11207",
+      "polygon_count": 41,
+      "boundary_segments": 3270,
+      "stitched_paths": 36
+    },
+    {
+      "mun_id": "11215",
+      "polygon_count": 29,
+      "boundary_segments": 3421,
+      "stitched_paths": 26
+    },
+    {
+      "mun_id": "11231",
+      "polygon_count": 20,
+      "boundary_segments": 1775,
+      "stitched_paths": 16
+    },
+    {
+      "mun_id": "11240",
+      "polygon_count": 7,
+      "boundary_segments": 1021,
+      "stitched_paths": 3
+    },
+    {
+      "mun_id": "11258",
+      "polygon_count": 6,
+      "boundary_segments": 490,
+      "stitched_paths": 6
+    },
+    {
+      "mun_id": "11266",
+      "polygon_count": 2,
+      "boundary_segments": 159,
+      "stitched_paths": 2
+    },
+    {
+      "mun_id": "11274",
+      "polygon_count": 18,
+      "boundary_segments": 1141,
+      "stitched_paths": 14
+    },
+    {
+      "mun_id": "11282",
+      "polygon_count": 6,
+      "boundary_segments": 278,
+      "stitched_paths": 4
+    },
+    {
+      "mun_id": "11304",
+      "polygon_count": 54,
+      "boundary_segments": 1306,
+      "stitched_paths": 55
+    },
+    {
+      "mun_id": "11312",
+      "polygon_count": 13,
+      "boundary_segments": 862,
+      "stitched_paths": 10
+    },
+    {
+      "mun_id": "11339",
+      "polygon_count": 10,
+      "boundary_segments": 619,
+      "stitched_paths": 10
+    },
+    {
+      "mun_id": "11410",
+      "polygon_count": 60,
+      "boundary_segments": 3532,
+      "stitched_paths": 49
+    },
+    {
+      "mun_id": "11428",
+      "polygon_count": 37,
+      "boundary_segments": 1459,
+      "stitched_paths": 36
+    },
+    {
+      "mun_id": "11436",
+      "polygon_count": 35,
+      "boundary_segments": 1639,
+      "stitched_paths": 33
+    },
+    {
+      "mun_id": "11444",
+      "polygon_count": 32,
+      "boundary_segments": 1602,
+      "stitched_paths": 28
+    },
+    {
+      "mun_id": "11452",
+      "polygon_count": 144,
+      "boundary_segments": 4961,
+      "stitched_paths": 82
+    },
+    {
+      "mun_id": "11479",
+      "polygon_count": 23,
+      "boundary_segments": 2504,
+      "stitched_paths": 23
+    },
+    {
+      "mun_id": "11487",
+      "polygon_count": 58,
+      "boundary_segments": 3686,
+      "stitched_paths": 50
+    },
+    {
+      "mun_id": "11495",
+      "polygon_count": 28,
+      "boundary_segments": 3380,
+      "stitched_paths": 26
+    },
+    {
+      "mun_id": "11509",
+      "polygon_count": 41,
+      "boundary_segments": 2553,
+      "stitched_paths": 37
+    },
+    {
+      "mun_id": "11517",
+      "polygon_count": 36,
+      "boundary_segments": 2140,
+      "stitched_paths": 30
+    },
+    {
+      "mun_id": "11525",
+      "polygon_count": 14,
+      "boundary_segments": 993,
+      "stitched_paths": 14
+    },
+    {
+      "mun_id": "11533",
+      "polygon_count": 15,
+      "boundary_segments": 963,
+      "stitched_paths": 15
+    },
+    {
+      "mun_id": "11541",
+      "polygon_count": 67,
+      "boundary_segments": 5123,
+      "stitched_paths": 60
+    },
+    {
+      "mun_id": "11550",
+      "polygon_count": 12,
+      "boundary_segments": 949,
+      "stitched_paths": 10
+    },
+    {
+      "mun_id": "11568",
+      "polygon_count": 3,
+      "boundary_segments": 183,
+      "stitched_paths": 2
+    },
+    {
+      "mun_id": "11576",
+      "polygon_count": 15,
+      "boundary_segments": 740,
+      "stitched_paths": 11
+    },
+    {
+      "mun_id": "11584",
+      "polygon_count": 8,
+      "boundary_segments": 617,
+      "stitched_paths": 7
+    },
+    {
+      "mun_id": "11592",
+      "polygon_count": 55,
+      "boundary_segments": 2581,
+      "stitched_paths": 43
+    },
+    {
+      "mun_id": "11606",
+      "polygon_count": 26,
+      "boundary_segments": 1418,
+      "stitched_paths": 24
+    },
+    {
+      "mun_id": "11614",
+      "polygon_count": 25,
+      "boundary_segments": 1321,
+      "stitched_paths": 17
+    },
+    {
+      "mun_id": "11622",
+      "polygon_count": 13,
+      "boundary_segments": 923,
+      "stitched_paths": 11
+    },
+    {
+      "mun_id": "20010",
+      "polygon_count": 54,
+      "boundary_segments": 12999,
+      "stitched_paths": 444
+    },
+    {
+      "mun_id": "20028",
+      "polygon_count": 20,
+      "boundary_segments": 3126,
+      "stitched_paths": 110
+    },
+    {
+      "mun_id": "20036",
+      "polygon_count": 67,
+      "boundary_segments": 13244,
+      "stitched_paths": 182
+    },
+    {
+      "mun_id": "20044",
+      "polygon_count": 61,
+      "boundary_segments": 8893,
+      "stitched_paths": 478
+    },
+    {
+      "mun_id": "20052",
+      "polygon_count": 50,
+      "boundary_segments": 7613,
+      "stitched_paths": 113
+    },
+    {
+      "mun_id": "20079",
+      "polygon_count": 23,
+      "boundary_segments": 3945,
+      "stitched_paths": 89
+    },
+    {
+      "mun_id": "20087",
+      "polygon_count": 163,
+      "boundary_segments": 14952,
+      "stitched_paths": 834
+    },
+    {
+      "mun_id": "20095",
+      "polygon_count": 38,
+      "boundary_segments": 5687,
+      "stitched_paths": 48
+    },
+    {
+      "mun_id": "20109",
+      "polygon_count": 12,
+      "boundary_segments": 2017,
+      "stitched_paths": 29
+    },
+    {
+      "mun_id": "20117",
+      "polygon_count": 71,
+      "boundary_segments": 11907,
+      "stitched_paths": 438
+    },
+    {
+      "mun_id": "20125",
+      "polygon_count": 68,
+      "boundary_segments": 11634,
+      "stitched_paths": 381
+    },
+    {
+      "mun_id": "20133",
+      "polygon_count": 57,
+      "boundary_segments": 11046,
+      "stitched_paths": 209
+    },
+    {
+      "mun_id": "20141",
+      "polygon_count": 83,
+      "boundary_segments": 15263,
+      "stitched_paths": 265
+    },
+    {
+      "mun_id": "20150",
+      "polygon_count": 6,
+      "boundary_segments": 735,
+      "stitched_paths": 6
+    },
+    {
+      "mun_id": "20168",
+      "polygon_count": 68,
+      "boundary_segments": 10877,
+      "stitched_paths": 133
+    },
+    {
+      "mun_id": "20176",
+      "polygon_count": 5,
+      "boundary_segments": 587,
+      "stitched_paths": 23
+    },
+    {
+      "mun_id": "20184",
+      "polygon_count": 3,
+      "boundary_segments": 1087,
+      "stitched_paths": 28
+    },
+    {
+      "mun_id": "20192",
+      "polygon_count": 3,
+      "boundary_segments": 674,
+      "stitched_paths": 3
+    },
+    {
+      "mun_id": "20206",
+      "polygon_count": 19,
+      "boundary_segments": 2120,
+      "stitched_paths": 57
+    },
+    {
+      "mun_id": "20214",
+      "polygon_count": 8,
+      "boundary_segments": 1023,
+      "stitched_paths": 10
+    },
+    {
+      "mun_id": "20222",
+      "polygon_count": 11,
+      "boundary_segments": 1533,
+      "stitched_paths": 57
+    },
+    {
+      "mun_id": "20249",
+      "polygon_count": 71,
+      "boundary_segments": 8008,
+      "stitched_paths": 331
+    },
+    {
+      "mun_id": "20257",
+      "polygon_count": 20,
+      "boundary_segments": 4107,
+      "stitched_paths": 140
+    },
+    {
+      "mun_id": "20265",
+      "polygon_count": 61,
+      "boundary_segments": 8958,
+      "stitched_paths": 396
+    },
+    {
+      "mun_id": "20273",
+      "polygon_count": 12,
+      "boundary_segments": 1586,
+      "stitched_paths": 41
+    },
+    {
+      "mun_id": "20281",
+      "polygon_count": 43,
+      "boundary_segments": 7625,
+      "stitched_paths": 257
+    },
+    {
+      "mun_id": "20290",
+      "polygon_count": 12,
+      "boundary_segments": 1671,
+      "stitched_paths": 92
+    },
+    {
+      "mun_id": "20303",
+      "polygon_count": 4,
+      "boundary_segments": 735,
+      "stitched_paths": 7
+    },
+    {
+      "mun_id": "20311",
+      "polygon_count": 37,
+      "boundary_segments": 6969,
+      "stitched_paths": 220
+    },
+    {
+      "mun_id": "20320",
+      "polygon_count": 35,
+      "boundary_segments": 5737,
+      "stitched_paths": 125
+    },
+    {
+      "mun_id": "20338",
+      "polygon_count": 21,
+      "boundary_segments": 2764,
+      "stitched_paths": 105
+    },
+    {
+      "mun_id": "20346",
+      "polygon_count": 54,
+      "boundary_segments": 7739,
+      "stitched_paths": 103
+    },
+    {
+      "mun_id": "20354",
+      "polygon_count": 24,
+      "boundary_segments": 5492,
+      "stitched_paths": 28
+    },
+    {
+      "mun_id": "20362",
+      "polygon_count": 38,
+      "boundary_segments": 9175,
+      "stitched_paths": 217
+    },
+    {
+      "mun_id": "20389",
+      "polygon_count": 56,
+      "boundary_segments": 9555,
+      "stitched_paths": 373
+    },
+    {
+      "mun_id": "20397",
+      "polygon_count": 48,
+      "boundary_segments": 6701,
+      "stitched_paths": 345
+    },
+    {
+      "mun_id": "20419",
+      "polygon_count": 61,
+      "boundary_segments": 3932,
+      "stitched_paths": 218
+    },
+    {
+      "mun_id": "20427",
+      "polygon_count": 16,
+      "boundary_segments": 2878,
+      "stitched_paths": 24
+    },
+    {
+      "mun_id": "20435",
+      "polygon_count": 24,
+      "boundary_segments": 3173,
+      "stitched_paths": 130
+    },
+    {
+      "mun_id": "20443",
+      "polygon_count": 62,
+      "boundary_segments": 9786,
+      "stitched_paths": 455
+    },
+    {
+      "mun_id": "20451",
+      "polygon_count": 11,
+      "boundary_segments": 2065,
+      "stitched_paths": 12
+    },
+    {
+      "mun_id": "20460",
+      "polygon_count": 6,
+      "boundary_segments": 1121,
+      "stitched_paths": 11
+    },
+    {
+      "mun_id": "20478",
+      "polygon_count": 7,
+      "boundary_segments": 1959,
+      "stitched_paths": 15
+    },
+    {
+      "mun_id": "20486",
+      "polygon_count": 71,
+      "boundary_segments": 14379,
+      "stitched_paths": 610
+    },
+    {
+      "mun_id": "20494",
+      "polygon_count": 63,
+      "boundary_segments": 10665,
+      "stitched_paths": 413
+    },
+    {
+      "mun_id": "20508",
+      "polygon_count": 31,
+      "boundary_segments": 5531,
+      "stitched_paths": 136
+    },
+    {
+      "mun_id": "20516",
+      "polygon_count": 118,
+      "boundary_segments": 12029,
+      "stitched_paths": 583
+    },
+    {
+      "mun_id": "20524",
+      "polygon_count": 89,
+      "boundary_segments": 10526,
+      "stitched_paths": 511
+    },
+    {
+      "mun_id": "20532",
+      "polygon_count": 96,
+      "boundary_segments": 13325,
+      "stitched_paths": 597
+    },
+    {
+      "mun_id": "20559",
+      "polygon_count": 39,
+      "boundary_segments": 8061,
+      "stitched_paths": 238
+    },
+    {
+      "mun_id": "20567",
+      "polygon_count": 81,
+      "boundary_segments": 13819,
+      "stitched_paths": 211
+    },
+    {
+      "mun_id": "20575",
+      "polygon_count": 57,
+      "boundary_segments": 12036,
+      "stitched_paths": 206
+    },
+    {
+      "mun_id": "20583",
+      "polygon_count": 142,
+      "boundary_segments": 14032,
+      "stitched_paths": 749
+    },
+    {
+      "mun_id": "20591",
+      "polygon_count": 25,
+      "boundary_segments": 2490,
+      "stitched_paths": 77
+    },
+    {
+      "mun_id": "20605",
+      "polygon_count": 25,
+      "boundary_segments": 3650,
+      "stitched_paths": 59
+    },
+    {
+      "mun_id": "20613",
+      "polygon_count": 101,
+      "boundary_segments": 17349,
+      "stitched_paths": 732
+    },
+    {
+      "mun_id": "20621",
+      "polygon_count": 26,
+      "boundary_segments": 4361,
+      "stitched_paths": 194
+    },
+    {
+      "mun_id": "20630",
+      "polygon_count": 36,
+      "boundary_segments": 5695,
+      "stitched_paths": 315
+    },
+    {
+      "mun_id": "20648",
+      "polygon_count": 30,
+      "boundary_segments": 5636,
+      "stitched_paths": 151
+    },
+    {
+      "mun_id": "20656",
+      "polygon_count": 21,
+      "boundary_segments": 3310,
+      "stitched_paths": 31
+    },
+    {
+      "mun_id": "20664",
+      "polygon_count": 38,
+      "boundary_segments": 6421,
+      "stitched_paths": 47
+    },
+    {
+      "mun_id": "20672",
+      "polygon_count": 46,
+      "boundary_segments": 8176,
+      "stitched_paths": 358
+    },
+    {
+      "mun_id": "30163",
+      "polygon_count": 59,
+      "boundary_segments": 16447,
+      "stitched_paths": 240
+    }
+  ]
+}

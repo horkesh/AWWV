@@ -88,3 +88,17 @@ Assumed settlement polygons must map 1:1 to Excel census settlements and attempt
 CORRECT RULE:
 Treat SVG-derived polygons as territorial micro-areas (poly_id) separate from settlement entities (sid_excel). Polygons may only be linked to municipalities (mid) and used for visualization/territorial substrate. Settlements remain point+graph entities.
 
+[2026-01-25]
+TITLE: Municipality outline derivation reported all municipalities missing
+MISTAKE:
+Report logic produced missing list equal to expected even when municipalities were emitted; misleading diagnostics due to ID scheme mismatch (comparing mid from settlements_meta.csv with mun_code from polygons).
+CORRECT RULE:
+Missing list must be expected_minus_emitted (same ID scheme), and counts must be internally consistent. When using mun_code scheme, cannot compare to expected municipalities from settlements_meta.csv (which uses mid).
+
+[2026-01-25]
+TITLE: Muni-from-fabric union path was broken, forcing fallback for all municipalities
+MISTAKE:
+All unions failed due to a broken union/buffer-fix path (e.g., 'Must have at least 2 geometries'), causing outputs to be MultiPolygon collections that render like the settlement fabric.
+CORRECT RULE:
+Use a proper deterministic polygon union implementation; only fallback when union genuinely fails for a specific municipality; report expected/emitted/missing consistently.
+

@@ -1,0 +1,576 @@
+{
+  "inputs": {
+    "polygon_fabric": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\polygon_fabric.geojson",
+    "polygon_to_muni_map": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\polygon_fabric.geojson",
+    "id_scheme": "mun_code"
+  },
+  "totals": {
+    "polygons_loaded": 6148,
+    "polygons_with_muni": 6148,
+    "municipalities_expected": 142,
+    "municipalities_with_polygons": 142,
+    "municipalities_emitted": 142,
+    "municipalities_missing": 0
+  },
+  "missing_municipalities": [],
+  "geometry_stats": {
+    "unions_attempted": 142,
+    "unions_succeeded": 35,
+    "unions_failed": 107,
+    "fallbacks_used": 107,
+    "unions_succeeded_by_level": {
+      "0": 34,
+      "1": 1,
+      "2": 0
+    }
+  },
+  "normalization_params": {
+    "eps1": 0.0000939964,
+    "area_eps": 8.83532321296e-9,
+    "clamp": [
+      0.000001,
+      0.001
+    ]
+  },
+  "union_failures_by_reason": {
+    "union_exception": 107
+  },
+  "failures": [
+    {
+      "mun_id": "10049",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [1.0000276996, 136.6499923956]. Last matching segment found ends at [28.10699"
+    },
+    {
+      "mun_id": "10146",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [102.5630439032, 346.9349786196]. Last matching segment found ends at [164.77"
+    },
+    {
+      "mun_id": "10197",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [404.37587301637780063728, 400.88774059187243395138]. Last matching segment f"
+    },
+    {
+      "mun_id": "10219",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [496.1339603972, 403.4699593672]. Last matching segment found ends at [523.90"
+    },
+    {
+      "mun_id": "10227",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [24.47275095077590361446, 67.96725665802409638554]. Last matching segment fou"
+    },
+    {
+      "mun_id": "10243",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [452.5689789072, 721.7610390292]. Last matching segment found ends at [506.68"
+    },
+    {
+      "mun_id": "10260",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [438.7679574772, 677.6310451788]. Last matching segment found ends at [471.19"
+    },
+    {
+      "mun_id": "10294",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [401.03, 390.8819614792]. Last matching segment found ends at [401.2869869736"
+    },
+    {
+      "mun_id": "10308",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [279.573022538, 530.3199810952]. Last matching segment found ends at [340.177"
+    },
+    {
+      "mun_id": "10324",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [519.5719627372, 436.429045056]. Last matching segment found ends at [519.726"
+    },
+    {
+      "mun_id": "10359",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [205.047036834, 338.5420400636]. Last matching segment found ends at [287.782"
+    },
+    {
+      "mun_id": "10375",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [410.1760385288, 454.24502871560003]. Last matching segment found ends at [43"
+    },
+    {
+      "mun_id": "10391",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [633.8089835348, 127.8330360792]. Last matching segment found ends at [633.84"
+    },
+    {
+      "mun_id": "10405",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [361.8910278128, 623.3900465732]. Last matching segment found ends at [406.19"
+    },
+    {
+      "mun_id": "10421",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [504.76960891443978071051, 535.42394198314161670671]. Last matching segment f"
+    },
+    {
+      "mun_id": "10448",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [535.2959625184, 381.1759872116]. Last matching segment found ends at [548.87"
+    },
+    {
+      "mun_id": "10472",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [529.1390103256, 415.48796308560003]. Last matching segment found ends at [55"
+    },
+    {
+      "mun_id": "10529",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [535.2010261544, 534.6399616428]. Last matching segment found ends at [535.23"
+    },
+    {
+      "mun_id": "10570",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [401.006031734, 618.5469760596]. Last matching segment found ends at [467.954"
+    },
+    {
+      "mun_id": "10588",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [192.6619771736, 430.5929965728]. Last matching segment found ends at [273.53"
+    },
+    {
+      "mun_id": "10600",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [658.77876302205348598885, 244.92946261187945370521]. Last matching segment f"
+    },
+    {
+      "mun_id": "10626",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [381.1000381204, 666.9749553]. Last matching segment found ends at [446.14695"
+    },
+    {
+      "mun_id": "10685",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [433.3329916328, 783.1650332968]. Last matching segment found ends at [481.33"
+    },
+    {
+      "mun_id": "10715",
+      "reason": "union_exception",
+      "detail": "Each LinearRing of a Polygon must have 4 or more Positions."
+    },
+    {
+      "mun_id": "10731",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [321.517976074, 577.4690453172]. Last matching segment found ends at [382.431"
+    },
+    {
+      "mun_id": "10766",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [391.956998306, 501.9150209864]. Last matching segment found ends at [430.946"
+    },
+    {
+      "mun_id": "10774",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [454.8219786188, 387.150962374]. Last matching segment found ends at [454.898"
+    },
+    {
+      "mun_id": "10863",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [597.3369703888, 431.0170143332]. Last matching segment found ends at [657.04"
+    },
+    {
+      "mun_id": "10928",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [615.9240065176, 451.342043898]. Last matching segment found ends at [630.063"
+    },
+    {
+      "mun_id": "11045",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [526.62, 203.99803701]. Last matching segment found ends at [526.7249947808, "
+    },
+    {
+      "mun_id": "11061",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [457.4530318512, 343.1920419716]. Last matching segment found ends at [457.56"
+    },
+    {
+      "mun_id": "11088",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [702.92718972333048871992, 223.00917522344132859788]. Last matching segment f"
+    },
+    {
+      "mun_id": "11100",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [598.0509670432, 363.5939605916]. Last matching segment found ends at [627.09"
+    },
+    {
+      "mun_id": "11118",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [12.7869882668, 23.0029870008]. Last matching segment found ends at [45.93500"
+    },
+    {
+      "mun_id": "11126",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [596.7990289916, 439.388991692]. Last matching segment found ends at [596.816"
+    },
+    {
+      "mun_id": "11142",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [471.8100419872, 391.6370345604]. Last matching segment found ends at [508.40"
+    },
+    {
+      "mun_id": "11185",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [532.475036558, 383.1040413684]. Last matching segment found ends at [532.524"
+    },
+    {
+      "mun_id": "11207",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [518.6309647768, 283.213033128]. Last matching segment found ends at [576.561"
+    },
+    {
+      "mun_id": "11215",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [666.9220353268, 267.6419654896]. Last matching segment found ends at [708.79"
+    },
+    {
+      "mun_id": "11410",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [421.3100061052, 573.2640223668]. Last matching segment found ends at [482.19"
+    },
+    {
+      "mun_id": "11436",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [82.3589877052, 191.1979832436]. Last matching segment found ends at [171.764"
+    },
+    {
+      "mun_id": "11452",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [719.0780057876, 535.074976982]. Last matching segment found ends at [754.540"
+    },
+    {
+      "mun_id": "11479",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [586.585004182, 162.3920344924]. Last matching segment found ends at [611.145"
+    },
+    {
+      "mun_id": "11487",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [378.1779720336, 300.2770455876]. Last matching segment found ends at [378.51"
+    },
+    {
+      "mun_id": "11517",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [359.2090285316, 421.242046708]. Last matching segment found ends at [359.300"
+    },
+    {
+      "mun_id": "11541",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [202.28661214219538342151, 137.63668591945849779686]. Last matching segment f"
+    },
+    {
+      "mun_id": "11622",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [525.9049701872, 185.6459918812]. Last matching segment found ends at [526.59"
+    },
+    {
+      "mun_id": "20010",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [256.0770244192, 150.8589582016]. Last matching segment found ends at [268.25"
+    },
+    {
+      "mun_id": "20028",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [528.2650317984, 701.2710457824]. Last matching segment found ends at [533.21"
+    },
+    {
+      "mun_id": "20036",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [767.4449813644, 163.4059736592]. Last matching segment found ends at [771.66"
+    },
+    {
+      "mun_id": "20044",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [584.9000247156, 742.35301837]. Last matching segment found ends at [597.7909"
+    },
+    {
+      "mun_id": "20052",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [812.1309639208, 340.5139905392]. Last matching segment found ends at [827.07"
+    },
+    {
+      "mun_id": "20079",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [521.8770364544, 65.5450056696]. Last matching segment found ends at [535.992"
+    },
+    {
+      "mun_id": "20087",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [817.090965956, 490.648988468]. Last matching segment found ends at [825.2800"
+    },
+    {
+      "mun_id": "20095",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [741.0669596252, 356.048023596]. Last matching segment found ends at [749.384"
+    },
+    {
+      "mun_id": "20117",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [626.4599689972, 657.423981096]. Last matching segment found ends at [637.441"
+    },
+    {
+      "mun_id": "20125",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [282.3479842588, 70.134003914]. Last matching segment found ends at [309.0989"
+    },
+    {
+      "mun_id": "20133",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [486.9339687508, 78.2009629548]. Last matching segment found ends at [496.941"
+    },
+    {
+      "mun_id": "20141",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [483.2100193756, 155.5699637732]. Last matching segment found ends at [492.22"
+    },
+    {
+      "mun_id": "20168",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [778.4090034496, 272.9300149608]. Last matching segment found ends at [794.67"
+    },
+    {
+      "mun_id": "20176",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [626.9579619244, 496.0569773456]. Last matching segment found ends at [632.12"
+    },
+    {
+      "mun_id": "20184",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [185.1210219872, 273.7459977092]. Last matching segment found ends at [212.22"
+    },
+    {
+      "mun_id": "20206",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [646.589016068, 480.5129806704]. Last matching segment found ends at [653.097"
+    },
+    {
+      "mun_id": "20214",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [633.3370276104, 483.2990339664]. Last matching segment found ends at [643.25"
+    },
+    {
+      "mun_id": "20222",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [329.815038302, 309.1750268008]. Last matching segment found ends at [334.641"
+    },
+    {
+      "mun_id": "20249",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [588.8800202844, 630.6830392564]. Last matching segment found ends at [611.76"
+    },
+    {
+      "mun_id": "20257",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [355.9609829296, 206.6259883612]. Last matching segment found ends at [365.72"
+    },
+    {
+      "mun_id": "20265",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [203.7769574772, 41.5790255508]. Last matching segment found ends at [218.961"
+    },
+    {
+      "mun_id": "20273",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [181.8509812276, 20.8379679196]. Last matching segment found ends at [202.575"
+    },
+    {
+      "mun_id": "20281",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [365.9659597456, 224.6059957388]. Last matching segment found ends at [374.76"
+    },
+    {
+      "mun_id": "20290",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [114.849971322, 98.1069565684]. Last matching segment found ends at [128.4819"
+    },
+    {
+      "mun_id": "20303",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [320.4230120104, 388.46597201]. Last matching segment found ends at [346.0730"
+    },
+    {
+      "mun_id": "20311",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [348.7309678344, 104.6979841364]. Last matching segment found ends at [356.57"
+    },
+    {
+      "mun_id": "20320",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [722.148022208, 204.7329948616]. Last matching segment found ends at [726.956"
+    },
+    {
+      "mun_id": "20338",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [534.0539880852, 767.7810184944]. Last matching segment found ends at [576.84"
+    },
+    {
+      "mun_id": "20346",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [782.872986482, 370.992981214]. Last matching segment found ends at [800.7089"
+    },
+    {
+      "mun_id": "20354",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [574.4380374028, 111.702031886]. Last matching segment found ends at [602.736"
+    },
+    {
+      "mun_id": "20362",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [252.3339937748, 328.2230212752]. Last matching segment found ends at [273.18"
+    },
+    {
+      "mun_id": "20389",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [537.5590198448, 689.7060107156]. Last matching segment found ends at [560.81"
+    },
+    {
+      "mun_id": "20397",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [122.2069755536, 94.1109816116]. Last matching segment found ends at [128.240"
+    },
+    {
+      "mun_id": "20419",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [762.8740304288, 559.5759846096]. Last matching segment found ends at [767.32"
+    },
+    {
+      "mun_id": "20427",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [744.7929769212, 293.750029568]. Last matching segment found ends at [771.172"
+    },
+    {
+      "mun_id": "20435",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [155.1010157336, 128.4410047944]. Last matching segment found ends at [165.96"
+    },
+    {
+      "mun_id": "20443",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [659.6040396012, 492.214968492]. Last matching segment found ends at [678.167"
+    },
+    {
+      "mun_id": "20451",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [645.5029816624, 106.0330150056]. Last matching segment found ends at [652.00"
+    },
+    {
+      "mun_id": "20460",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [168.3519702308, 247.852997394]. Last matching segment found ends at [170.637"
+    },
+    {
+      "mun_id": "20478",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [603.3360086296, 199.661983078]. Last matching segment found ends at [612.024"
+    },
+    {
+      "mun_id": "20486",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [182.3409844608, 101.0900263188]. Last matching segment found ends at [196.68"
+    },
+    {
+      "mun_id": "20494",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [408.373, 132.92500906]. Last matching segment found ends at [409.21802722, 1"
+    },
+    {
+      "mun_id": "20508",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [214.2640418288, 272.3100147064]. Last matching segment found ends at [250.90"
+    },
+    {
+      "mun_id": "20516",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [745.0389655, 478.9640139948]. Last matching segment found ends at [749.51902"
+    },
+    {
+      "mun_id": "20524",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [822.390013006, 540.758]. Last matching segment found ends at [825.3990257628"
+    },
+    {
+      "mun_id": "20532",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [673.2229900044, 436.3079776928]. Last matching segment found ends at [686.70"
+    },
+    {
+      "mun_id": "20559",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [397.4070035744, 86.3960390888]. Last matching segment found ends at [406.691"
+    },
+    {
+      "mun_id": "20567",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [822.7550010272, 379.3159864484]. Last matching segment found ends at [834.30"
+    },
+    {
+      "mun_id": "20575",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [439.5970057252, 200.2619620992]. Last matching segment found ends at [444.77"
+    },
+    {
+      "mun_id": "20583",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [539.3500272504, 780.8120214156]. Last matching segment found ends at [553.99"
+    },
+    {
+      "mun_id": "20591",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [635.2729774648, 509.5710277664]. Last matching segment found ends at [642.01"
+    },
+    {
+      "mun_id": "20605",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [762.2719834868, 194.2380148124]. Last matching segment found ends at [771.09"
+    },
+    {
+      "mun_id": "20613",
+      "reason": "union_exception",
+      "detail": "Cannot read properties of null (reading 'slice')"
+    },
+    {
+      "mun_id": "20621",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [727.32299401, 383.173034726]. Last matching segment found ends at [737.20596"
+    },
+    {
+      "mun_id": "20630",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [771.897966818, 565.7199652992]. Last matching segment found ends at [780.214"
+    },
+    {
+      "mun_id": "20648",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [356.087032102, 191.833022922]. Last matching segment found ends at [375.9689"
+    },
+    {
+      "mun_id": "20656",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [637.085980028, 74.3440086736]. Last matching segment found ends at [641.5149"
+    },
+    {
+      "mun_id": "20664",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [726.6010076616, 311.2269682128]. Last matching segment found ends at [731.29"
+    },
+    {
+      "mun_id": "20672",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [277.8880430716, 348.7240121008]. Last matching segment found ends at [312.11"
+    },
+    {
+      "mun_id": "30163",
+      "reason": "union_exception",
+      "detail": "Unable to complete output ring starting at [668.391011066, 146.029987148]. Last matching segment found ends at [698.7870"
+    }
+  ],
+  "per_municipality_union_status_path": "data/derived/municipality_union_status.csv"
+}
