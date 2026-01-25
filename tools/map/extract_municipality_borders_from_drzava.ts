@@ -32,9 +32,9 @@ import { loadLedger, assertLedgerFresh } from '../assistant/project_ledger_guard
 // ============================================================================
 
 loadMistakes();
-assertNoRepeat("Diagnose why some municipality geometries fail parsing without repairing or inferring shapes");
+assertNoRepeat("Fix SVG path parsing to eliminate Infinity coordinates without repairing geometry");
 loadLedger();
-assertLedgerFresh("Diagnose why some municipality geometries fail parsing without repairing or inferring shapes");
+assertLedgerFresh("Fix SVG path parsing to eliminate Infinity coordinates without repairing geometry");
 
 // ============================================================================
 // Types
@@ -93,7 +93,7 @@ interface GeometryFailureDiagnostic {
   munid_5: string;
   name: string;
   raw_geometry_kind: 'svg_path' | 'coords_array' | 'unknown';
-  failure_stage: 'duplicate' | 'parse_path' | 'to_rings' | 'polygon_validate';
+  failure_stage: 'duplicate' | 'parse_path' | 'to_rings' | 'svg_normalize' | 'polygon_validate';
   failure_reason: string;
   detail: string;
   basic_stats: {
@@ -146,9 +146,18 @@ function truncateDetail(s: string, maxLen: number = DETAIL_MAX_LEN): string {
   return s.slice(0, maxLen);
 }
 
+/**
+ * Throw a controlled svg_normalize error (fail fast, no geometry repair).
+ */
+function throwNormalizeError(reason: 'non_finite_coord' | 'invalid_svg_state', detail: string): never {
+  const e = { failure_stage: 'svg_normalize' as const, failure_reason: reason, detail: truncateDetail(detail) };
+  throw e;
+}
+
+type SvgPathDiagnosticBase = { detail: string; raw_point_count?: number; ring_count_detected: number };
 type SvgPathResult =
   | { rings: number[][][]; diagnostic?: undefined }
-  | { rings: null; diagnostic: { failure_stage: 'parse_path' | 'to_rings'; detail: string; raw_point_count?: number; ring_count_detected: number } };
+  | { rings: null; diagnostic: (SvgPathDiagnosticBase & { failure_stage: 'parse_path' | 'to_rings' }) | (SvgPathDiagnosticBase & { failure_stage: 'svg_normalize'; failure_reason: 'non_finite_coord' | 'invalid_svg_state' }) };
 
 /**
  * Calculate point on cubic bezier curve at parameter t
@@ -296,11 +305,27 @@ function flattenArc(
 
 /**
  * Convert SVG path to polygon coordinates.
- * Returns rings or null with diagnostic on failure (parse_path / to_rings).
+ * Strict normalization: absolute coords only, reject relative-before-M, reject non-finite.
+ * Returns rings or null with diagnostic on failure (parse_path / to_rings / svg_normalize).
  */
 function svgPathToRings(svgPath: string): SvgPathResult {
   try {
     const commands = parseSVG(svgPath);
+
+    // Reject relative commands before current point (initial M)
+    let seenAbsoluteMove = false;
+    for (const cmd of commands) {
+      const code = cmd.code;
+      const isRelative = code === code.toLowerCase();
+      if (isRelative && !seenAbsoluteMove) {
+        throwNormalizeError('invalid_svg_state', 'relative command before initial M');
+      }
+      if (code === 'M') seenAbsoluteMove = true;
+    }
+    if (!seenAbsoluteMove) {
+      throwNormalizeError('invalid_svg_state', 'path has no absolute M');
+    }
+
     parseSVG.makeAbsolute(commands);
 
     const rings: number[][][] = [];
@@ -312,17 +337,26 @@ function svgPathToRings(svgPath: string): SvgPathResult {
     let hasMove = false;
     let rawPointCount = 0;
 
+    function pushPoint(ring: number[][], x: number, y: number): void {
+      if (!Number.isFinite(x) || !Number.isFinite(y)) {
+        throwNormalizeError('non_finite_coord', `non-finite coordinate ${x},${y}`);
+      }
+      ring.push([roundCoord(x), roundCoord(y)]);
+      rawPointCount++;
+    }
+
     for (const cmd of commands) {
       const code = cmd.code.toUpperCase();
 
       switch (code) {
         case 'M': {
           if (hasMove && currentRing.length > 0) {
-            if (currentRing.length > 0 &&
-                (currentRing[currentRing.length - 1][0] !== startX ||
-                 currentRing[currentRing.length - 1][1] !== startY)) {
-              currentRing.push([roundCoord(startX), roundCoord(startY)]);
-              rawPointCount++;
+            if (
+              currentRing.length > 0 &&
+              (currentRing[currentRing.length - 1][0] !== startX ||
+                currentRing[currentRing.length - 1][1] !== startY)
+            ) {
+              pushPoint(currentRing, startX, startY);
             }
             if (currentRing.length >= 3) {
               rings.push(currentRing);
@@ -334,15 +368,13 @@ function svgPathToRings(svgPath: string): SvgPathResult {
           startX = currentX;
           startY = currentY;
           hasMove = true;
-          currentRing.push([roundCoord(currentX), roundCoord(currentY)]);
-          rawPointCount++;
+          pushPoint(currentRing, currentX, currentY);
           break;
         }
         case 'L': {
           currentX = cmd.x ?? currentX;
           currentY = cmd.y ?? currentY;
-          currentRing.push([roundCoord(currentX), roundCoord(currentY)]);
-          rawPointCount++;
+          pushPoint(currentRing, currentX, currentY);
           break;
         }
         case 'H': {
@@ -350,8 +382,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
           if ('y0' in cmd && cmd.y0 != null) {
             currentY = cmd.y0;
           }
-          currentRing.push([roundCoord(currentX), roundCoord(currentY)]);
-          rawPointCount++;
+          pushPoint(currentRing, currentX, currentY);
           break;
         }
         case 'V': {
@@ -359,8 +390,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
           if ('x0' in cmd && cmd.x0 != null) {
             currentX = cmd.x0;
           }
-          currentRing.push([roundCoord(currentX), roundCoord(currentY)]);
-          rawPointCount++;
+          pushPoint(currentRing, currentX, currentY);
           break;
         }
         case 'C': {
@@ -375,8 +405,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
 
           const curvePoints = flattenCubicBezier(x0, y0, x1, y1, x2, y2, x3, y3, CURVE_TOLERANCE);
           for (let i = 1; i < curvePoints.length; i++) {
-            currentRing.push([roundCoord(curvePoints[i][0]), roundCoord(curvePoints[i][1])]);
-            rawPointCount++;
+            pushPoint(currentRing, curvePoints[i][0], curvePoints[i][1]);
           }
           currentX = x3;
           currentY = y3;
@@ -394,8 +423,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
 
           const curvePoints = flattenCubicBezier(x0, y0, x1, y1, x2, y2, x3, y3, CURVE_TOLERANCE);
           for (let i = 1; i < curvePoints.length; i++) {
-            currentRing.push([roundCoord(curvePoints[i][0]), roundCoord(curvePoints[i][1])]);
-            rawPointCount++;
+            pushPoint(currentRing, curvePoints[i][0], curvePoints[i][1]);
           }
           currentX = x3;
           currentY = y3;
@@ -411,8 +439,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
 
           const curvePoints = flattenQuadraticBezier(x0, y0, x1, y1, x2, y2, CURVE_TOLERANCE);
           for (let i = 1; i < curvePoints.length; i++) {
-            currentRing.push([roundCoord(curvePoints[i][0]), roundCoord(curvePoints[i][1])]);
-            rawPointCount++;
+            pushPoint(currentRing, curvePoints[i][0], curvePoints[i][1]);
           }
           currentX = x2;
           currentY = y2;
@@ -428,8 +455,7 @@ function svgPathToRings(svgPath: string): SvgPathResult {
 
           const curvePoints = flattenQuadraticBezier(x0, y0, x1, y1, x2, y2, CURVE_TOLERANCE);
           for (let i = 1; i < curvePoints.length; i++) {
-            currentRing.push([roundCoord(curvePoints[i][0]), roundCoord(curvePoints[i][1])]);
-            rawPointCount++;
+            pushPoint(currentRing, curvePoints[i][0], curvePoints[i][1]);
           }
           currentX = x2;
           currentY = y2;
@@ -448,19 +474,19 @@ function svgPathToRings(svgPath: string): SvgPathResult {
 
           const arcPoints = flattenArc(x0, y0, rx, ry, xAxisRotation, largeArcFlag, sweepFlag, x, y, 24);
           for (let i = 1; i < arcPoints.length; i++) {
-            currentRing.push(arcPoints[i]);
-            rawPointCount++;
+            pushPoint(currentRing, arcPoints[i][0], arcPoints[i][1]);
           }
           currentX = x;
           currentY = y;
           break;
         }
         case 'Z': {
-          if (currentRing.length > 0 &&
-              (currentRing[currentRing.length - 1][0] !== startX ||
-               currentRing[currentRing.length - 1][1] !== startY)) {
-            currentRing.push([roundCoord(startX), roundCoord(startY)]);
-            rawPointCount++;
+          if (
+            currentRing.length > 0 &&
+            (currentRing[currentRing.length - 1][0] !== startX ||
+              currentRing[currentRing.length - 1][1] !== startY)
+          ) {
+            pushPoint(currentRing, startX, startY);
           }
           currentX = startX;
           currentY = startY;
@@ -470,11 +496,12 @@ function svgPathToRings(svgPath: string): SvgPathResult {
     }
 
     if (hasMove && currentRing.length > 0) {
-      if (currentRing.length > 0 &&
-          (currentRing[currentRing.length - 1][0] !== startX ||
-           currentRing[currentRing.length - 1][1] !== startY)) {
-        currentRing.push([roundCoord(startX), roundCoord(startY)]);
-        rawPointCount++;
+      if (
+        currentRing.length > 0 &&
+        (currentRing[currentRing.length - 1][0] !== startX ||
+          currentRing[currentRing.length - 1][1] !== startY)
+      ) {
+        pushPoint(currentRing, startX, startY);
       }
       if (currentRing.length >= 3) {
         rings.push(currentRing);
@@ -494,6 +521,23 @@ function svgPathToRings(svgPath: string): SvgPathResult {
     }
     return { rings };
   } catch (err) {
+    if (
+      err &&
+      typeof err === 'object' &&
+      'failure_stage' in err &&
+      (err as { failure_stage: string }).failure_stage === 'svg_normalize'
+    ) {
+      const e = err as { failure_stage: 'svg_normalize'; failure_reason: 'non_finite_coord' | 'invalid_svg_state'; detail: string };
+      return {
+        rings: null,
+        diagnostic: {
+          failure_stage: 'svg_normalize',
+          failure_reason: e.failure_reason,
+          detail: e.detail,
+          ring_count_detected: 0
+        }
+      };
+    }
     return {
       rings: null,
       diagnostic: {
@@ -727,15 +771,19 @@ function convertToFeatures(
 
     const pathResult = svgPathToRings(extract.path_d);
     if (!pathResult.rings || pathResult.rings.length === 0) {
-      droppedReasons['no_rings'] = (droppedReasons['no_rings'] || 0) + 1;
-      fail(extract.munID, 'no_rings');
       const d = pathResult.diagnostic!;
+      const reason =
+        d.failure_stage === 'svg_normalize'
+          ? (d as { failure_reason: 'non_finite_coord' | 'invalid_svg_state' }).failure_reason
+          : 'no_rings';
+      droppedReasons[reason] = (droppedReasons[reason] || 0) + 1;
+      fail(extract.munID, reason);
       addDiagnostic({
         munid_5: munid_5_str,
         name,
         raw_geometry_kind: 'svg_path',
         failure_stage: d.failure_stage,
-        failure_reason: 'no_rings',
+        failure_reason: reason,
         detail: truncateDetail(d.detail),
         basic_stats: {
           raw_point_count: d.raw_point_count ?? null,
