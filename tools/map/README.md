@@ -204,6 +204,54 @@ Open `data/derived/municipality_borders_from_drzava_viewer.html` in a browser. I
 
 The viewer provides a legend (features, failures, admin layers breakdown), search-by-munid/name with thicker highlight, click-to-inspect (munid_5 + name), and pan/zoom. All outputs are deterministic (no timestamps, stable ordering).
 
+### Municipality border reconstruction from legacy settlement-derived outlines
+
+```bash
+npm run map:reconstruct:muni
+```
+
+Reconstructs a complete municipality border layer from legacy settlement-derived outlines. This is an approved reconstruction step that creates an authoritative municipality layer when drzava.js geometry is incomplete or unreliable.
+
+**Inputs:**
+- `data/source/settlements_map_WITH_MUNI_OUTLINES_dark_zoom_v5.zip` — legacy ZIP containing municipality outlines derived from settlements
+- `data/derived/settlements_meta.csv` — settlement metadata (for municipality IDs and names)
+
+**Outputs:**
+- `data/derived/municipality_borders_reconstructed.geojson` — reconstructed municipality borders (authoritative layer)
+- `data/derived/municipality_reconstruction_report.json` — reconstruction report with statistics
+
+**Each feature includes properties:**
+- `munid_5`: string — municipality ID
+- `name`: string|null — municipality name
+- `source`: "reconstructed_from_settlement_outlines"
+- `reconstruction_method`: "settlement_outline_union"
+- `legacy_source_file`: "settlements_map_WITH_MUNI_OUTLINES_dark_zoom_v5"
+- `feature_index`: number — stable feature index
+
+**Allowed operations:**
+- Load legacy municipality outlines from ZIP
+- Accept geometry as-is if valid Polygon/MultiPolygon
+- Union multiple geometries per municipality deterministically
+- Merge fragments belonging to the same municipality
+- Ring closure and geometry normalization
+- **NOT allowed:** simplification, smoothing, snapping to borders or rivers
+
+**ID & name resolution:**
+- Municipality identity from legacy outline attributes where present
+- If legacy outline lacks `munid_5`: derive via explicit lookup table (authored in-code)
+- Log any municipality where ID resolution is ambiguous
+- Do NOT invent new municipalities
+
+**Reconstruction report includes:**
+- `total_municipalities`: total from metadata
+- `reconstructed`: successfully reconstructed count
+- `geometry_fixes_applied`: ring closures and fragment unions
+- `unresolved_id_count`: municipalities not found in legacy outlines
+- `unresolved_ids`: sorted list of unresolved municipality IDs
+- `notes`: provenance and reconstruction method notes
+
+**Note:** These borders are reconstructed from settlement outlines and are not surveyed. This layer supersedes drzava-derived municipality geometry.
+
 ### Validating the Map
 
 ```bash

@@ -1657,144 +1657,6 @@
   },
   {
     "feature_index": 72,
-    "extracted_raw_id": 18800,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 18800
-    },
-    "normalized_id_attempt": {
-      "raw_string": "18800",
-      "trimmed": "18800",
-      "digits_only": "18800",
-      "padded_5_if_digits": "18800"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 73,
-    "extracted_raw_id": 18900,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 18900
-    },
-    "normalized_id_attempt": {
-      "raw_string": "18900",
-      "trimmed": "18900",
-      "digits_only": "18900",
-      "padded_5_if_digits": "18900"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 74,
-    "extracted_raw_id": 19000,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 19000
-    },
-    "normalized_id_attempt": {
-      "raw_string": "19000",
-      "trimmed": "19000",
-      "digits_only": "19000",
-      "padded_5_if_digits": "19000"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 75,
-    "extracted_raw_id": 19100,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 19100
-    },
-    "normalized_id_attempt": {
-      "raw_string": "19100",
-      "trimmed": "19100",
-      "digits_only": "19100",
-      "padded_5_if_digits": "19100"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 76,
-    "extracted_raw_id": 19400,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 19400
-    },
-    "normalized_id_attempt": {
-      "raw_string": "19400",
-      "trimmed": "19400",
-      "digits_only": "19400",
-      "padded_5_if_digits": "19400"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 77,
-    "extracted_raw_id": 19500,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 19500
-    },
-    "normalized_id_attempt": {
-      "raw_string": "19500",
-      "trimmed": "19500",
-      "digits_only": "19500",
-      "padded_5_if_digits": "19500"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 78,
     "extracted_raw_id": 20010,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1817,7 +1679,7 @@
     }
   },
   {
-    "feature_index": 79,
+    "feature_index": 73,
     "extracted_raw_id": 20028,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1840,7 +1702,7 @@
     }
   },
   {
-    "feature_index": 80,
+    "feature_index": 74,
     "extracted_raw_id": 20036,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1863,7 +1725,7 @@
     }
   },
   {
-    "feature_index": 81,
+    "feature_index": 75,
     "extracted_raw_id": 20044,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1886,7 +1748,7 @@
     }
   },
   {
-    "feature_index": 82,
+    "feature_index": 76,
     "extracted_raw_id": 20052,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1909,7 +1771,7 @@
     }
   },
   {
-    "feature_index": 83,
+    "feature_index": 77,
     "extracted_raw_id": 20079,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1932,7 +1794,7 @@
     }
   },
   {
-    "feature_index": 84,
+    "feature_index": 78,
     "extracted_raw_id": 20087,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1955,7 +1817,7 @@
     }
   },
   {
-    "feature_index": 85,
+    "feature_index": 79,
     "extracted_raw_id": 20095,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -1978,7 +1840,7 @@
     }
   },
   {
-    "feature_index": 86,
+    "feature_index": 80,
     "extracted_raw_id": 20109,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2001,7 +1863,7 @@
     }
   },
   {
-    "feature_index": 87,
+    "feature_index": 81,
     "extracted_raw_id": 20117,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2024,7 +1886,7 @@
     }
   },
   {
-    "feature_index": 88,
+    "feature_index": 82,
     "extracted_raw_id": 20125,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2047,7 +1909,7 @@
     }
   },
   {
-    "feature_index": 89,
+    "feature_index": 83,
     "extracted_raw_id": 20133,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2070,7 +1932,7 @@
     }
   },
   {
-    "feature_index": 90,
+    "feature_index": 84,
     "extracted_raw_id": 20141,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2093,7 +1955,7 @@
     }
   },
   {
-    "feature_index": 91,
+    "feature_index": 85,
     "extracted_raw_id": 20150,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2116,7 +1978,7 @@
     }
   },
   {
-    "feature_index": 92,
+    "feature_index": 86,
     "extracted_raw_id": 20168,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2139,7 +2001,7 @@
     }
   },
   {
-    "feature_index": 93,
+    "feature_index": 87,
     "extracted_raw_id": 20206,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2162,7 +2024,7 @@
     }
   },
   {
-    "feature_index": 94,
+    "feature_index": 88,
     "extracted_raw_id": 20214,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2185,7 +2047,7 @@
     }
   },
   {
-    "feature_index": 95,
+    "feature_index": 89,
     "extracted_raw_id": 20222,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2208,7 +2070,7 @@
     }
   },
   {
-    "feature_index": 96,
+    "feature_index": 90,
     "extracted_raw_id": 20249,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2231,7 +2093,7 @@
     }
   },
   {
-    "feature_index": 97,
+    "feature_index": 91,
     "extracted_raw_id": 20257,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2254,7 +2116,7 @@
     }
   },
   {
-    "feature_index": 98,
+    "feature_index": 92,
     "extracted_raw_id": 20265,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2277,7 +2139,7 @@
     }
   },
   {
-    "feature_index": 99,
+    "feature_index": 93,
     "extracted_raw_id": 20273,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2300,7 +2162,7 @@
     }
   },
   {
-    "feature_index": 100,
+    "feature_index": 94,
     "extracted_raw_id": 20281,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2323,7 +2185,7 @@
     }
   },
   {
-    "feature_index": 101,
+    "feature_index": 95,
     "extracted_raw_id": 20290,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2346,7 +2208,7 @@
     }
   },
   {
-    "feature_index": 102,
+    "feature_index": 96,
     "extracted_raw_id": 20303,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2369,7 +2231,7 @@
     }
   },
   {
-    "feature_index": 103,
+    "feature_index": 97,
     "extracted_raw_id": 20311,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2392,7 +2254,7 @@
     }
   },
   {
-    "feature_index": 104,
+    "feature_index": 98,
     "extracted_raw_id": 20320,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2415,7 +2277,7 @@
     }
   },
   {
-    "feature_index": 105,
+    "feature_index": 99,
     "extracted_raw_id": 20346,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2438,7 +2300,7 @@
     }
   },
   {
-    "feature_index": 106,
+    "feature_index": 100,
     "extracted_raw_id": 20354,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2461,7 +2323,7 @@
     }
   },
   {
-    "feature_index": 107,
+    "feature_index": 101,
     "extracted_raw_id": 20362,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2484,7 +2346,7 @@
     }
   },
   {
-    "feature_index": 108,
+    "feature_index": 102,
     "extracted_raw_id": 20389,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2507,7 +2369,7 @@
     }
   },
   {
-    "feature_index": 109,
+    "feature_index": 103,
     "extracted_raw_id": 20397,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2530,7 +2392,7 @@
     }
   },
   {
-    "feature_index": 110,
+    "feature_index": 104,
     "extracted_raw_id": 20427,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2553,7 +2415,7 @@
     }
   },
   {
-    "feature_index": 111,
+    "feature_index": 105,
     "extracted_raw_id": 20435,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2576,7 +2438,7 @@
     }
   },
   {
-    "feature_index": 112,
+    "feature_index": 106,
     "extracted_raw_id": 20451,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2599,7 +2461,7 @@
     }
   },
   {
-    "feature_index": 113,
+    "feature_index": 107,
     "extracted_raw_id": 20460,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2622,7 +2484,7 @@
     }
   },
   {
-    "feature_index": 114,
+    "feature_index": 108,
     "extracted_raw_id": 20478,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2645,7 +2507,7 @@
     }
   },
   {
-    "feature_index": 115,
+    "feature_index": 109,
     "extracted_raw_id": 20486,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2668,7 +2530,7 @@
     }
   },
   {
-    "feature_index": 116,
+    "feature_index": 110,
     "extracted_raw_id": 20494,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2691,7 +2553,7 @@
     }
   },
   {
-    "feature_index": 117,
+    "feature_index": 111,
     "extracted_raw_id": 20508,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2714,7 +2576,7 @@
     }
   },
   {
-    "feature_index": 118,
+    "feature_index": 112,
     "extracted_raw_id": 20524,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2737,7 +2599,7 @@
     }
   },
   {
-    "feature_index": 119,
+    "feature_index": 113,
     "extracted_raw_id": 20532,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2760,7 +2622,7 @@
     }
   },
   {
-    "feature_index": 120,
+    "feature_index": 114,
     "extracted_raw_id": 20559,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2783,7 +2645,7 @@
     }
   },
   {
-    "feature_index": 121,
+    "feature_index": 115,
     "extracted_raw_id": 20567,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2806,7 +2668,7 @@
     }
   },
   {
-    "feature_index": 122,
+    "feature_index": 116,
     "extracted_raw_id": 20575,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2829,7 +2691,7 @@
     }
   },
   {
-    "feature_index": 123,
+    "feature_index": 117,
     "extracted_raw_id": 20583,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2852,7 +2714,7 @@
     }
   },
   {
-    "feature_index": 124,
+    "feature_index": 118,
     "extracted_raw_id": 20591,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2875,7 +2737,7 @@
     }
   },
   {
-    "feature_index": 125,
+    "feature_index": 119,
     "extracted_raw_id": 20605,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2898,7 +2760,7 @@
     }
   },
   {
-    "feature_index": 126,
+    "feature_index": 120,
     "extracted_raw_id": 20613,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2921,7 +2783,7 @@
     }
   },
   {
-    "feature_index": 127,
+    "feature_index": 121,
     "extracted_raw_id": 20630,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2944,7 +2806,7 @@
     }
   },
   {
-    "feature_index": 128,
+    "feature_index": 122,
     "extracted_raw_id": 20648,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2967,7 +2829,7 @@
     }
   },
   {
-    "feature_index": 129,
+    "feature_index": 123,
     "extracted_raw_id": 20656,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -2990,145 +2852,7 @@
     }
   },
   {
-    "feature_index": 130,
-    "extracted_raw_id": 29200,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29200
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29200",
-      "trimmed": "29200",
-      "digits_only": "29200",
-      "padded_5_if_digits": "29200"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 131,
-    "extracted_raw_id": 29400,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29400
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29400",
-      "trimmed": "29400",
-      "digits_only": "29400",
-      "padded_5_if_digits": "29400"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 132,
-    "extracted_raw_id": 29500,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29500
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29500",
-      "trimmed": "29500",
-      "digits_only": "29500",
-      "padded_5_if_digits": "29500"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 133,
-    "extracted_raw_id": 29600,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29600
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29600",
-      "trimmed": "29600",
-      "digits_only": "29600",
-      "padded_5_if_digits": "29600"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 134,
-    "extracted_raw_id": 29700,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29700
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29700",
-      "trimmed": "29700",
-      "digits_only": "29700",
-      "padded_5_if_digits": "29700"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 135,
-    "extracted_raw_id": 29800,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 29800
-    },
-    "normalized_id_attempt": {
-      "raw_string": "29800",
-      "trimmed": "29800",
-      "digits_only": "29800",
-      "padded_5_if_digits": "29800"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 136,
+    "feature_index": 124,
     "extracted_raw_id": 30163,
     "extracted_raw_id_type": "number",
     "extracted_from_key": "mid",
@@ -3140,29 +2864,6 @@
       "trimmed": "30163",
       "digits_only": "30163",
       "padded_5_if_digits": "30163"
-    },
-    "crosswalk_match_status": {
-      "direct_match": false,
-      "trimmed_match": false,
-      "digits_only_match": false,
-      "padded_5_match": false,
-      "matched_munid_5": null,
-      "matched_mid_7": null
-    }
-  },
-  {
-    "feature_index": 137,
-    "extracted_raw_id": 49800,
-    "extracted_raw_id_type": "number",
-    "extracted_from_key": "mid",
-    "all_candidate_keys_present": {
-      "mid": 49800
-    },
-    "normalized_id_attempt": {
-      "raw_string": "49800",
-      "trimmed": "49800",
-      "digits_only": "49800",
-      "padded_5_if_digits": "49800"
     },
     "crosswalk_match_status": {
       "direct_match": false,

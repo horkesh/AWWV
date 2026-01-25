@@ -375,3 +375,32 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - Modified `tools/map/extract_municipality_borders_from_drzava.ts`: deterministic diagnostic for each municipality that fails geometry conversion (munid_5, name, raw_geometry_kind, failure_stage, failure_reason, detail, basic_stats). Outputs written to `data/derived/municipality_audit/`. No geometry repair, ring closing, smoothing, hulls, or inference.
 - Extended `municipality_borders_extraction_report.json` with `municipality_failures`, `municipality_failures_by_reason`, `municipality_failed_ids`.
 - Updated `tools/map/README.md`: where to find the failure diagnostic (municipality_audit, JSON + CSV).
+
+**2026-01-25** - Repository cleanup, remove dead map scripts and v2 variants
+- **Phase:** Map Rebuild (Path A)
+- **Decision:** Delete only provably-unused files; keep anything referenced by package scripts, docs, or imports; determinism unchanged
+- **Artifacts:** Cleanup report (kept/removed) committed to `docs/cleanup/2026-01-25_repo_cleanup.md`
+- Removed `tools/map_v2/` directory (entire directory): only referenced in package.json scripts, no imports, no doc references, no test references. Deleted files: `build_map_v2.ts`, `unpack_inputs.ts`, `viewer_v2/` directory and all contents, `.cache/` directory.
+- Removed 4 npm scripts from `package.json`: `map:v2:unpack`, `map:v2:build`, `map:v2:prep`, `map:v2:view`.
+- Kept files that are referenced (even if potentially obsolete): `scripts/map/*.ts` (referenced in package.json), `tools/map_build/` (referenced in scripts and docs), `tools/map_viewer/` and `tools/map_viewer_simple/` (referenced in scripts), `tools/map/viewer.html` and `serve_viewer.js` (referenced in scripts).
+- No behavior changes, no determinism changes, no core logic refactoring. Build validation: typecheck and canonical map scripts still run.
+
+**2026-01-25** - Rule change — inferred municipality borders permitted from settlement-derived outlines
+- **Phase:** Map Rebuild (Path A, amended)
+- **Decision:**
+  * The prohibition on inferred municipality borders is lifted.
+  * Settlement-derived municipality outlines are now permitted as a reconstruction source.
+  * These borders are accepted as reconstructed, not surveyed.
+- **Rationale:**
+  * drzava.js geometry is incomplete and syntactically unreliable for municipalities.
+  * A complete, internally consistent municipality layer is required for simulation reference.
+- **Artifacts:**
+  * Reconstructed municipality borders derived from legacy settlement outlines
+  * Provenance and reconstruction method recorded per municipality
+- Added `tools/map/reconstruct_municipalities_from_legacy.ts`: loads municipality outlines from `data/source/settlements_map_WITH_MUNI_OUTLINES_dark_zoom_v5.zip`, unions fragments per municipality deterministically, applies ring closure and geometry normalization, outputs `municipality_borders_reconstructed.geojson` with full provenance properties.
+- New npm script: `map:reconstruct:muni` (`npm run map:reconstruct:muni`)
+- Outputs: `municipality_borders_reconstructed.geojson` (authoritative layer), `municipality_reconstruction_report.json` (statistics, unresolved IDs, geometry fixes applied)
+- Each feature includes: `munid_5`, `name`, `source: "reconstructed_from_settlement_outlines"`, `reconstruction_method: "settlement_outline_union"`, `legacy_source_file`, `feature_index`
+- Allowed operations: load legacy outlines, accept valid geometry as-is, union multiple geometries per municipality deterministically, merge fragments, ring closure, geometry normalization. NOT allowed: simplification, smoothing, snapping.
+- ID resolution: from legacy outline attributes where present; if missing, derive via explicit lookup table (authored in-code); log ambiguous cases; do NOT invent new municipalities.
+- Updated `tools/map/README.md`: documentation for reconstruction script, allowed operations, ID resolution, report structure.

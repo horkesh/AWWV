@@ -3,110 +3,110 @@
   "total_converted": 125,
   "dropped_count": 17,
   "dropped_reasons": {
-    "non_finite": 17
+    "non_finite_coord": 17
   },
   "duplicate_munID_count": 0,
   "failed_entities": [
     {
       "munid_5": 10243,
       "name": "Čapljina",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11185,
       "name": "Zenica",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11215,
       "name": "Živinice",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11410,
       "name": "Grad Mostar",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11436,
       "name": "Bosanski Petrovac",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11444,
       "name": "Foča (FBIH)",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 11592,
       "name": "Trnovo (FBIH)",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20176,
       "name": "Istočna Ilidža",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20184,
       "name": "Istočni Drvar",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20192,
       "name": "Istočni Mostar",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20338,
       "name": "Ljubinje",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20419,
       "name": "Novo Goražde",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20443,
       "name": "Pale (RS)",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20516,
       "name": "Rogatica",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20621,
       "name": "Han Pijesak",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20664,
       "name": "Šekovići",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     },
     {
       "munid_5": 20672,
       "name": "Šipovo",
-      "reason": "non_finite",
+      "reason": "non_finite_coord",
       "layer": "municipality"
     }
   ],
@@ -246,7 +246,7 @@
   },
   "municipality_failures": 17,
   "municipality_failures_by_reason": {
-    "non_finite": 17
+    "non_finite_coord": 17
   },
   "municipality_failed_ids": [
     "10243",

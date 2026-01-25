@@ -3,13 +3,13 @@
     "munid_5": "10243",
     "name": "Čapljina",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 81,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -17,13 +17,13 @@
     "munid_5": "11185",
     "name": "Zenica",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 145,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -31,13 +31,13 @@
     "munid_5": "11215",
     "name": "Živinice",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 368,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -45,13 +45,13 @@
     "munid_5": "11410",
     "name": "Grad Mostar",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 96,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -59,13 +59,13 @@
     "munid_5": "11436",
     "name": "Bosanski Petrovac",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 127,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -73,13 +73,13 @@
     "munid_5": "11444",
     "name": "Foča (FBIH)",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 145,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -87,13 +87,13 @@
     "munid_5": "11592",
     "name": "Trnovo (FBIH)",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 101,
-      "ring_count_detected": 4,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -101,13 +101,13 @@
     "munid_5": "20176",
     "name": "Istočna Ilidža",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 49,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -115,13 +115,13 @@
     "munid_5": "20184",
     "name": "Istočni Drvar",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 71,
-      "ring_count_detected": 3,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -129,13 +129,13 @@
     "munid_5": "20192",
     "name": "Istočni Mostar",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 87,
-      "ring_count_detected": 4,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -143,13 +143,13 @@
     "munid_5": "20338",
     "name": "Ljubinje",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 94,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -157,13 +157,13 @@
     "munid_5": "20419",
     "name": "Novo Goražde",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 44,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -171,13 +171,13 @@
     "munid_5": "20443",
     "name": "Pale (RS)",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 96,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -185,13 +185,13 @@
     "munid_5": "20516",
     "name": "Rogatica",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 125,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -199,13 +199,13 @@
     "munid_5": "20621",
     "name": "Han Pijesak",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 69,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -213,13 +213,13 @@
     "munid_5": "20664",
     "name": "Šekovići",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 118,
-      "ring_count_detected": 4,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   },
@@ -227,13 +227,13 @@
     "munid_5": "20672",
     "name": "Šipovo",
     "raw_geometry_kind": "svg_path",
-    "failure_stage": "polygon_validate",
-    "failure_reason": "non_finite",
-    "detail": "bbox contains non-finite value(s)",
+    "failure_stage": "svg_normalize",
+    "failure_reason": "non_finite_coord",
+    "detail": "bbox non-finite after ring build",
     "basic_stats": {
-      "raw_point_count": 114,
-      "ring_count_detected": 2,
-      "has_nan": false,
+      "raw_point_count": null,
+      "ring_count_detected": 0,
+      "has_nan": null,
       "bbox": null
     }
   }

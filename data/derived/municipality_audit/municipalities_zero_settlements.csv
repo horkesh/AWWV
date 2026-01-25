@@ -1,139 +1,126 @@
 munid_5,municipality_name
-10014,
-10049,
-10146,
-10189,
-10197,
-10219,
-10227,
-10260,
-10294,
-10308,
-10324,
-10359,
-10375,
-10391,
-10405,
-10421,
-10448,
-10472,
-10499,
-10529,
-10545,
-10570,
-10588,
-10600,
-10626,
-10634,
-10685,
-10715,
-10731,
-10766,
-10774,
-10839,
-10847,
-10863,
-10871,
-10928,
-10987,
-11045,
-11061,
-11088,
-11100,
-11118,
-11126,
-11142,
-11177,
-11207,
-11231,
-11240,
-11258,
-11266,
-11274,
-11282,
-11304,
-11312,
-11339,
-11428,
-11452,
-11479,
-11487,
-11495,
-11509,
-11517,
-11525,
-11533,
-11541,
-11550,
-11568,
-11576,
-11584,
-11606,
-11614,
-11622,
-18800,
-18900,
-19000,
-19100,
-19400,
-19500,
-20010,
-20028,
-20036,
-20044,
-20052,
-20079,
-20087,
-20095,
-20109,
-20117,
-20125,
-20133,
-20141,
-20150,
-20168,
-20206,
-20214,
-20222,
-20249,
-20257,
-20265,
-20273,
-20281,
-20290,
-20303,
-20311,
-20320,
-20346,
-20354,
-20362,
-20389,
-20397,
-20427,
-20435,
-20451,
-20460,
-20478,
-20486,
-20494,
-20508,
-20524,
-20532,
-20559,
-20567,
-20575,
-20583,
-20591,
-20605,
-20613,
-20630,
-20648,
-20656,
-29200,
-29400,
-29500,
-29600,
-29700,
-29800,
-30163,
-49800,
+10014,Banovići
+10049,Bihać
+10146,Bosansko Grahovo
+10189,Breza
+10197,Bugojno
+10219,Busovača
+10227,Cazin
+10260,Čitluk
+10294,Donji Vakuf
+10308,Tomislavgrad
+10324,Fojnica
+10359,Glamoč
+10375,Gornji Vakuf-Uskoplje
+10391,Gradačac
+10405,Grude
+10421,Jablanica
+10448,Kakanj
+10472,Kiseljak
+10499,Kladanj
+10529,Konjic
+10545,Kreševo
+10570,Široki Brijeg
+10588,Livno
+10600,Lukavac
+10626,Ljubuški
+10634,Maglaj
+10685,Neum
+10715,Olovo
+10731,Posušje
+10766,Prozor
+10774,Novi Travnik
+10839,Centar Sarajevo
+10847,Hadžići
+10863,Ilijaš
+10871,Novi Grad Sarajevo
+10928,Vogošća
+10987,Srebrenik
+11045,Tešanj
+11061,Travnik
+11088,Tuzla
+11100,Vareš
+11118,Velika Kladuša
+11126,Visoko
+11142,Vitez
+11177,Zavidovići
+11207,Žepče
+11231,Čelić
+11240,Bužim
+11258,Doboj-Istok
+11266,Doboj-Jug
+11274,Dobretići
+11282,Domaljevac-Šamac
+11304,Ravno
+11312,Sapna
+11339,Teočak
+11428,Bosanska Krupa
+11452,Goražde
+11479,Gračanica
+11487,Jajce
+11495,Kalesija
+11509,Ključ
+11517,Kupres (FBIH)
+11525,Odžak
+11533,Orašje
+11541,Sanski Most
+11550,Ilidža
+11568,Novo Sarajevo
+11576,Pale (FBIH)
+11584,Stari Grad Sarajevo
+11606,Stolac
+11614,Drvar
+11622,Usora
+20010,Banja Luka
+20028,Berkovići
+20036,Bijeljina
+20044,Bileća
+20052,Bratunac
+20079,Brod
+20087,Višegrad
+20095,Vlasenica
+20109,Vukosavlje
+20117,Gacko
+20125,Gradiška
+20133,Derventa
+20141,Doboj
+20150,Donji Žabar
+20168,Zvornik
+20206,Istočni Stari Grad
+20214,Istočno Novo Sarajevo
+20222,Jezero
+20249,Kalinovik
+20257,Kneževo
+20265,Kozarska Dubica
+20273,Kostajnica
+20281,Kotor Varoš
+20290,Krupa na Uni
+20303,Kupres (RS)
+20311,Laktaši
+20320,Lopare
+20346,Milići
+20354,Modriča
+20362,Mrkonjić Grad
+20389,Nevesinje
+20397,Novi Grad
+20427,Osmaci
+20435,Oštra Luka
+20451,Pelagićevo
+20460,Petrovac
+20478,Petrovo
+20486,Prijedor
+20494,Prnjavor
+20508,Ribnik
+20524,Rudo
+20532,Sokolac
+20559,Srbac
+20567,Srebrenica
+20575,Teslić
+20583,Trebinje
+20591,Trnovo (RS)
+20605,Ugljevik
+20613,Foča (RS)
+20630,Čajniče
+20648,Čelinac
+20656,Šamac
+30163,Brčko

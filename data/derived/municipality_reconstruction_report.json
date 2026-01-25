@@ -1,0 +1,28 @@
+{
+  "total_municipalities": 142,
+  "reconstructed": 129,
+  "geometry_fixes_applied": {
+    "ring_closure": 0,
+    "fragment_union": 108
+  },
+  "unresolved_id_count": 13,
+  "unresolved_ids": [
+    "1012045",
+    "1045979",
+    "1058545",
+    "1106951",
+    "1117932",
+    "1251305",
+    "1291077",
+    "1413092",
+    "1521214",
+    "1617307",
+    "1675873",
+    "1777860",
+    "1880950"
+  ],
+  "notes": [
+    "Borders are reconstructed from settlement outlines and are not surveyed.",
+    "This layer supersedes drzava-derived municipality geometry."
+  ]
+}

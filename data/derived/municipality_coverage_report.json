@@ -10,7 +10,7 @@
   "extra_count": 3,
   "settlement_rows_count": 6283,
   "aggregate_rows_skipped": 0,
-  "borders_features_count": 138,
+  "borders_features_count": 125,
   "borders_features_missing_id_count": 0,
   "unmapped_border_ids": [
     "10359",
@@ -72,12 +72,6 @@
     "11606",
     "11614",
     "11622",
-    "18800",
-    "18900",
-    "19000",
-    "19100",
-    "19400",
-    "19500",
     "20010",
     "20028",
     "20036",
@@ -130,14 +124,7 @@
     "20630",
     "20648",
     "20656",
-    "29200",
-    "29400",
-    "29500",
-    "29600",
-    "29700",
-    "29800",
-    "30163",
-    "49800"
+    "30163"
   ],
   "crosswalk_stats": {
     "rows": 140,
@@ -288,7 +275,7 @@
       "mtime_ms": 1769280986261.5046
     },
     "municipality_borders_geojson": {
-      "mtime_ms": 1769281002038.8042
+      "mtime_ms": 1769338470146.3884
     },
     "municipality_id_crosswalk_csv": {
       "mtime_ms": 1769281068724.0352
