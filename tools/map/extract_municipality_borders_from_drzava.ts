@@ -341,7 +341,12 @@ function svgPathToRings(svgPath: string): SvgPathResult {
       if (!Number.isFinite(x) || !Number.isFinite(y)) {
         throwNormalizeError('non_finite_coord', `non-finite coordinate ${x},${y}`);
       }
-      ring.push([roundCoord(x), roundCoord(y)]);
+      const rx = roundCoord(x);
+      const ry = roundCoord(y);
+      if (!Number.isFinite(rx) || !Number.isFinite(ry)) {
+        throwNormalizeError('non_finite_coord', `roundCoord produced non-finite ${rx},${ry}`);
+      }
+      ring.push([rx, ry]);
       rawPointCount++;
     }
 
@@ -518,6 +523,20 @@ function svgPathToRings(svgPath: string): SvgPathResult {
           ring_count_detected: 0
         }
       };
+    }
+
+    for (const ring of rings) {
+      for (const c of ring) {
+        if (c.length >= 2 && (!Number.isFinite(c[0]) || !Number.isFinite(c[1]))) {
+          throwNormalizeError('non_finite_coord', `non-finite in ring: ${c[0]},${c[1]}`);
+        }
+      }
+    }
+
+    const geom = rings.length === 1 ? turf.polygon(rings).geometry : turf.multiPolygon(rings).geometry;
+    const bbox = turf.bbox(turf.feature(geom, {}));
+    if (!Number.isFinite(bbox[0]) || !Number.isFinite(bbox[1]) || !Number.isFinite(bbox[2]) || !Number.isFinite(bbox[3])) {
+      throwNormalizeError('non_finite_coord', 'bbox non-finite after ring build');
     }
     return { rings };
   } catch (err) {
