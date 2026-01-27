@@ -1,0 +1,87 @@
+SVG SUBSTRATE CENSUS COVERAGE AUDIT
+============================================================
+
+Census total: 6140 settlements
+Features total: 6108
+
+SID VALIDATION:
+  Missing SID: 0
+  Duplicate SID count: 9
+  Duplicate SIDs: S130478, S138487, S164984, S166138, S170046, S201634, S219223, S219371, S225665
+  Unmatched placeholder count: 0
+
+Identity mode used: census_id
+
+COVERAGE:
+  Matched: 6099
+  Missing census: 41
+  Extra features: 0
+  Ambiguous keys: 0
+
+Missing census IDs (first 100):
+  113719
+  130397
+  135291
+  136069
+  138517
+  144509
+  164585
+  165239
+  165859
+  169617
+  170917
+  201693
+  205206
+  205281
+  208566
+  208752
+  208779
+  209422
+  209457
+  209473
+  211974
+  212067
+  212601
+  214442
+  216763
+  217514
+  217611
+  219509
+  221953
+  224731
+  224774
+  226394
+  226769
+  226882
+  227234
+  227757
+  228265
+  229318
+  229334
+  229725
+  229741
+
+MUNICIPALITY COUNTS (top 20 by feature count):
+  10529 - Konjic: 168 features (census: 168)
+  20087 - Višegrad: 163 features (census: 163)
+  11452 - Goražde: 144 features (census: 144)
+  20583 - Trebinje: 142 features (census: 141)
+  20516 - Rogatica: 118 features (census: 118)
+  10448 - Kakanj: 106 features (census: 106)
+  20613 - Foča (RS): 99 features (census: 101)
+  20532 - Sokolac: 95 features (census: 96)
+  11061 - Travnik: 90 features (census: 90)
+  20524 - Rudo: 89 features (census: 89)
+  11126 - Visoko: 88 features (census: 88)
+  11100 - Vareš: 85 features (census: 85)
+  11185 - Zenica: 83 features (census: 83)
+  20141 - Doboj: 83 features (census: 83)
+  10472 - Kiseljak: 82 features (census: 82)
+  20567 - Srebrenica: 81 features (census: 81)
+  10197 - Bugojno: 78 features (census: 78)
+  10863 - Ilijaš: 74 features (census: 74)
+  20117 - Gacko: 71 features (census: 71)
+  20249 - Kalinovik: 71 features (census: 71)
+
+GEOMETRY BOUNDS:
+  [1.000000, -9.521430, 940.963800, 910.090330]

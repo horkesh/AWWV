@@ -908,3 +908,80 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Mistake log updated:** no (validation-only diagnostic, no new mistakes discovered; mistake guard assertion included)
 - **How to run:** `npm run map:derive:contact` produces contact graph JSON and audit reports. Re-run immediately to confirm deterministic output (no diffs in generated files). Confirm v1/v2 outputs unchanged by re-running their commands and verifying identical artifacts. Run `npm run repo:cleanup:audit` to ensure new artifacts are classified appropriately.
 - **Note:** This contact graph is a validation-only diagnostic to judge whether point-touch should be considered adjacency. Results will show connectivity improvements (component sizes, isolated reduction) when point-touch edges are included. If results imply point-touch makes the graph usable (large component, far fewer isolates) while shared-border-only does not, this suggests Phase 1 adjacency definition may need to allow point-touch. This task may reveal systemic design insights about adjacency definition trade-offs. **docs/FORAWWV.md may require an addendum** if results indicate point-touch should be considered adjacency. Do NOT edit FORAWWV.md automatically. This task does NOT modify any canonical Phase 0 substrate or existing v1/v2 graph artifacts.
+
+**2026-01-27** - Phase 1: Settlement adjacency v3 with robust boundary detection (canonical)
+- **Phase:** Map Rebuild (Path A) - Phase 1 Settlement Adjacency
+- **Decision:** Implement v3 adjacency algorithm using Hausdorff-distance segment matching to detect shared borders between settlements with independently digitized boundaries. v3 becomes the canonical adjacency graph; v1/v2 retained for reference.
+- **Artifacts:** `scripts/map/derive_settlement_graph_v3_robust.ts`, `data/derived/settlement_graph_v3.json`, `data/derived/settlement_graph_v3.audit.json`, `data/derived/settlement_graph_v3.audit.txt`
+- **Root cause analysis:** Investigation revealed that settlement polygons in `bih_master.geojson` were digitized independently - neighboring settlements have boundaries that are nearly parallel but not on the exact same line (gaps of ~0.001-0.01 units). v1/v2 required exact colinearity (EPS ~1e-5) which failed because digitization gaps are 100x larger. Sample analysis showed 418 pairs with boundaries within 0.01 units but only 84 pairs with exact shared vertices.
+- **v3 algorithm:** (1) Extract boundary segments from all settlements, (2) use spatial grid index to find candidate pairs, (3) for each candidate pair, check: (a) nearly parallel (dot product > 0.985), (b) within distance tolerance (max point-to-segment distance < 0.02), (c) significant projected overlap (> 0.1 units), (4) accumulate matched segment lengths as shared border length. Home-cell deduplication ensures each segment pair is processed exactly once without storing all pair keys in memory.
+- **Tolerance parameters:** Distance tolerance: 0.02 (derived from dataset bounds, ~2e-5 * maxDim). Parallel threshold: 0.985 (cos 10°). Min overlap length: 0.1. Parameters chosen based on observed digitization gaps and settlement polygon sizes.
+- **Results:** v3 found 15,260 edges vs 345 in v2 (44x improvement). Isolation dropped from 90% (5,519 isolated) to 1% (61 isolated). Median degree: 5 neighbors. Max degree: 20. The 61 remaining isolated settlements are concentrated in municipalities 11304 (50 settlements) and 11428 (6 settlements) - likely geographic enclaves or areas with different digitization characteristics.
+- **Comparison:**
+  | Version | Edges | Isolated | Isolation Rate | Detection Method |
+  |---------|-------|----------|----------------|------------------|
+  | v1      | 297   | 5,604    | 91.3%          | Exact segment endpoint matching |
+  | v2      | 345   | 5,519    | 89.9%          | Colinear overlap detection |
+  | v3      | 15,260| 61       | 1.0%           | Hausdorff-distance segment matching |
+- **New npm script:** `map:derive:graph:v3` (`npm run map:derive:graph:v3`)
+- **Mistake log updated:** no (no new mistakes discovered; this is a successful fix for the detection gap)
+- **Note:** v3 is now the canonical adjacency graph for Phase 1. The settlement polygons were digitized as independent shapes that nearly tile but don't share exact coordinate sequences. This is a fundamental characteristic of the source data that v3 correctly handles. Point-touch remains diagnostic-only; v3 uses only shared-border (positive length) detection with relaxed parallelism constraints. **docs/FORAWWV.md may require an addendum** noting that settlement boundaries are independently digitized and adjacency detection must use tolerance-based matching rather than exact coordinate comparison. Do NOT edit FORAWWV.md automatically.
+
+**2026-01-27** - Phase 1: Settlement adjacency viewer with shared-border/point-touch toggle
+- **Phase:** Map Rebuild (Path A) - Phase 1 Settlement Adjacency
+- **Decision:** Add interactive HTML viewer for settlement adjacency inspection showing settlement polygons with adjacency edges overlaid. Supports toggling between v3 shared-border edges (canonical) and point-touch edges (diagnostic). Viewer is inspection-only; does not modify data or canon.
+- **Artifacts:** `scripts/map/build_adjacency_viewer.ts`, `data/derived/adjacency_viewer/index.html`, `data/derived/adjacency_viewer/data.json`
+- **Viewer features:** Canvas-based renderer with pan/zoom. Settlement polygons with fill color (optionally highlight isolated settlements in red). Edge rendering: shared-border edges in green (canonical), point-touch edges in orange (diagnostic). Sidebar with statistics (total settlements, edge counts, isolation counts), display toggles (show settlements, show shared-border edges, show point-touch edges, highlight isolated), legend, hover tooltips showing settlement name/sid/municipality and neighbor counts.
+- **Data sources:** Settlement geometry from `settlements_substrate.geojson`, shared-border edges from `settlement_graph_v3.json`, point-touch edges from `settlement_contact_graph.json` (excluding pairs already in v3).
+- **Results:** Viewer shows 6,135 settlements, 15,260 shared-border edges, 95 point-touch edges, 61 isolated settlements (shared-border only), 60 isolated (including point-touch).
+- **New npm script:** `map:viewer:adjacency` (`npm run map:viewer:adjacency`)
+- **How to view:** Run `npm run map:viewer:adjacency` then open `data/derived/adjacency_viewer/index.html` in a browser.
+- **Mistake log updated:** no (viewer is inspection-only)
+- **Note:** Viewer is for visual verification and inspection of the adjacency graph. It does not modify any source data or canonical derived artifacts. If visual inspection reveals systematic issues with adjacency detection, those should be investigated and fixed in the detection algorithm, not in the viewer.
+
+**2026-01-27** - Experimental SVG-derived settlements substrate rebuild
+- **Phase:** Map Rebuild (Path A) - Experimental/Inspection
+- **Decision:** Build an experimental settlements GeoJSON derived from SVG-based municipality JS files under `data/source/settlements` for inspection and comparison with Phase 0 canonical substrate. This is explicitly NOT a replacement for Phase 0 canon; outputs are written to separate paths (`svg_substrate/`) and marked as experimental.
+- **Artifacts:** 
+  - `scripts/map/rebuild_settlements_geojson_from_svg_js.ts` (rebuild script)
+  - `scripts/map/build_svg_substrate_viewer_index.ts` (viewer builder)
+  - `data/derived/svg_substrate/settlements_svg_substrate.geojson` (experimental GeoJSON)
+  - `data/derived/svg_substrate/settlements_svg_substrate.audit.json` (audit JSON)
+  - `data/derived/svg_substrate/settlements_svg_substrate.audit.txt` (audit TXT)
+  - `data/derived/svg_substrate_viewer/index.html` (viewer HTML)
+  - `data/derived/svg_substrate_viewer/viewer.js` (viewer JS)
+  - `data/derived/svg_substrate_viewer/data_index.json` (viewer index)
+- **Implementation:** Script parses municipality JS files (142 files) to extract SVG paths using `svg-path-parser`. Converts SVG paths to GeoJSON polygons with deterministic curve flattening (16 segments per curve). Matches shapes to census entries by `munID` attribute. Extracts viewBox transforms from source files but applies no rotation correction (raw SVG coordinate space preserved). Generates comprehensive audit reports including matching statistics, geometry validity counts, and unmatched entries list.
+- **Results:** Extracted 6,148 shapes from 142 municipality JS files. Emitted 6,108 valid features (40 invalid geometries skipped). All 6,108 features matched to census entries via `munID` attribute. No unmatched entries. Coordinate bounds: [1.0, -9.52, 940.96, 910.09] (SVG coordinate space).
+- **Viewer features:** Canvas-based renderer with pan/zoom. Colors by matched (green) vs unmatched (red) by default, with optional municipality-based coloring. Hover tooltips show sid, settlement_name, municipality_id, source_file, source_shape_id. Toggle filters for matched/unmatched display.
+- **New npm scripts:** 
+  - `map:rebuild:svg_substrate` (`npm run map:rebuild:svg_substrate`)
+  - `map:viewer:svg_substrate:index` (`npm run map:viewer:svg_substrate:index`)
+- **Deterministic guarantees:** Stable ordering (lexicographic file paths, sorted features by sid), no randomness, no timestamps, deterministic curve flattening (fixed 16 segments), consistent ring orientation (counter-clockwise outer rings). Outputs verified byte-stable on re-run.
+- **Canon safety:** Phase 0 canonical files (`settlements_substrate.geojson`, `substrate_viewer/`, canonical scripts) remain completely unchanged. This rebuild is explicitly experimental and written to separate paths. If this becomes the new canon later, that will be a separate, explicit decision.
+- **Mistake log updated:** no (no new mistakes discovered; this is an experimental rebuild for inspection)
+- **How to run:** 
+  1. `npm run map:rebuild:svg_substrate` (generates GeoJSON and audit reports)
+  2. `npm run map:viewer:svg_substrate:index` (generates viewer HTML/JS/index)
+  3. Open `data/derived/svg_substrate_viewer/index.html` in browser (or serve via `npx http-server -p 8080`)
+  4. Re-run steps (1) and (2) to verify deterministic output (byte-identical files)
+- **Note:** This experimental rebuild reveals that SVG source files use their own local coordinate space (viewBox transforms present but not applied). The coordinate regime differs from Phase 0 canonical substrate (bounds [1.0, -9.52, 940.96, 910.09] vs canonical bounds). All shapes matched successfully via `munID` attribute, suggesting the source encoding is consistent. **docs/FORAWWV.md may require an addendum** noting that SVG-based municipality files use a different coordinate regime than the canonical `bih_master.geojson` source, and that viewBox transforms are present but not applied in this experimental rebuild. Do NOT edit FORAWWV.md automatically.
+
+**2026-01-27** - SVG substrate census coverage validation audit
+- **Phase:** Map Rebuild (Path A) - Experimental/Inspection - Validation
+- **Decision:** Create deterministic validation script to audit experimental SVG-derived substrate against 1991 census for settlement identity, census coverage, and municipality distribution sanity checks. Validation-only; does not modify any substrate or canonical files.
+- **Artifacts:** 
+  - `scripts/map/audit_svg_substrate_coverage.ts` (validation script)
+  - `data/derived/svg_substrate/settlements_svg_substrate.coverage.audit.json` (audit JSON)
+  - `data/derived/svg_substrate/settlements_svg_substrate.coverage.audit.txt` (audit TXT)
+- **Validation logic:** (1) Loads census and builds canonical settlement ID set (6,140 settlements from 142 municipalities). (2) Loads SVG substrate GeoJSON (6,108 features). (3) Validates SIDs: checks for missing, duplicates, and unmatched placeholders. (4) Determines identity mode: detects census_id (extracted from SID by stripping "S" prefix), name+municipality, or none. (5) Census coverage: if census_id mode, checks missing census IDs (in census but not in features) and extra feature IDs (in features but not in census). If name+municipality mode, checks for ambiguous keys (multiple features mapping to same normalized name+municipality). (6) Municipality distribution: counts features per municipality, compares to census counts, flags municipalities with 0 features but nonzero census count or significant count divergence (>20% or >50 absolute). (7) Geometry bounds: computes global bbox of substrate.
+- **Results:** Identity mode: `census_id` (SIDs prefixed with "S" followed by census settlement ID). SID validation: 0 missing, 9 duplicates (S130478, S138487, S164984, S166138, S170046, S201634, S219223, S219371, S225665), 0 unmatched placeholders. Coverage: 6,099 matched (99.3% of features), 41 missing census settlements (0.7% of census), 0 extra features, 0 ambiguous keys. Municipality distribution: all municipalities have features; top municipality is Konjic (10529) with 168 features matching census count exactly. Geometry bounds: [1.000000, -9.521430, 940.963800, 910.090330] (SVG coordinate space).
+- **Findings:** SVG substrate is settlement-identified (1:1 mapping via census_id extracted from SID). 99.3% census coverage (6,099/6,140). 9 duplicate SIDs indicate some settlement polygons appear multiple times in source files (likely same settlement digitized in multiple municipality files or duplicate shapes). 41 missing census settlements are not represented in SVG source files. No extra features (all features map to valid census IDs). Municipality distribution is consistent with census counts.
+- **New npm script:** `map:audit:svg_substrate:coverage` (`npm run map:audit:svg_substrate:coverage`)
+- **Deterministic guarantees:** Stable ordering (sorted census IDs, sorted features, sorted municipality IDs), no randomness, no timestamps, deterministic string normalization. Outputs verified byte-stable on re-run.
+- **Mistake log updated:** no (validation-only script, no new mistakes discovered)
+- **How to run:** 
+  1. `npm run map:audit:svg_substrate:coverage` (generates coverage audit JSON and TXT)
+  2. Re-run immediately to verify deterministic output (byte-identical files)
+  3. Review `settlements_svg_substrate.coverage.audit.txt` for human-readable summary
+- **Note:** Validation confirms SVG substrate is settlement-identified with high census coverage (99.3%). The 9 duplicate SIDs and 41 missing census settlements are documented in the audit but do not invalidate the substrate for inspection purposes. The duplicate SIDs suggest some settlements appear multiple times in source files (possibly due to digitization overlap or municipality boundary changes). **docs/FORAWWV.md may require an addendum** noting that SVG-derived substrate achieves 99.3% census coverage with settlement-level identity via census_id extraction from SID, but contains 9 duplicate SIDs and 41 missing census settlements. Do NOT edit FORAWWV.md automatically.

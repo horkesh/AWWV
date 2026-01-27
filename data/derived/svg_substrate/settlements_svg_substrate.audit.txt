@@ -1,0 +1,71 @@
+SVG SUBSTRATE REBUILD AUDIT
+==================================================
+
+Total files parsed: 142
+Total shapes extracted: 6148
+Total features emitted: 6108
+
+Matching:
+  Matched: 6108
+  Unmatched: 0
+  Ambiguous: 0
+
+Geometry validity:
+  Valid: 6108
+  Invalid: 40
+  Reasons:
+    ring_not_closed: 40
+
+Top 50 files by unmatched count:
+  Banja Luka_20010.js: 0 unmatched
+  Banovici_10014.js: 0 unmatched
+  Berkovici_20028.js: 0 unmatched
+  Bihac_10049.js: 0 unmatched
+  Bijeljina_20036.js: 0 unmatched
+  Bileca_20044.js: 0 unmatched
+  Bosanska Dubica_20265.js: 0 unmatched
+  Bosanska Gradiska_20125.js: 0 unmatched
+  Bosanska Krupa_11428.js: 0 unmatched
+  Bosanski Novi_20397.js: 0 unmatched
+  Bosanski Petrovac_11436.js: 0 unmatched
+  Bosansko Grahovo_10146.js: 0 unmatched
+  Bratunac_20052.js: 0 unmatched
+  Brcko_30163.js: 0 unmatched
+  Breza_10189.js: 0 unmatched
+  Brod_20079.js: 0 unmatched
+  Bugojno_10197.js: 0 unmatched
+  Busovaca_10219.js: 0 unmatched
+  Buzim_11240.js: 0 unmatched
+  Cajnice_20630.js: 0 unmatched
+  Capljina_10243.js: 0 unmatched
+  Cazin_10227.js: 0 unmatched
+  Celic_11231.js: 0 unmatched
+  Celinac_20648.js: 0 unmatched
+  Centar Sarajevo_10839.js: 0 unmatched
+  Citluk_10260.js: 0 unmatched
+  Derventa_20133.js: 0 unmatched
+  Doboj Istok_11258.js: 0 unmatched
+  Doboj Jug_11266.js: 0 unmatched
+  Doboj_20141.js: 0 unmatched
+  Dobretici_11274.js: 0 unmatched
+  Domaljevac-Samac_11282.js: 0 unmatched
+  Donji Vakuf_10294.js: 0 unmatched
+  Donji Zabar_20150.js: 0 unmatched
+  Drvar_11614.js: 0 unmatched
+  Foca (FBiH)_11444.js: 0 unmatched
+  Foca (RS)_20613.js: 0 unmatched
+  Fojnica_10324.js: 0 unmatched
+  Gacko_20117.js: 0 unmatched
+  Glamoc_10359.js: 0 unmatched
+  Gorazde_11452.js: 0 unmatched
+  Gornji Vakuf-Uskoplje_10375.js: 0 unmatched
+  Gracanica_11479.js: 0 unmatched
+  Gradacac_10391.js: 0 unmatched
+  Grude_10405.js: 0 unmatched
+  Hadzici_10847.js: 0 unmatched
+  Han Pijesak_20621.js: 0 unmatched
+  Ilidza_11550.js: 0 unmatched
+  Ilijas_10863.js: 0 unmatched
+  Istocna Ilidza_20176.js: 0 unmatched
+
+Top 200 unmatched entries:

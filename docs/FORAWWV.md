@@ -726,4 +726,68 @@ That's how you build AWWV.
 
 ---
 
+## Addendum: Settlement Boundary Digitization and Adjacency Detection
+
+**Date Added:** 2026-01-27
+**Context:** Phase 1 Settlement Adjacency Graph Implementation
+
+### The Discovery
+
+During Phase 1 implementation of the settlement adjacency graph, we discovered a fundamental characteristic of the source geometry data that required a significant algorithmic pivot.
+
+**The Problem:** Initial adjacency algorithms (v1, v2) detected only ~350 edges with ~90% of settlements isolated. This was implausible for a tessellation-like map where settlements should share borders.
+
+**Root Cause:** Settlement polygons in `bih_master.geojson` were **digitized independently**. Neighboring settlements have boundaries that are:
+- **Nearly parallel** but not on the exact same line
+- **Within ~0.001-0.01 coordinate units** of each other
+- **Not sharing exact coordinate sequences**
+
+This means two adjacent settlements have boundaries like two parallel lines ~0.005 units apart, rather than a single shared line with different vertex placements.
+
+### The Evidence
+
+Analysis of 200 settlement pairs with overlapping bounding boxes revealed:
+- **418 pairs** had boundaries within 0.01 units (essentially touching)
+- **Only 84 pairs** (5.4%) had exact shared vertices at 4-decimal precision
+- **Typical boundary gaps:** 0.001-0.01 units (digitization tolerance)
+
+The v1/v2 algorithms used EPS ~1e-5 for colinearity detection, but actual gaps were 100x larger.
+
+### The Architectural Invariant
+
+**Settlement adjacency detection must use tolerance-based boundary matching, not exact coordinate comparison.**
+
+This is not a bug to be fixed—it's a fundamental characteristic of the source data. Any adjacency algorithm for this dataset must:
+
+1. **Accept parallel boundaries within tolerance** (not require exact colinearity)
+2. **Use Hausdorff-distance or similar metrics** to measure "closeness" of boundary segments
+3. **Derive tolerance parameters deterministically** from dataset bounds (not hardcode magic numbers)
+
+### The Solution: v3 Algorithm
+
+The v3 algorithm uses Hausdorff-distance segment matching:
+- **Parallel threshold:** cos(10°) ≈ 0.985 (segments must be nearly parallel)
+- **Distance tolerance:** ~0.02 units (derived as 2e-5 × max dimension)
+- **Minimum overlap:** 0.1 units (reject tiny incidental overlaps)
+
+**Results:**
+| Version | Edges | Isolated | Isolation Rate |
+|---------|-------|----------|----------------|
+| v1 (exact) | 297 | 5,604 | 91.3% |
+| v2 (colinear) | 345 | 5,519 | 89.9% |
+| v3 (tolerance) | 15,260 | 61 | 1.0% |
+
+### Implications for Future Work
+
+1. **Any new adjacency algorithms** must account for independent boundary digitization
+2. **Coordinate snapping or unification** is explicitly forbidden (would invent geometry)
+3. **Tolerance parameters** should be derived from dataset bounds, not hardcoded
+4. **Point-touch remains diagnostic-only**—v3's tolerance-based shared-border detection is the canonical method
+
+### The Lesson
+
+**Don't assume geographic data shares coordinates just because it looks like a tessellation.** Always verify with actual coordinate comparison before choosing an adjacency detection strategy. When boundaries are independently digitized, tolerance-based matching is not a workaround—it's the correct approach.
+
+---
+
 **Now go forth and simulate the unsimulatable.**

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e:*)",
+      "Bash(npm run map:derive:graph:v2:*)",
+      "Bash(npm run map:derive:graph:v3:*)",
+      "Bash(npm run map:viewer:adjacency:*)",
+      "Bash(powershell -Command \"Get-Content ''data/source/settlements/Banovici_10014.js'' | Select-Object -Last 30\")"
+    ]
+  }
+}
