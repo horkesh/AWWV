@@ -2,19 +2,31 @@ SVG SUBSTRATE REBUILD AUDIT
 ==================================================
 
 Total files parsed: 142
-Total shapes extracted: 6148
-Total features emitted: 6108
+Shapes extracted: 6148
+Features emitted (before merge): 6148
+Features emitted (after merge): 6137
+
+Ring closure (deterministic):
+  Rings closed count: 40
+  Features fixed by ring closure: 40
+  Features still invalid after closure: 0
 
 Matching:
-  Matched: 6108
+  Matched: 6148
   Unmatched: 0
   Ambiguous: 0
 
+Duplicate SID merge:
+  duplicate_sid_count_before_merge: 11
+  merged_multiPolygon_count: 11
+  max_parts_per_sid: 2
+  conflict_counts.settlement_name_conflict: 0
+  conflict_counts.municipality_id_conflict: 0
+
 Geometry validity:
-  Valid: 6108
-  Invalid: 40
+  Valid: 6148
+  Invalid: 0
   Reasons:
-    ring_not_closed: 40
 
 Top 50 files by unmatched count:
   Banja Luka_20010.js: 0 unmatched

@@ -1,0 +1,46 @@
+SETTLEMENT SUBSTRATE DERIVATION AUDIT
+=====================================
+
+INPUT:
+  Total features: 6278
+  Geometry types: Polygon=6278
+  Layer values (top 20): settlement=6135, municipality=142, country=1
+
+SETTLEMENT DETECTION:
+  Method: deterministic_filter_selection
+  Filter applied: layer="settlement"
+  Candidate count: 6135
+  Decision path:
+    - Total features: 6278
+    - Geometry types: Polygon=6278
+    - Layer="settlement" filter: 6135 candidates with Polygon/MultiPolygon + valid sid
+    - feature_type="settlement" filter: 0 candidates with Polygon/MultiPolygon + valid sid
+    - kind="settlement" filter: 0 candidates with Polygon/MultiPolygon + valid sid
+    - All Polygon/MultiPolygon with valid sid: 6278 candidates
+    - Chosen filter: layer="settlement" (6135 candidates) - explicit layer filter preferred
+
+OUTPUT:
+  Feature count: 6135
+  Missing SID count: 0
+  Invalid geometry count: 0
+  Invalid geometry reasons:
+    - Non-polygon: 0
+    - Non-finite coords: 0
+    - Ring too short: 0
+    - Ring not closed: 0
+
+SID STATISTICS:
+  Unique SIDs: 6135
+  Duplicate SID groups: 0
+
+MUNICIPALITY ID STATISTICS:
+  Present: 6135 (100.0%)
+  Missing: 0
+
+BOUNDING BOX:
+  Global: [1.000000, -9.521400, 940.963800, 909.960200]
+  Per-feature width: min=0.472000, median=9.757500, p90=19.516700, max=68.285800
+  Per-feature height: min=0.347900, median=9.889100, p90=19.724200, max=61.964900
+
+NOTE:
+  This derived file is a minimal substrate. Population/ethnicity remains in separate authoritative datasets and will be joined into derived start-state tables.

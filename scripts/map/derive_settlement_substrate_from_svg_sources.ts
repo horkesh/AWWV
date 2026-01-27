@@ -1,33 +1,34 @@
 /**
- * Rebuild Settlements GeoJSON from SVG-based Municipality JS Files
+ * Derive Settlement Substrate from SVG-based Municipality JS Files
  * 
- * EXPERIMENTAL SCRIPT - NOT CANONICAL
+ * CANONICAL SCRIPT FOR SETTLEMENT SUBSTRATE (SVG-DERIVED)
  * 
- * This script rebuilds a settlements GeoJSON from the SVG-based municipality JS files
- * under data/source/settlements. This is an experimental/alternate substrate for
- * inspection and comparison with Phase 0 canonical substrate.
+ * This script is canonical for settlement substrate derivation. It creates a settlement-only
+ * GeoJSON from the SVG-based municipality JS files under data/source/settlements, using
+ * census_id-based identity from bih_census_1991.json.
  * 
- * IMPORTANT: This does NOT modify or replace Phase 0 canonical files.
- * Outputs are written to separate paths (svg_substrate/).
+ * Deterministic only: stable ordering, fixed precision, no randomness, no timestamps.
+ * No geometry invention: deterministic curve flattening, deterministic ring closure,
+ * MultiPolygon merge for duplicate SIDs only.
  * 
  * Usage:
- *   npm run map:rebuild:svg_substrate
- *   or: tsx scripts/map/rebuild_settlements_geojson_from_svg_js.ts
+ *   npm run map:derive:substrate
+ *   or: tsx scripts/map/derive_settlement_substrate_from_svg_sources.ts
  * 
  * Outputs:
- *   - data/derived/svg_substrate/settlements_svg_substrate.geojson
- *   - data/derived/svg_substrate/settlements_svg_substrate.audit.json
- *   - data/derived/svg_substrate/settlements_svg_substrate.audit.txt
+ *   - data/derived/settlements_substrate.geojson (canonical substrate)
+ *   - data/derived/settlements_substrate.audit.json
+ *   - data/derived/settlements_substrate.audit.txt
  */
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'node:fs';
 import { resolve, dirname, relative, join } from 'node:path';
 import parseSVG from 'svg-path-parser';
-import { loadMistakes, assertNoRepeat, appendMistake } from "../assistant/mistake_guard";
+import { loadMistakes, assertNoRepeat, appendMistake } from "../../tools/assistant/mistake_guard";
 
 // Mistake guard
 loadMistakes();
-assertNoRepeat("SVG substrate rebuild: stop skipping ring_not_closed, close rings deterministically, and resolve duplicate SIDs by merging into MultiPolygon");
+assertNoRepeat("Lock in SVG-derived settlements as the canonical settlement substrate and canonical viewer outputs, while preserving prior master-derived substrate as legacy without deleting it");
 
 type Point = [number, number];
 type Ring = Point[];
@@ -138,6 +139,7 @@ interface AuditReport {
     settlement_name_conflict: number;
     municipality_id_conflict: number;
   };
+  missing_census_settlement_ids: string[];
   per_file_stats: Array<{
     file: string;
     shapes: number;
@@ -163,6 +165,15 @@ interface AuditReport {
     name_hint: string | null;
     mun_hint: string | null;
   }>;
+  bounds: {
+    global: {
+      minx: number;
+      miny: number;
+      maxx: number;
+      maxy: number;
+    };
+  };
+  coordinate_regime: string;
 }
 
 /**
@@ -576,10 +587,10 @@ function matchShapeToCensus(
 async function main(): Promise<void> {
   const settlementsDir = resolve('data/source/settlements');
   const censusPath = resolve('data/source/bih_census_1991.json');
-  const outputDir = resolve('data/derived/svg_substrate');
-  const geojsonPath = resolve(outputDir, 'settlements_svg_substrate.geojson');
-  const auditJsonPath = resolve(outputDir, 'settlements_svg_substrate.audit.json');
-  const auditTxtPath = resolve(outputDir, 'settlements_svg_substrate.audit.txt');
+  const outputDir = resolve('data/derived');
+  const geojsonPath = resolve(outputDir, 'settlements_substrate.geojson');
+  const auditJsonPath = resolve(outputDir, 'settlements_substrate.audit.json');
+  const auditTxtPath = resolve(outputDir, 'settlements_substrate.audit.txt');
   
   // Ensure output directory exists
   mkdirSync(outputDir, { recursive: true });
@@ -590,6 +601,16 @@ async function main(): Promise<void> {
   const census = JSON.parse(censusContent) as CensusData;
   const settlementIndex = buildSettlementIndex(census);
   process.stdout.write(`Loaded ${settlementIndex.size} settlements from census\n`);
+  
+  // Collect all census settlement IDs for missing check
+  const allCensusSettlementIds = new Set<string>();
+  for (const [munId, mun] of Object.entries(census.municipalities)) {
+    if (mun.s && Array.isArray(mun.s)) {
+      for (const sid of mun.s) {
+        allCensusSettlementIds.add(sid);
+      }
+    }
+  }
   
   // Discover municipality JS files
   process.stdout.write(`Discovering municipality JS files in ${settlementsDir}...\n`);
@@ -644,6 +665,7 @@ async function main(): Promise<void> {
       settlement_name_conflict: 0,
       municipality_id_conflict: 0
     },
+    missing_census_settlement_ids: [],
     per_file_stats: [],
     geometry_validity: {
       valid: 0,
@@ -651,7 +673,16 @@ async function main(): Promise<void> {
       reasons: {}
     },
     top_50_files_by_unmatched: [],
-    top_200_unmatched: []
+    top_200_unmatched: [],
+    bounds: {
+      global: {
+        minx: Infinity,
+        miny: Infinity,
+        maxx: -Infinity,
+        maxy: -Infinity
+      }
+    },
+    coordinate_regime: 'SVG coordinate space (from municipality JS files)'
   };
   
   const unmatchedList: Array<{
@@ -661,6 +692,8 @@ async function main(): Promise<void> {
     name_hint: string | null;
     mun_hint: string | null;
   }> = [];
+  
+  const matchedCensusIds = new Set<string>();
   
   for (const parsedFile of parsedFiles) {
     const fileStats = {
@@ -721,6 +754,16 @@ async function main(): Promise<void> {
         audit.features_fixed_by_ring_closure_count++;
       }
       
+      // Update global bounds
+      for (const pt of polyToUse[0]) {
+        if (isFinite(pt[0]) && isFinite(pt[1])) {
+          audit.bounds.global.minx = Math.min(audit.bounds.global.minx, pt[0]);
+          audit.bounds.global.miny = Math.min(audit.bounds.global.miny, pt[1]);
+          audit.bounds.global.maxx = Math.max(audit.bounds.global.maxx, pt[0]);
+          audit.bounds.global.maxy = Math.max(audit.bounds.global.maxy, pt[1]);
+        }
+      }
+      
       // Match to census
       const match = matchShapeToCensus(shape, parsedFile.municipalityId, settlementIndex);
       
@@ -733,6 +776,7 @@ async function main(): Promise<void> {
       if (match.matched) {
         sid = `S${match.settlementId}`;
         censusId = match.settlementId;
+        matchedCensusIds.add(match.settlementId);
         const censusEntry = settlementIndex.get(match.settlementId);
         if (censusEntry) {
           settlementName = censusEntry.municipality_name; // Note: this is municipality name, not settlement name
@@ -788,6 +832,14 @@ async function main(): Promise<void> {
     
     audit.per_file_stats.push(fileStats);
   }
+  
+  // Find missing census settlement IDs
+  for (const censusId of allCensusSettlementIds) {
+    if (!matchedCensusIds.has(censusId)) {
+      audit.missing_census_settlement_ids.push(censusId);
+    }
+  }
+  audit.missing_census_settlement_ids.sort((a, b) => a.localeCompare(b));
   
   // Merge duplicate SIDs deterministically into a single MultiPolygon feature.
   const bySid = new Map<string, GeoJSONFeature[]>();
@@ -894,8 +946,8 @@ async function main(): Promise<void> {
   
   // Write audit TXT
   const auditTxt = [
-    'SVG SUBSTRATE REBUILD AUDIT',
-    '='.repeat(50),
+    'SETTLEMENT SUBSTRATE DERIVATION AUDIT (SVG-DERIVED)',
+    '='.repeat(60),
     '',
     `Total files parsed: ${audit.total_files_parsed}`,
     `Shapes extracted: ${audit.shapes_extracted}`,
@@ -918,6 +970,11 @@ async function main(): Promise<void> {
     `  Unmatched: ${audit.unmatched_count}`,
     `  Ambiguous: ${audit.ambiguous_count}`,
     '',
+    'Missing census settlement IDs:',
+    ...(audit.missing_census_settlement_ids.length > 0
+      ? audit.missing_census_settlement_ids.map(id => `  ${id}`)
+      : ['  (none)']),
+    '',
     'Duplicate SID merge:',
     `  duplicate_sid_count_before_merge: ${audit.duplicate_sid_count_before_merge}`,
     `  merged_multiPolygon_count: ${audit.merged_multiPolygon_count}`,
@@ -930,6 +987,12 @@ async function main(): Promise<void> {
     `  Invalid: ${audit.geometry_validity.invalid}`,
     '  Reasons:',
     ...Object.entries(audit.invalid_reasons).map(([reason, count]) => `    ${reason}: ${count}`),
+    '',
+    'Bounds:',
+    `  Global: [${audit.bounds.global.minx.toFixed(6)}, ${audit.bounds.global.miny.toFixed(6)}, ${audit.bounds.global.maxx.toFixed(6)}, ${audit.bounds.global.maxy.toFixed(6)}]`,
+    '',
+    'Coordinate regime:',
+    `  ${audit.coordinate_regime}`,
     '',
     'Top 50 files by unmatched count:',
     ...audit.top_50_files_by_unmatched.map(s => `  ${s.file}: ${s.unmatched} unmatched`),
@@ -950,33 +1013,14 @@ async function main(): Promise<void> {
   process.stdout.write(`  Features emitted (after merge): ${audit.features_emitted_after_merge}\n`);
   process.stdout.write(`  Matched: ${audit.matched_count}\n`);
   process.stdout.write(`  Unmatched: ${audit.unmatched_count}\n`);
+  process.stdout.write(`  Missing census IDs: ${audit.missing_census_settlement_ids.length}\n`);
+  if (audit.missing_census_settlement_ids.length > 0) {
+    process.stdout.write(`  Missing census IDs: ${audit.missing_census_settlement_ids.join(', ')}\n`);
+  }
   process.stdout.write(`  Valid geometry: ${audit.geometry_validity.valid}\n`);
   process.stdout.write(`  Invalid geometry: ${audit.geometry_validity.invalid}\n`);
-
-  // Mistake log entries (append only if confirmed by this run).
-  const today = '2026-01-27';
-  if (audit.features_fixed_by_ring_closure_count > 0 || (audit.invalid_reasons['ring_not_closed'] || 0) > 0) {
-    appendMistake({
-      key: 'svg_substrate:ring_not_closed_skipped',
-      date: today,
-      title: 'SVG substrate rebuild skipped ring_not_closed features',
-      description:
-        'The experimental SVG-derived substrate rebuild treated ring_not_closed as invalid and skipped those geometries, dropping settlements even though deterministic closure (repeat first coordinate at end) is allowed under project constraints.',
-      correctiveAction:
-        'Do not skip on ring_not_closed. If a ring has >= 4 points, close it deterministically by appending the first coordinate if missing, then revalidate. Only skip if still invalid after closure or if too_few_points/non_finite.'
-    });
-  }
-  if (audit.duplicate_sid_count_before_merge > 0) {
-    appendMistake({
-      key: 'svg_substrate:duplicate_sid_not_merged',
-      date: today,
-      title: 'SVG substrate rebuild emitted duplicate SIDs as separate features',
-      description:
-        'The experimental SVG-derived substrate rebuild emitted multiple features with the same SID, violating 1:1 settlement identity in the output GeoJSON (duplicate SIDs existed in source shapes and were not merged).',
-      correctiveAction:
-        'Group features by SID and merge duplicates deterministically into a single MultiPolygon feature. Preserve per-part provenance in properties.parts and keep only canonical identity fields at top-level.'
-    });
-  }
+  process.stdout.write(`  Rings closed: ${audit.rings_closed_count}\n`);
+  process.stdout.write(`  Duplicate SIDs merged: ${audit.merged_multiPolygon_count}\n`);
 }
 
 main().catch(err => {

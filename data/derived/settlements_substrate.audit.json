@@ -1,69 +1,2802 @@
 {
-  "input": {
-    "total_features": 6278,
-    "geometry_type_counts": {
-      "Polygon": 6278
+  "total_files_parsed": 142,
+  "shapes_extracted": 6148,
+  "features_emitted_before_merge": 6148,
+  "features_emitted_after_merge": 6137,
+  "invalid_skipped_count": 0,
+  "invalid_reasons": {},
+  "rings_closed_count": 40,
+  "features_fixed_by_ring_closure_count": 40,
+  "features_still_invalid_after_closure_count": 0,
+  "features_still_invalid_after_closure_reasons": {},
+  "matched_count": 6148,
+  "unmatched_count": 0,
+  "ambiguous_count": 0,
+  "duplicate_sid_count_before_merge": 11,
+  "merged_multiPolygon_count": 11,
+  "max_parts_per_sid": 2,
+  "conflict_counts": {
+    "settlement_name_conflict": 0,
+    "municipality_id_conflict": 0
+  },
+  "missing_census_settlement_ids": [
+    "130397",
+    "138517",
+    "201693"
+  ],
+  "per_file_stats": [
+    {
+      "file": "Banja Luka_20010.js",
+      "shapes": 54,
+      "matched": 54,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 256.0769800000001,
+        "miny": 88.32860199999999,
+        "maxx": 378.4998300000002,
+        "maxy": 256.29134999999997
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
     },
-    "layer_type_counts": {
-      "country": 1,
-      "municipality": 142,
-      "settlement": 6135
+    {
+      "file": "Banovici_10014.js",
+      "shapes": 20,
+      "matched": 20,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 621.1611588330081,
+        "miny": 262.51195814453143,
+        "maxx": 684.1481091210935,
+        "maxy": 320.74476234375
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Berkovici_20028.js",
+      "shapes": 20,
+      "matched": 20,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 528.26489,
+        "miny": 694.5191099999998,
+        "maxx": 608.7695600000002,
+        "maxy": 761.8741199999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bihac_10049.js",
+      "shapes": 59,
+      "matched": 59,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 1,
+        "miny": 87.55110970312498,
+        "maxx": 136.2246,
+        "maxy": 336.02098103515635
+      },
+      "transforms_found": {
+        "viewBox": false,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bijeljina_20036.js",
+      "shapes": 67,
+      "matched": 67,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 767.4454200000006,
+        "miny": 109.63610999999993,
+        "maxx": 874.0937699999998,
+        "maxy": 227.50230000000008
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bileca_20044.js",
+      "shapes": 61,
+      "matched": 61,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 584.8998899999997,
+        "miny": 713.4551700000001,
+        "maxx": 678.4104599999994,
+        "maxy": 835.7446100000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosanska Dubica_20265.js",
+      "shapes": 61,
+      "matched": 61,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 203.77695999999992,
+        "miny": -9.521430100000002,
+        "maxx": 308.12834,
+        "maxy": 66.87342200000003
+      },
+      "transforms_found": {
+        "viewBox": false,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosanska Gradiska_20125.js",
+      "shapes": 68,
+      "matched": 68,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 282.34831000000014,
+        "miny": 3.3717759000000007,
+        "maxx": 416.0929299999999,
+        "maxy": 104.10439999999994
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosanska Krupa_11428.js",
+      "shapes": 37,
+      "matched": 37,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 65.7651644423828,
+        "miny": 57.85340899999998,
+        "maxx": 158.40015609374996,
+        "maxy": 171.79283134765632
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosanski Novi_20397.js",
+      "shapes": 48,
+      "matched": 48,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 122.20733999999996,
+        "miny": 23.132372000000007,
+        "maxx": 214.39357999999993,
+        "maxy": 123.26907000000004
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosanski Petrovac_11436.js",
+      "shapes": 35,
+      "matched": 35,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 82.3588,
+        "miny": 162.93461000000008,
+        "maxx": 221.93819,
+        "maxy": 263.0356
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bosansko Grahovo_10146.js",
+      "shapes": 35,
+      "matched": 35,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 102.53543320312501,
+        "miny": 307.5671099999999,
+        "maxx": 231.21810000000002,
+        "maxy": 430.69670000000013
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bratunac_20052.js",
+      "shapes": 50,
+      "matched": 50,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 812.1306900000016,
+        "miny": 327.02113000000026,
+        "maxx": 940.9638,
+        "maxy": 410.16861000000006
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Brcko_30163.js",
+      "shapes": 59,
+      "matched": 59,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 668.3914299999996,
+        "miny": 95.21543199999999,
+        "maxx": 791.1802499999993,
+        "maxy": 178.92132
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Breza_10189.js",
+      "shapes": 28,
+      "matched": 28,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 597.4061420312503,
+        "miny": 401.0978999999999,
+        "maxx": 635.5696999999998,
+        "maxy": 430.1112
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Brod_20079.js",
+      "shapes": 23,
+      "matched": 23,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 521.8765400000009,
+        "miny": 34.10417200000002,
+        "maxx": 604.3071699999999,
+        "maxy": 85.19145200000014
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Bugojno_10197.js",
+      "shapes": 78,
+      "matched": 78,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 378.61182,
+        "miny": 364.7955525,
+        "maxx": 454.6607526342774,
+        "maxy": 456.4774000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Busovaca_10219.js",
+      "shapes": 47,
+      "matched": 47,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 496.0927907812501,
+        "miny": 366.85882125,
+        "maxx": 549.7436019726563,
+        "maxy": 416.16201066406245
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Buzim_11240.js",
+      "shapes": 7,
+      "matched": 7,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 59.31148690624999,
+        "miny": 36.84404787499999,
+        "maxx": 110.08421394042963,
+        "maxy": 85.42330000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Cajnice_20630.js",
+      "shapes": 36,
+      "matched": 36,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 771.8979099999997,
+        "miny": 534.0407699999995,
+        "maxx": 858.0644099999997,
+        "maxy": 589.21831
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Capljina_10243.js",
+      "shapes": 32,
+      "matched": 32,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 452.56890000000004,
+        "miny": 695.54104,
+        "maxx": 513.86723,
+        "maxy": 760.5808965722655
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Cazin_10227.js",
+      "shapes": 54,
+      "matched": 54,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 6.2152,
+        "miny": 47.37724023242187,
+        "maxx": 84.008102,
+        "maxy": 119.15039999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Celic_11231.js",
+      "shapes": 20,
+      "matched": 20,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 699.0215578125003,
+        "miny": 165.53810898437504,
+        "maxx": 747.3328226562508,
+        "maxy": 223.28051999999997
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Celinac_20648.js",
+      "shapes": 30,
+      "matched": 30,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 356.08695,
+        "miny": 148.93412000000012,
+        "maxx": 455.13034,
+        "maxy": 207.36138000000008
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Centar Sarajevo_10839.js",
+      "shapes": 6,
+      "matched": 6,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 639.51192171875,
+        "miny": 438.0042661572265,
+        "maxx": 656.0945369506836,
+        "maxy": 475.0373599999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Citluk_10260.js",
+      "shapes": 21,
+      "matched": 21,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 438.71377785644535,
+        "miny": 656.2391499999997,
+        "maxx": 498.43865838867185,
+        "maxy": 709.563743066406
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Derventa_20133.js",
+      "shapes": 57,
+      "matched": 57,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 486.9335900000001,
+        "miny": 58.555222000000036,
+        "maxx": 576.3447900000003,
+        "maxy": 156.38919000000013
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Doboj Istok_11258.js",
+      "shapes": 6,
+      "matched": 6,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 578.2070287304688,
+        "miny": 159.87876000000003,
+        "maxx": 604.8017999999997,
+        "maxy": 187.479454711914
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Doboj Jug_11266.js",
+      "shapes": 2,
+      "matched": 2,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 554.9589999999998,
+        "miny": 185.08502156249997,
+        "maxx": 563.3546403027341,
+        "maxy": 202.42566156249995
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Doboj_20141.js",
+      "shapes": 83,
+      "matched": 83,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 483.20999000000006,
+        "miny": 84.21672200000003,
+        "maxx": 628.4071500000005,
+        "maxy": 229.28782999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Dobretici_11274.js",
+      "shapes": 18,
+      "matched": 18,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 382.4788841748047,
+        "miny": 267.1058266455079,
+        "maxx": 426.05031345214843,
+        "maxy": 311.2508315625002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Domaljevac-Samac_11282.js",
+      "shapes": 6,
+      "matched": 6,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 661.5177999999999,
+        "miny": 52.664743871826204,
+        "maxx": 691.2096536254883,
+        "maxy": 79.085301
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Donji Vakuf_10294.js",
+      "shapes": 68,
+      "matched": 68,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 363.2379000000003,
+        "miny": 333.328117089844,
+        "maxx": 429.89122070312493,
+        "maxy": 415.00351453125006
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Donji Zabar_20150.js",
+      "shapes": 6,
+      "matched": 6,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 680.1012300000002,
+        "miny": 79.14459199999996,
+        "maxx": 719.8732200000001,
+        "maxy": 113.40022999999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Drvar_11614.js",
+      "shapes": 25,
+      "matched": 25,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 124.37677386718741,
+        "miny": 250.36733999999987,
+        "maxx": 228.17338999999996,
+        "maxy": 341.5299163183595
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Foca (FBiH)_11444.js",
+      "shapes": 32,
+      "matched": 32,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 670.5302306445312,
+        "miny": 529.4158324121092,
+        "maxx": 762.8164534375,
+        "maxy": 567.5932534375002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Foca (RS)_20613.js",
+      "shapes": 101,
+      "matched": 101,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 675.9921000000004,
+        "miny": 528.96582,
+        "maxx": 812.63202,
+        "maxy": 674.1545300000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Fojnica_10324.js",
+      "shapes": 55,
+      "matched": 55,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 476.44700999999986,
+        "miny": 406.6890299999998,
+        "maxx": 551.2327000000001,
+        "maxy": 477.58615014648433
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Gacko_20117.js",
+      "shapes": 71,
+      "matched": 71,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 626.4600400000005,
+        "miny": 640.6599500000004,
+        "maxx": 722.8538400000006,
+        "maxy": 749.8291400000002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Glamoc_10359.js",
+      "shapes": 55,
+      "matched": 55,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 204.92935499999993,
+        "miny": 304.1848999999998,
+        "maxx": 326.08746653320327,
+        "maxy": 465.1933
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Gorazde_11452.js",
+      "shapes": 144,
+      "matched": 144,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 719.0676571875002,
+        "miny": 513.6566130859377,
+        "maxx": 795.0691299999997,
+        "maxy": 559.5298000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Gornji Vakuf-Uskoplje_10375.js",
+      "shapes": 52,
+      "matched": 52,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 410.17579000000006,
+        "miny": 405.9786904101565,
+        "maxx": 507.46034719238276,
+        "maxy": 478.9205500000003
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Gracanica_11479.js",
+      "shapes": 23,
+      "matched": 23,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 586.5530505126951,
+        "miny": 151.1263059448242,
+        "maxx": 654.2177796874997,
+        "maxy": 216.58591375000003
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Gradacac_10391.js",
+      "shapes": 34,
+      "matched": 34,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 622.4778726977538,
+        "miny": 108.31176,
+        "maxx": 692.0526099999997,
+        "maxy": 165.3372875
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Grude_10405.js",
+      "shapes": 13,
+      "matched": 13,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 361.89083999999997,
+        "miny": 609.2701210424806,
+        "maxx": 424.770237512207,
+        "maxy": 665.8275000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Hadzici_10847.js",
+      "shapes": 62,
+      "matched": 62,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 546.5726999999996,
+        "miny": 468.3440500000001,
+        "maxx": 613.4553999999999,
+        "maxy": 527.7059
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Han Pijesak_20621.js",
+      "shapes": 26,
+      "matched": 26,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 727.3228700000005,
+        "miny": 363.88779,
+        "maxx": 823.1133599999997,
+        "maxy": 430.52518
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ilidza_11550.js",
+      "shapes": 12,
+      "matched": 12,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 584.0562606835939,
+        "miny": 449.93193000000014,
+        "maxx": 635.3994529052737,
+        "maxy": 512.1580297802738
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ilijas_10863.js",
+      "shapes": 74,
+      "matched": 74,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 597.3043194140625,
+        "miny": 381.3890000000001,
+        "maxx": 694.7115,
+        "maxy": 457.04310000000015
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Istocna Ilidza_20176.js",
+      "shapes": 5,
+      "matched": 5,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 626.9583800000001,
+        "miny": 478.11057000000005,
+        "maxx": 646.9536799999998,
+        "maxy": 509.57135999999997
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Istocni Drvar_20184.js",
+      "shapes": 3,
+      "matched": 3,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 171.7307999999999,
+        "miny": 262.9268800000002,
+        "maxx": 226.44114000000013,
+        "maxy": 303.7611899999997
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Istocni Mostar_20192.js",
+      "shapes": 3,
+      "matched": 3,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 529.1120599999999,
+        "miny": 601.2784500000002,
+        "maxx": 565.6163899999992,
+        "maxy": 698.2612999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Istocni Stari Grad_20206.js",
+      "shapes": 19,
+      "matched": 19,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 645.62583,
+        "miny": 408.60131,
+        "maxx": 697.7974800000001,
+        "maxy": 490.64302
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Istocno Novo Sarajevo_20214.js",
+      "shapes": 8,
+      "matched": 8,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 633.3370599999998,
+        "miny": 475.34237999999993,
+        "maxx": 661.5448,
+        "maxy": 503.65400999999986
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Jablanica_10421.js",
+      "shapes": 33,
+      "matched": 33,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 423.5467,
+        "miny": 509.6952688476564,
+        "maxx": 513.05654,
+        "maxy": 571.4534695410158
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Jajce_11487.js",
+      "shapes": 58,
+      "matched": 58,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 346.8803799999998,
+        "miny": 266.77774000000005,
+        "maxx": 411.6493607812499,
+        "maxy": 346.51739538574236
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Jezero_20222.js",
+      "shapes": 11,
+      "matched": 11,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 329.8152699999997,
+        "miny": 280.14554999999984,
+        "maxx": 363.0776399999998,
+        "maxy": 338.9425599999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kakanj_10448.js",
+      "shapes": 106,
+      "matched": 106,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 535.2725662500001,
+        "miny": 321.5169586523437,
+        "maxx": 614.8061367187499,
+        "maxy": 404.49658062500015
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kalesija_11495.js",
+      "shapes": 28,
+      "matched": 28,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 720.2320999999998,
+        "miny": 238.09241,
+        "maxx": 778.716959064942,
+        "maxy": 294.5777878125
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kalinovik_20249.js",
+      "shapes": 71,
+      "matched": 71,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 588.8801900000003,
+        "miny": 541.7402200000005,
+        "maxx": 694.3146500000003,
+        "maxy": 656.4455199999994
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kiseljak_10472.js",
+      "shapes": 82,
+      "matched": 82,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 529.13946,
+        "miny": 405.13550000000004,
+        "maxx": 589.7704999999999,
+        "maxy": 483.17736000000014
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kladanj_10499.js",
+      "shapes": 51,
+      "matched": 51,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 673.8040000000001,
+        "miny": 295.85327,
+        "maxx": 745.1997258203127,
+        "maxy": 366.7893955078125
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kljuc_11509.js",
+      "shapes": 41,
+      "matched": 41,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 190.28811000000002,
+        "miny": 191.24726000000007,
+        "maxx": 281.12800000000004,
+        "maxy": 252.73408
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Knezevo_20257.js",
+      "shapes": 20,
+      "matched": 20,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 355.96067000000005,
+        "miny": 202.43240999999986,
+        "maxx": 449.83440000000024,
+        "maxy": 305.21435
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Konjic_10529.js",
+      "shapes": 168,
+      "matched": 168,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 474.7548000000001,
+        "miny": 458.17000000000013,
+        "maxx": 640.58794453125,
+        "maxy": 604.4952896875
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kostajnica_20273.js",
+      "shapes": 12,
+      "matched": 12,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 181.8510999999999,
+        "miny": 4.456462899999994,
+        "maxx": 219.21403,
+        "maxy": 42.060511999999974
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kotor Varos_20281.js",
+      "shapes": 43,
+      "matched": 43,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 365.9661000000002,
+        "miny": 188.57264999999998,
+        "maxx": 482.35829,
+        "maxy": 303.52293999999983
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kresevo_10545.js",
+      "shapes": 27,
+      "matched": 27,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 524.5170200000002,
+        "miny": 446.8303999999999,
+        "maxx": 574.7038000000001,
+        "maxy": 490.85634244628915
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Krupa na Uni_20290.js",
+      "shapes": 12,
+      "matched": 12,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 114.84969999999998,
+        "miny": 85.0715819999999,
+        "maxx": 158.48765999999995,
+        "maxy": 141.81611000000004
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kupres (RS)_20303.js",
+      "shapes": 4,
+      "matched": 4,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 320.42266999999964,
+        "miny": 383.16545,
+        "maxx": 367.04939,
+        "maxy": 400.53439999999995
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Kupres_11517.js",
+      "shapes": 36,
+      "matched": 36,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 320.21070171874993,
+        "miny": 390.74816853515625,
+        "maxx": 413.6439000000001,
+        "maxy": 502.2844099999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Laktasi_20311.js",
+      "shapes": 37,
+      "matched": 37,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 348.73112,
+        "miny": 87.12153199999999,
+        "maxx": 420.1835100000001,
+        "maxy": 159.78921
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Livno_10588.js",
+      "shapes": 59,
+      "matched": 59,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 192.6624,
+        "miny": 402.5679999999999,
+        "maxx": 342.9939578686521,
+        "maxy": 537.7644
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ljubinje_20338.js",
+      "shapes": 21,
+      "matched": 21,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 534.0537400000004,
+        "miny": 739.4756299999996,
+        "maxx": 614.7877599999998,
+        "maxy": 815.72129
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ljubuski_10626.js",
+      "shapes": 35,
+      "matched": 35,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 381.08764572265625,
+        "miny": 653.7684657812499,
+        "maxx": 463.75750093750014,
+        "maxy": 727.8806999999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Lopare_20320.js",
+      "shapes": 35,
+      "matched": 35,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 722.1476900000004,
+        "miny": 157.49089999999998,
+        "maxx": 778.6649900000001,
+        "maxy": 239.66469999999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Lukavac_10600.js",
+      "shapes": 44,
+      "matched": 44,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 613.5108700000001,
+        "miny": 204.6068184179687,
+        "maxx": 684.7880608203122,
+        "maxy": 277.9050400878906
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Maglaj_10634.js",
+      "shapes": 40,
+      "matched": 40,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 531.7992712500004,
+        "miny": 206.592465,
+        "maxx": 618.8782641796876,
+        "maxy": 266.7956151708985
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Milici_20346.js",
+      "shapes": 54,
+      "matched": 54,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 782.8734900000002,
+        "miny": 314.3703399999998,
+        "maxx": 839.14014,
+        "maxy": 415.69328000000047
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Modrica_20354.js",
+      "shapes": 24,
+      "matched": 24,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 574.43779,
+        "miny": 78.67779200000001,
+        "maxx": 652.8834100000004,
+        "maxy": 143.75348000000002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Mostar_11410.js",
+      "shapes": 60,
+      "matched": 60,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 421.3098999999999,
+        "miny": 545.1580999999996,
+        "maxx": 555.1535999999998,
+        "maxy": 703.9696622290037
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Mrkonjic Grad_20362.js",
+      "shapes": 38,
+      "matched": 38,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 252.33380999999994,
+        "miny": 225.2036699999999,
+        "maxx": 365.11737000000005,
+        "maxy": 354.86438999999996
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Neum_10685.js",
+      "shapes": 27,
+      "matched": 27,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 433.1809595117187,
+        "miny": 751.0411083227536,
+        "maxx": 537.9399999999999,
+        "maxy": 799.0038
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Nevesinje_20389.js",
+      "shapes": 56,
+      "matched": 56,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 537.55893,
+        "miny": 599.68963,
+        "maxx": 649.23785,
+        "maxy": 735.6100799999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Novi Grad Sarajevo_10871.js",
+      "shapes": 3,
+      "matched": 3,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 606.97666,
+        "miny": 451.33652943359385,
+        "maxx": 638.3209975097653,
+        "maxy": 482.9876199999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Novi Travnik_10774.js",
+      "shapes": 52,
+      "matched": 52,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 434.94000000000005,
+        "miny": 353.1823037646484,
+        "maxx": 497.15433144531266,
+        "maxy": 434.00682494140625
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Novo Gorazde_20419.js",
+      "shapes": 61,
+      "matched": 61,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 762.87379,
+        "miny": 512.68827,
+        "maxx": 829.6323200000002,
+        "maxy": 567.75823
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Novo Sarajevo_11568.js",
+      "shapes": 3,
+      "matched": 3,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 635.1004,
+        "miny": 463.8856459765625,
+        "maxx": 646.41576,
+        "maxy": 477.85519999999997
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Odzak_11525.js",
+      "shapes": 14,
+      "matched": 14,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 593.1896000000002,
+        "miny": 38.173976149414095,
+        "maxx": 658.1621,
+        "maxy": 87.46770000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Olovo_10715.js",
+      "shapes": 45,
+      "matched": 45,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 621.1585,
+        "miny": 312.1516300000001,
+        "maxx": 744.49158,
+        "maxy": 408.51599999999996
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Orasje_11533.js",
+      "shapes": 15,
+      "matched": 15,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 681.9528,
+        "miny": 52.29655743115237,
+        "maxx": 738.8879962499998,
+        "maxy": 106.50599256835939
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Osmaci_20427.js",
+      "shapes": 16,
+      "matched": 16,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 744.7929799999998,
+        "miny": 273.15635,
+        "maxx": 794.0856099999999,
+        "maxy": 303.86879
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ostra Luka_20435.js",
+      "shapes": 24,
+      "matched": 24,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 155.1009600000001,
+        "miny": 112.42431000000002,
+        "maxx": 285.83791999999994,
+        "maxy": 207.37108999999995
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Pale (FBiH)_11576.js",
+      "shapes": 15,
+      "matched": 15,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 714.0073099999996,
+        "miny": 498.0417241406251,
+        "maxx": 775.6192,
+        "maxy": 535.6531999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Pale_20443.js",
+      "shapes": 62,
+      "matched": 62,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 659.6043900000002,
+        "miny": 431.0129200000002,
+        "maxx": 759.0094999999999,
+        "maxy": 532.7066299999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Pelagicevo_20451.js",
+      "shapes": 11,
+      "matched": 11,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 645.5033599999996,
+        "miny": 96.39452199999998,
+        "maxx": 703.8116999999996,
+        "maxy": 142.66612999999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Petrovac_20460.js",
+      "shapes": 6,
+      "matched": 6,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 168.35201,
+        "miny": 241.70435,
+        "maxx": 223.53945000000002,
+        "maxy": 280.1578
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Petrovo_20478.js",
+      "shapes": 7,
+      "matched": 7,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 603.3360299999996,
+        "miny": 187.01009999999982,
+        "maxx": 648.3911399999998,
+        "maxy": 229.18211000000008
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Posusje_10731.js",
+      "shapes": 20,
+      "matched": 20,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 321.4469044873046,
+        "miny": 538.53431,
+        "maxx": 446.88862999999986,
+        "maxy": 624.0008884570312
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Prijedor_20486.js",
+      "shapes": 71,
+      "matched": 71,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 182.34138000000007,
+        "miny": 50.73767199999992,
+        "maxx": 312.2272499999996,
+        "maxy": 151.57678
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Prnjavor_20494.js",
+      "shapes": 63,
+      "matched": 63,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 408.37280999999996,
+        "miny": 76.87159200000008,
+        "maxx": 499.71903999999967,
+        "maxy": 187.10223
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Prozor_10766.js",
+      "shapes": 56,
+      "matched": 56,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 391.95703000000003,
+        "miny": 462.37427999999994,
+        "maxx": 494.7867382763672,
+        "maxy": 530.9043000000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ravno_11304.js",
+      "shapes": 54,
+      "matched": 54,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 506.89221374999994,
+        "miny": 772.6509596875,
+        "maxx": 627.8069099999999,
+        "maxy": 894.4018291699218
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ribnik_20508.js",
+      "shapes": 31,
+      "matched": 31,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 214.26441000000003,
+        "miny": 202.65902,
+        "maxx": 300.6693199999999,
+        "maxy": 328.22341999999975
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Rogatica_20516.js",
+      "shapes": 118,
+      "matched": 118,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 745.03902,
+        "miny": 415.33692000000013,
+        "maxx": 843.8511799999995,
+        "maxy": 529.6954499999996
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Rudo_20524.js",
+      "shapes": 89,
+      "matched": 89,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 822.3903599999999,
+        "miny": 511.3684200000003,
+        "maxx": 921.0770000000005,
+        "maxy": 575.1147499999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Samac_20656.js",
+      "shapes": 21,
+      "matched": 21,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 637.0863199999998,
+        "miny": 62.05275199999997,
+        "maxx": 698.9188799999998,
+        "maxy": 110.36405
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Sanski Most_11541.js",
+      "shapes": 67,
+      "matched": 67,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 133.48320000000004,
+        "miny": 127.23777999999999,
+        "maxx": 271.2546163891601,
+        "maxy": 210.7057
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Sapna_11312.js",
+      "shapes": 13,
+      "matched": 13,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 759.0259912109374,
+        "miny": 220.18356875000003,
+        "maxx": 799.0070083789064,
+        "maxy": 273.1066999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Sekovici_20664.js",
+      "shapes": 38,
+      "matched": 38,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 726.6014,
+        "miny": 293.40608999999995,
+        "maxx": 792.8801399999994,
+        "maxy": 347.7465099999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Sipovo_20672.js",
+      "shapes": 46,
+      "matched": 46,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 232.82683,
+        "miny": 297.26336,
+        "maxx": 375.96734000000015,
+        "maxy": 396.43706000000003
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Siroki Brijeg_10570.js",
+      "shapes": 34,
+      "matched": 34,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 400.9873612207031,
+        "miny": 585.7338399999999,
+        "maxx": 480.85433437499995,
+        "maxy": 666.8378860937498
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Sokolac_20532.js",
+      "shapes": 96,
+      "matched": 96,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 673.22301,
+        "miny": 380.27831999999995,
+        "maxx": 794.5646300000002,
+        "maxy": 479.9276
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Srbac_20559.js",
+      "shapes": 39,
+      "matched": 39,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 397.40651,
+        "miny": 38.565352,
+        "maxx": 495.62734,
+        "maxy": 111.70029000000005
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Srebrenica_20567.js",
+      "shapes": 81,
+      "matched": 81,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 822.7547000000003,
+        "miny": 360.28020000000015,
+        "maxx": 940.9608999999999,
+        "maxy": 441.61832999999984
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Srebrenik_10987.js",
+      "shapes": 49,
+      "matched": 49,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 636.7698820312503,
+        "miny": 158.23730000000003,
+        "maxx": 702.2554977929693,
+        "maxy": 217.68241125000006
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Stari Grad Sarajevo_11584.js",
+      "shapes": 8,
+      "matched": 8,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 647.5303699999997,
+        "miny": 433.75423,
+        "maxx": 672.0118999999997,
+        "maxy": 481.0402720336914
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Stolac_11606.js",
+      "shapes": 26,
+      "matched": 26,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 484.51002678222653,
+        "miny": 685.1981200000004,
+        "maxx": 553.7068600000002,
+        "maxy": 771.820576015625
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Teocak_11339.js",
+      "shapes": 10,
+      "matched": 10,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 770.72371,
+        "miny": 209.81633931640624,
+        "maxx": 798.8976331250001,
+        "maxy": 232.88413999999995
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Tesanj_11045.js",
+      "shapes": 41,
+      "matched": 41,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 518.3585418749999,
+        "miny": 181.57682485351566,
+        "maxx": 568.4618300634767,
+        "maxy": 235.86020000000008
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Teslic_20575.js",
+      "shapes": 57,
+      "matched": 57,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 439.59691000000004,
+        "miny": 168.94601000000011,
+        "maxx": 538.5139200000006,
+        "maxy": 291.7133099999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Tomislavgrad_10308.js",
+      "shapes": 60,
+      "matched": 60,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 279.5729,
+        "miny": 460.1662098437499,
+        "maxx": 432.1741999999999,
+        "maxy": 577.3856072314451
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Travnik_11061.js",
+      "shapes": 90,
+      "matched": 90,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 407.78414375000017,
+        "miny": 291.8090999999998,
+        "maxx": 505.71447360839835,
+        "maxy": 366.6442
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Trebinje_20583.js",
+      "shapes": 142,
+      "matched": 142,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 539.3501599999995,
+        "miny": 779.8321599999999,
+        "maxx": 688.88391,
+        "maxy": 910.09033
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Trnovo (FBiH)_11592.js",
+      "shapes": 55,
+      "matched": 55,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 586.7800700000003,
+        "miny": 507.8169000000004,
+        "maxx": 699.8148,
+        "maxy": 561.9502446289063
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Trnovo (RS)_20591.js",
+      "shapes": 25,
+      "matched": 25,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 635.2733400000002,
+        "miny": 495.82136000000014,
+        "maxx": 700.3470699999999,
+        "maxy": 561.861489999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Tuzla_11088.js",
+      "shapes": 66,
+      "matched": 66,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 677.6667976562502,
+        "miny": 199.13276855468746,
+        "maxx": 759.11093,
+        "maxy": 265.14869999999996
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Ugljevik_20605.js",
+      "shapes": 25,
+      "matched": 25,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 762.2716200000001,
+        "miny": 160.86277999999993,
+        "maxx": 819.8675300000001,
+        "maxy": 224.84525000000002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Usora_11622.js",
+      "shapes": 13,
+      "matched": 13,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 525.9049999999999,
+        "miny": 176.90813999999992,
+        "maxx": 560.9420999999999,
+        "maxy": 203.61016486328126
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Vares_11100.js",
+      "shapes": 85,
+      "matched": 85,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 597.9933060620117,
+        "miny": 323.4699599999999,
+        "maxx": 672.6765047973635,
+        "maxy": 410.6942999999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Velika Kladusa_11118.js",
+      "shapes": 49,
+      "matched": 49,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 12.777675587890627,
+        "miny": 1.0071999999999999,
+        "maxx": 98.76679999999999,
+        "maxy": 60.00198125000001
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Visegrad_20087.js",
+      "shapes": 163,
+      "matched": 163,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 817.0907899999996,
+        "miny": 435.69961000000006,
+        "maxx": 917.8302000000001,
+        "maxy": 529.6955200000002
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Visoko_11126.js",
+      "shapes": 88,
+      "matched": 88,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 539.7908300000003,
+        "miny": 387.3162566796876,
+        "maxx": 609.2007300000002,
+        "maxy": 455.20751718749983
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Vitez_11142.js",
+      "shapes": 34,
+      "matched": 34,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 471.81015,
+        "miny": 350.63038,
+        "maxx": 515.3523100000003,
+        "maxy": 408.9014335668945
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Vlasenica_20095.js",
+      "shapes": 38,
+      "matched": 38,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 741.0667599999997,
+        "miny": 317.73657,
+        "maxx": 801.5533799999998,
+        "maxy": 383.78056999999995
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Vogosca_10928.js",
+      "shapes": 21,
+      "matched": 21,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 615.8351237499998,
+        "miny": 428.5064800000001,
+        "maxx": 654.5021568749996,
+        "maxy": 465.58080000000024
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Vukosavlje_20109.js",
+      "shapes": 12,
+      "matched": 12,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 588.5236299999999,
+        "miny": 63.378182,
+        "maxx": 641.6548799999996,
+        "maxy": 95.424452
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Zavidovici_11177.js",
+      "shapes": 47,
+      "matched": 47,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 559.8676599999995,
+        "miny": 248.33031890625,
+        "maxx": 665.5222275,
+        "maxy": 336.3000580078126
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Zenica_11185.js",
+      "shapes": 83,
+      "matched": 83,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 482.51811000000004,
+        "miny": 273.6883999999999,
+        "maxx": 568.0475169238281,
+        "maxy": 392.18876550781266
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Zepce_11207.js",
+      "shapes": 41,
+      "matched": 41,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 518.5980345410159,
+        "miny": 246.37950395751952,
+        "maxx": 589.5618972998049,
+        "maxy": 313.9217399999999
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Zivinice_11215.js",
+      "shapes": 29,
+      "matched": 29,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 666.9222100000001,
+        "miny": 250.38637439453103,
+        "maxx": 746.1203344238279,
+        "maxy": 314.65553256835943
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
+    },
+    {
+      "file": "Zvornik_20168.js",
+      "shapes": 68,
+      "matched": 68,
+      "unmatched": 0,
+      "bounds": {
+        "minx": 764.4365399999998,
+        "miny": 213.76884999999993,
+        "maxx": 843.1189600000001,
+        "maxy": 333.2788199999998
+      },
+      "transforms_found": {
+        "viewBox": true,
+        "translate": false,
+        "scale": false,
+        "rotate": false
+      }
     }
+  ],
+  "geometry_validity": {
+    "valid": 6148,
+    "invalid": 0,
+    "reasons": {}
   },
-  "settlement_detection": {
-    "method": "deterministic_filter_selection",
-    "filter_applied": "layer=\"settlement\"",
-    "candidate_count": 6135,
-    "decision_path": [
-      "Total features: 6278",
-      "Geometry types: Polygon=6278",
-      "Layer=\"settlement\" filter: 6135 candidates with Polygon/MultiPolygon + valid sid",
-      "feature_type=\"settlement\" filter: 0 candidates with Polygon/MultiPolygon + valid sid",
-      "kind=\"settlement\" filter: 0 candidates with Polygon/MultiPolygon + valid sid",
-      "All Polygon/MultiPolygon with valid sid: 6278 candidates",
-      "Chosen filter: layer=\"settlement\" (6135 candidates) - explicit layer filter preferred"
-    ]
-  },
-  "output": {
-    "feature_count": 6135,
-    "missing_sid_count": 0,
-    "missing_sid_sample_indices": [],
-    "invalid_geometry_count": 0,
-    "invalid_geometry_reasons": {
-      "non_polygon": 0,
-      "non_finite_coords": 0,
-      "ring_too_short": 0,
-      "ring_not_closed": 0
+  "top_50_files_by_unmatched": [
+    {
+      "file": "Banja Luka_20010.js",
+      "unmatched": 0
     },
-    "invalid_geometry_samples": []
-  },
-  "sid_stats": {
-    "unique_count": 6135,
-    "duplicates_count": 0,
-    "duplicate_samples": []
-  },
-  "municipality_id_stats": {
-    "present_count": 6135,
-    "missing_count": 0,
-    "present_percentage": 100
-  },
-  "bbox": {
+    {
+      "file": "Banovici_10014.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Berkovici_20028.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bihac_10049.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bijeljina_20036.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bileca_20044.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosanska Dubica_20265.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosanska Gradiska_20125.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosanska Krupa_11428.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosanski Novi_20397.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosanski Petrovac_11436.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bosansko Grahovo_10146.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bratunac_20052.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Brcko_30163.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Breza_10189.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Brod_20079.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Bugojno_10197.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Busovaca_10219.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Buzim_11240.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Cajnice_20630.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Capljina_10243.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Cazin_10227.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Celic_11231.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Celinac_20648.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Centar Sarajevo_10839.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Citluk_10260.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Derventa_20133.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Doboj Istok_11258.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Doboj Jug_11266.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Doboj_20141.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Dobretici_11274.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Domaljevac-Samac_11282.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Donji Vakuf_10294.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Donji Zabar_20150.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Drvar_11614.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Foca (FBiH)_11444.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Foca (RS)_20613.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Fojnica_10324.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Gacko_20117.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Glamoc_10359.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Gorazde_11452.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Gornji Vakuf-Uskoplje_10375.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Gracanica_11479.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Gradacac_10391.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Grude_10405.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Hadzici_10847.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Han Pijesak_20621.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Ilidza_11550.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Ilijas_10863.js",
+      "unmatched": 0
+    },
+    {
+      "file": "Istocna Ilidza_20176.js",
+      "unmatched": 0
+    }
+  ],
+  "top_200_unmatched": [],
+  "bounds": {
     "global": {
       "minx": 1,
-      "miny": -9.5214,
+      "miny": -9.521430100000002,
       "maxx": 940.9638,
-      "maxy": 909.9602
-    },
-    "per_feature": {
-      "min_width": 0.47199999999998,
-      "median_width": 9.75750000000005,
-      "p90_width": 19.516699999999958,
-      "max_width": 68.2858,
-      "min_height": 0.34789999999998145,
-      "median_height": 9.889099999999985,
-      "p90_height": 19.724200000000025,
-      "max_height": 61.96489999999994
+      "maxy": 910.09033
     }
   },
-  "note": "This derived file is a minimal substrate. Population/ethnicity remains in separate authoritative datasets and will be joined into derived start-state tables."
+  "coordinate_regime": "SVG coordinate space (from municipality JS files)"
 }

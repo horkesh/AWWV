@@ -1,2 +1,44 @@
 
 
+[2026-01-27]
+Key: svg_substrate:ring_not_closed_skipped
+TITLE: SVG substrate rebuild skipped ring_not_closed features
+MISTAKE:
+The experimental SVG-derived substrate rebuild treated ring_not_closed as invalid and skipped those geometries, dropping settlements even though deterministic closure (repeat first coordinate at end) is allowed under project constraints.
+CORRECT RULE:
+Do not skip on ring_not_closed. If a ring has >= 4 points, close it deterministically by appending the first coordinate if missing, then revalidate. Only skip if still invalid after closure or if too_few_points/non_finite.
+
+[2026-01-27]
+Key: svg_substrate:duplicate_sid_not_merged
+TITLE: SVG substrate rebuild emitted duplicate SIDs as separate features
+MISTAKE:
+The experimental SVG-derived substrate rebuild emitted multiple features with the same SID, violating 1:1 settlement identity in the output GeoJSON (duplicate SIDs existed in source shapes and were not merged).
+CORRECT RULE:
+Group features by SID and merge duplicates deterministically into a single MultiPolygon feature. Preserve per-part provenance in properties.parts and keep only canonical identity fields at top-level.
+CORRECT BEHAVIOR GOING FORWARD:
+Fixed 2026-01-27: Canonical substrate derivation script (derive_settlement_substrate_from_svg_sources.ts) now merges duplicate SIDs deterministically into MultiPolygon features with properties.parts preserving per-part provenance. This is enforced in the canonical derive pipeline. Duplicate SIDs are detected, grouped, and merged before output.
+
+[2026-01-27]
+Key: viewer:file_protocol_cors_blocking
+TITLE: Substrate viewers fail with unclear error when opened via file:// protocol
+MISTAKE:
+Substrate viewers (both Phase 0 canonical and experimental SVG) use fetch() to load data_index.json and GeoJSON files. When opened directly via file:// protocol, browsers block these requests with CORS errors, but the error messages are unclear ("Failed to fetch" or generic alerts) and don't explain that a local web server is required.
+CORRECT RULE:
+Detect file:// protocol in viewer loadData() functions. If window.location.protocol === 'file:', show a clear error message explaining that browsers block local file access and provide instructions to run a local web server (e.g., "npx http-server -p 8080" from repo root, then open http://localhost:8080/data/derived/[viewer]/index.html). Update both build scripts to generate viewers with this detection.
+CORRECT BEHAVIOR GOING FORWARD:
+Fixed 2026-01-27: Canonical substrate viewer (build_substrate_viewer_index.ts) now generates viewer.js with file:// protocol detection. When file:// is detected, an in-page error box is displayed (not alert) with clear instructions: run "npx http-server -p 8080" from repo root, then open "http://localhost:8080/data/derived/substrate_viewer/index.html". This is enforced in generated viewer.js and HTML templates.
+
+[2026-01-27]
+TITLE: Test mistake entry for automation
+MISTAKE:
+This is a test entry to verify recordMistakeOnce and warnIfUnrecorded work correctly.
+CORRECT RULE:
+This entry should only be appended once, even if warnIfUnrecorded is called multiple times.
+
+[2026-01-27]
+TITLE: MAP: SVG canonical substrate lacks shared-border fabric at scale
+MISTAKE:
+Border fabric audit confirms shared border ratio is 0.16% (2147 shared segments). This indicates the SVG-derived substrate does NOT form a shared-border partition - most boundaries are free (not shared between settlements).
+CORRECT RULE:
+Treat this as a data truth. The substrate geometry itself is fragmented. Do not compensate with tolerance unless explicitly elevated to canon via FORAWWV.md.
+

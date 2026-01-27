@@ -1,10 +1,24 @@
 {
   "total_files_parsed": 142,
-  "total_shapes_extracted": 6148,
-  "total_features_emitted": 6108,
-  "matched_count": 6108,
+  "shapes_extracted": 6148,
+  "features_emitted_before_merge": 6148,
+  "features_emitted_after_merge": 6137,
+  "invalid_skipped_count": 0,
+  "invalid_reasons": {},
+  "rings_closed_count": 40,
+  "features_fixed_by_ring_closure_count": 40,
+  "features_still_invalid_after_closure_count": 0,
+  "features_still_invalid_after_closure_reasons": {},
+  "matched_count": 6148,
   "unmatched_count": 0,
   "ambiguous_count": 0,
+  "duplicate_sid_count_before_merge": 11,
+  "merged_multiPolygon_count": 11,
+  "max_parts_per_sid": 2,
+  "conflict_counts": {
+    "settlement_name_conflict": 0,
+    "municipality_id_conflict": 0
+  },
   "per_file_stats": [
     {
       "file": "Banja Luka_20010.js",
@@ -189,7 +203,7 @@
     {
       "file": "Bosanski Petrovac_11436.js",
       "shapes": 35,
-      "matched": 33,
+      "matched": 35,
       "unmatched": 0,
       "bounds": {
         "minx": 82.3588,
@@ -657,7 +671,7 @@
     {
       "file": "Foca (RS)_20613.js",
       "shapes": 101,
-      "matched": 99,
+      "matched": 101,
       "unmatched": 0,
       "bounds": {
         "minx": 675.9921000000004,
@@ -837,7 +851,7 @@
     {
       "file": "Han Pijesak_20621.js",
       "shapes": 26,
-      "matched": 25,
+      "matched": 26,
       "unmatched": 0,
       "bounds": {
         "minx": 727.3228700000005,
@@ -945,7 +959,7 @@
     {
       "file": "Istocni Stari Grad_20206.js",
       "shapes": 19,
-      "matched": 16,
+      "matched": 19,
       "unmatched": 0,
       "bounds": {
         "minx": 645.62583,
@@ -1233,7 +1247,7 @@
     {
       "file": "Krupa na Uni_20290.js",
       "shapes": 12,
-      "matched": 10,
+      "matched": 12,
       "unmatched": 0,
       "bounds": {
         "minx": 114.84969999999998,
@@ -1359,7 +1373,7 @@
     {
       "file": "Lopare_20320.js",
       "shapes": 35,
-      "matched": 34,
+      "matched": 35,
       "unmatched": 0,
       "bounds": {
         "minx": 722.1476900000004,
@@ -1503,7 +1517,7 @@
     {
       "file": "Nevesinje_20389.js",
       "shapes": 56,
-      "matched": 55,
+      "matched": 56,
       "unmatched": 0,
       "bounds": {
         "minx": 537.55893,
@@ -1593,7 +1607,7 @@
     {
       "file": "Odzak_11525.js",
       "shapes": 14,
-      "matched": 12,
+      "matched": 14,
       "unmatched": 0,
       "bounds": {
         "minx": 593.1896000000002,
@@ -1629,7 +1643,7 @@
     {
       "file": "Orasje_11533.js",
       "shapes": 15,
-      "matched": 13,
+      "matched": 15,
       "unmatched": 0,
       "bounds": {
         "minx": 681.9528,
@@ -1665,7 +1679,7 @@
     {
       "file": "Ostra Luka_20435.js",
       "shapes": 24,
-      "matched": 23,
+      "matched": 24,
       "unmatched": 0,
       "bounds": {
         "minx": 155.1009600000001,
@@ -1683,7 +1697,7 @@
     {
       "file": "Pale (FBiH)_11576.js",
       "shapes": 15,
-      "matched": 14,
+      "matched": 15,
       "unmatched": 0,
       "bounds": {
         "minx": 714.0073099999996,
@@ -1719,7 +1733,7 @@
     {
       "file": "Pelagicevo_20451.js",
       "shapes": 11,
-      "matched": 10,
+      "matched": 11,
       "unmatched": 0,
       "bounds": {
         "minx": 645.5033599999996,
@@ -1737,7 +1751,7 @@
     {
       "file": "Petrovac_20460.js",
       "shapes": 6,
-      "matched": 5,
+      "matched": 6,
       "unmatched": 0,
       "bounds": {
         "minx": 168.35201,
@@ -1773,7 +1787,7 @@
     {
       "file": "Posusje_10731.js",
       "shapes": 20,
-      "matched": 19,
+      "matched": 20,
       "unmatched": 0,
       "bounds": {
         "minx": 321.4469044873046,
@@ -1845,7 +1859,7 @@
     {
       "file": "Ravno_11304.js",
       "shapes": 54,
-      "matched": 53,
+      "matched": 54,
       "unmatched": 0,
       "bounds": {
         "minx": 506.89221374999994,
@@ -1863,7 +1877,7 @@
     {
       "file": "Ribnik_20508.js",
       "shapes": 31,
-      "matched": 30,
+      "matched": 31,
       "unmatched": 0,
       "bounds": {
         "minx": 214.26441000000003,
@@ -1971,7 +1985,7 @@
     {
       "file": "Sekovici_20664.js",
       "shapes": 38,
-      "matched": 36,
+      "matched": 38,
       "unmatched": 0,
       "bounds": {
         "minx": 726.6014,
@@ -1989,7 +2003,7 @@
     {
       "file": "Sipovo_20672.js",
       "shapes": 46,
-      "matched": 44,
+      "matched": 46,
       "unmatched": 0,
       "bounds": {
         "minx": 232.82683,
@@ -2025,7 +2039,7 @@
     {
       "file": "Sokolac_20532.js",
       "shapes": 96,
-      "matched": 95,
+      "matched": 96,
       "unmatched": 0,
       "bounds": {
         "minx": 673.22301,
@@ -2115,7 +2129,7 @@
     {
       "file": "Stolac_11606.js",
       "shapes": 26,
-      "matched": 25,
+      "matched": 26,
       "unmatched": 0,
       "bounds": {
         "minx": 484.51002678222653,
@@ -2169,7 +2183,7 @@
     {
       "file": "Teslic_20575.js",
       "shapes": 57,
-      "matched": 55,
+      "matched": 57,
       "unmatched": 0,
       "bounds": {
         "minx": 439.59691000000004,
@@ -2187,7 +2201,7 @@
     {
       "file": "Tomislavgrad_10308.js",
       "shapes": 60,
-      "matched": 59,
+      "matched": 60,
       "unmatched": 0,
       "bounds": {
         "minx": 279.5729,
@@ -2259,7 +2273,7 @@
     {
       "file": "Trnovo (RS)_20591.js",
       "shapes": 25,
-      "matched": 24,
+      "matched": 25,
       "unmatched": 0,
       "bounds": {
         "minx": 635.2733400000002,
@@ -2295,7 +2309,7 @@
     {
       "file": "Ugljevik_20605.js",
       "shapes": 25,
-      "matched": 23,
+      "matched": 25,
       "unmatched": 0,
       "bounds": {
         "minx": 762.2716200000001,
@@ -2457,7 +2471,7 @@
     {
       "file": "Vukosavlje_20109.js",
       "shapes": 12,
-      "matched": 10,
+      "matched": 12,
       "unmatched": 0,
       "bounds": {
         "minx": 588.5236299999999,
@@ -2547,7 +2561,7 @@
     {
       "file": "Zvornik_20168.js",
       "shapes": 68,
-      "matched": 65,
+      "matched": 68,
       "unmatched": 0,
       "bounds": {
         "minx": 764.4365399999998,
@@ -2564,11 +2578,9 @@
     }
   ],
   "geometry_validity": {
-    "valid": 6108,
-    "invalid": 40,
-    "reasons": {
-      "ring_not_closed": 40
-    }
+    "valid": 6148,
+    "invalid": 0,
+    "reasons": {}
   },
   "top_50_files_by_unmatched": [
     {

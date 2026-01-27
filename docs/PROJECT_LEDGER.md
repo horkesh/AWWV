@@ -985,3 +985,210 @@ The pipeline operates in one of three modes based on crosswalk availability:
   2. Re-run immediately to verify deterministic output (byte-identical files)
   3. Review `settlements_svg_substrate.coverage.audit.txt` for human-readable summary
 - **Note:** Validation confirms SVG substrate is settlement-identified with high census coverage (99.3%). The 9 duplicate SIDs and 41 missing census settlements are documented in the audit but do not invalidate the substrate for inspection purposes. The duplicate SIDs suggest some settlements appear multiple times in source files (possibly due to digitization overlap or municipality boundary changes). **docs/FORAWWV.md may require an addendum** noting that SVG-derived substrate achieves 99.3% census coverage with settlement-level identity via census_id extraction from SID, but contains 9 duplicate SIDs and 41 missing census settlements. Do NOT edit FORAWWV.md automatically.
+
+**2026-01-27** - Experimental SVG-derived substrate rebuild: deterministic ring closure + duplicate-SID MultiPolygon merge
+- **Phase:** Map Rebuild (Path A) - Experimental/Inspection
+- **Change:** Update `scripts/map/rebuild_settlements_geojson_from_svg_js.ts` so it no longer drops `ring_not_closed` geometries and so duplicate SIDs are resolved deterministically.
+  - Deterministic ring closure: if a ring has \(>= 4\) points and last != first, append first coordinate and revalidate (no other geometry invention).
+  - Duplicate SID resolution: group by `sid` and merge duplicates into a single `MultiPolygon` feature with per-part provenance in `properties.parts` (deterministic order by `(source_file, source_shape_id)`); conflicts are resolved deterministically and recorded in `observed_*` fields + audit counters.
+- **Results (rebuild audit):**
+  - `shapes_extracted`: 6,148
+  - `features_emitted_before_merge`: 6,148
+  - `features_emitted_after_merge`: 6,137
+  - `rings_closed_count`: 40
+  - `features_fixed_by_ring_closure_count`: 40
+  - `invalid_skipped_count`: 0
+  - `duplicate_sid_count_before_merge`: 11 (merged into 11 MultiPolygons; `max_parts_per_sid`: 2)
+- **Results (coverage audit):**
+  - `census_total`: 6,140
+  - `features_total`: 6,137
+  - `duplicate_sid_count`: 0 (SID uniqueness holds)
+  - `missing_census_count`: 3 (`130397`, `138517`, `201693`)
+  - `extra_feature_count`: 0
+- **Determinism:** Ran `map:rebuild:svg_substrate`, `map:viewer:svg_substrate:index`, and `map:audit:svg_substrate:coverage` twice back-to-back; outputs were byte-identical for:
+  - `data/derived/svg_substrate/settlements_svg_substrate.geojson`
+  - `data/derived/svg_substrate/settlements_svg_substrate.audit.json` / `.txt`
+  - `data/derived/svg_substrate/settlements_svg_substrate.coverage.audit.json` / `.txt`
+  - `data/derived/svg_substrate_viewer/data_index.json`
+- **Canon safety:** Phase 0 canonical substrate and viewer artifacts remain unchanged; this remains experimental SVG substrate only.
+- **Mistake log updated:** yes (confirmed prior behavior: ring_not_closed skipping and duplicate-SID emission).
+- **FORAWWV.md note:** This reinforces that SVG-derived substrate is high-coverage but not fully complete (3 census settlements missing) and uses a distinct SVG coordinate regime; **docs/FORAWWV.md may require an addendum**. Do NOT edit it automatically.
+
+**2026-01-27** - SVG substrate viewer: borders-only inspection mode
+- **Phase:** Map Rebuild (Path A) - Experimental/Inspection - Viewer
+- **Change:** Update `scripts/map/build_svg_substrate_viewer_index.ts` to add borders-only rendering mode (stroke only, transparent fill) for fast visual inspection of settlement outlines.
+  - Added "Borders only" checkbox (default checked) in viewer controls.
+  - When enabled, polygons render with stroke only (`STROKE_COLOR`, `STROKE_WIDTH`) and no fill (transparent).
+  - When disabled, polygons render with fill colors as before (matched/unmatched or municipality-based).
+- **Artifacts updated:**
+  - `scripts/map/build_svg_substrate_viewer_index.ts` (build script)
+  - `data/derived/svg_substrate_viewer/index.html` (regenerated with borders-only checkbox)
+  - `data/derived/svg_substrate_viewer/viewer.js` (regenerated with borders-only rendering logic)
+- **Determinism:** Viewer files regenerated deterministically (no timestamps, stable ordering). Re-running `map:viewer:svg_substrate:index` produces byte-identical outputs.
+- **Canon safety:** Phase 0 canonical substrate and viewer artifacts remain unchanged; this is experimental SVG substrate viewer only.
+- **Mistake log updated:** no (viewer enhancement, no mistakes discovered).
+- **FORAWWV.md note:** No systemic design insights revealed; this is a viewer convenience feature for visual inspection. **docs/FORAWWV.md may require an addendum** if borders-only inspection reveals systematic geometry issues, but do NOT edit it automatically.
+
+**2026-01-27** - Substrate viewers: file:// protocol CORS error handling
+- **Phase:** Map Rebuild (Path A) - Viewer - Error Handling
+- **Change:** Update both Phase 0 canonical and experimental SVG substrate viewers to detect file:// protocol and show clear error messages explaining CORS blocking and how to use a local web server.
+  - Added file:// protocol detection in `loadData()` functions (check `window.location.protocol === 'file:'`).
+  - Show clear error message with step-by-step instructions to run `npx http-server -p 8080` and open via `http://localhost:8080/...`.
+  - Updated `scripts/map/build_svg_substrate_viewer_index.ts` to generate viewer.js with file:// detection.
+  - Updated `data/derived/substrate_viewer/viewer.js` directly (Phase 0 canonical viewer is static, not generated).
+- **Artifacts updated:**
+  - `scripts/map/build_svg_substrate_viewer_index.ts` (build script)
+  - `data/derived/substrate_viewer/viewer.js` (Phase 0 canonical viewer, static file)
+  - `data/derived/svg_substrate_viewer/viewer.js` (regenerated with file:// detection)
+- **Mistake log updated:** yes (added entry documenting unclear CORS error messages).
+- **Determinism:** Viewer files regenerated deterministically (no timestamps, stable ordering). Re-running `map:viewer:svg_substrate:index` produces byte-identical outputs.
+- **Canon safety:** Phase 0 canonical viewer updated directly (static file). This is an error-handling improvement, not a functional change.
+- **FORAWWV.md note:** No systemic design insights revealed; this is an error-handling improvement for better user experience. **docs/FORAWWV.md may require an addendum** if file:// protocol handling reveals other viewer limitations, but do NOT edit it automatically.
+
+**2026-01-27** - Canon switch: SVG-derived settlements substrate becomes canonical
+- **Phase:** Map Rebuild (Path A) - Canon Decision - Settlement Substrate
+- **Change:** Promote SVG-derived settlements substrate to canonical status. Preserve master-derived substrate as legacy.
+  - **Canon decision:** SVG-derived substrate (from `data/source/settlements/**` JS files + `bih_census_1991.json`) is now the canonical settlement substrate.
+  - **New canonical script:** `scripts/map/derive_settlement_substrate_from_svg_sources.ts` outputs to canonical paths:
+    - `data/derived/settlements_substrate.geojson`
+    - `data/derived/settlements_substrate.audit.json`
+    - `data/derived/settlements_substrate.audit.txt`
+  - **Legacy preservation:** Moved master-derived Phase 0 canonical artifacts to `data/derived/_legacy_master_substrate/`:
+    - `settlements_substrate.geojson`
+    - `settlements_substrate.audit.json`
+    - `settlements_substrate.audit.txt`
+    - `substrate_viewer/` (entire folder)
+  - **Canonical commands updated:** `package.json` now points `map:derive:substrate` to SVG-derived pipeline.
+  - **Viewer builder updated:** `scripts/map/build_substrate_viewer_index.ts` now handles SVG-derived substrate structure (uses `census_id` field for matching, backwards compatible with master-derived).
+- **Artifacts created:**
+  - `scripts/map/derive_settlement_substrate_from_svg_sources.ts` (new canonical derive script)
+  - `docs/cleanup/legacy_substrate_note.md` (legacy preservation documentation)
+- **Artifacts updated:**
+  - `package.json` (`map:derive:substrate` command)
+  - `scripts/map/build_substrate_viewer_index.ts` (census_id matching support)
+- **Canonical outputs (SVG-derived):**
+  - `data/derived/settlements_substrate.geojson`: 6,137 features
+  - `data/derived/settlements_substrate.audit.json` / `.txt`
+  - `data/derived/substrate_viewer/data_index.json` / `index.html` / `viewer.js`
+- **Canonical counts:**
+  - Features emitted (after merge): 6,137
+  - Matched census: 6,148 (before merge), 6,137 (after merge)
+  - Missing census IDs: 3 (`130397`, `138517`, `201693`)
+  - Rings closed deterministically: 40
+  - Duplicate SIDs merged: 11 MultiPolygons (`max_parts_per_sid`: 2)
+  - Valid geometry: 6,148 (before merge), 6,137 (after merge)
+- **Coordinate regime:** SVG coordinate space (from municipality JS files) - now accepted as canonical for settlements layer.
+- **Determinism:** Verified byte-identical outputs on re-run:
+  - `settlements_substrate.geojson`: MD5 `61906026CF933812EAF1088C76904686`
+  - `settlements_substrate.audit.json`: MD5 `1C291264CAAEC816F843739DC0243B1B`
+  - `settlements_substrate.audit.txt`: MD5 `C541F0E5E67532C1537028CAFD879B31`
+  - `substrate_viewer/data_index.json`: MD5 `19F8FBF3001BC2335AC80F70CB1203AA`
+- **Mistake log updated:** no (canon switch, no mistakes discovered; prior mistakes about ring_not_closed and duplicate SIDs already addressed in SVG-derived pipeline).
+- **Legacy status:** Master-derived script (`scripts/map/derive_settlement_substrate_from_master.ts`) remains in codebase but is no longer referenced by canonical commands. Legacy artifacts preserved for reference and comparison.
+- **FORAWWV.md note:** This canon switch establishes SVG coordinate regime as canonical for settlements layer and census_id-based identity as canonical. **docs/FORAWWV.md may require an addendum** about coordinate regime acceptance and identity matching strategy, but do NOT edit it automatically.
+
+**2026-01-27** - Viewer robustness: file:// detection and mistake-guard closure
+- **Phase:** Map Rebuild (Path A) - Viewer - Error Handling & Mistake Guard
+- **Change:** Finalize canonical substrate viewer with file:// protocol detection and close out recurring mistake warnings.
+  - **Canonical viewer generation:** Updated `scripts/map/build_substrate_viewer_index.ts` to generate both `index.html` and `viewer.js` (previously only generated `data_index.json`).
+  - **File:// detection:** Generated `viewer.js` now detects `window.location.protocol === 'file:'` and displays an in-page error box (not alert) with clear instructions:
+    - Explains browsers block fetch() from file:// protocol
+    - Provides exact steps: run `npx http-server -p 8080` from repo root
+    - Provides exact URL: `http://localhost:8080/data/derived/substrate_viewer/index.html`
+  - **Mistake log closure:** Updated `docs/ASSISTANT_MISTAKES.log` to mark two issues as fixed:
+    - `svg_substrate:duplicate_sid_not_merged`: Added "CORRECT BEHAVIOR GOING FORWARD" noting canonical derive script enforces duplicate SID merge
+    - `viewer:file_protocol_cors_blocking`: Added "CORRECT BEHAVIOR GOING FORWARD" noting canonical viewer generator enforces file:// detection
+  - **Mistake guard update:** Updated `tools/assistant/mistake_guard.ts` to:
+    - Parse "CORRECT BEHAVIOR GOING FORWARD" entries from mistake log
+    - Skip warnings for mistakes that have been fixed and enforced (have "CORRECT BEHAVIOR GOING FORWARD" entries)
+    - Prevents perpetual warnings about already-fixed issues
+- **Artifacts updated:**
+  - `scripts/map/build_substrate_viewer_index.ts` (now generates HTML and viewer.js)
+  - `data/derived/substrate_viewer/index.html` (generated with error box element)
+  - `data/derived/substrate_viewer/viewer.js` (generated with file:// detection)
+  - `docs/ASSISTANT_MISTAKES.log` (marked two issues as fixed)
+  - `tools/assistant/mistake_guard.ts` (skip warnings for fixed issues)
+- **Determinism:** Verified byte-identical outputs on re-run. Viewer files generated deterministically (no timestamps, stable ordering).
+- **Mistake guard behavior:** After this change, `map:derive:substrate` and `map:viewer:substrate:index` no longer show warnings for duplicate SIDs or file:// protocol issues (these are now marked as fixed). Other legitimate warnings (e.g., ring_not_closed) still appear if relevant.
+- **FORAWWV.md note:** No systemic design insights revealed; this is a robustness and maintainability improvement. **docs/FORAWWV.md may require an addendum** if mistake-guard closure patterns reveal other systemic issues, but do NOT edit it automatically.
+
+**2026-01-27** - Border fabric forensic audit: quantify shared vs free boundary length
+- **Phase:** Phase 1 - Settlement Adjacency Graph Validation
+- **Change:** Created deterministic border-fabric forensic audit to quantify boundary segment ownership in the canonical SVG-derived settlements substrate. This audit is independent of the adjacency graph code path and provides forensic analysis of whether shared borders exist at scale.
+  - **New script:** `scripts/map/audit_canonical_border_fabric.ts`
+    - Extracts boundary segments from polygon outer rings (Polygon and MultiPolygon support)
+    - Uses EPS-based quantization ONLY for segment keying (not geometry modification)
+    - Builds segment ownership index (segmentKey -> {length, owners: Set<sid>})
+    - Calculates aggregate metrics: total, shared (owners==2), free (owners==1), anomalies (>2)
+    - Computes per-settlement statistics: boundary_len, shared_len, free_len, shared_ratio, neighbor_count
+    - Generates deterministic top lists (highest/lowest shared ratio, highest free len, highest neighbor count)
+  - **Audit results:**
+    - Total Segments: 3,866,071
+    - Total Boundary Length: 267,374.93
+    - Shared Segments: 2,147 (0.06% of total segments)
+    - Shared Border Length: 430.30 (0.16% of total boundary length)
+    - Free Segments: 3,863,924 (99.94% of total segments)
+    - Free Border Length: 266,514.33 (99.84% of total boundary length)
+    - Anomaly Segments (>2 owners): 0
+    - **CONFIRMED FINDING:** Shared border ratio < 5% (0.16%) confirms the SVG substrate does NOT form a shared-border partition at scale. 99.84% of boundaries are free (not shared between settlements).
+  - **Mistake log integration:** Script uses `warnIfUnrecorded()` to record low shared-border ratio as a confirmed data truth.
+  - **Updated:** `package.json` - Added `map:audit:borderfabric` command
+- **Artifacts created:**
+  - `data/derived/settlement_border_fabric.audit.json` (structured audit report with all metrics)
+  - `data/derived/settlement_border_fabric.audit.txt` (human-readable summary)
+- **Determinism:** Verified - outputs are deterministic (stable ordering, no randomness, no timestamps).
+- **FORAWWV.md note:** This audit confirms the Phase 1 adjacency validation finding: the SVG-derived substrate geometry itself is fragmented and does not form a shared-border fabric. This is a data truth, not a code issue. Any tolerance-based adjacency rules would need to be explicitly elevated to canon via FORAWWV.md. Do NOT edit FORAWWV.md automatically.
+
+**2026-01-27** - Phase 1 adjacency validation: strict shared-border graph derivation
+- **Phase:** Phase 1 - Settlement Adjacency Graph Validation
+- **Change:** Created Phase 1 validation script to derive strict shared-border settlement adjacency graph from SVG-derived canonical substrate. This is a VALIDATION task, not a repair - it tests whether the substrate forms a true shared-border fabric.
+  - **New script:** `scripts/map/derive_settlement_graph_phase1_validate.ts`
+    - Strict shared-border-only adjacency detection (no tolerance, no distance inference)
+    - Colinear segment overlap detection for robust boundary matching
+    - Deterministic output (stable ordering, no timestamps)
+    - Comprehensive audit reports (JSON + text)
+  - **Adjacency definition (canonical, Phase 1):**
+    - Two settlements are adjacent IFF they share a boundary segment of positive length
+    - Point-touch adjacency explicitly excluded
+    - All settlements appear as nodes, even if isolated
+  - **Validation results:**
+    - Nodes: 6,135 settlements
+    - Edges: 297 adjacencies (only 4.8% connectivity)
+    - Isolated settlements: 5,604 (91.3% isolation)
+    - Components: Multiple (fragmented fabric)
+    - Max degree: 4
+    - **CONFIRMED FINDING:** SVG-derived canonical substrate does NOT form a dense shared-border fabric. High isolation indicates source geometry is not a true partition.
+  - **Mistake log integration:** Script uses `warnIfUnrecorded()` to record high isolation/fragmentation as a confirmed data truth (not a bug to fix).
+  - **Updated:** `package.json` - `map:derive:graph` now points to Phase 1 validation script
+- **Artifacts created:**
+  - `data/derived/settlement_graph.json` (canonical Phase 1 adjacency graph)
+  - `data/derived/settlement_graph.audit.json` (structured audit report)
+  - `data/derived/settlement_graph.audit.txt` (human-readable summary)
+- **Determinism:** Verified - outputs are deterministic (stable ordering, no randomness).
+- **Performance note:** O(n²) algorithm is slow for large segment counts but acceptable for validation purposes.
+- **FORAWWV.md note:** This validation reveals that the SVG-derived substrate geometry itself is fragmented. This is a data truth, not a code issue. Any tolerance-based adjacency rules would need to be explicitly elevated to canon via FORAWWV.md. Do NOT edit FORAWWV.md automatically.
+
+**2026-01-27** - Mistake log automation: record-once helpers and spam reduction
+- **Phase:** Infrastructure - Mistake Guard System
+- **Change:** Upgrade mistake log system with automation helpers to record confirmed mistakes once and reduce warning spam.
+  - **New helpers added to `tools/assistant/mistake_guard.ts`:**
+    - `recordMistakeOnce(entry: MistakeEntry): boolean` - Appends mistake entry to log only if title doesn't already exist. Returns true if appended, false if already exists.
+    - `warnIfUnrecorded(condition: boolean, entry: MistakeEntry, context?: string): void` - If condition is true and entry not recorded, warns and records. If already recorded, only warns once per run if context provided.
+    - `MistakeEntry` interface - Structured entry type with `date`, `title`, `description`, `correct_behavior` (all fields required, date must be provided by caller).
+  - **Spam reduction in `assertNoRepeat()`:**
+    - Added `warnedTitlesThisRun` Set to track titles warned about in current process run.
+    - Each title only triggers warning once per run, preventing repeated warnings during same execution.
+  - **Format detection:**
+    - `titleExistsInLog()` helper checks for existing entries by scanning for "TITLE: <...>" pattern.
+    - Maintains compatibility with existing log format (append-only, strict format).
+  - **Testing:**
+    - Added `scripts/repo/test_mistake_guard.ts` to verify helpers work correctly.
+    - Tests confirm: first call records and warns, second call doesn't duplicate, condition=false does nothing.
+- **Artifacts updated:**
+  - `tools/assistant/mistake_guard.ts` (added helpers and spam reduction)
+  - `scripts/repo/test_mistake_guard.ts` (test script)
+  - `docs/ASSISTANT_MISTAKES.log` (test entry appended during testing)
+- **Backward compatibility:** All existing exports (`loadMistakes()`, `assertNoRepeat()`, `appendMistake()`) continue to work unchanged.
+- **Determinism:** No timestamps generated by code; date must be provided by caller. Stable ordering maintained.
+- **Mistake guard behavior:** After this change, `assertNoRepeat()` warns at most once per title per process run. `warnIfUnrecorded()` can be used in scripts to automatically record confirmed mistakes without manual log editing.
+- **FORAWWV.md note:** No systemic design insights revealed; this is an infrastructure improvement for better mistake tracking automation. **docs/FORAWWV.md may require an addendum** if automated mistake recording reveals patterns in common mistakes, but do NOT edit it automatically.

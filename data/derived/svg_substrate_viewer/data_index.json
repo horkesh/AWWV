@@ -2,8 +2,8 @@
   "meta": {
     "geometry_path": "/data/derived/svg_substrate/settlements_svg_substrate.geojson",
     "counts": {
-      "features": 6108,
-      "matched": 6108,
+      "features": 6137,
+      "matched": 6137,
       "unmatched": 0
     },
     "global_bbox": [

@@ -13,6 +13,7 @@
   const showMatchedCheck = document.getElementById('show-matched');
   const showUnmatchedCheck = document.getElementById('show-unmatched');
   const showByMunicipalityCheck = document.getElementById('show-by-municipality');
+  const bordersOnlyCheck = document.getElementById('borders-only');
   const resetViewBtn = document.getElementById('reset-view');
   const legendDiv = document.getElementById('legend');
 
@@ -142,7 +143,7 @@
   // Render feature
   function renderFeature(feature) {
     const geom = feature.geometry;
-    const fillColor = getFeatureColor(feature);
+    const fillColor = bordersOnlyCheck.checked ? null : getFeatureColor(feature);
     
     if (geom.type === 'Polygon') {
       const coords = geom.coordinates;
@@ -348,16 +349,40 @@
     updateLegend();
     render();
   });
+  bordersOnlyCheck.addEventListener('change', render);
   resetViewBtn.addEventListener('click', fitToBounds);
 
   // Load data
   async function loadData() {
+    // Detect file:// protocol and show clear error
+    if (window.location.protocol === 'file:') {
+      const errorMsg = 'Cannot load data from file:// protocol. Browsers block local file access for security.
+
+' +
+        'Please run a local web server:
+' +
+        '1. Open terminal in repo root
+' +
+        '2. Run: npx http-server -p 8080
+' +
+        '3. Open: http://localhost:8080/data/derived/svg_substrate_viewer/index.html';
+      alert(errorMsg);
+      console.error('CORS error: file:// protocol detected. Use a local web server instead.');
+      return;
+    }
+    
     try {
       // Load index first to get geometry path
       const indexRes = await fetch('./data_index.json');
+      if (!indexRes.ok) {
+        throw new Error(`Failed to load index: ${indexRes.statusText}`);
+      }
       const indexData = await indexRes.json();
       
       const geoJSONRes = await fetch(indexData.meta.geometry_path);
+      if (!geoJSONRes.ok) {
+        throw new Error(`Failed to load geometry: ${geoJSONRes.statusText}`);
+      }
       
       settlementsGeoJSON = await geoJSONRes.json();
       dataIndex = indexData;
@@ -372,7 +397,10 @@
       fitToBounds();
     } catch (err) {
       console.error('Error loading data:', err);
-      alert('Failed to load data. Make sure you are running from a web server.');
+      const errorMsg = err instanceof Error && err.message.includes('fetch') && window.location.protocol === 'file:'
+        ? 'CORS error: Cannot load data from file:// protocol. Please run a local web server (npx http-server -p 8080) and open via http://localhost:8080/...'
+        : `Failed to load data: ${err instanceof Error ? err.message : String(err)}`;
+      alert(errorMsg);
     }
   }
 

@@ -20,12 +20,16 @@ export interface Mistake {
   title: string;
   mistake: string;
   correctRule: string;
+  correctBehaviorGoingForward?: string; // If present, indicates issue is fixed and enforced
 }
 
 let cachedMistakes: Mistake[] | null = null;
 
 // Track titles appended in this run to prevent duplicates
 const appendedThisRun = new Set<string>();
+
+// Track titles warned about in this run to prevent spam
+const warnedTitlesThisRun = new Set<string>();
 
 /**
  * Parse the ASSISTANT_MISTAKES.log file into an array of Mistake objects
@@ -42,18 +46,20 @@ export function loadMistakes(): Mistake[] {
     const mistakes: Mistake[] = [];
     
     // Split by entries (lines starting with [YYYY-MM-DD])
-    // Updated regex to optionally capture Key: line
-    const entryRegex = /\[(\d{4}-\d{2}-\d{2})\]\s*\n(?:Key:\s*(.+?)\s*\n)?TITLE:\s*(.+?)\s*\nMISTAKE:\s*\n(.+?)\s*\nCORRECT RULE:\s*\n(.+?)(?=\n\[|\n*$)/gs;
+    // Updated regex to optionally capture Key: line and CORRECT BEHAVIOR GOING FORWARD
+    const entryRegex = /\[(\d{4}-\d{2}-\d{2})\]\s*\n(?:Key:\s*(.+?)\s*\n)?TITLE:\s*(.+?)\s*\nMISTAKE:\s*\n(.+?)\s*\nCORRECT RULE:\s*\n(.+?)(?:\s*\nCORRECT BEHAVIOR GOING FORWARD:\s*\n(.+?))?(?=\n\[|\n*$)/gs;
     
     let match;
     while ((match = entryRegex.exec(content)) !== null) {
       const key = match[2] ? match[2].trim() : undefined;
+      const correctBehavior = match[6] ? match[6].trim() : undefined;
       mistakes.push({
         date: match[1],
         key: key,
         title: match[3].trim(),
         mistake: match[4].trim(),
-        correctRule: match[5].trim()
+        correctRule: match[5].trim(),
+        correctBehaviorGoingForward: correctBehavior
       });
     }
     
@@ -83,6 +89,16 @@ export function assertNoRepeat(context: string): void {
   const contextLower = context.toLowerCase();
   
   for (const mistake of mistakes) {
+    // Skip warnings for mistakes that have been fixed and have "CORRECT BEHAVIOR GOING FORWARD" entries
+    if (mistake.correctBehaviorGoingForward) {
+      continue; // Issue is fixed and enforced, no need to warn
+    }
+    
+    // Skip if we've already warned about this title in this run
+    if (warnedTitlesThisRun.has(mistake.title)) {
+      continue;
+    }
+    
     // Simple keyword matching: check if context contains words from title or mistake description
     const titleWords = mistake.title.toLowerCase().split(/\s+/);
     const mistakeWords = mistake.mistake.toLowerCase().split(/\s+/).filter(w => w.length > 3); // Filter short words
@@ -94,6 +110,7 @@ export function assertNoRepeat(context: string): void {
     if (titleMatch || mistakeMatch) {
       console.warn(`KNOWN PAST MISTAKE DETECTED: ${mistake.title}`);
       console.warn(`RULE: ${mistake.correctRule}`);
+      warnedTitlesThisRun.add(mistake.title); // Mark as warned to prevent spam
       // Continue execution - this is a guardrail, not a blocker
     }
   }
@@ -116,6 +133,16 @@ export interface StructuredMistakeEntry {
   title: string;
   description: string; // Maps to MISTAKE field
   correctiveAction: string; // Maps to CORRECT RULE field
+}
+
+/**
+ * Mistake entry for recordMistakeOnce and warnIfUnrecorded
+ */
+export interface MistakeEntry {
+  date: string;          // YYYY-MM-DD (supplied by caller, not generated)
+  title: string;         // short title
+  description: string;    // what happened
+  correct_behavior: string; // what to do going forward
 }
 
 /**
@@ -244,5 +271,114 @@ ${structured.correctiveAction}
   } catch (err) {
     console.warn(`Warning: Could not append mistake to log: ${err instanceof Error ? err.message : String(err)}`);
     // Don't throw - this is non-critical
+  }
+}
+
+/**
+ * Check if a mistake entry with the given title already exists in the log
+ */
+function titleExistsInLog(title: string): boolean {
+  const logPath = resolve('docs/ASSISTANT_MISTAKES.log');
+  
+  if (!existsSync(logPath)) {
+    return false;
+  }
+  
+  try {
+    const content = readFileSync(logPath, 'utf8');
+    // Check for exact title match (case-insensitive)
+    const titlePattern = new RegExp(`TITLE:\\s*${title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
+    return titlePattern.test(content);
+  } catch (err) {
+    // If we can't read, assume it doesn't exist (safer to append than skip)
+    return false;
+  }
+}
+
+/**
+ * Record a mistake once - appends to log only if title doesn't already exist
+ * 
+ * @param entry Mistake entry to record
+ * @returns true if entry was appended, false if it already existed
+ */
+export function recordMistakeOnce(entry: MistakeEntry): boolean {
+  const logPath = resolve('docs/ASSISTANT_MISTAKES.log');
+  
+  // Check if already recorded (by title)
+  if (titleExistsInLog(entry.title)) {
+    return false;
+  }
+  
+  // Check if already appended this run
+  if (appendedThisRun.has(entry.title)) {
+    return false;
+  }
+  
+  // Format entry - ensure blank line before new entry if file doesn't end with newline
+  let prefix = '';
+  if (existsSync(logPath)) {
+    try {
+      const content = readFileSync(logPath, 'utf8');
+      // If file doesn't end with newline, add one for proper spacing
+      if (content.length > 0 && !content.endsWith('\n')) {
+        prefix = '\n';
+      }
+    } catch {
+      // Ignore - will append anyway
+    }
+  }
+  
+  // Build entry text in strict format
+  const entryText = `${prefix}[${entry.date}]
+TITLE: ${entry.title}
+MISTAKE:
+${entry.description}
+CORRECT RULE:
+${entry.correct_behavior}
+
+`;
+  
+  // Append to file
+  try {
+    appendFileSync(logPath, entryText, 'utf8');
+    appendedThisRun.add(entry.title);
+    // Invalidate cache so next loadMistakes() call will reload
+    cachedMistakes = null;
+    return true;
+  } catch (err) {
+    console.warn(`Warning: Could not append mistake to log: ${err instanceof Error ? err.message : String(err)}`);
+    // Don't throw - this is non-critical
+    return false;
+  }
+}
+
+/**
+ * Warn if a condition is true and the mistake is not yet recorded
+ * 
+ * @param condition If true, check if mistake needs to be recorded
+ * @param entry Mistake entry to record if condition is true and not already recorded
+ * @param context Optional context string for warning messages
+ */
+export function warnIfUnrecorded(condition: boolean, entry: MistakeEntry, context?: string): void {
+  if (!condition) {
+    return; // Condition is false, do nothing
+  }
+  
+  const alreadyRecorded = titleExistsInLog(entry.title);
+  
+  if (!alreadyRecorded) {
+    // Not recorded yet - warn and record
+    const contextStr = context ? ` [${context}]` : '';
+    console.warn(`CONFIRMED MISTAKE (recording): ${entry.title}${contextStr}`);
+    recordMistakeOnce(entry);
+  } else {
+    // Already recorded - only warn if context is provided
+    if (context) {
+      // Only warn once per run per title
+      if (!warnedTitlesThisRun.has(entry.title)) {
+        console.warn(`Known mistake already recorded: ${entry.title} [${context}]`);
+        warnedTitlesThisRun.add(entry.title);
+      }
+    }
   }
 }

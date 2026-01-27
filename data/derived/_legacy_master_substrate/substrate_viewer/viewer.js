@@ -20,7 +20,6 @@
   const resetViewBtn = document.getElementById('reset-view');
   const legendDiv = document.getElementById('legend');
   const warningBanner = document.getElementById('warning-banner');
-  const errorBox = document.getElementById('error-box');
 
   let settlementsGeoJSON = null;
   let dataIndex = null;
@@ -61,21 +60,6 @@
 
   const STROKE_COLOR = 'rgba(0, 0, 0, 0.5)';
   const STROKE_WIDTH = 1;
-
-  // Show file:// protocol error
-  function showFileProtocolError() {
-    errorBox.innerHTML = `
-      <h2>Cannot Load Data</h2>
-      <p><strong>Browsers block fetch() requests from file:// protocol for security.</strong></p>
-      <p>To view this map, you need to run a local web server:</p>
-      <ol>
-        <li>Open a terminal in the repository root directory</li>
-        <li>Run: <code>npx http-server -p 8080</code></li>
-        <li>Open: <code>http://localhost:8080/data/derived/substrate_viewer/index.html</code></li>
-      </ol>
-    `;
-    errorBox.style.display = 'block';
-  }
 
   // Resize canvas
   function resizeCanvas() {
@@ -486,9 +470,14 @@
 
   // Load data
   async function loadData() {
-    // Detect file:// protocol and show in-page error
+    // Detect file:// protocol and show clear error
     if (window.location.protocol === 'file:') {
-      showFileProtocolError();
+      const errorMsg = 'Cannot load data from file:// protocol. Browsers block local file access for security.\n\n' +
+        'Please run a local web server:\n' +
+        '1. Open terminal in repo root\n' +
+        '2. Run: npx http-server -p 8080\n' +
+        '3. Open: http://localhost:8080/data/derived/substrate_viewer/index.html';
+      alert(errorMsg);
       console.error('CORS error: file:// protocol detected. Use a local web server instead.');
       return;
     }
@@ -542,20 +531,23 @@
       render();
     } catch (err) {
       console.error('Error loading data:', err);
-      if (window.location.protocol === 'file:') {
-        showFileProtocolError();
-      } else {
-        const errorMsg = `Failed to load data: ${err instanceof Error ? err.message : String(err)}`;
-        errorBox.innerHTML = `<h2>Error Loading Data</h2><p>${errorMsg}</p>`;
-        errorBox.style.display = 'block';
-      }
+      const errorMsg = err instanceof Error && err.message.includes('fetch') && window.location.protocol === 'file:'
+        ? 'CORS error: Cannot load data from file:// protocol. Please run a local web server (npx http-server -p 8080) and open via http://localhost:8080/...'
+        : `Failed to load data: ${err instanceof Error ? err.message : String(err)}`;
+      alert(errorMsg);
     }
   }
 
   // Load index first, then geometry
   // Detect file:// protocol before attempting fetch
   if (window.location.protocol === 'file:') {
-    showFileProtocolError();
+    const errorMsg = 'Cannot load data from file:// protocol. Browsers block local file access for security.\n\n' +
+      'Please run a local web server:\n' +
+      '1. Open terminal in repo root\n' +
+      '2. Run: npx http-server -p 8080\n' +
+      '3. Open: http://localhost:8080/data/derived/substrate_viewer/index.html';
+    alert(errorMsg);
+    console.error('CORS error: file:// protocol detected. Use a local web server instead.');
   } else {
     fetch('./data_index.json')
       .then(response => {
@@ -570,13 +562,10 @@
       })
       .catch(err => {
         console.error('Error loading index:', err);
-        if (window.location.protocol === 'file:') {
-          showFileProtocolError();
-        } else {
-          const errorMsg = `Failed to load index: ${err instanceof Error ? err.message : String(err)}`;
-          errorBox.innerHTML = `<h2>Error Loading Index</h2><p>${errorMsg}</p>`;
-          errorBox.style.display = 'block';
-        }
+        const errorMsg = err instanceof Error && err.message.includes('fetch') && window.location.protocol === 'file:'
+          ? 'CORS error: Cannot load data from file:// protocol. Please run a local web server (npx http-server -p 8080) and open via http://localhost:8080/...'
+          : `Failed to load index: ${err instanceof Error ? err.message : String(err)}`;
+        alert(errorMsg);
       });
   }
 

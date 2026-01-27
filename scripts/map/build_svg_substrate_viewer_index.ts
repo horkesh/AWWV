@@ -18,11 +18,11 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import { loadMistakes, assertNoRepeat } from '../../tools/assistant/mistake_guard';
+import { loadMistakes, assertNoRepeat } from "../assistant/mistake_guard";
 
 // Mistake guard
 loadMistakes();
-assertNoRepeat("Rebuild an experimental settlements GeoJSON from SVG JS sources (data/source/settlements) and create an inspection viewer, without overwriting Phase 0 canonical substrate");
+assertNoRepeat("SVG substrate viewer: add a borders-only inspection mode (no fills) for visually inspecting settlement outlines");
 
 type Point = [number, number];
 type Ring = Point[];
@@ -336,6 +336,12 @@ async function main(): Promise<void> {
         </label>
       </div>
       <div class="control-group">
+        <label>
+          <input type="checkbox" id="borders-only" checked>
+          Borders only
+        </label>
+      </div>
+      <div class="control-group">
         <button id="reset-view">Reset View</button>
       </div>
       <div class="warning">
@@ -373,6 +379,7 @@ async function main(): Promise<void> {
   const showMatchedCheck = document.getElementById('show-matched');
   const showUnmatchedCheck = document.getElementById('show-unmatched');
   const showByMunicipalityCheck = document.getElementById('show-by-municipality');
+  const bordersOnlyCheck = document.getElementById('borders-only');
   const resetViewBtn = document.getElementById('reset-view');
   const legendDiv = document.getElementById('legend');
 
@@ -502,7 +509,7 @@ async function main(): Promise<void> {
   // Render feature
   function renderFeature(feature) {
     const geom = feature.geometry;
-    const fillColor = getFeatureColor(feature);
+    const fillColor = bordersOnlyCheck.checked ? null : getFeatureColor(feature);
     
     if (geom.type === 'Polygon') {
       const coords = geom.coordinates;
@@ -708,16 +715,35 @@ async function main(): Promise<void> {
     updateLegend();
     render();
   });
+  bordersOnlyCheck.addEventListener('change', render);
   resetViewBtn.addEventListener('click', fitToBounds);
 
   // Load data
   async function loadData() {
+    // Detect file:// protocol and show clear error
+    if (window.location.protocol === 'file:') {
+      const errorMsg = 'Cannot load data from file:// protocol. Browsers block local file access for security.\n\n' +
+        'Please run a local web server:\n' +
+        '1. Open terminal in repo root\n' +
+        '2. Run: npx http-server -p 8080\n' +
+        '3. Open: http://localhost:8080/data/derived/svg_substrate_viewer/index.html';
+      alert(errorMsg);
+      console.error('CORS error: file:// protocol detected. Use a local web server instead.');
+      return;
+    }
+    
     try {
       // Load index first to get geometry path
       const indexRes = await fetch('./data_index.json');
+      if (!indexRes.ok) {
+        throw new Error(\`Failed to load index: \${indexRes.statusText}\`);
+      }
       const indexData = await indexRes.json();
       
       const geoJSONRes = await fetch(indexData.meta.geometry_path);
+      if (!geoJSONRes.ok) {
+        throw new Error(\`Failed to load geometry: \${geoJSONRes.statusText}\`);
+      }
       
       settlementsGeoJSON = await geoJSONRes.json();
       dataIndex = indexData;
@@ -732,7 +758,10 @@ async function main(): Promise<void> {
       fitToBounds();
     } catch (err) {
       console.error('Error loading data:', err);
-      alert('Failed to load data. Make sure you are running from a web server.');
+      const errorMsg = err instanceof Error && err.message.includes('fetch') && window.location.protocol === 'file:'
+        ? 'CORS error: Cannot load data from file:// protocol. Please run a local web server (npx http-server -p 8080) and open via http://localhost:8080/...'
+        : \`Failed to load data: \${err instanceof Error ? err.message : String(err)}\`;
+      alert(errorMsg);
     }
   }
 

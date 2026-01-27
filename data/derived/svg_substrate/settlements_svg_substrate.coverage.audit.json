@@ -1,68 +1,20 @@
 {
   "census_total": 6140,
-  "features_total": 6108,
+  "features_total": 6137,
   "sid_validation": {
     "missing_sid_count": 0,
-    "duplicate_sid_count": 9,
-    "duplicate_sid_list": [
-      "S130478",
-      "S138487",
-      "S164984",
-      "S166138",
-      "S170046",
-      "S201634",
-      "S219223",
-      "S219371",
-      "S225665"
-    ],
+    "duplicate_sid_count": 0,
+    "duplicate_sid_list": [],
     "unmatched_placeholder_count": 0
   },
   "identity_mode_used": "census_id",
   "coverage": {
-    "matched_count": 6099,
-    "missing_census_count": 41,
+    "matched_count": 6137,
+    "missing_census_count": 3,
     "missing_census_list": [
-      "113719",
       "130397",
-      "135291",
-      "136069",
       "138517",
-      "144509",
-      "164585",
-      "165239",
-      "165859",
-      "169617",
-      "170917",
-      "201693",
-      "205206",
-      "205281",
-      "208566",
-      "208752",
-      "208779",
-      "209422",
-      "209457",
-      "209473",
-      "211974",
-      "212067",
-      "212601",
-      "214442",
-      "216763",
-      "217514",
-      "217611",
-      "219509",
-      "221953",
-      "224731",
-      "224774",
-      "226394",
-      "226769",
-      "226882",
-      "227234",
-      "227757",
-      "228265",
-      "229318",
-      "229334",
-      "229725",
-      "229741"
+      "201693"
     ],
     "extra_feature_count": 0,
     "extra_feature_list": [],
@@ -90,7 +42,7 @@
     },
     {
       "municipality_id": "20583",
-      "feature_count": 142,
+      "feature_count": 141,
       "census_count": 141,
       "census_name": "Trebinje"
     },
@@ -108,13 +60,13 @@
     },
     {
       "municipality_id": "20613",
-      "feature_count": 99,
+      "feature_count": 101,
       "census_count": 101,
       "census_name": "Foča (RS)"
     },
     {
       "municipality_id": "20532",
-      "feature_count": 95,
+      "feature_count": 96,
       "census_count": 96,
       "census_name": "Sokolac"
     },
@@ -209,6 +161,12 @@
       "census_name": "Gradiška"
     },
     {
+      "municipality_id": "20168",
+      "feature_count": 68,
+      "census_count": 68,
+      "census_name": "Zvornik"
+    },
+    {
       "municipality_id": "11541",
       "feature_count": 67,
       "census_count": 67,
@@ -225,12 +183,6 @@
       "feature_count": 66,
       "census_count": 66,
       "census_name": "Tuzla"
-    },
-    {
-      "municipality_id": "20168",
-      "feature_count": 65,
-      "census_count": 68,
-      "census_name": "Zvornik"
     },
     {
       "municipality_id": "20494",
@@ -251,12 +203,6 @@
       "census_name": "Pale (RS)"
     },
     {
-      "municipality_id": "20044",
-      "feature_count": 61,
-      "census_count": 61,
-      "census_name": "Bileća"
-    },
-    {
       "municipality_id": "20265",
       "feature_count": 61,
       "census_count": 61,
@@ -269,10 +215,22 @@
       "census_name": "Novo Goražde"
     },
     {
+      "municipality_id": "10308",
+      "feature_count": 60,
+      "census_count": 60,
+      "census_name": "Tomislavgrad"
+    },
+    {
       "municipality_id": "11410",
       "feature_count": 60,
       "census_count": 60,
       "census_name": "Grad Mostar"
+    },
+    {
+      "municipality_id": "20044",
+      "feature_count": 60,
+      "census_count": 61,
+      "census_name": "Bileća"
     },
     {
       "municipality_id": "10049",
@@ -281,22 +239,16 @@
       "census_name": "Bihać"
     },
     {
-      "municipality_id": "10308",
-      "feature_count": 59,
-      "census_count": 60,
-      "census_name": "Tomislavgrad"
-    },
-    {
-      "municipality_id": "10588",
-      "feature_count": 59,
-      "census_count": 59,
-      "census_name": "Livno"
-    },
-    {
       "municipality_id": "30163",
       "feature_count": 59,
       "census_count": 59,
       "census_name": "Brčko"
+    },
+    {
+      "municipality_id": "10588",
+      "feature_count": 58,
+      "census_count": 59,
+      "census_name": "Livno"
     },
     {
       "municipality_id": "11487",
@@ -311,10 +263,22 @@
       "census_name": "Derventa"
     },
     {
+      "municipality_id": "20575",
+      "feature_count": 57,
+      "census_count": 57,
+      "census_name": "Teslić"
+    },
+    {
       "municipality_id": "10766",
       "feature_count": 56,
       "census_count": 56,
       "census_name": "Prozor"
+    },
+    {
+      "municipality_id": "20389",
+      "feature_count": 56,
+      "census_count": 56,
+      "census_name": "Nevesinje"
     },
     {
       "municipality_id": "10324",
@@ -335,22 +299,16 @@
       "census_name": "Trnovo (FBiH)"
     },
     {
-      "municipality_id": "20389",
-      "feature_count": 55,
-      "census_count": 56,
-      "census_name": "Nevesinje"
-    },
-    {
-      "municipality_id": "20575",
-      "feature_count": 55,
-      "census_count": 57,
-      "census_name": "Teslić"
-    },
-    {
       "municipality_id": "10227",
       "feature_count": 54,
       "census_count": 54,
       "census_name": "Cazin"
+    },
+    {
+      "municipality_id": "11304",
+      "feature_count": 54,
+      "census_count": 54,
+      "census_name": "Ravno"
     },
     {
       "municipality_id": "20010",
@@ -365,12 +323,6 @@
       "census_name": "Milići"
     },
     {
-      "municipality_id": "11304",
-      "feature_count": 53,
-      "census_count": 54,
-      "census_name": "Ravno"
-    },
-    {
       "municipality_id": "10375",
       "feature_count": 52,
       "census_count": 52,
@@ -378,15 +330,9 @@
     },
     {
       "municipality_id": "10774",
-      "feature_count": 52,
+      "feature_count": 51,
       "census_count": 52,
       "census_name": "Novi Travnik"
-    },
-    {
-      "municipality_id": "10499",
-      "feature_count": 51,
-      "census_count": 48,
-      "census_name": "Kladanj"
     },
     {
       "municipality_id": "20052",
@@ -407,6 +353,12 @@
       "census_name": "Velika Kladuša"
     },
     {
+      "municipality_id": "10499",
+      "feature_count": 48,
+      "census_count": 48,
+      "census_name": "Kladanj"
+    },
+    {
       "municipality_id": "20397",
       "feature_count": 48,
       "census_count": 48,
@@ -425,6 +377,12 @@
       "census_name": "Zavidovići"
     },
     {
+      "municipality_id": "20672",
+      "feature_count": 46,
+      "census_count": 46,
+      "census_name": "Šipovo"
+    },
+    {
       "municipality_id": "10715",
       "feature_count": 45,
       "census_count": 45,
@@ -435,12 +393,6 @@
       "feature_count": 44,
       "census_count": 44,
       "census_name": "Lukavac"
-    },
-    {
-      "municipality_id": "20672",
-      "feature_count": 44,
-      "census_count": 46,
-      "census_name": "Šipovo"
     },
     {
       "municipality_id": "20281",
@@ -491,6 +443,12 @@
       "census_name": "Mrkonjić Grad"
     },
     {
+      "municipality_id": "20664",
+      "feature_count": 38,
+      "census_count": 38,
+      "census_name": "Šekovići"
+    },
+    {
       "municipality_id": "11428",
       "feature_count": 37,
       "census_count": 37,
@@ -515,12 +473,6 @@
       "census_name": "Čajniče"
     },
     {
-      "municipality_id": "20664",
-      "feature_count": 36,
-      "census_count": 38,
-      "census_name": "Šekovići"
-    },
-    {
       "municipality_id": "10146",
       "feature_count": 35,
       "census_count": 35,
@@ -531,6 +483,18 @@
       "feature_count": 35,
       "census_count": 35,
       "census_name": "Ljubuški"
+    },
+    {
+      "municipality_id": "11436",
+      "feature_count": 35,
+      "census_count": 35,
+      "census_name": "Bosanski Petrovac"
+    },
+    {
+      "municipality_id": "20320",
+      "feature_count": 35,
+      "census_count": 35,
+      "census_name": "Lopare"
     },
     {
       "municipality_id": "10391",
@@ -551,22 +515,10 @@
       "census_name": "Vitez"
     },
     {
-      "municipality_id": "20320",
-      "feature_count": 34,
-      "census_count": 35,
-      "census_name": "Lopare"
-    },
-    {
       "municipality_id": "10421",
       "feature_count": 33,
       "census_count": 33,
       "census_name": "Jablanica"
-    },
-    {
-      "municipality_id": "11436",
-      "feature_count": 33,
-      "census_count": 35,
-      "census_name": "Bosanski Petrovac"
     },
     {
       "municipality_id": "10243",
@@ -581,12 +533,6 @@
       "census_name": "Foča (FBiH)"
     },
     {
-      "municipality_id": "20508",
-      "feature_count": 30,
-      "census_count": 29,
-      "census_name": "Ribnik"
-    },
-    {
       "municipality_id": "20648",
       "feature_count": 30,
       "census_count": 30,
@@ -597,6 +543,12 @@
       "feature_count": 29,
       "census_count": 29,
       "census_name": "Živinice"
+    },
+    {
+      "municipality_id": "20508",
+      "feature_count": 29,
+      "census_count": 29,
+      "census_name": "Ribnik"
     },
     {
       "municipality_id": "10189",
@@ -624,9 +576,15 @@
     },
     {
       "municipality_id": "11606",
-      "feature_count": 25,
+      "feature_count": 26,
       "census_count": 26,
       "census_name": "Stolac"
+    },
+    {
+      "municipality_id": "20621",
+      "feature_count": 26,
+      "census_count": 26,
+      "census_name": "Han Pijesak"
     },
     {
       "municipality_id": "11614",
@@ -635,10 +593,16 @@
       "census_name": "Drvar"
     },
     {
-      "municipality_id": "20621",
+      "municipality_id": "20591",
       "feature_count": 25,
-      "census_count": 26,
-      "census_name": "Han Pijesak"
+      "census_count": 25,
+      "census_name": "Trnovo (RS)"
+    },
+    {
+      "municipality_id": "20605",
+      "feature_count": 25,
+      "census_count": 25,
+      "census_name": "Ugljevik"
     },
     {
       "municipality_id": "20354",
@@ -647,10 +611,10 @@
       "census_name": "Modriča"
     },
     {
-      "municipality_id": "20591",
+      "municipality_id": "20435",
       "feature_count": 24,
-      "census_count": 25,
-      "census_name": "Trnovo (RS)"
+      "census_count": 24,
+      "census_name": "Oštra Luka"
     },
     {
       "municipality_id": "11479",
@@ -663,18 +627,6 @@
       "feature_count": 23,
       "census_count": 23,
       "census_name": "Brod"
-    },
-    {
-      "municipality_id": "20435",
-      "feature_count": 23,
-      "census_count": 24,
-      "census_name": "Oštra Luka"
-    },
-    {
-      "municipality_id": "20605",
-      "feature_count": 23,
-      "census_count": 25,
-      "census_name": "Ugljevik"
     },
     {
       "municipality_id": "10260",
@@ -707,6 +659,12 @@
       "census_name": "Banovići"
     },
     {
+      "municipality_id": "10731",
+      "feature_count": 20,
+      "census_count": 20,
+      "census_name": "Posušje"
+    },
+    {
       "municipality_id": "11231",
       "feature_count": 20,
       "census_count": 20,
@@ -725,22 +683,16 @@
       "census_name": "Kneževo"
     },
     {
-      "municipality_id": "10731",
+      "municipality_id": "20206",
       "feature_count": 19,
-      "census_count": 20,
-      "census_name": "Posušje"
+      "census_count": 19,
+      "census_name": "Istočni Stari Grad"
     },
     {
       "municipality_id": "11274",
       "feature_count": 18,
       "census_count": 18,
       "census_name": "Dobretići"
-    },
-    {
-      "municipality_id": "20206",
-      "feature_count": 16,
-      "census_count": 19,
-      "census_name": "Istočni Stari Grad"
     },
     {
       "municipality_id": "20427",
@@ -750,9 +702,21 @@
     },
     {
       "municipality_id": "11576",
-      "feature_count": 14,
+      "feature_count": 15,
       "census_count": 15,
       "census_name": "Pale (FBiH)"
+    },
+    {
+      "municipality_id": "11525",
+      "feature_count": 14,
+      "census_count": 14,
+      "census_name": "Odžak"
+    },
+    {
+      "municipality_id": "11533",
+      "feature_count": 14,
+      "census_count": 14,
+      "census_name": "Orašje"
     },
     {
       "municipality_id": "10405",
@@ -767,18 +731,6 @@
       "census_name": "Sapna"
     },
     {
-      "municipality_id": "11525",
-      "feature_count": 13,
-      "census_count": 14,
-      "census_name": "Odžak"
-    },
-    {
-      "municipality_id": "11533",
-      "feature_count": 13,
-      "census_count": 14,
-      "census_name": "Orašje"
-    },
-    {
       "municipality_id": "11622",
       "feature_count": 13,
       "census_count": 13,
@@ -791,10 +743,22 @@
       "census_name": "Ilidža"
     },
     {
+      "municipality_id": "20109",
+      "feature_count": 12,
+      "census_count": 12,
+      "census_name": "Vukosavlje"
+    },
+    {
       "municipality_id": "20273",
       "feature_count": 12,
       "census_count": 12,
       "census_name": "Kostajnica"
+    },
+    {
+      "municipality_id": "20290",
+      "feature_count": 12,
+      "census_count": 12,
+      "census_name": "Krupa na Uni"
     },
     {
       "municipality_id": "20222",
@@ -803,28 +767,16 @@
       "census_name": "Jezero"
     },
     {
+      "municipality_id": "20451",
+      "feature_count": 11,
+      "census_count": 11,
+      "census_name": "Pelagićevo"
+    },
+    {
       "municipality_id": "11339",
       "feature_count": 10,
       "census_count": 10,
       "census_name": "Teočak"
-    },
-    {
-      "municipality_id": "20109",
-      "feature_count": 10,
-      "census_count": 12,
-      "census_name": "Vukosavlje"
-    },
-    {
-      "municipality_id": "20290",
-      "feature_count": 10,
-      "census_count": 12,
-      "census_name": "Krupa na Uni"
-    },
-    {
-      "municipality_id": "20451",
-      "feature_count": 10,
-      "census_count": 11,
-      "census_name": "Pelagićevo"
     },
     {
       "municipality_id": "11584",
@@ -869,6 +821,12 @@
       "census_name": "Donji Žabar"
     },
     {
+      "municipality_id": "20460",
+      "feature_count": 6,
+      "census_count": 6,
+      "census_name": "Petrovac"
+    },
+    {
       "municipality_id": "11282",
       "feature_count": 5,
       "census_count": 6,
@@ -879,12 +837,6 @@
       "feature_count": 5,
       "census_count": 5,
       "census_name": "Istočna Ilidža"
-    },
-    {
-      "municipality_id": "20460",
-      "feature_count": 5,
-      "census_count": 6,
-      "census_name": "Petrovac"
     },
     {
       "municipality_id": "20303",

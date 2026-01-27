@@ -1,0 +1,117 @@
+BORDER FABRIC FORENSIC AUDIT
+============================================================
+Canonical SVG-Derived Settlements Substrate
+
+AGGREGATE METRICS
+------------------------------------------------------------
+Total Segments: 3.866.071
+Total Boundary Length: 267374.93
+
+Shared Segments: 2.147
+Shared Border Length: 430.30
+Shared Ratio: 0.16%
+
+Free Segments: 3.863.924
+Free Border Length: 266514.33
+Free Ratio: 99.84%
+
+Anomaly Segments (>2 owners): 0
+Anomaly Length: 0.00
+
+TOP SETTLEMENTS - HIGHEST SHARED RATIO
+------------------------------------------------------------
+S208710: 100.00% shared (boundary: 13.43)
+S117781: 94.50% shared (boundary: 8.92)
+S229172: 53.56% shared (boundary: 48.64)
+S209198: 46.12% shared (boundary: 26.70)
+S228303: 44.74% shared (boundary: 15.11)
+S202983: 43.28% shared (boundary: 19.28)
+S203777: 43.12% shared (boundary: 20.53)
+S229580: 42.18% shared (boundary: 45.29)
+S204919: 40.62% shared (boundary: 20.24)
+S145521: 39.22% shared (boundary: 14.22)
+S216194: 38.98% shared (boundary: 25.34)
+S219622: 37.33% shared (boundary: 22.68)
+S216348: 34.70% shared (boundary: 29.10)
+S229687: 34.02% shared (boundary: 56.15)
+S169811: 33.95% shared (boundary: 10.98)
+S220639: 33.62% shared (boundary: 29.04)
+S225436: 33.27% shared (boundary: 28.23)
+S215902: 33.01% shared (boundary: 17.92)
+S225258: 32.62% shared (boundary: 28.79)
+S215783: 32.53% shared (boundary: 30.36)
+
+TOP SETTLEMENTS - LOWEST SHARED RATIO
+------------------------------------------------------------
+S100013: 0.00% shared (boundary: 29.20)
+S100021: 0.00% shared (boundary: 57.22)
+S100030: 0.00% shared (boundary: 29.48)
+S100048: 0.00% shared (boundary: 48.91)
+S100056: 0.00% shared (boundary: 36.74)
+S100064: 0.00% shared (boundary: 57.08)
+S100072: 0.00% shared (boundary: 93.73)
+S100099: 0.00% shared (boundary: 27.15)
+S100102: 0.00% shared (boundary: 33.75)
+S100129: 0.00% shared (boundary: 30.64)
+S100137: 0.00% shared (boundary: 28.01)
+S100145: 0.00% shared (boundary: 39.14)
+S100153: 0.00% shared (boundary: 35.13)
+S100161: 0.00% shared (boundary: 121.82)
+S100170: 0.00% shared (boundary: 58.06)
+S100188: 0.00% shared (boundary: 20.68)
+S100196: 0.00% shared (boundary: 35.71)
+S100200: 0.00% shared (boundary: 48.80)
+S100218: 0.00% shared (boundary: 58.07)
+S100811: 0.00% shared (boundary: 51.27)
+
+TOP SETTLEMENTS - HIGHEST FREE BOUNDARY LENGTH
+------------------------------------------------------------
+S113727: 272.17 free (boundary: 272.17)
+S200026: 232.92 free (boundary: 232.92)
+S228001: 220.75 free (boundary: 220.75)
+S210145: 215.07 free (boundary: 215.07)
+S219371: 202.55 free (boundary: 202.55)
+S206385: 195.25 free (boundary: 195.25)
+S136069: 193.21 free (boundary: 193.21)
+S162027: 188.28 free (boundary: 188.28)
+S227404: 186.21 free (boundary: 186.21)
+S129232: 184.24 free (boundary: 184.24)
+S219223: 179.87 free (boundary: 179.87)
+S170607: 171.53 free (boundary: 171.53)
+S117030: 169.95 free (boundary: 169.95)
+S229989: 162.23 free (boundary: 162.23)
+S100838: 160.36 free (boundary: 160.36)
+S209945: 159.89 free (boundary: 159.89)
+S224316: 158.35 free (boundary: 158.35)
+S223166: 157.16 free (boundary: 157.16)
+S165956: 154.11 free (boundary: 154.11)
+S218324: 152.84 free (boundary: 152.84)
+
+TOP SETTLEMENTS - HIGHEST NEIGHBOR COUNT
+------------------------------------------------------------
+S117781: 2 neighbors (boundary: 8.92)
+S169811: 2 neighbors (boundary: 10.98)
+S202983: 2 neighbors (boundary: 19.28)
+S209252: 2 neighbors (boundary: 65.73)
+S209279: 2 neighbors (boundary: 69.01)
+S109487: 1 neighbors (boundary: 57.07)
+S109584: 1 neighbors (boundary: 38.22)
+S109665: 1 neighbors (boundary: 72.41)
+S109789: 1 neighbors (boundary: 27.95)
+S109827: 1 neighbors (boundary: 44.79)
+S109983: 1 neighbors (boundary: 49.32)
+S118346: 1 neighbors (boundary: 14.65)
+S118451: 1 neighbors (boundary: 16.84)
+S143189: 1 neighbors (boundary: 35.80)
+S145521: 1 neighbors (boundary: 14.22)
+S145653: 1 neighbors (boundary: 29.87)
+S156922: 1 neighbors (boundary: 45.17)
+S156973: 1 neighbors (boundary: 39.61)
+S164976: 1 neighbors (boundary: 20.58)
+S164984: 1 neighbors (boundary: 104.76)
+
+INTERPRETATION
+------------------------------------------------------------
+CONFIRMED: Shared border ratio < 5% indicates the SVG substrate
+does NOT form a shared-border partition at scale.
+Most boundaries are free (not shared between settlements).

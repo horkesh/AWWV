@@ -1,46 +1,94 @@
-SETTLEMENT SUBSTRATE DERIVATION AUDIT
-=====================================
+SETTLEMENT SUBSTRATE DERIVATION AUDIT (SVG-DERIVED)
+============================================================
 
-INPUT:
-  Total features: 6278
-  Geometry types: Polygon=6278
-  Layer values (top 20): settlement=6135, municipality=142, country=1
+Total files parsed: 142
+Shapes extracted: 6148
+Features emitted (before merge): 6148
+Features emitted (after merge): 6137
 
-SETTLEMENT DETECTION:
-  Method: deterministic_filter_selection
-  Filter applied: layer="settlement"
-  Candidate count: 6135
-  Decision path:
-    - Total features: 6278
-    - Geometry types: Polygon=6278
-    - Layer="settlement" filter: 6135 candidates with Polygon/MultiPolygon + valid sid
-    - feature_type="settlement" filter: 0 candidates with Polygon/MultiPolygon + valid sid
-    - kind="settlement" filter: 0 candidates with Polygon/MultiPolygon + valid sid
-    - All Polygon/MultiPolygon with valid sid: 6278 candidates
-    - Chosen filter: layer="settlement" (6135 candidates) - explicit layer filter preferred
+Ring closure (deterministic):
+  Rings closed count: 40
+  Features fixed by ring closure: 40
+  Features still invalid after closure: 0
 
-OUTPUT:
-  Feature count: 6135
-  Missing SID count: 0
-  Invalid geometry count: 0
-  Invalid geometry reasons:
-    - Non-polygon: 0
-    - Non-finite coords: 0
-    - Ring too short: 0
-    - Ring not closed: 0
+Matching:
+  Matched: 6148
+  Unmatched: 0
+  Ambiguous: 0
 
-SID STATISTICS:
-  Unique SIDs: 6135
-  Duplicate SID groups: 0
+Missing census settlement IDs:
+  130397
+  138517
+  201693
 
-MUNICIPALITY ID STATISTICS:
-  Present: 6135 (100.0%)
-  Missing: 0
+Duplicate SID merge:
+  duplicate_sid_count_before_merge: 11
+  merged_multiPolygon_count: 11
+  max_parts_per_sid: 2
+  conflict_counts.settlement_name_conflict: 0
+  conflict_counts.municipality_id_conflict: 0
 
-BOUNDING BOX:
-  Global: [1.000000, -9.521400, 940.963800, 909.960200]
-  Per-feature width: min=0.472000, median=9.757500, p90=19.516700, max=68.285800
-  Per-feature height: min=0.347900, median=9.889100, p90=19.724200, max=61.964900
+Geometry validity:
+  Valid: 6148
+  Invalid: 0
+  Reasons:
 
-NOTE:
-  This derived file is a minimal substrate. Population/ethnicity remains in separate authoritative datasets and will be joined into derived start-state tables.
+Bounds:
+  Global: [1.000000, -9.521430, 940.963800, 910.090330]
+
+Coordinate regime:
+  SVG coordinate space (from municipality JS files)
+
+Top 50 files by unmatched count:
+  Banja Luka_20010.js: 0 unmatched
+  Banovici_10014.js: 0 unmatched
+  Berkovici_20028.js: 0 unmatched
+  Bihac_10049.js: 0 unmatched
+  Bijeljina_20036.js: 0 unmatched
+  Bileca_20044.js: 0 unmatched
+  Bosanska Dubica_20265.js: 0 unmatched
+  Bosanska Gradiska_20125.js: 0 unmatched
+  Bosanska Krupa_11428.js: 0 unmatched
+  Bosanski Novi_20397.js: 0 unmatched
+  Bosanski Petrovac_11436.js: 0 unmatched
+  Bosansko Grahovo_10146.js: 0 unmatched
+  Bratunac_20052.js: 0 unmatched
+  Brcko_30163.js: 0 unmatched
+  Breza_10189.js: 0 unmatched
+  Brod_20079.js: 0 unmatched
+  Bugojno_10197.js: 0 unmatched
+  Busovaca_10219.js: 0 unmatched
+  Buzim_11240.js: 0 unmatched
+  Cajnice_20630.js: 0 unmatched
+  Capljina_10243.js: 0 unmatched
+  Cazin_10227.js: 0 unmatched
+  Celic_11231.js: 0 unmatched
+  Celinac_20648.js: 0 unmatched
+  Centar Sarajevo_10839.js: 0 unmatched
+  Citluk_10260.js: 0 unmatched
+  Derventa_20133.js: 0 unmatched
+  Doboj Istok_11258.js: 0 unmatched
+  Doboj Jug_11266.js: 0 unmatched
+  Doboj_20141.js: 0 unmatched
+  Dobretici_11274.js: 0 unmatched
+  Domaljevac-Samac_11282.js: 0 unmatched
+  Donji Vakuf_10294.js: 0 unmatched
+  Donji Zabar_20150.js: 0 unmatched
+  Drvar_11614.js: 0 unmatched
+  Foca (FBiH)_11444.js: 0 unmatched
+  Foca (RS)_20613.js: 0 unmatched
+  Fojnica_10324.js: 0 unmatched
+  Gacko_20117.js: 0 unmatched
+  Glamoc_10359.js: 0 unmatched
+  Gorazde_11452.js: 0 unmatched
+  Gornji Vakuf-Uskoplje_10375.js: 0 unmatched
+  Gracanica_11479.js: 0 unmatched
+  Gradacac_10391.js: 0 unmatched
+  Grude_10405.js: 0 unmatched
+  Hadzici_10847.js: 0 unmatched
+  Han Pijesak_20621.js: 0 unmatched
+  Ilidza_11550.js: 0 unmatched
+  Ilijas_10863.js: 0 unmatched
+  Istocna Ilidza_20176.js: 0 unmatched
+
+Top 200 unmatched entries:
