@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A War Without Victory - Map Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+        }
+        
+        .header {
+            padding: 1rem 2rem;
+            background: #16213e;
+            border-bottom: 1px solid #0f3460;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0f3460;
+        }
+        
+        .controls {
+            padding: 1rem 2rem;
+            background: #16213e;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        label {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+        
+        select, button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #0f3460;
+            background: #1a1a2e;
+            color: #eee;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        select:hover, button:hover {
+            background: #0f3460;
+        }
+        
+        .map-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            overflow: hidden;
+        }
+        
+        #map {
+            background: #0f0f1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        .tooltip {
+            position: fixed;
+            background: rgba(22, 33, 62, 0.95);
+            border: 1px solid #0f3460;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.85rem;
+            max-width: 300px;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .tooltip h3 {
+            color: #e94560;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.25rem 0;
+        }
+        
+        .tooltip-label {
+            color: #888;
+        }
+        
+        .tooltip-value {
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .ethnic-bar {
+            height: 8px;
+            border-radius: 4px;
+            display: flex;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .ethnic-bar > div {
+            height: 100%;
+        }
+        
+        .ethnic-bosniak { background: #4CAF50; }
+        .ethnic-croat { background: #2196F3; }
+        .ethnic-serb { background: #F44336; }
+        .ethnic-other { background: #9E9E9E; }
+        
+        .legend {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            background: rgba(22, 33, 62, 0.95);
+            border: 1px solid #0f3460;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+        
+        .legend h4 {
+            margin-bottom: 0.5rem;
+            color: #e94560;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.25rem 0;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+        
+        /* Settlement path styles */
+        .settlement {
+            stroke: rgba(255,255,255,0.1);
+            stroke-width: 0.3;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .settlement:hover {
+            stroke: #fff;
+            stroke-width: 1;
+        }
+        
+        .municipality {
+            fill: none;
+            stroke: rgba(255,255,255,0.4);
+            stroke-width: 1;
+            pointer-events: none;
+        }
+        
+        .country {
+            fill: none;
+            stroke: #e94560;
+            stroke-width: 2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>A War Without Victory - Bosnia 1991 Census Map</h1>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="pop-total">-</div>
+                <div>Total Population</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="settlement-count">-</div>
+                <div>Settlements</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="mun-count">-</div>
+                <div>Municipalities</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>Color by:</label>
+            <select id="color-mode">
+                <option value="majority">Ethnic Majority</option>
+                <option value="plurality">Ethnic Plurality</option>
+                <option value="density">Population Density</option>
+                <option value="total">Total Population</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Show:</label>
+            <select id="layer-mode">
+                <option value="settlements">Settlements</option>
+                <option value="municipalities">Municipalities Only</option>
+                <option value="both">Both</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+            <button id="reset-view">Reset</button>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <svg id="map" width="900" height="700"></svg>
+    </div>
+    
+    <div class="tooltip" id="tooltip"></div>
+    
+    <div class="legend">
+        <h4>Ethnic Groups</h4>
+        <div class="legend-item">
+            <div class="legend-color ethnic-bosniak"></div>
+            <span>Bosniaks</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color ethnic-croat"></div>
+            <span>Croats</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color ethnic-serb"></div>
+            <span>Serbs</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color ethnic-other"></div>
+            <span>Others/Mixed</span>
+        </div>
+    </div>
+    
+    <div class="loading" id="loading">Loading map data...</div>
+
+<script>
+// Configuration
+const SVG_WIDTH = 900;
+const SVG_HEIGHT = 700;
+const PADDING = 20;
+
+// State
+let settlements = [];
+let municipalities = [];
+let country = null;
+let viewBox = { x: 0, y: 0, w: 800, h: 650 };
+let isDragging = false;
+let dragStart = { x: 0, y: 0 };
+
+// Colors
+const COLORS = {
+    bosniak: '#4CAF50',
+    croat: '#2196F3',
+    serb: '#F44336',
+    other: '#9E9E9E',
+    mixed: '#9C27B0'
+};
+
+// DOM elements
+const svg = document.getElementById('map');
+const tooltip = document.getElementById('tooltip');
+const loading = document.getElementById('loading');
+
+// Initialize
+async function init() {
+    try {
+        // Load the master GeoJSON
+        const response = await fetch('bih_master.geojson');
+        const geojson = await response.json();
+        
+        // Separate features by layer
+        for (const feature of geojson.features) {
+            const layer = feature.properties.layer;
+            if (layer === 'settlement') {
+                settlements.push(feature);
+            } else if (layer === 'municipality') {
+                municipalities.push(feature);
+            } else if (layer === 'country') {
+                country = feature;
+            }
+        }
+        
+        // Calculate bounds
+        calculateBounds();
+        
+        // Update stats
+        updateStats(geojson.metadata);
+        
+        // Render map
+        render();
+        
+        // Hide loading
+        loading.style.display = 'none';
+        
+    } catch (error) {
+        loading.textContent = 'Error loading data: ' + error.message;
+        console.error(error);
+    }
+}
+
+function calculateBounds() {
+    let minX = Infinity, minY = Infinity;
+    let maxX = -Infinity, maxY = -Infinity;
+    
+    for (const feature of [...settlements, ...municipalities]) {
+        const coords = feature.geometry.coordinates[0];
+        for (const [x, y] of coords) {
+            minX = Math.min(minX, x);
+            maxX = Math.max(maxX, x);
+            minY = Math.min(minY, y);
+            maxY = Math.max(maxY, y);
+        }
+    }
+    
+    const padding = 20;
+    viewBox = {
+        x: minX - padding,
+        y: minY - padding,
+        w: maxX - minX + padding * 2,
+        h: maxY - minY + padding * 2
+    };
+}
+
+function updateStats(metadata) {
+    document.getElementById('pop-total').textContent = 
+        (metadata.total_population_1991 || 4377033).toLocaleString();
+    document.getElementById('settlement-count').textContent = 
+        (metadata.settlement_count || settlements.length).toLocaleString();
+    document.getElementById('mun-count').textContent = 
+        (metadata.municipality_count || municipalities.length).toLocaleString();
+}
+
+function getSettlementColor(feature) {
+    const pop = feature.properties.population_1991 || {};
+    const total = pop.total || 0;
+    if (total === 0) return COLORS.other;
+    
+    const mode = document.getElementById('color-mode').value;
+    
+    if (mode === 'majority' || mode === 'plurality') {
+        const threshold = mode === 'majority' ? 0.5 : 0;
+        const groups = [
+            { name: 'bosniak', count: pop.bosniaks || 0 },
+            { name: 'croat', count: pop.croats || 0 },
+            { name: 'serb', count: pop.serbs || 0 },
+            { name: 'other', count: pop.others || 0 }
+        ];
+        groups.sort((a, b) => b.count - a.count);
+        
+        if (groups[0].count / total > threshold) {
+            return COLORS[groups[0].name];
+        }
+        return COLORS.mixed;
+    }
+    
+    if (mode === 'density' || mode === 'total') {
+        // Use a log scale for population
+        const logPop = Math.log10(Math.max(1, total));
+        const maxLog = Math.log10(150000); // Sarajevo-ish
+        const ratio = Math.min(1, logPop / maxLog);
+        
+        // Color gradient from dark to bright
+        const r = Math.round(50 + ratio * 180);
+        const g = Math.round(50 + ratio * 100);
+        const b = Math.round(80 + ratio * 50);
+        return `rgb(${r},${g},${b})`;
+    }
+    
+    return COLORS.other;
+}
+
+function coordsToPath(coords) {
+    if (!coords || coords.length < 3) return '';
+    return 'M ' + coords.map(c => `${c[0]},${c[1]}`).join(' L ') + ' Z';
+}
+
+function render() {
+    const layerMode = document.getElementById('layer-mode').value;
+    svg.innerHTML = '';
+    
+    // Set viewBox
+    svg.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
+    
+    // Create groups for layering
+    const settlementGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const munGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const countryGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    
+    // Render settlements
+    if (layerMode === 'settlements' || layerMode === 'both') {
+        for (const feature of settlements) {
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', coordsToPath(feature.geometry.coordinates[0]));
+            path.setAttribute('fill', getSettlementColor(feature));
+            path.setAttribute('class', 'settlement');
+            path.dataset.id = feature.id;
+            
+            path.addEventListener('mouseenter', (e) => showTooltip(e, feature));
+            path.addEventListener('mousemove', moveTooltip);
+            path.addEventListener('mouseleave', hideTooltip);
+            
+            settlementGroup.appendChild(path);
+        }
+    }
+    
+    // Render municipality borders
+    if (layerMode === 'municipalities' || layerMode === 'both') {
+        for (const feature of municipalities) {
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', coordsToPath(feature.geometry.coordinates[0]));
+            path.setAttribute('class', 'municipality');
+            
+            if (layerMode === 'municipalities') {
+                path.style.fill = '#1a1a2e';
+                path.style.pointerEvents = 'all';
+                path.style.cursor = 'pointer';
+                path.addEventListener('mouseenter', (e) => showTooltip(e, feature, true));
+                path.addEventListener('mousemove', moveTooltip);
+                path.addEventListener('mouseleave', hideTooltip);
+            }
+            
+            munGroup.appendChild(path);
+        }
+    }
+    
+    // Render country border
+    if (country) {
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', coordsToPath(country.geometry.coordinates[0]));
+        path.setAttribute('class', 'country');
+        countryGroup.appendChild(path);
+    }
+    
+    svg.appendChild(settlementGroup);
+    svg.appendChild(munGroup);
+    svg.appendChild(countryGroup);
+}
+
+function showTooltip(event, feature, isMunicipality = false) {
+    const props = feature.properties;
+    const pop = props.population_1991 || {};
+    const total = pop.total || 0;
+    
+    let html = `<h3>${props.name}</h3>`;
+    
+    if (!isMunicipality && props.municipality_name) {
+        html += `<div class="tooltip-row">
+            <span class="tooltip-label">Municipality:</span>
+            <span class="tooltip-value">${props.municipality_name}</span>
+        </div>`;
+    }
+    
+    html += `<div class="tooltip-row">
+        <span class="tooltip-label">Population (1991):</span>
+        <span class="tooltip-value">${total.toLocaleString()}</span>
+    </div>`;
+    
+    if (total > 0) {
+        const pctB = ((pop.bosniaks || 0) / total * 100).toFixed(1);
+        const pctC = ((pop.croats || 0) / total * 100).toFixed(1);
+        const pctS = ((pop.serbs || 0) / total * 100).toFixed(1);
+        const pctO = ((pop.others || 0) / total * 100).toFixed(1);
+        
+        html += `
+        <div class="tooltip-row">
+            <span class="tooltip-label">Bosniaks:</span>
+            <span class="tooltip-value">${(pop.bosniaks || 0).toLocaleString()} (${pctB}%)</span>
+        </div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">Croats:</span>
+            <span class="tooltip-value">${(pop.croats || 0).toLocaleString()} (${pctC}%)</span>
+        </div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">Serbs:</span>
+            <span class="tooltip-value">${(pop.serbs || 0).toLocaleString()} (${pctS}%)</span>
+        </div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">Others:</span>
+            <span class="tooltip-value">${(pop.others || 0).toLocaleString()} (${pctO}%)</span>
+        </div>
+        <div class="ethnic-bar">
+            <div class="ethnic-bosniak" style="width: ${pctB}%"></div>
+            <div class="ethnic-croat" style="width: ${pctC}%"></div>
+            <div class="ethnic-serb" style="width: ${pctS}%"></div>
+            <div class="ethnic-other" style="width: ${pctO}%"></div>
+        </div>`;
+    }
+    
+    tooltip.innerHTML = html;
+    tooltip.style.display = 'block';
+    moveTooltip(event);
+}
+
+function moveTooltip(event) {
+    const x = event.clientX + 15;
+    const y = event.clientY + 15;
+    
+    // Keep tooltip on screen
+    const rect = tooltip.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width - 10;
+    const maxY = window.innerHeight - rect.height - 10;
+    
+    tooltip.style.left = Math.min(x, maxX) + 'px';
+    tooltip.style.top = Math.min(y, maxY) + 'px';
+}
+
+function hideTooltip() {
+    tooltip.style.display = 'none';
+}
+
+// Zoom controls
+document.getElementById('zoom-in').addEventListener('click', () => {
+    const cx = viewBox.x + viewBox.w / 2;
+    const cy = viewBox.y + viewBox.h / 2;
+    viewBox.w *= 0.7;
+    viewBox.h *= 0.7;
+    viewBox.x = cx - viewBox.w / 2;
+    viewBox.y = cy - viewBox.h / 2;
+    render();
+});
+
+document.getElementById('zoom-out').addEventListener('click', () => {
+    const cx = viewBox.x + viewBox.w / 2;
+    const cy = viewBox.y + viewBox.h / 2;
+    viewBox.w *= 1.4;
+    viewBox.h *= 1.4;
+    viewBox.x = cx - viewBox.w / 2;
+    viewBox.y = cy - viewBox.h / 2;
+    render();
+});
+
+document.getElementById('reset-view').addEventListener('click', () => {
+    calculateBounds();
+    render();
+});
+
+// Color mode change
+document.getElementById('color-mode').addEventListener('change', render);
+document.getElementById('layer-mode').addEventListener('change', render);
+
+// Pan support
+svg.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    dragStart = { x: e.clientX, y: e.clientY };
+    svg.style.cursor = 'grabbing';
+});
+
+svg.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    
+    const scale = viewBox.w / SVG_WIDTH;
+    const dx = (dragStart.x - e.clientX) * scale;
+    const dy = (dragStart.y - e.clientY) * scale;
+    
+    viewBox.x += dx;
+    viewBox.y += dy;
+    dragStart = { x: e.clientX, y: e.clientY };
+    
+    svg.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
+});
+
+svg.addEventListener('mouseup', () => {
+    isDragging = false;
+    svg.style.cursor = 'default';
+});
+
+svg.addEventListener('mouseleave', () => {
+    isDragging = false;
+    svg.style.cursor = 'default';
+});
+
+// Mouse wheel zoom
+svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    
+    const rect = svg.getBoundingClientRect();
+    const mouseX = (e.clientX - rect.left) / rect.width;
+    const mouseY = (e.clientY - rect.top) / rect.height;
+    
+    const factor = e.deltaY > 0 ? 1.1 : 0.9;
+    
+    const newW = viewBox.w * factor;
+    const newH = viewBox.h * factor;
+    
+    viewBox.x = viewBox.x + (viewBox.w - newW) * mouseX;
+    viewBox.y = viewBox.y + (viewBox.h - newH) * mouseY;
+    viewBox.w = newW;
+    viewBox.h = newH;
+    
+    svg.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
+});
+
+// Start
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Log files
+*.log
+
+# Python cache
+tools/**/__pycache__/
+*.pyc
+
+# Save files (individual saves, but keep saves/ directory tracked)
+saves/save_*.json
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# IDE
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

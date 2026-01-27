@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settlement Fabric vs Municipality Outlines Fit Viewer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+    #canvas-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    #canvas {
+      display: block;
+      cursor: grab;
+    }
+    #canvas.dragging {
+      cursor: grabbing;
+    }
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+      max-width: 320px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .control-group {
+      margin-bottom: 12px;
+    }
+    .control-group:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    button {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      width: 100%;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .stats {
+      font-size: 11px;
+      color: #666;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+    .warning {
+      font-size: 11px;
+      color: #d9534f;
+      margin-top: 8px;
+      padding: 6px;
+      background: #fee;
+      border: 1px solid #fcc;
+      border-radius: 3px;
+    }
+    #error {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fee;
+      border: 2px solid #f00;
+      padding: 20px;
+      border-radius: 4px;
+      z-index: 100;
+      display: none;
+      max-width: 80%;
+    }
+    .diagnostics {
+      font-size: 10px;
+      color: #888;
+      margin-top: 8px;
+      padding: 6px;
+      background: #f8f8f8;
+      border-radius: 3px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+    <div id="error"></div>
+    <div id="controls">
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-settlements" checked>
+          Show settlements
+        </label>
+      </div>
+      <div class="control-group">
+        <label>Municipality layer source:</label>
+        <div style="margin-left: 10px;">
+          <label style="display: block; margin-bottom: 4px;">
+            <input type="radio" name="muni-source" id="muni-source-svg" value="svg">
+            Municipality from SVG outlines
+          </label>
+          <label style="display: block; margin-bottom: 4px;">
+            <input type="radio" name="muni-source" id="muni-source-fabric" value="fabric" checked>
+            Municipality from fabric-derived boundaries
+          </label>
+        </div>
+      </div>
+      <div class="control-group" id="fabric-clean-group" style="display: none;">
+        <label>
+          <input type="checkbox" id="use-cleaned-fabric">
+          Use CLEANED fabric boundaries
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-muni-outlines" checked>
+          Show municipality outlines
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-settlement-points">
+          Show settlement points
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-muni-points">
+          Show municipality points
+        </label>
+      </div>
+      <div class="control-group">
+        <label>Filter municipality key contains:</label>
+        <input type="text" id="filter-text" placeholder="e.g., Velika">
+      </div>
+      <div class="control-group">
+        <label>Focus municipality:</label>
+        <select id="focus-select">
+          <option value="">-- Select --</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="clip-settlements">
+          Clip settlements to focused municipality bbox
+        </label>
+      </div>
+      <div class="control-group">
+        <button id="fit-all">Fit All</button>
+      </div>
+      <div class="stats" id="stats">
+        Loading...
+      </div>
+      <div id="warnings"></div>
+      <div class="diagnostics" id="diagnostics" style="display: none;">
+        <strong>Property keys seen:</strong>
+        <div id="property-keys"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Fabric-Derived Municipality Boundaries Cleaning Report
+=====================================================
+
+Municipalities total: 0
+Municipalities with any drops: 0
+Total segments: 0
+Total dropped segments: 0
+Total unclassified segments: 0
+Epsilon used: 0
+Grid size: 0

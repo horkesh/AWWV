@@ -1,0 +1,69 @@
+{
+  "input": {
+    "total_features": 6278,
+    "geometry_type_counts": {
+      "Polygon": 6278
+    },
+    "layer_type_counts": {
+      "country": 1,
+      "municipality": 142,
+      "settlement": 6135
+    }
+  },
+  "settlement_detection": {
+    "method": "deterministic_filter_selection",
+    "filter_applied": "layer=\"settlement\"",
+    "candidate_count": 6135,
+    "decision_path": [
+      "Total features: 6278",
+      "Geometry types: Polygon=6278",
+      "Layer=\"settlement\" filter: 6135 candidates with Polygon/MultiPolygon + valid sid",
+      "feature_type=\"settlement\" filter: 0 candidates with Polygon/MultiPolygon + valid sid",
+      "kind=\"settlement\" filter: 0 candidates with Polygon/MultiPolygon + valid sid",
+      "All Polygon/MultiPolygon with valid sid: 6278 candidates",
+      "Chosen filter: layer=\"settlement\" (6135 candidates) - explicit layer filter preferred"
+    ]
+  },
+  "output": {
+    "feature_count": 6135,
+    "missing_sid_count": 0,
+    "missing_sid_sample_indices": [],
+    "invalid_geometry_count": 0,
+    "invalid_geometry_reasons": {
+      "non_polygon": 0,
+      "non_finite_coords": 0,
+      "ring_too_short": 0,
+      "ring_not_closed": 0
+    },
+    "invalid_geometry_samples": []
+  },
+  "sid_stats": {
+    "unique_count": 6135,
+    "duplicates_count": 0,
+    "duplicate_samples": []
+  },
+  "municipality_id_stats": {
+    "present_count": 6135,
+    "missing_count": 0,
+    "present_percentage": 100
+  },
+  "bbox": {
+    "global": {
+      "minx": 1,
+      "miny": -9.5214,
+      "maxx": 940.9638,
+      "maxy": 909.9602
+    },
+    "per_feature": {
+      "min_width": 0.47199999999998,
+      "median_width": 9.75750000000005,
+      "p90_width": 19.516699999999958,
+      "max_width": 68.2858,
+      "min_height": 0.34789999999998145,
+      "median_height": 9.889099999999985,
+      "p90_height": 19.724200000000025,
+      "max_height": 61.96489999999994
+    }
+  },
+  "note": "This derived file is a minimal substrate. Population/ethnicity remains in separate authoritative datasets and will be joined into derived start-state tables."
+}

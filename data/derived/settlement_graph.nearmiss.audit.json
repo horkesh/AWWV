@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "source": "data/derived/settlements_substrate.geojson",
+  "strict_graph": "data/derived/settlement_graph.json",
+  "nodes": 6135,
+  "strict_edges": 297,
+  "strict_isolated": 5604,
+  "candidate_pairs_evaluated": 23021,
+  "eps": 0.00001,
+  "threshold_sweep_eps_scaled": [
+    {
+      "t": 0,
+      "near_pairs": 1842,
+      "near_unique_nodes": 2563
+    },
+    {
+      "t": 0.00001,
+      "near_pairs": 2948,
+      "near_unique_nodes": 3291
+    },
+    {
+      "t": 0.00002,
+      "near_pairs": 3478,
+      "near_unique_nodes": 3693
+    },
+    {
+      "t": 0.00005,
+      "near_pairs": 4750,
+      "near_unique_nodes": 4401
+    },
+    {
+      "t": 0.0001,
+      "near_pairs": 6495,
+      "near_unique_nodes": 5081
+    },
+    {
+      "t": 0.00025,
+      "near_pairs": 9143,
+      "near_unique_nodes": 5770
+    },
+    {
+      "t": 0.0005,
+      "near_pairs": 11479,
+      "near_unique_nodes": 6003
+    }
+  ],
+  "threshold_sweep_fixed": [
+    {
+      "t": 0.000001,
+      "near_pairs": 2158,
+      "near_unique_nodes": 2767
+    },
+    {
+      "t": 0.000005,
+      "near_pairs": 2605,
+      "near_unique_nodes": 3052
+    },
+    {
+      "t": 0.00001,
+      "near_pairs": 2948,
+      "near_unique_nodes": 3291
+    },
+    {
+      "t": 0.00005,
+      "near_pairs": 4750,
+      "near_unique_nodes": 4401
+    },
+    {
+      "t": 0.0001,
+      "near_pairs": 6495,
+      "near_unique_nodes": 5081
+    }
+  ],
+  "distance_stats": {
+    "min": 0,
+    "p50": 0.0005044865024710966,
+    "p90": 2.7344955750558273,
+    "max": 24.216050773195864
+  },
+  "top_near_pairs": [
+    {
+      "a": "100030",
+      "b": "100188",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100064",
+      "b": "100145",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100161",
+      "b": "100218",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100838",
+      "b": "101168",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100838",
+      "b": "101214",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100862",
+      "b": "101125",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100927",
+      "b": "100951",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "100943",
+      "b": "100986",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "101087",
+      "b": "101290",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "101257",
+      "b": "101303",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104108",
+      "b": "104167",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104167",
+      "b": "104418",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104221",
+      "b": "104302",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104345",
+      "b": "109797",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104418",
+      "b": "104523",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104523",
+      "b": "156868",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "104523",
+      "b": "157180",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "105546",
+      "b": "105635",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "105767",
+      "b": "105791",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "105937",
+      "b": "105970",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "105970",
+      "b": "165697",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106151",
+      "b": "106208",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106186",
+      "b": "106488",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106194",
+      "b": "106232",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106194",
+      "b": "106313",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106216",
+      "b": "106224",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106232",
+      "b": "106267",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106313",
+      "b": "106470",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106348",
+      "b": "106372",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106356",
+      "b": "106399",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "106399",
+      "b": "106461",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "107816",
+      "b": "108014",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "107859",
+      "b": "107999",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108189",
+      "b": "108448",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108227",
+      "b": "108383",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108260",
+      "b": "108324",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108286",
+      "b": "108308",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108294",
+      "b": "108812",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108359",
+      "b": "108880",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108529",
+      "b": "108553",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108642",
+      "b": "108723",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "108979",
+      "b": "109410",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109002",
+      "b": "109207",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109118",
+      "b": "109371",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109142",
+      "b": "109398",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109223",
+      "b": "109304",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109428",
+      "b": "110019",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109444",
+      "b": "109509",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109444",
+      "b": "109738",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    },
+    {
+      "a": "109444",
+      "b": "109967",
+      "boundaryDist": 0,
+      "bboxDist": 0
+    }
+  ],
+  "anomalies": {
+    "missing_sid_features_count": 0,
+    "non_polygon_features_count": 0,
+    "skipped_over_max_check_dist": 43344
+  }
+}

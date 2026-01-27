@@ -1,0 +1,336 @@
+Municipality Borders from Settlements Report
+===========================================
+
+Total settlements: 6135
+Total municipalities: 142
+
+Municipality IDs (142):
+  10014
+  10049
+  10146
+  10189
+  10197
+  10219
+  10227
+  10243
+  10260
+  10294
+  10308
+  10324
+  10359
+  10375
+  10391
+  10405
+  10421
+  10448
+  10472
+  10499
+  10529
+  10545
+  10570
+  10588
+  10600
+  10626
+  10634
+  10685
+  10715
+  10731
+  10766
+  10774
+  10839
+  10847
+  10863
+  10871
+  10928
+  10987
+  11045
+  11061
+  11088
+  11100
+  11118
+  11126
+  11142
+  11177
+  11185
+  11207
+  11215
+  11231
+  11240
+  11258
+  11266
+  11274
+  11282
+  11304
+  11312
+  11339
+  11410
+  11428
+  11436
+  11444
+  11452
+  11479
+  11487
+  11495
+  11509
+  11517
+  11525
+  11533
+  11541
+  11550
+  11568
+  11576
+  11584
+  11592
+  11606
+  11614
+  11622
+  20010
+  20028
+  20036
+  20044
+  20052
+  20079
+  20087
+  20095
+  20109
+  20117
+  20125
+  20133
+  20141
+  20150
+  20168
+  20176
+  20184
+  20192
+  20206
+  20214
+  20222
+  20249
+  20257
+  20265
+  20273
+  20281
+  20290
+  20303
+  20311
+  20320
+  20338
+  20346
+  20354
+  20362
+  20389
+  20397
+  20419
+  20427
+  20435
+  20443
+  20451
+  20460
+  20478
+  20486
+  20494
+  20508
+  20516
+  20524
+  20532
+  20559
+  20567
+  20575
+  20583
+  20591
+  20605
+  20613
+  20621
+  20630
+  20648
+  20656
+  20664
+  20672
+  30163
+
+Municipalities with warnings: 140
+  10529: junction_degree_6
+  20613: junction_degree_4
+  20141: junction_degree_4
+  11061: junction_degree_4
+  20010: junction_degree_4
+  20486: junction_degree_4
+  10227: junction_degree_4
+  10448: junction_degree_6
+  30163: junction_degree_4
+  20087: junction_degree_4
+  11088: junction_degree_4
+  11185: junction_degree_6
+  20567: junction_degree_6
+  20125: junction_degree_6
+  20583: junction_degree_4
+  11126: junction_degree_4
+  11541: junction_degree_4
+  20036: junction_degree_4
+  20516: junction_degree_4
+  11118: junction_degree_6
+  11100: junction_degree_6
+  20133: junction_degree_6
+  11452: junction_degree_6
+  20575: junction_degree_4
+  10197: junction_degree_6
+  10863: junction_degree_6
+  20168: junction_degree_4
+  20494: junction_degree_4
+  20532: junction_degree_4
+  10987: junction_degree_4
+  20443: junction_degree_4
+  10294: junction_degree_4
+  20265: junction_degree_4
+  11177: junction_degree_4
+  10472: junction_degree_4
+  10600: junction_degree_4
+  20362: junction_degree_4
+  20389: junction_degree_4
+  10049: junction_degree_6
+  11487: junction_degree_4
+  20559: junction_degree_4
+  20672: junction_degree_4
+  20281: junction_degree_4
+  20346: junction_degree_6
+  11410: junction_degree_6
+  11215: junction_degree_4
+  10391: junction_degree_4
+  11045: junction_degree_4
+  20249: junction_degree_4
+  20052: junction_degree_4
+  10774: junction_degree_4
+  10766: junction_degree_6
+  11207: junction_degree_6
+  11495: junction_degree_4
+  10634: junction_degree_6
+  10499: junction_degree_4
+  20044: junction_degree_4
+  20117: junction_degree_4
+  20397: junction_degree_4
+  10308: junction_degree_6
+  10375: junction_degree_6
+  20524: junction_degree_6
+  10847: junction_degree_4
+  20311: junction_degree_4
+  20648: junction_degree_4
+  10359: junction_degree_6
+  20664: junction_degree_6
+  11592: junction_degree_6
+  11509: junction_degree_4
+  10715: junction_degree_6
+  11479: junction_degree_4
+  10219: junction_degree_4
+  10570: junction_degree_6
+  10588: junction_degree_8
+  20630: junction_degree_4
+  20508: junction_degree_4
+  20095: junction_degree_4
+  20354: junction_degree_4
+  10324: junction_degree_6
+  11517: junction_degree_6
+  10626: junction_degree_4
+  10014: junction_degree_4
+  20257: junction_degree_4
+  20320: junction_degree_4
+  11142: junction_degree_4
+  11231: junction_degree_4
+  10189: junction_degree_6
+  20079: junction_degree_4
+  10243: junction_degree_4
+  11436: junction_degree_4
+  11444: junction_degree_4
+  10928: junction_degree_4
+  10421: junction_degree_8
+  20338: junction_degree_4
+  20621: junction_degree_4
+  20419: junction_degree_4
+  20435: junction_degree_4
+  20605: junction_degree_4
+  11606: junction_degree_4
+  10545: junction_degree_4
+  10146: junction_degree_8
+  20656: junction_degree_4
+  11614: junction_degree_6
+  20028: junction_degree_4
+  10731: junction_degree_4
+  10260: junction_degree_4
+  20427: junction_degree_6
+  10685: junction_degree_6
+  11304: junction_degree_4
+  11274: junction_degree_4
+  11240: junction_degree_4
+  20109: junction_degree_4
+  11428: junction_degree_4
+  11525: junction_degree_6
+  20206: junction_degree_4
+  11550: junction_degree_6
+  20591: junction_degree_4
+  11622: junction_degree_6
+  20451: junction_degree_4
+  20290: junction_degree_4
+  10405: junction_degree_4
+  11533: junction_degree_4
+  20478: junction_degree_4
+  11312: junction_degree_4
+  11576: junction_degree_4
+  20222: junction_degree_4
+  20273: junction_degree_4
+  11339: junction_degree_4
+  11584: junction_degree_4
+  10839: junction_degree_4
+  20460: junction_degree_4
+  11258: junction_degree_4
+  20303: junction_degree_4
+  20150: junction_degree_4
+  20184: junction_degree_4
+  10871: junction_degree_4
+  20214: junction_degree_4
+  11282: junction_degree_4
+  20176: junction_degree_4
+  11568: junction_degree_4
+
+Top 20 by boundary segment count:
+  10529: 20447 segments
+  20613: 14133 segments
+  20141: 12568 segments
+  11061: 12445 segments
+  20010: 12357 segments
+  20486: 12297 segments
+  10227: 11901 segments
+  10448: 11868 segments
+  30163: 11532 segments
+  20087: 11371 segments
+  11088: 10894 segments
+  11185: 10847 segments
+  20567: 10761 segments
+  20125: 10735 segments
+  20583: 10456 segments
+  11126: 10241 segments
+  11541: 10224 segments
+  20036: 10176 segments
+  20516: 10129 segments
+  11118: 10125 segments
+
+Per-municipality summary (first 10):
+  10529: 168 settlements, 168 polygons, 20447 boundary segments, 127 chains
+    Warnings: junction_degree_6
+  20613: 101 settlements, 101 polygons, 14133 boundary segments, 305 chains
+    Warnings: junction_degree_4
+  20141: 83 settlements, 83 polygons, 12568 boundary segments, 309 chains
+    Warnings: junction_degree_4
+  11061: 90 settlements, 90 polygons, 12445 boundary segments, 63 chains
+    Warnings: junction_degree_4
+  20010: 54 settlements, 54 polygons, 12357 boundary segments, 119 chains
+    Warnings: junction_degree_4
+  20486: 71 settlements, 71 polygons, 12297 boundary segments, 200 chains
+    Warnings: junction_degree_4
+  10227: 54 settlements, 54 polygons, 11901 boundary segments, 46 chains
+    Warnings: junction_degree_4
+  10448: 106 settlements, 106 polygons, 11868 boundary segments, 77 chains
+    Warnings: junction_degree_6
+  30163: 59 settlements, 59 polygons, 11532 boundary segments, 690 chains
+    Warnings: junction_degree_4
+  20087: 163 settlements, 163 polygons, 11371 boundary segments, 335 chains
+    Warnings: junction_degree_4
+  ... and 132 more

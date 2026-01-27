@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phase 0 Settlement Validation Viewer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+    #canvas-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    #canvas {
+      display: block;
+      cursor: grab;
+      background: #f5f5f5;
+    }
+    #canvas.dragging {
+      cursor: grabbing;
+    }
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+      max-width: 300px;
+      max-height: 90vh;
+      overflow-y: auto;
+      font-size: 12px;
+    }
+    .control-group {
+      margin-bottom: 12px;
+    }
+    .control-group:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input[type="checkbox"], input[type="text"] {
+      margin-right: 6px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    button {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      width: 100%;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .legend {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+    }
+    .legend-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+    .legend-color {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      border: 1px solid #333;
+      vertical-align: middle;
+    }
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      pointer-events: none;
+      z-index: 1000;
+      max-width: 250px;
+      display: none;
+    }
+    .tooltip-line {
+      margin-bottom: 2px;
+    }
+    .tooltip-line:last-child {
+      margin-bottom: 0;
+    }
+    .hint {
+      margin-top: 12px;
+      padding: 8px;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 3px;
+      font-size: 11px;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+    <div id="tooltip" class="tooltip"></div>
+    <div id="controls">
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-ethnicity" checked>
+          Color by ethnicity (settlement-level majority only)
+        </label>
+        <div style="font-size: 10px; color: #666; margin-top: 2px;">
+          Coloring uses settlement-level majority only. Settlements without settlement-level census data are shown as Unknown.
+        </div>
+      </div>
+      <div class="control-group">
+        <label>Filter by municipality_id:</label>
+        <input type="text" id="filter-muni" placeholder="(empty for all)">
+      </div>
+      <div class="control-group">
+        <label>Filter by SID (substring):</label>
+        <input type="text" id="filter-sid" placeholder="(empty for all)">
+      </div>
+      <div class="control-group">
+        <button id="reset-view">Reset View</button>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="hint" id="hint">
+        <strong>Note:</strong> If file:// blocks fetch, run:<br>
+        <code>npx http-server -p 8080</code><br>
+        from repo root, then open:<br>
+        <code>http://localhost:8080/data/derived/phase0_viewer/</code>
+      </div>
+    </div>
+  </div>
+  <script src="./viewer.js"></script>
+</body>
+</html>

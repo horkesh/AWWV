@@ -1,0 +1,7 @@
+Municipality Outlines Cleaning Report
+====================================
+
+Warnings:
+  - No municipality ID field found in settlement features
+
+IMPORTANT: No outline muni_id mapping found. Drop disabled for safety.

@@ -1,0 +1,1790 @@
+{
+  "total_settlements": 6135,
+  "total_municipalities": 142,
+  "municipality_ids": [
+    "10014",
+    "10049",
+    "10146",
+    "10189",
+    "10197",
+    "10219",
+    "10227",
+    "10243",
+    "10260",
+    "10294",
+    "10308",
+    "10324",
+    "10359",
+    "10375",
+    "10391",
+    "10405",
+    "10421",
+    "10448",
+    "10472",
+    "10499",
+    "10529",
+    "10545",
+    "10570",
+    "10588",
+    "10600",
+    "10626",
+    "10634",
+    "10685",
+    "10715",
+    "10731",
+    "10766",
+    "10774",
+    "10839",
+    "10847",
+    "10863",
+    "10871",
+    "10928",
+    "10987",
+    "11045",
+    "11061",
+    "11088",
+    "11100",
+    "11118",
+    "11126",
+    "11142",
+    "11177",
+    "11185",
+    "11207",
+    "11215",
+    "11231",
+    "11240",
+    "11258",
+    "11266",
+    "11274",
+    "11282",
+    "11304",
+    "11312",
+    "11339",
+    "11410",
+    "11428",
+    "11436",
+    "11444",
+    "11452",
+    "11479",
+    "11487",
+    "11495",
+    "11509",
+    "11517",
+    "11525",
+    "11533",
+    "11541",
+    "11550",
+    "11568",
+    "11576",
+    "11584",
+    "11592",
+    "11606",
+    "11614",
+    "11622",
+    "20010",
+    "20028",
+    "20036",
+    "20044",
+    "20052",
+    "20079",
+    "20087",
+    "20095",
+    "20109",
+    "20117",
+    "20125",
+    "20133",
+    "20141",
+    "20150",
+    "20168",
+    "20176",
+    "20184",
+    "20192",
+    "20206",
+    "20214",
+    "20222",
+    "20249",
+    "20257",
+    "20265",
+    "20273",
+    "20281",
+    "20290",
+    "20303",
+    "20311",
+    "20320",
+    "20338",
+    "20346",
+    "20354",
+    "20362",
+    "20389",
+    "20397",
+    "20419",
+    "20427",
+    "20435",
+    "20443",
+    "20451",
+    "20460",
+    "20478",
+    "20486",
+    "20494",
+    "20508",
+    "20516",
+    "20524",
+    "20532",
+    "20559",
+    "20567",
+    "20575",
+    "20583",
+    "20591",
+    "20605",
+    "20613",
+    "20621",
+    "20630",
+    "20648",
+    "20656",
+    "20664",
+    "20672",
+    "30163"
+  ],
+  "per_municipality": [
+    {
+      "municipality_id": "10529",
+      "settlement_count": 168,
+      "polygon_count": 168,
+      "segments_total": 20447,
+      "boundary_segment_count": 20447,
+      "chain_count": 127,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20613",
+      "settlement_count": 101,
+      "polygon_count": 101,
+      "segments_total": 14133,
+      "boundary_segment_count": 14133,
+      "chain_count": 305,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20141",
+      "settlement_count": 83,
+      "polygon_count": 83,
+      "segments_total": 12568,
+      "boundary_segment_count": 12568,
+      "chain_count": 309,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11061",
+      "settlement_count": 90,
+      "polygon_count": 90,
+      "segments_total": 12445,
+      "boundary_segment_count": 12445,
+      "chain_count": 63,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20010",
+      "settlement_count": 54,
+      "polygon_count": 54,
+      "segments_total": 12357,
+      "boundary_segment_count": 12357,
+      "chain_count": 119,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20486",
+      "settlement_count": 71,
+      "polygon_count": 71,
+      "segments_total": 12297,
+      "boundary_segment_count": 12297,
+      "chain_count": 200,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10227",
+      "settlement_count": 54,
+      "polygon_count": 54,
+      "segments_total": 11901,
+      "boundary_segment_count": 11901,
+      "chain_count": 46,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10448",
+      "settlement_count": 106,
+      "polygon_count": 106,
+      "segments_total": 11868,
+      "boundary_segment_count": 11868,
+      "chain_count": 77,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "30163",
+      "settlement_count": 59,
+      "polygon_count": 59,
+      "segments_total": 11532,
+      "boundary_segment_count": 11532,
+      "chain_count": 690,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20087",
+      "settlement_count": 163,
+      "polygon_count": 163,
+      "segments_total": 11371,
+      "boundary_segment_count": 11371,
+      "chain_count": 335,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11088",
+      "settlement_count": 66,
+      "polygon_count": 66,
+      "segments_total": 10894,
+      "boundary_segment_count": 10894,
+      "chain_count": 52,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11185",
+      "settlement_count": 83,
+      "polygon_count": 83,
+      "segments_total": 10847,
+      "boundary_segment_count": 10847,
+      "chain_count": 59,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20567",
+      "settlement_count": 81,
+      "polygon_count": 81,
+      "segments_total": 10761,
+      "boundary_segment_count": 10761,
+      "chain_count": 259,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20125",
+      "settlement_count": 68,
+      "polygon_count": 68,
+      "segments_total": 10735,
+      "boundary_segment_count": 10735,
+      "chain_count": 125,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20583",
+      "settlement_count": 141,
+      "polygon_count": 141,
+      "segments_total": 10456,
+      "boundary_segment_count": 10456,
+      "chain_count": 255,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11126",
+      "settlement_count": 88,
+      "polygon_count": 88,
+      "segments_total": 10241,
+      "boundary_segment_count": 10241,
+      "chain_count": 64,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11541",
+      "settlement_count": 67,
+      "polygon_count": 67,
+      "segments_total": 10224,
+      "boundary_segment_count": 10224,
+      "chain_count": 50,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20036",
+      "settlement_count": 67,
+      "polygon_count": 67,
+      "segments_total": 10176,
+      "boundary_segment_count": 10176,
+      "chain_count": 285,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20516",
+      "settlement_count": 118,
+      "polygon_count": 118,
+      "segments_total": 10129,
+      "boundary_segment_count": 10129,
+      "chain_count": 181,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11118",
+      "settlement_count": 49,
+      "polygon_count": 49,
+      "segments_total": 10125,
+      "boundary_segment_count": 10125,
+      "chain_count": 35,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11100",
+      "settlement_count": 85,
+      "polygon_count": 85,
+      "segments_total": 10067,
+      "boundary_segment_count": 10067,
+      "chain_count": 58,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20133",
+      "settlement_count": 57,
+      "polygon_count": 57,
+      "segments_total": 9978,
+      "boundary_segment_count": 9978,
+      "chain_count": 142,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11452",
+      "settlement_count": 144,
+      "polygon_count": 144,
+      "segments_total": 9817,
+      "boundary_segment_count": 9817,
+      "chain_count": 68,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20575",
+      "settlement_count": 57,
+      "polygon_count": 57,
+      "segments_total": 9551,
+      "boundary_segment_count": 9551,
+      "chain_count": 299,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10197",
+      "settlement_count": 78,
+      "polygon_count": 78,
+      "segments_total": 9477,
+      "boundary_segment_count": 9477,
+      "chain_count": 54,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10863",
+      "settlement_count": 74,
+      "polygon_count": 74,
+      "segments_total": 9298,
+      "boundary_segment_count": 9298,
+      "chain_count": 53,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20168",
+      "settlement_count": 68,
+      "polygon_count": 68,
+      "segments_total": 9196,
+      "boundary_segment_count": 9196,
+      "chain_count": 254,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20494",
+      "settlement_count": 63,
+      "polygon_count": 63,
+      "segments_total": 9031,
+      "boundary_segment_count": 9031,
+      "chain_count": 149,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20532",
+      "settlement_count": 96,
+      "polygon_count": 96,
+      "segments_total": 8978,
+      "boundary_segment_count": 8978,
+      "chain_count": 332,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10987",
+      "settlement_count": 49,
+      "polygon_count": 49,
+      "segments_total": 8818,
+      "boundary_segment_count": 8818,
+      "chain_count": 42,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20443",
+      "settlement_count": 62,
+      "polygon_count": 62,
+      "segments_total": 8690,
+      "boundary_segment_count": 8690,
+      "chain_count": 139,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10294",
+      "settlement_count": 68,
+      "polygon_count": 68,
+      "segments_total": 8504,
+      "boundary_segment_count": 8504,
+      "chain_count": 53,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20265",
+      "settlement_count": 61,
+      "polygon_count": 61,
+      "segments_total": 8463,
+      "boundary_segment_count": 8463,
+      "chain_count": 95,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11177",
+      "settlement_count": 47,
+      "polygon_count": 47,
+      "segments_total": 8166,
+      "boundary_segment_count": 8166,
+      "chain_count": 39,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10472",
+      "settlement_count": 82,
+      "polygon_count": 82,
+      "segments_total": 8144,
+      "boundary_segment_count": 8144,
+      "chain_count": 59,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10600",
+      "settlement_count": 44,
+      "polygon_count": 44,
+      "segments_total": 7961,
+      "boundary_segment_count": 7961,
+      "chain_count": 32,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20362",
+      "settlement_count": 38,
+      "polygon_count": 38,
+      "segments_total": 7881,
+      "boundary_segment_count": 7881,
+      "chain_count": 122,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20389",
+      "settlement_count": 56,
+      "polygon_count": 56,
+      "segments_total": 7877,
+      "boundary_segment_count": 7877,
+      "chain_count": 138,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10049",
+      "settlement_count": 59,
+      "polygon_count": 59,
+      "segments_total": 7533,
+      "boundary_segment_count": 7533,
+      "chain_count": 33,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11487",
+      "settlement_count": 58,
+      "polygon_count": 58,
+      "segments_total": 7353,
+      "boundary_segment_count": 7353,
+      "chain_count": 44,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20559",
+      "settlement_count": 39,
+      "polygon_count": 39,
+      "segments_total": 7273,
+      "boundary_segment_count": 7273,
+      "chain_count": 83,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20672",
+      "settlement_count": 46,
+      "polygon_count": 46,
+      "segments_total": 7224,
+      "boundary_segment_count": 7224,
+      "chain_count": 107,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20281",
+      "settlement_count": 43,
+      "polygon_count": 43,
+      "segments_total": 7166,
+      "boundary_segment_count": 7166,
+      "chain_count": 87,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20346",
+      "settlement_count": 54,
+      "polygon_count": 54,
+      "segments_total": 6960,
+      "boundary_segment_count": 6960,
+      "chain_count": 188,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11410",
+      "settlement_count": 60,
+      "polygon_count": 60,
+      "segments_total": 6921,
+      "boundary_segment_count": 6921,
+      "chain_count": 35,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11215",
+      "settlement_count": 29,
+      "polygon_count": 29,
+      "segments_total": 6835,
+      "boundary_segment_count": 6835,
+      "chain_count": 30,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10391",
+      "settlement_count": 34,
+      "polygon_count": 34,
+      "segments_total": 6821,
+      "boundary_segment_count": 6821,
+      "chain_count": 31,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11045",
+      "settlement_count": 41,
+      "polygon_count": 41,
+      "segments_total": 6742,
+      "boundary_segment_count": 6742,
+      "chain_count": 35,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20249",
+      "settlement_count": 71,
+      "polygon_count": 71,
+      "segments_total": 6727,
+      "boundary_segment_count": 6727,
+      "chain_count": 141,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20052",
+      "settlement_count": 50,
+      "polygon_count": 50,
+      "segments_total": 6665,
+      "boundary_segment_count": 6665,
+      "chain_count": 103,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10774",
+      "settlement_count": 51,
+      "polygon_count": 51,
+      "segments_total": 6615,
+      "boundary_segment_count": 6615,
+      "chain_count": 33,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10766",
+      "settlement_count": 56,
+      "polygon_count": 56,
+      "segments_total": 6539,
+      "boundary_segment_count": 6539,
+      "chain_count": 38,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11207",
+      "settlement_count": 41,
+      "polygon_count": 41,
+      "segments_total": 6509,
+      "boundary_segment_count": 6509,
+      "chain_count": 36,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11495",
+      "settlement_count": 28,
+      "polygon_count": 28,
+      "segments_total": 6504,
+      "boundary_segment_count": 6504,
+      "chain_count": 22,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10634",
+      "settlement_count": 40,
+      "polygon_count": 40,
+      "segments_total": 6421,
+      "boundary_segment_count": 6421,
+      "chain_count": 31,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10499",
+      "settlement_count": 48,
+      "polygon_count": 48,
+      "segments_total": 6416,
+      "boundary_segment_count": 6416,
+      "chain_count": 35,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20044",
+      "settlement_count": 60,
+      "polygon_count": 60,
+      "segments_total": 6204,
+      "boundary_segment_count": 6204,
+      "chain_count": 144,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20117",
+      "settlement_count": 71,
+      "polygon_count": 71,
+      "segments_total": 6127,
+      "boundary_segment_count": 6127,
+      "chain_count": 375,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20397",
+      "settlement_count": 48,
+      "polygon_count": 48,
+      "segments_total": 6099,
+      "boundary_segment_count": 6099,
+      "chain_count": 89,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10308",
+      "settlement_count": 60,
+      "polygon_count": 60,
+      "segments_total": 6091,
+      "boundary_segment_count": 6091,
+      "chain_count": 40,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10375",
+      "settlement_count": 52,
+      "polygon_count": 52,
+      "segments_total": 5886,
+      "boundary_segment_count": 5886,
+      "chain_count": 26,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20524",
+      "settlement_count": 89,
+      "polygon_count": 89,
+      "segments_total": 5838,
+      "boundary_segment_count": 5838,
+      "chain_count": 268,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10847",
+      "settlement_count": 62,
+      "polygon_count": 62,
+      "segments_total": 5765,
+      "boundary_segment_count": 5765,
+      "chain_count": 51,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20311",
+      "settlement_count": 37,
+      "polygon_count": 37,
+      "segments_total": 5750,
+      "boundary_segment_count": 5750,
+      "chain_count": 80,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20648",
+      "settlement_count": 30,
+      "polygon_count": 30,
+      "segments_total": 5619,
+      "boundary_segment_count": 5619,
+      "chain_count": 55,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10359",
+      "settlement_count": 55,
+      "polygon_count": 55,
+      "segments_total": 5527,
+      "boundary_segment_count": 5527,
+      "chain_count": 37,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20664",
+      "settlement_count": 38,
+      "polygon_count": 38,
+      "segments_total": 5273,
+      "boundary_segment_count": 5273,
+      "chain_count": 108,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11592",
+      "settlement_count": 55,
+      "polygon_count": 55,
+      "segments_total": 5149,
+      "boundary_segment_count": 5149,
+      "chain_count": 41,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11509",
+      "settlement_count": 41,
+      "polygon_count": 41,
+      "segments_total": 5090,
+      "boundary_segment_count": 5090,
+      "chain_count": 27,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10715",
+      "settlement_count": 45,
+      "polygon_count": 45,
+      "segments_total": 4995,
+      "boundary_segment_count": 4995,
+      "chain_count": 29,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11479",
+      "settlement_count": 23,
+      "polygon_count": 23,
+      "segments_total": 4993,
+      "boundary_segment_count": 4993,
+      "chain_count": 16,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10219",
+      "settlement_count": 47,
+      "polygon_count": 47,
+      "segments_total": 4973,
+      "boundary_segment_count": 4973,
+      "chain_count": 33,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10570",
+      "settlement_count": 34,
+      "polygon_count": 34,
+      "segments_total": 4909,
+      "boundary_segment_count": 4909,
+      "chain_count": 21,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10588",
+      "settlement_count": 58,
+      "polygon_count": 58,
+      "segments_total": 4820,
+      "boundary_segment_count": 4820,
+      "chain_count": 34,
+      "warnings": [
+        "junction_degree_8"
+      ]
+    },
+    {
+      "municipality_id": "20630",
+      "settlement_count": 36,
+      "polygon_count": 36,
+      "segments_total": 4759,
+      "boundary_segment_count": 4759,
+      "chain_count": 57,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20508",
+      "settlement_count": 29,
+      "polygon_count": 29,
+      "segments_total": 4731,
+      "boundary_segment_count": 4731,
+      "chain_count": 40,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20095",
+      "settlement_count": 38,
+      "polygon_count": 38,
+      "segments_total": 4720,
+      "boundary_segment_count": 4720,
+      "chain_count": 163,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20354",
+      "settlement_count": 24,
+      "polygon_count": 24,
+      "segments_total": 4368,
+      "boundary_segment_count": 4368,
+      "chain_count": 157,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10324",
+      "settlement_count": 55,
+      "polygon_count": 55,
+      "segments_total": 4306,
+      "boundary_segment_count": 4306,
+      "chain_count": 28,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11517",
+      "settlement_count": 36,
+      "polygon_count": 36,
+      "segments_total": 4143,
+      "boundary_segment_count": 4143,
+      "chain_count": 30,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10626",
+      "settlement_count": 35,
+      "polygon_count": 35,
+      "segments_total": 4128,
+      "boundary_segment_count": 4128,
+      "chain_count": 24,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10014",
+      "settlement_count": 20,
+      "polygon_count": 20,
+      "segments_total": 4106,
+      "boundary_segment_count": 4106,
+      "chain_count": 20,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20257",
+      "settlement_count": 20,
+      "polygon_count": 20,
+      "segments_total": 4074,
+      "boundary_segment_count": 4074,
+      "chain_count": 21,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20320",
+      "settlement_count": 35,
+      "polygon_count": 35,
+      "segments_total": 4073,
+      "boundary_segment_count": 4073,
+      "chain_count": 145,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11142",
+      "settlement_count": 34,
+      "polygon_count": 34,
+      "segments_total": 4004,
+      "boundary_segment_count": 4004,
+      "chain_count": 17,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11231",
+      "settlement_count": 20,
+      "polygon_count": 20,
+      "segments_total": 3553,
+      "boundary_segment_count": 3553,
+      "chain_count": 19,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10189",
+      "settlement_count": 28,
+      "polygon_count": 28,
+      "segments_total": 3446,
+      "boundary_segment_count": 3446,
+      "chain_count": 21,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20079",
+      "settlement_count": 23,
+      "polygon_count": 23,
+      "segments_total": 3391,
+      "boundary_segment_count": 3391,
+      "chain_count": 35,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10243",
+      "settlement_count": 32,
+      "polygon_count": 32,
+      "segments_total": 3272,
+      "boundary_segment_count": 3272,
+      "chain_count": 19,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11436",
+      "settlement_count": 35,
+      "polygon_count": 35,
+      "segments_total": 3232,
+      "boundary_segment_count": 3232,
+      "chain_count": 25,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11444",
+      "settlement_count": 32,
+      "polygon_count": 32,
+      "segments_total": 3203,
+      "boundary_segment_count": 3203,
+      "chain_count": 23,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10928",
+      "settlement_count": 21,
+      "polygon_count": 21,
+      "segments_total": 3042,
+      "boundary_segment_count": 3042,
+      "chain_count": 19,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10421",
+      "settlement_count": 33,
+      "polygon_count": 33,
+      "segments_total": 3019,
+      "boundary_segment_count": 3019,
+      "chain_count": 20,
+      "warnings": [
+        "junction_degree_8"
+      ]
+    },
+    {
+      "municipality_id": "20338",
+      "settlement_count": 21,
+      "polygon_count": 21,
+      "segments_total": 2892,
+      "boundary_segment_count": 2892,
+      "chain_count": 23,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20621",
+      "settlement_count": 26,
+      "polygon_count": 26,
+      "segments_total": 2857,
+      "boundary_segment_count": 2857,
+      "chain_count": 91,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20419",
+      "settlement_count": 61,
+      "polygon_count": 61,
+      "segments_total": 2843,
+      "boundary_segment_count": 2843,
+      "chain_count": 74,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20435",
+      "settlement_count": 24,
+      "polygon_count": 24,
+      "segments_total": 2841,
+      "boundary_segment_count": 2841,
+      "chain_count": 43,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20605",
+      "settlement_count": 25,
+      "polygon_count": 25,
+      "segments_total": 2822,
+      "boundary_segment_count": 2822,
+      "chain_count": 64,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11606",
+      "settlement_count": 26,
+      "polygon_count": 26,
+      "segments_total": 2808,
+      "boundary_segment_count": 2808,
+      "chain_count": 20,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10545",
+      "settlement_count": 27,
+      "polygon_count": 27,
+      "segments_total": 2762,
+      "boundary_segment_count": 2762,
+      "chain_count": 17,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10146",
+      "settlement_count": 35,
+      "polygon_count": 35,
+      "segments_total": 2712,
+      "boundary_segment_count": 2712,
+      "chain_count": 13,
+      "warnings": [
+        "junction_degree_8"
+      ]
+    },
+    {
+      "municipality_id": "20656",
+      "settlement_count": 21,
+      "polygon_count": 21,
+      "segments_total": 2648,
+      "boundary_segment_count": 2648,
+      "chain_count": 111,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11614",
+      "settlement_count": 25,
+      "polygon_count": 25,
+      "segments_total": 2585,
+      "boundary_segment_count": 2585,
+      "chain_count": 20,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20028",
+      "settlement_count": 19,
+      "polygon_count": 19,
+      "segments_total": 2585,
+      "boundary_segment_count": 2585,
+      "chain_count": 56,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10731",
+      "settlement_count": 20,
+      "polygon_count": 20,
+      "segments_total": 2414,
+      "boundary_segment_count": 2414,
+      "chain_count": 16,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10260",
+      "settlement_count": 21,
+      "polygon_count": 21,
+      "segments_total": 2343,
+      "boundary_segment_count": 2343,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20427",
+      "settlement_count": 16,
+      "polygon_count": 16,
+      "segments_total": 2311,
+      "boundary_segment_count": 2311,
+      "chain_count": 95,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "10685",
+      "settlement_count": 27,
+      "polygon_count": 27,
+      "segments_total": 2300,
+      "boundary_segment_count": 2300,
+      "chain_count": 15,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "11304",
+      "settlement_count": 54,
+      "polygon_count": 54,
+      "segments_total": 2292,
+      "boundary_segment_count": 2292,
+      "chain_count": 54,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11274",
+      "settlement_count": 18,
+      "polygon_count": 18,
+      "segments_total": 2279,
+      "boundary_segment_count": 2279,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11240",
+      "settlement_count": 7,
+      "polygon_count": 7,
+      "segments_total": 2047,
+      "boundary_segment_count": 2047,
+      "chain_count": 4,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20109",
+      "settlement_count": 12,
+      "polygon_count": 12,
+      "segments_total": 2012,
+      "boundary_segment_count": 2012,
+      "chain_count": 14,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11428",
+      "settlement_count": 37,
+      "polygon_count": 37,
+      "segments_total": 2010,
+      "boundary_segment_count": 2010,
+      "chain_count": 36,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11525",
+      "settlement_count": 14,
+      "polygon_count": 14,
+      "segments_total": 1956,
+      "boundary_segment_count": 1956,
+      "chain_count": 10,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20206",
+      "settlement_count": 19,
+      "polygon_count": 19,
+      "segments_total": 1900,
+      "boundary_segment_count": 1900,
+      "chain_count": 33,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11550",
+      "settlement_count": 12,
+      "polygon_count": 12,
+      "segments_total": 1876,
+      "boundary_segment_count": 1876,
+      "chain_count": 11,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20591",
+      "settlement_count": 25,
+      "polygon_count": 25,
+      "segments_total": 1850,
+      "boundary_segment_count": 1850,
+      "chain_count": 58,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11622",
+      "settlement_count": 13,
+      "polygon_count": 13,
+      "segments_total": 1847,
+      "boundary_segment_count": 1847,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_6"
+      ]
+    },
+    {
+      "municipality_id": "20451",
+      "settlement_count": 11,
+      "polygon_count": 11,
+      "segments_total": 1798,
+      "boundary_segment_count": 1798,
+      "chain_count": 65,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20290",
+      "settlement_count": 12,
+      "polygon_count": 12,
+      "segments_total": 1775,
+      "boundary_segment_count": 1775,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10405",
+      "settlement_count": 13,
+      "polygon_count": 13,
+      "segments_total": 1770,
+      "boundary_segment_count": 1770,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11533",
+      "settlement_count": 14,
+      "polygon_count": 14,
+      "segments_total": 1732,
+      "boundary_segment_count": 1732,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20478",
+      "settlement_count": 7,
+      "polygon_count": 7,
+      "segments_total": 1723,
+      "boundary_segment_count": 1723,
+      "chain_count": 30,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11312",
+      "settlement_count": 13,
+      "polygon_count": 13,
+      "segments_total": 1719,
+      "boundary_segment_count": 1719,
+      "chain_count": 8,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11576",
+      "settlement_count": 15,
+      "polygon_count": 15,
+      "segments_total": 1482,
+      "boundary_segment_count": 1482,
+      "chain_count": 12,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20222",
+      "settlement_count": 11,
+      "polygon_count": 11,
+      "segments_total": 1331,
+      "boundary_segment_count": 1331,
+      "chain_count": 14,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20273",
+      "settlement_count": 12,
+      "polygon_count": 12,
+      "segments_total": 1247,
+      "boundary_segment_count": 1247,
+      "chain_count": 10,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11339",
+      "settlement_count": 10,
+      "polygon_count": 10,
+      "segments_total": 1231,
+      "boundary_segment_count": 1231,
+      "chain_count": 8,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11584",
+      "settlement_count": 8,
+      "polygon_count": 8,
+      "segments_total": 1230,
+      "boundary_segment_count": 1230,
+      "chain_count": 8,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "10839",
+      "settlement_count": 6,
+      "polygon_count": 6,
+      "segments_total": 1211,
+      "boundary_segment_count": 1211,
+      "chain_count": 5,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20460",
+      "settlement_count": 6,
+      "polygon_count": 6,
+      "segments_total": 1066,
+      "boundary_segment_count": 1066,
+      "chain_count": 9,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11258",
+      "settlement_count": 6,
+      "polygon_count": 6,
+      "segments_total": 976,
+      "boundary_segment_count": 976,
+      "chain_count": 5,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20303",
+      "settlement_count": 4,
+      "polygon_count": 4,
+      "segments_total": 701,
+      "boundary_segment_count": 701,
+      "chain_count": 5,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20150",
+      "settlement_count": 6,
+      "polygon_count": 6,
+      "segments_total": 699,
+      "boundary_segment_count": 699,
+      "chain_count": 6,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20184",
+      "settlement_count": 2,
+      "polygon_count": 2,
+      "segments_total": 683,
+      "boundary_segment_count": 683,
+      "chain_count": 7,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20192",
+      "settlement_count": 3,
+      "polygon_count": 3,
+      "segments_total": 674,
+      "boundary_segment_count": 674,
+      "chain_count": 3,
+      "warnings": []
+    },
+    {
+      "municipality_id": "10871",
+      "settlement_count": 3,
+      "polygon_count": 3,
+      "segments_total": 670,
+      "boundary_segment_count": 670,
+      "chain_count": 2,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20214",
+      "settlement_count": 8,
+      "polygon_count": 8,
+      "segments_total": 564,
+      "boundary_segment_count": 564,
+      "chain_count": 31,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11282",
+      "settlement_count": 5,
+      "polygon_count": 5,
+      "segments_total": 514,
+      "boundary_segment_count": 514,
+      "chain_count": 3,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "20176",
+      "settlement_count": 5,
+      "polygon_count": 5,
+      "segments_total": 444,
+      "boundary_segment_count": 444,
+      "chain_count": 9,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11568",
+      "settlement_count": 3,
+      "polygon_count": 3,
+      "segments_total": 366,
+      "boundary_segment_count": 366,
+      "chain_count": 3,
+      "warnings": [
+        "junction_degree_4"
+      ]
+    },
+    {
+      "municipality_id": "11266",
+      "settlement_count": 2,
+      "polygon_count": 2,
+      "segments_total": 318,
+      "boundary_segment_count": 318,
+      "chain_count": 2,
+      "warnings": []
+    }
+  ],
+  "top_20_by_boundary_segment_count": [
+    {
+      "municipality_id": "10529",
+      "boundary_segment_count": 20447
+    },
+    {
+      "municipality_id": "20613",
+      "boundary_segment_count": 14133
+    },
+    {
+      "municipality_id": "20141",
+      "boundary_segment_count": 12568
+    },
+    {
+      "municipality_id": "11061",
+      "boundary_segment_count": 12445
+    },
+    {
+      "municipality_id": "20010",
+      "boundary_segment_count": 12357
+    },
+    {
+      "municipality_id": "20486",
+      "boundary_segment_count": 12297
+    },
+    {
+      "municipality_id": "10227",
+      "boundary_segment_count": 11901
+    },
+    {
+      "municipality_id": "10448",
+      "boundary_segment_count": 11868
+    },
+    {
+      "municipality_id": "30163",
+      "boundary_segment_count": 11532
+    },
+    {
+      "municipality_id": "20087",
+      "boundary_segment_count": 11371
+    },
+    {
+      "municipality_id": "11088",
+      "boundary_segment_count": 10894
+    },
+    {
+      "municipality_id": "11185",
+      "boundary_segment_count": 10847
+    },
+    {
+      "municipality_id": "20567",
+      "boundary_segment_count": 10761
+    },
+    {
+      "municipality_id": "20125",
+      "boundary_segment_count": 10735
+    },
+    {
+      "municipality_id": "20583",
+      "boundary_segment_count": 10456
+    },
+    {
+      "municipality_id": "11126",
+      "boundary_segment_count": 10241
+    },
+    {
+      "municipality_id": "11541",
+      "boundary_segment_count": 10224
+    },
+    {
+      "municipality_id": "20036",
+      "boundary_segment_count": 10176
+    },
+    {
+      "municipality_id": "20516",
+      "boundary_segment_count": 10129
+    },
+    {
+      "municipality_id": "11118",
+      "boundary_segment_count": 10125
+    }
+  ]
+}

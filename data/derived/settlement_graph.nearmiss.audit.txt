@@ -1,0 +1,73 @@
+SETTLEMENT CONTIGUITY NEAR-MISS DIAGNOSTIC
+===========================================
+
+STRICT GRAPH RECAP:
+  Nodes: 6135
+  Strict edges: 297
+  Strict isolated: 5604
+
+CANDIDATE GENERATION:
+  Grid cell size: 14.686934
+  Candidate pairs generated: 66662
+  Pairs evaluated: 23021
+  Pairs skipped (bboxDist > 0.001): 43344
+
+EPS AND THRESHOLDS:
+  EPS (from dataset bounds): 0.00001
+
+THRESHOLD SWEEP (EPS-scaled):
+  T=0.000e+0: 1842 near pairs, 2563 unique nodes
+  T=1.000e-5: 2948 near pairs, 3291 unique nodes
+  T=2.000e-5: 3478 near pairs, 3693 unique nodes
+  T=5.000e-5: 4750 near pairs, 4401 unique nodes
+  T=1.000e-4: 6495 near pairs, 5081 unique nodes
+  T=2.500e-4: 9143 near pairs, 5770 unique nodes
+  T=5.000e-4: 11479 near pairs, 6003 unique nodes
+
+THRESHOLD SWEEP (Fixed units):
+  T=1.000e-6: 2158 near pairs, 2767 unique nodes
+  T=5.000e-6: 2605 near pairs, 3052 unique nodes
+  T=1.000e-5: 2948 near pairs, 3291 unique nodes
+  T=5.000e-5: 4750 near pairs, 4401 unique nodes
+  T=1.000e-4: 6495 near pairs, 5081 unique nodes
+
+DISTANCE STATISTICS:
+  Min: 0.000000e+0
+  Median (p50): 5.044865e-4
+  p90: 2.734496e+0
+  Max: 2.421605e+1
+
+TOP NEAREST PAIRS (top 20):
+  100030 <-> 100188: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100064 <-> 100145: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100161 <-> 100218: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100838 <-> 101168: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100838 <-> 101214: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100862 <-> 101125: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100927 <-> 100951: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  100943 <-> 100986: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  101087 <-> 101290: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  101257 <-> 101303: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104108 <-> 104167: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104167 <-> 104418: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104221 <-> 104302: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104345 <-> 109797: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104418 <-> 104523: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104523 <-> 156868: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  104523 <-> 157180: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  105546 <-> 105635: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  105767 <-> 105791: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+  105937 <-> 105970: boundaryDist=0.000000e+0, bboxDist=0.000000e+0
+
+ANOMALIES:
+  Missing SID features: 0
+  Non-polygon features: 0
+  Skipped over max check dist: 43344
+
+NOTE:
+  This diagnostic measures boundary-to-boundary distances to explain why
+  strict shared-segment adjacency is sparse. It does NOT modify any
+  canonical Phase 0 or Phase 1 outputs. If near_pairs grows rapidly as
+  threshold increases, sparse adjacency may be due to near-miss numeric
+  mismatch. If near_pairs remains low even at 1e-4, settlements are
+  truly disjoint (not a tiling).

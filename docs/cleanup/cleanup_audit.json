@@ -1,0 +1,4077 @@
+{
+  "summary": {
+    "total_files": 581,
+    "used": 120,
+    "orphan_candidates": 232,
+    "exempt": 229
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "category": "EXEMPT",
+      "reasons": [
+        "root config file"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_substrate.audit.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate audit"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_substrate.audit.txt",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate audit"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_substrate.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate"
+      ]
+    },
+    {
+      "path": "data/derived/substrate_viewer/data_index.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate viewer"
+      ]
+    },
+    {
+      "path": "data/derived/substrate_viewer/index.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate viewer"
+      ]
+    },
+    {
+      "path": "data/derived/substrate_viewer/viewer.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 substrate viewer"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/bih_census_1991/bih_census_1991.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Banovici_10014.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Banja Luka_20010.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Berkovici_20028.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bihac_10049.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bijeljina_20036.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bileca_20044.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosanska Dubica_20265.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosanska Gradiska_20125.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosanska Krupa_11428.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosanski Novi_20397.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosanski Petrovac_11436.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bosansko Grahovo_10146.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bratunac_20052.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Brcko_30163.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Breza_10189.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Brod_20079.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Bugojno_10197.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Busovaca_10219.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Buzim_11240.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Cajnice_20630.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Capljina_10243.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Cazin_10227.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Celic_11231.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Celinac_20648.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Centar Sarajevo_10839.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Citluk_10260.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Derventa_20133.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Doboj Istok_11258.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Doboj Jug_11266.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Doboj_20141.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Dobretici_11274.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Domaljevac-Samac_11282.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Donji Vakuf_10294.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Donji Zabar_20150.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Drvar_11614.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Foca (FBiH)_11444.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Foca (RS)_20613.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Fojnica_10324.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Gacko_20117.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Glamoc_10359.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Gorazde_11452.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Gornji Vakuf-Uskoplje_10375.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Gracanica_11479.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Gradacac_10391.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Grude_10405.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Hadzici_10847.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Han Pijesak_20621.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ilidza_11550.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ilijas_10863.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Istocna Ilidza_20176.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Istocni Drvar_20184.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Istocni Mostar_20192.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Istocni Stari Grad_20206.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Istocno Novo Sarajevo_20214.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Jablanica_10421.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Jajce_11487.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Jezero_20222.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kakanj_10448.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kalesija_11495.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kalinovik_20249.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kiseljak_10472.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kladanj_10499.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kljuc_11509.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Knezevo_20257.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Konjic_10529.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kostajnica_20273.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kotor Varos_20281.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kresevo_10545.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Krupa na Uni_20290.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kupres (RS)_20303.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Kupres_11517.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Laktasi_20311.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Livno_10588.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Lopare_20320.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Lukavac_10600.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ljubinje_20338.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ljubuski_10626.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Maglaj_10634.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Milici_20346.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Modrica_20354.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Mostar_11410.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Mrkonjic Grad_20362.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Neum_10685.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Nevesinje_20389.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Novi Grad Sarajevo_10871.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Novi Travnik_10774.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Novo Gorazde_20419.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Novo Sarajevo_11568.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Odzak_11525.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Olovo_10715.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Orasje_11533.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Osmaci_20427.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ostra Luka_20435.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Pale (FBiH)_11576.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Pale_20443.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Pelagicevo_20451.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Petrovac_20460.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Petrovo_20478.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Posusje_10731.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Prijedor_20486.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Prnjavor_20494.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Prozor_10766.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ravno_11304.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ribnik_20508.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Rogatica_20516.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Rudo_20524.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Samac_20656.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Sanski Most_11541.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Sapna_11312.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Sekovici_20664.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Sipovo_20672.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Siroki Brijeg_10570.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Sokolac_20532.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Srbac_20559.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Srebrenica_20567.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Srebrenik_10987.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Stari Grad Sarajevo_11584.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Stolac_11606.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Teocak_11339.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Tesanj_11045.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Teslic_20575.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Tomislavgrad_10308.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Travnik_11061.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Trebinje_20583.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Trnovo (FBiH)_11592.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Trnovo (RS)_20591.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Tuzla_11088.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Ugljevik_20605.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Usora_11622.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Vares_11100.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Velika Kladusa_11118.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Visegrad_20087.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Visoko_11126.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Vitez_11142.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Vlasenica_20095.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Vogosca_10928.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Vukosavlje_20109.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Zavidovici_11177.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Zenica_11185.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Zepce_11207.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Zivinice_11215.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/.extracted/settlements_pack/Zvornik_20168.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/awwv_geography_viewer.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_census_1991.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_census_1991.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_master.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_master.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_municipalities.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_settlements_1991_from_embedded.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_settlements_1991.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bih_settlements.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/bosnia_settlements_1991.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/census_viewer.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/census-loader.ts",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/drzava.js",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/generate_municipality_borders.py",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/geography_settlements.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/geography_settlements.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/geography.geojson",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/geography.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/map_preview.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_census_audit.txt",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_census_clean.csv",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_census_clean.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_census_issues.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_census_mismatch_detail.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_municipalities.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_municipalities.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/master_settlements.xlsx",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/MUNICIPALITY_BORDERS_GUIDE.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/quick_start.sh",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/README.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlement_id_remap.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlement.ts",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlements_map_CURRENT_dark_zoom_v2_added_breza_centar_jezero.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlements_map_WITH_MUNI_OUTLINES_dark_zoom_v5.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlements_map_WITH_MUNI_OUTLINES_dark_zoom_v5.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/settlements_pack.zip",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/simple_municipality_borders.py",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/svg_join_order_report.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/svg_join_order_report.txt",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/svg_join_overrides.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/svg_join_report.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/svg_join_report.txt",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "data/source/visualize_municipality_borders.html",
+      "category": "EXEMPT",
+      "reasons": [
+        "source data (read-only)"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Engine_Invariants_v0_2_3.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Engine_Invariants_v0_2_5.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Rulebook_v0_2_3_FINAL.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Rulebook_v0_2_5.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_3_FINAL.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_5.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_The_Game_Bible_v0_2_3_FINAL.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/A_War_Without_Victory_The_Game_Bible_v0_2_5.docx",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/ASSISTANT_MISTAKES.log",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/cleanup/2026-01-25_repo_cleanup.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/cleanup/cleanup_audit.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/cleanup/cleanup_audit.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/constants_index.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/cursor_rules.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/data_format.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/ENGINE_FREEZE_v0_2_6.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/engineering/DETERMINISM_AUDIT.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/engineering/INVARIANTS_IN_CODE.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/engineering/REFACTOR_ROADMAP.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/FORAWWV.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/handoff_map_pipeline.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/MAP_BUILD_SYSTEM.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/map_diagnostics.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/map_pipeline.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/MAPKIT_CANON.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/MAPKIT_REGEN_COMPLETE.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/mapkit_regen_report.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/mapkit_repair_report.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/PROJECT_LEDGER.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "docs/REPAIR_PIPELINE_GUIDE.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "documentation file"
+      ]
+    },
+    {
+      "path": "package-lock.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "root config file"
+      ]
+    },
+    {
+      "path": "package.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "root config file"
+      ]
+    },
+    {
+      "path": "README.md",
+      "category": "EXEMPT",
+      "reasons": [
+        "root documentation"
+      ]
+    },
+    {
+      "path": "scripts/map/build_substrate_viewer_index.ts",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 script"
+      ]
+    },
+    {
+      "path": "scripts/map/derive_settlement_substrate_from_master.ts",
+      "category": "EXEMPT",
+      "reasons": [
+        "canonical Phase 0 script"
+      ]
+    },
+    {
+      "path": "tsconfig.json",
+      "category": "EXEMPT",
+      "reasons": [
+        "root config file"
+      ]
+    },
+    {
+      "path": "data/derived/adjacency_calibration.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/adjacency_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/build_fingerprint.txt",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/excel_meta_stats.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/fallback_geometries.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/fix_edges_canonicalize_sids.report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/front_edges.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/geometry_coverage_by_municipality.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/geometry_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/hull_inflation_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/hull_inflation_report.txt",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/index.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/join_stats.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/map_bounds.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/map_build_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/map_raw_audit_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/mapkit_regime_diagnosis.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/mapkit_regime_normalization.report.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/mapkit_regime_normalization.summary.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/missing_edge_sids.summary.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/muni_from_fabric_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipalities_meta.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/border_id_diagnostic.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/municipalities_zero_settlements.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/municipality_geometry_failures_diagnostic.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/municipality_geometry_failures_diagnostic.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/settlements_missing_muni_ref.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/settlements_unknown_muni_ref.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_extraction_failures.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_extraction_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_from_drzava_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_from_drzava.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_reconstructed_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_reconstructed.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_boundaries_derivation_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_boundaries_unstitchable.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_boundaries_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_coverage_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_missing_borders.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_missing_borders.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outline_rekeyed.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_derivation_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_from_settlement_fabric.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_missing.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_reconstruction_report.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_union_status.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/orphan_whitelist.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/orphans.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/polygon_fabric_with_mid.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/polygon_fabric.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/polygon_fabric.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/polygon_failures.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_edges.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_orphans.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_orphans.report.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_points_from_excel.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_points_rekeyed.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_points.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_polygons_rekeyed.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_polygons.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_polygons.zip",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlement_svgpaths.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_index.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_inspector.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_meta.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_meta.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_outside_municipality.report.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/settlements_outside_municipality.summary.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/sid_crosswalk_unresolved.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/sid_crosswalk.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/svg_geometry_failures_by_municipality.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/svg_geometry_failures_by_municipality.txt",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/derived/visualize_awwv_municipalities.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/diagnostics/suspects.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/edges.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/municipalities.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/refs/municipality_id_crosswalk.csv",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/settlement_attributes.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/settlements.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "data/source_v2/master_municipalities.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "dev_ui/index.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "dev_ui/main.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "dev_ui/ui0_map.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "dev_ui/ui0_map.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "IDENTITY_MIGRATION_SUMMARY.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "PHASE_21_SUMMARY.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "res/scenes/MapTestScene.gd",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "res/scripts/map/MapData.gd",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "res/scripts/map/MapLayer.gd",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "res/scripts/map/SettlementPolygons.gd",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "scripts/map/normalize_settlement_regimes.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/data/geography.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/adjacency_map.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/filter_active_settlements.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/front_edges.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/front_regions.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/municipalities.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/map/settlements.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/sim/turn_pipeline.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/acceptance_constraints.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/brcko.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/competence_valuations.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/competences.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/control_effective.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/control_flip_proposals.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/displacement.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/end_state_snapshot.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/exhaustion.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/formation_fatigue.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_breaches.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_posture_commitment.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_posture_regions.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_posture.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_pressure.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/front_segments.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/game_state.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/identity.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/militia_fatigue.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/negotiation_capital.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/negotiation_offers.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/negotiation_pressure.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/schema.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/serialize.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/supply_reachability.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/sustainability.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/territorial_valuation.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty_acceptance.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty_apply.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty_builder.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty_clause_library.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty_package_warnings.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/state/treaty.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/turn/pipeline.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/turn/steps.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/aor_contiguity.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/ceasefire.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/competence_valuations.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/control_overrides.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/end_state.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/factions.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/formations.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/front_posture_regions.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/front_posture.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/front_pressure.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/front_segments.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/militia_pools.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/supply_rights.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/supply_sources.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "src/validate/validate.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/acceptance_brcko_completeness.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/acceptance_constraints.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/artifact_determinism.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/calibration.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/competence_valuations.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/competences.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/control_flip_proposals.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/dev_ui_exports_deterministic.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/dev_ui_phase16.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/dev_ui_phase17.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/dev_ui_phase18.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/displacement.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/end_state.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/exhaustion_accumulate.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/formations_deterministic.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/formations_validate.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/freeze_regression.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_breaches.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_posture_commitment.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_posture_normalize.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_posture_regions_expand.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_pressure_accumulate.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_pressure_supply_modulation.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_regions.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_segments_validate.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/front_segments.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/generate_formations.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/identity_migration.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/militia_pools.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/negotiation_capital.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/negotiation_offers.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/negotiation_pressure.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/phase10_ops_fatigue.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/phase5_check.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/sim_formations_report.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/sim_scenario.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/state.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/supply_reachability.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/sustainability.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/territorial_valuation.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/treaty_apply_military.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/treaty_apply_territorial.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/treaty_brcko.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/treaty.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tests/turn_pipeline.test.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_build/adjacency.py",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_build/requirements.txt",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/data/derived/map_bounds.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/data/derived/settlements_polygons.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/index.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/README.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/style.css",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/viewer.js",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/data/derived/map_bounds.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/data/derived/municipalities_meta.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/data/derived/municipality_outlines.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/data/derived/settlements_meta.json",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/data/derived/settlements_polygons.geojson",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/index.html",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/README.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/style.css",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/viewer.js",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/build_crosswalk.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/build_inspector_html.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/build_municipality_borders_viewer_html.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/derive_municipality_outlines.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/extract_html_features.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/generate_geometry_report.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/mun_code_crosswalk.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/mun_code_summary.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/read_excel_meta.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/rekey_geometry.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/report_svg_geometry_failures.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/serve_viewer.js",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/settlement_points.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/svgpath_to_geojson.ts",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/map/test_svg_structure.js",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "tools/README.md",
+      "category": "ORPHAN_CANDIDATE",
+      "reasons": [
+        "no inbound reference found"
+      ]
+    },
+    {
+      "path": "ARCHITECTURE_SUMMARY.md",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/mun_code_outline.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/border_id_diagnostic.json",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_audit/settlement_muni_alignment_report.json",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_from_settlements_report.json",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_from_settlements_report.txt",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_borders_from_settlements.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_boundaries_from_fabric_cleaned_report.txt",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_boundaries_from_fabric.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_geometry_audit.json",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_geometry_audit.txt",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outline.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_from_html_audit.txt",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_from_html_cleaned_report.txt",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/municipality_outlines_from_html.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/national_outline.geojson",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/phase0_viewer/index.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "data/derived/phase0_viewer/viewer.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "dev_ui/vite.config.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/diagnose_settlement_regimes.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/fix_edges_canonicalize_sids.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/normalize_coordinate_regimes.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/promote_regen.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/regenerate_settlements_geojson.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/repair_settlements_geom.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/report_missing_edge_sids.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/report_orphan_settlements.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/report_settlements_outside_municipality.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/map/report_two_means_by_source.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "scripts/repo/cleanup_audit.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/mapkit_validate.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_aorcheck.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_commitment_report.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_competences.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_displacement.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_endstate.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_formations.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_front_breaches.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_front_edges.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_front_regions.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_front_state.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_generate_formations.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_mapcheck.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_militia.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_negcap.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_negotiate.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_negotiation.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_ops_report.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_phase5_check.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_propose_flips.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_run.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_scenario.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_set_posture_region.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_set_posture.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_smoke.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_supply.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_sustainability.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_treaty.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_validate.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/cli/sim_valuation.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "src/index.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/assistant/mistake_guard.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/assistant/mistake_helpers.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/assistant/print_context.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/assistant/project_ledger_guard.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/engineering/check_derived_state.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/engineering/check_determinism.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/engineering/determinism_guard.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_build/apply_fallback_fixes.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_build/audit_map.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_build/build_map.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_build/fix_queue.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_build/print_polygon_failures.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/prep.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_viewer_simple/server.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/prep.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map_viewer/server.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/audit_aggregate_mismatch.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/audit_municipality_coverage.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/audit_municipality_geometry.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/audit_settlement_muni_alignment.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/build_map_pipeline.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/build_map.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/build_master_census.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/build_municipality_reconstructed_viewer_html.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/build_municipality_viewer_html.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/check_and_derive_muni_borders.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/check_map.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/clean_fabric_muni_boundaries_by_sampling.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/clean_muni_outlines_by_fabric.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/derive_municipality_borders_from_settlements.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/derive_municipality_boundaries_from_fabric.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/derive_municipality_outlines_from_fabric.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/diagnose_border_ids.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/extract_muni_outlines_from_html.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/extract_municipality_borders_from_drzava.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/fix_duplicate_settlement_ids.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/geometry_hull.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/geometry_pipeline.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/join_svgs_by_order.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/join_svgs_into_master.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/name_normalize.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/README.md",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/reconstruct_municipalities_from_legacy.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/render_valid.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/report_geometry_coverage.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/report_hull_inflation.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/serve_fit_viewer.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/serve_geography_viewer.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/serve_simple_map_viewer.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/serve_svg_muni_viewer.ts",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_fit/index.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_fit/viewer.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_geography/index.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_geography/viewer.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_simple_map/index.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_simple_map/viewer.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_svg_muni/index.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/view_svg_muni/viewer.js",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    },
+    {
+      "path": "tools/map/viewer.html",
+      "category": "USED",
+      "reasons": [
+        "found in referenced files set"
+      ]
+    }
+  ]
+}

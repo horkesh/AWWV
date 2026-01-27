@@ -1,0 +1,32 @@
+Municipality Outlines Extraction Audit
+=====================================
+
+Total municipalities found: 141
+Municipalities emitted: 141
+Municipalities skipped: 0
+
+Skip reasons:
+
+Top 20 municipalities by vertex count:
+  Velika Kladusa: 4263 vertices
+  Ravno: 3361 vertices
+  Doboj: 3230 vertices
+  Cazin: 3117 vertices
+  Banja Luka: 3050 vertices
+  Bihac: 2891 vertices
+  Visoko: 2617 vertices
+  Ilijas: 2531 vertices
+  Prijedor: 2494 vertices
+  Foca: 2444 vertices
+  Konjic: 2398 vertices
+  Kiseljak: 2351 vertices
+  Prnjavor: 2336 vertices
+  Bijeljina: 2328 vertices
+  Kotor Varos: 2318 vertices
+  Mrkonjic Grad: 2315 vertices
+  Kalinovik: 2266 vertices
+  Bosanska Gradiska: 2262 vertices
+  Zavidovici: 2254 vertices
+  Kakanj: 2241 vertices
+
+Municipalities with curve/arc commands: 0

@@ -1,0 +1,100 @@
+SETTLEMENT ADJACENCY GRAPH AUDIT
+=================================
+
+COUNTS:
+  Nodes: 6135
+  Edges: 297
+  Isolated settlements: 5604
+
+DEGREE STATISTICS:
+  Min: 0
+  Median (p50): 0
+  p90: 0
+  Max: 4
+
+TOP DEGREE SETTLEMENTS (top 20):
+  220418: degree 4
+  211796: degree 3
+  216330: degree 3
+  220191: degree 3
+  221333: degree 3
+  223875: degree 3
+  228931: degree 3
+  117781: degree 2
+  145521: degree 2
+  157244: degree 2
+  169811: degree 2
+  202509: degree 2
+  202983: degree 2
+  203076: degree 2
+  203491: degree 2
+  203980: degree 2
+  204226: degree 2
+  206725: degree 2
+  206750: degree 2
+  206903: degree 2
+
+ISOLATED SETTLEMENTS (5604):
+  100013
+  100021
+  100030
+  100048
+  100056
+  100064
+  100072
+  100099
+  100102
+  100129
+  100137
+  100145
+  100153
+  100161
+  100170
+  100188
+  100196
+  100200
+  100218
+  100811
+  100820
+  100838
+  100846
+  100854
+  100862
+  100889
+  100897
+  100919
+  100927
+  100935
+  100943
+  100951
+  100960
+  100978
+  100986
+  100994
+  101001
+  101010
+  101028
+  101036
+  101044
+  101052
+  101079
+  101087
+  101095
+  101109
+  101117
+  101125
+  101133
+  101141
+  ... and 5554 more
+
+ANOMALIES:
+  Missing SID features: 0
+  Non-polygon features: 0
+  Segments shared by >2 settlements: 0
+  Max shared border length: 23.748740 (213942 <-> 229172)
+
+NOTE:
+  Adjacency is defined as shared boundary segments only (contiguity).
+  Point-touch does not create edges. No terrain inference performed.
+  Coordinate quantization (EPS) used only for robust segment matching.
+  No geometry modification or invention performed.
