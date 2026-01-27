@@ -100,6 +100,8 @@
     "map:derive:graph": "tsx scripts/map/derive_settlement_graph_from_substrate.ts",
     "map:derive:graph:v2": "tsx scripts/map/derive_settlement_graph_from_substrate_v2_overlap.ts",
     "map:diagnose:nearmiss": "tsx scripts/map/diagnose_settlement_contiguity_nearmiss.ts",
+    "map:diagnose:touchclass": "tsx scripts/map/diagnose_touch_pairs_point_vs_border.ts",
+    "map:derive:contact": "tsx scripts/map/derive_settlement_contact_graph_pointtouch.ts",
     "map:viewer:substrate:index": "tsx scripts/map/build_substrate_viewer_index.ts",
     "audit:muni": "tsx tools/map/audit_municipality_coverage.ts",
     "audit:muni:diagnose-borders": "tsx tools/map/diagnose_border_ids.ts",

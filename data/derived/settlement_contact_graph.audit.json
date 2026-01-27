@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\settlements_substrate.geojson",
+  "counts": {
+    "nodes": 6135,
+    "edges_total": 2473,
+    "edges_shared_border": 344,
+    "edges_point_touch": 2129
+  },
+  "degree_stats": {
+    "overall": {
+      "min": 0,
+      "p50": 0,
+      "p90": 2,
+      "max": 7
+    },
+    "shared_border": {
+      "min": 0,
+      "p50": 0,
+      "p90": 1,
+      "max": 5
+    },
+    "point_touch": {
+      "min": 0,
+      "p50": 0,
+      "p90": 2,
+      "max": 6
+    }
+  },
+  "component_analysis": {
+    "component_count": 3882,
+    "largest_component_size": 215,
+    "top_components_sizes": [
+      215,
+      80,
+      55,
+      51,
+      34,
+      27,
+      27,
+      25,
+      25,
+      24,
+      24,
+      24,
+      24,
+      24,
+      23,
+      22,
+      21,
+      20,
+      20,
+      20
+    ]
+  },
+  "isolated": {
+    "shared_border_only": 5520,
+    "shared_border_plus_point_touch": 3169
+  },
+  "anomalies": {
+    "missing_sid_features_count": 0,
+    "non_polygon_features_count": 0,
+    "skipped_pairs_due_to_caps": 0
+  }
+}

@@ -1,0 +1,45 @@
+SETTLEMENT CONTACT GRAPH AUDIT (Shared Border + Point Touch)
+==============================================================
+
+COUNTS:
+  Nodes: 6135
+  Edges total: 2473
+  Edges shared border: 344
+  Edges point touch: 2129
+
+DEGREE STATISTICS:
+  Overall:
+    Min: 0
+    Median (p50): 0
+    p90: 2
+    Max: 7
+  Shared border:
+    Min: 0
+    Median (p50): 0
+    p90: 1
+    Max: 5
+  Point touch:
+    Min: 0
+    Median (p50): 0
+    p90: 2
+    Max: 6
+
+COMPONENT ANALYSIS:
+  Component count: 3882
+  Largest component size: 215
+  Top component sizes (top 20): 215, 80, 55, 51, 34, 27, 27, 25, 25, 24, 24, 24, 24, 24, 23, 22, 21, 20, 20, 20
+
+ISOLATED SETTLEMENTS:
+  Shared border only: 5520
+  Shared border + point touch: 3169
+  Isolated reduction: 2351
+
+ANOMALIES:
+  Missing SID features: 0
+  Non-polygon features: 0
+  Skipped pairs due to caps: 0
+
+INTERPRETATION:
+  Largest component contains 215 settlements (3.5% of all settlements).
+  => Contact graph remains fragmented even with point-touch edges.
+  Point-touch edges reduce isolated settlements by 2351 (from 5520 to 3169).
