@@ -1663,3 +1663,15 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Determinism:** SHA256 hashes consistent between runs; no nondeterministic diffs detected
 - **Mistake guard:** `assertNoRepeat("pre-commit gate must stage only intended phase3 files and must keep derived artifacts untracked");`
 - **FORAWWV note:** Not edited. Pre-commit gate pattern (staging verification + validation pass) may be worth documenting as a workflow rule; **docs/FORAWWV.md may require an addendum** if we formalize this pattern.
+
+---
+
+**[2026-01-29] Post-commit: Phase 3D consumption correctness + tracking (no tuning)**
+
+- **Summary:** Committed validated Phase 3B/3C/3D wiring and tracking; fixed `pressure_cap_mult` single application; added mistake guard for commit scope.
+- **Commit:** `2ee668d` — `Phase 3D: fix pressure_cap_mult single application; track Phase 3B/3C/3D files`
+- **Files committed (11):** `src/state/front_pressure.ts`, `src/state/formation_fatigue.ts`, `src/state/game_state.ts`, `src/sim/turn_pipeline.ts`, `src/cli/phase3abc_audit_harness.ts`, `src/sim/collapse/capacity_modifiers.ts`, `src/sim/collapse/phase3d_collapse_resolution.ts`, `src/sim/pressure/phase3b_pressure_exhaustion.ts`, `src/sim/pressure/phase3c_exhaustion_collapse_gating.ts`, `src/sim/pressure/pressure_exposure.ts`, `docs/PROJECT_LEDGER.md`
+- **Post-commit validation:** `npm run phase3:abc_audit` (PASS); `ENABLE_PHASE3B=true ENABLE_PHASE3C=true ENABLE_PHASE3D=true SEED_PHASE3D_DAMAGE=true npm run phase3:abc_audit` (PASS). Determinism: SHA256 hashes consistent across runs. Seeded `3DMinPCap=0.7500` (< 1.0) across all 40 turns.
+- **Git status:** Clean index; derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked.
+- **Mistake guard:** `assertNoRepeat("commit must include only validated Phase 3B/3C/3D wiring and tracking with single modifier consumption");` added to `phase3abc_audit_harness.ts`.
+- **FORAWWV addendum:** This commit canonizes **single explicit consumption point per modifier**. **docs/FORAWWV.md may require an addendum** if we formalize that rule. Do NOT edit FORAWWV in this commit.
