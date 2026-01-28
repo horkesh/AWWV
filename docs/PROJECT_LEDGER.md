@@ -1482,3 +1482,72 @@ The pipeline operates in one of three modes based on crosswalk availability:
   - `node -e "const crypto=require('crypto'); const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt','data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt'].forEach(p=>{console.log(p,'sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));});"`
 - **Determinism:** All three reports are byte-identical across reruns (verified via stable SHA256). No timestamps.
 - **FORAWWV.md note:** If low-weight cross-cluster coupling is systematically lost to integer quantization (diffusion appears “applied” but yields zero observed deltas), **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3A formal spec integration (Manual + Rulebook)**
+
+- **Change:** Design freeze spec added for Phase 3A pressure eligibility + diffusion; Rulebook summary cross-reference added.
+- **Systems & Mechanics Manual:** New section "Phase 3A — Pressure Eligibility and Diffusion (Design Freeze)" inserted before "8. Command and control degradation" (after "7. Combat interaction and pressure"). Full formal spec added verbatim: canonical inputs, eligibility, diffusion, feature gates, non-scope, freeze status.
+- **Rulebook:** New subsection "Phase 3A — Pressure eligibility and diffusion" (Heading 3) under "Fronts and combat", with summary defining diffusion as conservative redistribution, substrate-only, and referencing the Manual section.
+- **Files modified:**
+  - `docs/A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_5.docx`
+  - `docs/A_War_Without_Victory_Rulebook_v0_2_5.docx`
+  - `package.json` (npm scripts `docs:edit:phase3a`, `docs:validate:phase3a`)
+- **New artifacts:** `tools/docs/` — `requirements.txt`, `phase3a_spec_text.py`, `edit_phase3a_spec.py`, `validate_phase3a_docs.py`, `invoke_edit_docx.ts`, `validate_phase3a_docs_runner.ts`. Edit script is deterministic, idempotent; validator checks Manual section title once, Rulebook subsection once, Rulebook->Manual reference.
+- **Mistake guard:** `assertNoRepeat("phase3a ab harness weaklink two-cluster seed variant nonzero bottleneck")` in `invoke_edit_docx.ts` and `validate_phase3a_docs_runner.ts`.
+- **FORAWWV.md note:** FORAWWV.md not edited. If this doc integration reveals a systemic design insight or invalidates an assumption, flag that **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Update codex context primer (authoritative docs, workflow guardrails, known blockers)**
+
+- **Change:** Added `codex.md` context primer with three sections.
+- **Authoritative docs:** Links to [CLAUDE.md](CLAUDE.md), [ARCHITECTURE_SUMMARY.md](ARCHITECTURE_SUMMARY.md), [docs/ENGINE_FREEZE_v0_2_6.md](docs/ENGINE_FREEZE_v0_2_6.md).
+- **Mandatory workflow guardrails:** Ledger update requirement and mistake-log guardrail; refs to [docs/PROJECT_LEDGER.md](docs/PROJECT_LEDGER.md) and [docs/ASSISTANT_MISTAKES.log](docs/ASSISTANT_MISTAKES.log).
+- **Known blockers:** Missing `mun_code_crosswalk.csv`, `mid = null`, fallback outlines behavior.
+- **Mistake guard:** `assertNoRepeat("update codex context primer with authoritative docs, workflow guardrails, and known blockers")`.
+- **FORAWWV.md note:** FORAWWV.md not edited. If this task reveals a systemic design insight or invalidates an assumption, **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3B formal spec integration (Manual + Rulebook)**
+
+- **Change:** Design freeze spec added for Phase 3B pressure → exhaustion coupling; Rulebook summary cross-reference added.
+- **Systems & Mechanics Manual:** New section "Phase 3B — Pressure → Exhaustion Coupling (Design Freeze)" inserted immediately after Phase 3A section. Full formal spec added verbatim: canonical inputs, coupling model, eligibility gates, exhaustion accrual rules, non-effects, determinism, freeze status.
+- **Rulebook:** New subsection "Phase 3B — Pressure and exhaustion" (Heading 3) inserted immediately after Phase 3A subsection, with summary defining exhaustion coupling as negative-sum transformation, gradual conversion of sustained pressure, and referencing the Manual section.
+- **Files modified:**
+  - `docs/A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_5.docx`
+  - `docs/A_War_Without_Victory_Rulebook_v0_2_5.docx`
+- **New artifacts:** `tools/docs/` — `phase3b_spec_text.py`, `edit_phase3b_spec.py`, `validate_phase3b_docs.py`, `invoke_edit_phase3b_docx.ts`. Edit script is deterministic, idempotent; validator checks Manual section title once, Rulebook subsection once, Rulebook->Manual reference.
+- **Mistake guard:** `assertNoRepeat("phase3a ab harness weaklink two-cluster seed variant nonzero bottleneck")` enforced in `invoke_edit_phase3b_docx.ts`.
+- **No gameplay tuning. No FORAWWV.md edits. Phase 3A unchanged.**
+- **FORAWWV.md note:** If Phase 3B introduces systemic insight or invalidates assumptions, **docs/FORAWWV.md may require a future addendum**. Do not edit automatically.
+
+---
+
+**[2026-01-28] Phase 3C formal spec integration (Manual + Rulebook)**
+
+- **Change:** Design freeze spec added for Phase 3C exhaustion → collapse gating; Rulebook summary cross-reference added.
+- **Systems & Mechanics Manual:** New section "Phase 3C — Exhaustion → Collapse Gating (Design Freeze)" inserted immediately after Phase 3B section. Full formal spec added verbatim: canonical inputs, structural position, collapse eligibility model, exhaustion threshold gating, state coherence gating, suppression/immunity rules, output contract, determinism, freeze status.
+- **Rulebook:** New subsection "Phase 3C — Exhaustion and collapse eligibility" (Heading 3) inserted immediately after Phase 3B subsection, with summary defining collapse eligibility as gated by exhaustion persistence and institutional/spatial degradation, emphasizing that eligibility ≠ collapse, and referencing the Manual section.
+- **Files modified:**
+  - `docs/A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_5.docx`
+  - `docs/A_War_Without_Victory_Rulebook_v0_2_5.docx`
+- **New artifacts:** `tools/docs/` — `phase3c_spec_text.py`, `edit_phase3c_spec.py`, `validate_phase3c_docs.py`, `invoke_edit_phase3c_docx.ts`. Edit script is deterministic, idempotent; validator checks Manual section title once, Rulebook subsection once, Rulebook->Manual reference, phase ordering (3A -> 3B -> 3C) in both documents.
+- **Mistake guard:** `assertNoRepeat("phase3a ab harness weaklink two-cluster seed variant nonzero bottleneck")` enforced in `invoke_edit_phase3c_docx.ts`.
+- **No collapse resolution implemented. No gameplay tuning. FORAWWV.md not edited.**
+- **FORAWWV.md note:** If Phase 3C introduces systemic insight or invalidates assumptions, **docs/FORAWWV.md may require a future addendum**. Do not edit automatically.
+
+---
+
+**[2026-01-28] Verify and confirm codex.md context primer**
+
+- **Change:** Verified `codex.md` contains three required sections with correct file paths. All referenced files exist and are accessible.
+- **Authoritative docs section:** Confirmed links to [CLAUDE.md](CLAUDE.md), [ARCHITECTURE_SUMMARY.md](ARCHITECTURE_SUMMARY.md), [docs/ENGINE_FREEZE_v0_2_6.md](docs/ENGINE_FREEZE_v0_2_6.md). All paths validated.
+- **Mandatory workflow guardrails section:** Confirmed references to [docs/PROJECT_LEDGER.md](docs/PROJECT_LEDGER.md) read/write requirement and [docs/ASSISTANT_MISTAKES.log](docs/ASSISTANT_MISTAKES.log) guardrail enforcement.
+- **Known blockers section:** Confirmed note about missing `data/source/mun_code_crosswalk.csv` causing `mid = null` and fallback municipality outlines behavior.
+- **Files modified:**
+  - `docs/PROJECT_LEDGER.md` (this entry)
+- **Mistake guard:** `assertNoRepeat("update codex context primer with authoritative docs, workflow guardrails, and known blockers")`.
+- **FORAWWV addendum:** not triggered.

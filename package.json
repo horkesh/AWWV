@@ -121,7 +121,9 @@
     "assistant:mistakes": "cat docs/ASSISTANT_MISTAKES.log",
     "assistant:mistakes:open": "powershell -Command \"Get-Content docs/ASSISTANT_MISTAKES.log -Tail 80\"",
     "context": "tsx tools/assistant/print_context.ts",
-    "repo:cleanup:audit": "tsx scripts/repo/cleanup_audit.ts"
+    "repo:cleanup:audit": "tsx scripts/repo/cleanup_audit.ts",
+    "docs:edit:phase3a": "tsx tools/docs/invoke_edit_docx.ts",
+    "docs:validate:phase3a": "tsx tools/docs/validate_phase3a_docs_runner.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
