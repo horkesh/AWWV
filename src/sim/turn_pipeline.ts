@@ -52,6 +52,7 @@ import {
   type Phase3DCollapseResolutionResult
 } from './collapse/phase3d_collapse_resolution.js';
 import { loadMistakes, assertNoRepeat } from '../../tools/assistant/mistake_guard.js';
+import { updateLossOfControlTrends } from '../state/loss_of_control_trends.js';
 
 loadMistakes();
 assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness');
@@ -60,6 +61,8 @@ assertNoRepeat('phase5b must expose existing posture degradation only and must n
 assertNoRepeat('phase5b commit must remain read-only exposure of existing posture degradation and must not introduce new mechanics');
 assertNoRepeat('phase5c logistics prioritization must only expose existing supply logic and must not add new mechanics or tuning');
 assertNoRepeat('phase5c commit must expose logistics prioritization only via existing supply logic and must not add or tune mechanics');
+assertNoRepeat('phase5d must expose trends and warnings only from existing state and must not add new mechanics or thresholds');
+assertNoRepeat('phase5d commit must expose loss-of-control trends and warnings only and must not introduce mechanics or thresholds');
 
 export type Rng = () => number;
 
@@ -341,6 +344,15 @@ const phases: NamedPhase[] = [
     run: (context) => {
       const result = applyPhase3DCollapseResolution(context.state);
       context.report.phase3d_collapse_resolution = result;
+    }
+  },
+  {
+    name: 'phase5d-loss-of-control-trends',
+    run: (context) => {
+      const edges = context.input.settlementEdges;
+      if (!edges) return;
+      const derivedFrontEdges = computeFrontEdges(context.state, edges);
+      updateLossOfControlTrends(context.state, derivedFrontEdges, context.report.exhaustion);
     }
   },
   {

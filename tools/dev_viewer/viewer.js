@@ -287,7 +287,11 @@ function showSettlementInspector(sid) {
       html += `<div class="field" style="margin-left: 20px;">Legitimacy: <span class="value">${faction.profile.legitimacy}</span></div>`;
       html += `<div class="field" style="margin-left: 20px;">Control: <span class="value">${faction.profile.control}</span></div>`;
       html += `<div class="field" style="margin-left: 20px;">Logistics: <span class="value">${faction.profile.logistics}</span></div>`;
-      html += `<div class="field" style="margin-left: 20px;">Exhaustion: <span class="value">${faction.profile.exhaustion}</span></div>`;
+      
+      // Phase 5D: Show exhaustion with trend
+      const exhaustionTrend = gameState.loss_of_control_trends?.by_faction?.[faction.id]?.exhaustion_trend;
+      const exhaustionTrendIcon = exhaustionTrend === 'up' ? '↑' : exhaustionTrend === 'down' ? '↓' : '→';
+      html += `<div class="field" style="margin-left: 20px;">Exhaustion: <span class="value">${faction.profile.exhaustion}</span> <span style="color: ${exhaustionTrend === 'up' ? '#ff6666' : exhaustionTrend === 'down' ? '#66ff66' : '#aaa'}">${exhaustionTrendIcon}</span></div>`;
     }
     if (faction.negotiation) {
       html += `<div class="field"><span class="label">Negotiation Pressure:</span><span class="value">${faction.negotiation.pressure}</span></div>`;
@@ -302,6 +306,28 @@ function showSettlementInspector(sid) {
     html += `<div class="field" style="margin-left: 20px;">Authority: <span class="value">${collapse.eligible_authority}</span></div>`;
     html += `<div class="field" style="margin-left: 20px;">Cohesion: <span class="value">${collapse.eligible_cohesion}</span></div>`;
     html += `<div class="field" style="margin-left: 20px;">Spatial: <span class="value">${collapse.eligible_spatial}</span></div>`;
+  }
+  
+  // Phase 5D: Show loss-of-control trends and warnings for settlement
+  const settlementTrends = gameState.loss_of_control_trends?.by_settlement?.[sid];
+  if (settlementTrends) {
+    html += `<div class="field" style="margin-top: 10px;"><span class="label">Loss-of-Control Trends (Phase 5D):</span></div>`;
+    
+    // Capacity degradation
+    if (settlementTrends.capacity_degraded) {
+      html += `<div class="field" style="margin-left: 20px; color: #ff6666;">⚠ Capacity Degraded</div>`;
+    }
+    if (settlementTrends.supply_fragile) {
+      html += `<div class="field" style="margin-left: 20px; color: #ffaa66;">⚠ Supply Fragile</div>`;
+    }
+    if (settlementTrends.will_not_recover) {
+      html += `<div class="field" style="margin-left: 20px; color: #ff4444;">⚠ Will Not Recover (collapse damage present)</div>`;
+    }
+    
+    // Capacity trend
+    const capacityTrendIcon = settlementTrends.capacity_trend === 'up' ? '↑' : settlementTrends.capacity_trend === 'down' ? '↓' : '→';
+    const capacityTrendColor = settlementTrends.capacity_trend === 'up' ? '#ff6666' : settlementTrends.capacity_trend === 'down' ? '#66ff66' : '#aaa';
+    html += `<div class="field" style="margin-left: 20px; font-size: 0.9em; color: #aaa;">Capacity trend: <span style="color: ${capacityTrendColor}">${capacityTrendIcon}</span></div>`;
   }
   
   inspectorContent.innerHTML = html;
@@ -334,7 +360,13 @@ function showEdgeInspector(edgeId) {
   }
   
   if (pressure) {
-    html += `<div class="field"><span class="label">Pressure Value:</span><span class="value">${pressure.value || 0}</span></div>`;
+    // Phase 5D: Show pressure with trend
+    const edgeTrends = gameState.loss_of_control_trends?.by_edge?.[edgeId];
+    const pressureTrend = edgeTrends?.pressure_trend;
+    const pressureTrendIcon = pressureTrend === 'up' ? '↑' : pressureTrend === 'down' ? '↓' : '→';
+    const pressureTrendColor = pressureTrend === 'up' ? '#ff6666' : pressureTrend === 'down' ? '#66ff66' : '#aaa';
+    
+    html += `<div class="field"><span class="label">Pressure Value:</span><span class="value">${pressure.value || 0}</span> <span style="color: ${pressureTrendColor}">${pressureTrendIcon}</span></div>`;
     html += `<div class="field"><span class="label">Max Abs:</span><span class="value">${pressure.max_abs || 0}</span></div>`;
     html += `<div class="field"><span class="label">Last Updated:</span><span class="value">Turn ${pressure.last_updated_turn || 0}</span></div>`;
     
@@ -346,6 +378,21 @@ function showEdgeInspector(edgeId) {
     } else {
       html += `<div class="field"><span class="label">Net Pressure:</span><span class="value">balanced</span></div>`;
     }
+  }
+  
+  // Phase 5D: Show loss-of-control trends and warnings for edge
+  const edgeTrends = gameState.loss_of_control_trends?.by_edge?.[edgeId];
+  if (edgeTrends) {
+    html += `<div class="field" style="margin-top: 10px;"><span class="label">Loss-of-Control Trends (Phase 5D):</span></div>`;
+    
+    if (edgeTrends.supply_fragile) {
+      html += `<div class="field" style="margin-left: 20px; color: #ffaa66;">⚠ Supply Fragile</div>`;
+    }
+    if (edgeTrends.command_friction_worsening) {
+      html += `<div class="field" style="margin-left: 20px; color: #ffaa66;">⚠ Command Friction Worsening</div>`;
+    }
+    
+    // Pressure trend already shown above with pressure value
   }
   
   // Show current posture assignments for each faction

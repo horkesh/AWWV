@@ -327,6 +327,42 @@ export interface EffectivePostureExposureState {
   last_updated_turn: number;
 }
 
+// Phase 5D: Loss-of-control trend exposure (read-only, no new mechanics)
+// Exposes trends and warnings derived from existing irreversible state
+export type TrendDirection = 'up' | 'flat' | 'down';
+
+export interface LossOfControlTrendExposureState {
+  // Per faction: exhaustion trends
+  by_faction: Record<FactionId, {
+    exhaustion_trend: TrendDirection; // derived from exhaustion delta
+    exhaustion_increasing: boolean; // true if exhaustion delta > 0
+    collapse_eligible: boolean; // true if any domain eligible (from collapse_eligibility)
+  }>;
+  // Per settlement (SID): capacity degradation warnings
+  by_settlement: Record<string, {
+    capacity_degraded: boolean; // true if any capacity_mult < 1
+    supply_fragile: boolean; // true if supply_mult < 1
+    will_not_recover: boolean; // true if collapse_damage present (irreversible)
+    capacity_trend: TrendDirection; // derived from capacity_mult change
+  }>;
+  // Per edge: pressure/supply trends
+  by_edge: Record<string, {
+    pressure_trend: TrendDirection; // derived from pressure value change
+    supply_fragile: boolean; // true if min(supply_mult endpoints) < 1
+    command_friction_worsening: boolean; // true if friction increased (from front_segments)
+  }>;
+  // Previous turn snapshot (for trend computation)
+  previous_turn_snapshot?: {
+    turn: number;
+    faction_exhaustion: Record<FactionId, number>;
+    settlement_capacity: Record<string, { supply_mult: number; pressure_cap_mult: number }>;
+    edge_pressure: Record<string, number>;
+    edge_friction: Record<string, number>;
+  };
+  // Last updated turn (for determinism)
+  last_updated_turn: number;
+}
+
 export interface GameState {
   schema_version: number;
   meta: StateMeta;
@@ -374,4 +410,6 @@ export interface GameState {
   // Phase 5C: Logistics prioritization (player intent injection, no new mechanics)
   // Target ID format: edge_id for edge assignments, region_id for region assignments
   logistics_priority?: Record<FactionId, Record<string, number>>; // target_id -> priority (default 1.0, > 0)
+  // Phase 5D: Loss-of-control trend exposure (read-only, no new mechanics)
+  loss_of_control_trends?: LossOfControlTrendExposureState;
 }
