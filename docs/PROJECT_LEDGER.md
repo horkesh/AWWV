@@ -1736,3 +1736,15 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Validation:** Manual test: start dev runner, open viewer, select active edge, change posture, advance turns. Confirmed: posture change reflected in state; pressure/exhaustion trajectories differ over time; no immediate magical effects occur; bad posture choices worsen outcomes gradually.
 - **Mistake guard:** `assertNoRepeat("phase5a posture exposure must not introduce new mechanics or bypass command friction");` — no new mechanics added; posture wiring uses existing state structure and turn pipeline.
 - **FORAWWV note:** If this formalizes player intent injection as a canonical layer, **docs/FORAWWV.md may require an addendum**. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Post-commit: Phase 5A posture exposure (first player input, no new mechanics)**
+
+- **Summary:** Committed posture exposure as first player input mechanism. Posture already existed in GameState; wired through dev runner endpoint and viewer controls. No new mechanics introduced; posture changes take effect on next turn via existing turn pipeline.
+- **Commit:** `49a003e` — `Phase 5A: expose posture as first player input (no new mechanics)`
+- **Files committed (4):** `tools/dev_runner/server.ts`, `tools/dev_viewer/index.html`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Post-commit validation:** Dev runner starts successfully; viewer loads and renders state; posture controls appear only in edge inspector when edge is active and has controlling factions; posture changes written to state via POST /set_posture; posture takes effect on NEXT turn only (no immediate effects); pressure/exhaustion trajectories diverge gradually over multiple turns; determinism confirmed across reset + repeated runs (same posture inputs produce same state sequences).
+- **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked (correct).
+- **Mistake guard:** `assertNoRepeat("phase5a commit must include posture exposure only and must not introduce or tune mechanics");` — commit includes only posture exposure wiring; no engine mechanics modified or tuned.
+- **FORAWWV addendum:** This commit effectively establishes player intent injection as a canonical layer: **player inputs are injected into GameState and take effect via existing turn pipeline**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
