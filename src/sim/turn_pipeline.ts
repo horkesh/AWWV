@@ -36,10 +36,26 @@ import {
   getEnablePhase3ADiffusion,
   runPhase3APressureDiffusion
 } from './pressure/phase3a_pressure_diffusion.js';
+import {
+  getEnablePhase3B,
+  applyPhase3BPressureExhaustion,
+  type Phase3BExhaustionResult
+} from './pressure/phase3b_pressure_exhaustion.js';
+import {
+  getEnablePhase3C,
+  applyPhase3CExhaustionCollapseGating,
+  type Phase3CEligibilityResult
+} from './pressure/phase3c_exhaustion_collapse_gating.js';
+import {
+  getEnablePhase3D,
+  applyPhase3DCollapseResolution,
+  type Phase3DCollapseResolutionResult
+} from './collapse/phase3d_collapse_resolution.js';
 import { loadMistakes, assertNoRepeat } from '../../tools/assistant/mistake_guard.js';
 
 loadMistakes();
 assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness');
+assertNoRepeat('phase3d consumption must apply each modifier exactly once and must ensure all new phase files are tracked before commit');
 
 export type Rng = () => number;
 
@@ -66,6 +82,9 @@ export interface TurnReport {
   negotiation_acceptance?: AcceptanceReport; // Phase 11B
   negotiation_apply?: { applied: boolean; freeze_edges_count: number }; // Phase 11B
   phase3a_pressure_eligibility?: Phase3AAuditSummary; // Phase 3A: pressure eligibility audit (feature-gated)
+  phase3b_pressure_exhaustion?: Phase3BExhaustionResult; // Phase 3B: pressure → exhaustion coupling (feature-gated)
+  phase3c_exhaustion_collapse_gating?: Phase3CEligibilityResult; // Phase 3C: exhaustion → collapse eligibility gating (feature-gated)
+  phase3d_collapse_resolution?: Phase3DCollapseResolutionResult; // Phase 3D: collapse resolution (feature-gated)
   end_state_active?: boolean; // Phase 12D.0: true if end_state exists (war ended)
   end_state_info?: { // Phase 12D.1: snapshot info when end_state is active
     kind: string;
@@ -220,6 +239,42 @@ const phases: NamedPhase[] = [
       const effectiveEdges = (context as { phase3aEffectiveEdges?: unknown }).phase3aEffectiveEdges;
       if (!Array.isArray(effectiveEdges)) return;
       runPhase3APressureDiffusion(context.state, effectiveEdges);
+    }
+  },
+  {
+    name: 'phase3b-pressure-exhaustion',
+    run: (context) => {
+      const edges = context.input.settlementEdges;
+      if (!edges) return;
+      const derivedFrontEdges = computeFrontEdges(context.state, edges);
+      const effectiveEdges = (context as { phase3aEffectiveEdges?: unknown }).phase3aEffectiveEdges;
+      const result = applyPhase3BPressureExhaustion(
+        context.state,
+        derivedFrontEdges,
+        Array.isArray(effectiveEdges) ? effectiveEdges : undefined
+      );
+      context.report.phase3b_pressure_exhaustion = result;
+    }
+  },
+  {
+    name: 'phase3c-exhaustion-collapse-gating',
+    run: (context) => {
+      const edges = context.input.settlementEdges;
+      if (!edges) {
+        const result = applyPhase3CExhaustionCollapseGating(context.state);
+        context.report.phase3c_exhaustion_collapse_gating = result;
+        return;
+      }
+      const derivedFrontEdges = computeFrontEdges(context.state, edges);
+      const result = applyPhase3CExhaustionCollapseGating(context.state, derivedFrontEdges);
+      context.report.phase3c_exhaustion_collapse_gating = result;
+    }
+  },
+  {
+    name: 'phase3d-collapse-resolution',
+    run: (context) => {
+      const result = applyPhase3DCollapseResolution(context.state);
+      context.report.phase3d_collapse_resolution = result;
     }
   },
   {

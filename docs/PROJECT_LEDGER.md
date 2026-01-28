@@ -1650,3 +1650,16 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Files modified:** `scripts/repo/cleanup_audit.ts`, `docs/PROJECT_LEDGER.md`, `.gitignore`; `scripts/map/normalize_settlement_regimes.ts` (deleted); `docs/cleanup/cleanup_audit.json`, `docs/cleanup/cleanup_audit.md` (untracked).
 - **Mistake guard:** `assertNoRepeat("do not commit cleanup audit output files; commit only minimal meaningful repo cleanup diffs");`
 - **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Pre-commit gate: Phase 3B/3C/3D wiring + tracking (staging verification + determinism check)**
+
+- **Summary:** Pre-commit gate verified: only intended Phase 3 implementation files staged; derived artifacts remain untracked; both validation commands pass; determinism confirmed.
+- **Staged files (11):** `src/state/front_pressure.ts`, `src/state/formation_fatigue.ts`, `src/state/game_state.ts`, `src/sim/turn_pipeline.ts`, `src/cli/phase3abc_audit_harness.ts`, `src/sim/collapse/capacity_modifiers.ts`, `src/sim/collapse/phase3d_collapse_resolution.ts`, `src/sim/pressure/phase3b_pressure_exhaustion.ts`, `src/sim/pressure/phase3c_exhaustion_collapse_gating.ts`, `src/sim/pressure/pressure_exposure.ts`, `docs/PROJECT_LEDGER.md`
+- **Untracked (excluded):** `data/derived/**`, `tools/map_viewer/**` (correctly not staged)
+- **Commands run:** `npm run phase3:abc_audit` (PASS); `ENABLE_PHASE3B=true ENABLE_PHASE3C=true ENABLE_PHASE3D=true SEED_PHASE3D_DAMAGE=true npm run phase3:abc_audit` (PASS)
+- **Key metric:** seeded `3DMinPCap=0.7500` (deterministic, < 1.0, consistent across all 40 turns)
+- **Determinism:** SHA256 hashes consistent between runs; no nondeterministic diffs detected
+- **Mistake guard:** `assertNoRepeat("pre-commit gate must stage only intended phase3 files and must keep derived artifacts untracked");`
+- **FORAWWV note:** Not edited. Pre-commit gate pattern (staging verification + validation pass) may be worth documenting as a workflow rule; **docs/FORAWWV.md may require an addendum** if we formalize this pattern.

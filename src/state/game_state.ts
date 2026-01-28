@@ -232,6 +232,78 @@ export interface EndState {
   snapshot?: EndStateSnapshot; // Phase 12D.1: Frozen snapshot created once at peace entry
 }
 
+// Phase 3C: Collapse eligibility state (per faction, per domain)
+export interface CollapseEligibilityState {
+  // Tier-0: Per-domain eligibility flags (faction-level)
+  eligible_authority: boolean;
+  eligible_cohesion: boolean;
+  eligible_spatial: boolean;
+  // Tier-0: Per-domain persistence counters (consecutive turns above threshold)
+  persistence_authority: number;
+  persistence_cohesion: number;
+  persistence_spatial: number;
+  // Suppression/immunity flags
+  suppressed: boolean;
+  immune: boolean;
+  // Last updated turn (for determinism)
+  last_updated_turn: number;
+}
+
+// Phase 3C Tier-1: Per-entity (settlement SID) eligibility state
+export interface Tier1EntityEligibilityState {
+  // Per-domain eligibility flags
+  domains: {
+    authority: boolean;
+    cohesion: boolean;
+    spatial: boolean;
+  };
+  // Per-domain persistence counters
+  persistence: {
+    authority: number;
+    cohesion: number;
+    spatial: number;
+  };
+  // Suppression/immunity flags
+  suppressed: boolean;
+  immune: boolean;
+  // Optional debug info (keep small)
+  debug?: {
+    exposure: number;
+    gates?: {
+      authority?: { threshold_met: boolean; degradation_exists: boolean };
+      cohesion?: { threshold_met: boolean; degradation_exists: boolean };
+      spatial?: { threshold_met: boolean; degradation_exists: boolean };
+    };
+  };
+}
+
+// Phase 3C: Local strain accumulator (proxy until per-entity exhaustion exists)
+export interface LocalStrainState {
+  // Per-entity (settlement SID) local strain accumulator
+  by_entity: Record<string, number>; // EntityId -> strain value (monotonic, clamped)
+}
+
+// Phase 3D: Collapse damage tracks (irreversible degradation per entity per domain)
+export interface CollapseDamageState {
+  // Per-entity (settlement SID) collapse damage accumulator
+  by_entity: Record<string, {
+    authority: number; // [0,1] monotonic damage track
+    cohesion: number;  // [0,1] monotonic damage track
+    spatial: number;   // [0,1] monotonic damage track
+  }>;
+}
+
+// Phase 3D: Capacity modifiers (derived from collapse damage, consumed by later phases)
+export interface CapacityModifiersState {
+  // Per-entity (settlement SID) capacity modifiers
+  by_sid: Record<string, {
+    authority_mult: number;    // [0,1] multiplier for authority/control capacity
+    cohesion_mult: number;     // [0,1] multiplier for cohesion/formation capacity
+    supply_mult: number;       // [0,1] multiplier for supply throughput
+    pressure_cap_mult: number; // [0,1] multiplier for front pressure generation cap
+  }>;
+}
+
 export interface GameState {
   schema_version: number;
   meta: StateMeta;
@@ -264,4 +336,14 @@ export interface GameState {
   displacement_state?: Record<MunicipalityId, DisplacementState>;
   // Phase 22: Sustainability collapse tracking (per municipality)
   sustainability_state?: Record<MunicipalityId, SustainabilityState>;
+  // Phase 3C: Collapse eligibility state (per faction, Tier-0)
+  collapse_eligibility?: Record<FactionId, CollapseEligibilityState>;
+  // Phase 3C Tier-1: Per-entity (settlement SID) eligibility state
+  collapse_eligibility_tier1?: Record<string, Tier1EntityEligibilityState>; // EntityId -> Tier1EntityEligibilityState
+  // Phase 3C: Local strain accumulator (proxy until per-entity exhaustion exists)
+  local_strain?: LocalStrainState;
+  // Phase 3D: Collapse damage tracks (irreversible degradation per entity per domain)
+  collapse_damage?: CollapseDamageState;
+  // Phase 3D: Capacity modifiers (derived from collapse damage, consumed by later phases)
+  capacity_modifiers?: CapacityModifiersState;
 }

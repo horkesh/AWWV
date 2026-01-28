@@ -3,6 +3,7 @@ import { AdjacencyMap } from '../map/adjacency_map.js';
 import { GameState, PostureLevel } from './game_state.js';
 import { computeSupplyReachability } from './supply_reachability.js';
 import type { EffectivePostureState } from './front_posture_commitment.js';
+import { getEdgeCapacityMultiplier } from '../sim/collapse/capacity_modifiers.js';
 
 function postureMultiplier(posture: PostureLevel): number {
   switch (posture) {
@@ -126,11 +127,23 @@ export function accumulateFrontPressure(
     const numerator_b = local_supply_b ? 2 : 1;
     const denom_b = 2;
 
-    // Integer math: apply 50% penalty when unsupplied (floor).
-    const intent_a_eff = Math.floor((intent_a * numerator_a) / denom_a);
-    const intent_b_eff = Math.floor((intent_b * numerator_b) / denom_b);
+    // Phase 3D consumption (deterministic, no new mechanics):
+    // - supply_mult: multiplicatively reduces the existing supply effectiveness term
+    // - pressure_cap_mult: multiplicatively reduces the existing pressure generation/cap scalar
+    //   NOTE: This is the SOLE application point for pressure_cap_mult in the front pressure pipeline.
+    //   Do not apply any additional pressure cap multipliers later in this function.
+    // Conservative edge attribution: min(endpoint multipliers).
+    const edgeSupplyMult = getEdgeCapacityMultiplier(state, a, b, 'supply_mult');
+    const edgePressureCapMult = getEdgeCapacityMultiplier(state, a, b, 'pressure_cap_mult');
 
-    const delta = clampDelta(intent_a_eff - intent_b_eff, -10, 10);
+    // Integer math (deterministic):
+    // 1) Apply existing supply effectiveness (including Phase 3D supply_mult) to convert intent -> supplied intent.
+    // 2) Apply Phase 3D pressure_cap_mult exactly once to the resulting pressure generation term, then clamp.
+    const intent_a_supplied = Math.floor((intent_a * numerator_a * edgeSupplyMult) / denom_a);
+    const intent_b_supplied = Math.floor((intent_b * numerator_b * edgeSupplyMult) / denom_b);
+
+    const delta_generated = Math.floor((intent_a_supplied - intent_b_supplied) * edgePressureCapMult);
+    const delta = clampDelta(delta_generated, -10, 10);
     pressure_deltas[edge_id] = delta;
 
     const existing = (state.front_pressure as any)[edge_id];

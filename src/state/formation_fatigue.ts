@@ -5,6 +5,7 @@ import { computeSupplyReachability } from './supply_reachability.js';
 import { getSettlementSide } from '../map/front_edges.js';
 import { buildAdjacencyMap, type AdjacencyMap } from '../map/adjacency_map.js';
 import type { EdgeRecord } from '../map/settlements.js';
+import { getEdgeCapacityMultiplier } from '../sim/collapse/capacity_modifiers.js';
 
 /**
  * Per-formation fatigue update record.
@@ -174,6 +175,53 @@ function computeCommitPoints(supplied: boolean, fatigue: number): number {
   return Math.max(0, commitPoints - penalty);
 }
 
+function parseEdgeId(edgeId: string): [string, string] | null {
+  const idx = edgeId.indexOf('__');
+  if (idx <= 0 || idx === edgeId.length - 2) return null;
+  const a = edgeId.slice(0, idx);
+  const b = edgeId.slice(idx + 2);
+  return a && b ? [a, b] : null;
+}
+
+/**
+ * Phase 3D supply_mult consumption (deterministic, conservative):
+ * - Edge assignment: use edge multiplier min(supply_mult endpoints)
+ * - Region assignment: use min over region edges (conservative)
+ * - Unassigned: 1.0 (no logistics constraint)
+ */
+function getFormationSupplyMultiplier(
+  state: GameState,
+  formation: any,
+  frontRegions: FrontRegionsFile,
+  derivedFrontEdges: FrontEdge[]
+): number {
+  const assignment = formation?.assignment;
+  if (!assignment || typeof assignment !== 'object') return 1;
+
+  if (assignment.kind === 'edge' && typeof assignment.edge_id === 'string') {
+    const pair = parseEdgeId(assignment.edge_id);
+    if (!pair) return 1;
+    const [a, b] = pair;
+    return getEdgeCapacityMultiplier(state, a, b, 'supply_mult');
+  }
+
+  if (assignment.kind === 'region' && typeof assignment.region_id === 'string') {
+    const region = frontRegions.regions.find((r) => r.region_id === assignment.region_id);
+    if (!region) return 1;
+    let minMult = 1;
+    for (const edgeId of region.edge_ids) {
+      const pair = parseEdgeId(edgeId);
+      if (!pair) continue;
+      const [a, b] = pair;
+      const m = getEdgeCapacityMultiplier(state, a, b, 'supply_mult');
+      if (m < minMult) minMult = m;
+    }
+    return minMult;
+  }
+
+  return 1;
+}
+
 /**
  * Update formation fatigue based on supply status.
  *
@@ -236,7 +284,11 @@ export function updateFormationFatigue(
     }
 
     const fatigueAfter = formation.ops.fatigue;
-    const commitPoints = computeCommitPoints(supplied_this_turn, fatigueAfter);
+    const commitPointsBase = computeCommitPoints(supplied_this_turn, fatigueAfter);
+    // Phase 3D consumption: multiply existing commit_points by supply_mult (<= 1).
+    // This does not change the supply definition; it scales the existing commit capacity.
+    const supplyMult = getFormationSupplyMultiplier(state, formation, frontRegions, derivedFrontEdges);
+    const commitPoints = Math.floor(commitPointsBase * supplyMult);
 
     records.push({
       formation_id: formationId,
