@@ -58,6 +58,7 @@ assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusio
 assertNoRepeat('phase3d consumption must apply each modifier exactly once and must ensure all new phase files are tracked before commit');
 assertNoRepeat('phase5b must expose existing posture degradation only and must not invent new friction mechanics');
 assertNoRepeat('phase5b commit must remain read-only exposure of existing posture degradation and must not introduce new mechanics');
+assertNoRepeat('phase5c logistics prioritization must only expose existing supply logic and must not add new mechanics or tuning');
 
 export type Rng = () => number;
 

@@ -406,6 +406,16 @@ function showEdgeInspector(edgeId) {
       html += `</select>`;
       html += `<input type="number" id="posture-weight-${factionId}" value="${currentWeight}" min="0" placeholder="weight" style="width: 100%;">`;
       html += `<button onclick="setPosture('${factionId}', '${edgeId}')" style="width: 100%; margin-top: 4px;">Set Posture</button>`;
+      
+      // Phase 5C: Logistics priority control
+      const currentPriority = gameState.logistics_priority?.[factionId]?.[edgeId] ?? 1.0;
+      html += `<div class="field" style="margin-top: 10px;">`;
+      html += `<div class="label">Logistics Priority:</div>`;
+      html += `<div class="field" style="margin-left: 10px;">Current: <span class="value">${currentPriority.toFixed(2)}</span></div>`;
+      html += `<input type="number" id="logistics-priority-${factionId}" value="${currentPriority}" min="0.01" step="0.1" placeholder="priority (default: 1.0)" style="width: 100%;">`;
+      html += `<button onclick="setLogisticsPriority('${factionId}', '${edgeId}')" style="width: 100%; margin-top: 4px;">Set Logistics Priority</button>`;
+      html += `</div>`;
+      
       html += `</div>`;
     });
   } else {
@@ -471,8 +481,53 @@ async function setPosture(factionId, edgeId) {
   }
 }
 
-// Make setPosture available globally for onclick handlers
+// Set logistics priority for a faction/target
+async function setLogisticsPriority(factionId, targetId) {
+  const priorityInput = document.getElementById(`logistics-priority-${factionId}`);
+  
+  if (!priorityInput) {
+    console.error('Logistics priority input not found');
+    return;
+  }
+  
+  const priority = parseFloat(priorityInput.value);
+  
+  if (isNaN(priority) || priority <= 0) {
+    document.getElementById('status').textContent = 'Error: Priority must be > 0';
+    return;
+  }
+  
+  try {
+    const response = await fetch(`${API_BASE}/set_logistics_priority`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        faction_id: factionId,
+        target_id: targetId,
+        priority: priority
+      })
+    });
+    
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.error || `HTTP ${response.status}`);
+    }
+    
+    gameState = await response.json();
+    // Refresh the inspector to show updated priority
+    if (selectedEdge) {
+      showEdgeInspector(selectedEdge);
+    }
+    render();
+  } catch (error) {
+    document.getElementById('status').textContent = `Error setting logistics priority: ${error.message}`;
+    console.error('Failed to set logistics priority:', error);
+  }
+}
+
+// Make setPosture and setLogisticsPriority available globally for onclick handlers
 window.setPosture = setPosture;
+window.setLogisticsPriority = setLogisticsPriority;
 
 // Click handler
 canvas.addEventListener('click', (e) => {

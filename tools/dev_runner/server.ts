@@ -193,6 +193,54 @@ function handleRequestWithBody(
     return;
   }
 
+  if (method === 'POST' && url === '/set_logistics_priority') {
+    log(`POST /set_logistics_priority`);
+    try {
+      const payload = body ? JSON.parse(body) : {};
+      const { faction_id, target_id, priority } = payload;
+      
+      // Validate required fields
+      if (!faction_id || typeof faction_id !== 'string') {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Missing or invalid faction_id' }));
+        return;
+      }
+      if (!target_id || typeof target_id !== 'string') {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Missing or invalid target_id' }));
+        return;
+      }
+      if (typeof priority !== 'number' || priority <= 0) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Invalid priority (must be > 0)' }));
+        return;
+      }
+      
+      // Canonicalize faction ID
+      const canonicalFaction = canonicalizePoliticalSideId(faction_id);
+      
+      // Ensure logistics_priority structure exists
+      if (!currentState.logistics_priority || typeof currentState.logistics_priority !== 'object') {
+        currentState.logistics_priority = {};
+      }
+      if (!currentState.logistics_priority[canonicalFaction]) {
+        currentState.logistics_priority[canonicalFaction] = {};
+      }
+      
+      // Set logistics priority (takes effect on next turn)
+      currentState.logistics_priority[canonicalFaction][target_id] = priority;
+      
+      log(`Set logistics priority: faction=${canonicalFaction} target=${target_id} priority=${priority}`);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(serializeState(currentState));
+    } catch (error) {
+      log(`Error in /set_logistics_priority: ${error instanceof Error ? error.message : String(error)}`);
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: error instanceof Error ? error.message : String(error) }));
+    }
+    return;
+  }
+
   // 404 for unknown routes
   res.writeHead(404, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({ error: 'Not Found' }));
@@ -205,10 +253,11 @@ const server = createServer(handleRequest);
 server.listen(PORT, () => {
   console.log(`Dev runner server listening on http://localhost:${PORT}`);
   console.log(`Endpoints:`);
-  console.log(`  GET  /state       - Get current GameState`);
-  console.log(`  POST /step        - Advance one turn`);
-  console.log(`  POST /reset       - Reset to initial state`);
-  console.log(`  POST /set_posture - Set posture for faction/edge (takes effect next turn)`);
+  console.log(`  GET  /state                - Get current GameState`);
+  console.log(`  POST /step                 - Advance one turn`);
+  console.log(`  POST /reset                - Reset to initial state`);
+  console.log(`  POST /set_posture          - Set posture for faction/edge (takes effect next turn)`);
+  console.log(`  POST /set_logistics_priority - Set logistics priority for faction/target (takes effect next turn)`);
   console.log(`\nSet DEV_RUNNER_LOG=true to enable request logging`);
 });
 

@@ -371,4 +371,7 @@ export interface GameState {
   capacity_modifiers?: CapacityModifiersState;
   // Phase 5B: Effective posture exposure (read-only, no new mechanics)
   effective_posture_exposure?: EffectivePostureExposureState;
+  // Phase 5C: Logistics prioritization (player intent injection, no new mechanics)
+  // Target ID format: edge_id for edge assignments, region_id for region assignments
+  logistics_priority?: Record<FactionId, Record<string, number>>; // target_id -> priority (default 1.0, > 0)
 }
