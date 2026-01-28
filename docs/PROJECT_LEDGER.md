@@ -1723,3 +1723,16 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`, `tools/dev_runner/**`) remain untracked (correct).
 - **Mistake guard:** `assertNoRepeat("dev viewer must remain strictly read-only and must not embed or derive game logic");` — viewer code contains no game logic calculations, only raw value display.
 - **FORAWWV addendum:** This commit effectively establishes a canonical UI/engine separation rule: **UI layers are read-only consumers of engine state**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Phase 5A: Expose posture as first player input (minimal, no new mechanics)**
+
+- **Summary:** Exposed posture as the first player input mechanism. Posture already existed in GameState (`front_posture` per faction/edge); wired it through dev runner endpoint and viewer controls. No new mechanics introduced; posture changes take effect on next turn via existing turn pipeline.
+- **Files modified:** `tools/dev_runner/server.ts`, `tools/dev_viewer/index.html`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Posture representation:** Posture already exists in `GameState.front_posture: Record<FactionId, FrontPostureState>` where each assignment has `{ edge_id, posture: 'hold'|'probe'|'push', weight: number }`. Posture is read during turn pipeline via `normalizeFrontPosture()` and `postureIntent()` functions; affects pressure accumulation via `postureMultiplier()` (hold=0, probe=1, push=2).
+- **Dev runner endpoint:** Added `POST /set_posture` accepting `{ faction_id, edge_id, posture, weight }`. Validates posture is one of existing allowed values ('hold'|'probe'|'push'); writes posture into GameState only; does NOT compute effects (takes effect on next turn via existing pipeline).
+- **Viewer controls:** Updated edge inspector to show posture controls when edge is active and has controlling factions. Displays current posture per faction; provides dropdown to select posture and weight input; "Set Posture" button calls `/set_posture` endpoint. Viewer does not calculate outcomes or preview effects; only displays current posture value and allows intent injection.
+- **Validation:** Manual test: start dev runner, open viewer, select active edge, change posture, advance turns. Confirmed: posture change reflected in state; pressure/exhaustion trajectories differ over time; no immediate magical effects occur; bad posture choices worsen outcomes gradually.
+- **Mistake guard:** `assertNoRepeat("phase5a posture exposure must not introduce new mechanics or bypass command friction");` — no new mechanics added; posture wiring uses existing state structure and turn pipeline.
+- **FORAWWV note:** If this formalizes player intent injection as a canonical layer, **docs/FORAWWV.md may require an addendum**. Do NOT edit FORAWWV in this commit.

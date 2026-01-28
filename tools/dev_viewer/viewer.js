@@ -348,9 +348,106 @@ function showEdgeInspector(edgeId) {
     }
   }
   
+  // Show current posture assignments for each faction
+  html += `<div class="posture-control">`;
+  html += `<div class="field"><span class="label">Posture Controls:</span></div>`;
+  
+  // Get all factions that have posture assignments for this edge
+  const factionsWithPosture = [];
+  if (gameState.front_posture && typeof gameState.front_posture === 'object') {
+    for (const factionId of Object.keys(gameState.front_posture)) {
+      const factionPosture = gameState.front_posture[factionId];
+      if (factionPosture && factionPosture.assignments && factionPosture.assignments[edgeId]) {
+        const assignment = factionPosture.assignments[edgeId];
+        factionsWithPosture.push({
+          factionId,
+          posture: assignment.posture || 'hold',
+          weight: assignment.weight || 0
+        });
+      }
+    }
+  }
+  
+  // Show posture for each faction, or allow setting if edge is active and has sides
+  if (sideA && sideB && segment && segment.active) {
+    // Show controls for both sides
+    [sideA, sideB].forEach((factionId, idx) => {
+      const sideLabel = idx === 0 ? 'A' : 'B';
+      const currentPosture = factionsWithPosture.find(p => p.factionId === factionId);
+      const currentPostureValue = currentPosture ? currentPosture.posture : 'hold';
+      const currentWeight = currentPosture ? currentPosture.weight : 0;
+      
+      html += `<div class="field" style="margin-top: 10px;">`;
+      html += `<div class="label">Side ${sideLabel} (${factionId}):</div>`;
+      html += `<div class="field" style="margin-left: 10px;">Current: <span class="value">${currentPostureValue}</span> (weight: ${currentWeight})</div>`;
+      html += `<select id="posture-select-${factionId}" style="width: 100%;">`;
+      html += `<option value="hold" ${currentPostureValue === 'hold' ? 'selected' : ''}>hold</option>`;
+      html += `<option value="probe" ${currentPostureValue === 'probe' ? 'selected' : ''}>probe</option>`;
+      html += `<option value="push" ${currentPostureValue === 'push' ? 'selected' : ''}>push</option>`;
+      html += `</select>`;
+      html += `<input type="number" id="posture-weight-${factionId}" value="${currentWeight}" min="0" placeholder="weight" style="width: 100%;">`;
+      html += `<button onclick="setPosture('${factionId}', '${edgeId}')" style="width: 100%; margin-top: 4px;">Set Posture</button>`;
+      html += `</div>`;
+    });
+  } else {
+    // Show read-only posture info
+    if (factionsWithPosture.length > 0) {
+      factionsWithPosture.forEach(p => {
+        html += `<div class="field" style="margin-left: 10px;">${p.factionId}: <span class="value">${p.posture}</span> (weight: ${p.weight})</div>`;
+      });
+    } else {
+      html += `<div class="field" style="margin-left: 10px; color: #888;">No posture assignments</div>`;
+    }
+  }
+  
+  html += `</div>`;
+  
   inspectorContent.innerHTML = html;
   render();
 }
+
+// Set posture for a faction/edge
+async function setPosture(factionId, edgeId) {
+  const postureSelect = document.getElementById(`posture-select-${factionId}`);
+  const weightInput = document.getElementById(`posture-weight-${factionId}`);
+  
+  if (!postureSelect || !weightInput) {
+    console.error('Posture controls not found');
+    return;
+  }
+  
+  const posture = postureSelect.value;
+  const weight = parseInt(weightInput.value, 10) || 0;
+  
+  try {
+    const response = await fetch(`${API_BASE}/set_posture`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        faction_id: factionId,
+        edge_id: edgeId,
+        posture: posture,
+        weight: weight
+      })
+    });
+    
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.error || `HTTP ${response.status}`);
+    }
+    
+    gameState = await response.json();
+    // Refresh the inspector to show updated posture
+    showEdgeInspector(edgeId);
+    render();
+  } catch (error) {
+    document.getElementById('status').textContent = `Error setting posture: ${error.message}`;
+    console.error('Failed to set posture:', error);
+  }
+}
+
+// Make setPosture available globally for onclick handlers
+window.setPosture = setPosture;
 
 // Click handler
 canvas.addEventListener('click', (e) => {
