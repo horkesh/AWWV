@@ -1787,3 +1787,15 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Validation:** Manual test: deprioritize one front (priority 0.5), prioritize another (priority 2.0), advance multiple turns. Confirmed: supply degrades faster on low-priority fronts (lower commit points); high-priority fronts improve only within existing limits (supply_mult still applies); exhaustion and collapse respond gradually; no instant or binary effects.
 - **Mistake guard:** `assertNoRepeat("phase5c logistics prioritization must only expose existing supply logic and must not add new mechanics or tuning");` — priority multiplies existing supply_mult scalar only; no new logistics mechanics or tuning added.
 - **FORAWWV note:** If this formalizes logistics prioritization as a canonical player lever, **docs/FORAWWV.md may require an addendum**. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Post-commit: Phase 5C logistics prioritization (second player lever, no new mechanics)**
+
+- **Summary:** Committed logistics prioritization as the second player input mechanism. Added `logistics_priority` field to GameState that multiplies existing `supply_mult` from capacity modifiers. Priority acts as a relative weight (default 1.0, > 0) applied conservatively (edge min / region min). No new mechanics introduced; only multiplies existing supply resolution scalar. Viewer displays current priority and allows setting via numeric input.
+- **Commit:** `a224587` — `Phase 5C: expose logistics prioritization as second player lever (no new mechanics)`
+- **Files committed (7):** `src/state/game_state.ts`, `src/state/schema.ts`, `src/state/formation_fatigue.ts`, `src/sim/turn_pipeline.ts`, `tools/dev_runner/server.ts`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Post-commit validation:** Dev runner starts successfully; viewer loads and renders state; logistics priority control appears in edge inspector for valid targets; priority defaults to 1.0; priority changes persist in state; effects apply NEXT turn only (no immediate effects); supply degradation/improvement is gradual and bounded (within existing supply_mult limits); determinism confirmed across reset + repeated runs (same priority inputs produce same state sequences).
+- **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked (correct).
+- **Mistake guard:** `assertNoRepeat("phase5c commit must expose logistics prioritization only via existing supply logic and must not add or tune mechanics");` — commit includes only priority wiring as multiplicative weight; no engine mechanics modified or tuned.
+- **FORAWWV addendum:** This commit effectively establishes logistics prioritization as a canonical player lever: **player inputs multiply existing supply resolution without introducing new mechanics**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.

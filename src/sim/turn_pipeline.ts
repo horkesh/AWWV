@@ -59,6 +59,7 @@ assertNoRepeat('phase3d consumption must apply each modifier exactly once and mu
 assertNoRepeat('phase5b must expose existing posture degradation only and must not invent new friction mechanics');
 assertNoRepeat('phase5b commit must remain read-only exposure of existing posture degradation and must not introduce new mechanics');
 assertNoRepeat('phase5c logistics prioritization must only expose existing supply logic and must not add new mechanics or tuning');
+assertNoRepeat('phase5c commit must expose logistics prioritization only via existing supply logic and must not add or tune mechanics');
 
 export type Rng = () => number;
 
