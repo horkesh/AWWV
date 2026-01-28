@@ -1,0 +1,159 @@
+Phase 2.5 Contact Graph Characterization Report
+============================================================
+
+Nodes: 6137
+Edges: 19474
+  - Shared-border: 123
+  - Point-touch: 677
+  - Distance-contact: 18674
+
+Degree Distribution (Overall):
+  Min: 0, P50: 6, P90: 9, P99: 12, Max: 25
+  Mean: 6.346
+
+Centroid Distance (SVG) Distribution:
+  shared_border: Min=1.921, P50=7.022, P90=11.887, P99=19.419, Max=30.947
+    Mean: 7.582
+  point_touch: Min=0.886, P50=7.278, P90=13.748, P99=20.682, Max=27.177
+    Mean: 8.004
+  distance_contact: Min=0.740, P50=8.872, P90=17.221, P99=29.670, Max=306.519
+    Mean: 10.315
+
+Contact Span (SVG) Distribution:
+  shared_border: Min=0.000, P50=1.549, P90=9.392, P99=19.105, Max=26.284
+    Mean: 3.605
+  point_touch: Min=0.000, P50=0.000, P90=0.000, P99=0.000, Max=0.000
+    Mean: 0.000
+  distance_contact: Min=0.000, P50=0.000, P90=0.006, P99=0.399, Max=0.500
+    Mean: 0.016
+
+BBox Overlap Ratio Distribution:
+  shared_border: Min=0.000, P50=0.117, P90=0.248, P99=0.369, Max=0.585
+    Mean: 0.135
+  point_touch: Min=0.000, P50=0.108, P90=0.260, P99=0.410, Max=0.746
+    Mean: 0.129
+  distance_contact: Min=0.000, P50=0.068, P90=0.217, P99=0.425, Max=0.908
+    Mean: 0.095
+
+Area Ratio Distribution:
+  shared_border: Min=0.051, P50=0.560, P90=0.905, P99=0.993, Max=0.998
+    Mean: 0.550
+  point_touch: Min=0.008, P50=0.528, P90=0.901, P99=0.984, Max=0.996
+    Mean: 0.536
+  distance_contact: Min=0.001, P50=0.514, P90=0.892, P99=0.988, Max=1.000
+    Mean: 0.521
+
+Perimeter Ratio Distribution:
+  shared_border: Min=0.192, P50=0.706, P90=0.943, P99=0.991, Max=0.998
+    Mean: 0.678
+  point_touch: Min=0.086, P50=0.710, P90=0.935, P99=0.988, Max=0.998
+    Mean: 0.685
+  distance_contact: Min=0.029, P50=0.697, P90=0.936, P99=0.993, Max=1.000
+    Mean: 0.674
+
+Connectivity:
+  Connected Components: 1
+  Largest Component Size: 6136
+  Size Distribution: Min=6136, P50=6136, P90=6136, Max=6136
+  Small Components (size <= 5): 0
+
+Suspicious Lists (Top 20):
+
+Distance-Contact Longest Centroid Distance (total: 18674):
+  S217182 <-> S227757: 306.519
+  S216976 <-> S227757: 299.403
+  S217433 <-> S227757: 296.961
+  S165379 <-> S227757: 296.578
+  S226394 <-> S227757: 294.522
+  S115185 <-> S227757: 286.083
+  S145793 <-> S227757: 284.181
+  S114197 <-> S227757: 280.940
+  S169692 <-> S227757: 272.802
+  S169684 <-> S227757: 270.246
+  S164623 <-> S227757: 267.130
+  S166308 <-> S227757: 266.813
+  S210471 <-> S227757: 262.039
+  S227757 <-> S227978: 260.842
+  S227242 <-> S227757: 253.306
+  S200344 <-> S219223: 81.421
+  S200506 <-> S219223: 76.991
+  S219223 <-> S219380: 68.643
+  S200166 <-> S219223: 65.904
+  S208752 <-> S212784: 62.101
+
+Distance-Contact Lowest BBox Overlap (total: 18674):
+  S100030 <-> S100153: 0.000
+  S100099 <-> S131547: 0.000
+  S100129 <-> S164283: 0.000
+  S100846 <-> S100897: 0.000
+  S100919 <-> S101184: 0.000
+  S101214 <-> S109762: 0.000
+  S101222 <-> S109851: 0.000
+  S101257 <-> S101290: 0.000
+  S101265 <-> S109991: 0.000
+  S105643 <-> S105716: 0.000
+  S105686 <-> S166286: 0.000
+  S105716 <-> S105856: 0.000
+  S105716 <-> S141453: 0.000
+  S105759 <-> S151530: 0.000
+  S105805 <-> S155830: 0.000
+  S105864 <-> S217620: 0.000
+  S105872 <-> S141453: 0.000
+  S106216 <-> S106461: 0.000
+  S106305 <-> S106372: 0.000
+  S106330 <-> S151726: 0.000
+
+Shared-Border Smallest Overlap Length (total: 123):
+  S129968 <-> S130036: 0.000
+  S130494 <-> S130737: 0.000
+  S129283 <-> S129399: 0.000
+  S143677 <-> S143880: 0.000
+  S106186 <-> S106488: 0.000
+  S105546 <-> S105635: 0.000
+  S164810 <-> S169757: 0.000
+  S123161 <-> S123374: 0.000
+  S154920 <-> S165620: 0.000
+  S108359 <-> S108880: 0.000
+  S222186 <-> S222275: 0.000
+  S126446 <-> S126497: 0.000
+  S220108 <-> S220272: 0.000
+  S142212 <-> S142662: 0.000
+  S119555 <-> S138797: 0.000
+  S205729 <-> S206059: 0.001
+  S205931 <-> S206059: 0.001
+  S214205 <-> S214213: 0.002
+  S122360 <-> S122882: 0.018
+  S129232 <-> S129445: 0.020
+
+Distance-Contact Min Dist Zero (total: 127):
+  S126764 <-> S142484: min_dist=0
+  S200085 <-> S200379: min_dist=0
+  S200344 <-> S200441: min_dist=0
+  S200409 <-> S228931: min_dist=0
+  S201570 <-> S206083: min_dist=0
+  S201669 <-> S201928: min_dist=0
+  S201847 <-> S202061: min_dist=0
+  S201863 <-> S202100: min_dist=0
+  S202215 <-> S202428: min_dist=0
+  S202410 <-> S202614: min_dist=0
+  S202720 <-> S202908: min_dist=0
+  S202762 <-> S202797: min_dist=0
+  S202932 <-> S202959: min_dist=0
+  S203025 <-> S223603: min_dist=0
+  S203238 <-> S204587: min_dist=0
+  S203530 <-> S204161: min_dist=0
+  S203661 <-> S221015: min_dist=0
+  S203670 <-> S204641: min_dist=0
+  S203815 <-> S221384: min_dist=0
+  S203939 <-> S220361: min_dist=0
+
+Notes:
+Missing Metrics:
+  centroid_distance_svg: 0
+  contact_span_svg: 0
+  bbox_overlap_ratio: 0
+  area_ratio: 0
+  perimeter_ratio: 0
+  overlap_len: 19351
+  min_dist: 800
+

@@ -1,65 +1,77 @@
 {
   "schema_version": 1,
   "source": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\settlements_substrate.geojson",
+  "parameters": {
+    "D0": 0.5
+  },
   "counts": {
-    "nodes": 6135,
-    "edges_total": 2473,
-    "edges_shared_border": 344,
-    "edges_point_touch": 2129
-  },
-  "degree_stats": {
-    "overall": {
-      "min": 0,
-      "p50": 0,
-      "p90": 2,
-      "max": 7
-    },
-    "shared_border": {
-      "min": 0,
-      "p50": 0,
-      "p90": 1,
-      "max": 5
-    },
-    "point_touch": {
-      "min": 0,
-      "p50": 0,
-      "p90": 2,
-      "max": 6
-    }
-  },
-  "component_analysis": {
-    "component_count": 3882,
-    "largest_component_size": 215,
-    "top_components_sizes": [
-      215,
-      80,
-      55,
-      51,
-      34,
-      27,
-      27,
-      25,
-      25,
-      24,
-      24,
-      24,
-      24,
-      24,
-      23,
-      22,
-      21,
-      20,
-      20,
-      20
-    ]
+    "nodes": 6137,
+    "edges_total": 19474,
+    "edges_shared_border": 123,
+    "edges_point_touch": 677,
+    "edges_distance_contact": 18674
   },
   "isolated": {
-    "shared_border_only": 5520,
-    "shared_border_plus_point_touch": 3169
+    "count": 1,
+    "percentage": 0.016294606485253382
   },
-  "anomalies": {
-    "missing_sid_features_count": 0,
-    "non_polygon_features_count": 0,
-    "skipped_pairs_due_to_caps": 0
+  "component_analysis": {
+    "component_count": 2,
+    "largest_component_size": 6136,
+    "largest_component_percentage": 99.98370539351474
+  },
+  "degree_stats": {
+    "min": 0,
+    "max": 25,
+    "median": 6,
+    "p90": 9
+  },
+  "top_settlements_by_degree": [
+    {
+      "sid": "S155551",
+      "degree": 25
+    },
+    {
+      "sid": "S162973",
+      "degree": 24
+    },
+    {
+      "sid": "S210145",
+      "degree": 23
+    },
+    {
+      "sid": "S219223",
+      "degree": 23
+    },
+    {
+      "sid": "S113727",
+      "degree": 22
+    },
+    {
+      "sid": "S117030",
+      "degree": 20
+    },
+    {
+      "sid": "S160261",
+      "degree": 20
+    },
+    {
+      "sid": "S100838",
+      "degree": 17
+    },
+    {
+      "sid": "S108120",
+      "degree": 17
+    },
+    {
+      "sid": "S171298",
+      "degree": 17
+    }
+  ],
+  "determinism": {
+    "node_ordering": "stable_sid_lexicographic",
+    "edge_ordering": "stable_lexicographic_pair",
+    "no_timestamps": true,
+    "no_randomness": true
   }
 }

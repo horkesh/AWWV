@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settlement Contact Graph Viewer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+    #canvas-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    #canvas {
+      display: block;
+      cursor: grab;
+      background: #f5f5f5;
+    }
+    #canvas.dragging {
+      cursor: grabbing;
+    }
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+      max-width: 300px;
+      max-height: 90vh;
+      overflow-y: auto;
+      font-size: 12px;
+    }
+    .control-group {
+      margin-bottom: 12px;
+    }
+    .control-group:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+    button {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      width: 100%;
+      margin-top: 8px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .legend {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+    .legend-color {
+      display: inline-block;
+      width: 16px;
+      height: 2px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+    }
+    #error-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 24px;
+      border: 2px solid #c62828;
+      border-radius: 8px;
+      max-width: 500px;
+      z-index: 10000;
+      display: none;
+    }
+    #error-box h2 {
+      color: #c62828;
+      margin-bottom: 12px;
+    }
+    #error-box code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    select {
+      width: 100%;
+      padding: 4px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-top: 4px;
+    }
+    #inspector {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+      max-width: 300px;
+      max-height: 90vh;
+      overflow-y: auto;
+      font-size: 11px;
+      display: none;
+    }
+    #inspector.visible {
+      display: block;
+    }
+    #inspector h3 {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    #inspector .field {
+      margin-bottom: 6px;
+    }
+    #inspector .field-label {
+      font-weight: 500;
+      color: #666;
+      font-size: 10px;
+    }
+    #inspector .field-value {
+      font-family: monospace;
+      font-size: 11px;
+      color: #000;
+    }
+    #inspector .section {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+    }
+    #inspector .section:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+    <div id="tooltip" class="tooltip"></div>
+    <div id="error-box"></div>
+    <div id="controls">
+      <div class="control-group">
+        <label>
+          Graph Phase:
+          <select id="phase-selector">
+            <option value="phase1">Phase 1 (contact graph)</option>
+            <option value="phase2" selected>Phase 2 (enriched)</option>
+          </select>
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-settlements" checked>
+          Show Settlement Borders
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-shared-border" checked>
+          Show Shared-Border Edges
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-point-touch" checked>
+          Show Point-Touch Edges
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-distance-contact" checked>
+          Show Distance-Contact Edges
+        </label>
+      </div>
+      <div class="control-group">
+        <button id="reset-view">Reset View</button>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-color" style="background: #2e7d32;"></span>
+          Shared-Border Edge
+        </div>
+        <div class="legend-item">
+          <span class="legend-color" style="background: #1565c0;"></span>
+          Point-Touch Edge
+        </div>
+        <div class="legend-item">
+          <span class="legend-color" style="background: #ff9800;"></span>
+          Distance-Contact Edge
+        </div>
+      </div>
+    </div>
+    <div id="inspector">
+      <h3>Edge Inspector</h3>
+      <div id="inspector-content">
+        <div class="field">
+          <div class="field-label">Click an edge to inspect</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="viewer.js"></script>
+</body>
+</html>

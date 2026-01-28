@@ -1,45 +1,51 @@
-SETTLEMENT CONTACT GRAPH AUDIT (Shared Border + Point Touch)
-==============================================================
+SETTLEMENT CONTACT GRAPH AUDIT REPORT
+Generated: Phase 1 Canonical Contact Graph Derivation
 
-COUNTS:
-  Nodes: 6135
-  Edges total: 2473
-  Edges shared border: 344
-  Edges point touch: 2129
+SOURCE
+  C:\Users\User\OneDrive - United Nations Development Programme\Documents\Personal\Wargame\AWWV\data\derived\settlements_substrate.geojson
 
-DEGREE STATISTICS:
-  Overall:
-    Min: 0
-    Median (p50): 0
-    p90: 2
-    Max: 7
-  Shared border:
-    Min: 0
-    Median (p50): 0
-    p90: 1
-    Max: 5
-  Point touch:
-    Min: 0
-    Median (p50): 0
-    p90: 2
-    Max: 6
+PARAMETERS
+  D0 (local contact radius): 0.5
+  EPS (coordinate tolerance): 0.00001
 
-COMPONENT ANALYSIS:
-  Component count: 3882
-  Largest component size: 215
-  Top component sizes (top 20): 215, 80, 55, 51, 34, 27, 27, 25, 25, 24, 24, 24, 24, 24, 23, 22, 21, 20, 20, 20
+COUNTS
+  Nodes (settlements): 6137
+  Edges (total): 19474
+    - Shared border: 123
+    - Point touch: 677
+    - Distance contact: 18674
 
-ISOLATED SETTLEMENTS:
-  Shared border only: 5520
-  Shared border + point touch: 3169
-  Isolated reduction: 2351
+ISOLATION
+  Isolated settlements: 1 (0.02%)
 
-ANOMALIES:
+COMPONENT ANALYSIS
+  Total components: 2
+  Largest component: 6136 settlements (99.98%)
+
+DEGREE STATISTICS
+  Min: 0
+  Max: 25
+  Median: 6
+  P90: 9
+
+TOP 10 SETTLEMENTS BY DEGREE
+  1. S155551: 25 neighbors
+  2. S162973: 24 neighbors
+  3. S210145: 23 neighbors
+  4. S219223: 23 neighbors
+  5. S113727: 22 neighbors
+  6. S117030: 20 neighbors
+  7. S160261: 20 neighbors
+  8. S100838: 17 neighbors
+  9. S108120: 17 neighbors
+  10. S171298: 17 neighbors
+
+DETERMINISM
+  Node ordering: stable_sid_lexicographic
+  Edge ordering: stable_lexicographic_pair
+  No timestamps: true
+  No randomness: true
+
+ANOMALIES
   Missing SID features: 0
   Non-polygon features: 0
-  Skipped pairs due to caps: 0
-
-INTERPRETATION:
-  Largest component contains 215 settlements (3.5% of all settlements).
-  => Contact graph remains fragmented even with point-touch edges.
-  Point-touch edges reduce isolated settlements by 2351 (from 5520 to 3169).

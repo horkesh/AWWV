@@ -25,6 +25,21 @@ import {
   type EnforcementPackage
 } from '../state/negotiation_offers.js';
 import { loadSettlementGraph } from '../map/settlements.js';
+import {
+  getEnablePhase3A,
+  loadEnrichedContactGraph,
+  buildPressureEligibilityPhase3A,
+  buildStateAccessors,
+  type Phase3AAuditSummary
+} from './pressure/phase3a_pressure_eligibility.js';
+import {
+  getEnablePhase3ADiffusion,
+  runPhase3APressureDiffusion
+} from './pressure/phase3a_pressure_diffusion.js';
+import { loadMistakes, assertNoRepeat } from '../../tools/assistant/mistake_guard.js';
+
+loadMistakes();
+assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness');
 
 export type Rng = () => number;
 
@@ -50,6 +65,7 @@ export interface TurnReport {
   negotiation_offer?: OfferGenerationReport; // Phase 11B
   negotiation_acceptance?: AcceptanceReport; // Phase 11B
   negotiation_apply?: { applied: boolean; freeze_edges_count: number }; // Phase 11B
+  phase3a_pressure_eligibility?: Phase3AAuditSummary; // Phase 3A: pressure eligibility audit (feature-gated)
   end_state_active?: boolean; // Phase 12D.0: true if end_state exists (war ended)
   end_state_info?: { // Phase 12D.1: snapshot info when end_state is active
     kind: string;
@@ -161,6 +177,49 @@ const phases: NamedPhase[] = [
       );
 
       context.report.exhaustion = accumulateExhaustion(context.state, derivedFrontEdges, deltas, localSupply);
+    }
+  },
+  {
+    name: 'phase3a-pressure-eligibility',
+    run: async (context) => {
+      // Feature-gated: only run if flag is enabled
+      if (!getEnablePhase3A()) return;
+
+      try {
+        // Load enriched contact graph
+        const enrichedGraph = await loadEnrichedContactGraph();
+        
+        // Build state accessors
+        const accessors = buildStateAccessors(context.state);
+        
+        // Build effective edges with audit enabled
+        const result = buildPressureEligibilityPhase3A(
+          enrichedGraph,
+          context.state,
+          accessors,
+          true // audit enabled
+        );
+        
+        // Store audit in report (effective edges are in-memory only, not persisted)
+        if (result.audit) {
+          context.report.phase3a_pressure_eligibility = result.audit;
+        }
+        
+        // Store effective edges in context for potential use by pressure propagation
+        (context as any).phase3aEffectiveEdges = result.edgesEffective;
+      } catch (err) {
+        // If Phase 3A fails, log but don't crash the simulation
+        console.warn(`Phase 3A pressure eligibility failed: ${err instanceof Error ? err.message : String(err)}`);
+      }
+    }
+  },
+  {
+    name: 'phase3a-pressure-diffusion',
+    run: (context) => {
+      if (!getEnablePhase3A() || !getEnablePhase3ADiffusion()) return;
+      const effectiveEdges = (context as { phase3aEffectiveEdges?: unknown }).phase3aEffectiveEdges;
+      if (!Array.isArray(effectiveEdges)) return;
+      runPhase3APressureDiffusion(context.state, effectiveEdges);
     }
   },
   {

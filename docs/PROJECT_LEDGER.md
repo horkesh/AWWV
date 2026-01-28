@@ -1169,6 +1169,47 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **FORAWWV.md note:** This validation reveals that the SVG-derived substrate geometry itself is fragmented. This is a data truth, not a code issue. Any tolerance-based adjacency rules would need to be explicitly elevated to canon via FORAWWV.md. Do NOT edit FORAWWV.md automatically.
 
 **2026-01-27** - Mistake log automation: record-once helpers and spam reduction
+
+**2026-01-27** - Phase 1 contact graph viewer: fix to load and render settlement_contact_graph.json
+- **Phase:** Map Rebuild (Path A) - Phase 1 viewer fix
+- **Decision:** Fix Phase 1 contact graph viewer to actually load and render the contact graph JSON file separately, rather than relying on edges embedded in data_index.json. Viewer must be self-contained with all required files copied to viewer directory.
+- **Artifacts updated:** `scripts/map/build_contact_graph_viewer.ts`, `data/derived/contact_graph_viewer/viewer.js`, `data/derived/contact_graph_viewer/data_index.json`
+- Fixed viewer build script to remove edges from data_index.json (now contains only meta and settlements). Viewer JavaScript updated to load three files separately: (1) `data_index.json` (metadata), (2) `settlements_substrate.geojson` (geometry), (3) `settlement_contact_graph.json` (graph edges). All files are copied to viewer directory for self-contained deployment.
+- Added console logging: viewer logs settlement feature count, total edge count, and edge counts by type (shared_border, point_touch, distance_contact) to browser console for debugging.
+- Added error handling: if graph fetch fails or graph has 0 edges, viewer shows on-screen error block with instructions: "Contact graph missing or empty. Run: npm run map:derive:contact:phase1 then rebuild viewer: npm run map:viewer:contact:phase1"
+- Viewer now uses `dataIndex.meta.substrate_path` and `dataIndex.meta.graph_path` to load files dynamically from data_index.json metadata, ensuring consistency.
+- File:// protocol detection remains intact. Viewer remains deterministic (no timestamps, stable ordering).
+- **Mistake log updated:** no (viewer fix only, no new mistakes discovered; mistake guard assertion updated to match task)
+- **How to run:** `npm run map:viewer:contact:phase1` rebuilds viewer. Verify browser Network tab shows requests for: data_index.json, settlements_substrate.geojson, settlement_contact_graph.json. Console should print nonzero edge counts. Toggling edge layers should visibly draw edges. Open via: `npx http-server -p 8080` then `http://localhost:8080/data/derived/contact_graph_viewer/index.html`
+- **Note:** This fix ensures the viewer actually loads and renders the contact graph JSON file. No design changes. No FORAWWV.md addendum required.
+
+**2026-01-27** - Phase 1 contact graph viewer: fix and complete HTML viewer build
+- **Phase:** Map Rebuild (Path A) - Phase 1 viewer completion
+- **Decision:** Fix and complete the Phase 1 contact graph viewer build script to emit a fully functional HTML viewer. Viewer must handle both canonical Phase 1 graph format and legacy diagnostic graph format for backward compatibility.
+- **Artifacts updated:** `scripts/map/build_contact_graph_viewer.ts`, `data/derived/contact_graph_viewer/index.html`, `data/derived/contact_graph_viewer/viewer.js`, `data/derived/contact_graph_viewer/data_index.json`
+- Fixed viewer build script to handle both canonical Phase 1 graph format (with `parameters.D0`, `nodes`, `edges`) and legacy diagnostic format (with `edge_list`). Legacy format is automatically converted to canonical format with default D0 = 0.5 and warning message.
+- Viewer JavaScript updated to use `data_index.json` as single source of truth for edges (removed redundant `settlement_contact_graph.json` fetch). Viewer loads: (1) `data_index.json` (metadata and edge list), (2) `settlements_substrate.geojson` (geometry). Graph JSON file is still copied to viewer directory for reference but not loaded by viewer.
+- File:// protocol detection: viewer checks `window.location.protocol === 'file:'` on startup and shows explicit error message with instructions: "This viewer must be opened via a local HTTP server. Run: npx http-server -p 8080. Then open: http://localhost:8080/data/derived/contact_graph_viewer/index.html"
+- Viewer features: canvas-based rendering with pan/zoom, settlement border rendering, adjacency edge overlay with type-specific colors (shared-border: green, point-touch: blue, distance-contact: orange), UI toggles for each edge type, reset view button, deterministic color palette.
+- Mistake guard updated: assertion changed to "build Phase 1 contact graph viewer with index.html" to match task requirements.
+- **Mistake log updated:** no (viewer build fix only, no new mistakes discovered; implementation follows Phase 0 substrate viewer patterns)
+- **How to run:** `npm run map:viewer:contact:phase1` builds viewer artifacts. Verify `data/derived/contact_graph_viewer/index.html` exists. Open via local HTTP server (e.g., `npx http-server -p 8080` then navigate to `http://localhost:8080/data/derived/contact_graph_viewer/index.html`). File:// opening shows explicit server warning.
+- **Note:** This task fixes and completes the Phase 1 contact graph viewer build. Viewer handles both canonical and legacy graph formats for backward compatibility. No systemic design insights revealed. No FORAWWV.md addendum required.
+
+**2026-01-27** - Phase 1 canonical settlement contact adjacency graph derivation
+- **Phase:** Map Rebuild (Path A) - Phase 1 canonical contact graph
+- **Decision:** Implement canonical Phase 1 settlement contact adjacency graph as specified in FORAWWV.md §3.3. Adjacency represents CONTACT POTENTIAL ONLY and includes three types: (1) shared-border (positive length), (2) point-touch (vertex contact), (3) distance-contact (minimum boundary-to-boundary distance ≤ D0). D0 is an explicit canonical parameter (D0 = 0.5) documented in audit outputs. This adjacency does not imply movement, supply, control, authority, or sustained combat capability.
+- **Artifacts:** `scripts/map/derive_settlement_contact_graph_phase1.ts`, `data/derived/settlement_contact_graph.json`, `data/derived/settlement_contact_graph.audit.json`, `data/derived/settlement_contact_graph.audit.txt`, `scripts/map/build_contact_graph_viewer.ts`, `data/derived/contact_graph_viewer/` (index.html, viewer.js, data_index.json)
+- Added canonical Phase 1 script that reads `data/derived/settlements_substrate.geojson` as input. Extracts settlement polygons (handles Polygon and MultiPolygon, processes outer rings only). Extracts settlement ID from properties using priority: `sid`, then `settlement_id` (skips features missing both, records count in audit).
+- Adjacency detection uses spatial grid bucketing to avoid O(N^2) pairwise checks. For each candidate pair within D0 bbox distance: (1) checks shared-border adjacency via colinear segment overlap detection (same algorithm as v2/v3), (2) checks point-touch adjacency via shared vertex coordinates within EPS tolerance, (3) checks distance-contact adjacency via minimum boundary-to-boundary distance ≤ D0. Edge classification prioritizes shared-border > point-touch > distance-contact (most restrictive first).
+- Graph output schema: `settlement_contact_graph.json` contains `schema_version: 1`, `parameters: { D0: 0.5 }`, `nodes: [{ sid }]`, `edges: [{ a, b, type, overlap_len?, min_dist? }]`. Nodes sorted by sid (deterministic). Edges sorted by lexicographic pair (deterministic).
+- Audit reports: comprehensive JSON and TXT reports including parameters (D0), counts (nodes, edges_total, edges_shared_border, edges_point_touch, edges_distance_contact), isolated (count, percentage), component_analysis (component_count, largest_component_size, largest_component_percentage), degree_stats (min, max, median, p90), top_settlements_by_degree (top 10), determinism confirmation (node_ordering, edge_ordering, no_timestamps, no_randomness).
+- Viewer builder creates canvas-based viewer with settlement border rendering and adjacency edge overlay. Viewer includes toggles for each edge type (shared-border, point-touch, distance-contact) with deterministic color palette. Viewer detects file:// protocol and shows clear local-server instructions. Viewer loads substrate GeoJSON and graph JSON from relative paths.
+- Deterministic guarantees: stable ordering for all iteration and outputs (sort by settlement_id, then edge pairs), no randomness, no timestamps, no Date.now, outputs must be byte-stable across repeated runs on same input. D0 is an explicit constant (0.5) defined in code, not inferred heuristically. No geometry invention: no snapping, buffering, hulls, smoothing, unions. Geometry is read-only.
+- New npm scripts: `map:derive:contact:phase1` (derives contact graph), `map:viewer:contact:phase1` (builds viewer)
+- **Mistake log updated:** no (implementation follows Phase 0 substrate patterns, FORAWWV.md §3.3 canonical adjacency definition, and determinism requirements; mistake guard assertion included)
+- **How to run:** `npm run map:derive:contact:phase1` produces contact graph JSON and audit reports (may take several minutes due to 6137 settlements). Re-run immediately to confirm deterministic output (byte-identical files). `npm run map:viewer:contact:phase1` builds viewer artifacts. View via local HTTP server (e.g., `npx http-server -p 8080` then open `http://localhost:8080/data/derived/contact_graph_viewer/index.html`).
+- **Note:** This task implements Phase 1 canonical contact graph derivation as specified in FORAWWV.md §3.3. D0 value (0.5) is explicit and documented in audit outputs. If adjacency density differs materially from expectations (e.g., very high isolation percentage, very sparse connectivity), this may indicate a need to adjust D0 or reconsider adjacency definition. **docs/FORAWWV.md may require an addendum** if results reveal systemic insights about contact potential modeling or D0 parameter sensitivity. Do NOT edit FORAWWV.md automatically. This task does NOT modify any canonical Phase 0 substrate files.
 - **Phase:** Infrastructure - Mistake Guard System
 - **Change:** Upgrade mistake log system with automation helpers to record confirmed mistakes once and reduce warning spam.
   - **New helpers added to `tools/assistant/mistake_guard.ts`:**
@@ -1192,3 +1233,195 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Determinism:** No timestamps generated by code; date must be provided by caller. Stable ordering maintained.
 - **Mistake guard behavior:** After this change, `assertNoRepeat()` warns at most once per title per process run. `warnIfUnrecorded()` can be used in scripts to automatically record confirmed mistakes without manual log editing.
 - **FORAWWV.md note:** No systemic design insights revealed; this is an infrastructure improvement for better mistake tracking automation. **docs/FORAWWV.md may require an addendum** if automated mistake recording reveals patterns in common mistakes, but do NOT edit it automatically.
+
+**2026-01-27** — Phase 2 contact graph enrichment spec and map pipeline link
+- **Phase:** Map Rebuild (Path A) — Phase 2 spec documentation
+- **Decision:** Authoritative Phase 2 contact graph enrichment spec created; map pipeline docs updated to reference it and list Phase 2 outputs.
+- **Artifacts:** `docs/specs/map/phase2_contact_graph_enrichment.md` (new), `docs/handoff_map_pipeline.md` (Phase 2 section added), `docs/PROJECT_LEDGER.md` (this changelog entry).
+- Spec defines inputs (`data/derived/settlements_substrate.geojson`, `data/derived/settlement_contact_graph.json`), outputs (`settlement_contact_graph_enriched.json`, `settlement_contact_graph_enriched.audit.json`, `settlement_contact_graph_enriched.audit.txt`), invariants, determinism and stable-ordering rules, node/edge field lists, audit requirements, acceptance criteria, and out-of-scope (no pruning, thresholds, or gameplay eligibility).
+- `docs/handoff_map_pipeline.md`: new "Phase 2 — Contact graph enrichment" section with link to spec and list of Phase 2 outputs.
+- No code or derived data changed. No FORAWWV.md addendum required.
+
+**2026-01-27** — Phase 2 contact graph enrichment implementation and artifact generation
+- **Phase:** Map Rebuild (Path A) — Phase 2 contact graph enrichment
+- **Decision:** Implement Phase 2 enrichment per `docs/specs/map/phase2_contact_graph_enrichment.md`. Same nodes and edges as Phase 1; additive fields only. No pruning, no geometry invention, no timestamps, no randomness.
+- **Artifacts:** `scripts/map/enrich_settlement_contact_graph_phase2.ts` (new), `package.json` (added `map:contact:enrich2`), `data/derived/settlement_contact_graph_enriched.json`, `data/derived/settlement_contact_graph_enriched.audit.json`, `data/derived/settlement_contact_graph_enriched.audit.txt`, `docs/PROJECT_LEDGER.md` (this entry).
+- **Implementation:** Reads `settlements_substrate.geojson` and `settlement_contact_graph.json`; computes per-node `area_svg2`, `perimeter_svg`, `centroid_svg`, `bbox_svg`, `comp_count`, `degree`; per-edge `centroid_distance_svg`, `area_ratio`, `perimeter_ratio`, `bbox_overlap_ratio`, `contact_span_svg`. Missing metrics set to null and logged in audit. Topology identical to Phase 1. Determinism: stable node order (sid), edge order (min,max endpoint, type). SHA256 computed in script via `node:crypto`; inputs and outputs hashed and recorded in audit.
+- **Commands run:**
+  - `npm run map:contact:enrich2`
+  - `node -e "JSON.parse(require('fs').readFileSync('data/derived/settlement_contact_graph_enriched.json','utf8')); console.log('enriched ok')"`
+  - `node -e "JSON.parse(require('fs').readFileSync('data/derived/settlement_contact_graph_enriched.audit.json','utf8')); console.log('audit ok')"`
+  - `node -e "const fs=require('fs'); console.log('bytes',fs.statSync('data/derived/settlement_contact_graph_enriched.json').size)"`
+- **Output file sizes:** `settlement_contact_graph_enriched.json` 9,367,361 bytes; `settlement_contact_graph_enriched.audit.json` 2,179 bytes; `settlement_contact_graph_enriched.audit.txt` 1,315 bytes.
+- **SHA256 (from audit):** input substrate `bf67123c22a8a144d7d5c6ecfd5b9df09a031da350a1490f3db0970ce0e3559b`, input Phase 1 graph `79189869445fe97c78583b0988fb594223521825e65c5586df15eb288131d087`, output enriched JSON `7b4dc9de282a966402abbebf9126ff8acf950f14091f0ce41eb4263908060edf`, output audit JSON (audit-without-self-hash) `684930f2d5c78eb472cce88a45a280b8da7d2bcac116d49021c2fd5242e00d68`.
+- **Invariants:** Node count 6,137 and edge count 19,474 match Phase 1; no missing node/edge metrics. No FORAWWV.md addendum required.
+
+**2026-01-27** — Contact graph viewer updated to support Phase 2 enriched graph and edge metrics inspector
+- **Phase:** Map Rebuild (Path A) — Viewer enhancement
+- **Decision:** Update contact graph viewer to load either Phase 1 or Phase 2 graph JSON, with edge inspector panel showing Phase 2 metrics when available.
+- **Artifacts:** `data/derived/contact_graph_viewer/index.html` (added phase selector and inspector panel), `data/derived/contact_graph_viewer/viewer.js` (phase selection, edge click detection, inspector rendering), `data/derived/contact_graph_viewer/data_index.json` (added `meta.graph_paths` with phase1/phase2 paths), `data/derived/contact_graph_viewer/settlement_contact_graph_enriched.json` (copied from parent directory for viewer access).
+- **Implementation:** Added phase selector dropdown (Phase 1 / Phase 2) in controls panel. Viewer loads graph based on selection, with fallback from Phase 2 to Phase 1 if enriched file missing. Edge inspector panel (top-right) displays on edge click: basic fields (a, b, type) for both phases; Phase 2 metrics (centroid_distance_svg, contact_span_svg, bbox_overlap_ratio, area_ratio, perimeter_ratio, overlap_len, min_dist) when Phase 2 selected. Click detection uses midpoint distance to rendered edge segments. Selected edge highlighted in red. Inspector shows "null" explicitly for missing values, formats numbers to 3 decimals.
+- **Backward compatibility:** Viewer still works with legacy `meta.graph_path` if `graph_paths` not present. Phase 1 rendering unchanged. Inspector shows basic fields for Phase 1 edges.
+- **Commands run:**
+  - `npx http-server -p 8080` (started HTTP server for testing)
+  - Verified `data_index.json` valid with both graph paths
+  - Verified Phase 1 graph: 19,474 edges (valid JSON)
+  - Verified Phase 2 graph: 19,474 edges (valid JSON)
+  - Confirmed both graph files present in viewer directory
+- **Browser verification:** Viewer accessible at `http://localhost:8080/data/derived/contact_graph_viewer/index.html`. Phase selector switches between graphs. Edge click updates inspector with metrics when Phase 2 selected. Network tab confirms correct JSON files fetched (200 status).
+- **Mistake log updated:** no (viewer-only changes, follows existing patterns, no new mistakes discovered)
+- **FORAWWV.md note:** No systemic design insights revealed; this is a viewer enhancement for inspecting Phase 2 edge metrics. **docs/FORAWWV.md may require an addendum** if edge metric inspection reveals patterns in contact graph topology, but do NOT edit it automatically.
+
+**2026-01-27** — Phase 2.5 contact graph characterization report generator
+- **Phase:** Map Rebuild (Path A) — Phase 2.5 diagnostic reporting
+- **Decision:** Create Phase 2.5 characterization report generator that reads enriched graph and produces JSON + TXT reports with distributions, connectivity analysis, and suspicious edge lists. Diagnostic only: no edge pruning, no eligibility policies, no parameter changes.
+- **Artifacts:** `scripts/map/report_settlement_contact_graph_phase2_5.ts` (new), `package.json` (added `map:contact:report2_5`), `data/derived/settlement_contact_graph_phase2_report.json`, `data/derived/settlement_contact_graph_phase2_report.txt`, `docs/PROJECT_LEDGER.md` (this entry).
+- **Implementation:** Script reads Phase 2 enriched graph, computes node degree from edges (undirected), computes distributions (min, p50, p90, p99, max, mean) for degree and edge metrics (centroid_distance_svg, contact_span_svg, bbox_overlap_ratio, area_ratio, perimeter_ratio) by contact type. Performs connectivity analysis using union-find to find connected components, computes component size distribution, lists small components (size <= 5). Generates suspicious lists: distance_contact_longest_centroid_distance (top 200), distance_contact_lowest_bbox_overlap (top 200), shared_border_smallest_overlap_len (top 200, with note if field missing), distance_contact_min_dist_zero (top 200). All sorting deterministic: stable tie-breaking by (minSid, maxSid). Tracks missing metrics counts and schema anomalies. SHA256 hashes computed for enriched graph input and both report outputs.
+- **Determinism:** Stable sorting everywhere (components by size then first sid, edges by metric then sid pairs). No timestamps, no randomness. Percentile computation: `index = floor((p/100) * (n-1))` for deterministic results. JSON output uses `JSON.stringify(obj, null, 2)` after constructing keys deterministically.
+- **Commands run:**
+  - `npm run map:contact:report2_5`
+  - `node -e "JSON.parse(require('fs').readFileSync('data/derived/settlement_contact_graph_phase2_report.json','utf8')); console.log('report json ok')"`
+  - `node -e "const fs=require('fs'); console.log('bytes json',fs.statSync('data/derived/settlement_contact_graph_phase2_report.json').size,'bytes txt',fs.statSync('data/derived/settlement_contact_graph_phase2_report.txt').size)"`
+- **Output file sizes:** `settlement_contact_graph_phase2_report.json` 215,778 bytes; `settlement_contact_graph_phase2_report.txt` 4,818 bytes.
+- **SHA256 (from report meta):** input enriched graph `7b4dc9de282a966402abbebf9126ff8acf950f14091f0ce41eb4263908060edf`, output report JSON `31cc5573c5709444979fdc8bbab6395b1d407749d0f2b04f099506dca0ecd62b`, output report TXT `61d7aecb49e4183ed0fa7641527811dd5dea17e18dd9651bc774cfbaeb6fad7b`.
+- **Report contents:** JSON includes meta (version, inputs, hashes, counts), distributions (degree overall + metrics by type), connectivity (component count, largest size, size distribution, small components list), suspicious_lists (4 lists with total_qualifying counts and top_200 entries), notes (missing metrics counts, schema anomalies). TXT provides human-readable summary with header counts, distribution tables per type, connectivity summary, top 20 entries of each suspicious list plus total counts, missing metrics summary.
+- **Mistake log updated:** no (implementation follows existing report patterns, mistake guard assertion included, no new mistakes discovered)
+- **FORAWWV.md note:** No systemic design insights revealed; this is a diagnostic reporting tool. **docs/FORAWWV.md may require an addendum** if characterization reveals patterns in contact graph topology that affect adjacency modeling or D0 parameter sensitivity, but do NOT edit it automatically.
+
+---
+
+**[2026-01-27] Phase 3A Pressure Eligibility Builder Implementation**
+
+- **Spec doc created:** `docs/specs/sim/phase3a_pressure_eligibility.md` (already existed, verified content matches spec)
+- **New code files:**
+  - `src/sim/pressure/phase3a_pressure_eligibility.ts` - Phase 3A builder module with eligibility gates, weight computation, and deterministic audit scaffolding
+- **Modified files:**
+  - `src/sim/turn_pipeline.ts` - Added feature-gated Phase 3A phase that runs after exhaustion accumulation
+- **Feature flag:** `ENABLE_PHASE3A_PRESSURE_ELIGIBILITY` (default: `false`) - OFF by default, no behavior change when disabled
+- **Implementation details:**
+  - Loads enriched contact graph from `data/derived/settlement_contact_graph_enriched.json`
+  - Computes eligibility via hard gates (exhaustion collapse, cohesion failure, data integrity)
+  - Computes coupling weights: `w = base(type) * f_distance * f_shape * f_state * f_posture`, clamped to [0,1]
+  - Handles missing state variables gracefully (conservative defaults, no gating if absent)
+  - Deterministic edge ordering (by minSid, maxSid, type)
+  - Audit mode produces per-turn summaries: eligible counts by type, weight distributions (min/p50/p90/p99/max), gate-blocked counts, top 20 strongest/weakest edges
+- **Integration:** Phase 3A phase added to turn pipeline, feature-gated. When enabled, loads enriched graph, builds effective edges, stores audit in `TurnReport.phase3a_pressure_eligibility`. Effective edges stored in context (not persisted) for potential future use in pressure propagation.
+- **Commands run:**
+  - `npm run typecheck` (pre-existing type errors in unrelated files, Phase 3A code compiles correctly)
+  - Module structure verified, imports resolve correctly
+- **Determinism:** All computations deterministic (stable sorting, no randomness, no timestamps). Audit generation does not alter simulation results.
+- **Mistake log guardrail:** Included in Phase 3A module: `loadMistakes()`, `assertNoRepeat("phase3a pressure eligibility weights builder and deterministic audit scaffolding")`
+- **FORAWWV.md note:** If Phase 3A reveals systemic insights about pressure propagation eligibility patterns or weight distribution characteristics that affect simulation design, **docs/FORAWWV.md may require an addendum**, but do NOT edit it automatically.
+
+---
+
+**[2026-01-27] Phase 3A A/B Harness and Deterministic Diff Report**
+
+- **Scenario used:** "Prolonged siege (calibration scenario 1)" - 18 turns, from `tests/calibration.test.ts` `createProlongedSiegeState()`
+- **New code files:**
+  - `src/cli/phase3a_ab_harness.ts` - A/B comparison harness that runs scenario twice (A: Phase 3A OFF, B: Phase 3A ON) and produces deterministic diff report
+- **Modified files:**
+  - `src/sim/pressure/phase3a_pressure_eligibility.ts` - Added runtime override functions (`getEnablePhase3A()`, `setEnablePhase3A()`, `resetEnablePhase3A()`) to support harness testing while keeping default OFF
+  - `src/sim/turn_pipeline.ts` - Updated to use `getEnablePhase3A()` instead of const, enabling runtime override for harness
+  - `package.json` - Added npm script `sim:phase3a:ab`
+- **Feature flag:** Phase 3A remains OFF by default outside the harness (default value unchanged, runtime override only used in harness)
+- **Commands run:**
+  - `npm run sim:phase3a:ab` (runs A/B comparison)
+  - `node -e "const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('exists',fs.existsSync(p),'bytes',fs.existsSync(p)?fs.statSync(p).size:0)"` - verified report exists, 3368 bytes
+  - `npm run sim:phase3a:ab` (rerun to verify determinism)
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; const h=crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'); console.log('sha256',h)"` - SHA256: `790b95bc0fd2eeb85c2f168058b863d318a1cfb1ab9ecbb3fd73bc1017d3e121` (after edge type fix in audit output)
+- **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (3368 bytes, deterministic across reruns)
+- **Report contents:** Header with scenario name, Phase 3A parameters, run settings; per-turn table with pressure_sum A/B/delta, eligible edges counts by type, blocked counts; summary with final deltas, max absolute delta, sign change detection; edge spotlight with top 5 strongest eligible edges from final turn. No timestamps.
+- **Determinism:** Report is byte-identical across reruns (verified via SHA256). All sorting is stable, no randomness, no timestamps.
+- **Mistake log guardrail:** Included in harness: `loadMistakes()`, `assertNoRepeat("phase3a ab harness and deterministic diff report for one calibration scenario")`
+- **FORAWWV.md note:** No systemic design insights revealed in this initial A/B comparison. The harness confirms Phase 3A eligibility computation runs deterministically and produces stable audit summaries. **docs/FORAWWV.md may require an addendum** if future A/B comparisons reveal that Phase 3A weight distributions or eligibility patterns significantly affect pressure propagation dynamics, but do NOT edit it automatically.
+
+---
+
+**[2026-01-27] Phase 3A A/B Harness: Non-Zero Pressure Selection**
+
+- **Scenario selection:** Auto-probe of 5 calibration scenarios (prolonged_siege, temporary_encirclement, corridor_lifeline, multi_pocket_stress, asymmetric_collapse) found all produce zero pressure. Fallback to deterministic seed applied.
+- **Seed method:** Deterministic seed fallback using first edge from settlement graph
+- **Seeded SIDs:** `10014:100013`, `10014:100056` (first edge from settlement graph, guaranteed to exist)
+- **Seed value:** 10 (constant PRESSURE_SEED_VALUE)
+- **Modified files:**
+  - `src/cli/phase3a_ab_harness.ts` - Added scenario registry, probe function, seed application logic, updated report format with selection method and seed info
+- **Selection logic:**
+  - Probe each scenario (2 turns, Phase 3A OFF) to check for pressure_sum > 0
+  - If none found, use seed_fallback: assign first edge endpoints to FACTION_A and FACTION_B, create front segment and pressure entry
+  - Stable selection order ensures deterministic scenario choice
+- **Commands run:**
+  - `npm run sim:phase3a:ab` (runs A/B comparison with seed)
+  - `node -e "const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('bytes',fs.statSync(p).size)"` - 3525 bytes
+  - `npm run sim:phase3a:ab` (rerun to verify determinism)
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"` - SHA256: `72655727d64b8adeb103dfebc9d755a1e4285c9ea3c3cdc75e9006a41734ec35`
+- **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (3525 bytes, deterministic across reruns)
+- **Report updates:** Header now includes scenario_id, selection_method (seed_fallback), seeded_sids, seed_value. Per-turn table shows non-zero pressure (10.00) in both runs A and B. Delta is 0.00 (expected: Phase 3A only affects eligibility/weights, not pressure accumulation logic itself).
+- **Determinism:** Report is byte-identical across reruns (verified via SHA256). Probe uses stable scenario order, seed uses first edge from settlement graph (deterministic).
+- **Mistake log guardrail:** Updated assertion: `assertNoRepeat("phase3a ab harness nonzero pressure selection or deterministic seed")`
+- **FORAWWV.md note:** No systemic design insights revealed. The harness now produces meaningful pressure values for comparison. **docs/FORAWWV.md may require an addendum** if future A/B comparisons with Phase 3A-enabled pressure propagation reveal that eligibility/weight patterns significantly affect pressure dynamics, but do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3A Bounded Pressure Diffusion and A/B Report Updates**
+
+- **New feature flag:** `ENABLE_PHASE3A_PRESSURE_DIFFUSION` (default OFF). Diffusion runs only when **both** Phase 3A eligibility and diffusion are enabled.
+- **Diffusion placement:** Applied in the turn pipeline in phase `phase3a-pressure-diffusion`, immediately after `phase3a-pressure-eligibility` and before `update-militia-fatigue`. Diffusion uses Phase 3A effective edges (eligible, w in [0,1]), derives node-level pressure from `front_pressure`, runs bounded outflow (DIFFUSE_FRACTION 0.05, DIFFUSE_MAX_OUTFLOW 2.0), maps back with conservation-preserving rounding.
+- **New module:** `src/sim/pressure/phase3a_pressure_diffusion.ts` — implements `runPhase3APressureDiffusion`, `getEnablePhase3ADiffusion`, `setEnablePhase3ADiffusion`, `resetEnablePhase3ADiffusion`; mistake-guard integrated.
+- **Turn pipeline:** Added `phase3a-pressure-diffusion` step; imports from diffusion module; mistake-guard integrated.
+- **A/B harness:** Run A: eligibility OFF, diffusion OFF. Run B: eligibility ON, diffusion ON. Report includes diffusion flag state, `NonZero_A`/`NonZero_B`, `Top1_A`/`Top1_B`, and their deltas; summary includes final NonZero and Top1 deltas. Harness uses enriched contact graph edges (S-ids) for `settlementEdges` and seeding; multi-edge seed (first + first adjacent) with asymmetric split (6/4) and ≥3 front nodes.
+- **Commands run:**
+  - `npm run sim:phase3a:ab`
+  - `node -e "const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('bytes',fs.statSync(p).size)"` — 4394 bytes
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"` — sha256 `9aa8e52ba1c637f878690b35f2e4d5ea074041c54b1062097805398b140b8d0d`
+  - `npm run sim:phase3a:ab` (rerun); `node -e "..."` sha256 — same hash, determinism confirmed.
+- **Report path:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (4394 bytes, sha256 above). No timestamps.
+- **Mistake log guardrail:** `assertNoRepeat("wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness")` in diffusion module, turn pipeline, harness.
+- **FORAWWV.md note:** The current seeded fixture (2 edges, 3 nodes, star topology) can yield zero NonZero/Top1 deltas when diffusion is on, due to equilibrium under DIFFUSE_FRACTION 0.05. **docs/FORAWWV.md may require an addendum** on diffusion constants vs observable distribution deltas; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3A Diffusion A/B Harness: Canonical Pressure Field + Distribution Deltas (v2)**
+
+- **Canonical pressure field (Phase 3A diffusion + harness measurement):** `state.front_pressure` (edge-keyed `edge_id -> { value, ... }`). All harness metrics (NonZero/Top1/Top5Share/L1) are derived deterministically from this field by mapping edge pressure to node pressure via half-split across incident endpoints.
+- **What was mismatched / insufficient before:**
+  - Report lacked distribution-sensitive deltas, so diffusion could run while `pressure_sum` remained conserved and looked unchanged.
+  - Seed magnitude was too small to reliably survive deterministic rounding back onto integer edge pressures, producing `l1_pre_post=0.00` even when diffusion outflow was non-zero.
+  - Harness did not retain per-turn distributions, so a correct deterministic `L1Dist_AB` could not be computed.
+- **Harness behavior change (no parameter/constant changes):** Pipeline diffusion is held OFF; Run B explicitly applies Phase 3A diffusion on the canonical `front_pressure` field with a strict namespace mismatch error (hard failure instead of silent/early success), and records diffusion stats + pre/post L1.
+- **Commands run:**
+  - `npm run sim:phase3a:ab`
+  - `node -e "const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('bytes',fs.statSync(p).size)"`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"`
+  - `npm run sim:phase3a:ab`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"`
+- **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (7206 bytes, sha256 `f69fc45bc3ba4bc69a8f2b6a55c46175a780de5378be1b58ddc43024b2465b0d`)
+- **Determinism:** Verified by stable SHA256 across rerun. No timestamps.
+- **FORAWWV.md note:** No systemic design insight beyond harness/reporting instrumentation. If future work finds that integer rounding meaningfully masks small diffusion effects in production, **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3A A/B Harness: Deterministic BFS-Connected N-Node Seeding Stimulus**
+
+- **New seeding method:** Deterministic BFS over Phase 3A effective edges (undirected), selecting a connected set of nodes.
+  - **Start node:** `start_sid` = lexicographically smallest SID appearing as an endpoint in any eligible effective edge.
+  - **BFS order:** FIFO queue; neighbors sorted lexicographically at expansion time.
+  - **N:** 25 (hard-coded). If BFS yields fewer than N nodes, harness throws.
+- **Seed distribution (total exactly 100):** Let `nodes_sorted` be the selected N nodes sorted lexicographically.
+  - `nodes_sorted[0] = 40`
+  - `nodes_sorted[1..10] = 6` each (10 nodes, 60 total)
+  - `nodes_sorted[11..24] = 0`
+- **How node seed is encoded into canonical edge-keyed `state.front_pressure`:**
+  - Build a deterministic spanning tree from BFS parent links.
+  - For each non-root node `v`, add `pv(v)` onto the tree edge `(parent(v), v)`.
+  - For the root, add `pv(root)` onto the tree edge `(root, root_first_child)` where `root_first_child` is the lexicographically smallest child of the root in the BFS tree.
+  - The harness derives node pressures from `front_pressure` using **tree-edge seed fraction attribution** (fractions computed from the seed contributions on that tree edge) and half-split attribution for non-tree edges.
+- **Commands run:**
+  - `npm run sim:phase3a:ab`
+  - `node -e "const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('bytes',fs.statSync(p).size)"`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"`
+  - `npm run sim:phase3a:ab`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); const p='data/derived/_debug/phase3a_pressure_ab_report.txt'; console.log('sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'))"`
+- **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (7388 bytes, sha256 `66e6cbb4f15f02c79e149f2415bc637aeb7981a1fcac7c64c7db0b150151d004`)
+- **Determinism:** Verified by stable SHA256 across rerun. No timestamps.
+- **FORAWWV.md note:** This is a harness stimulus change only. If it reveals that production pressure interpretation should use directed attribution (vs half-split) in core simulation, **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.

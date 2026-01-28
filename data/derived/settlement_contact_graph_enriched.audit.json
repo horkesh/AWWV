@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "source_paths": {
+    "substrate": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\settlements_substrate.geojson",
+    "phase1_graph": "C:\\Users\\User\\OneDrive - United Nations Development Programme\\Documents\\Personal\\Wargame\\AWWV\\data\\derived\\settlement_contact_graph.json"
+  },
+  "parameters": {
+    "phase2_parameters": "none"
+  },
+  "counts": {
+    "nodes": 6137,
+    "edges_total": 19474,
+    "edges_shared_border": 123,
+    "edges_point_touch": 677,
+    "edges_distance_contact": 18674
+  },
+  "invariants": {
+    "node_count_matches_phase1": true,
+    "edge_count_matches_phase1": true
+  },
+  "determinism": {
+    "node_ordering": "stable_sid_lexicographic",
+    "edge_ordering": "stable_lexicographic_pair_then_type",
+    "no_timestamps": true,
+    "no_randomness": true
+  },
+  "degree_stats": {
+    "min": 0,
+    "max": 25,
+    "median": 6,
+    "p90": 9
+  },
+  "top_settlements_by_degree": [
+    {
+      "sid": "S155551",
+      "degree": 25
+    },
+    {
+      "sid": "S162973",
+      "degree": 24
+    },
+    {
+      "sid": "S210145",
+      "degree": 23
+    },
+    {
+      "sid": "S219223",
+      "degree": 23
+    },
+    {
+      "sid": "S113727",
+      "degree": 22
+    },
+    {
+      "sid": "S117030",
+      "degree": 20
+    },
+    {
+      "sid": "S160261",
+      "degree": 20
+    },
+    {
+      "sid": "S100838",
+      "degree": 17
+    },
+    {
+      "sid": "S108120",
+      "degree": 17
+    },
+    {
+      "sid": "S171298",
+      "degree": 17
+    }
+  ],
+  "component_analysis": {
+    "component_count": 2,
+    "largest_component_size": 6136,
+    "largest_component_percentage": 99.98370539351474
+  },
+  "sha256": {
+    "input_substrate": "bf67123c22a8a144d7d5c6ecfd5b9df09a031da350a1490f3db0970ce0e3559b",
+    "input_phase1_graph": "79189869445fe97c78583b0988fb594223521825e65c5586df15eb288131d087",
+    "output_enriched_json": "7b4dc9de282a966402abbebf9126ff8acf950f14091f0ce41eb4263908060edf",
+    "output_audit_json": "684930f2d5c78eb472cce88a45a280b8da7d2bcac116d49021c2fd5242e00d68"
+  },
+  "missing_metrics": {
+    "node_sids": [],
+    "edge_pairs": []
+  }
+}

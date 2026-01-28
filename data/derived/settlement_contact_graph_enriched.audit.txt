@@ -1,0 +1,44 @@
+SETTLEMENT CONTACT GRAPH ENRICHED — AUDIT REPORT
+Phase 2 Contact Graph Enrichment
+
+SOURCES
+  Substrate: C:\Users\User\OneDrive - United Nations Development Programme\Documents\Personal\Wargame\AWWV\data\derived\settlements_substrate.geojson
+  Phase 1 graph: C:\Users\User\OneDrive - United Nations Development Programme\Documents\Personal\Wargame\AWWV\data\derived\settlement_contact_graph.json
+
+COUNTS
+  Nodes: 6137
+  Edges total: 19474
+    - Shared border: 123
+    - Point touch: 677
+    - Distance contact: 18674
+
+INVARIANTS
+  Node count matches Phase 1: true
+  Edge count matches Phase 1: true
+
+DETERMINISM
+  Node ordering: stable_sid_lexicographic
+  Edge ordering: stable_lexicographic_pair_then_type
+  No timestamps: true
+  No randomness: true
+
+DEGREE STATISTICS
+  Min: 0
+  Max: 25
+  Median: 6
+  P90: 9
+
+COMPONENT ANALYSIS
+  Component count: 2
+  Largest component size: 6136
+  Largest component %: 99.98%
+
+SHA256
+  Input substrate: bf67123c22a8a144d7d5c6ecfd5b9df09a031da350a1490f3db0970ce0e3559b
+  Input Phase 1 graph: 79189869445fe97c78583b0988fb594223521825e65c5586df15eb288131d087
+  Output enriched JSON: 7b4dc9de282a966402abbebf9126ff8acf950f14091f0ce41eb4263908060edf
+  Output audit JSON: 684930f2d5c78eb472cce88a45a280b8da7d2bcac116d49021c2fd5242e00d68
+
+MISSING METRICS
+  Node SIDs: 0
+  Edge pairs: 0

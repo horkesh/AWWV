@@ -70,6 +70,16 @@ Located in `data/derived/`:
   - `total_fallbacks`
   - `fallbacks` array with `sid`, `source_id`, `mun_code`, `mun`, `geometry_fix_source`, `geometry_fix_kind`, `reason`
 
+## Phase 2 — Contact graph enrichment
+
+Contact graph enrichment builds on the Phase 0 settlement substrate and Phase 1 contact graph. **Spec:** [docs/specs/map/phase2_contact_graph_enrichment.md](specs/map/phase2_contact_graph_enrichment.md).
+
+**Phase 2 outputs** (all under `data/derived/`):
+
+- `settlement_contact_graph_enriched.json`
+- `settlement_contact_graph_enriched.audit.json`
+- `settlement_contact_graph_enriched.audit.txt`
+
 ## Settlement ID Strategy
 
 - **Base sid**: `${mun_code}:${source_id}` (e.g., `20168:230561`)
