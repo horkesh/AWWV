@@ -1611,3 +1611,42 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Files modified (allowlist):** `src/cli/phase3abc_audit_harness.ts`, `package.json`, `.gitignore`, `codex.md`, `docs/PROJECT_LEDGER.md`
 - **Mistake guard:** `assertNoRepeat("verify staged diff is limited to audit harness hygiene and does not reintroduce fake phase3b metrics");`
 - **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Repo cleanup audit (report only; no deletions)**
+
+- **Summary:** “Ran repo cleanup audit; reviewed ORPHAN_CANDIDATE list; no deletions performed.”
+- **Change:** Ran `npm run repo:cleanup:audit` (tsx scripts/repo/cleanup_audit.ts). Deterministic reports written to `docs/cleanup/cleanup_audit.json` and `docs/cleanup/cleanup_audit.md`. ORPHAN_CANDIDATE list extracted and summarized. No files deleted or modified by the audit; mistake guard added to audit script.
+- **Files modified:** `scripts/repo/cleanup_audit.ts` (mistake guard), `docs/cleanup/cleanup_audit.json`, `docs/cleanup/cleanup_audit.md` (audit output).
+- **Mistake guard:** `assertNoRepeat("repo cleanup audit report must not trigger deletions without independent ripgrep verification");`
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Repo cleanup: removed provably unused script `scripts/map/normalize_settlement_regimes.ts`**
+
+- **Summary:** “Repo cleanup: removed provably unused deprecated script scripts/map/normalize_settlement_regimes.ts (audit + rg confirmed no inbound refs).”
+- **Change:** Verified `scripts/map/normalize_settlement_regimes.ts` was ORPHAN_CANDIDATE; ran ripgrep for `normalize_settlement_regimes` and `scripts/map/normalize_settlement_regimes.ts`. No inbound usage (imports, requires, npm scripts, or docs instructions). Deleted the file; re-ran cleanup audit (254 orphans, 826 tracked files); confirmed it no longer appears.
+- **Files modified:** `scripts/map/normalize_settlement_regimes.ts` (deleted), `scripts/repo/cleanup_audit.ts` (mistake guard), `docs/cleanup/cleanup_audit.json`, `docs/cleanup/cleanup_audit.md` (audit re-run), `docs/PROJECT_LEDGER.md`. Note: cleanup audit outputs are generated and not tracked in git.
+- **Mistake guard:** `assertNoRepeat("repo cleanup must delete only files with zero inbound references verified by audit AND ripgrep");`
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Cleanup deletion recovery: clean tree, git grep verification, single guard**
+
+- **Summary:** “Repo cleanup: verified orphan candidate with git grep (rg unavailable); removed only if zero inbound refs; cleaned working tree for safe review.”
+- **Change:** Stashed non-cleanup changes (data/derived/settlements_substrate, package-lock, node_modules/.package-lock); restored those paths from HEAD so working tree has only cleanup-related edits. Replaced duplicate `assertNoRepeat` lines in `scripts/repo/cleanup_audit.ts` with a single guard. Re-ran `npm run repo:cleanup:audit`; verified refs with `git grep -n` (rg unavailable) for `normalize_settlement_regimes`, `scripts/map/normalize_settlement_regimes.ts`, and `normalize_settlement_regimes.ts`. Only hits: `docs/PROJECT_LEDGER.md` (changelog entries). No imports, scripts, or doc instructions. File already deleted; audit confirms it no longer in ORPHAN_CANDIDATE. Derived artifacts left untracked.
+- **Files modified:** `scripts/repo/cleanup_audit.ts` (single assertNoRepeat), `docs/cleanup/cleanup_audit.json`, `docs/cleanup/cleanup_audit.md` (audit re-run), `docs/PROJECT_LEDGER.md`. Note: cleanup audit outputs are generated and not tracked in git.
+- **Mistake guard:** `assertNoRepeat("cleanup deletion must use git grep when rg is unavailable and must not run in a dirty working tree");`
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Finalize cleanup commit: untrack audit outputs, minimal diffs**
+
+- **Summary:** Stopped tracking `docs/cleanup/cleanup_audit.json` and `docs/cleanup/cleanup_audit.md`; added them to `.gitignore`. Committed only: deletion of `scripts/map/normalize_settlement_regimes.ts`, `scripts/repo/cleanup_audit.ts` (guards), `docs/PROJECT_LEDGER.md`, `.gitignore`, and removal of audit outputs from index.
+- **Files modified:** `scripts/repo/cleanup_audit.ts`, `docs/PROJECT_LEDGER.md`, `.gitignore`; `scripts/map/normalize_settlement_regimes.ts` (deleted); `docs/cleanup/cleanup_audit.json`, `docs/cleanup/cleanup_audit.md` (untracked).
+- **Mistake guard:** `assertNoRepeat("do not commit cleanup audit output files; commit only minimal meaningful repo cleanup diffs");`
+- **FORAWWV addendum:** not triggered.

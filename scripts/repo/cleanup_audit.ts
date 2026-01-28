@@ -17,7 +17,8 @@
 
 import { loadMistakes, assertNoRepeat, appendMistake } from "../../tools/assistant/mistake_guard";
 loadMistakes();
-assertNoRepeat("repo cleanup audit: detect unused/orphan files deterministically without deleting anything");
+assertNoRepeat("cleanup deletion must use git grep when rg is unavailable and must not run in a dirty working tree");
+assertNoRepeat("do not commit cleanup audit output files; commit only minimal meaningful repo cleanup diffs");
 
 import { readdir, readFile, writeFile, stat } from 'node:fs/promises';
 import { resolve, relative, join, dirname, normalize, sep } from 'node:path';

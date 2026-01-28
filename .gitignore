@@ -18,6 +18,8 @@ coverage/
 
 # Generated audit/debug artifacts (do not track)
 data/derived/_debug/
+docs/cleanup/cleanup_audit.json
+docs/cleanup/cleanup_audit.md
 
 # IDE
 .vscode/
