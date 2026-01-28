@@ -1543,11 +1543,71 @@ The pipeline operates in one of three modes based on crosswalk availability:
 
 **[2026-01-28] Verify and confirm codex.md context primer**
 
-- **Change:** Verified `codex.md` contains three required sections with correct file paths. All referenced files exist and are accessible.
-- **Authoritative docs section:** Confirmed links to [CLAUDE.md](CLAUDE.md), [ARCHITECTURE_SUMMARY.md](ARCHITECTURE_SUMMARY.md), [docs/ENGINE_FREEZE_v0_2_6.md](docs/ENGINE_FREEZE_v0_2_6.md). All paths validated.
+- **Change:** Verified `codex.md` contains two required sections with correct file paths. All referenced files exist and are accessible.
+- **Authoritative docs section:** Confirmed links to [ARCHITECTURE_SUMMARY.md](ARCHITECTURE_SUMMARY.md), [docs/ENGINE_FREEZE_v0_2_6.md](docs/ENGINE_FREEZE_v0_2_6.md). All paths validated.
 - **Mandatory workflow guardrails section:** Confirmed references to [docs/PROJECT_LEDGER.md](docs/PROJECT_LEDGER.md) read/write requirement and [docs/ASSISTANT_MISTAKES.log](docs/ASSISTANT_MISTAKES.log) guardrail enforcement.
 - **Known blockers section:** Confirmed note about missing `data/source/mun_code_crosswalk.csv` causing `mid = null` and fallback municipality outlines behavior.
 - **Files modified:**
   - `docs/PROJECT_LEDGER.md` (this entry)
 - **Mistake guard:** `assertNoRepeat("update codex context primer with authoritative docs, workflow guardrails, and known blockers")`.
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Phase 3A–3C audit harness (4 scenarios, 40 turns)**
+
+- **Change:** Added Phase 3A–3C audit harness (4 scenarios, 40 turns) + invariants; no mechanics changed.
+- **New CLI:** `src/cli/phase3abc_audit_harness.ts`
+- **Reports (deterministic, overwrite, no timestamps):**
+  - `data/derived/_debug/phase3abc_audit_report_A_static_symmetric.txt`
+  - `data/derived/_debug/phase3abc_audit_report_B_static_brittle_supply.txt`
+  - `data/derived/_debug/phase3abc_audit_report_C_weaklink_clusters.txt`
+  - `data/derived/_debug/phase3abc_audit_report_D_spike_then_relief.txt`
+- **Invariants (hard fail / exit 1):**
+  - Pressure conservation when diffusion applied (within EPS)
+  - Exhaustion monotonicity (if implemented)
+  - Eligibility persistence \(\ge N\) and at least one supporting degradation reason (only if Phase 3C eligibility is implemented and reasons are available)
+- **NPM scripts:**
+  - `phase3:abc_audit` (ts-node; required by interface)
+  - `phase3:abc_audit:tsx` (tsx; used for running in this repo’s current ESM import style)
+- **Files modified:**
+  - `src/cli/phase3abc_audit_harness.ts`
+  - `package.json`
+  - `package-lock.json`
+- **Mistake guard:** `assertNoRepeat("phase3abc audit harness 30-40 turn stress scenarios and invariants");`
+- **FORAWWV addendum:** not triggered. (FORAWWV addendum: may be required if audit reveals systemic insight)
+
+---
+
+**[2026-01-28] Phase 3ABC audit harness phase-aware honesty + gating**
+
+- **Summary:** “Audit harness made phase-aware: suppressed exhaustion metrics/invariants when Phase 3B not implemented; clearer banners; no mechanics changes.”
+- **Files modified:**
+  - `src/cli/phase3abc_audit_harness.ts`
+  - `docs/PROJECT_LEDGER.md`
+- **Mistake guard:** `assertNoRepeat("phase3abc audit harness must not print fake exhaustion columns when phase3b is not implemented");`
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Phase 3ABC audit harness tracked + scripts unified on tsx; codex breadcrumb**
+
+- **Summary:** “Phase 3ABC audit harness tracked + scripts unified on tsx; added codex breadcrumb; no mechanics changes.”
+- **Files modified:**
+  - `src/cli/phase3abc_audit_harness.ts` (mistake guard, SHA256 print for reports A–D)
+  - `package.json` (`phase3:abc_audit` now uses tsx; `phase3:abc_audit:tsx` unchanged)
+  - `codex.md` (Phase 3ABC audit harness breadcrumb)
+  - `.gitignore` (`data/derived/_debug/` added; reports remain generated, not tracked)
+  - `docs/PROJECT_LEDGER.md`
+- **Mistake guard:** `assertNoRepeat("phase3abc audit harness file must be tracked and scripts must not diverge between ts-node and tsx");`
+- **FORAWWV addendum:** not triggered.
+
+---
+
+**[2026-01-28] Verify staged hygiene + commit (phase3abc audit harness)**
+
+- **Summary:** “Phase 3ABC audit harness tracked; scripts unified on tsx; debug outputs ignored; codex breadcrumb added; no mechanics changes.”
+- **Change:** Verified staged files limited to allowlist; confirmed harness reports A/B honesty-fixed (required strings present, forbidden exhaustion column names absent); committed hygiene change-set. Mistake guard added for verify-and-commit workflow.
+- **Files modified (allowlist):** `src/cli/phase3abc_audit_harness.ts`, `package.json`, `.gitignore`, `codex.md`, `docs/PROJECT_LEDGER.md`
+- **Mistake guard:** `assertNoRepeat("verify staged diff is limited to audit harness hygiene and does not reintroduce fake phase3b metrics");`
 - **FORAWWV addendum:** not triggered.

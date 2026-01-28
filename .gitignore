@@ -16,6 +16,9 @@ dist/
 build/
 coverage/
 
+# Generated audit/debug artifacts (do not track)
+data/derived/_debug/
+
 # IDE
 .vscode/
 .cursor/

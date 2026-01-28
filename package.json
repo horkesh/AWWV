@@ -41,6 +41,8 @@
     "sim:endstate": "tsx src/cli/sim_endstate.ts",
     "sim:competences": "tsx src/cli/sim_competences.ts",
     "sim:phase3a:ab": "tsx src/cli/phase3a_ab_harness.ts",
+    "phase3:abc_audit": "tsx src/cli/phase3abc_audit_harness.ts",
+    "phase3:abc_audit:tsx": "tsx src/cli/phase3abc_audit_harness.ts",
     "dev:map": "vite --config dev_ui/vite.config.ts",
     "map:audit": "tsx tools/map_build/audit_map.ts",
     "map:build": "tsx tools/map_build/build_map.ts",
@@ -125,8 +127,16 @@
     "docs:edit:phase3a": "tsx tools/docs/invoke_edit_docx.ts",
     "docs:validate:phase3a": "tsx tools/docs/validate_phase3a_docs_runner.ts"
   },
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+    "experimentalResolver": true
+  },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
     "vite": "^5.0.0"
