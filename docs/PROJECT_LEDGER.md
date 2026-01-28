@@ -1748,3 +1748,16 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked (correct).
 - **Mistake guard:** `assertNoRepeat("phase5a commit must include posture exposure only and must not introduce or tune mechanics");` — commit includes only posture exposure wiring; no engine mechanics modified or tuned.
 - **FORAWWV addendum:** This commit effectively establishes player intent injection as a canonical layer: **player inputs are injected into GameState and take effect via existing turn pipeline**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Phase 5B: Expose intended vs effective posture (read-only, no new mechanics)**
+
+- **Summary:** Exposed intended vs effective posture visibility for command friction debugging. Added `effective_posture_exposure` field to GameState that stores read-only exposure data from commitment step. Viewer displays intended posture (player-set) vs effective posture multiplier (actually used) with raw contributing scalars (friction_factor, commit_points, global_factor) as diagnostics. No new mechanics introduced; only exposes existing posture degradation computed by commitment step.
+- **Files modified:** `src/state/game_state.ts`, `src/state/schema.ts`, `src/sim/turn_pipeline.ts`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Effective posture exposure structure:** `GameState.effective_posture_exposure` contains per-faction, per-edge exposure data with `intended_posture`, `intended_weight`, `effective_weight`, `friction_factor`, `commit_points`, and optional `global_factor`. Populated during turn pipeline after commitment step from `CommitmentStepReport.by_edge` audits.
+- **Turn pipeline:** Added `expose-effective-posture` phase after `apply-formation-commitment` that reads commitment report and populates `effective_posture_exposure` field. Exposure data is deterministic and stable-order serialized.
+- **Viewer updates:** Edge inspector displays intended vs effective posture when exposure data is available. Shows intended posture/weight, effective weight, and diagnostics (friction_factor, commit_points, global_factor if applied). Viewer does not infer reasons or compute deltas; only displays raw exposed values.
+- **Validation:** Manual test: start dev runner, set posture to PUSH on a stressed edge, advance turns. Confirmed: intended posture remains PUSH; effective multiplier is visibly < expected under stress; values change gradually with exhaustion/supply; no immediate or binary overrides occur.
+- **Mistake guard:** `assertNoRepeat("phase5b must expose existing posture degradation only and must not invent new friction mechanics");` — exposure phase only reads from commitment report; no new calculations or mechanics added.
+- **FORAWWV note:** If this formalizes command-friction visibility as a canonical principle, **docs/FORAWWV.md may require an addendum**. Do NOT edit FORAWWV in this commit.

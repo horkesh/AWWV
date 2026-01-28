@@ -377,9 +377,28 @@ function showEdgeInspector(edgeId) {
       const currentPostureValue = currentPosture ? currentPosture.posture : 'hold';
       const currentWeight = currentPosture ? currentPosture.weight : 0;
       
+      // Phase 5B: Get effective posture exposure data
+      const exposure = gameState.effective_posture_exposure?.by_faction?.[factionId]?.by_edge?.[edgeId];
+      
       html += `<div class="field" style="margin-top: 10px;">`;
       html += `<div class="label">Side ${sideLabel} (${factionId}):</div>`;
       html += `<div class="field" style="margin-left: 10px;">Current: <span class="value">${currentPostureValue}</span> (weight: ${currentWeight})</div>`;
+      
+      // Phase 5B: Display intended vs effective posture
+      if (exposure) {
+        html += `<div class="field" style="margin-left: 10px; margin-top: 8px; padding: 8px; background: #222; border-radius: 4px;">`;
+        html += `<div class="label" style="font-weight: bold; margin-bottom: 4px;">Effective Posture (Phase 5B):</div>`;
+        html += `<div class="field" style="margin-left: 10px;">Intended: <span class="value">${exposure.intended_posture}</span> (weight: ${exposure.intended_weight})</div>`;
+        html += `<div class="field" style="margin-left: 10px;">Effective: <span class="value">${exposure.intended_posture}</span> (weight: ${exposure.effective_weight})</div>`;
+        html += `<div class="field" style="margin-left: 10px; margin-top: 4px; font-size: 0.9em; color: #aaa;">Diagnostics:</div>`;
+        html += `<div class="field" style="margin-left: 20px; font-size: 0.85em; color: #aaa;">Friction factor: ${exposure.friction_factor.toFixed(3)}</div>`;
+        html += `<div class="field" style="margin-left: 20px; font-size: 0.85em; color: #aaa;">Commit points: ${exposure.commit_points}</div>`;
+        if (exposure.global_factor !== undefined) {
+          html += `<div class="field" style="margin-left: 20px; font-size: 0.85em; color: #aaa;">Global capacity factor: ${exposure.global_factor.toFixed(3)}</div>`;
+        }
+        html += `</div>`;
+      }
+      
       html += `<select id="posture-select-${factionId}" style="width: 100%;">`;
       html += `<option value="hold" ${currentPostureValue === 'hold' ? 'selected' : ''}>hold</option>`;
       html += `<option value="probe" ${currentPostureValue === 'probe' ? 'selected' : ''}>probe</option>`;
@@ -394,6 +413,12 @@ function showEdgeInspector(edgeId) {
     if (factionsWithPosture.length > 0) {
       factionsWithPosture.forEach(p => {
         html += `<div class="field" style="margin-left: 10px;">${p.factionId}: <span class="value">${p.posture}</span> (weight: ${p.weight})</div>`;
+        
+        // Phase 5B: Show effective posture if available
+        const exposure = gameState.effective_posture_exposure?.by_faction?.[p.factionId]?.by_edge?.[edgeId];
+        if (exposure) {
+          html += `<div class="field" style="margin-left: 20px; font-size: 0.9em; color: #aaa;">Effective weight: ${exposure.effective_weight} (friction: ${exposure.friction_factor.toFixed(3)})</div>`;
+        }
       });
     } else {
       html += `<div class="field" style="margin-left: 10px; color: #888;">No posture assignments</div>`;

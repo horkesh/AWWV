@@ -56,6 +56,7 @@ import { loadMistakes, assertNoRepeat } from '../../tools/assistant/mistake_guar
 loadMistakes();
 assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness');
 assertNoRepeat('phase3d consumption must apply each modifier exactly once and must ensure all new phase files are tracked before commit');
+assertNoRepeat('phase5b must expose existing posture degradation only and must not invent new friction mechanics');
 
 export type Rng = () => number;
 
@@ -168,6 +169,68 @@ const phases: NamedPhase[] = [
       context.report.commitment = report;
       // Store effective posture in context for pressure step (transient, not persisted)
       (context as any).effectivePosture = effectivePosture;
+    }
+  },
+  {
+    name: 'expose-effective-posture',
+    run: (context) => {
+      // Phase 5B: Expose intended vs effective posture (read-only, no new mechanics)
+      const commitmentReport = context.report.commitment;
+      if (!commitmentReport) return;
+
+      const turn = context.state.meta.turn;
+      const exposure: any = {
+        by_faction: {},
+        last_updated_turn: turn
+      };
+
+      // Get effective posture from context (computed in commitment step)
+      const effectivePosture = (context as any).effectivePosture as Record<string, any> | undefined;
+
+      // Build exposure from commitment report by_edge audits
+      // Match audits to factions by checking base posture assignments and effective posture values
+      for (const edgeAudit of commitmentReport.by_edge) {
+        const edgeId = edgeAudit.edge_id;
+        
+        // Find which faction(s) this edge belongs to by checking base posture assignments
+        for (const factionId of Object.keys(context.state.front_posture || {})) {
+          const assignment = context.state.front_posture[factionId]?.assignments?.[edgeId];
+          if (!assignment || assignment.weight === 0) continue;
+
+          // Verify this audit matches this faction by checking effective posture
+          const effectiveAssignment = effectivePosture?.[factionId]?.assignments?.[edgeId];
+          if (!effectiveAssignment) continue;
+
+          // Match by checking if base_weight and effective_weight align
+          if (effectiveAssignment.base_weight !== edgeAudit.base_weight ||
+              effectiveAssignment.effective_weight !== edgeAudit.effective_weight) {
+            continue; // This audit doesn't match this faction
+          }
+
+          if (!exposure.by_faction[factionId]) {
+            exposure.by_faction[factionId] = { by_edge: {} };
+          }
+
+          // Get global factor from faction totals if applied
+          const factionTotal = commitmentReport.by_faction.find((f) => f.faction_id === factionId);
+          const globalFactor = factionTotal?.capacity_applied ? factionTotal.global_factor : undefined;
+
+          exposure.by_faction[factionId].by_edge[edgeId] = {
+            intended_posture: assignment.posture,
+            intended_weight: edgeAudit.base_weight,
+            effective_weight: edgeAudit.effective_weight,
+            friction_factor: edgeAudit.friction_factor,
+            commit_points: edgeAudit.commit_points,
+            global_factor: globalFactor
+          };
+        }
+      }
+
+      // Initialize if needed
+      if (!context.state.effective_posture_exposure) {
+        (context.state as any).effective_posture_exposure = {};
+      }
+      (context.state as any).effective_posture_exposure = exposure;
     }
   },
   {

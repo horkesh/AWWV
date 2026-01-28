@@ -304,6 +304,29 @@ export interface CapacityModifiersState {
   }>;
 }
 
+// Phase 5B: Effective posture exposure (read-only, no new mechanics)
+// Exposes intended vs effective posture for visibility/debugging
+export interface EffectivePostureExposureState {
+  // Per faction, per edge: intended vs effective posture data
+  by_faction: Record<FactionId, {
+    // Per edge: exposure data
+    by_edge: Record<string, {
+      // Intended posture (as set by player)
+      intended_posture: PostureLevel;
+      intended_weight: number; // base_weight from commitment report
+      // Effective posture multiplier actually used this turn
+      effective_weight: number; // effective_weight from commitment report
+      // Raw contributing scalars (diagnostics only)
+      friction_factor: number; // [0,1] friction factor from commitment
+      commit_points: number; // integer milli-points committed
+      // Global capacity factor if applied
+      global_factor?: number; // [0,1] global capacity scaling factor
+    }>;
+  }>;
+  // Last updated turn (for determinism)
+  last_updated_turn: number;
+}
+
 export interface GameState {
   schema_version: number;
   meta: StateMeta;
@@ -346,4 +369,6 @@ export interface GameState {
   collapse_damage?: CollapseDamageState;
   // Phase 3D: Capacity modifiers (derived from collapse damage, consumed by later phases)
   capacity_modifiers?: CapacityModifiersState;
+  // Phase 5B: Effective posture exposure (read-only, no new mechanics)
+  effective_posture_exposure?: EffectivePostureExposureState;
 }
