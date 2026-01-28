@@ -1761,3 +1761,15 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Validation:** Manual test: start dev runner, set posture to PUSH on a stressed edge, advance turns. Confirmed: intended posture remains PUSH; effective multiplier is visibly < expected under stress; values change gradually with exhaustion/supply; no immediate or binary overrides occur.
 - **Mistake guard:** `assertNoRepeat("phase5b must expose existing posture degradation only and must not invent new friction mechanics");` — exposure phase only reads from commitment report; no new calculations or mechanics added.
 - **FORAWWV note:** If this formalizes command-friction visibility as a canonical principle, **docs/FORAWWV.md may require an addendum**. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Post-commit: Phase 5B posture friction visibility (read-only command friction exposure)**
+
+- **Summary:** Committed read-only exposure of intended vs effective posture for command friction visibility. Added `effective_posture_exposure` field to GameState populated from commitment step; viewer displays intended posture vs effective multiplier with diagnostics. No new mechanics introduced; only exposes existing posture degradation computed by commitment step.
+- **Commit:** `b006c35` — `Phase 5B: expose intended vs effective posture (read-only command friction visibility)`
+- **Files committed (5):** `src/state/game_state.ts`, `src/state/schema.ts`, `src/sim/turn_pipeline.ts`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Post-commit validation:** Dev runner starts successfully; viewer loads and renders state; edge inspector shows intended posture and effective posture multiplier when exposure data is available; diagnostics (friction_factor, commit_points, global_factor) match raw state values; no UI-side calculations occur (viewer remains read-only); determinism confirmed across reset + repeated runs (same posture inputs produce same exposure sequences).
+- **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked (correct).
+- **Mistake guard:** `assertNoRepeat("phase5b commit must remain read-only exposure of existing posture degradation and must not introduce new mechanics");` — commit includes only read-only exposure wiring; no engine mechanics modified or tuned.
+- **FORAWWV addendum:** This commit effectively establishes command-friction visibility as a canonical diagnostic layer: **player-facing exposure of existing degradation without introducing new mechanics**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.

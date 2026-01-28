@@ -57,6 +57,7 @@ loadMistakes();
 assertNoRepeat('wire phase3a weights into bounded negative-sum pressure diffusion and validate via ab harness');
 assertNoRepeat('phase3d consumption must apply each modifier exactly once and must ensure all new phase files are tracked before commit');
 assertNoRepeat('phase5b must expose existing posture degradation only and must not invent new friction mechanics');
+assertNoRepeat('phase5b commit must remain read-only exposure of existing posture degradation and must not introduce new mechanics');
 
 export type Rng = () => number;
 
