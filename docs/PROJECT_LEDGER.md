@@ -1675,3 +1675,39 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Git status:** Clean index; derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked.
 - **Mistake guard:** `assertNoRepeat("commit must include only validated Phase 3B/3C/3D wiring and tracking with single modifier consumption");` added to `phase3abc_audit_harness.ts`.
 - **FORAWWV addendum:** This commit canonizes **single explicit consumption point per modifier**. **docs/FORAWWV.md may require an addendum** if we formalize that rule. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Phase 4A: Dev runner for raw GameState exposure (engine adapter, no UI)**
+
+- **Summary:** Created minimal dev runner HTTP server exposing raw GameState through engine adapter endpoints. No game logic in server.ts; all mutations via canonical turn pipeline. Determinism preserved (no timestamps, no randomness).
+- **Files added:** `tools/dev_runner/server.ts`
+- **Files modified:** `package.json`, `docs/PROJECT_LEDGER.md`
+- **Command added:** `npm run dev:runner` (runs server on http://localhost:3000)
+- **Endpoints:**
+  - `GET /state` → returns current GameState as JSON
+  - `POST /step` → advances exactly one turn via `executeTurn()`, returns updated GameState
+  - `POST /reset` → restores initial scenario state
+- **Validation:** Server starts successfully; endpoints respond with valid GameState JSON. Repeated step/reset cycles preserve determinism (turn counter increments, state changes observable).
+- **Mistake guard:** `assertNoRepeat("dev runner must not contain game logic and must expose raw GameState only");`
+- **FORAWWV note:** This introduces a systemic seam (engine-facing UI adapter). **docs/FORAWWV.md may require an addendum** if we formalize the dev runner pattern as a canonical adapter layer. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Phase 4B: HTML dev viewer for raw GameState (read-only)**
+
+- **Summary:** Created minimal HTML dev viewer that consumes raw GameState from dev runner. Viewer is read-only and displays raw state values only; no game logic calculations. Renders settlements as colored circles, edges as lines (active fronts highlighted), with click handlers for inspector panels showing raw state values.
+- **Files added:** `tools/dev_viewer/index.html`, `tools/dev_viewer/viewer.js`
+- **Files modified:** `docs/PROJECT_LEDGER.md`
+- **Features:**
+  - Fetches GameState from dev runner (`GET /state`, `POST /step`, `POST /reset`)
+  - Renders settlements as circles (color by controlling faction from `factions[].areasOfResponsibility` or `control_overrides`)
+  - Renders edges from `front_segments` (parses edge_ids like "s1__s2")
+  - Visually distinguishes active fronts (thicker red lines vs thin gray)
+  - Click settlement → inspector shows: SID, controller, faction profile (authority/legitimacy/control/logistics/exhaustion), negotiation pressure/capital, collapse eligibility (if present)
+  - Click edge → inspector shows: endpoint SIDs, sides A/B, active status, active streak, friction, pressure value/max_abs/last_updated_turn, net pressure direction
+  - Time controls: "Next Turn" (POST /step), "Run 5 Turns" (5x POST /step), "Reset" (POST /reset), "Refresh State" (GET /state)
+- **Layout:** Simple force-directed layout algorithm (settlements not in GameState, so positions computed client-side for visualization only)
+- **Validation:** Viewer loads and renders initial state; clicking settlements/edges shows correct raw values; advancing turns updates visuals; reset restores initial state; repeated runs are deterministic (same sequence of states).
+- **Mistake guard:** `assertNoRepeat("dev viewer must never compute game logic and must render raw GameState only");` (note: layout algorithm is visualization-only, not game logic)
+- **FORAWWV note:** This reinforces a systemic rule: **UI layers are read-only consumers of engine state**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern as a canonical separation. Do NOT edit FORAWWV in this commit.
