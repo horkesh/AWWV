@@ -1,0 +1,101 @@
+================================================================================
+Phase 3A A/B Comparison Report
+================================================================================
+
+report_format_version: phase3a_ab_v2
+
+Scenario: Prolonged siege (calibration scenario 1)
+Scenario ID: prolonged_siege
+Selection method: seed_fallback
+Seed applied: true
+seed_method: "bottleneck_two_cluster_v1"
+N: 25
+start_sid: S114197
+cluster_sizes: NA=15, NB=10
+bottleneck_edge: "S217182 <-> S227757 (distance_contact, w=0.000000)"
+allocation_summary: A(30 + 6*5 + 8*1), B(15 + 4*3 + 5*1), normalize down to total=100
+allocation_total_before_normalize: 100
+allocation_total_after_normalize: 100
+initial_nonzero_nodes: 25
+node_pressure_derivation: tree_edges_use_seed_fraction_attribution; non_tree_edges_half_split
+Total turns: 18
+
+Phase 3A Parameters:
+  E_collapse: 100
+  C_floor: 0.1
+  B_sb (shared_border): 1
+  B_pt (point_touch): 0.7
+  B_dc (distance_contact): 0.4
+  D_scale: 20
+  O_ref: 0.1
+  f_shape_min: 0.1
+  f_missing_distance: 0.5
+
+Run Settings:
+  Run A: Phase 3A eligibility OFF, diffusion OFF
+  Run B: Phase 3A eligibility ON, diffusion ON (harness applies diffusion with strict namespace check)
+
+================================================================================
+
+Per-Turn Metrics:
+--------------------------------------------------------------------------------
+Turn  PressureSum_A PressureSum_B NonZero_A  NonZero_B  Top1_A      Top1_B      Top5Share_A  Top5Share_B  L1Dist_AB   DiffApplied_B
+--------------------------------------------------------------------------------
+1     100.00        100.00        25         25         30.00       29.00       0.6000       0.5900       2.00        true         
+2     100.00        100.00        25         25         30.00       28.00       0.6000       0.5800       4.00        true         
+3     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+4     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+5     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+6     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+7     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+8     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+9     100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+10    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+11    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+12    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+13    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+14    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+15    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+16    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+17    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+18    100.00        100.00        25         25         30.00       27.00       0.6000       0.5800       6.00        true         
+
+================================================================================
+
+Summary:
+--------------------------------------------------------------------------------
+Final pressure_sum A: 100.00
+Final pressure_sum B: 100.00
+Final NonZero A: 25, B: 25, delta: 0
+Final Top1 A: 30.00, B: 27.00, delta: -3.00
+
+Diffusion proof (Run B):
+--------------------------------------------------------------------------------
+Per-turn diffusion stats (compact):
+  Turn 1: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=false l1_pre_post=2.00
+  Turn 2: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=false l1_pre_post=2.00
+  Turn 3: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=false l1_pre_post=2.00
+  Turn 4: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 5: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 6: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 7: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 8: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 9: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 10: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 11: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 12: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 13: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 14: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 15: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 16: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 17: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+  Turn 18: diffusion_applied=true nodes_with_outflow=25 total_outflow=5.000000 total_inflow=5.000000 conserved_error_fix_applied=true l1_pre_post=0.00
+
+================================================================================
+Edge Spotlight (Top 5 Strongest Eligible Edges - Run B, Final Turn):
+--------------------------------------------------------------------------------
+  S117781 <-> S118346 (shared_border): w=0.9013
+  S145521 <-> S145572 (shared_border): w=0.8811
+  S215902 <-> S215945 (shared_border): w=0.8601
+  S165247 <-> S166456 (shared_border): w=0.8595
+  S203777 <-> S203807 (shared_border): w=0.8562

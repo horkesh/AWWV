@@ -1425,3 +1425,60 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (7388 bytes, sha256 `66e6cbb4f15f02c79e149f2415bc637aeb7981a1fcac7c64c7db0b150151d004`)
 - **Determinism:** Verified by stable SHA256 across rerun. No timestamps.
 - **FORAWWV.md note:** This is a harness stimulus change only. If it reveals that production pressure interpretation should use directed attribution (vs half-split) in core simulation, **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+---
+
+**[2026-01-28] Phase 3A A/B Harness: Bottleneck Two-Cluster Seed Variant + Dual Reports**
+
+- **New seed variant name:** `bottleneck_two_cluster_v1`
+- **How the bottleneck edge is chosen (deterministic):**
+  - Consider Phase 3A **eligible** effective edges only.
+  - Select the edge with **minimum** weight \(w\).
+  - Tie-break deterministically by: type priority (`shared_border` < `point_touch` < `distance_contact` < other), then `min(a,b)`, then `max(a,b)`.
+  - The chosen bottleneck edge is printed in the bottleneck report header as `bottleneck_edge: "<SID_A> <-> <SID_B> (type, w)"`.
+- **How clusters are constructed (deterministic):**
+  - Treat effective edges as undirected.
+  - Let bottleneck endpoints be `u` and `v`.
+  - Run BFS from `u` excluding traversal across edge `u–v`; take first `NA=15` nodes **skipping `v`**.
+  - Run BFS from `v` excluding traversal across edge `u–v`; take first `NB=10` nodes **skipping `u` and skipping any nodes already chosen for Cluster A** (enforces disjoint clusters even if alternate paths exist).
+  - BFS is deterministic: FIFO queue; neighbors sorted lexicographically.
+  - If insufficient nodes for either cluster, harness throws.
+- **Pressure allocation (total exactly 100):**
+  - Cluster A (15 nodes): `30`, `5` for 6 nodes, `1` for 8 nodes.
+  - Cluster B (10 nodes): `15`, `3` for 4 nodes, `1` for 5 nodes.
+  - If the resulting total exceeds 100, normalize deterministically by subtracting 1 from the lexicographically largest seeded SID until total == 100 (in current run, total was already 100).
+- **Encoding into canonical pressure field:** Same spanning-tree-to-`state.front_pressure` encoding as `bfs_connected_nodes_v1` (tree edges use seed-fraction attribution; non-tree edges half-split). For the bottleneck variant, trees are built separately per cluster (two roots).
+- **Dual deterministic outputs (overwritten, no timestamps):**
+  - `data/derived/_debug/phase3a_pressure_ab_report_bfs.txt` (7388 bytes, sha256 `66e6cbb4f15f02c79e149f2415bc637aeb7981a1fcac7c64c7db0b150151d004`)
+  - `data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt` (7613 bytes, sha256 `a9797076881b03707cc230ee28bbcab00db0f695b5fa914317bc62425ea28b9b`)
+- **Commands run:**
+  - `npm run sim:phase3a:ab`
+  - `node -e "const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt'].forEach(p=>{console.log(p,'bytes',fs.statSync(p).size);});"`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt'].forEach(p=>{console.log(p,'sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));});"`
+  - `npm run sim:phase3a:ab`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt'].forEach(p=>{console.log(p,'sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));});"`
+- **Determinism:** Both reports are byte-identical across reruns (verified via stable SHA256). No timestamps.
+- **FORAWWV.md note:** If the “bottleneck” behavior depends more on alternative paths than the single min-weight edge in real graph regions, **docs/FORAWWV.md may require an addendum** (do NOT edit it automatically).
+
+---
+
+**[2026-01-28] Phase 3A A/B Harness: Weak-Link (Nonzero) Two-Cluster Seed Variant + Triple Reports**
+
+- **New seed variant name:** `weaklink_two_cluster_v1`
+- **Weaklink selection rule (deterministic, nonzero):**
+  - From Phase 3A eligible effective edges, filter candidates to `w > 0` strictly.
+  - Sort by `w` ascending, then type priority (`shared_border` < `point_touch` < `distance_contact` < other), then `min(a,b)`, then `max(a,b)`.
+  - Pick 5th percentile edge with `idx = floor(0.05 * (n - 1))` where `n` is candidate count.
+  - Report header includes `weaklink_edge` and `weaklink_index: idx of n`.
+- **Reports (deterministic, overwrite, no timestamps):**
+  - `data/derived/_debug/phase3a_pressure_ab_report_bfs.txt` (7388 bytes, sha256 `66e6cbb4f15f02c79e149f2415bc637aeb7981a1fcac7c64c7db0b150151d004`)
+  - `data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt` (7613 bytes, sha256 `a9797076881b03707cc230ee28bbcab00db0f695b5fa914317bc62425ea28b9b`)
+  - `data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt` (8286 bytes, sha256 `ca5fc6adb1861c2a4b95ea3329a7e9c2c95ad35b01900cd6b909ba2c9653f082`)
+- **Commands run:**
+  - `npm run sim:phase3a:ab`
+  - `node -e "const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt','data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt'].forEach(p=>{console.log(p,'bytes',fs.statSync(p).size);});"`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt','data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt'].forEach(p=>{console.log(p,'sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));});"`
+  - `npm run sim:phase3a:ab`
+  - `node -e "const crypto=require('crypto'); const fs=require('fs'); ['data/derived/_debug/phase3a_pressure_ab_report_bfs.txt','data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt','data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt'].forEach(p=>{console.log(p,'sha256',crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));});"`
+- **Determinism:** All three reports are byte-identical across reruns (verified via stable SHA256). No timestamps.
+- **FORAWWV.md note:** If low-weight cross-cluster coupling is systematically lost to integer quantization (diffusion appears “applied” but yields zero observed deltas), **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.

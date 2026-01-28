@@ -32,7 +32,7 @@ const SEED_TOTAL_PRESSURE = 100;
 const SEED_BFS_N = 25;
 
 loadMistakes();
-assertNoRepeat('phase3a ab harness bfs connected seeding to produce observable diffusion deltas');
+assertNoRepeat('phase3a ab harness weaklink two-cluster seed variant nonzero bottleneck');
 
 // Scenario registry (stable order for deterministic selection)
 type ScenarioFactory = () => GameState;
@@ -270,6 +270,9 @@ interface TurnMetrics {
   // Deterministic node-pressure distribution derived from canonical state.front_pressure.
   // Stored as a sorted-key object to support L1 distance computations in the report.
   node_pressure_by_sid: Record<string, number>;
+  // Optional half-split-derived node pressure (matches diffusion's internal node derivation).
+  // Only populated for weaklink report leakage metrics.
+  node_pressure_halfsplit_by_sid?: Record<string, number>;
   // When captured (Run B), measures pre vs post diffusion on the same turn/state.
   diffusion_applied?: boolean;
   diffusion_stats?: Phase3ADiffusionResult['stats'];
@@ -323,14 +326,15 @@ interface SeedEdgeAttribution {
 }
 
 interface BfsSeedContext {
-  seed_method: 'bfs_connected_nodes_v1' | 'bottleneck_two_cluster_v1';
+  seed_method: 'bfs_connected_nodes_v1' | 'bottleneck_two_cluster_v1' | 'weaklink_two_cluster_v1';
   N: number;
   start_sid: string;
+  roots: string[];
+  root_first_child_by_root: Record<string, string>;
   nodes_bfs: string[];
   nodes_sorted: string[];
   parent_by_sid: Record<string, string | null>;
   depth_by_sid: Record<string, number>;
-  root_first_child: string;
   pv_by_sid: Record<string, number>;
   cluster_by_sid: Record<string, 'A' | 'B'>;
   tree_edge_ids: Set<string>;
@@ -339,6 +343,9 @@ interface BfsSeedContext {
   NA?: number;
   NB?: number;
   bottleneck_edge?: { a: string; b: string; type: string; w: number };
+  weaklink_edge?: { a: string; b: string; type: string; w: number };
+  weaklink_index?: number;
+  weaklink_n?: number;
   allocation_total_before_normalize?: number;
   allocation_total_after_normalize?: number;
 }
@@ -458,6 +465,8 @@ function extractTurnMetrics(
   const top1_pressure = dist.top1;
   const top5_share = dist.top5_share;
   const node_pressure_by_sid = nodeMapToSortedObject(nodeMap);
+  const node_pressure_halfsplit_by_sid =
+    seed?.seed_method === 'weaklink_two_cluster_v1' ? nodeMapToSortedObject(computeNodePressureMap(state, undefined)) : undefined;
 
   if (!phase3aAudit) {
     return {
@@ -467,6 +476,7 @@ function extractTurnMetrics(
       top1_pressure,
       top5_share,
       node_pressure_by_sid,
+      node_pressure_halfsplit_by_sid,
       diffusion_applied: extra?.diffusion_applied,
       diffusion_stats: extra?.diffusion_stats,
       l1_pre_post_diffusion: extra?.l1_pre_post_diffusion,
@@ -497,6 +507,7 @@ function extractTurnMetrics(
     top1_pressure,
     top5_share,
     node_pressure_by_sid,
+    node_pressure_halfsplit_by_sid,
     diffusion_applied: extra?.diffusion_applied,
     diffusion_stats: extra?.diffusion_stats,
     l1_pre_post_diffusion: extra?.l1_pre_post_diffusion,
@@ -551,14 +562,18 @@ async function runScenario(
         const enriched = await loadEnrichedContactGraph();
         const accessors = buildStateAccessors(state);
         const eff = buildPressureEligibilityPhase3A(enriched, state, accessors, false);
-        const result = runPhase3APressureDiffusionWithResult(state, eff.edgesEffective, { strict_namespace: true });
+        const iterations = seed.seed_method === 'weaklink_two_cluster_v1' ? 5 : 1;
+        let result: Phase3ADiffusionResult | null = null;
+        for (let k = 0; k < iterations; k++) {
+          result = runPhase3APressureDiffusionWithResult(state, eff.edgesEffective, { strict_namespace: true });
+        }
 
         const post = computeNodePressureMap(state, seed);
         const l1 = computeL1Distance(pre, post);
 
         extra = {
-          diffusion_applied: result.applied,
-          diffusion_stats: result.stats,
+          diffusion_applied: Boolean(result?.applied),
+          diffusion_stats: result?.stats,
           l1_pre_post_diffusion: l1
         };
       }
@@ -744,11 +759,12 @@ function buildBfsSeedContextFromEffectiveEdges(
     seed_method: 'bfs_connected_nodes_v1',
     N,
     start_sid,
+    roots: [start_sid],
+    root_first_child_by_root: { [start_sid]: root_first_child },
     nodes_bfs,
     nodes_sorted,
     parent_by_sid,
     depth_by_sid,
-    root_first_child,
     pv_by_sid,
     cluster_by_sid,
     tree_edge_ids,
@@ -803,22 +819,31 @@ function applySeedIntoFrontPressure(state: GameState, seed: BfsSeedContext): voi
   for (const sid of seed.nodes_bfs) {
     const pv = seed.pv_by_sid[sid] ?? 0;
     if (pv <= 0) continue;
-    if (sid === seed.start_sid) {
-      const eid = canonicalEdgeId(seed.start_sid, seed.root_first_child);
-      edgeValue[eid] = (edgeValue[eid] ?? 0) + pv;
-    } else {
-      const p = seed.parent_by_sid[sid];
-      if (!p) continue;
+    const p = seed.parent_by_sid[sid];
+    if (p) {
       const eid = canonicalEdgeId(p, sid);
       edgeValue[eid] = (edgeValue[eid] ?? 0) + pv;
+      continue;
     }
+
+    // Root node: encode onto deterministic first tree edge for that root.
+    const child = seed.root_first_child_by_root[sid];
+    if (!child) {
+      throw new Error(`Phase3A harness seed: root ${sid} missing root_first_child mapping`);
+    }
+    const eid = canonicalEdgeId(sid, child);
+    edgeValue[eid] = (edgeValue[eid] ?? 0) + pv;
   }
 
   // Safety: total must be exactly 100.
+  let pvTotal = 0;
+  for (const sid of seed.nodes_bfs) pvTotal += seed.pv_by_sid[sid] ?? 0;
   let total = 0;
   for (const v of Object.values(edgeValue)) total += v;
   if (total !== SEED_TOTAL_PRESSURE) {
-    throw new Error(`Phase3A harness seed: expected total ${SEED_TOTAL_PRESSURE}, got ${total}`);
+    throw new Error(
+      `Phase3A harness seed: expected total ${SEED_TOTAL_PRESSURE}, got ${total} (pv_total_over_nodes_bfs=${pvTotal})`
+    );
   }
 
   // Materialize seeded tree edges as active front segments and pressure records.
@@ -842,6 +867,31 @@ function applySeedIntoFrontPressure(state: GameState, seed: BfsSeedContext): voi
       max_abs: v,
       last_updated_turn: 0
     };
+  }
+
+  // weaklink_two_cluster_v1: explicitly include the weaklink edge as a zero-valued front edge
+  // so diffusion across the connector can manifest as an edge pressure instead of being forced
+  // to re-quantize only onto intra-cluster tree edges.
+  if (seed.seed_method === 'weaklink_two_cluster_v1' && seed.weaklink_edge) {
+    const eid = canonicalEdgeId(seed.weaklink_edge.a, seed.weaklink_edge.b);
+    if (!((state.front_segments as any)[eid])) {
+      (state.front_segments as any)[eid] = {
+        edge_id: eid,
+        active: true,
+        created_turn: 0,
+        since_turn: 0,
+        last_active_turn: 0,
+        active_streak: 1,
+        max_active_streak: 1,
+        friction: 0,
+        max_friction: 0
+      };
+    } else {
+      (state.front_segments as any)[eid].active = true;
+    }
+    if (!((state.front_pressure as any)[eid])) {
+      (state.front_pressure as any)[eid] = { edge_id: eid, value: 0, max_abs: 0, last_updated_turn: 0 };
+    }
   }
 }
 
@@ -918,9 +968,25 @@ function buildBottleneckTwoClusterSeedContext(
 
   const clusterAFull = bfsNoCross(u);
   const clusterBFull = bfsNoCross(v);
-  const A_nodes_bfs = clusterAFull.order.slice(0, NA);
-  const B_nodes_bfs = clusterBFull.order.slice(0, NB);
+  // The spec excludes traversal across only the bottleneck edge; this does not guarantee
+  // u/v become disconnected if there are alternate paths. To ensure two disjoint clusters,
+  // we deterministically select Cluster A first, then select Cluster B from remaining nodes.
+  const A_nodes_bfs: string[] = [];
+  for (const sid of clusterAFull.order) {
+    if (sid === v) continue; // keep the opposite endpoint out of Cluster A
+    A_nodes_bfs.push(sid);
+    if (A_nodes_bfs.length >= NA) break;
+  }
   if (A_nodes_bfs.length < NA) throw new Error(`Phase3A bottleneck seed: Cluster A only ${A_nodes_bfs.length} nodes (need NA=${NA})`);
+  const A_set = new Set<string>(A_nodes_bfs);
+
+  const B_nodes_bfs: string[] = [];
+  for (const sid of clusterBFull.order) {
+    if (sid === u) continue; // keep the opposite endpoint out of Cluster B
+    if (A_set.has(sid)) continue; // ensure disjoint clusters
+    B_nodes_bfs.push(sid);
+    if (B_nodes_bfs.length >= NB) break;
+  }
   if (B_nodes_bfs.length < NB) throw new Error(`Phase3A bottleneck seed: Cluster B only ${B_nodes_bfs.length} nodes (need NB=${NB})`);
 
   const nodes_bfs = [...A_nodes_bfs, ...B_nodes_bfs];
@@ -965,6 +1031,17 @@ function buildBottleneckTwoClusterSeedContext(
     total -= 1;
     guard += 1;
     if (guard > 1000) throw new Error('Phase3A bottleneck seed: normalization guard tripped');
+  }
+
+  // Safety: allocation must sum to exactly 100 over the selected nodes.
+  // (We later encode this deterministically into edge-keyed `front_pressure`.)
+  let pvTotalOverNodes = 0;
+  for (const sid of nodes_bfs) pvTotalOverNodes += pv_by_sid[sid] ?? 0;
+  if (pvTotalOverNodes !== SEED_TOTAL_PRESSURE) {
+    throw new Error(
+      `Phase3A bottleneck seed: pv_total_over_nodes_bfs=${pvTotalOverNodes} (expected ${SEED_TOTAL_PRESSURE}) ` +
+      `NA=${NA} NB=${NB} bottleneck=${u}__${v} total_before=${totalBefore} total_after=${total}`
+    );
   }
 
   const initially_nonzero_nodes = nodes_sorted.reduce((acc, sid) => acc + ((pv_by_sid[sid] ?? 0) > 0 ? 1 : 0), 0);
@@ -1050,11 +1127,12 @@ function buildBottleneckTwoClusterSeedContext(
     seed_method: 'bottleneck_two_cluster_v1',
     N: NA + NB,
     start_sid: nodes_sorted[0]!,
+    roots: [u, v],
+    root_first_child_by_root: { [u]: root_first_child_A, [v]: root_first_child_B },
     nodes_bfs,
     nodes_sorted,
     parent_by_sid,
     depth_by_sid,
-    root_first_child: root_first_child_A,
     pv_by_sid,
     cluster_by_sid,
     tree_edge_ids,
@@ -1063,6 +1141,253 @@ function buildBottleneckTwoClusterSeedContext(
     NA,
     NB,
     bottleneck_edge: { a: u, b: v, type: bottleneck.type, w: bottleneck.w },
+    allocation_total_before_normalize: totalBefore,
+    allocation_total_after_normalize: total
+  };
+}
+
+function buildWeaklinkTwoClusterSeedContext(
+  effectiveEdges: Array<{ a: string; b: string; eligible: boolean; w: number; type?: string }>,
+  NA: number,
+  NB: number
+): BfsSeedContext {
+  // Candidates: eligible edges with strictly positive w.
+  const candidates = effectiveEdges
+    .filter((e) => e && e.eligible && typeof e.w === 'number' && e.w > 0 && typeof e.a === 'string' && typeof e.b === 'string' && e.a !== e.b)
+    .map((e) => ({ a: e.a, b: e.b, w: e.w, type: (e as any).type ?? 'unknown' }));
+  if (candidates.length === 0) throw new Error('Phase3A weaklink seed: no eligible edges with w>0 found');
+
+  const sorted = [...candidates].sort((e1, e2) => {
+    if (e1.w !== e2.w) return e1.w - e2.w;
+    const p1 = typePriority(e1.type);
+    const p2 = typePriority(e2.type);
+    if (p1 !== p2) return p1 - p2;
+    const a1 = e1.a < e1.b ? e1.a : e1.b;
+    const b1 = e1.a < e1.b ? e1.b : e1.a;
+    const a2 = e2.a < e2.b ? e2.a : e2.b;
+    const b2 = e2.a < e2.b ? e2.b : e2.a;
+    if (a1 !== a2) return a1.localeCompare(a2);
+    return b1.localeCompare(b2);
+  });
+
+  const n = sorted.length;
+  const idx = Math.floor(0.05 * (n - 1));
+  const link = sorted[idx]!;
+
+  // Construct clusters/encoding identically to bottleneck_two_cluster_v1, but using the selected weaklink edge.
+  const seed = buildTwoClusterSeedFromLink(effectiveEdges, link.a, link.b, NA, NB);
+  return {
+    ...seed,
+    seed_method: 'weaklink_two_cluster_v1',
+    weaklink_edge: { a: link.a, b: link.b, type: link.type, w: link.w },
+    weaklink_index: idx,
+    weaklink_n: n
+  };
+}
+
+function buildTwoClusterSeedFromLink(
+  effectiveEdges: Array<{ a: string; b: string; eligible: boolean; w: number; type?: string }>,
+  u: string,
+  v: string,
+  NA: number,
+  NB: number
+): BfsSeedContext {
+  // This matches bottleneck_two_cluster_v1 cluster construction + allocation + encoding,
+  // but takes (u,v) as the chosen link.
+  const eligible = effectiveEdges
+    .filter((e) => e && e.eligible && typeof e.a === 'string' && typeof e.b === 'string' && e.a !== e.b)
+    .map((e) => ({ a: e.a, b: e.b, w: e.w, type: (e as any).type ?? 'unknown' }));
+  if (eligible.length === 0) throw new Error('Phase3A two-cluster seed: no eligible effective edges found');
+
+  const adj = new Map<string, Set<string>>();
+  const edgeSet = new Set<string>();
+  for (const e of eligible) {
+    if (!adj.has(e.a)) adj.set(e.a, new Set());
+    if (!adj.has(e.b)) adj.set(e.b, new Set());
+    adj.get(e.a)!.add(e.b);
+    adj.get(e.b)!.add(e.a);
+    edgeSet.add(canonicalEdgeId(e.a, e.b));
+  }
+
+  const bfsNoCross = (start: string): { order: string[]; parent: Record<string, string | null>; depth: Record<string, number> } => {
+    const seen = new Set<string>();
+    const q: string[] = [];
+    const order: string[] = [];
+    const parent: Record<string, string | null> = {};
+    const depth: Record<string, number> = {};
+    seen.add(start);
+    parent[start] = null;
+    depth[start] = 0;
+    q.push(start);
+    while (q.length > 0) {
+      const x = q.shift()!;
+      order.push(x);
+      const neighbors = [...(adj.get(x) ?? new Set())].sort((a, b) => a.localeCompare(b));
+      for (const y of neighbors) {
+        if ((x === u && y === v) || (x === v && y === u)) continue;
+        if (seen.has(y)) continue;
+        seen.add(y);
+        parent[y] = x;
+        depth[y] = (depth[x] ?? 0) + 1;
+        q.push(y);
+      }
+    }
+    return { order, parent, depth };
+  };
+
+  const clusterAFull = bfsNoCross(u);
+  const clusterBFull = bfsNoCross(v);
+
+  const A_nodes_bfs: string[] = [];
+  for (const sid of clusterAFull.order) {
+    if (sid === v) continue;
+    A_nodes_bfs.push(sid);
+    if (A_nodes_bfs.length >= NA) break;
+  }
+  if (A_nodes_bfs.length < NA) throw new Error(`Phase3A two-cluster seed: Cluster A only ${A_nodes_bfs.length} nodes (need NA=${NA})`);
+  const A_set = new Set<string>(A_nodes_bfs);
+
+  const B_nodes_bfs: string[] = [];
+  for (const sid of clusterBFull.order) {
+    if (sid === u) continue;
+    if (A_set.has(sid)) continue;
+    B_nodes_bfs.push(sid);
+    if (B_nodes_bfs.length >= NB) break;
+  }
+  if (B_nodes_bfs.length < NB) throw new Error(`Phase3A two-cluster seed: Cluster B only ${B_nodes_bfs.length} nodes (need NB=${NB})`);
+
+  const nodes_bfs = [...A_nodes_bfs, ...B_nodes_bfs];
+  const nodes_sorted = [...nodes_bfs].sort((a, b) => a.localeCompare(b));
+
+  const cluster_by_sid: Record<string, 'A' | 'B'> = {};
+  for (const sid of A_nodes_bfs) cluster_by_sid[sid] = 'A';
+  for (const sid of B_nodes_bfs) cluster_by_sid[sid] = 'B';
+
+  const pv_by_sid: Record<string, number> = {};
+  for (const sid of nodes_sorted) pv_by_sid[sid] = 0;
+  const A_sorted = [...A_nodes_bfs].sort((a, b) => a.localeCompare(b));
+  const B_sorted = [...B_nodes_bfs].sort((a, b) => a.localeCompare(b));
+
+  pv_by_sid[A_sorted[0]!] += 30;
+  for (let i = 1; i <= 6; i++) if (A_sorted[i]) pv_by_sid[A_sorted[i]!] += 5;
+  for (let i = 7; i <= 14; i++) if (A_sorted[i]) pv_by_sid[A_sorted[i]!] += 1;
+
+  pv_by_sid[B_sorted[0]!] += 15;
+  for (let i = 1; i <= 4; i++) if (B_sorted[i]) pv_by_sid[B_sorted[i]!] += 3;
+  for (let i = 5; i <= 9; i++) if (B_sorted[i]) pv_by_sid[B_sorted[i]!] += 1;
+
+  let totalBefore = 0;
+  for (const sid of nodes_sorted) totalBefore += pv_by_sid[sid] ?? 0;
+  let total = totalBefore;
+
+  const seededDesc = nodes_sorted.filter((sid) => (pv_by_sid[sid] ?? 0) > 0).sort((a, b) => b.localeCompare(a));
+  if (total < SEED_TOTAL_PRESSURE) throw new Error(`Phase3A two-cluster seed: total ${total} < ${SEED_TOTAL_PRESSURE}`);
+  while (total > SEED_TOTAL_PRESSURE) {
+    const sid = seededDesc.find((s) => (pv_by_sid[s] ?? 0) > 0);
+    if (!sid) throw new Error('Phase3A two-cluster seed: cannot normalize');
+    pv_by_sid[sid] -= 1;
+    total -= 1;
+  }
+
+  let pvTotalOverNodes = 0;
+  for (const sid of nodes_bfs) pvTotalOverNodes += pv_by_sid[sid] ?? 0;
+  if (pvTotalOverNodes !== SEED_TOTAL_PRESSURE) {
+    throw new Error(`Phase3A two-cluster seed: pv_total_over_nodes_bfs=${pvTotalOverNodes} (expected ${SEED_TOTAL_PRESSURE})`);
+  }
+
+  const initially_nonzero_nodes = nodes_sorted.reduce((acc, sid) => acc + ((pv_by_sid[sid] ?? 0) > 0 ? 1 : 0), 0);
+
+  const parent_by_sid: Record<string, string | null> = {};
+  const depth_by_sid: Record<string, number> = {};
+  for (const sid of A_nodes_bfs) {
+    parent_by_sid[sid] = clusterAFull.parent[sid] ?? null;
+    depth_by_sid[sid] = clusterAFull.depth[sid] ?? 0;
+  }
+  for (const sid of B_nodes_bfs) {
+    parent_by_sid[sid] = clusterBFull.parent[sid] ?? null;
+    depth_by_sid[sid] = clusterBFull.depth[sid] ?? 0;
+  }
+  parent_by_sid[u] = null;
+  parent_by_sid[v] = null;
+  depth_by_sid[u] = 0;
+  depth_by_sid[v] = 0;
+
+  const rootFirstChild = (root: string, cluster: 'A' | 'B'): string => {
+    const kids = nodes_bfs
+      .filter((sid) => cluster_by_sid[sid] === cluster && parent_by_sid[sid] === root)
+      .sort((a, b) => a.localeCompare(b));
+    const c = kids[0];
+    if (!c) throw new Error(`Phase3A two-cluster seed: root ${root} has no child in cluster ${cluster}`);
+    return c;
+  };
+  const root_first_child_A = rootFirstChild(u, 'A');
+  const root_first_child_B = rootFirstChild(v, 'B');
+
+  const ensureEdge = (a: string, b: string): string => {
+    const eid = canonicalEdgeId(a, b);
+    if (!edgeSet.has(eid)) throw new Error(`Phase3A two-cluster seed: missing effective edge ${a} <-> ${b}`);
+    return eid;
+  };
+
+  const tree_edge_ids = new Set<string>();
+  const contribA: Record<string, number> = {};
+  const contribB: Record<string, number> = {};
+  for (const sid of nodes_bfs) {
+    const p = parent_by_sid[sid];
+    if (!p) continue;
+    tree_edge_ids.add(ensureEdge(p, sid));
+  }
+
+  const addContribution = (eid: string, sid: string, amount: number) => {
+    if (amount <= 0) return;
+    const pair = parseEdgeId(eid);
+    if (!pair) throw new Error(`Phase3A two-cluster seed: invalid edge id ${eid}`);
+    const [a, b] = pair;
+    if (sid === a) contribA[eid] = (contribA[eid] ?? 0) + amount;
+    else if (sid === b) contribB[eid] = (contribB[eid] ?? 0) + amount;
+    else throw new Error(`Phase3A two-cluster seed: contribution sid ${sid} not on edge ${eid}`);
+  };
+
+  for (const sid of nodes_bfs) {
+    const pv = pv_by_sid[sid] ?? 0;
+    if (pv <= 0) continue;
+    if (sid === u) addContribution(ensureEdge(u, root_first_child_A), u, pv);
+    else if (sid === v) addContribution(ensureEdge(v, root_first_child_B), v, pv);
+    else {
+      const p = parent_by_sid[sid];
+      if (!p) continue;
+      addContribution(ensureEdge(p, sid), sid, pv);
+    }
+  }
+
+  const tree_edge_attribution = new Map<string, SeedEdgeAttribution>();
+  for (const eid of tree_edge_ids) {
+    const pair = parseEdgeId(eid);
+    if (!pair) throw new Error(`Phase3A two-cluster seed: invalid tree edge id ${eid}`);
+    const [a, b] = pair;
+    const ca = contribA[eid] ?? 0;
+    const cb = contribB[eid] ?? 0;
+    const tot = ca + cb;
+    tree_edge_attribution.set(eid, { a, b, fracA: tot > 0 ? ca / tot : 0.5, fracB: tot > 0 ? cb / tot : 0.5 });
+  }
+
+  return {
+    seed_method: 'bottleneck_two_cluster_v1',
+    N: NA + NB,
+    start_sid: nodes_sorted[0]!,
+    roots: [u, v],
+    root_first_child_by_root: { [u]: root_first_child_A, [v]: root_first_child_B },
+    nodes_bfs,
+    nodes_sorted,
+    parent_by_sid,
+    depth_by_sid,
+    pv_by_sid,
+    cluster_by_sid,
+    tree_edge_ids,
+    tree_edge_attribution,
+    initially_nonzero_nodes,
+    NA,
+    NB,
     allocation_total_before_normalize: totalBefore,
     allocation_total_after_normalize: total
   };
@@ -1099,14 +1424,25 @@ function formatReport(
     lines.push(`allocation_pattern: 40 + 10*6 (total=${SEED_TOTAL_PRESSURE})`);
   } else {
     lines.push(`cluster_sizes: NA=${seed.NA}, NB=${seed.NB}`);
-    if (seed.bottleneck_edge) {
+    if (seed.seed_method === 'bottleneck_two_cluster_v1' && seed.bottleneck_edge) {
       const a = seed.bottleneck_edge.a;
       const b = seed.bottleneck_edge.b;
       const t = seed.bottleneck_edge.type;
       const w = seed.bottleneck_edge.w;
       lines.push(`bottleneck_edge: "${a} <-> ${b} (${t}, w=${w.toFixed(6)})"`);
     }
-    lines.push(`allocation_summary: A(30 + 6*5 + 8*1), B(15 + 4*3 + 5*1), normalize down to total=${SEED_TOTAL_PRESSURE}`);
+    if (seed.seed_method === 'weaklink_two_cluster_v1' && seed.weaklink_edge) {
+      const a = seed.weaklink_edge.a;
+      const b = seed.weaklink_edge.b;
+      const t = seed.weaklink_edge.type;
+      const w = seed.weaklink_edge.w;
+      const idx = seed.weaklink_index ?? -1;
+      const n = seed.weaklink_n ?? -1;
+      lines.push(`weaklink_edge: "${a} <-> ${b} (${t}, w=${w.toFixed(6)})"`);
+      lines.push(`weaklink_index: ${idx} of n=${n}`);
+      lines.push(`weaklink_diffusion_iterations_per_turn: 5`);
+    }
+  lines.push(`allocation_summary: A(30 + 6*5 + 8*1), B(15 + 4*3 + 5*1), normalize down to total=${SEED_TOTAL_PRESSURE}`);
     lines.push(`allocation_total_before_normalize: ${seed.allocation_total_before_normalize}`);
     lines.push(`allocation_total_after_normalize: ${seed.allocation_total_after_normalize}`);
   }
@@ -1135,6 +1471,7 @@ function formatReport(
   // Per-turn table
   lines.push('Per-Turn Metrics:');
   lines.push('-'.repeat(80));
+  const isWeaklink = seed.seed_method === 'weaklink_two_cluster_v1';
   lines.push(
     'Turn'.padEnd(6) +
     'PressureSum_A'.padEnd(14) +
@@ -1146,6 +1483,7 @@ function formatReport(
     'Top5Share_A'.padEnd(13) +
     'Top5Share_B'.padEnd(13) +
     'L1Dist_AB'.padEnd(12) +
+    (isWeaklink ? 'ClusterAShare_B'.padEnd(16) + 'ClusterBShare_B'.padEnd(16) : '') +
     'DiffApplied_B'.padEnd(13)
   );
   lines.push('-'.repeat(80));
@@ -1156,6 +1494,21 @@ function formatReport(
     const mA = metricsA[i];
     const mB = metricsB[i];
     const l1DistAB = computeL1DistanceFromObjects(mA.node_pressure_by_sid, mB.node_pressure_by_sid);
+
+    let clusterAShareB = 0;
+    let clusterBShareB = 0;
+    if (isWeaklink) {
+      let sumA = 0;
+      let sumB = 0;
+      const distObj = mB.node_pressure_halfsplit_by_sid ?? mB.node_pressure_by_sid;
+      for (const [sid, v] of Object.entries(distObj)) {
+        const c = seed.cluster_by_sid[sid];
+        if (c === 'A') sumA += v;
+        else if (c === 'B') sumB += v;
+      }
+      clusterAShareB = SEED_TOTAL_PRESSURE > 0 ? sumA / SEED_TOTAL_PRESSURE : 0;
+      clusterBShareB = SEED_TOTAL_PRESSURE > 0 ? sumB / SEED_TOTAL_PRESSURE : 0;
+    }
 
     lines.push(
       String(mA.turn).padEnd(6) +
@@ -1168,6 +1521,7 @@ function formatReport(
       mA.top5_share.toFixed(4).padEnd(13) +
       mB.top5_share.toFixed(4).padEnd(13) +
       l1DistAB.toFixed(2).padEnd(12) +
+      (isWeaklink ? clusterAShareB.toFixed(4).padEnd(16) + clusterBShareB.toFixed(4).padEnd(16) : '') +
       String(Boolean(mB.diffusion_applied)).padEnd(13)
     );
 
@@ -1281,6 +1635,10 @@ async function main(): Promise<void> {
     {
       seed: buildBottleneckTwoClusterSeedContext(eff0.edgesEffective as any, 15, 10),
       reportPath: resolve('data/derived/_debug/phase3a_pressure_ab_report_bottleneck.txt')
+    },
+    {
+      seed: buildWeaklinkTwoClusterSeedContext(eff0.edgesEffective as any, 15, 10),
+      reportPath: resolve('data/derived/_debug/phase3a_pressure_ab_report_weaklink.txt')
     }
   ];
 
