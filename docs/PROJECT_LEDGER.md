@@ -1425,3 +1425,8 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Output report:** `data/derived/_debug/phase3a_pressure_ab_report.txt` (7388 bytes, sha256 `66e6cbb4f15f02c79e149f2415bc637aeb7981a1fcac7c64c7db0b150151d004`)
 - **Determinism:** Verified by stable SHA256 across rerun. No timestamps.
 - **FORAWWV.md note:** This is a harness stimulus change only. If it reveals that production pressure interpretation should use directed attribution (vs half-split) in core simulation, **docs/FORAWWV.md may require an addendum**; do NOT edit it automatically.
+
+**2026-01-29** - Added codex context primer
+- Created `codex.md` with concise project context, constraints, and key commands for future use.
+- **Mistake log updated:** no (documentation-only).
+- **FORAWWV.md note:** No systemic design insights revealed; no addendum suggested.
