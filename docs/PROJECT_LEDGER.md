@@ -1711,3 +1711,15 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Validation:** Viewer loads and renders initial state; clicking settlements/edges shows correct raw values; advancing turns updates visuals; reset restores initial state; repeated runs are deterministic (same sequence of states).
 - **Mistake guard:** `assertNoRepeat("dev viewer must never compute game logic and must render raw GameState only");` (note: layout algorithm is visualization-only, not game logic)
 - **FORAWWV note:** This reinforces a systemic rule: **UI layers are read-only consumers of engine state**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern as a canonical separation. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Post-commit: Phase 4B HTML dev viewer (read-only GameState inspection)**
+
+- **Summary:** Committed read-only HTML dev viewer for raw GameState inspection. Viewer displays raw state values only; no game logic calculations. All state mutations occur via dev runner endpoints only.
+- **Commit:** `59879d4` — `Phase 4B: add read-only HTML dev viewer for raw GameState inspection`
+- **Files committed (3):** `tools/dev_viewer/index.html`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Post-commit validation:** Viewer loads and renders initial state correctly; clicking settlements/edges shows raw values from GameState; turn stepping works via POST /step; reset restores initial state; no UI-side calculations affect outcomes (viewer is strictly read-only).
+- **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`, `tools/dev_runner/**`) remain untracked (correct).
+- **Mistake guard:** `assertNoRepeat("dev viewer must remain strictly read-only and must not embed or derive game logic");` — viewer code contains no game logic calculations, only raw value display.
+- **FORAWWV addendum:** This commit effectively establishes a canonical UI/engine separation rule: **UI layers are read-only consumers of engine state**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
