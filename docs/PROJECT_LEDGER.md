@@ -1811,3 +1811,98 @@ The pipeline operates in one of three modes based on crosswalk availability:
 - **Git status:** Clean index for committed files; `package.json` remains modified (from Phase 4A, not part of this commit); derived artifacts (`data/derived/**`, `tools/map_viewer/**`) remain untracked (correct).
 - **Mistake guard:** `assertNoRepeat("phase5d commit must expose loss-of-control trends and warnings only and must not introduce mechanics or thresholds");` — commit includes only read-only trend exposure wiring; trends derived only from current vs previous turn comparison; warnings are direct boolean mappings from existing state; no numeric thresholds, new counters, or engine mechanics introduced.
 - **FORAWWV addendum:** This commit effectively establishes loss-of-control feedback as a canonical player-facing principle: **trends and warnings expose existing irreversible state without introducing new mechanics**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Viewer fix: Temporary layout added so map renders (visualization-only)**
+
+- **Summary:** Added deterministic layout initialization to dev viewer so settlements and edges render correctly. Layout uses SID hash-based positioning for deterministic placement (same SIDs → same positions). Force-directed relaxation reduced to 20-30 iterations (visual only, no physics accuracy). Positions computed once on initial load and on reset, then persist across turns for stable visualization. Positions stored only in viewer-local memory (`settlementPositions` Map), never written to GameState or sent to dev runner. Layout is purely visualization-only and does not affect game logic or state.
+- **Files modified (1):** `tools/dev_viewer/viewer.js`
+- **Validation:** Dev runner starts successfully; viewer loads and renders state; settlements appear as colored dots; edges appear as lines (thicker for active fronts); clicking settlements/edges opens inspector; advancing turns updates values but NOT layout positions; reload produces identical layout (deterministic); reset clears positions and recomputes layout.
+- **Mistake guard:** `assertNoRepeat("viewer layout must be visualization-only and must not leak into engine or state");` — layout computed only in viewer.js, positions stored in viewer-local Map, never written to GameState or sent to server, no engine code modified.
+- **FORAWWV note:** This reinforces the rule that spatial layout is presentation-only: **viewer layout is visualization-only and does not affect game state or mechanics**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Viewer fix: Settlements extracted correctly from object-based factions**
+
+- **Summary:** Fixed settlement extraction in dev viewer to support both array-based and object-based factions schema. Updated `extractSettlements()`, `getSettlementController()`, and `showSettlementInspector()` to handle factions as either array or object. Added defensive checks for malformed faction entries and zero settlements (logs warning to console). Result remains stable-sorted. Empty factions object handled gracefully without throwing errors.
+- **Files modified (1):** `tools/dev_viewer/viewer.js`
+- **Validation:** Dev runner starts successfully; viewer loads and renders state; settlements render as dots; edges render as lines; clicking settlements/edges opens inspector; no console errors; layout remains deterministic across reloads; works with both array and object-based factions schema.
+- **Mistake guard:** `assertNoRepeat("viewer must not assume factions is an array; must support object-based schema");` — viewer now handles both array and object-based factions, no assumptions about schema format, defensive checks added for malformed data.
+- **FORAWWV note:** This reinforces schema–viewer contract rules: **viewer must be robust to schema variations and handle both array and object-based data structures**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Viewer fix: Settlements extracted from GameState.settlements fallback (factions empty)**
+
+- **Summary:** Updated settlement extraction to use canonical `state.settlements` as primary source, with faction AoR extraction as fallback only when canonical source is missing or empty. Updated `extractSettlements()` to check `Object.keys(state.settlements)` first, then fallback to faction AoR if needed. Updated `getSettlementController()` to prefer controller info from `state.settlements[sid]` (checks for `controller`, `controller_id`, or `side` fields) before falling back to faction AoR lookup. Enhanced console warnings to report counts from each source and whether fallback path was used. Result remains stable-sorted. Empty or malformed state handled gracefully.
+- **Files modified (1):** `tools/dev_viewer/viewer.js`
+- **Validation:** Dev runner starts successfully; viewer loads and renders state; settlements render as dots (non-zero count); edges render as lines; console warning no longer reports zero settlements (or reports fallback usage if applicable); inspectors populate correctly; reload produces deterministic layout; works with both canonical settlements and faction AoR fallback.
+- **Mistake guard:** `assertNoRepeat("viewer must not rely on factions AoR to discover settlements; must fallback to canonical GameState.settlements");` — viewer now uses canonical `state.settlements` as primary source, faction AoR only as fallback, no assumptions about factions being populated.
+- **FORAWWV note:** This reinforces that viewer discovery must follow canonical state: **viewer must use canonical state fields as primary source, with fallbacks only when canonical source is unavailable**. **docs/FORAWWV.md may require an addendum** if we formalize this pattern. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Viewer fix: Align settlement extraction with actual GameState shape (dev runner returns no state.settlements)**
+
+- **Summary:** Fixed settlement extraction to match actual GameState structure returned by dev runner. Inspected actual GameState and confirmed that `state.settlements` does not exist. Canonical settlement path is `factions[].areasOfResponsibility` (where settlements are assigned to factions). Updated `extractSettlements()` to use faction AoR as primary canonical source, with `end_state.snapshot.controllers` as secondary. Updated `getSettlementController()` to use faction AoR lookup as canonical path (removed non-existent `state.settlements[sid]` check). Enhanced console warnings to report which path was used and counts per source. Result remains stable-sorted.
+- **Canonical settlement path identified:** `factions[].areasOfResponsibility` (array or object-based schema)
+- **Files modified (2):** `tools/dev_viewer/viewer.js`, `tools/dev_runner/server.ts` (temporary logging removed)
+- **Validation:** Dev runner starts successfully; viewer loads and renders state; console shows non-zero settlement count from canonical path (`factions[].areasOfResponsibility`); settlements render as dots; edges render as lines; inspector works correctly; reload produces deterministic layout; no console errors.
+- **Mistake guard:** `assertNoRepeat("viewer must extract settlements from the actual canonical GameState path, not an assumed one");` — viewer now uses actual canonical path (`factions[].areasOfResponsibility`), removed assumption about non-existent `state.settlements` field.
+
+---
+
+**[2026-01-29] Viewer debug: Force visible draw path + hard assertions**
+
+- **Summary:** Added temporary diagnostic debugging to dev viewer to force visible rendering and assert non-zero canvas size and entity counts before drawing. Added canvas size assertions after initialization (forces non-zero dimensions if zero). Added unconditional debug overlay that draws white border around canvas, centered crosshair (+), and debug text showing settlements/edges counts at top-left. Added logging after settlement extraction to report counts. Replaced silent early-returns in render/draw paths with console.warn messages. Debug overlay draws unconditionally even if no settlements or gameState is null.
+- **Files modified (1):** `tools/dev_viewer/viewer.js`
+- **Validation:** Dev runner starts successfully; viewer loads; debug overlay (white border, crosshair, text) should be visible even if no settlements; console logs canvas size and settlement count; no silent failures in render path.
+- **Mistake guard:** `assertNoRepeat("viewer must assert canvas size and non-zero entity counts before drawing");` — viewer now asserts canvas dimensions and logs entity counts before drawing; debug overlay ensures rendering is visible even if data is missing.
+- **FORAWWV note:** This is a temporary diagnostic step. Do NOT edit FORAWWV.md.
+- **FORAWWV note:** This reveals a mismatch between engine canonical state and viewer assumptions: **viewer was assuming `state.settlements` existed, but actual canonical path is `factions[].areasOfResponsibility`**. **docs/FORAWWV.md may require an addendum** if we formalize canonical state discovery patterns. Do NOT edit FORAWWV in this commit.
+
+---
+
+**[2026-01-29] Dev runner fix: Initialize scenario with non-empty AoR for viewer rendering**
+
+- **Summary:** Fixed dev runner to initialize a scenario state with non-empty `areasOfResponsibility` so the viewer can render settlements. Updated `createInitialState()` to load settlement graph from canonical data (`data/derived/settlements_index.json`) and deterministically assign settlements to two factions (FACTION_A and FACTION_B) by splitting sorted settlement IDs evenly. AoR seeding runs on initial load and on `/reset` endpoint. Seeding is deterministic (stable ordering), dev-only (does not affect turn mechanics), and does not add new fields or mechanics. Server initialization now awaits state creation before accepting requests.
+- **Files modified (1):** `tools/dev_runner/server.ts`
+- **Seed method:** Loads settlement graph via `loadSettlementGraph()`, sorts settlement IDs deterministically, splits evenly between FACTION_A (first half) and FACTION_B (second half). Each faction gets first 3 settlements as supply sources.
+- **Validation:** Dev runner starts successfully; server logs show non-zero AoR counts for both factions on startup; `/state` endpoint returns factions with populated `areasOfResponsibility`; viewer extracts settlements > 0; settlements render as dots; edges render (if available); inspectors work correctly.
+- **Mistake guard:** `assertNoRepeat("dev runner must initialize a non-empty scenario state for viewer sessions and must not add mechanics");` — AoR seeding is dev-only initialization using existing settlement graph data; deterministic assignment only; no new mechanics or fields added.
+- **FORAWWV note:** This reveals a systemic requirement: **dev runner must load a real scenario fixture to serve meaningful state to viewers**. **docs/FORAWWV.md may require an addendum** if we formalize dev runner initialization patterns. Do NOT edit FORAWWV.md.
+
+---
+
+**[2026-01-29] Dev runner fix: Use valid political side IDs (RBiH/RS) to pass state validation**
+
+- **Summary:** Fixed dev runner crash caused by invalid faction IDs. Changed faction IDs from "FACTION_A" and "FACTION_B" to canonical political side IDs "RBiH" and "RS" (valid IDs are RBiH, RS, HRHB). Added error handling around all `serializeState()` calls in GET /state, POST /step, POST /reset, POST /set_posture, and POST /set_logistics_priority endpoints. On serialization failure, endpoints now return 500 with JSON `{ error: "STATE_SERIALIZE_FAILED", message: "<error>" }` instead of crashing the process. Server stays alive and continues accepting requests even if state serialization fails.
+- **Files modified (1):** `tools/dev_runner/server.ts`
+- **Faction ID changes:** FACTION_A → RBiH, FACTION_B → RS (canonical political side IDs)
+- **Error handling:** All serializeState() calls wrapped in try/catch; errors logged to console with stack traces; 500 responses with structured error JSON; process does not crash.
+- **Validation:** Dev runner starts successfully; GET /state returns 200 JSON with valid faction IDs; viewer no longer shows ERR_CONNECTION_RESET; settlements render correctly; server remains alive on serialization errors (returns 500 instead of crashing).
+- **Mistake guard:** `assertNoRepeat("dev runner must never emit invalid GameState; faction ids must match political sides RBiH/RS/HRHB");` — dev runner now uses canonical political side IDs only; no alias IDs or invalid faction IDs emitted.
+- **FORAWWV note:** This reveals a systemic rule: **dev tools must pass full state validation before exposure**. **docs/FORAWWV.md may require an addendum** if we formalize dev tool validation requirements. Do NOT edit FORAWWV.md.
+
+---
+
+**[2026-01-29] Docs reconciliation to Rulebook v0.2.6: AoR scoping + Rear Political Control Zones**
+
+- **Summary:** Reconciled non-Rulebook documentation to match Rulebook v0.2.6’s revised AoR scope: AoRs apply only to front-active settlements; rear settlements may exist as Rear Political Control Zones without brigade assignment; control does not drift/flip due to absence of AoR assignment alone (control change requires opposing pressure eligibility/sustainment or internal authority collapse/fragmentation logic).
+- **Docs updated:** `A_War_Without_Victory_Systems_And_Mechanics_Manual_v0_2_5.docx` (AoR assignment scope note inserted in “Settlement assignment and Areas of Responsibility”), `A_War_Without_Victory_The_Game_Bible_v0_2_5.docx` (operational invariants updated to conditional/front-active AoR assignment), `FORAWWV.md` (appended addendum recording canon change + implications).
+- **Docs checked (no change needed):** `A_War_Without_Victory_Engine_Invariants_v0_2_6.docx` (already compatible; no universal AoR-assignment invariant found).
+- **Scope confirmation:** Documentation-only reconciliation; **no engine mechanics or simulation code changes** were made.
+
+---
+
+**[2026-01-29] Phase 6A.0: dev runner/viewer unblocked**
+
+- **Summary:** Stabilized dev runner state exposure and made viewer drawable: canonical faction IDs (RBiH, RS, HRHB), non-empty AoR from deterministic round-robin seeding, /reset awaits re-seed before responding, serialization wrapped in try/catch. Removed temporary viewer diagnostics (debug overlay, crosshair, unconditional logs). No mechanics changes; dev init only.
+- **Files modified:** `tools/dev_runner/server.ts`, `tools/dev_viewer/viewer.js`, `docs/PROJECT_LEDGER.md`
+- **Server:** AoR split deterministically across RBiH/RS/HRHB (round-robin over sorted settlement IDs from `settlements_index`); POST /reset awaits `createInitialState()` then responds; all serialize paths wrapped in try/catch; logging gated by `DEV_RUNNER_LOG`.
+- **Viewer:** Removed debug overlay (white border, crosshair, overlay text); removed unconditional `console.log` for canvas size and settlement count; kept defensive `console.warn` when no settlements; guard click handler when `!gameState`.
+- **Mistake guard:** `loadMistakes()`; `assertNoRepeat("dev runner must always serialize a valid GameState (RBiH/RS/HRHB) and must provide non-empty AoR for viewer without changing mechanics")`.
+- **FORAWWV note:** This establishes a systemic rule: **dev tools require valid canonical IDs and non-empty initial AoR for viewer rendering**. **docs/FORAWWV.md may require an addendum** if we formalize this. Do NOT edit FORAWWV in this commit.
+- **Validation:** GET /state returns 200; faction ids in {RBiH, RS, HRHB}; AoR counts > 0; repeated GET /state and POST /reset succeed; server stays alive. Viewer renders dots when state loaded; no ERR_CONNECTION_RESET.

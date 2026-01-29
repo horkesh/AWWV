@@ -5,6 +5,9 @@
  * It does NOT compute any game logic - it only displays raw values from state.
  * 
  * Mistake guard: dev viewer must never compute game logic and must render raw GameState only
+ * Mistake guard: viewer layout must be visualization-only and must not leak into engine or state
+ * Mistake guard: viewer must not assume factions is an array; must support object-based schema
+ * Mistake guard: viewer must extract settlements from the actual canonical GameState path, not an assumed one
  */
 
 const API_BASE = 'http://localhost:3000';
@@ -22,6 +25,10 @@ function resizeCanvas() {
   const container = document.getElementById('canvas-container');
   canvas.width = container.clientWidth - 2;
   canvas.height = Math.max(600, window.innerHeight - 200);
+  if (canvas.width <= 0 || canvas.height <= 0) {
+    canvas.width = container.clientWidth || window.innerWidth || 800;
+    canvas.height = container.clientHeight || window.innerHeight || 600;
+  }
 }
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
@@ -49,24 +56,63 @@ function getFactionColor(factionId) {
 }
 
 // Extract settlements from GameState
+// Canonical source: factions[].areasOfResponsibility (where settlements actually live in GameState)
+// Secondary: end_state.snapshot.controllers (final control outcome)
 function extractSettlements(state) {
   const settlements = new Set();
-  if (state.factions && Array.isArray(state.factions)) {
-    for (const faction of state.factions) {
-      if (faction.areasOfResponsibility && Array.isArray(faction.areasOfResponsibility)) {
+  let fromFactions = 0;
+  let fromEndState = 0;
+  let pathUsed = 'none';
+  
+  // CANONICAL: Extract from factions.areasOfResponsibility (actual GameState structure)
+  if (state.factions) {
+    let factionsList = [];
+    if (Array.isArray(state.factions)) {
+      factionsList = state.factions;
+      pathUsed = 'factions[array].areasOfResponsibility';
+    } else if (typeof state.factions === 'object') {
+      // Object-based: iterate over values
+      factionsList = Object.values(state.factions).filter(f => f && typeof f === 'object');
+      pathUsed = 'factions[object].areasOfResponsibility';
+    }
+    
+    for (const faction of factionsList) {
+      if (faction && faction.areasOfResponsibility && Array.isArray(faction.areasOfResponsibility)) {
         for (const sid of faction.areasOfResponsibility) {
-          settlements.add(sid);
+          if (sid && typeof sid === 'string') {
+            settlements.add(sid);
+            fromFactions++;
+          }
         }
       }
     }
   }
-  // Also check end_state snapshot if present
+  
+  // SECONDARY: Also check end_state snapshot if present (adds any missing settlements)
   if (state.end_state?.snapshot?.controllers) {
     for (const [sid] of state.end_state.snapshot.controllers) {
-      settlements.add(String(sid));
+      const sidStr = String(sid);
+      if (!settlements.has(sidStr)) {
+        settlements.add(sidStr);
+        fromEndState++;
+      }
     }
   }
-  return Array.from(settlements).sort();
+  
+  const result = Array.from(settlements).sort();
+  
+  // Defensive check: warn if no settlements found
+  if (result.length === 0) {
+    console.warn('Viewer: No settlements extracted from state. Sources checked:', {
+      pathUsed: pathUsed,
+      factions: fromFactions,
+      endState: fromEndState,
+      hasFactions: !!state.factions,
+      factionsType: state.factions ? (Array.isArray(state.factions) ? 'array' : typeof state.factions) : 'missing'
+    });
+  }
+  
+  return result;
 }
 
 // Extract edges from front_segments
@@ -89,27 +135,42 @@ function extractEdges(state) {
   return edges;
 }
 
-// Simple force-directed layout
+// Deterministic hash function for SID-based positioning
+function hashSid(sid) {
+  let hash = 0;
+  for (let i = 0; i < sid.length; i++) {
+    const char = sid.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  return Math.abs(hash);
+}
+
+// Simple force-directed layout (visualization-only, deterministic)
 function computeLayout(settlements, edges) {
   const positions = new Map();
   const width = canvas.width;
   const height = canvas.height;
   const centerX = width / 2;
   const centerY = height / 2;
+  const margin = 40;
+  const layoutWidth = width - 2 * margin;
+  const layoutHeight = height - 2 * margin;
   
-  // Initialize positions in a circle
-  const angleStep = (2 * Math.PI) / settlements.length;
-  settlements.forEach((sid, i) => {
-    const angle = i * angleStep;
-    const radius = Math.min(width, height) * 0.3;
-    positions.set(sid, {
-      x: centerX + radius * Math.cos(angle),
-      y: centerY + radius * Math.sin(angle)
-    });
+  // Initialize positions deterministically based on SID hash
+  settlements.forEach((sid) => {
+    const hash = hashSid(sid);
+    // Use hash to generate deterministic pseudo-random position
+    const xSeed = hash % 1000;
+    const ySeed = (hash * 31) % 1000; // Different seed for Y
+    const x = margin + (xSeed / 1000) * layoutWidth;
+    const y = margin + (ySeed / 1000) * layoutHeight;
+    positions.set(sid, { x, y });
   });
   
-  // Simple force-directed iterations
-  for (let iter = 0; iter < 100; iter++) {
+  // Lightweight force-directed relaxation (20-50 iterations, visual only)
+  const iterations = Math.min(30, Math.max(20, Math.floor(settlements.length / 2)));
+  for (let iter = 0; iter < iterations; iter++) {
     const forces = new Map();
     settlements.forEach(sid => {
       forces.set(sid, { x: 0, y: 0 });
@@ -169,20 +230,34 @@ function computeLayout(settlements, edges) {
 }
 
 // Get settlement controller from state
+// Canonical: Check factions' AoR (where settlements are assigned to factions)
+// Supports both array-based and object-based factions schema
 function getSettlementController(state, sid) {
-  // Check control_overrides first
+  // Check control_overrides first (highest priority)
   if (state.control_overrides && state.control_overrides[sid]) {
     return state.control_overrides[sid].side || null;
   }
-  // Check factions' AoR
-  if (state.factions && Array.isArray(state.factions)) {
-    for (const faction of state.factions) {
-      if (faction.areasOfResponsibility && faction.areasOfResponsibility.includes(sid)) {
-        return faction.id;
+  
+  // CANONICAL: Check factions' AoR (array or object) - this is where controller info lives
+  if (state.factions) {
+    let factionsList = [];
+    if (Array.isArray(state.factions)) {
+      factionsList = state.factions;
+    } else if (typeof state.factions === 'object') {
+      // Object-based: iterate over values
+      factionsList = Object.values(state.factions).filter(f => f && typeof f === 'object');
+    }
+    
+    for (const faction of factionsList) {
+      if (faction && faction.areasOfResponsibility && Array.isArray(faction.areasOfResponsibility)) {
+        if (faction.areasOfResponsibility.includes(sid)) {
+          return faction.id || null;
+        }
       }
     }
   }
-  // Check end_state snapshot
+  
+  // SECONDARY: Check end_state snapshot (final control outcome)
   if (state.end_state?.snapshot?.controllers) {
     for (const [settlementId, controllerId] of state.end_state.snapshot.controllers) {
       if (String(settlementId) === String(sid)) {
@@ -195,21 +270,56 @@ function getSettlementController(state, sid) {
 
 // Render the state
 function render() {
-  if (!gameState) return;
-  
+  if (canvas.width <= 0 || canvas.height <= 0) {
+    const container = document.getElementById('canvas-container');
+    canvas.width = container?.clientWidth || window.innerWidth || 800;
+    canvas.height = container?.clientHeight || window.innerHeight || 600;
+  }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+
+  if (!gameState) {
+    const statusEl = document.getElementById('status');
+    if (statusEl) statusEl.textContent = 'No state';
+    return;
+  }
+
   const settlements = extractSettlements(gameState);
   const edges = extractEdges(gameState);
-  
-  // Compute layout
-  settlementPositions = computeLayout(settlements, edges);
+  if (settlements.length === 0) {
+    console.warn('[Viewer] No settlements extracted from state');
+  }
+
+  // Compute layout only if positions are empty (initial load or reset)
+  // Positions persist across turns for stable visualization
+  if (settlementPositions.size === 0) {
+    settlementPositions = computeLayout(settlements, edges);
+  } else {
+    // Ensure all current settlements have positions (in case new ones appear)
+    settlements.forEach(sid => {
+      if (!settlementPositions.has(sid)) {
+        // Assign deterministic position for new settlement
+        const hash = hashSid(sid);
+        const margin = 40;
+        const layoutWidth = canvas.width - 2 * margin;
+        const layoutHeight = canvas.height - 2 * margin;
+        const xSeed = hash % 1000;
+        const ySeed = (hash * 31) % 1000;
+        settlementPositions.set(sid, {
+          x: margin + (xSeed / 1000) * layoutWidth,
+          y: margin + (ySeed / 1000) * layoutHeight
+        });
+      }
+    });
+  }
   
   // Draw edges first (so they're behind settlements)
   edges.forEach(edge => {
     const posA = settlementPositions.get(edge.a);
     const posB = settlementPositions.get(edge.b);
-    if (!posA || !posB) return;
+    if (!posA || !posB) {
+      console.warn(`[Viewer] Edge ${edge.id} missing positions (a: ${edge.a}, b: ${edge.b}), skipping draw`);
+      return;
+    }
     
     const segment = edge.segment;
     const isActive = segment && segment.active === true;
@@ -236,7 +346,10 @@ function render() {
   // Draw settlements
   settlements.forEach(sid => {
     const pos = settlementPositions.get(sid);
-    if (!pos) return;
+    if (!pos) {
+      console.warn(`[Viewer] Settlement ${sid} missing position, skipping draw`);
+      return;
+    }
     
     const controller = getSettlementController(gameState, sid);
     const color = controller ? getFactionColor(controller) : '#888888';
@@ -275,7 +388,18 @@ function showSettlementInspector(sid) {
   inspectorTitle.textContent = `Settlement: ${sid}`;
   
   const controller = getSettlementController(gameState, sid);
-  const faction = gameState.factions?.find(f => f.id === controller);
+  // Find faction (supports both array and object-based schema)
+  let faction = null;
+  if (gameState.factions) {
+    if (Array.isArray(gameState.factions)) {
+      faction = gameState.factions.find(f => f && f.id === controller) || null;
+    } else if (typeof gameState.factions === 'object') {
+      // Object-based: find by key or iterate values
+      faction = gameState.factions[controller] || 
+                Object.values(gameState.factions).find(f => f && f.id === controller) || 
+                null;
+    }
+  }
   
   let html = '';
   html += `<div class="field"><span class="label">Controller:</span><span class="value">${controller || 'none'}</span></div>`;
@@ -578,6 +702,7 @@ window.setLogisticsPriority = setLogisticsPriority;
 
 // Click handler
 canvas.addEventListener('click', (e) => {
+  if (!gameState) return;
   const rect = canvas.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
@@ -676,6 +801,8 @@ async function resetState() {
     selectedSettlement = null;
     selectedEdge = null;
     inspector.style.display = 'none';
+    // Clear positions on reset so layout recomputes
+    settlementPositions.clear();
     render();
   } catch (error) {
     document.getElementById('status').textContent = `Error: ${error.message}`;
