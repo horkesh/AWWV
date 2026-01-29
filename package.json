@@ -44,6 +44,7 @@
     "phase3:abc_audit": "tsx src/cli/phase3abc_audit_harness.ts",
     "phase3:abc_audit:tsx": "tsx src/cli/phase3abc_audit_harness.ts",
     "dev:map": "vite --config dev_ui/vite.config.ts",
+    "dev:runner": "tsx tools/dev_runner/server.ts",
     "map:audit": "tsx tools/map_build/audit_map.ts",
     "map:build": "tsx tools/map_build/build_map.ts",
     "map:build:new": "tsx tools/map/build_map.ts",

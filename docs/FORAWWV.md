@@ -131,7 +131,7 @@ Brigade Areas of Responsibility (AoRs) require a contiguity substrate that is:
 Given the data truth in §3.1, AoR contiguity must be defined over the **contact graph**, not shared borders.
 
 AoR invariants remain:
-- each settlement assigned to exactly one brigade AoR
+- each **front-active** settlement assigned to exactly one brigade AoR (rear settlements may exist as Rear Political Control Zones without brigade assignment)
 - AoRs must be contiguous under the canonical adjacency graph
 - transfers between brigades must preserve contiguity
 
@@ -172,3 +172,25 @@ Automation requirement (now implemented in tooling):
 - Adjacency must be modeled as a **contact graph** with an explicit small contact radius D₀, plus point-touch and true shared-border where present.
 - AoR contiguity must be defined on the contact graph.
 - Mistake log and ledger are mandatory system guardrails, not optional workflow.
+
+---
+
+## Addendum — AoR scoping revision (v0.2.6)
+
+### What changed
+- **AoRs apply ONLY to front-active settlements.**
+- Rear settlements may exist outside any brigade AoR as **Rear Political Control Zones** (political control without brigade assignment).
+
+### Why
+Requiring brigade responsibility for deep rear political space was semantically invalid and operationally impractical. AoRs are military responsibility constructs for active (or imminently active) space, not universal territorial ownership constructs.
+
+### What did NOT change
+- Determinism doctrine (no randomness, no timestamps, stable ordering).
+- Emergent fronts and pressure-driven interaction (no unit micromanagement).
+- No “unitless control drift”: **absence of brigade assignment does not cause control change**.
+
+### Implementation implication (record only)
+This addendum records canon from Rulebook v0.2.6. It may require alignment across engine/data/docs where older wording implied universal AoR assignment, but **this addendum does not itself modify mechanics**.
+
+### Potential follow-up
+- §4 currently lists pre-v0.2.6 “AoR invariants remain: each settlement assigned…” wording. Treat that bullet as **superseded by this addendum and Rulebook v0.2.6**; a future cleanup may rewrite §4 to avoid any ambiguity (without adding mechanics).
